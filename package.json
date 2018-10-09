@@ -2,10 +2,7 @@
   "name": "@exivity/ui",
   "version": "0.0.1",
   "private": true,
-  "devDependencies": {
-  },
-  "dependencies": {
-  },
-  "scripts": {
-  }
+  "devDependencies": {},
+  "dependencies": {},
+  "scripts": {}
 }
