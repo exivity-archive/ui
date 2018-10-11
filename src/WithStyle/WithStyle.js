@@ -6,7 +6,7 @@ import Normalize from './Normalize'
 import Base from './Base'
 import defaultTheme from './defaultTheme'
 
-const ExivityUI = ({ children, theme }) => <ThemeProvider theme={theme}>
+const WithStyle = ({ children, theme }) => <ThemeProvider theme={theme}>
   <Fragment>
     <Normalize />
     <Base />
@@ -14,13 +14,13 @@ const ExivityUI = ({ children, theme }) => <ThemeProvider theme={theme}>
   </Fragment>
 </ThemeProvider>
 
-ExivityUI.propTypes = {
+WithStyle.propTypes = {
   children: PropTypes.node.isRequired,
   theme: PropTypes.object.isRequired
 }
 
-ExivityUI.defaultProps = {
+WithStyle.defaultProps = {
   theme: defaultTheme
 }
 
-export default ExivityUI
+export default WithStyle

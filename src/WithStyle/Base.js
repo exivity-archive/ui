@@ -4,6 +4,7 @@ import { withTheme } from 'styled-components'
 
 const Base = ({ theme }) => <style>{`
 body {
+  font-size: ${theme.size}px;
   background-color: ${theme.colours.primary};
 }
 `}</style>

@@ -7,8 +7,10 @@ const Button = styled.button`
   border-radius: 3px;
   border: 2px solid palevioletred;
   color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+  margin: 0 ${props => props.theme.spacing}rem;
+  padding:
+    ${props => props.theme.spacing / 2}rem
+    ${props => props.theme.spacing * 2}rem;
 
   ${props =>
     props.primary && css`
