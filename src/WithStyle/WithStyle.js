@@ -1,18 +1,21 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
-import Normalize from './Normalize'
-import Base from './Base'
-import defaultTheme from './defaultTheme'
+import normalize from '../theme/normalize'
+import base from '../theme/base'
+import defaultTheme from '../theme/defaultTheme'
 
-const WithStyle = ({ children, theme }) => <ThemeProvider theme={theme}>
-  <Fragment>
-    <Normalize />
-    <Base />
-    {children}
-  </Fragment>
-</ThemeProvider>
+const GlobalStyle = createGlobalStyle`${normalize} ${base}`
+
+const WithStyle = ({ children, theme }) => (
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <GlobalStyle />
+      {children}
+    </Fragment>
+  </ThemeProvider>
+)
 
 WithStyle.propTypes = {
   children: PropTypes.node.isRequired,

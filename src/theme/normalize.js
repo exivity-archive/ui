@@ -1,5 +1,3 @@
-import React from 'react'
-
 // https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css
 const normalize = `
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -344,6 +342,4 @@ template {
   display: none;
 }`
 
-const Normalize = () => <style>{normalize}</style>
-
-export default Normalize
+export default normalize
