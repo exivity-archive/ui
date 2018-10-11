@@ -31,7 +31,9 @@
     "rimraf": "^2.6.2",
     "standard": "^12.0.1",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "dependencies": {
     "styled-components": "^4.0.0-beta.11.3"
   },
   "peerDependencies": {
