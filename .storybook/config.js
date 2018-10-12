@@ -40,6 +40,8 @@ const withStyle = story => {
 }
 
 const options = {
+  name: '@exivity/ui',
+  url: 'https://github.com/exivity/ui',
   showAddonPanel: true,
   addonPanelInRight: true,
   hierarchySeparator: /\/|\./,

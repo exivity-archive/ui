@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders dangerous alert 1`] = `
+.c0 {
+  background-color: #ffca71;
+  padding: 16px;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #c33c32;
+}
+
+<div
+  className="c0"
+>
+  danger
+</div>
+`;
+
+exports[`renders default alert 1`] = `
+.c0 {
+  background-color: #ffca71;
+  padding: 16px;
+  border-radius: 3px;
+}
+
+<div
+  className="c0"
+>
+  warning
+</div>
+`;

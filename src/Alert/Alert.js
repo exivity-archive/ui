@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { themed } from '../theme'
 
-const styles = props => `
+const styles = props => css`
   background-color: ${props.theme.colours.warning};
   padding: ${props.theme.spacing * props.theme.size}px;
   border-radius: ${props.theme.border.radius};
