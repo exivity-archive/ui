@@ -1,6 +1,7 @@
 import theme from './theme'
 
-import StyledButton from './Button'
+import Alert from './Alert'
+import Button from './Button'
 import Code from './Code'
 import CodeBlock from './CodeBlock'
 import Progress from './Progress'
@@ -8,7 +9,8 @@ import WithStyle from './WithStyle'
 
 export {
   theme,
-  StyledButton,
+  Alert,
+  Button,
   Code,
   CodeBlock,
   Progress,

@@ -1,4 +1,6 @@
 export { default as base } from './base'
 export { default as normalize } from './normalize'
 export * from './constants'
+export * from './utils'
+export { default as themed } from './themed'
 export { default as defaultTheme } from './defaultTheme'

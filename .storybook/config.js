@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { addDecorator, configure } from '@storybook/react'
-import { select, withKnobs } from '@storybook/addon-knobs'
+import { select, color, withKnobs } from '@storybook/addon-knobs'
 import { withInfo } from '@storybook/addon-info'
 import { withOptions } from '@storybook/addon-options'
 
@@ -17,12 +17,21 @@ const withStyle = story => {
       small: themeConstants.SIZE_SMALL,
       default: themeConstants.SIZE_DEFAULT,
       large: themeConstants.SIZE_LARGE
-    }, defaultTheme.size, 'theme'),
+    }, defaultTheme.size, 'Size'),
     spacing: select('Spacing', {
+      compact: themeConstants.SPACING_COMPACT,
       small: themeConstants.SPACING_SMALL,
       default: themeConstants.SPACING_DEFAULT,
-      large: themeConstants.SPACING_LARGE
-    }, defaultTheme.spacing, 'theme')
+    }, defaultTheme.spacing, 'Size'),
+    colours: {
+      bg: color('Background', defaultTheme.colours.bg, 'colours'),
+      text: color('Text', defaultTheme.colours.text, 'colours'),
+      primary: color('Primary', defaultTheme.colours.primary, 'colours'),
+      danger: color('Danger', defaultTheme.colours.danger, 'colours'),
+      warning: color('Warning', defaultTheme.colours.warning, 'colours'),
+      success: color('Success', defaultTheme.colours.success, 'colours'),
+      mark: color('Marker', defaultTheme.colours.mark, 'colours'),
+    }
   }
 
   return <WithStyle theme={theme}>
@@ -31,7 +40,8 @@ const withStyle = story => {
 }
 
 const options = {
-  showAddonPanel: false,
+  showAddonPanel: true,
+  addonPanelInRight: true,
   hierarchySeparator: /\/|\./,
   hierarchyRootSeparator: /\|/,
 }

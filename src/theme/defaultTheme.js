@@ -21,27 +21,10 @@ const theme = {
     }
   },
   colours: {
-    lightest: '#ffffff',
-    light: '#f4f4f4',
+    bg: '#ffffff',
+    text: '#222222',
 
-    grayLightest: '#eeeeee',
-    grayLighter: '#e2e2e2',
-    grayLight: '#cccccc',
-    gray: '#aaaaaa',
-    grayDark: '#777777',
-    grayDarker: '#444444',
-    grayDarkest: '#2e2e2e',
-
-    dark: '#222222',
-    darkest: '#000000',
-
-    primaryLightest: '#e6f9ff',
-    primaryLighter: '#ccf4ff',
-    primaryLight: '#5cccea',
     primary: '#00a8d8',
-    primaryDark: '#438dc7',
-    primaryDarker: '#2e5f85',
-    primaryDarkest: '#192e43',
 
     danger: '#c33c32',
     warning: '#ffca71',

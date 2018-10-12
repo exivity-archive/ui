@@ -23,7 +23,9 @@ const CodeBlock = ({ children, language, theme }) => {
     language={language}
     style={myStyle}
     customStyle={{
-      fontFamily: theme.fonts.code.family
+      padding: `${theme.spacing}em`,
+      fontFamily: theme.fonts.code.family,
+      backgroundColor: theme.colours.mark,
     }}>
     {children}
   </SyntaxHighlighter>

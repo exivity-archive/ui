@@ -3,6 +3,7 @@ import color from 'color'
 import styled, { css } from 'styled-components'
 import * as constants from '../theme/constants'
 import defaultTheme from '../theme/defaultTheme'
+import { themed } from '../theme'
 
 const buttonSize = ({ theme, small, large }) => {
   let multiplier = 1
@@ -22,9 +23,9 @@ const Button = styled.button`
   
   text-transform: uppercase;
   
-  border: 2px solid ${props => props.theme.colours.grayLightest};
+  border: 2px solid ${props => props.theme.colours.text};
   background: transparent;
-  color: ${props => props.theme.colours.dark};
+  color: ${props => props.theme.colours.text};
   
   transition: border-color 0.3s ease-in-out,
     background-color 0.3s ease-in-out;
@@ -45,13 +46,13 @@ const Button = styled.button`
   
   &:hover {
     cursor: pointer;
-    border: 2px solid ${props => props.theme.colours.dark};
+    border: 2px solid ${props => props.theme.colours.text};
   }
   
   ${props => props.primary && css`
     border: 2px solid ${props.theme.colours.primary};
     background: ${props.theme.colours.primary};
-    color: ${props.theme.colours.lightest};
+    color: ${props.theme.colours.bg};
     
     &:hover {
       border-color: ${color(props.theme.colours.primary).darken(darkenBy).string()};
@@ -60,9 +61,10 @@ const Button = styled.button`
   `}
   
   ${props => props.success && css`
+    --focus-color: ${color(props.theme.colours.success).lighten(1.4).string()};
     border: 2px solid ${props.theme.colours.success};
     background: ${props.theme.colours.success};
-    color: ${props.theme.colours.lightest};
+    color: ${props.theme.colours.bg};
     
     &:hover {
       border-color: ${color(props.theme.colours.success).darken(darkenBy).string()};
@@ -71,6 +73,7 @@ const Button = styled.button`
   `}
   
   ${props => props.warning && css`
+    --focus-color: ${color(props.theme.colours.warning).lighten(0.2).string()};
     border: 2px solid ${props.theme.colours.warning};
     background: ${props.theme.colours.warning};
     
@@ -81,9 +84,10 @@ const Button = styled.button`
   `}
   
   ${props => props.danger && css`
+    --focus-color: ${color(props.theme.colours.danger).lighten(0.8).string()};
     border: 2px solid ${props.theme.colours.danger};
     background: ${props.theme.colours.danger};
-    color: ${props => props.theme.colours.lightest};
+    color: ${props => props.theme.colours.bg};
     
     &:hover {
       border-color: ${color(props.theme.colours.danger).darken(darkenBy).string()};
@@ -94,7 +98,6 @@ const Button = styled.button`
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.object,
 
   primary: PropTypes.bool,
   success: PropTypes.bool,
@@ -105,8 +108,4 @@ Button.propTypes = {
   large: PropTypes.bool
 }
 
-Button.defaultProps = {
-  theme: defaultTheme
-}
-
-export default Button
+export default themed(Button)

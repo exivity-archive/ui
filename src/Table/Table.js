@@ -1,18 +1,28 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import color from 'color'
+import { preciseRm, themed } from '../theme'
 
-const tableSize = ({ theme, mini, small }) => {
+const fontSize = ({ theme, mini, small }) => {
   let multiplier = 1
 
-  if (mini === true) multiplier = 0.6
-  if (small === true) multiplier = 0.8
+  if (mini === true) multiplier = preciseRm(0.7)
+  if (small === true) multiplier = preciseRm(0.85)
 
   return theme.size * multiplier
 }
 
-const StyledTable = styled.table`
-  font-size: ${tableSize}px;
+const padding = ({ theme, mini, small }) => {
+  let multiplier = 1
+
+  if (mini === true) multiplier = preciseRm(0.7)
+  if (small === true) multiplier = preciseRm(0.85)
+
+  return multiplier * theme.spacing / 2
+}
+
+const Table = styled.table`
+  font-size: ${fontSize}px;
   
   border-collapse: none;
   
@@ -21,42 +31,34 @@ const StyledTable = styled.table`
   }
   
   th, td {
-    padding: ${props => props.theme.spacing / 2}rem 0;
+    padding: ${padding}em 0;
     
     &:not(:first-child) {
-      padding-left: ${props => props.theme.spacing / 2}rem  ;
+      padding-left: ${padding}em;
     }
     
     &:not(:last-child) {
-      padding-right: ${props => props.theme.spacing / 2}rem;
+      padding-right: ${padding}em;
     }
   }
   
   thead th {
     text-align: left;
-    border-bottom: 1px solid ${props => props.theme.colours.light};
+    border-bottom: 1px solid ${props => color(props.theme.colours.bg).darken(0.05).string()};
   }
   
   tr:not(:last-child) {
     td {
-      border-bottom: 1px solid ${props => props.theme.colours.light};
+      border-bottom: 1px solid ${props => color(props.theme.colours.bg).darken(0.05).string()};
     }
   }
 `
 
-const Table = ({ children, ...props }) => (
-  <StyledTable {...props}>
-    {children}
-  </StyledTable>
-)
-
 Table.propTypes = {
   children: PropTypes.node.isRequired,
+
   mini: PropTypes.bool,
   small: PropTypes.bool
 }
 
-Table.defaultProps = {
-}
-
-export default Table
+export default themed(Table)

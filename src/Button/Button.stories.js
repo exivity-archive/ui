@@ -7,7 +7,7 @@ import Button from './Button'
 import Code from '../Code'
 
 storiesOf('atoms|Button', module)
-  .add('simple', () => <Button>Button</Button>)
+  .add('default', () => <Button>Button</Button>)
   .add('colours', () => <div>
     <Button>Normal</Button>
     <Button primary>Primary</Button>
@@ -16,13 +16,19 @@ storiesOf('atoms|Button', module)
     <Button danger>Danger</Button>
   </div>)
   .add('sizes', () => <Fragment>
-    <p>Using props:</p>
+    <p>Using convenience props:</p>
     <div>
       <Button small>Small</Button>
       <Button>Normal</Button>
       <Button large>Large</Button>
     </div>
-    <p>Or using a <Code>ThemeProvider</Code>:</p>
+    <p>Using <Code>theme</Code> prop:</p>
+    <div>
+      <Button theme={{ size: SIZE_SMALL }}>Small</Button>
+      <Button>Normal</Button>
+      <Button theme={{ size: SIZE_LARGE }}>Large</Button>
+    </div>
+    <p>Using <Code>ThemeProvider</Code>:</p>
     <div>
       <ThemeProvider theme={{ size: SIZE_SMALL }}>
         <Button>Small</Button>
