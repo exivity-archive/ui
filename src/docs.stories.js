@@ -103,7 +103,7 @@ storiesOf('Docs', module)
     <p>Wrap your entire app in a <Code>WithStyle</Code> component to provide styling capabilities to all nested
       components:</p>
     <CodeBlock>
-      {`import WithStyle from '@exivity/ui/WithStyle'
+      {`import { WithStyle } from '@exivity/ui'
 
 <WithStyle>
   <App>
@@ -121,8 +121,9 @@ storiesOf('Docs', module)
     </ol>
     <h3>1. make your own theme</h3>
     <CodeBlock>
-      {`import WithStyle from '@exivity/ui/WithStyle'
-import { defaultTheme, SIZE_SMALL, SIZE_LARGE } from '@exivity/ui/theme'
+      {`import { WithStyle, theme } from '@exivity/ui'
+
+const { defaultTheme, SIZE_SMALL, SIZE_LARGE } = theme
 
 // Peak inside
 console.log(defaultTheme)
@@ -140,8 +141,10 @@ const myTheme = {
     </CodeBlock>
     <h3>2. local theme overrides</h3>
     <CodeBlock>
-      {`import { SIZE_LARGE } from '@exivity/ui/theme'
+      {`import { theme } from '@exivity/ui'
 import { ThemeProvider } from 'styled-components'
+
+const { SIZE_LARGE } = theme
 
 // Render a part of the app larger
 <ThemeProvider theme={{ size: SIZE_LARGE }}>
@@ -150,7 +153,9 @@ import { ThemeProvider } from 'styled-components'
     </CodeBlock>
     <h3>3. component theme overrides</h3>
     <CodeBlock>
-      {`import { SIZE_LARGE } from '@exivity/ui/theme'
+      {`import { theme } from '@exivity/ui'
+
+const { SIZE_LARGE } = theme
 
 // Large button
 <Button theme={{ size: SIZE_LARGE }}>Click me!</Button>
@@ -230,10 +235,13 @@ test('renders dangerous alert', () => {
     <h2>Wrapping up</h2>
     <p>The folder structure for our component will now look like this:</p>
     <CodeBlock>{`src/
-└── Alert/
-    ├── index.js
-    ├── Alert.js
-    ├── Alert.stories.js
-    └── Alert.test.js`}
+├── Alert/
+|   ├── index.js
+|   ├── Alert.js
+|   ├── Alert.stories.js
+|   └── Alert.test.js
+└── index.js`}
     </CodeBlock>
+    <p>Finally, add this line to <Code>src/index.js</Code>:</p>
+    <CodeBlock>{`export { default as Alert } from './Alert'`}</CodeBlock>
   </div>)

@@ -4,10 +4,10 @@ import { storiesOf } from '@storybook/react'
 import CodeBlock from './CodeBlock'
 
 storiesOf('atoms|CodeBlock', module)
-  .add('default', () => <CodeBlock>{`import CodeBlock from '@exivity/ui/CodeBlock'
+  .add('default', () => <CodeBlock>{`import { CodeBlock } from '@exivity/ui'
 
 <CodeBlock language='jsx'>
-    {\`import CodeBlock from '@exivity/ui/CodeBlock'
+    {\`import { CodeBlock } from '@exivity/ui'
 
     <CodeBlock language='jsx'>{this}</CodeBlock>\`}
 </CodeBlock>`}</CodeBlock>)

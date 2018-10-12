@@ -26,6 +26,10 @@ function themed (WrappedComponent) {
     }
   }
 
+  Themed.propTypes = WrappedComponent.propTypes || {}
+
+  Themed.defaultProps = WrappedComponent.defaultProps || {}
+
   Themed.displayName = getDisplayName(WrappedComponent)
 
   return Themed

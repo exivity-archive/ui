@@ -1,18 +1,12 @@
-import theme from './theme'
+import * as theme from './theme'
 
-import Alert from './Alert'
-import Button from './Button'
-import Code from './Code'
-import CodeBlock from './CodeBlock'
-import Progress from './Progress'
-import WithStyle from './WithStyle'
+export { default as Alert } from './Alert'
+export { default as Button } from './Button'
+export { default as Code } from './Code'
+export { default as CodeBlock } from './CodeBlock'
+export { default as Markdown } from './Markdown'
+export { default as Progress } from './Progress'
+export { default as Table } from './Table'
+export { default as WithStyle } from './WithStyle'
 
-export {
-  theme,
-  Alert,
-  Button,
-  Code,
-  CodeBlock,
-  Progress,
-  WithStyle
-}
+export { theme }

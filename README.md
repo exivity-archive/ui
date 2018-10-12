@@ -20,7 +20,7 @@ yarn add @exivity/ui
 Start using it
 
 ```jsx
-import Button from '@exivity/ui/Button'
+import { Button } from '@exivity/ui'
 
 <Button>Click me!</Button>
 ```
@@ -30,3 +30,4 @@ Visit [exivity.github.io/ui](https://exivity.github.io/ui/?selectedKind=Docs&sel
 ## Todo
 
 - Option to embed fonts instead of loading through Google Fonts (for offline use)
+- Use https://reakit.io/ because it's awesome
