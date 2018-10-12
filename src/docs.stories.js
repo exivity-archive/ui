@@ -34,7 +34,7 @@ storiesOf('Docs', module)
     <h1>Dependencies</h1>
     <h2>Direct dependencies</h2>
     <p>The following packages will be automatically installed:</p>
-    <Table theme={{ spacing: 2 }}>
+    <Table>
       <thead>
         <tr>
           <th>dependency</th>

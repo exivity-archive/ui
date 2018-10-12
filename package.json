@@ -63,8 +63,7 @@
     "standard": "^12.0.1"
   },
   "dependencies": {
-    "color": "^3.1.0",
-    "styled-components": "^4.0.0-beta.11.3"
+    "reakit": "^0.15.7"
   },
   "optionalDependencies": {
     "react-markdown": "^4.0.3",
