@@ -23,15 +23,16 @@
     "dist"
   ],
   "scripts": {
-    "lint": "standard",
-    "lint:fix": "standard --fix",
+    "lint": "standard src",
+    "lint:fix": "standard src --fix",
     "test": "jest",
     "start": "start-storybook -p 6006",
     "build": "yarn build:clean && yarn build:dist && yarn build:docs",
     "build:clean": "rimraf dist && rimraf docs",
-    "build:dist": "babel src --out-dir dist --source-maps",
+    "build:dist": "babel src --out-dir dist --source-maps --ignore \"src/**/*.stories.js\",\"src/**/*.test.js\"",
     "build:docs": "build-storybook -o docs",
-    "publish:docs": "yarn build:clean && yarn build:docs && git subtree push --prefix docs origin gh-pages"
+    "publish:docs": "yarn build:clean && yarn build:docs && git add docs && git commit -m \"chore: update docs\" && git subtree push --prefix docs origin gh-pages",
+    "prepublishOnly": "yarn lint && yarn test && yarn build"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -83,6 +84,9 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
     "collectCoverageFrom": ["src/**/*.js"],
-    "setupTestFrameworkScriptFile": "./setupTest.js"
+    "setupTestFrameworkScriptFile": "./setupTest.js",
+    "roots": [
+      "<rootDir>/src/"
+    ]
   }
 }

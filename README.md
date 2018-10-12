@@ -2,7 +2,7 @@
 ===========
 
 [![npm](https://img.shields.io/npm/v/@exivity/ui.svg)](https://www.npmjs.com/package/@exivity/ui)
-[![Travis](https://img.shields.io/travis/exivity/ui.svg)](https://travis-ci.org/exivity/ui)
+[![Travis](https://img.shields.io/travis/com/exivity/ui.svg)](https://travis-ci.com/exivity/ui)
 [![Codecov](https://img.shields.io/codecov/c/github/exivity/ui.svg)](https://codecov.io/gh/exivity/ui)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg)](https://codeclimate.com/github/exivity/ui)
 [![Gitter](https://badges.gitter.im/exivity.svg)](https://gitter.im/exivity)
@@ -20,12 +20,12 @@ yarn add @exivity/ui
 Start using it
 
 ```jsx
-import Button from '@exivity/ui/Button
+import Button from '@exivity/ui/Button'
 
 <Button>Click me!</Button>
 ```
 
-Visit [exivity.github.io/ui](https://exivity.github.io/ui/) for more documentation and examples.
+Visit [exivity.github.io/ui](https://exivity.github.io/ui/?selectedKind=Docs&selectedStory=Introduction) for more documentation and examples.
 
 ## Todo
 
