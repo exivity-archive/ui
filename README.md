@@ -7,7 +7,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg)](https://codeclimate.com/github/exivity/ui)
 [![Gitter](https://badges.gitter.im/exivity.svg)](https://gitter.im/exivity)
 
-A collection of components to build beautiful interfaces.
+A collection of components to build interfaces.
 
 ## Quickstart
 

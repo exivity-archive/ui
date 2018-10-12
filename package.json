@@ -1,18 +1,37 @@
 {
   "name": "@exivity/ui",
   "version": "0.0.1",
+  "description": "A collection of components to build interfaces",
   "license": "MIT",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exivity/ui.git"
+  },
+  "keywords": [
+    "exivity",
+    "ui"
+  ],
+  "author": "Joram van den Boezem <joram@vandenboezem.nl>",
+  "bugs": {
+    "url": "https://github.com/exivity/ui/issues"
+  },
+  "homepage": "https://github.com/exivity/ui",
+  "main": "dist/index.js",
   "module": "dist",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "test": "jest --coverage --collectCoverageFrom src/**/*.js",
+    "test": "jest",
     "start": "start-storybook -p 6006",
-    "build": "yarn build:clean && yarn build:dist && yarn build:storybook",
+    "build": "yarn build:clean && yarn build:dist && yarn build:docs",
     "build:clean": "rimraf dist && rimraf docs",
     "build:dist": "babel src --out-dir dist --source-maps",
-    "build:storybook": "build-storybook -o docs"
+    "build:docs": "build-storybook -o docs",
+    "publish:docs": "yarn build:clean && yarn build:docs && git subtree push --prefix docs origin gh-pages"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",
@@ -61,6 +80,9 @@
     "not op_mini all"
   ],
   "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "collectCoverageFrom": ["src/**/*.js"],
     "setupTestFrameworkScriptFile": "./setupTest.js"
   }
 }
