@@ -83,7 +83,10 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "collectCoverageFrom": ["src/**/*.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.stories.js"
+    ],
     "setupTestFrameworkScriptFile": "./setupTest.js",
     "roots": [
       "<rootDir>/src/"
