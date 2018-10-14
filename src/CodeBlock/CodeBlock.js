@@ -1,44 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Box } from 'reakit'
 import SyntaxHighlighter, {
   registerLanguage
 } from 'react-syntax-highlighter/prism-light'
 import jsx from 'react-syntax-highlighter/languages/prism/jsx'
 import style from 'react-syntax-highlighter/styles/prism/solarizedlight'
 
-import { themed } from '../theme'
+import theme from '../theme'
 
 registerLanguage('jsx', jsx)
 
-const CodeBlock = ({ children, language, theme }) => {
+const CodeBlock = ({ children, language }) => {
   // Fix font-family on code element
   const myStyle = {
     ...style,
     'code[class*="language-"]': {
       ...style['code[class*="language-"]'],
-      fontFamily: theme.fonts.code.family
+      fontFamily: theme.type.fonts.monospace.family
     }
   }
 
-  return <SyntaxHighlighter
+  return <Box as={SyntaxHighlighter}
     language={language}
     style={myStyle}
     customStyle={{
-      padding: `${theme.spacing}em`,
-      fontFamily: theme.fonts.code.family,
-      backgroundColor: theme.colours.mark,
+      fontFamily: theme.type.fonts.monospace.family,
+      backgroundColor: theme.palette.marker
     }}>
     {children}
-  </SyntaxHighlighter>
+  </Box>
 }
 
 CodeBlock.propTypes = {
   children: PropTypes.node.isRequired,
-  language: PropTypes.oneOf(['jsx']).isRequired,
+  language: PropTypes.oneOf(['jsx']).isRequired
 }
 
 CodeBlock.defaultProps = {
   language: 'jsx'
 }
 
-export default themed(CodeBlock)
+export default CodeBlock

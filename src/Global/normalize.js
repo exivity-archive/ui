@@ -1,5 +1,7 @@
+import { css } from 'styled-components'
+
 // https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css
-const normalize = `
+const normalize = css`
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

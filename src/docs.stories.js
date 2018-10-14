@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Box, Heading, Paragraph } from 'reakit'
 import { storiesOf } from '@storybook/react'
 
 import readme from '../README.md'
@@ -9,32 +9,29 @@ import Code from '../src/Code'
 import Markdown from '../src/Markdown/Markdown'
 import Table from '../src/Table'
 
-const MaxWidthContainer = styled.div`
-  max-width: 50rem;
-`
-const maxWidth = story => <MaxWidthContainer>
+const maxWidth = story => <Box maxWidth='50rem'>
   {story()}
-</MaxWidthContainer>
+</Box>
 
 storiesOf('Docs', module)
   .addDecorator(maxWidth)
   .add('Introduction', () => <Markdown>{readme}</Markdown>)
 
   .add('Installation', () => <div>
-    <h1>Installation</h1>
-    <p>With <Code>yarn</Code>:</p>
+    <Heading>Installation</Heading>
+    <Paragraph>With <Code>yarn</Code>:</Paragraph>
     <CodeBlock>
       {`yarn add @exivity/ui`}
     </CodeBlock>
-    <p>With <Code>npm</Code>:</p>
+    <Paragraph>With <Code>npm</Code>:</Paragraph>
     <CodeBlock>
       {`npm i @exivity/ui`}
     </CodeBlock>
 
-    <h1>Dependencies</h1>
-    <h2>Direct dependencies</h2>
-    <p>The following packages will be automatically installed:</p>
-    <Table theme={{ spacing: 2 }}>
+    <Heading>Dependencies</Heading>
+    <Heading as='h2'>Direct dependencies</Heading>
+    <Paragraph>The following packages will be automatically installed:</Paragraph>
+    <Table>
       <thead>
         <tr>
           <th>dependency</th>
@@ -52,8 +49,8 @@ storiesOf('Docs', module)
         </tr>
       </tbody>
     </Table>
-    <h2>Peer dependencies</h2>
-    <p>The following packages must be already installed in your project:</p>
+    <Heading as='h2'>Peer dependencies</Heading>
+    <Paragraph>The following packages must be already installed in your project:</Paragraph>
     <Table>
       <thead>
         <tr>
@@ -72,8 +69,8 @@ storiesOf('Docs', module)
         </tr>
       </tbody>
     </Table>
-    <h2>Optional dependencies</h2>
-    <p>The following packages may be installed in your project if you plan to use the following components:</p>
+    <Heading as='h2'>Optional dependencies</Heading>
+    <Paragraph>The following packages may be installed in your project if you plan to use the following components:</Paragraph>
     <Table>
       <thead>
         <tr>
@@ -98,10 +95,10 @@ storiesOf('Docs', module)
   </div>)
 
   .add('Usage', () => <div>
-    <h1>Usage</h1>
-    <h2>WithStyle</h2>
-    <p>Wrap your entire app in a <Code>WithStyle</Code> component to provide styling capabilities to all nested
-      components:</p>
+    <Heading>Usage</Heading>
+    <Heading as='h2'>WithStyle</Heading>
+    <Paragraph>Wrap your entire app in a <Code>WithStyle</Code> component to provide styling capabilities to all nested
+      components:</Paragraph>
     <CodeBlock>
       {`import { WithStyle } from '@exivity/ui'
 
@@ -109,9 +106,9 @@ storiesOf('Docs', module)
   <App>
 </WithStyle>`}
     </CodeBlock>
-    <h2>Theming</h2>
-    <p>By default, the <Code>WithStyle</Code> component uses the <Code>defaultTheme</Code>. There are three ways to
-      modify a theme: </p>
+    <Heading as='h2'>Theming</Heading>
+    <Paragraph>By default, the <Code>WithStyle</Code> component uses the <Code>defaultTheme</Code>. There are three ways to
+      modify a theme: </Paragraph>
     <ol>
       <li>make your own theme,</li>
       <li>local theme overrides are supported
@@ -167,17 +164,17 @@ const { SIZE_LARGE } = theme
   </div>)
 
   .add('Development', () => <div>
-    <h1>Development</h1>
-    <h2>Scaffolding</h2>
-    <p>At the bare minimum, components will have two files:</p>
+    <Heading>Development</Heading>
+    <Heading as='h2'>Scaffolding</Heading>
+    <Paragraph>At the bare minimum, components will have two files:</Paragraph>
     <CodeBlock>{`src/
 └── Alert/
     ├── index.js
     └── Alert.js`}
     </CodeBlock>
-    <p><Code>index.js</Code> is merely a wrapper around the actual component, for easier importing:</p>
+    <Paragraph><Code>index.js</Code> is merely a wrapper around the actual component, for easier importing:</Paragraph>
     <CodeBlock>{`export { default } from './Alert'`}</CodeBlock>
-    <p><Code>Alert.js</Code> contains the component itself:</p>
+    <Paragraph><Code>Alert.js</Code> contains the component itself:</Paragraph>
     <CodeBlock>{`import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { themed } from '../theme'
@@ -205,8 +202,8 @@ Alert.propTypes = {
 // not using a ThemeProvider (useful for testing) and you can pass down a theme
 // prop which will override any global theme.
 export default themed(Alert)`}</CodeBlock>
-    <h2>Stories</h2>
-    <p>Add a <Code>Alert.stories.js</Code> file:</p>
+    <Heading as='h2'>Stories</Heading>
+    <Paragraph>Add a <Code>Alert.stories.js</Code> file:</Paragraph>
     <CodeBlock>{`import React from 'react'
 import { storiesOf } from '@storybook/react'
 
@@ -215,8 +212,8 @@ import Alert from './Alert'
 storiesOf('atoms|Alert', module)
   .add('default', () => <Alert>Warning!</Alert>)
   .add('danger', () => <Alert danger>Danger!</Alert>)`}</CodeBlock>
-    <h2>Tests</h2>
-    <p>Add a <Code>Alert.test.js</Code> file:</p>
+    <Heading as='h2'>Tests</Heading>
+    <Paragraph>Add a <Code>Alert.test.js</Code> file:</Paragraph>
     <CodeBlock>{`/* eslint-disable no-undef */
 import React from 'react'
 import renderer from 'react-test-renderer'
@@ -232,8 +229,8 @@ test('renders dangerous alert', () => {
   const alert = renderer.create(<Alert danger>danger</Alert>)
   expect(alert.toJSON()).toMatchSnapshot()
 })`}</CodeBlock>
-    <h2>Wrapping up</h2>
-    <p>The folder structure for our component will now look like this:</p>
+    <Heading as='h2'>Wrapping up</Heading>
+    <Paragraph>The folder structure for our component will now look like this:</Paragraph>
     <CodeBlock>{`src/
 ├── Alert/
 |   ├── index.js
@@ -242,6 +239,6 @@ test('renders dangerous alert', () => {
 |   └── Alert.test.js
 └── index.js`}
     </CodeBlock>
-    <p>Finally, add this line to <Code>src/index.js</Code>:</p>
+    <Paragraph>Finally, add this line to <Code>src/index.js</Code>:</Paragraph>
     <CodeBlock>{`export { default as Alert } from './Alert'`}</CodeBlock>
   </div>)

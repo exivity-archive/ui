@@ -1,23 +1,27 @@
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { themed } from '../theme'
+import { Box, styled } from 'reakit'
+import { theme } from 'styled-tools'
 
-const styles = props => css`
-  background-color: ${props.theme.colours.warning};
-  padding: ${props.theme.spacing * props.theme.size}px;
-  border-radius: ${props.theme.border.radius};
+import withEnumProps from '../withEnumProps'
 
-  ${props.danger && `
-    color: ${props.theme.colours.bg};
-    background-color: ${props.theme.colours.danger};
-  `}
+const Alert = styled(Box)`
+  padding: ${theme('base.spaceHalf')} ${theme('base.space')};
+  border-radius: ${theme('base.borderRadius')};
 `
 
-const Alert = styled.div`${styles}`
-
 Alert.propTypes = {
+  ...Box.propTypes,
   children: PropTypes.node.isRequired,
+
+  primary: PropTypes.bool,
+  success: PropTypes.bool,
+  warning: PropTypes.bool,
   danger: PropTypes.bool
 }
 
-export default themed(Alert)
+Alert.defaultProps = {
+  opaque: true,
+  palette: 'warning'
+}
+
+export default withEnumProps(Alert, { palette: 'key' })

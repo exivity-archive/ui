@@ -9,7 +9,8 @@
 
 A collection of components to build interfaces.
 
-## Quickstart
+Quickstart
+----------
 
 Install with `yarn`
 
@@ -27,7 +28,8 @@ import { Button } from '@exivity/ui'
 
 Visit [exivity.github.io/ui](https://exivity.github.io/ui/?selectedKind=Docs&selectedStory=Introduction) for more documentation and examples.
 
-## Todo
+Todo
+----
 
 - Option to embed fonts instead of loading through Google Fonts (for offline use)
 - Use https://reakit.io/ because it's awesome

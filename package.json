@@ -64,7 +64,8 @@
   },
   "dependencies": {
     "color": "^3.1.0",
-    "styled-components": "^4.0.0-beta.11.3"
+    "reakit": "^0.15.7",
+    "styled-tools": "^1.5.1"
   },
   "optionalDependencies": {
     "react-markdown": "^4.0.3",
@@ -72,7 +73,8 @@
   },
   "peerDependencies": {
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "styled-components": "^3.4.10"
   },
   "browserslist": [
     ">0.2%",
