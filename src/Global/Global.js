@@ -1,8 +1,22 @@
-import { createGlobalStyle } from 'styled-components'
+import { injectGlobal } from 'styled-components'
 
 import normalize from './normalize'
 import base from './base'
+import type from './type'
 
-const Global = createGlobalStyle`${normalize} ${base}`
+let injected = false
+
+const Global = () => {
+  if (!injected) {
+    injectGlobal`${normalize} ${base} ${type}`
+    injected = true
+  }
+
+  return null
+}
 
 export default Global
+
+// @todo after upgrade to styled-components 4, use this:
+// import { createGlobalStyle } from 'styled-components'
+// const Global = createGlobalStyle`${normalize} ${base} ${type}`

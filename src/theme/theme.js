@@ -1,9 +1,15 @@
 import { css } from 'reakit'
 import { prop, palette as p, theme as t, ifProp } from 'styled-tools'
 
+export const base = {
+  space: '1em',
+  spaceHalf: '0.5em',
+  spaceDouble: '2em',
+  borderRadius: '4px'
+}
+
 export const type = {
   size: 16,
-  spacing: 1,
   lineHeight: 1.5,
   fonts: {
     url: 'https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed:500|Fira+Sans:400,600',
@@ -385,6 +391,7 @@ export const TooltipArrow = css`
 `
 
 export default {
+  base,
   type,
   palette,
   Avatar,

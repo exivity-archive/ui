@@ -1,29 +1,17 @@
-import { css } from 'styled-components'
+import { css } from 'reakit'
+import color from 'color'
 
 import theme from '../theme'
 
 const base = css`
-  @import url('${theme.type.fonts.url}');
-  
-  html {
-    line-height: ${theme.type.lineHeight};
-  }
-   
-  body {  
-    font-size: ${theme.type.size}px;
-    font-family: ${theme.type.fonts.base.family};
-    font-weight: ${theme.type.fonts.base.weight};
-  }
-  
-  h1, h2, h3, strong {
-    font-weight: ${theme.type.fonts.base.weight};
+  body {
+    --focus-color: red;
   }
   
   &:focus {
-    --focus-color: ${theme.palette.primary[4]};
     outline: none;
-    background-color: var(--focus-color);
-    box-shadow: 0 0 0 4px var(--focus-color);
+    background-color: rgba(var(--focus-color), 0.5);
+    box-shadow: 0 0 0 4px rgba(var(--focus-color), 0.5);
     border-radius: 1px;
   }
 `

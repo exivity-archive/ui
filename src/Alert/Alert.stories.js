@@ -5,4 +5,5 @@ import Alert from './Alert'
 
 storiesOf('atoms|Alert', module)
   .add('default', () => <Alert>Warning!</Alert>)
-  .add('danger', () => <Alert danger>Danger!</Alert>)
+  .add('danger', () => <Alert palette='danger'>Danger!</Alert>)
+  .add('success', () => <Alert palette='success'>Success!</Alert>)
