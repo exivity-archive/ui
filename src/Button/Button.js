@@ -1,16 +1,15 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import { Button as BaseButton } from 'reakit'
+import { Button as BaseButton, styled } from 'reakit'
+import { prop } from 'styled-tools'
 
-import theme from '../theme'
+import withEnumProps from '../withEnumProps'
 
-const Button = (props) => {
-  const colour = Object.keys(theme.palette)
-    .find(key => props[key])
-  return <BaseButton {...props} palette={colour} />
-}
+const Button = styled(BaseButton)`
+  font-size: ${prop('size')}em;
+`
 
 Button.propTypes = {
+  ...BaseButton.propTypes,
   children: PropTypes.node.isRequired,
 
   primary: PropTypes.bool,
@@ -19,8 +18,19 @@ Button.propTypes = {
   warning: PropTypes.bool,
   danger: PropTypes.bool,
 
+  size: PropTypes.number,
+  xsmall: PropTypes.bool,
   small: PropTypes.bool,
-  large: PropTypes.bool
+  large: PropTypes.bool,
+  xlarge: PropTypes.bool
 }
 
-export default Button
+Button.defaultProps = {
+  palette: 'primary',
+  size: 1
+}
+
+export default withEnumProps(Button, {
+  palette: 'key',
+  size: 'value'
+})

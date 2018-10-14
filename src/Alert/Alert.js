@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
-import { styled, Box } from 'reakit'
+import { Box, styled } from 'reakit'
 import { theme } from 'styled-tools'
+
+import withEnumProps from '../withEnumProps'
 
 const Alert = styled(Box)`
   padding: ${theme('base.spaceHalf')} ${theme('base.space')};
@@ -9,12 +11,17 @@ const Alert = styled(Box)`
 
 Alert.propTypes = {
   ...Box.propTypes,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+
+  primary: PropTypes.bool,
+  success: PropTypes.bool,
+  warning: PropTypes.bool,
+  danger: PropTypes.bool
 }
 
 Alert.defaultProps = {
   opaque: true,
-  palette: 'alert'
+  palette: 'warning'
 }
 
-export default Alert
+export default withEnumProps(Alert, { palette: 'key' })

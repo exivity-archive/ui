@@ -1,5 +1,14 @@
 import { css } from 'reakit'
-import { prop, palette as p, theme as t, ifProp } from 'styled-tools'
+import { ifProp, palette as p, prop, theme as t } from 'styled-tools'
+
+import { utils } from '../theme'
+
+// Stuck in a loop while importing this function from utils
+export const preciseRm = (fraction, size = type.size) => {
+  const rounded = Math.round(size * fraction)
+
+  return rounded / size
+}
 
 export const base = {
   space: '1em',
@@ -29,6 +38,13 @@ export const type = {
   }
 }
 
+export const size = {
+  xsmall: 0.6,
+  small: 0.8,
+  large: 1.2,
+  xlarge: 1.4
+}
+
 export const palette = {
   white: '#ffffff',
   whiteText: p('black'),
@@ -40,8 +56,8 @@ export const palette = {
   primary: ['#2196f3', '#42a5f5', '#64b5f6', '#90caf9', '#bbdefb'],
   primaryText: [p('white'), p('white'), p('black'), p('black'), p('black')],
 
-  // https://coolors.co/e91e63-ec407a-f06292-f48fb1-f8bbd0
-  secondary: ['#e91e63', '#ec407a', '#f06292', '#f48fb1', '#f8bbd0'],
+  // https://coolors.co/8e8e8e-acacac-b7b7b7-cbcbcb-e0e0e0
+  secondary: ['#8E8E8E', '#acacac', '#b7b7b7', '#cbcbcb', '#e0e0e0'],
   secondaryText: [p('white'), p('white'), p('black'), p('black'), p('black')],
 
   // https://coolors.co/f44336-ef5350-e57373-ef9a9a-ffcdd2
@@ -49,8 +65,8 @@ export const palette = {
   dangerText: [p('white'), p('white'), p('black'), p('black'), p('black')],
 
   // https://coolors.co/ffc107-ffca28-ffd54f-ffe082-ffecb3
-  alert: ['#ffc107', '#ffca28', '#ffd54f', '#ffe082', '#ffecb3'],
-  alertText: [p('black'), p('black'), p('black'), p('black'), p('black')],
+  warning: ['#ffc107', '#ffca28', '#ffd54f', '#ffe082', '#ffecb3'],
+  warningText: [p('black'), p('black'), p('black'), p('black'), p('black')],
 
   // https://coolors.co/4caf50-66bb6a-81c784-a5d6a7-c8e6c9
   success: ['#4caf50', '#66bb6a', '#81c784', '#a5d6a7', '#c8e6c9'],
@@ -124,7 +140,15 @@ export const Blockquote = css`
   font-style: italic;
 `
 
+export const Box = css`
+  --focus-color: ${utils.toCssRgbComponent(utils.bgColorWithProps)
+}};
+`
+
 export const Button = css`
+  font-family: ${t('type.fonts.interact.family')};
+  font-weight: ${t('type.fonts.interact.weight')};
+  text-transform: uppercase;
   display: inline-flex;
   position: relative;
   appearance: none;
@@ -133,20 +157,24 @@ export const Button = css`
   cursor: pointer;
   min-width: 2.5em;
   height: 2.5em;
-  padding: 0 0.68em;
-  border-radius: 0.25em;
+  padding: 0 ${preciseRm(1.2)}em;
+  border-radius: ${t('base.borderRadius')};
   flex: none;
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
   outline: none;
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: inset 0 0 999em ${p('shadow', -2)};
+  }
+  &:focus {
+    box-shadow: inset 0 0 999em ${p('shadow', -2)},
+      0 0 0 4px rgba(var(--focus-color), 0.3);
   }
   &:active,
   &.active {
-    box-shadow: inset 0 0 999em ${p('shadow', -3)};
+    box-shadow: inset 0 0 999em ${p('shadow', -3)},
+      0 0 0 4px rgba(var(--focus-color), 0.3);
   }
   &:after {
     display: none;
@@ -261,6 +289,15 @@ export const Link = css`
   align-items: center;
   grid-auto-flow: column;
   text-decoration: none;
+  
+  --focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)};
+  
+  &:focus {
+    outline: none;
+    border-radius: 1px;
+    background-color: rgba(var(--focus-color), 0.3);
+    box-shadow: 0 0 0 4px rgba(var(--focus-color), 0.3);
+  }
 
   &:hover {
     text-decoration: underline;
@@ -393,9 +430,11 @@ export const TooltipArrow = css`
 export default {
   base,
   type,
+  size,
   palette,
   Avatar,
   Blockquote,
+  Box,
   Button,
   Code,
   Field,

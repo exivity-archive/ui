@@ -1,14 +1,13 @@
 import { injectGlobal } from 'styled-components'
 
 import normalize from './normalize'
-import base from './base'
 import type from './type'
 
 let injected = false
 
 const Global = () => {
   if (!injected) {
-    injectGlobal`${normalize} ${base} ${type}`
+    injectGlobal`${normalize} ${type}`
     injected = true
   }
 
