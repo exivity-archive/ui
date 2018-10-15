@@ -1,72 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders basic button 1`] = `
-.c0 {
-  font-size: 16px;
-  font-family: 'Fira Sans Condensed',sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 2px solid #222222;
-  background: transparent;
-  color: #222222;
-  -webkit-transition: border-color 0.3s ease-in-out,background-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out,background-color 0.3s ease-in-out;
-  margin: 0;
-  padding: 0.5rem 2rem;
-  border-radius: 3px;
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
 }
 
-.c0:not(:first-child) {
-  margin-left: 1rem;
-}
-
-.c0:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.c0:hover {
-  cursor: pointer;
-  border: 2px solid #222222;
+.c0 .c2 {
+  margin-left: 0;
 }
 
 <button
-  className="c0"
+  className="c0 c1"
+  size={1}
+  style={
+    Object {
+      "size": 1,
+    }
+  }
 >
   click
 </button>
 `;
 
 exports[`renders large button 1`] = `
-.c0 {
-  font-size: 20px;
-  font-family: 'Fira Sans Condensed',sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 2px solid #222222;
-  background: transparent;
-  color: #222222;
-  -webkit-transition: border-color 0.3s ease-in-out,background-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out,background-color 0.3s ease-in-out;
-  margin: 0;
-  padding: 0.5rem 2rem;
-  border-radius: 3px;
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
 }
 
-.c0:not(:first-child) {
-  margin-left: 1rem;
-}
-
-.c0:not(:last-child) {
-  margin-right: 1rem;
-}
-
-.c0:hover {
-  cursor: pointer;
-  border: 2px solid #222222;
+.c0 .c2 {
+  margin-left: 0;
 }
 
 <button
-  className="c0"
+  className="c0 c1"
+  size={1}
+  style={
+    Object {
+      "size": 1,
+    }
+  }
 >
   click
 </button>

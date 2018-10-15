@@ -5,7 +5,9 @@ import PropTypes from 'prop-types'
 
 class ThemeConsumer extends React.Component {
   render () {
-    return this.props.children(this.context['__styled-components__next__'].getTheme())
+    return this.context['__styled-components__next__']
+      ? this.props.children(this.context['__styled-components__next__'].getTheme())
+      : this.props.children({})
   }
 }
 
@@ -28,15 +30,20 @@ function withEnumProps (WrappedComponent, enumProps) {
         {theme => {
           const compactedProps = {}
           Object.keys(enumProps).forEach(enumProp => {
-            if (enumProps[enumProp] === 'key') {
-              compactedProps[enumProp] = Object.keys(theme[enumProp])
-                .find(key => this.props[key])
-            } else if (enumProps[enumProp] === 'value') {
-              const match = Object.entries(theme[enumProp])
-                .find(entry => this.props[entry[0]])
-              compactedProps[enumProp] = match && match[1]
-            } else {
-              throw new Error('Invalid configuration')
+            if (theme[enumProp]) {
+              // Theme has this prop defined
+              if (enumProps[enumProp] === 'key') {
+                // We use the enumProp name (key)
+                compactedProps[enumProp] = Object.keys(theme[enumProp])
+                  .find(key => this.props[key])
+              } else if (enumProps[enumProp] === 'value') {
+                // We use the enumProp theme value
+                const match = Object.entries(theme[enumProp])
+                  .find(entry => this.props[entry[0]])
+                compactedProps[enumProp] = match && match[1]
+              } else {
+                throw new Error('Invalid configuration')
+              }
             }
           })
 

@@ -2,11 +2,16 @@
 
 exports[`renders basic code 1`] = `
 .c0 {
-  font-family: 'Fira Mono',monospace;
-  font-weight: 400;
-  background-color: #fdf6e3;
-  padding: 3px;
-  border-radius: 3px;
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
 }
 
 <code

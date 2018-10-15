@@ -2,11 +2,16 @@
 
 exports[`renders dangerous alert 1`] = `
 .c0 {
-  background-color: #ffca71;
-  padding: 16px;
-  border-radius: 3px;
-  color: #ffffff;
-  background-color: #c33c32;
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
 }
 
 <div
@@ -18,9 +23,16 @@ exports[`renders dangerous alert 1`] = `
 
 exports[`renders default alert 1`] = `
 .c0 {
-  background-color: #ffca71;
-  padding: 16px;
-  border-radius: 3px;
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
 }
 
 <div
