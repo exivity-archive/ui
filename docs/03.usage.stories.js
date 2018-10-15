@@ -39,4 +39,6 @@ import { Global, theme } from '@exivity/ui'
   </React.Fragment>
 </Provider>`}
     </CodeBlock>
+    <Heading as='h2'>Using local fonts</Heading>
+    <Paragraph>...</Paragraph>
   </div>)

@@ -4,6 +4,7 @@ import { Grid } from 'reakit'
 import { storiesOf } from '@storybook/react'
 
 import Button from './Button'
+import Icon from './../Icon'
 
 storiesOf('atoms|Button', module)
   .add('default', () => <Button>Button</Button>)
@@ -22,4 +23,8 @@ storiesOf('atoms|Button', module)
     <Button primary>Normal</Button>
     <Button primary large>Large</Button>
     <Button primary xlarge>Extra large</Button>
+  </Grid>)
+  .add('icon', () => <Grid gridTemplateColumns='repeat(2, max-content)' gap={20} align>
+    <Button primary xlarge><Icon>favorite</Icon> like</Button>
+    <Button success xlarge rightIcon>retweet <Icon style={{ marginRight: 0 }}>sync</Icon></Button>
   </Grid>)

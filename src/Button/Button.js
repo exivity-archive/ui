@@ -1,15 +1,19 @@
 import PropTypes from 'prop-types'
-import { Button as BaseButton, styled } from 'reakit'
-import { prop } from 'styled-tools'
+import { styled, Button as BaseButton } from 'reakit'
+import { theme, ifProp } from 'styled-tools'
 
+import { Icon } from '../Icon/Icon'
 import withEnumProps from '../withEnumProps'
 
 const Button = styled(BaseButton)`
-  font-size: ${prop('size')}em;
+  ${Icon} {
+    margin-left: ${ifProp('rightIcon', theme('base.spaceHalf'), 0)};
+    margin-right: ${ifProp('rightIcon', 0, theme('base.spaceHalf'))};
+  }
 `
 
 Button.propTypes = {
-  ...BaseButton.propTypes,
+  ...Button.propTypes,
   children: PropTypes.node.isRequired,
 
   primary: PropTypes.bool,
@@ -22,7 +26,9 @@ Button.propTypes = {
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
   large: PropTypes.bool,
-  xlarge: PropTypes.bool
+  xlarge: PropTypes.bool,
+
+  rightIcon: PropTypes.bool
 }
 
 Button.defaultProps = {

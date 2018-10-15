@@ -3,25 +3,27 @@ import { ifProp, palette as p, prop, theme as t } from 'styled-tools'
 
 import { utils } from '../theme'
 
+const BASE_SIZE = 16
+
 // Stuck in a loop while importing this function from utils
-export const preciseRm = (fraction, size = type.size) => {
+export const preciseRm = (fraction, size = BASE_SIZE) => {
   const rounded = Math.round(size * fraction)
 
   return rounded / size
 }
 
 export const base = {
-  space: '1em',
-  spaceHalf: '0.5em',
-  spaceDouble: '2em',
+  space: `${preciseRm(1)}em`,
+  spaceHalf: `${preciseRm(0.5)}em`,
+  spaceDouble: `${preciseRm(2)}em`,
   borderRadius: '4px'
 }
 
 export const type = {
-  size: 16,
+  size: BASE_SIZE,
   lineHeight: 1.5,
   fonts: {
-    url: 'https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed:500|Fira+Sans:400,600',
+    url: 'https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed:500|Fira+Sans:400,600|Material+Icons',
     base: {
       family: '\'Fira Sans\', sans-serif',
       weight: 400,
@@ -33,6 +35,10 @@ export const type = {
     },
     monospace: {
       family: '\'Fira Mono\', monospace',
+      weight: 400
+    },
+    icon: {
+      family: '\'Material Icons\'',
       weight: 400
     }
   }
@@ -141,13 +147,13 @@ export const Blockquote = css`
 `
 
 export const Box = css`
-  --focus-color: ${utils.toCssRgbComponent(utils.bgColorWithProps)
-}};
+  --focus-color: ${utils.toCssRgbComponent(utils.bgColorWithProps)};
 `
 
 export const Button = css`
   font-family: ${t('type.fonts.interact.family')};
   font-weight: ${t('type.fonts.interact.weight')};
+  font-size: ${prop('size')}em;
   text-transform: uppercase;
   display: inline-flex;
   position: relative;
@@ -252,6 +258,13 @@ export const Heading = css`
   }
 `
 
+export const Icon = css`
+  font-family: ${t('type.fonts.icon.family')};
+  font-weight: ${t('type.fonts.icon.weight')};
+  font-size: ${prop('size')}em;
+  text-transform: none;
+`
+
 export const Image = css`
   display: block;
   max-width: 100%;
@@ -350,7 +363,7 @@ export const Sidebar = css`
 `
 
 export const Table = css`
-  border: 1px solid ${p('grayscale', 4)};
+  font-size: ${prop('size')}em;
   table-layout: fixed;
   border-collapse: collapse;
   background-color: ${p('background', -1)};
@@ -362,7 +375,16 @@ export const Table = css`
   tfoot,
   thead,
   tr {
-    border: inherit;
+    
+  }
+  
+  thead tr,
+  tbody tr:not(:last-child) {
+    border-bottom: 1px solid ${p('grayscale', -3)};
+  }
+  
+  tfoot tr {
+    border-top: 1px solid ${p('grayscale', -3)};
   }
 
   caption {
@@ -373,13 +395,21 @@ export const Table = css`
 
   td,
   th {
-    padding: 0 8px;
+    padding: ${ifProp('compact', preciseRm(0), preciseRm(0.2))}em 0;
     vertical-align: middle;
+    
+    &:not(:first-child) {
+      padding-left: ${ifProp('compact', preciseRm(0.1), preciseRm(0.4))}em;
+    }
+    
+    &:not(:last-child) {
+      padding-right: ${ifProp('compact', preciseRm(0.1), preciseRm(0.4))}em;
+    }
   }
 
   th {
-    font-weight: bold;
-    background-color: ${p('shadow', -1)};
+    font-weight: ${t('type.fonts.base.weightBold')};
+    text-align: left;
   }
 `
 
@@ -440,6 +470,7 @@ export default {
   Field,
   GroupItem,
   Heading,
+  Icon,
   Image,
   Input,
   Link,
