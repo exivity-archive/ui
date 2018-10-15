@@ -25,6 +25,6 @@ storiesOf('atoms|Button', module)
     <Button primary xlarge>Extra large</Button>
   </Grid>)
   .add('icon', () => <Grid gridTemplateColumns='repeat(2, max-content)' gap={20} align>
-    <Button primary xlarge><Icon>favorite</Icon> like</Button>
-    <Button success xlarge rightIcon>retweet <Icon style={{ marginRight: 0 }}>sync</Icon></Button>
+    <Button primary><Icon>favorite</Icon> like</Button>
+    <Button success rightIcon>retweet <Icon style={{ marginRight: 0 }}>sync</Icon></Button>
   </Grid>)
