@@ -31,5 +31,9 @@ Visit [exivity.github.io/ui](https://exivity.github.io/ui/?selectedKind=Docs&sel
 Todo
 ----
 
+- More components
+- Better docs
+- Kitchen sink demo
 - Option to embed fonts instead of loading through Google Fonts (for offline use)
-- Use https://reakit.io/ because it's awesome
+- Upgrade code to use styled-components as soon as reakit upgrades
+- ~~Use https://reakit.io/ because it's awesome~~

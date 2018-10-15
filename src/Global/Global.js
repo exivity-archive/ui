@@ -1,17 +1,28 @@
+import PropTypes from 'prop-types'
 import { injectGlobal } from 'styled-components'
 
-import normalize from './normalize'
-import type from './type'
+import normalizeCss from './normalize'
+import typeCss from './type'
 
 let injected = false
 
-const Global = () => {
+const Global = ({ normalize, type }) => {
   if (!injected) {
-    injectGlobal`${normalize} ${type}`
+    injectGlobal`${normalize && normalizeCss} ${type && typeCss}`
     injected = true
   }
 
   return null
+}
+
+Global.propTypes = {
+  normalize: PropTypes.bool,
+  type: PropTypes.bool
+}
+
+Global.defaultProps = {
+  normalize: true,
+  type: true
 }
 
 export default Global

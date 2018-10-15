@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box } from 'reakit'
+import { Paragraph } from 'reakit'
 import SyntaxHighlighter, {
   registerLanguage
 } from 'react-syntax-highlighter/prism-light'
@@ -18,10 +18,14 @@ const CodeBlock = ({ children, language }) => {
     'code[class*="language-"]': {
       ...style['code[class*="language-"]'],
       fontFamily: theme.type.fonts.monospace.family
+    },
+    'pre[class*="language-"]': {
+      ...style['pre[class*="language-"]'],
+      margin: undefined
     }
   }
 
-  return <Box as={SyntaxHighlighter}
+  return <Paragraph as={SyntaxHighlighter}
     language={language}
     style={myStyle}
     customStyle={{
@@ -29,7 +33,7 @@ const CodeBlock = ({ children, language }) => {
       backgroundColor: theme.palette.marker
     }}>
     {children}
-  </Box>
+  </Paragraph>
 }
 
 CodeBlock.propTypes = {

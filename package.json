@@ -16,22 +16,23 @@
     "url": "https://github.com/exivity/ui/issues"
   },
   "homepage": "https://github.com/exivity/ui",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "files": [
     "src",
-    "dist"
+    "docs",
+    "lib"
   ],
   "scripts": {
     "lint": "standard src",
     "lint:fix": "standard src --fix",
     "test": "jest",
     "start": "start-storybook -p 6006",
-    "build": "yarn build:clean && yarn build:dist && yarn build:docs",
-    "build:clean": "rimraf dist && rimraf docs",
-    "build:dist": "babel src --out-dir dist --source-maps --ignore \"src/**/*.stories.js\",\"src/**/*.test.js\"",
-    "build:docs": "build-storybook -o docs",
-    "publish:docs": "yarn build:clean && yarn build:docs && git add docs && git commit -m \"chore: update docs\" && git subtree push --prefix docs origin gh-pages",
+    "build": "yarn build:clean && yarn build:lib && yarn build:docs",
+    "build:clean": "rimraf lib && rimraf docs/dist",
+    "build:lib": "babel src --out-dir lib --source-maps --ignore \"src/**/*.stories.js\",\"src/**/*.test.js\"",
+    "build:docs": "build-storybook -o docs/dist",
+    "publish:docs": "yarn build:clean && yarn build:docs && git add docs && git commit -m \"chore: update docs\" && git subtree push --prefix docs/dist origin gh-pages",
     "prepublishOnly": "yarn lint && yarn test && yarn build"
   },
   "devDependencies": {
