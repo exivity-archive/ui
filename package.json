@@ -89,7 +89,8 @@
     "collectCoverage": true,
     "collectCoverageFrom": [
       "src/**/*.js",
-      "!src/**/*.stories.js"
+      "!src/**/*.stories.js",
+      "!src/**/stories/*"
     ],
     "setupTestFrameworkScriptFile": "./setupTest.js",
     "roots": [

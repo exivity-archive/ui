@@ -23,7 +23,11 @@ export const withStyle = story => <Provider theme={theme}>
     {story()}
   </React.Fragment>
 </Provider>
-export const withContainer = story => <Box padding={20}>{story()}</Box>
+export const withContainer = story => <Box
+  padding={20}
+  backgroundColor={theme.palette.grayscale[6]}>
+  {story()}
+  </Box>
 
 // add decorators
 addDecorator(withInfo)

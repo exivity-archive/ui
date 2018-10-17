@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
-import { Label } from 'reakit'
+import { styled, Label as BaseLabel } from 'reakit'
+
+const Label = styled(BaseLabel)``
 
 Label.propTypes = {
   ...Label.propTypes,
@@ -7,7 +9,5 @@ Label.propTypes = {
 }
 
 Label.defaultProps = {}
-
-Label.displayName = 'Label'
 
 export default Label

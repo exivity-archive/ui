@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
-import { Table } from 'reakit'
+import { styled, Table as BaseTable } from 'reakit'
 
 import withEnumProps from '../withEnumProps'
+
+const Table = styled(BaseTable)``
 
 Table.propTypes = {
   ...Table.propTypes,

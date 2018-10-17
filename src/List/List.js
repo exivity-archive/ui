@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
-import { List } from 'reakit'
+import { styled, List as BaseList } from 'reakit'
+
+const List = styled(BaseList)``
 
 List.propTypes = {
   ...List.propTypes,
@@ -10,7 +12,5 @@ List.propTypes = {
 }
 
 List.defaultProps = {}
-
-List.displayName = 'List'
 
 export default List

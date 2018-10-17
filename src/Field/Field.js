@@ -1,25 +1,14 @@
-import PropTypes from 'prop-types'
-import { Box, styled } from 'reakit'
-import { theme } from 'styled-tools'
+import { Field as BaseField, styled } from 'reakit'
 
-import withEnumProps from '../withEnumProps'
+import propTypes, { defaultProps } from './propTypes'
+import Container from './Container'
 
-const Field = styled(Box)`
-  border-radius: ${theme('base.borderRadius')};
-`
+const Field = styled(BaseField)``
 
-Field.propTypes = {
-  ...Box.propTypes,
-  children: PropTypes.node,
+Field.Container = Container
 
-  success: PropTypes.bool,
-  warning: PropTypes.bool,
-  danger: PropTypes.bool
-}
+Field.propTypes = propTypes
 
-Field.defaultProps = {
-  opaque: true,
-  palette: 'success'
-}
+Field.defaultProps = defaultProps
 
-export default withEnumProps(Field, { palette: 'key' })
+export default Field

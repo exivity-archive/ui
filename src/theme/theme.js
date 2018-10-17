@@ -1,5 +1,5 @@
 import { css } from 'reakit'
-import { ifProp, withProp, palette as p, prop, theme as t } from 'styled-tools'
+import { withProp, ifProp, ifNotProp, palette as p, prop, theme as t } from 'styled-tools'
 
 import { utils } from '../theme'
 
@@ -244,14 +244,34 @@ export const Code = css`
 
 export const Field = css`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${ifProp('horizontal', 'row', 'column')};
+  align-items: ${ifProp('horizontal', 'center', 'unset')};
   flex: 1;
+  white-space: ${ifProp('nowrap', 'nowrap', 'unset')};
+  
+  &:not(:last-child) {
+    margin-bottom: ${ifProp('horizontal', base.spaceDouble, 'unset')};
+  }
+  
   label {
-    padding-bottom: 0.5em;
+    padding-bottom: ${ifNotProp('horizontal', base.spaceHalf, 'unset')};
+    margin-right: ${ifProp('horizontal', base.spaceDouble, 'unset')};
+    flex-basis: ${withProp(['horizontal', 'align'], (horizontal, align) => {
+    return (horizontal && align)
+      ? (align === true) ? `${preciseRm(20)}em` : align
+      : 'auto'
+  })};
+    
+    > label {
+      padding-bottom: unset;
+    }
   }
-  > *:not(label):not(:last-child) {
-    margin-bottom: 0.5em;
-  }
+  
+  ${ifNotProp('horizontal', css`
+    > *:not(label):not(:last-child) {
+      margin-bottom: ${base.spaceDouble};
+    }
+  `)}
 `
 
 export const GroupItem = css`
@@ -305,6 +325,18 @@ export const Input = css`
   height: 2.5em;
   border-radius: ${t('base.borderRadius')};
   outline: none;
+    
+  ${props => props.outlined && css`
+    border: ${base.borderWidth} solid ${p(props.palette, props.tone)};
+  `}
+  
+  ${props => props.palette === 'grayscale' && css`
+    border-color: ${p('grayscale', (props.tone || 0) - 3)};
+    ${props.opaque && css`
+      background-color: ${p('grayscale', (props.tone || 0) - 3)};
+      color: ${p('grayscaleText', (props.tone || 0) - 3)};
+    `}
+  `}
   
   --focus-color: ${props => {
     if (props.palette === 'grayscale') return utils.toCssRgbComponent(palette.primary[0])
@@ -339,10 +371,14 @@ export const Input = css`
     cursor: not-allowed;
     box-shadow: inset 0 0 999em rgba(128, 128, 128, 0.2);
   }
-  
-  ${props => props.outlined && css`
-    border: ${base.borderWidth} solid ${p(props.palette, props.tone)};
-  `}
+`
+
+export const Label = css`
+  & > & {
+    display: block;
+    font-size: ${preciseRm(0.9)}em;
+    color: ${p('grayscale', 3)};
+  }
 `
 
 export const Link = css`
@@ -432,7 +468,6 @@ export const Table = css`
   font-size: ${prop('scale')}em;
   table-layout: fixed;
   border-collapse: collapse;
-  background-color: ${p('background', -1)};
   line-height: 200%;
 
   tbody,
@@ -455,7 +490,7 @@ export const Table = css`
 
   caption {
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: ${preciseRm(0.9)}em;
     color: ${p('grayscale', 3)};
   }
 
@@ -539,6 +574,7 @@ export default {
   Icon,
   Image,
   Input,
+  Label,
   Link,
   List,
   Overlay,

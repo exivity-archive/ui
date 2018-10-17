@@ -5,7 +5,7 @@ import { theme } from 'styled-tools'
 import withEnumProps from '../withEnumProps'
 
 const {Component} = styled(Box)`
-  border-radius: ${theme('base.borderRadius')};
+  ${theme('{Component}')};
 `
 
 {Component}.propTypes = {

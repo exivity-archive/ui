@@ -7,7 +7,7 @@ import Input from './Input'
 storiesOf('atoms|Input', module)
   .add('default', () => <Input placeholder="What's your name?" />)
   .add('palette', () => <Grid gridTemplateColumns='repeat(6, 100px)' gap={20}>
-    {[0, 1, 2, 3, 4].map(tone => <React.Fragment key={tone}>
+    {[0, 1, 2, 3, 4, 5, 6, 7].map(tone => <React.Fragment key={tone}>
       <Input tone={tone} placeholder='Primary' />
       <Input primary tone={tone} placeholder='Primary' />
       <Input secondary tone={tone} placeholder='Secondary' />
@@ -17,7 +17,7 @@ storiesOf('atoms|Input', module)
     </React.Fragment>)}
   </Grid>)
   .add('opaque', () => <Grid gridTemplateColumns='repeat(6, 100px)' gap={20}>
-    {[0, 1, 2, 3, 4].map(tone => <React.Fragment key={tone}>
+    {[0, 1, 2, 3, 4, 5, 6, 7].map(tone => <React.Fragment key={tone}>
       <Input opaque tone={tone} placeholder='Primary' />
       <Input primary opaque tone={tone} placeholder='Primary' />
       <Input secondary opaque tone={tone} placeholder='Secondary' />
@@ -27,7 +27,7 @@ storiesOf('atoms|Input', module)
     </React.Fragment>)}
   </Grid>)
   .add('outlined', () => <Grid gridTemplateColumns='repeat(6, 100px)' gap={20}>
-    {[0, 1, 2, 3, 4].map(tone => <React.Fragment key={tone}>
+    {[0, 1, 2, 3, 4, 5, 6, 7].map(tone => <React.Fragment key={tone}>
       <Input outlined tone={tone} placeholder='Primary' />
       <Input primary outlined tone={tone} placeholder='Primary' />
       <Input secondary outlined tone={tone} placeholder='Secondary' />
