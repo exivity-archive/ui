@@ -26,7 +26,7 @@ import { Button } from '@exivity/ui'
 <Button>Click me!</Button>
 ```
 
-Visit [exivity.github.io/ui](https://exivity.github.io/ui/?selectedKind=Docs&selectedStory=Introduction) for more documentation and examples.
+Visit [exivity.github.io/ui](https://exivity.github.io/ui/) for more documentation and examples.
 
 Todo
 ----
@@ -34,6 +34,9 @@ Todo
 - More components
 - Better docs
 - Kitchen sink demo
+- Default stories should have knobs for all propTypes
+- Import/export all reakit components, so end-users won't ever have to use reakit directly
+- Better stories (introduction, example code, propTypes, remove or replace withInfo?)
 - Option to embed fonts instead of loading through Google Fonts (for offline use)
 - Upgrade code to use styled-components as soon as reakit upgrades
 - ~~Use https://reakit.io/ because it's awesome~~

@@ -14,7 +14,7 @@ const Button = styled(BaseButton)`
 
 Button.propTypes = {
   ...Button.propTypes,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
@@ -22,7 +22,7 @@ Button.propTypes = {
   warning: PropTypes.bool,
   danger: PropTypes.bool,
 
-  size: PropTypes.number,
+  scale: PropTypes.number,
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
   large: PropTypes.bool,
@@ -33,10 +33,10 @@ Button.propTypes = {
 
 Button.defaultProps = {
   palette: 'primary',
-  size: 1
+  scale: 1
 }
 
 export default withEnumProps(Button, {
   palette: 'key',
-  size: 'value'
+  scale: 'value'
 })

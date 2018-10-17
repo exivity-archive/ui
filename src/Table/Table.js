@@ -5,9 +5,9 @@ import withEnumProps from '../withEnumProps'
 
 Table.propTypes = {
   ...Table.propTypes,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
-  size: PropTypes.number,
+  scale: PropTypes.number,
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
   large: PropTypes.bool,
@@ -17,9 +17,9 @@ Table.propTypes = {
 }
 
 Table.defaultProps = {
-  size: 1
+  scale: 1
 }
 
 Table.displayName = 'Table'
 
-export default withEnumProps(Table, { size: 'value' })
+export default withEnumProps(Table, { scale: 'value' })

@@ -11,7 +11,7 @@ const Alert = styled(Box)`
 
 Alert.propTypes = {
   ...Box.propTypes,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   primary: PropTypes.bool,
   success: PropTypes.bool,

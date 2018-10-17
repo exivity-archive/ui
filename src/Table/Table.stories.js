@@ -57,7 +57,7 @@ storiesOf('atoms|Table', module)
       </tfoot>
     </React.Fragment>
   </Table>)
-  .add('sizes', () => <React.Fragment>
+  .add('scale', () => <React.Fragment>
     <Table xsmall><SimpleTableContents /></Table>
     <Divider />
     <Table small><SimpleTableContents /></Table>

@@ -4,8 +4,7 @@ import renderer from 'react-test-renderer'
 
 import Code from './Code'
 
-test('renders basic code', () => {
-  const component = renderer.create(<Code>code</Code>)
-  let tree = component.toJSON()
-  expect(tree).toMatchSnapshot()
+test('renders basic Code', () => {
+  const component = renderer.create(<Code />)
+  expect(component.toJSON()).toMatchSnapshot()
 })

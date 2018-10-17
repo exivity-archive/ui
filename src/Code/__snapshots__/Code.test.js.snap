@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders basic code 1`] = `
+exports[`renders basic Code 1`] = `
 .c0 {
   margin: unset;
   padding: unset;
@@ -16,7 +16,5 @@ exports[`renders basic code 1`] = `
 
 <code
   className="c0"
->
-  code
-</code>
+/>
 `;

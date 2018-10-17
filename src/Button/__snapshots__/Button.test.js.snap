@@ -20,15 +20,8 @@ exports[`renders basic button 1`] = `
 
 <button
   className="c0 c1"
-  size={1}
-  style={
-    Object {
-      "size": 1,
-    }
-  }
->
-  click
-</button>
+  scale={1}
+/>
 `;
 
 exports[`renders large button 1`] = `
@@ -51,13 +44,6 @@ exports[`renders large button 1`] = `
 
 <button
   className="c0 c1"
-  size={1}
-  style={
-    Object {
-      "size": 1,
-    }
-  }
->
-  click
-</button>
+  scale={1}
+/>
 `;

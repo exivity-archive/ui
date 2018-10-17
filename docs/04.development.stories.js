@@ -11,6 +11,9 @@ storiesOf('Docs', module)
   .addDecorator(maxWidth)
   .add('Development', () => <div>
     <Heading>Development</Heading>
+    <Heading as='h2'>Quick start</Heading>
+    <Paragraph>To quickly create a new Alert component, run:</Paragraph>
+    <CodeBlock language='bash'>{`yarn create-component Alert`}</CodeBlock>
     <Heading as='h2'>Scaffolding</Heading>
     <Paragraph>At the bare minimum, components will have two files:</Paragraph>
     <CodeBlock>{`src/

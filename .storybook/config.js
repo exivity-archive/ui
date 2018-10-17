@@ -17,13 +17,13 @@ const options = {
   hierarchySeparator: /\/|\./,
   hierarchyRootSeparator: /\|/,
 }
-const withStyle = story => <Provider theme={theme}>
+export const withStyle = story => <Provider theme={theme}>
   <React.Fragment>
     <Global />
     {story()}
   </React.Fragment>
 </Provider>
-const withContainer = story => <Box padding={20}>{story()}</Box>
+export const withContainer = story => <Box padding={20}>{story()}</Box>
 
 // add decorators
 addDecorator(withInfo)

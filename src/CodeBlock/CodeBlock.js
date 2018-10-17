@@ -37,7 +37,7 @@ const CodeBlock = ({ children, language }) => {
 }
 
 CodeBlock.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   language: PropTypes.oneOf(['jsx']).isRequired
 }
 

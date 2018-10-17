@@ -24,6 +24,7 @@
     "lib"
   ],
   "scripts": {
+    "create-component": "node scripts/create-component.js",
     "lint": "standard src",
     "lint:fix": "standard src --fix",
     "test": "jest",

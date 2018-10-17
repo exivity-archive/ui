@@ -9,12 +9,12 @@ export const Icon = styled(Inline)`
 
 Icon.propTypes = {
   ...Inline.propTypes,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   sup: PropTypes.node,
   sub: PropTypes.node,
 
-  size: PropTypes.number,
+  scale: PropTypes.number,
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
   large: PropTypes.bool,
@@ -22,9 +22,9 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  size: 1
+  scale: 1
 }
 
 Icon.displayName = 'Icon'
 
-export default withEnumProps(Icon, { size: 'value' })
+export default withEnumProps(Icon, { scale: 'value' })

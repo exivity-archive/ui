@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders basic CodeBlock 1`] = `
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+<pre
+  className="c0"
+  style={
+    Object {
+      "MozHyphens": "none",
+      "MozTabSize": "4",
+      "OTabSize": "4",
+      "WebkitHyphens": "none",
+      "backgroundColor": "#fdf6e3",
+      "borderRadius": "0.3em",
+      "color": "#657b83",
+      "fontFamily": "'Fira Mono', monospace",
+      "hyphens": "none",
+      "lineHeight": "1.5",
+      "margin": undefined,
+      "msHyphens": "none",
+      "overflow": "auto",
+      "padding": "1em",
+      "tabSize": "4",
+      "textAlign": "left",
+      "whiteSpace": "pre",
+      "wordBreak": "normal",
+      "wordSpacing": "normal",
+      "wordWrap": "normal",
+    }
+  }
+>
+  <code
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "color": "#657b83",
+        "fontFamily": "'Fira Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "msHyphens": "none",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  />
+</pre>
+`;

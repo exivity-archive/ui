@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 
-import { Link, Paragraph, Heading } from 'reakit'
+import { List, Link, Paragraph, Heading } from 'reakit'
 
 import Code from '../Code'
 import CodeBlock from '../CodeBlock'
@@ -14,7 +14,8 @@ const defaultRenderers = {
   heading: props => <Heading {...props} as={`h${props.level}`} />,
   table: props => <Table {...props} />,
   inlineCode: props => <Code {...props} />,
-  code: props => <CodeBlock {...props}>{props.value}</CodeBlock>
+  code: props => <CodeBlock {...props}>{props.value}</CodeBlock>,
+  list: props => <List {...props} unordered={!props.ordered} />
 }
 
 const Markdown = ({ children, renderers }) => (
@@ -24,7 +25,7 @@ const Markdown = ({ children, renderers }) => (
 )
 
 Markdown.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
   renderers: PropTypes.object
 }
 

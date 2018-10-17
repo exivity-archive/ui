@@ -1,5 +1,5 @@
 import { css } from 'reakit'
-import { ifProp, palette as p, prop, theme as t } from 'styled-tools'
+import { ifProp, withProp, palette as p, prop, theme as t } from 'styled-tools'
 
 import { utils } from '../theme'
 
@@ -16,7 +16,9 @@ export const base = {
   space: `${preciseRm(1)}em`,
   spaceHalf: `${preciseRm(0.5)}em`,
   spaceDouble: `${preciseRm(2)}em`,
-  borderRadius: '4px'
+  borderRadius: '4px',
+  borderWidth: '1px',
+  outlineWidth: '4px'
 }
 
 export const type = {
@@ -44,7 +46,7 @@ export const type = {
   }
 }
 
-export const size = {
+export const scale = {
   xsmall: 0.6,
   small: 0.8,
   large: 1.2,
@@ -147,13 +149,17 @@ export const Blockquote = css`
 `
 
 export const Box = css`
+  font-size: ${t('type.size')}px;
+  font-family: ${t('type.fonts.base.family')};
+  font-weight: ${t('theme.type.fonts.base.weight')};
+  line-height: ${t('type.lineHeight')};
   --focus-color: ${utils.toCssRgbComponent(utils.bgColorWithProps)};
 `
 
 export const Button = css`
   font-family: ${t('type.fonts.interact.family')};
   font-weight: ${t('type.fonts.interact.weight')};
-  font-size: ${prop('size')}em;
+  font-size: ${prop('scale')}em;
   text-transform: uppercase;
   display: inline-flex;
   position: relative;
@@ -164,41 +170,62 @@ export const Button = css`
   min-width: 2.5em;
   height: 2.5em;
   padding: 0 ${preciseRm(1.2)}em;
+  border: ${base.borderWidth} solid ${utils.bgColorWithProps};
   border-radius: ${t('base.borderRadius')};
   flex: none;
   user-select: none;
   white-space: nowrap;
   text-decoration: none;
   outline: none;
+  
   &:hover {
     box-shadow: inset 0 0 999em ${p('shadow', -2)};
   }
+  
   &:focus {
     box-shadow: inset 0 0 999em ${p('shadow', -2)},
-      0 0 0 4px rgba(var(--focus-color), 0.3);
+      0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
   }
+  
   &:active,
   &.active {
     box-shadow: inset 0 0 999em ${p('shadow', -3)},
-      0 0 0 4px rgba(var(--focus-color), 0.3);
+      0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
   }
+  
   &:after {
     display: none;
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -${base.borderWidth};
+    right: -${base.borderWidth};
+    bottom: -${base.borderWidth};
+    left: -${base.borderWidth};
     border-radius: inherit;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.5);
   }
+  
   &[disabled] {
     pointer-events: none;
     &:after {
       display: block;
     }
   }
+  
+  ${props => props.outlined && css`
+    background-color: ${p('white')};
+    color: ${p(props.palette, 0)};
+    
+    &:hover {
+      box-shadow: none;
+      color: ${p('whiteText')};
+      border-color: ${p('grayscale', props.tone)};
+    }
+    
+    &:focus {
+      box-shadow: 0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
+    }
+  `}
 `
 
 export const Code = css`
@@ -228,7 +255,7 @@ export const Field = css`
 `
 
 export const GroupItem = css`
-  border: 1px solid ${p('border')};
+  border: ${base.borderWidth} solid ${p('border')};
   border-radius: 0.25em;
 `
 
@@ -261,7 +288,7 @@ export const Heading = css`
 export const Icon = css`
   font-family: ${t('type.fonts.icon.family')};
   font-weight: ${t('type.fonts.icon.weight')};
-  font-size: ${prop('size')}em;
+  font-size: ${prop('scale')}em;
   text-transform: none;
 `
 
@@ -271,11 +298,24 @@ export const Image = css`
 `
 
 export const Input = css`
+  font-size: ${prop('scale')}em;
   display: block;
   width: 100%;
   padding: 0 0.5em;
   height: 2.5em;
-  border-radius: 0.25em;
+  border-radius: ${t('base.borderRadius')};
+  outline: none;
+  
+  --focus-color: ${props => {
+    if (props.palette === 'grayscale') return utils.toCssRgbComponent(palette.primary[0])
+    return props.opaque
+      ? utils.toCssRgbComponent(utils.bgColorWithProps)
+      : utils.toCssRgbComponent(utils.textColorWithProps)
+  }};
+  
+  &:focus {
+    box-shadow: 0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
+  }
 
   &[type="checkbox"],
   &[type="radio"] {
@@ -294,6 +334,15 @@ export const Input = css`
     padding: 0.5em;
     height: auto;
   }
+  
+  &[disabled] {
+    cursor: not-allowed;
+    box-shadow: inset 0 0 999em rgba(128, 128, 128, 0.2);
+  }
+  
+  ${props => props.outlined && css`
+    border: ${base.borderWidth} solid ${p(props.palette, props.tone)};
+  `}
 `
 
 export const Link = css`
@@ -302,14 +351,14 @@ export const Link = css`
   align-items: center;
   grid-auto-flow: column;
   text-decoration: none;
-  
+
   --focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)};
-  
+
   &:focus {
     outline: none;
     border-radius: 1px;
     background-color: rgba(var(--focus-color), 0.3);
-    box-shadow: 0 0 0 4px rgba(var(--focus-color), 0.3);
+    box-shadow: 0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
   }
 
   &:hover {
@@ -318,7 +367,24 @@ export const Link = css`
 `
 
 export const List = css`
-  list-style: none;
+  ${props => {
+    if (props.ordered) {
+      return css`
+        padding-left: ${t('base.spaceDouble')};
+        list-style: decimal;`
+    }
+    if (props.unordered) {
+      return css`
+        padding-left: ${t('base.spaceDouble')};
+        list-style: disc;`
+    }
+
+    return css`list-style: none;`
+  }}
+
+  &:not(:last-child) {
+    margin-bottom: ${t('base.space')};
+  }
 
   li {
     margin-bottom: 0.35em;
@@ -334,7 +400,7 @@ export const Overlay = css`
 
 export const Paragraph = css`
   &:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: ${t('base.space')};
   }
 `
 
@@ -363,7 +429,7 @@ export const Sidebar = css`
 `
 
 export const Table = css`
-  font-size: ${prop('size')}em;
+  font-size: ${prop('scale')}em;
   table-layout: fixed;
   border-collapse: collapse;
   background-color: ${p('background', -1)};
@@ -375,14 +441,14 @@ export const Table = css`
   tfoot,
   thead,
   tr {
-    
+
   }
-  
+
   thead tr,
   tbody tr:not(:last-child) {
     border-bottom: 1px solid ${p('grayscale', -3)};
   }
-  
+
   tfoot tr {
     border-top: 1px solid ${p('grayscale', -3)};
   }
@@ -397,11 +463,11 @@ export const Table = css`
   th {
     padding: ${ifProp('compact', preciseRm(0), preciseRm(0.2))}em 0;
     vertical-align: middle;
-    
+
     &:not(:first-child) {
       padding-left: ${ifProp('compact', preciseRm(0.1), preciseRm(0.4))}em;
     }
-    
+
     &:not(:last-child) {
       padding-right: ${ifProp('compact', preciseRm(0.1), preciseRm(0.4))}em;
     }
@@ -460,7 +526,7 @@ export const TooltipArrow = css`
 export default {
   base,
   type,
-  size,
+  scale,
   palette,
   Avatar,
   Blockquote,

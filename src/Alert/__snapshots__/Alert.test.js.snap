@@ -16,9 +16,7 @@ exports[`renders dangerous alert 1`] = `
 
 <div
   className="c0"
->
-  danger
-</div>
+/>
 `;
 
 exports[`renders default alert 1`] = `
@@ -37,7 +35,5 @@ exports[`renders default alert 1`] = `
 
 <div
   className="c0"
->
-  warning
-</div>
+/>
 `;
