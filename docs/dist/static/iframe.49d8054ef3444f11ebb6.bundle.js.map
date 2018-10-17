@@ -1,1 +1,0 @@
-{"version":3,"file":"static/iframe.49d8054ef3444f11ebb6.bundle.js","sources":["webpack:///./docs/utils.js"],"sourcesContent":["import React from 'react'\r\nimport { Box } from 'reakit'\r\n\r\nexport const maxWidth = story => <Box maxWidth='50rem'>\r\n  {story()}\r\n</Box>\r\n"],"mappings":"AAAA","sourceRoot":""}
