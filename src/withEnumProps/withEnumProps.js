@@ -23,7 +23,7 @@ ThemeConsumer.contextTypes = {
   })
 }
 
-function withEnumProps (WrappedComponent, enumProps) {
+function withEnumProps (WrappedComponent, enumProps = {}) {
   class WithEnumProps extends React.Component {
     render () {
       return <ThemeConsumer>
