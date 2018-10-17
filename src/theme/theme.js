@@ -250,7 +250,7 @@ export const Field = css`
   white-space: ${ifProp('nowrap', 'nowrap', 'unset')};
   
   &:not(:last-child) {
-    margin-bottom: ${ifProp('horizontal', base.spaceDouble, 'unset')};
+    margin-bottom: ${base.spaceDouble};
   }
   
   label {
