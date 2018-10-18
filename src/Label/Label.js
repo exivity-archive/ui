@@ -5,7 +5,9 @@ const Label = styled(BaseLabel)``
 
 Label.propTypes = {
   ...Label.propTypes,
-  children: PropTypes.node
+  children: PropTypes.node,
+
+  secondary: PropTypes.bool
 }
 
 Label.defaultProps = {}

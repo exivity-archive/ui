@@ -47,6 +47,12 @@ function withEnumProps (WrappedComponent, enumProps = {}) {
             }
           })
 
+          // Filter undefined values
+          Object.keys(compactedProps)
+            .forEach(key => {
+              compactedProps[key] === undefined && delete compactedProps[key]
+            })
+
           return <WrappedComponent {...this.props} {...compactedProps} />
         }}
       </ThemeConsumer>

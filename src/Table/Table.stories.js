@@ -30,7 +30,7 @@ const SimpleTableContents = () => <React.Fragment>
 storiesOf('atoms|Table', module)
   .add('default', () => <Table>
     <React.Fragment>
-      <caption>Table caption</caption>
+      <caption align='bottom'>Table caption</caption>
       <thead>
         <tr>
           <th>Component</th>

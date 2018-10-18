@@ -12,4 +12,6 @@ Container.propTypes = propTypes
 
 Container.defaultProps = defaultProps
 
+Container.displayName = 'Field.Container'
+
 export default Container

@@ -312,8 +312,8 @@ export const Heading = css`
 
 export const Icon = css`
   font-size: ${prop('scale')}em;
-  height: ${prop('scale')}em;
-  line-height: ${prop('scale')}em;
+  height: 1em;
+  line-height: 1em;
   text-transform: none;
 `
 
@@ -378,11 +378,16 @@ export const Input = css`
   }
 `
 
+const secondaryLabel = css`
+  display: block;
+  font-size: ${preciseRm(0.9)}em;
+  color: ${p('grayscale', 3)};
+`
 export const Label = css`
+  ${ifProp('secondary', secondaryLabel)}
+  
   & > & {
-    display: block;
-    font-size: ${preciseRm(0.9)}em;
-    color: ${p('grayscale', 3)};
+    ${secondaryLabel}
   }
 `
 
