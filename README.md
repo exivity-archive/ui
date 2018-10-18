@@ -35,7 +35,7 @@ Todo
 - Better docs
 - Kitchen sink demo
 - Default stories should have knobs for all propTypes
-- Import/export all reakit components, so end-users won't ever have to use reakit directly
+- Import/export all reakit components, so end-users won't ever have to use reakit directly?
 - Better stories (introduction, example code, propTypes, remove or replace withInfo?)
 - Option to embed fonts instead of loading through Google Fonts (for offline use)
 - Upgrade code to use styled-components as soon as reakit upgrades

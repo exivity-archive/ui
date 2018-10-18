@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { styled, Inline } from 'reakit'
 import { theme } from 'styled-tools'
+
 import withEnumProps from '../withEnumProps'
 
 export const Icon = styled(Inline)`  

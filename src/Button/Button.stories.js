@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from 'reakit'
+import { MdFavorite, MdSync } from 'react-icons/md'
 
 import { storiesOf } from '@storybook/react'
 
@@ -34,8 +35,11 @@ storiesOf('atoms|Button', module)
     <Button primary xlarge>Extra large</Button>
   </Grid>)
   .add('icon', () => <Grid gridTemplateColumns='repeat(2, max-content)' gap={20} align>
-    <Button primary><Icon>favorite</Icon> like</Button>
-    <Button success rightIcon>retweet <Icon style={{ marginRight: 0 }}>sync</Icon></Button>
+    <Button primary><Icon><MdFavorite /></Icon> like</Button>
+    <Button success rightIcon large>
+      retweet
+      <Icon style={{ marginRight: 0 }}><MdSync /></Icon>
+    </Button>
   </Grid>)
   .add('disabled', () => <Grid gridTemplateColumns='repeat(2, max-content)' gap={20} align>
     <Button disabled>Disabled</Button>

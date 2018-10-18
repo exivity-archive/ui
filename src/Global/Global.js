@@ -1,38 +1,37 @@
+import React from 'react'
 import PropTypes from 'prop-types'
-import { injectGlobal } from 'styled-components'
+import { css } from 'reakit'
 
+import baseCss from './base'
 import normalizeCss from './normalize'
-import typeCss from './type'
+import renderFont from './font'
 import scrollbarCss from './scrollbar'
 
-let injected = false
-
-const Global = ({ normalize, type, scrollbar }) => {
-  if (!injected) {
-    injectGlobal`
-      ${normalize && normalizeCss}
-      ${type && typeCss}
-      ${scrollbar && scrollbarCss}`
-    injected = true
-  }
-
-  return null
+const Global = ({ base, normalize, font, scrollbar }) => {
+  return <React.Fragment>
+    {font && renderFont()}
+    <style>{css`
+    ${base ? baseCss : ''}
+    ${normalize ? normalizeCss : ''}
+    ${scrollbar ? scrollbarCss : ''}
+  `}</style>
+  </React.Fragment>
 }
 
 Global.propTypes = {
+  base: PropTypes.bool,
   normalize: PropTypes.bool,
-  type: PropTypes.bool,
+  font: PropTypes.bool,
   scrollbar: PropTypes.bool
 }
 
 Global.defaultProps = {
-  normalize: true,
-  type: true,
-  scrollbar: true
+  base: true
 }
 
 export default Global
 
-// @todo after upgrade to styled-components 4, use this:
+// @todo Global uses theme directly, instead of Provider.
+// @todo To fix, after upgrade to styled-components 4, use this:
 // import { createGlobalStyle } from 'styled-components'
 // const Global = createGlobalStyle`${normalize} ${base} ${type}`

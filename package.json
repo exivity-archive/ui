@@ -42,6 +42,7 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@storybook/addon-actions": "^4.0.0-alpha.24",
     "@storybook/addon-info": "^4.0.0-alpha.24",
     "@storybook/addon-knobs": "^4.0.0-alpha.24",
@@ -58,6 +59,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-icons": "^3.2.1",
     "react-markdown": "^4.0.3",
     "react-syntax-highlighter": "^9.0.0",
     "react-test-renderer": "^16.5.2",
@@ -70,6 +72,8 @@
     "styled-tools": "^1.5.1"
   },
   "optionalDependencies": {
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
+    "react-icons": "^3.2.1",
     "react-markdown": "^4.0.3",
     "react-syntax-highlighter": "^9.0.0"
   },

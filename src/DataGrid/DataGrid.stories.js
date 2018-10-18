@@ -7,5 +7,5 @@ import DataGrid from './DataGrid'
 
 const data = createRandomizedData()
 
-storiesOf('organism|DataGrid', module)
+storiesOf('molecules|DataGrid', module)
   .add('default', () => <DataGrid data={data} />)

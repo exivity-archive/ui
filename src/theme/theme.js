@@ -25,7 +25,15 @@ export const type = {
   size: BASE_SIZE,
   lineHeight: 1.5,
   fonts: {
-    url: 'https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Condensed:500|Fira+Sans:400,600|Material+Icons',
+    config: {
+      google: {
+        families: [
+          'Fira Mono:400',
+          'Fira Sans Condensed:500',
+          'Fira Sans:400,600'
+        ]
+      }
+    },
     base: {
       family: '\'Fira Sans\', sans-serif',
       weight: 400,
@@ -37,10 +45,6 @@ export const type = {
     },
     monospace: {
       family: '\'Fira Mono\', monospace',
-      weight: 400
-    },
-    icon: {
-      family: '\'Material Icons\'',
       weight: 400
     }
   }
@@ -170,7 +174,7 @@ export const Button = css`
   min-width: 2.5em;
   height: 2.5em;
   padding: 0 ${preciseRm(1.2)}em;
-  border: ${base.borderWidth} solid ${utils.bgColorWithProps};
+  border: none;
   border-radius: ${t('base.borderRadius')};
   flex: none;
   user-select: none;
@@ -179,7 +183,7 @@ export const Button = css`
   outline: none;
   
   &:hover {
-    box-shadow: inset 0 0 999em ${p('shadow', -2)};
+    box-shadow: inset 10px 10px 999em ${p('shadow', -2)};
   }
   
   &:focus {
@@ -215,15 +219,16 @@ export const Button = css`
   ${props => props.outlined && css`
     background-color: ${p('white')};
     color: ${p(props.palette, 0)};
+    box-shadow: 0 0 0 ${base.borderWidth} ${utils.bgColorWithProps};
     
     &:hover {
-      box-shadow: none;
       color: ${p('whiteText')};
-      border-color: ${p('grayscale', props.tone)};
+      box-shadow: 0 0 0 ${base.borderWidth} ${p('grayscale', props.tone)};
     }
     
     &:focus {
-      box-shadow: 0 0 0 ${base.outlineWidth} rgba(var(--focus-color), 0.3);
+      box-shadow: 0 0 0 ${base.borderWidth} ${utils.bgColorWithProps},
+       0 0 0 ${parseInt(base.outlineWidth, 10) + 1}px rgba(var(--focus-color), 0.3);
     }
   `}
 `
@@ -306,9 +311,9 @@ export const Heading = css`
 `
 
 export const Icon = css`
-  font-family: ${t('type.fonts.icon.family')};
-  font-weight: ${t('type.fonts.icon.weight')};
   font-size: ${prop('scale')}em;
+  height: ${prop('scale')}em;
+  line-height: ${prop('scale')}em;
   text-transform: none;
 `
 

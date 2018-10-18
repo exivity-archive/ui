@@ -24,9 +24,7 @@ import { theme } from '@exivity/ui'
     </CodeBlock>
     <Heading as='h2'>Global styles</Heading>
     <Paragraph>This package ships with the
-      well-known <Link href='http://necolas.github.io/normalize.css/'>normalize.css</Link> reset and set some global
-      type properties (font family, line height, etc.) from the theme. Including those global styles is recommended but
-      optional:
+      well-known <Link href='http://necolas.github.io/normalize.css/'>normalize.css</Link> reset and a @import statement for loading the fonts for the default theme. Including those global styles is recommended but optional:
     </Paragraph>
     <CodeBlock>
       {`import { Provider } from 'reakit'

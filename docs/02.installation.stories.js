@@ -14,11 +14,11 @@ storiesOf('Docs', module)
     <Heading>Installation</Heading>
     <Paragraph>With <Code>yarn</Code>:</Paragraph>
     <CodeBlock>
-      {`yarn add @exivity/ui`}
+      {`yarn add @exivity/ui [--ignore-optional]`}
     </CodeBlock>
     <Paragraph>With <Code>npm</Code>:</Paragraph>
     <CodeBlock>
-      {`npm i @exivity/ui`}
+      {`npm i @exivity/ui [--no-optional]`}
     </CodeBlock>
 
     <Heading>Dependencies</Heading>
@@ -78,14 +78,24 @@ storiesOf('Docs', module)
       </thead>
       <tbody>
         <tr>
-          <td><Code>CodeBlock</Code></td>
+          <td><Code>{`<CodeBlock />`}</Code></td>
           <td><Link href='https://www.npmjs.com/package/react-syntax-highlighter'>react-syntax-highlighter</Link></td>
           <td>^9.0.0</td>
         </tr>
         <tr>
-          <td><Code>Markdown</Code></td>
+          <td><Code>{`<Icon />`}</Code></td>
+          <td><Link href='https://www.npmjs.com/package/react-icons'>react-icons</Link></td>
+          <td>^3.2.1</td>
+        </tr>
+        <tr>
+          <td><Code>{`<Markdown />`}</Code></td>
           <td><Link href='https://www.npmjs.com/package/react-markdown'>react-markdown</Link></td>
           <td>^4.0.3</td>
+        </tr>
+        <tr>
+          <td><Code>{`<Global font />`}</Code></td>
+          <td><Link href='https://www.npmjs.com/package/@dr-kobros/react-webfont-loader'>@dr-kobros/react-webfont-loader</Link></td>
+          <td>^8.0.0</td>
         </tr>
       </tbody>
     </Table>

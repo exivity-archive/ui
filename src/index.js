@@ -1,5 +1,7 @@
 export * from './theme'
 
+// @todo import/export all components
+
 export { default as Alert } from './Alert'
 export { default as Button } from './Button'
 export { default as Code } from './Code'

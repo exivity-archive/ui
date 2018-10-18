@@ -19,7 +19,7 @@ const options = {
 }
 export const withStyle = story => <Provider theme={theme}>
   <React.Fragment>
-    <Global />
+    <Global font />
     {story()}
   </React.Fragment>
 </Provider>
