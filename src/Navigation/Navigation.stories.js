@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Hidden, List, Link } from 'reakit'
+import { action } from '@storybook/addon-actions'
+import { Hidden, Link } from 'reakit'
 import {
   MdDashboard,
   MdInsertChart,
@@ -11,7 +12,17 @@ import Navigation from './Navigation'
 import Icon from './../Icon'
 
 storiesOf('molecules|Navigation', module)
-  .add('default', () => <Navigation>
+  .add('item', () => <Navigation.Item>
+    <Link href='.'>
+      <Icon><MdDashboard /></Icon>
+      Dashboard
+    </Link>
+  </Navigation.Item>)
+  .add('toggle', () => <Navigation.Toggle toggle={action('toggle')}>
+    <Icon><MdDashboard /></Icon>
+    Dashboard
+  </Navigation.Toggle>)
+  .add('example', () => <Navigation>
     <Navigation.Item>
       <Link href='.'>
         <Icon><MdDashboard /></Icon>
@@ -39,7 +50,7 @@ storiesOf('molecules|Navigation', module)
             <Icon><MdDashboard /></Icon>
             Dashboard
           </Navigation.Toggle>
-          <Hidden as={List} unmount slide='bottom' {...hidden}>
+          <Navigation.Hidden {...hidden}>
             <Navigation.Item>
               <Link href='.'>Accounts</Link>
             </Navigation.Item>
@@ -49,7 +60,7 @@ storiesOf('molecules|Navigation', module)
             <Navigation.Item>
               <Link href='.'>Instances</Link>
             </Navigation.Item>
-          </Hidden>
+          </Navigation.Hidden>
         </Navigation.Item>
       )}
     </Hidden.Container>

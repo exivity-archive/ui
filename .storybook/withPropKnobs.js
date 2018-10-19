@@ -12,7 +12,8 @@ const propTypeKnobsMap = [
   {fn: PropTypes.func, knob: (name, value) => value || action(name)},
   {fn: PropTypes.object, knob: object},
   {fn: PropTypes.node, knob: text},
-  {fn: PropTypes.element, knob: text}
+  {fn: PropTypes.element, knob: text},
+  {fn: undefined, knob: (name, value) => {}}
 ]
 
 export const withPropKnobs = (component) => {
