@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Input as BaseInput, styled } from 'reakit'
+import { Box, Input as BaseInput, styled } from 'reakit'
 import { theme } from 'styled-tools'
 import withEnumProps from '../withEnumProps'
 
@@ -8,7 +8,7 @@ const Input = styled(BaseInput)`
 `
 
 Input.propTypes = {
-  ...Input.propTypes,
+  ...Box.propTypes,
 
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
@@ -20,7 +20,13 @@ Input.propTypes = {
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
   large: PropTypes.bool,
-  xlarge: PropTypes.bool
+  xlarge: PropTypes.bool,
+
+  outlined: PropTypes.bool,
+
+  disabled: PropTypes.bool,
+
+  onChange: PropTypes.func
 }
 
 Input.defaultProps = {

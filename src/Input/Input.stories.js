@@ -1,11 +1,12 @@
 import React from 'react'
 import { Grid } from 'reakit'
 import { storiesOf } from '@storybook/react'
+import { withPropKnobs } from '../../.storybook/withPropKnobs'
 
 import Input from './Input'
 
 storiesOf('atoms|Input', module)
-  .add('default', () => <Input placeholder="What's your name?" />)
+  .add('default', () => withPropKnobs(<Input placeholder="What's your name?" />))
   .add('palette', () => <Grid gridTemplateColumns='repeat(6, 100px)' gap={20}>
     {[0, 1, 2, 3, 4, 5, 6, 7].map(tone => <React.Fragment key={tone}>
       <Input tone={tone} placeholder='Primary' />

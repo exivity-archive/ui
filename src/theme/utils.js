@@ -21,6 +21,14 @@ export const bgColorWithProps = withProp(
   }
 )
 
+const hexToString = (hex) => {
+  try {
+    return color(hex).rgb().array().join(', ')
+  } catch (err) {
+    return '0, 0, 0'
+  }
+}
+
 export const toCssRgbComponent = (resolver) => {
   if (typeof resolver === 'function') {
     return (props) => {
@@ -35,9 +43,9 @@ export const toCssRgbComponent = (resolver) => {
       } catch (err) {
         // unset
       }
-      return color(hex).rgb().array().join(', ')
+      return hexToString(hex)
     }
   } else {
-    return color(resolver).rgb().array().join(', ')
+    return hexToString(resolver)
   }
 }

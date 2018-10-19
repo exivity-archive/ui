@@ -3,12 +3,13 @@ import { Grid } from 'reakit'
 import { MdFavorite, MdSync } from 'react-icons/md'
 
 import { storiesOf } from '@storybook/react'
+import { withPropKnobs } from '../../.storybook/withPropKnobs'
 
 import Button from './Button'
 import Icon from './../Icon'
 
 storiesOf('atoms|Button', module)
-  .add('default', () => <Button>Button</Button>)
+  .add('default', () => withPropKnobs(<Button>Button</Button>))
   .add('palette', () => <Grid gridTemplateColumns='repeat(5, max-content)' gap={20} align>
     {[0, 1, 2, 3, 4].map(tone => <React.Fragment key={tone}>
       <Button primary tone={tone}>Primary</Button>

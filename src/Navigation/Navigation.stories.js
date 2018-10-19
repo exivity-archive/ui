@@ -35,11 +35,11 @@ storiesOf('molecules|Navigation', module)
     <Hidden.Container>
       {hidden => (
         <Navigation.Item>
-          <Hidden.Toggle as={[Navigation.Item, Link, 'button']} {...hidden}>
+          <Navigation.Toggle {...hidden}>
             <Icon><MdDashboard /></Icon>
             Dashboard
-          </Hidden.Toggle>
-          <Hidden as={List} slide='bottom' {...hidden}>
+          </Navigation.Toggle>
+          <Hidden as={List} unmount slide='bottom' {...hidden}>
             <Navigation.Item>
               <Link href='.'>Accounts</Link>
             </Navigation.Item>
