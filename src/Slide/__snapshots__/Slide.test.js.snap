@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default Slide 1`] = `
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  background: unset;
+  font: unset;
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: unset;
+  color: inherit;
+}
+
+.c0 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+  -webkit-transform-origin: calc(50% + 0px) calc(50% + 0px);
+  -ms-transform-origin: calc(50% + 0px) calc(50% + 0px);
+  transform-origin: calc(50% + 0px) calc(50% + 0px);
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.c0[aria-hidden="true"] {
+  pointer-events: none;
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+  visibility: hidden;
+  will-change: transform opacity;
+}
+
+.c2 {
+  -webkit-transform: translate3d(0px,0px,0px);
+  -ms-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+}
+
+.c2[aria-hidden="true"] {
+  pointer-events: none;
+  display: none !important;
+}
+
+<div
+  aria-hidden={false}
+  className="c0 c1 c2"
+  hidden={false}
+  onTransitionEnd={[Function]}
+>
+  <div
+    aria-hidden={true}
+    className="rah-static rah-static--height-zero"
+    style={
+      Object {
+        "WebkitMarginCollapse": "separate",
+        "height": 0,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <div
+      style={Object {}}
+    >
+      <span />
+    </div>
+  </div>
+</div>
+`;

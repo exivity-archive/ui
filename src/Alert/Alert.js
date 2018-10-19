@@ -11,9 +11,6 @@ const Alert = styled(Box)`
 
 Alert.propTypes = {
   ...Box.propTypes,
-  palette: PropTypes.oneOf([
-    'hoi', 'hai'
-  ]),
   children: PropTypes.node,
 
   primary: PropTypes.bool,

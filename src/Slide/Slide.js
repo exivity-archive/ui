@@ -37,7 +37,7 @@ const AnimatedHeightSlide = ({
       easing={timing}
       duration={durationInteger}
       delay={delayInteger}>
-      {children}
+      {children || <span />}
     </AnimateHeight>
   </Hidden>
 }
