@@ -1,6 +1,6 @@
 {
   "name": "@exivity/ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A collection of components to build interfaces",
   "license": "MIT",
   "repository": {
@@ -119,6 +119,8 @@
         "git add"
       ]
     },
-    "ignore": ["docs/dist/**"]
+    "ignore": [
+      "docs/dist/**"
+    ]
   }
 }
