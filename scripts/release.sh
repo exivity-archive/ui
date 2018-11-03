@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+# exit script immediately if any command exits with a nonzero status
 set -e
 
-echo "Current branch is master"
+# header
+function header {
+    white=`tput setaf 7`
+    bluebg=`tput setab 4`
+    reset=`tput sgr0`
+    echo -e "\n${bluebg}${white}$1${reset}\n"
+}
+
+header "Current branch is master"
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$BRANCH" != "master" ]]; then
   exit 1
@@ -27,7 +36,7 @@ yarn build
 
 echo "Commit docs"
 git add docs
-git commit -m "chore: update docs"
+git commit -m "chore: update docs" || true
 
 echo "Cut release"
 yarn standard-version --sign
