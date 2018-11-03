@@ -33,8 +33,8 @@
     "build": "yarn build:clean && yarn build:lib && yarn build:docs",
     "build:clean": "rimraf lib && rimraf docs/dist",
     "build:lib": "babel src --out-dir lib --source-maps --ignore \"src/**/*.stories.js\",\"src/**/*.test.js\"",
-    "build:docs": "build-storybook -s docs/static -o docs/dist",
-    "publish:docs": "yarn build:clean && yarn build:docs && git add docs && git commit -m \"chore: update docs\" && git subtree push --prefix docs/dist origin gh-pages",
+    "build:docs": "build-storybook -s docs/static -o docs/dist -c docs",
+    "publish:docs": "git subtree push --prefix docs/dist origin gh-pages",
     "release": "bash scripts/release.sh"
   },
   "devDependencies": {
@@ -113,9 +113,12 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
+    "linters": {
+      "*.js": [
+        "standard --fix",
+        "git add"
+      ]
+    },
+    "ignore": ["docs/dist/**"]
   }
 }

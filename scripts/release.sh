@@ -25,11 +25,18 @@ yarn test
 echo "Run build"
 yarn build
 
+echo "Commit docs"
+git add docs
+git commit -m "chore: update docs"
+
 echo "Cut release"
-standard-version --sign
+yarn standard-version --sign
 
 echo "Push commit and tag"
 git push --follow-tags origin master
 
 echo "Publish on NPM"
 npm publish
+
+echo "Publish docs"
+yarn publish:docs
