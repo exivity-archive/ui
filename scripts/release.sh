@@ -9,6 +9,7 @@ if [[ "$BRANCH" != "master" ]]; then
 fi
 
 echo "Working copy doesn't contain changes"
+git status
 git diff-index --quiet HEAD --
 
 echo "Pulled latest changes from origin"
