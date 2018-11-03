@@ -17,35 +17,35 @@ if [[ "$BRANCH" != "master" ]]; then
   exit 1
 fi
 
-echo "Working copy doesn't contain changes"
+header "Working copy doesn't contain changes"
 git config core.autocrlf false
 git status
 git diff-index --quiet HEAD --
 
-echo "Pulled latest changes from origin"
+header "Pulled latest changes from origin"
 git pull origin master
 
-echo "Run linter"
+header "Run linter"
 yarn lint
 
-echo "Run tests"
+header "Run tests"
 yarn test
 
-echo "Run build"
+header "Run build"
 yarn build
 
-echo "Commit docs"
+header "Commit docs"
 git add docs
 git commit -m "chore: update docs" || true
 
-echo "Cut release"
+header "Cut release"
 yarn standard-version --sign
 
-echo "Push commit and tag"
+header "Push commit and tag"
 git push --follow-tags origin master
 
-echo "Publish on NPM"
+header "Publish on NPM"
 npm publish
 
-echo "Publish docs"
+header "Publish docs"
 yarn publish:docs
