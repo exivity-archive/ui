@@ -1,11 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import {
-  MdDashboard,
-  MdInsertChart,
-  MdLibraryBooks
-} from 'react-icons/md'
+import { MdDashboard, MdInsertChart, MdLibraryBooks } from 'react-icons/md'
 import { styled, Block, Hidden, Link, Box, Grid, Image } from 'reakit'
 import { theme, palette } from 'styled-tools'
 
