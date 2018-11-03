@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from 'reakit'
 import { storiesOf } from '@storybook/react'
-import { withPropKnobs } from '../../.storybook/withPropKnobs'
+import { withPropKnobs } from '../../docs/utils/withPropKnobs'
 
 import Input from './Input'
 

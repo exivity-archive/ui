@@ -26,10 +26,17 @@ export const type = {
   lineHeight: 1.5,
   fonts: {
     config: {
+      custom: {
+        families: [],
+        urls: [
+          // Optional
+          // 'font/stylesheet.css'
+        ]
+      },
       google: {
         families: [
           'Fira Mono:400',
-          'Fira Sans Condensed:500',
+          'Fira Sans Condensed:300,500',
           'Fira Sans:400,600'
         ]
       }
@@ -41,7 +48,8 @@ export const type = {
     },
     interact: {
       family: '\'Fira Sans Condensed\', sans-serif',
-      weight: 500
+      weight: 300,
+      weightBold: 500
     },
     monospace: {
       family: '\'Fira Mono\', monospace',
@@ -162,7 +170,7 @@ export const Box = css`
 
 export const Button = css`
   font-family: ${t('type.fonts.interact.family')};
-  font-weight: ${t('type.fonts.interact.weight')};
+  font-weight: ${t('type.fonts.interact.weightBold')};
   font-size: ${prop('scale')}em;
   text-transform: uppercase;
   display: inline-flex;
@@ -255,12 +263,12 @@ export const Field = css`
   white-space: ${ifProp('nowrap', 'nowrap', 'unset')};
   
   &:not(:last-child) {
-    margin-bottom: ${base.spaceDouble};
+    margin-bottom: ${t('base.spaceDouble')};
   }
   
   label {
-    padding-bottom: ${ifNotProp('horizontal', base.spaceHalf, 'unset')};
-    margin-right: ${ifProp('horizontal', base.spaceDouble, 'unset')};
+    padding-bottom: ${ifNotProp('horizontal', t('base.spaceHalf'), 'unset')};
+    margin-right: ${ifProp('horizontal', t('base.spaceDouble'), 'unset')};
     flex-basis: ${withProp(['horizontal', 'align'], (horizontal, align) => {
     return (horizontal && align)
       ? (align === true) ? `${preciseRm(20)}em` : align
@@ -274,7 +282,7 @@ export const Field = css`
   
   ${ifNotProp('horizontal', css`
     > *:not(label):not(:last-child) {
-      margin-bottom: ${base.spaceDouble};
+      margin-bottom: ${t('base.spaceDouble')};
     }
   `)}
 `
@@ -437,6 +445,14 @@ export const List = css`
   }
 `
 
+export const Navigation = css`
+  
+`
+
+export const NavigationItem = css`
+  
+`
+
 export const Overlay = css`
   padding: 1em;
   border-radius: 0.25em;
@@ -528,27 +544,50 @@ export const Tabs = css`
   display: flex;
   align-items: center;
   list-style: none;
+  border-bottom: ${t('base.borderWidth')} solid ${p('grayscale', -3)};
+  
+  li {
+    --focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)};
+  }
 `
 
 export const TabsTab = css`
   display: inline-flex;
   position: relative;
-  flex: 1;
   user-select: none;
+  cursor: pointer;
   outline: none;
   align-items: center;
   white-space: nowrap;
   justify-content: center;
   text-decoration: none;
   height: 2.5em;
-  padding: 0 0.5em;
+  padding: 0;
   min-width: 2.5em;
+  border-bottom: 5px solid transparent;
+
+  ${ifProp('palette', css`--focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)} !important;`)}
+  
+  &:not(:last-child) {
+    margin-right: ${t('base.spaceDouble')};
+  }
+  
   &.active {
     font-weight: bold;
+    border-bottom: 5px solid rgba(var(--focus-color), 0.15);
   }
+  
+  &.active:focus {
+    border-bottom: 5px solid rgba(var(--focus-color), 1);
+  }
+  
   &[disabled] {
     pointer-events: none;
   }
+`
+
+export const TabsPanel = css`
+  margin-top: ${t('base.space')};
 `
 
 export const Tooltip = css`
@@ -587,6 +626,8 @@ export default {
   Label,
   Link,
   List,
+  Navigation,
+  NavigationItem,
   Overlay,
   Paragraph,
   Popover,
@@ -595,6 +636,7 @@ export default {
   Table,
   Tabs,
   TabsTab,
+  TabsPanel,
   Tooltip,
   TooltipArrow
 }

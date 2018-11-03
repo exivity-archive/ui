@@ -32,7 +32,8 @@ Todo
 ----
 
 - More components
-- Better docs
+- Learn things from https://github.com/bigbellies/fannypack
+- Better docs, maybe switch to https://github.com/pedronauck/docz ?
 - Kitchen sink demo
 - Default stories should have knobs for all propTypes
 - Import/export all reakit components, so end-users won't ever have to use reakit directly?

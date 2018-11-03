@@ -27,14 +27,10 @@ import { theme } from '@exivity/ui'
       well-known <Link href='http://necolas.github.io/normalize.css/'>normalize.css</Link> reset and a @import statement for loading the fonts for the default theme. Including those global styles is recommended but optional:
     </Paragraph>
     <CodeBlock>
-      {`import { Provider } from 'reakit'
-import { Global, theme } from '@exivity/ui'
+      {`import { Provider, theme } from '@exivity/ui'
 
-<Provider theme={theme}>
-  <React.Fragment>
-    <Global/>
-    <App/>
-  </React.Fragment>
+<Provider theme={theme} normalize font>
+  <App/>
 </Provider>`}
     </CodeBlock>
     <Heading as='h2'>Using local fonts</Heading>

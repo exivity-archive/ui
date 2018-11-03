@@ -3,7 +3,7 @@ import { Grid } from 'reakit'
 import { MdFavorite, MdSync } from 'react-icons/md'
 
 import { storiesOf } from '@storybook/react'
-import { withPropKnobs } from '../../.storybook/withPropKnobs'
+import { withPropKnobs } from '../../docs/utils/withPropKnobs'
 
 import Button from './Button'
 import Icon from './../Icon'

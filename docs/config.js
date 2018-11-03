@@ -1,5 +1,5 @@
 import React from 'react'
-import { Provider, Box } from "reakit"
+import { Box } from 'reakit'
 
 import { addDecorator, configure } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs'
@@ -7,7 +7,7 @@ import { withInfo } from '@storybook/addon-info'
 import { withOptions } from '@storybook/addon-options'
 
 import theme from '../src/theme'
-import Global from '../src/Global'
+import Provider from '../src/Provider'
 
 const options = {
   name: '@exivity/ui',
@@ -15,19 +15,16 @@ const options = {
   showAddonPanel: true,
   addonPanelInRight: true,
   hierarchySeparator: /\/|\./,
-  hierarchyRootSeparator: /\|/,
+  hierarchyRootSeparator: /\|/
 }
-export const withStyle = story => <Provider theme={theme}>
-  <React.Fragment>
-    <Global font />
-    {story()}
-  </React.Fragment>
+export const withStyle = story => <Provider theme={theme} font>
+  {story()}
 </Provider>
 export const withContainer = story => <Box
   padding={20}
   backgroundColor={theme.palette.grayscale[6]}>
   {story()}
-  </Box>
+</Box>
 
 // add decorators
 addDecorator(withInfo)

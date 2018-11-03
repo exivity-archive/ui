@@ -2,7 +2,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Global from './Global'
+import Provider from './Global'
 
 // See https://github.com/facebook/jest/pull/5267#issuecomment-356605468
 beforeEach(() => {
@@ -14,6 +14,6 @@ afterEach(() => {
 })
 
 test('renders default Global', () => {
-  const component = renderer.create(<Global />)
+  const component = renderer.create(<Provider />)
   expect(component.toJSON()).toMatchSnapshot()
 })

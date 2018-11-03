@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { createRandomizedData } from './stories/utils'
+import { createRandomizedData } from '../../docs/examples/list'
 
 import DataGrid from './DataGrid'
 

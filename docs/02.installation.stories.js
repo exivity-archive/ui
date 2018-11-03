@@ -93,7 +93,7 @@ storiesOf('Docs', module)
           <td>^4.0.3</td>
         </tr>
         <tr>
-          <td><Code>{`<Global font />`}</Code></td>
+          <td><Code>{`<Provider font />`}</Code></td>
           <td><Link href='https://www.npmjs.com/package/@dr-kobros/react-webfont-loader'>@dr-kobros/react-webfont-loader</Link></td>
           <td>^8.0.0</td>
         </tr>

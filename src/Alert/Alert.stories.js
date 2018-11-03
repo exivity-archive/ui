@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withPropKnobs } from '../../.storybook/withPropKnobs'
+import { withPropKnobs } from '../../docs/utils/withPropKnobs'
 
 import Alert from './Alert'
 

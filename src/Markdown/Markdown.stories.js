@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import example from './stories/example.md'
+import example from '../../docs/examples/markdown.md'
 
 import Markdown from './Markdown'
 

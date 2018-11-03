@@ -15,11 +15,11 @@ const StyledHiddenToggle = styled(Hidden.Toggle)`
 
 const Toggle = ({ children, visible, ExpandIcon, CollapseIcon, ...otherProps }) => {
   return <StyledHiddenToggle
-    as={[Item, Link, 'button']}
+    as={[Link, 'button']}
     visible={visible}
     {...otherProps}>
     {/* workaround for bug https://codepen.io/rachelandrew/pen/dzXwRJ */}
-    <Link as='div'>
+    <Link as={[Item, 'div']} {...otherProps}>
       {children}
       {visible ? <CollapseIcon /> : <ExpandIcon />}
     </Link>
@@ -31,8 +31,8 @@ Toggle.propTypes = {
 
   children: PropTypes.node,
 
-  ExpandIcon: PropTypes.node,
-  CollapseIcon: PropTypes.node
+  ExpandIcon: PropTypes.func,
+  CollapseIcon: PropTypes.func
 }
 
 Toggle.defaultProps = {

@@ -1,23 +1,23 @@
 import { cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { action } from '@storybook/addon-actions'
-import { boolean, number, object, select, text } from '@storybook/addon-knobs'
+import { boolean, number, object, text } from '@storybook/addon-knobs'
 
 /* eslint-disable no-multi-spaces */
 // Default simple PropType based knob map.
 const propTypeKnobsMap = [
-  {fn: PropTypes.string, knob: text},
-  {fn: PropTypes.number, knob: number},
-  {fn: PropTypes.bool, knob: boolean},
-  {fn: PropTypes.func, knob: (name, value) => value || action(name)},
-  {fn: PropTypes.object, knob: object},
-  {fn: PropTypes.node, knob: text},
-  {fn: PropTypes.element, knob: text},
-  {fn: undefined, knob: (name, value) => {}}
+  { fn: PropTypes.string, knob: text },
+  { fn: PropTypes.number, knob: number },
+  { fn: PropTypes.bool, knob: boolean },
+  { fn: PropTypes.func, knob: (name, value) => value || action(name) },
+  { fn: PropTypes.object, knob: object },
+  { fn: PropTypes.node, knob: text },
+  { fn: PropTypes.element, knob: text },
+  { fn: undefined, knob: (name, value) => {} }
 ]
 
 export const withPropKnobs = (component) => {
-  const {propTypes = {}} = component.type
+  const { propTypes = {} } = component.type
   const defaultProps = {
     ...(component.type.defaultProps || {}),
     ...component.props
