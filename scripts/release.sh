@@ -9,6 +9,7 @@ if [[ "$BRANCH" != "master" ]]; then
 fi
 
 echo "Working copy doesn't contain changes"
+git config core.autocrlf false
 git status
 git diff-index --quiet HEAD --
 

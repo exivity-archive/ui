@@ -2,7 +2,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Provider from './Global'
+import Provider from './Provider'
 
 // See https://github.com/facebook/jest/pull/5267#issuecomment-356605468
 beforeEach(() => {
