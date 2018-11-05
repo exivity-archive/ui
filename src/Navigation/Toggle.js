@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { styled, Hidden, Link } from 'reakit'
-import { MdExpandMore, MdExpandLess } from 'react-icons/md'
+import { Hidden, Link, styled } from 'reakit'
+import { MdExpandLess, MdExpandMore } from 'react-icons/md'
 
 import Icon from './../Icon'
 import Item from './Item'
@@ -21,7 +21,9 @@ const Toggle = ({ children, visible, ExpandIcon, CollapseIcon, ...otherProps }) 
     {/* workaround for bug https://codepen.io/rachelandrew/pen/dzXwRJ */}
     <Link as={[Item, 'div']} {...otherProps}>
       {children}
-      {visible ? <CollapseIcon /> : <ExpandIcon />}
+      {visible
+        ? <CollapseIcon />
+        : <ExpandIcon />}
     </Link>
   </StyledHiddenToggle>
 }

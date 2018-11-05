@@ -9,9 +9,7 @@ import {
   MdLibraryBooks
 } from 'react-icons/md'
 
-import { preciseRm } from './../theme/theme'
-import Navigation from './Navigation'
-import Icon from './../Icon'
+import { Icon, Navigation, preciseRm } from './..'
 
 const StyledItem = styled(Navigation.Item)`
 margin-bottom: 0 !important;
@@ -120,12 +118,27 @@ storiesOf('molecules|Navigation', module)
         </Navigation.Item>
       )}
     </Hidden.Container>
-    <Navigation.Item>
-      <Link href='.'>
-        <Icon><MdInsertChart /></Icon>
-        Reports
-      </Link>
-    </Navigation.Item>
+    <Hidden.Container context='hidden1'>
+      {hidden => (
+        <Navigation.Item>
+          <Navigation.Toggle {...hidden}>
+            <Icon><MdInsertChart /></Icon>
+            Reports
+          </Navigation.Toggle>
+          <Navigation.Hidden {...hidden}>
+            <Navigation.Item>
+              <Link href='.'>Accounts</Link>
+            </Navigation.Item>
+            <Navigation.Item>
+              <Link href='.'>Services</Link>
+            </Navigation.Item>
+            <Navigation.Item>
+              <Link href='.'>Instances</Link>
+            </Navigation.Item>
+          </Navigation.Hidden>
+        </Navigation.Item>
+      )}
+    </Hidden.Container>
     <Navigation.Item>
       <Link href='.'>
         <Icon><MdLibraryBooks /></Icon>

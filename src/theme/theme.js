@@ -1,7 +1,7 @@
 import { css } from 'reakit'
 import { withProp, ifProp, ifNotProp, palette as p, prop, theme as t } from 'styled-tools'
 
-import { utils } from '../theme'
+import { bgColorWithProps, textColorWithProps, toCssRgbComponent } from '../theme/utils'
 
 const BASE_SIZE = 16
 
@@ -165,7 +165,7 @@ export const Box = css`
   font-family: ${t('type.fonts.base.family')};
   font-weight: ${t('theme.type.fonts.base.weight')};
   line-height: ${t('type.lineHeight')};
-  --focus-color: ${utils.toCssRgbComponent(utils.bgColorWithProps)};
+  --focus-color: ${toCssRgbComponent(bgColorWithProps)};
 `
 
 export const Button = css`
@@ -227,7 +227,7 @@ export const Button = css`
   ${props => props.outlined && css`
     background-color: ${p('white')};
     color: ${p(props.palette, 0)};
-    box-shadow: 0 0 0 ${base.borderWidth} ${utils.bgColorWithProps};
+    box-shadow: 0 0 0 ${base.borderWidth} ${bgColorWithProps};
     
     &:hover {
       color: ${p('whiteText')};
@@ -235,7 +235,7 @@ export const Button = css`
     }
     
     &:focus {
-      box-shadow: 0 0 0 ${base.borderWidth} ${utils.bgColorWithProps},
+      box-shadow: 0 0 0 ${base.borderWidth} ${bgColorWithProps},
        0 0 0 ${parseInt(base.outlineWidth, 10) + 1}px rgba(var(--focus-color), 0.3);
     }
   `}
@@ -352,10 +352,10 @@ export const Input = css`
   `}
   
   --focus-color: ${props => {
-    if (props.palette === 'grayscale') return utils.toCssRgbComponent(palette.primary[0])
+    if (props.palette === 'grayscale') return toCssRgbComponent(palette.primary[0])
     return props.opaque
-      ? utils.toCssRgbComponent(utils.bgColorWithProps)
-      : utils.toCssRgbComponent(utils.textColorWithProps)
+      ? toCssRgbComponent(bgColorWithProps)
+      : toCssRgbComponent(textColorWithProps)
   }};
   
   &:focus {
@@ -406,7 +406,7 @@ export const Link = css`
   grid-auto-flow: column;
   text-decoration: none;
 
-  --focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)};
+  --focus-color: ${toCssRgbComponent(textColorWithProps)};
 
   &:focus {
     outline: none;
@@ -547,7 +547,7 @@ export const Tabs = css`
   border-bottom: ${t('base.borderWidth')} solid ${p('grayscale', -3)};
   
   li {
-    --focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)};
+    --focus-color: ${toCssRgbComponent(textColorWithProps)};
   }
 `
 
@@ -566,7 +566,7 @@ export const TabsTab = css`
   min-width: 2.5em;
   border-bottom: 5px solid transparent;
 
-  ${ifProp('palette', css`--focus-color: ${utils.toCssRgbComponent(utils.textColorWithProps)} !important;`)}
+  ${ifProp('palette', css`--focus-color: ${toCssRgbComponent(textColorWithProps)} !important;`)}
   
   &:not(:last-child) {
     margin-right: ${t('base.spaceDouble')};
