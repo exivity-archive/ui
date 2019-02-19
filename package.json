@@ -53,6 +53,7 @@
     "jest-styled-components": "^7.0.0-2",
     "lint-staged": "^8.0.4",
     "react": "^16.8.2",
+    "react-docgen-typescript": "^1.12.3",
     "react-dom": "^16.8.2",
     "react-icons": "^3.4.0",
     "react-markdown": "^4.0.6",
