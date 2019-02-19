@@ -14,7 +14,7 @@ yarn-error.log
 
 # build
 /lib
-/dist
+/docs
 
 # misc
 /.sass-cache

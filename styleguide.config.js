@@ -17,6 +17,7 @@ const parserOptions = {
 
 module.exports = {
   title: "@exivity/ui",
+  styleguideDir: 'docs',
   components: 'src/**/[A-Z]*.{ts,tsx}',
   webpackConfig: {
     ...createConfig([babel(), typescript()]),

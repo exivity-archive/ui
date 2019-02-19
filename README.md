@@ -28,8 +28,15 @@ import { Button } from '@exivity/ui'
 
 Visit [exivity.github.io/ui](https://exivity.github.io/ui/) for more documentation and examples.
 
-Todo
-----
+Development
+-----------
+
+| command | what |
+|---------|------|
+| yarn start | styleguidist server
+| yarn test | jest
+| yarn build | run typescript and build styleguidist
+Run `yarn start` for styleguidist 
 
 - More components
 - Learn things from https://github.com/bigbellies/fannypack
