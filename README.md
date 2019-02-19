@@ -33,18 +33,5 @@ Development
 
 | command | what |
 |---------|------|
-| yarn start | styleguidist server
-| yarn test | jest
-| yarn build | run typescript and build styleguidist
-Run `yarn start` for styleguidist 
-
-- More components
-- Learn things from https://github.com/bigbellies/fannypack
-- Better docs, maybe switch to https://github.com/pedronauck/docz ?
-- Kitchen sink demo
-- Default stories should have knobs for all propTypes
-- Import/export all reakit components, so end-users won't ever have to use reakit directly?
-- Better stories (introduction, example code, propTypes, remove or replace withInfo?)
-- Option to embed fonts instead of loading through Google Fonts (for offline use)
-- Upgrade code to use styled-components as soon as reakit upgrades
-- ~~Use https://reakit.io/ because it's awesome~~
+| yarn start | run styleguidist, typescript and jest in watch mode
+| yarn build | build docs and compile typescript

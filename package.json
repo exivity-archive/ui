@@ -27,8 +27,8 @@
   ],
   "scripts": {
     "create-component": "node scripts/create-component.js",
-    "ts": "tsc",
-    "ts:watch": "tsc --watch",
+    "compile": "tsc",
+    "compile:watch": "tsc --watch",
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "jest",
@@ -36,8 +36,8 @@
     "test:update": "jest --update-snapshot",
     "docs": "styleguidist build",
     "docs:watch": "styleguidist server",
-    "start": "run-p docs:watch ts:watch test:watch",
-    "build": "yarn build:clean && yarn ts && yarn docs",
+    "start": "run-p docs:watch compile:watch test:watch",
+    "build": "yarn build:clean && yarn compile && yarn docs",
     "build:clean": "rimraf lib",
     "publish:docs": "git subtree push --prefix docs origin gh-pages",
     "release": "bash scripts/release.sh"
