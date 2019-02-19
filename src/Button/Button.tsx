@@ -6,7 +6,6 @@ export interface ButtonProps {
    * Enable nice pink color
    */
   pink?: boolean
-  className: string
 }
 
 const BaseButton: FC<ButtonProps> = (props) => <button {...props}/>

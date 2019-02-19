@@ -2,10 +2,24 @@
 
 exports[`renders basic button 1`] = `
 .c0 {
-  padding: 4px;
+  padding: 10px;
+  background-color: silver;
 }
 
 <button
   className="c0"
+  pink={false}
+/>
+`;
+
+exports[`renders pink button 1`] = `
+.c0 {
+  padding: 10px;
+  background-color: hotpink;
+}
+
+<button
+  className="c0"
+  pink={true}
 />
 `;

@@ -7,3 +7,8 @@ test('renders basic button', () => {
   const button = renderer.create(<Button />)
   expect(button.toJSON()).toMatchSnapshot()
 })
+
+test('renders pink button', () => {
+  const button = renderer.create(<Button pink />)
+  expect(button.toJSON()).toMatchSnapshot()
+})
