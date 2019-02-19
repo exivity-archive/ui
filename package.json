@@ -26,6 +26,7 @@
     "lib"
   ],
   "scripts": {
+    "start": "styleguidist server",
     "create-component": "node scripts/create-component.js",
     "ts": "tsc",
     "ts:watch": "tsc --watch",
@@ -37,7 +38,7 @@
     "build": "yarn build:clean && yarn build:compile && yarn build:docs",
     "build:clean": "rimraf lib",
     "build:compile": "yarn ts",
-    "build:docs": "echo 'ui docs' > docs/README.md",
+    "build:docs": "styleguidist build",
     "publish:docs": "git subtree push --prefix docs origin gh-pages",
     "release": "bash scripts/release.sh"
   },
@@ -55,6 +56,7 @@
     "react-dom": "^16.8.2",
     "react-icons": "^3.4.0",
     "react-markdown": "^4.0.6",
+    "react-styleguidist": "^8.0.6",
     "react-syntax-highlighter": "^10.1.3",
     "react-test-renderer": "^16.8.2",
     "rimraf": "^2.6.2",
@@ -63,7 +65,9 @@
     "ts-jest": "^24.0.0",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.3.3"
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.5",
+    "webpack-blocks": "^2.0.0-rc"
   },
   "dependencies": {
     "tslib": "^1.9.3"
