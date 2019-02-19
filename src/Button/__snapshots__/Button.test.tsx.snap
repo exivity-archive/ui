@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders basic button 1`] = `
+.c0 {
+  padding: 4px;
+}
+
+<button
+  className="c0"
+/>
+`;

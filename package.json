@@ -27,39 +27,33 @@
   ],
   "scripts": {
     "create-component": "node scripts/create-component.js",
-    "lint": "standard src",
-    "lint:fix": "standard src --fix",
+    "ts": "tsc",
+    "ts:watch": "tsc --watch",
+    "lint": "tslint 'src/**/*.ts?'",
+    "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "jest",
-    "copy:static": "rimraf docs/static && copyfiles --flat src/theme/font/* docs/static/font",
-    "start": "yarn copy:static && start-storybook -p 6006 -s docs/static -c docs",
-    "build": "yarn build:clean && yarn build:lib && yarn build:docs",
-    "build:clean": "rimraf lib && rimraf docs/dist",
-    "build:lib": "babel src --out-dir lib --source-maps --ignore \"src/**/*.stories.js\",\"src/**/*.test.js\"",
-    "build:docs": "build-storybook -s docs/static -o docs/dist -c docs",
-    "publish:docs": "git subtree push --prefix docs/dist origin gh-pages",
+    "test:watch": "jest --watch",
+    "test:update": "jest --update-snapshot",
+    "build": "yarn build:clean && yarn build:compile && yarn build:docs",
+    "build:clean": "rimraf lib",
+    "build:compile": "yarn ts",
+    "build:docs": "echo 'ui docs' > docs/README.md",
+    "publish:docs": "git subtree push --prefix docs origin gh-pages",
     "release": "bash scripts/release.sh"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.3",
-    "@babel/plugin-proposal-class-properties": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
     "@dr-kobros/react-webfont-loader": "^8.0.0",
-    "@storybook/react": "^5.0.0-rc.2",
     "@types/jest": "^24.0.6",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^8.0.4",
-    "babel-plugin-styled-components": "^1.8.0",
-    "copyfiles": "^2.1.0",
+    "@types/react": "^16.8.3",
+    "@types/react-test-renderer": "^16.8.1",
+    "@types/styled-components": "^4.1.10",
     "husky": "^1.1.3",
     "jest": "^24.1.0",
-    "jest-styled-components": "^6.2.1",
+    "jest-styled-components": "^7.0.0-2",
     "lint-staged": "^8.0.4",
-    "prop-types": "^15.7.2",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-icons": "^3.2.1",
+    "react-icons": "^3.4.0",
     "react-markdown": "^4.0.6",
     "react-syntax-highlighter": "^10.1.3",
     "react-test-renderer": "^16.8.2",
@@ -71,7 +65,9 @@
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.9.3"
+  },
   "optionalDependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "react-icons": "^3.4.0",
@@ -83,25 +79,6 @@
     "react-dom": "^16.8.2",
     "styled-components": "^4.1.3"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/**/*.stories.js",
-      "!src/**/stories/*"
-    ],
-    "setupTestFrameworkScriptFile": "./setupTest.js",
-    "roots": [
-      "<rootDir>/src/"
-    ]
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -110,7 +87,7 @@
   "lint-staged": {
     "linters": {
       "*.js": [
-        "standard --fix",
+        "tslint --fix",
         "git add"
       ]
     },
