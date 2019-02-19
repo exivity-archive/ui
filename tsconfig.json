@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "outDir": "lib",
+    "allowJs": true,
+    "checkJs": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noEmitHelpers": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "strict": true,
+    "target": "es2017",
+    "types": ["node"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

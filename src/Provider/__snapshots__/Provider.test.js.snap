@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders default Global 1`] = `
-<style>
-  body{margin:0;}
-   
-   
-</style>
-`;
