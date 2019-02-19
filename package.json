@@ -86,13 +86,11 @@
   },
   "lint-staged": {
     "linters": {
-      "*.js": [
+      "*.{ts,tsx}": [
         "tslint --fix",
         "git add"
       ]
     },
-    "ignore": [
-      "docs/dist/**"
-    ]
+    "ignore": []
   }
 }
