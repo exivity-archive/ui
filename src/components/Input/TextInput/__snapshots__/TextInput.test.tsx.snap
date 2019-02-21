@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders checkbox 1`] = `
+<input
+  className="sc-bdVaJa iZQprE"
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
