@@ -1,6 +1,7 @@
 const theme = {
   global: {
-    margin: '20px !default'
+    margin: '20px !default',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;'
   },
   colors: {
     gray: '#aaa'
