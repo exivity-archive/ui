@@ -1,6 +1,9 @@
 const theme = {
   global: {
     margin: '20px !default'
+  },
+  colors: {
+    gray: '#aaa'
   }
 }
 

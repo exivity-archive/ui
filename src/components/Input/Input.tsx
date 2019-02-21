@@ -11,15 +11,7 @@ export const hi = true
 
 
 
-// export const Label = ({ name, description, children }) => (
-//   <div className='ex-profile-inputs__withlabel'>
-//     <div className='ex-profile-notifications__labels'>
-//       <span className='ex-profile-notifications__toplabel'>{name}</span>
-//       <span className='ex-profile-notifications__sublabel'>{description}</span>
-//     </div>
-//     {children}
-//   </div>
-// )
+
 
 // export const DropdownButton = ({ value }) => (
 //   <button className='ex-profile-inputs ex-profile-inputs__button uk-flex uk-flex-between'>
