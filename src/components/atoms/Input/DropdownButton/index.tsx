@@ -2,6 +2,7 @@ import * as React from 'react'
 
 import Icon from "../../Icon";
 import styled from 'styled-components';
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 interface IDropdownButtonProps {
   value: string
@@ -11,7 +12,7 @@ interface IDropdownButtonProps {
 const DropdownButton: React.FC<IDropdownButtonProps> = ({ value, className }) => (
   <button className={className}>
     {value}
-    <Icon>keyboard_arrow_down</Icon>
+    <Icon><MdKeyboardArrowDown/></Icon>
   </button>
 )
 

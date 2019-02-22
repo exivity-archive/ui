@@ -3,8 +3,8 @@ import MainIcon from './MainIcon';
 import SubIcon from './SubIcon';
 
 interface IIconProps {
-  children: string
-  subIcon?: string
+  children: JSX.Element
+  subIcon?: JSX.Element
   onClick?: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
 }
 

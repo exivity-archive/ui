@@ -1,9 +1,9 @@
 import * as React from 'react'
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import BaseIcon from './BaseIcon';
 
 interface ISubIconProps {
-  children: string
+  children: JSX.Element
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
   className?: string
 }
@@ -27,9 +27,9 @@ export default styled(SubIcon)`
 
   /* Move the subscripted text down, but only
        half as far down as the superscript moved up */
-       bottom: -.3em;
-    margin-left: -.4em;
+  bottom: -.3em;
+  margin-left: -.4em;
 
-    font-size: 10px;
+  font-size: 10px;
 
 `

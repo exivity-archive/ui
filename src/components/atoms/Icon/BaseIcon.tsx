@@ -1,13 +1,12 @@
 import * as React from 'react'
 
 import styled from "styled-components";
-import { IconType } from 'react-icons/lib/iconBase';
 
 interface IBaseIconProps {
   className?: string
   extraClassName?: string
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-  children?: IconType
+  children?: JSX.Element
 }
  
 const BaseIcon: React.FC<IBaseIconProps> = ({ className, extraClassName, children, onClick }) => {
@@ -20,7 +19,6 @@ export default styled(BaseIcon)`
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
-  display: none;
 
   line-height: 1;
   vertical-align: middle;

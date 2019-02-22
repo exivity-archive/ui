@@ -1,10 +1,11 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components';
 import BaseIcon from './BaseIcon';
+import { IconType } from 'react-icons/lib/iconBase';
 
 interface IMainIconProps {
-  subIcon?: string
-  children: string
+  subIcon?: JSX.Element
+  children: JSX.Element
   className?: string
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
 }

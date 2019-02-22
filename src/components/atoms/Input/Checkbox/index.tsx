@@ -1,31 +1,52 @@
 import * as React from 'react'
-<<<<<<< HEAD:src/components/Input/Checkbox/index.tsx
+
 import styled, { css } from 'styled-components'
-import { Theme } from '../../../theme';
-=======
-import styled from 'styled-components'
 import { Theme } from '../../../../theme';
->>>>>>> master:src/components/atoms/Input/Checkbox/index.tsx
 
 interface ICheckboxWrapperProps {
   checked: boolean
 }
 
 const CheckboxWrapper = styled.div`
-  /* background: ${(props: ICheckboxWrapperProps) => props.checked ? '#abd' : 'white'}; */
-  background-color: black;
+    position: absolute;
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    ${(props: ICheckboxWrapperProps) => props.checked && css`&:after {
+      position: relative;
+      left: 5px;
+      top: -30px;
+      transform: rotateZ(45deg);
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      content: ' ';
+      display: block;
+      width: 6px;
+      height: 12px;
+    }
+    `}
+  
 `
 
 export interface ICheckboxProps {
   checked: boolean
   onClick: () => void
+  onChange: (value: boolean) => void
   className?: string
   theme: Theme
 }
 
-const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className }) => {
+const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
   return <CheckboxWrapper checked={checked}>
-      <input className={className} type='checkbox' onClick={onClick} defaultChecked={checked} />
+      <input 
+        className={className} 
+        type='checkbox' 
+        onClick={onClick} 
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.checked)} 
+        defaultChecked={checked} />
       </CheckboxWrapper>
 }
 
@@ -35,25 +56,20 @@ Checkbox.defaultProps = {
 
 
 export default styled(Checkbox)`
-  margin-top: 1px;
-  margin-right: ${props => props.theme.global.margin};
-  width:20px;
-  height:20px;
-  border-radius:5px;
-  border:2px solid #555;
-`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: ${props => props.checked ? 'rgba(40,40,40,0.7)' : 'rgba(40,40,40,0.2)'};
+  color:black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  position: relative;
+  left: -5px;
+  top: -5px;
 
-const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
-  // Hide checkbox visually but remain accessible to screen readers.
-  // Source: https://polished.js.org/docs/#hidevisually
-  border: 0;
-  clip: rect(0 0 0 0);
-  clippath: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  :focus {
+    outline:0;
+  }
 `
