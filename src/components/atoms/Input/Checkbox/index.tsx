@@ -1,6 +1,11 @@
 import * as React from 'react'
+<<<<<<< HEAD:src/components/Input/Checkbox/index.tsx
 import styled, { css } from 'styled-components'
 import { Theme } from '../../../theme';
+=======
+import styled from 'styled-components'
+import { Theme } from '../../../../theme';
+>>>>>>> master:src/components/atoms/Input/Checkbox/index.tsx
 
 interface ICheckboxWrapperProps {
   checked: boolean
