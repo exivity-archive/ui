@@ -4,9 +4,9 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { withState } from '../../.storybook/StateDecorator'
 
-import TextInput from '../components/Input/TextInput'
-import Checkbox from '../components/Input/Checkbox'
-import Button from '../components/Input/Button'
+import TextInput from '../components/atoms/Input/TextInput'
+import Checkbox from '../components/atoms/Input/Checkbox'
+import Button from '../components/atoms/Input/Button'
 
 export default storiesOf('Input', module)
   .addDecorator(withState('Testing'))
