@@ -1,12 +1,13 @@
 import * as React from 'react'
 
 import styled from "styled-components";
+import { IconType } from 'react-icons/lib/iconBase';
 
 interface IBaseIconProps {
   className?: string
   extraClassName?: string
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-  children?: string
+  children?: IconType
 }
  
 const BaseIcon: React.FC<IBaseIconProps> = ({ className, extraClassName, children, onClick }) => {
