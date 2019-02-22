@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 interface IProps {
   value?: string
@@ -20,9 +20,8 @@ TextInput.defaultProps = {
   value: ''
 }
 
-
 export default styled(TextInput)`
-  font-family: inherit;
+  font-family: ${props => props.theme.primaryFont};
   color: #444444;
   height: 30px;
   width: 300px;
