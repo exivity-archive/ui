@@ -4,15 +4,27 @@ import Icon from "../../Icon";
 import styled from 'styled-components';
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
+const ArrowDownIcon = styled.div`
+  float: right;
+`
+
+const SelectedValue = styled.div`
+  padding-top: 3px;
+  float: left;
+`
+
 interface IDropdownButtonProps {
   value: string
   className?: string
+  onClick: () => void
 }
 
-const DropdownButton: React.FC<IDropdownButtonProps> = ({ value, className }) => (
-  <button className={className}>
-    {value}
-    <Icon><MdKeyboardArrowDown/></Icon>
+const DropdownButton: React.FC<IDropdownButtonProps> = ({ value, className, onClick }) => (
+  <button className={className} onClick={onClick}>
+    <SelectedValue >{value}</SelectedValue>
+    <ArrowDownIcon>
+      <Icon icon={<MdKeyboardArrowDown />}/>
+    </ArrowDownIcon>
   </button>
 )
 
@@ -24,8 +36,6 @@ export default styled(DropdownButton)`
   background-color: #F4F4F4;
   border: none;
   outline: none;
-  padding: 0 15px;
-  display: flex;
-  align-items: center;
+  padding: 5px 15px;
   cursor: pointer;
 `

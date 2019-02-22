@@ -5,13 +5,13 @@ import { IconType } from 'react-icons/lib/iconBase';
 
 interface IMainIconProps {
   subIcon?: JSX.Element
-  children: JSX.Element
+  icon: JSX.Element
   className?: string
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
 }
 
-const MainIcon: React.FC<IMainIconProps> = ({ children, className, onClick }) => {
-  return <BaseIcon extraClassName={className} onClick={onClick}>{children}</BaseIcon>
+const MainIcon: React.FC<IMainIconProps> = ({ icon, className, onClick }) => {
+  return <BaseIcon extraClassName={className} icon={icon} onClick={onClick} />
 }
 
 export default styled(MainIcon)`

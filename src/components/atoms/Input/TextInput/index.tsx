@@ -7,7 +7,7 @@ interface ITextInputProps {
   className?: string
 }
 
-const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className }) => (
+export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className }) => (
   <input 
     type='text'
     value={value} 
@@ -19,7 +19,6 @@ const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className }) =>
 TextInput.defaultProps = {
   value: ''
 }
-
 
 export default styled(TextInput)`
   font-family: inherit;

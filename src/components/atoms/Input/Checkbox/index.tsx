@@ -39,7 +39,7 @@ export interface ICheckboxProps {
   theme: Theme
 }
 
-const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
+export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
   return <CheckboxWrapper checked={checked}>
       <input 
         className={className} 

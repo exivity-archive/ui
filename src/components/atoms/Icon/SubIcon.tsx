@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import BaseIcon from './BaseIcon';
 
 interface ISubIconProps {
-  children: JSX.Element
+  icon: JSX.Element
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
   className?: string
 }
 
-const SubIcon: React.FC<ISubIconProps> = ({ children, onClick, className }) => {
-  return <BaseIcon onClick={onClick} extraClassName={className}>{children}</BaseIcon>
+const SubIcon: React.FC<ISubIconProps> = ({ icon, onClick, className }) => {
+  return <BaseIcon onClick={onClick} icon={icon} extraClassName={className} />
 }
 
 export default styled(SubIcon)`

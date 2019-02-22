@@ -6,11 +6,11 @@ interface IBaseIconProps {
   className?: string
   extraClassName?: string
   onClick?: (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
-  children?: JSX.Element
+  icon: JSX.Element
 }
  
-const BaseIcon: React.FC<IBaseIconProps> = ({ className, extraClassName, children, onClick }) => {
-  return <span className={className + ' ' + extraClassName} onMouseDown={onClick}>{children}</span>
+const BaseIcon: React.FC<IBaseIconProps> = ({ className, extraClassName, icon, onClick }) => {
+  return <span className={className + ' ' + extraClassName} onMouseDown={onClick}>{icon}</span>
 }
 
 export default styled(BaseIcon)`

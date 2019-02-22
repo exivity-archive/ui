@@ -3,15 +3,15 @@ import MainIcon from './MainIcon';
 import SubIcon from './SubIcon';
 
 interface IIconProps {
-  children: JSX.Element
+  icon: JSX.Element
   subIcon?: JSX.Element
   onClick?: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
 }
 
-const Icon: React.FC<IIconProps> = ({ children, subIcon, onClick }) => (
+const Icon: React.FC<IIconProps> = ({ icon, subIcon, onClick }) => (
   <Fragment>
-    <MainIcon onClick={onClick} subIcon={subIcon}>{children}</MainIcon>
-    {!!subIcon && <SubIcon onClick={onClick}>{subIcon}</SubIcon>}
+    <MainIcon onClick={onClick} icon={icon} subIcon={subIcon} />
+    {!!subIcon && <SubIcon onClick={onClick} icon={subIcon} />}
   </Fragment>
 )
 

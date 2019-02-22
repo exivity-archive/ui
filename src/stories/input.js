@@ -6,11 +6,9 @@ import { withState } from '../../.storybook/StateDecorator'
 
 import TextInput from '../components/atoms/Input/TextInput'
 import Checkbox from '../components/atoms/Input/Checkbox'
-import Button from '../components/atoms/Input/Button'
-import Icon from '../components/atoms/Icon'
 import DropDownButton from '../components/atoms/Input/DropdownButton'
+import Label from '../components/atoms/Input/Label'
 
-import { MdAccountCircle } from 'react-icons/md'
 import { storeAndAction } from '../utils/storeAndAction'
 
 export default storiesOf('Input', module)
@@ -22,20 +20,25 @@ export default storiesOf('Input', module)
       </TextInput>
       )
     })
+  .add('TextInput with label', ({ state, storeState }) => {
+    return (
+      <div>
+        <Label name="Important field1">
+          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
+              Hello Button
+          </TextInput>
+        </Label>
+        <Label name="Important field2" description="This field is very important">
+          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
+              Hello Button
+          </TextInput>
+        </Label>
+      </div>
+      )
+    })
   .addDecorator(withState(false))
   .add('Checkbox', ({ state, storeState }) => {
-    return <Checkbox checked={state} onClick={storeAndAction(storeState, 'toggle checkbox', !state)}/>
-  })
-  .add('Button', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('Button with Icon (doesn\'t work yet)', () => {
-    return (
-      <Button onClick={action('clicked')}>
-        <Icon subIcon={<MdAccountCircle/>}>
-          {<MdAccountCircle/>}
-        </Icon>
-      </Button>
-    )
+    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'toggle checkbox')}/>
   })
   .add('Dropdown Button', () => <DropDownButton value="click me!"/>)
-  .add('Test icon', () => <Icon subIcon={<MdAccountCircle/>}><MdAccountCircle/></Icon>)
   

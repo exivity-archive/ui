@@ -19,7 +19,6 @@ const SubLabelWrapper = styled.div`
 `
 
 const TopLabel = styled.span`
-  margin-top: -4px;
   font-weight: 600;
   color: #444444;
 `
@@ -30,7 +29,6 @@ interface ISublabelProps {
 const SubLabel = styled.div`
   font-size: small;
   color: ${(p: ISublabelProps) => p.theme.colors.gray};
-  margin-top: -4px;
 `
 
 interface ILabelProps {
@@ -47,7 +45,5 @@ const Label: React.FC<ILabelProps> = ({ name, description, children }) => (
     {children}
   </ LabelWrapper>
 )
-
-
 
 export default Label
