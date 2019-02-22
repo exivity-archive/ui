@@ -6,13 +6,39 @@ import { withState } from '../../.storybook/StateDecorator'
 
 import TextInput from '../components/atoms/Input/TextInput'
 import Checkbox from '../components/atoms/Input/Checkbox'
-import Button from '../components/atoms/Input/Button'
+import DropDownButton from '../components/atoms/Input/DropdownButton'
+import Label from '../components/atoms/Input/Label'
+
+import { storeAndAction } from '../utils/storeAndAction'
 
 export default storiesOf('Input', module)
-  .addDecorator(withState('Testing'))
-  .add('TextInput', ({ state, storeState }) => <TextInput value={state} onChange={(value) => {
-    storeState(value)
-    action('typing')(value)
-  }}>Hello Button</TextInput>)
-  .add('Checkbox', () => <Checkbox onClick={action('clicked')}/>)
-  .add('Button', () => <Button onClick={action('clicked')}>Hello Button</Button>)
+  .addDecorator(withState('test'))
+  .add('TextInput', ({ state, storeState }) => {
+    return (
+      <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
+          Hello Button
+      </TextInput>
+      )
+    })
+  .add('TextInput with label', ({ state, storeState }) => {
+    return (
+      <div>
+        <Label name="Important field1">
+          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
+              Hello Button
+          </TextInput>
+        </Label>
+        <Label name="Important field2" description="This field is very important">
+          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
+              Hello Button
+          </TextInput>
+        </Label>
+      </div>
+      )
+    })
+  .addDecorator(withState(false))
+  .add('Checkbox', ({ state, storeState }) => {
+    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'toggle checkbox')}/>
+  })
+  .add('Dropdown Button', () => <DropDownButton value="click me!"/>)
+  
