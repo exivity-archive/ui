@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled, { css } from 'styled-components';
 import BaseIcon from './BaseIcon';
-import { IconType } from 'react-icons/lib/iconBase';
 
 interface IMainIconProps {
   subIcon?: JSX.Element

@@ -8,7 +8,7 @@ interface IIconProps {
   onClick?: (event: React.MouseEvent<HTMLSpanElement, MouseEvent>) => void
 }
 
-const Icon: React.FC<IIconProps> = ({ icon, subIcon, onClick }) => (
+const Icon: React.FC<IIconProps> = ({ icon, subIcon, onClick}) => (
   <Fragment>
     <MainIcon onClick={onClick} icon={icon} subIcon={subIcon} />
     {!!subIcon && <SubIcon onClick={onClick} icon={subIcon} />}

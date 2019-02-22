@@ -1,18 +1,14 @@
 import * as React from 'react'
 
-import renderer from 'react-test-renderer'
-import { configure, shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import { shallow } from 'enzyme'
 
 import TextInput from '.'
 
-configure({ adapter: new Adapter() })
-
 test('renders checkbox', () => {
-  const textInput = renderer.create(
+  const textInput = shallow(
       <TextInput onChange={() => { return }} />
   )
-  expect(textInput.toJSON()).toMatchSnapshot()
+  expect(textInput).toMatchSnapshot()
 })
 
 test('value gets changed after an on change event', () => {

@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 import styled, { css } from 'styled-components'
-import { Theme } from '../../../../theme';
 
 interface ICheckboxWrapperProps {
   checked: boolean
@@ -28,15 +27,13 @@ const CheckboxWrapper = styled.div`
       height: 12px;
     }
     `}
-  
 `
 
 export interface ICheckboxProps {
   checked: boolean
   onClick: () => void
-  onChange: (value: boolean) => void
+  onChange?: (value: boolean) => void
   className?: string
-  theme: Theme
 }
 
 export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
@@ -45,15 +42,10 @@ export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className
         className={className} 
         type='checkbox' 
         onClick={onClick} 
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.checked)} 
+        onChange={onChange ? (e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.checked) : undefined} 
         defaultChecked={checked} />
       </CheckboxWrapper>
 }
-
-Checkbox.defaultProps = {
-  checked: false
-}
-
 
 export default styled(Checkbox)`
   width: 20px;

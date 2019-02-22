@@ -1,9 +1,9 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallowWithTheme } from '../../../../utils/testing/shallowWithTheme'
 
 import DropdownButton from '.';
 
 test('renders dropdown button', () => {
-  const button = renderer.create(<DropdownButton value={'test'} onClick={() => { return }} />)
-  expect(button.toJSON()).toMatchSnapshot()
+  const button = shallowWithTheme(<DropdownButton value={'test'} onClick={() => { return }} />)
+  expect(button).toMatchSnapshot()
 })
