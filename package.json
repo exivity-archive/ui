@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
-    "@material-ui/icons": "^3.0.2",
     "@storybook/cli": "^5.0.0-rc.3",
     "fontfaceobserver": "^2.1.0",
     "react": "^16.8.2",
