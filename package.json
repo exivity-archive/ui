@@ -5,6 +5,8 @@
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@storybook/cli": "^5.0.0-rc.3",
+    "faker": "^4.1.0",
+    "memoize-one": "^5.0.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
@@ -38,7 +40,9 @@
     "@types/enzyme": "^3.1.18",
     "@types/enzyme-adapter-react-16": "^1.0.4",
     "@types/jest": "^24.0.6",
+    "@types/memoize-one": "^4.1.0",
     "@types/react-test-renderer": "^16.8.1",
+    "@types/react-window": "^1.5.1",
     "@types/styled-components": "^4.1.10",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0",
