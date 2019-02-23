@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import memoize from 'memoize-one'
 import { FixedSizeList, areEqual } from 'react-window'
-import { useExpandableList } from './extensions/Expandable'
+import { useExpandableList } from './useExpandableList'
 
 interface FlatListProps {
     height: number

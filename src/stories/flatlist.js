@@ -1,87 +1,32 @@
 import React from 'react'
-import Faker from 'faker'
+import { FixedSizeList, areEqual } from 'react-window'
+import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import List, { Row } from '../components/molecules/List'
-import { useBuildTree } from '../components/molecules/List/extensions/Expandable'
+import { useExpandableList } from '../components/molecules/List/useExpandableList'
 
-const lvl1 = new Array(100).fill(null)
-  .map((item, index) => ({
-    key: index + 1,
-    value: Faker.name.firstName(),
-    attributes: {
-      level: 1,
-    },
-    parent: null,
-    children: []
-  }))
+const ExpandableList = () => {
+  const props = useExpandableList(FLAT_LIST_TEST_DATA)
 
-const lvl2 = new Array(200).fill(null)
-  .map((item, index) => {
-    if (index > 99) {
-      return {
-        key: index + 101,
-        value: Faker.name.firstName(),
-        attributes: {
-          level: 2,
-        },
-        parent: index - 99,
-        children: []
-      }
-    } else {
-        return {
-          key: index + 101,
-          value: Faker.name.firstName(),
-          attributes: {
-            level: 2,
-          },
-          parent: index + 1,
-          children: []
-        }
-      }
-    })
+  return (
+    <FixedSizeList height={600} width={400} itemSize={50} {...props}>
+      {Item}
+    </FixedSizeList>
+  )
+}
 
-const lvl3  = new Array(400).fill(null)
-  .map((item, index) => {
-    if (index > 199) {
-      return {
-        key: index + 301,
-        value: Faker.name.firstName(),
-        attributes: {
-          level: 3,
-        },
-        parent: index - 100,
-        children: []
-      }
-    } else {
-      return {
-        key: index + 301,
-        value: Faker.name.firstName(),
-        attributes: {
-          level: 3,
-        },
-        parent: index + 101,
-        children: []
-      }
-    }
-  })
-
-const testData = lvl1.concat(lvl2).concat(lvl3)
-
-export default storiesOf('List', module)
+export default storiesOf('List hooks', module)
   .add('default', () =>  (
-    <List height={400} width={400} data={testData} itemSize={50}>
+    <List height={800} width={400} data={FLAT_LIST_TEST_DATA} itemSize={50}>
       {Row}
     </List>
   ))
-  .add('nested', () =>  (
-      <List height={400} width={400} data={testData} itemSize={50}>
-        {Test}
-      </List>
-    ))
+  .add('useExpandableList', () =>  <ExpandableList/>)
+  .add('useSearchList', () => <ExpandableList/>)
 
-const Test = ({ data, index, style }) => {
+const Item = ({ data, index, style }) => {
   const item = data[index]
   const space = new Array(item.attributes.level)
 
