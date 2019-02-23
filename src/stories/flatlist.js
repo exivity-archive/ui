@@ -42,16 +42,16 @@ const lvl2 = new Array(200).fill(null)
       }
     })
 
-const lvl3  = new Array(600).fill(null)
+const lvl3  = new Array(400).fill(null)
   .map((item, index) => {
-    if (index > 299) {
+    if (index > 199) {
       return {
         key: index + 301,
         value: Faker.name.firstName(),
         attributes: {
           level: 3,
         },
-        parent: index - 200,
+        parent: index - 100,
         children: []
       }
     } else {
@@ -83,10 +83,11 @@ export default storiesOf('List', module)
 
 const Test = ({ data, index, style }) => {
   const item = data[index]
+  const space = new Array(item.attributes.level)
 
   return (
     <div onClick={item.onClick} style={style}>
-      {item.children.length ? 'expandable ' + String(item.value) : String(item.value)}
+      {item.children.length ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') +  String(item.value)}
     </div>
   )
 }
