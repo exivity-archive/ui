@@ -8,7 +8,7 @@ const theme = {
   }
 }
 
-type Readonly<T> = { readonly [P in keyof T]-?: T[P] };
+type Readonly<T> = { readonly [P in keyof T]-?: T[P] }
 export type Theme = Readonly<typeof theme>
 
 export default theme as Theme
