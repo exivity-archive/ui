@@ -8,7 +8,6 @@ import WebfontLoader from '@dr-kobros/react-webfont-loader'
 import theme from '../src/theme'
 import { fontConfig } from '../src/fontConfig'
 
-
 const styles = {
   display: 'flex',
   height: '100%',

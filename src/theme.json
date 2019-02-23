@@ -1,0 +1,9 @@
+{
+  "global": {
+    "margin": "20px !default",
+    "fontFamily": "Fira Mono Latin Regular"
+  },
+  "colors": {
+    "gray": "#aaa"
+  }
+}

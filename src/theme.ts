@@ -1,14 +1,9 @@
-const theme = {
-  global: {
-    margin: '20px !default',
-    fontFamily: 'Fira Mono Latin Regular'
-  },
-  colors: {
-    gray: '#aaa'
-  }
-}
+import fs from 'fs'
+import ITheme from './ITheme'
+import { DeepReadonly } from './utils/types'
 
-type Readonly<T> = { readonly [P in keyof T]-?: T[P] };
-export type Theme = Readonly<typeof theme>
+export type Theme = DeepReadonly<ITheme>
 
-export default theme as Theme
+const theme: Theme = JSON.parse(fs.readFileSync('./theme.json', { encoding: 'utf8' }))
+
+export default theme
