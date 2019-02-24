@@ -10,9 +10,11 @@ import DropDownButton from '../components/atoms/Input/DropdownButton'
 import Label from '../components/atoms/Input/Label'
 
 import { storeAndAction } from '../utils/storeAndAction'
+import CenterDecorator from '../decorators/CenterDecorator'
 
 export default storiesOf('Input', module)
   .addDecorator(withState('test'))
+  .addDecorator(CenterDecorator)
   .add('TextInput', ({ state, storeState }) => {
     return (
       <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>

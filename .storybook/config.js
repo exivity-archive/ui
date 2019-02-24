@@ -8,20 +8,7 @@ import WebfontLoader from '@dr-kobros/react-webfont-loader'
 import theme from '../src/theme'
 import { fontConfig } from '../src/fontConfig'
 
-const styles = {
-  display: 'flex',
-  height: '100%',
-  width: '100%',
-  justifyContent: 'center',
-  alignItems: 'center',
-  flexDirection: 'column'
-}
 
-const CenterDecorator = (storyFn) => (
-  <div style={styles}>
-    { storyFn() }
-  </div>
-)
 
 const FontLoader = (storyFn) => (
   <WebfontLoader config={fontConfig} onStatus={(fontStatus) => console.log('font status:', fontStatus)}>
@@ -32,8 +19,6 @@ const FontLoader = (storyFn) => (
 const themes = [theme]
 addDecorator(withThemesProvider(themes))
 addDecorator(FontLoader)
-addDecorator(CenterDecorator)
-
 
 function loadStories() {
   require('../src/stories')

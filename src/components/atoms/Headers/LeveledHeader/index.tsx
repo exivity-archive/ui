@@ -25,6 +25,4 @@ const LeveledHeader: React.FC<IHeaderProps> = ({ level, children, className }) =
   }
 }
 
-export default styled(LeveledHeader)`
-  margin-left: ${p => `${-(10 * (6 - p.level))}px`};
-`
+export default LeveledHeader
