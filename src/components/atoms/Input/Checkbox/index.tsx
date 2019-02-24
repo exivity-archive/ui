@@ -7,7 +7,6 @@ interface ICheckboxWrapperProps {
 }
 
 const CheckboxWrapper = styled.div`
-    position: absolute;
     display: inline-block;
     margin: 20px;
     width: 100px;
@@ -31,7 +30,7 @@ const CheckboxWrapper = styled.div`
 
 export interface ICheckboxProps {
   checked: boolean
-  onClick: () => void
+  onClick?: () => void
   onChange?: (value: boolean) => void
   className?: string
 }
@@ -52,7 +51,7 @@ export default styled(Checkbox)`
   height: 20px;
   cursor: pointer;
   background: ${props => props.checked ? 'rgba(40,40,40,0.7)' : 'rgba(40,40,40,0.2)'};
-  color:black;
+  color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

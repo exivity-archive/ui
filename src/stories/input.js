@@ -12,8 +12,8 @@ import { storeAndAction } from '../utils/storeAndAction'
 import CenterDecorator from '../decorators/CenterDecorator'
 
 export default storiesOf('Input', module)
-  .addDecorator(withState('test'))
   .addDecorator(CenterDecorator)
+  .addDecorator(withState('test'))
   .add('TextInput', ({ state, storeState }) => {
     return (
       <TextInput value={state} onChange={storeAndAction(storeState, 'typing')}>
@@ -37,7 +37,9 @@ export default storiesOf('Input', module)
       </div>
       )
     })
-  .addDecorator(withState(false))
+storiesOf('checkbox', module)
+  .addDecorator(CenterDecorator)
+  .addDecorator(withState(true))
   .add('Checkbox', ({ state, storeState }) => {
     return <Checkbox checked={state} onChange={storeAndAction(storeState, 'toggle checkbox')}/>
   })
