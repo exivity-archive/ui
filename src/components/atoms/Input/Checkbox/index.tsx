@@ -7,7 +7,6 @@ interface ICheckboxWrapperProps {
 }
 
 const CheckboxWrapper = styled.div`
-    display: inline-block;
     margin: 20px;
     width: 100px;
     height: 100px;

@@ -1,18 +1,18 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { withState } from '../../.storybook/StateDecorator'
+import { withState } from '../decorators/StateDecorator'
 
 import TextInput from '../components/atoms/Input/TextInput'
 import Checkbox from '../components/atoms/Input/Checkbox'
-import DropDownButton from '../components/atoms/Input/DropdownButton'
+import DropDownButton from '../components/atoms/Input/DropDownSelect/DropDownButton'
+import Button from '../components/atoms/Input/Buttons/Button'
+import UpdateButton from '../components/atoms/Input/Buttons/UpdateButton'
 import Label from '../components/atoms/Input/Label'
 
 import { storeAndAction } from '../utils/storeAndAction'
-import CenterDecorator from '../decorators/CenterDecorator'
 
 export default storiesOf('Input', module)
-  .addDecorator(CenterDecorator)
   .addDecorator(withState('test'))
   .add('TextInput', ({ state, storeState }) => {
     return (
@@ -37,11 +37,16 @@ export default storiesOf('Input', module)
       </div>
       )
     })
-storiesOf('checkbox', module)
-  .addDecorator(CenterDecorator)
+
+storiesOf('Buttons', module)
+  .add('Button', () => <Button>Hello</Button>)
+  .add('Update Button', () => <UpdateButton/>)
+  .add('Dropdown Button', () => <DropDownButton value="click me!"/>)
+
+storiesOf('Checkbox', module)
   .addDecorator(withState(true))
   .add('Checkbox', ({ state, storeState }) => {
     return <Checkbox checked={state} onChange={storeAndAction(storeState, 'toggle checkbox')}/>
   })
-  .add('Dropdown Button', () => <DropDownButton value="click me!"/>)
+  
   

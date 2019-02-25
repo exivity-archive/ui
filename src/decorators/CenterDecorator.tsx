@@ -11,10 +11,8 @@ const styles = {
   flexDirection: 'column' as FlexDirectionProperty
 }
 
-const CenterDecorator = (storyFn: any) => (
+export const CenterDecorator = (storyFn: any) => (
   <div style={styles}>
     { storyFn() }
   </div>
 )
-
-export default CenterDecorator
