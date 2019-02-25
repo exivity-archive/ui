@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import Icon from "../../Icon";
 import styled from 'styled-components';
 import { MdKeyboardArrowDown } from 'react-icons/md'
+import Icon from '../../Icon';
 
 const ArrowDownIcon = styled.div`
   float: right;

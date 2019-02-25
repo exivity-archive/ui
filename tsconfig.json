@@ -20,6 +20,6 @@
     "isolatedModules": true
   },
   "include": [
-    "src"
+    "src", ".storybook/generateThemeInterface.js"
   ]
 }
