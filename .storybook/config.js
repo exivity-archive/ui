@@ -1,4 +1,5 @@
-import  React from 'react'
+
+import * as React from 'react'
 import { configure } from '@storybook/react'
 import { addDecorator } from '@storybook/react'
 import { withThemesProvider } from 'storybook-addon-styled-component-theme'
@@ -6,6 +7,7 @@ import WebfontLoader from '@dr-kobros/react-webfont-loader'
 
 import theme from '../src/theme'
 import { fontConfig } from '../src/fontConfig'
+
 
 const styles = {
   display: 'flex',
@@ -32,6 +34,7 @@ const themes = [theme]
 addDecorator(withThemesProvider(themes))
 addDecorator(FontLoader)
 addDecorator(CenterDecorator)
+
 
 function loadStories() {
   require('../src/stories')

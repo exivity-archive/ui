@@ -1,13 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-interface IProps {
+interface ITextInputProps {
   value?: string
   onChange: (value: string) => void
   className?: string
 }
 
-const TextInput: React.FC<IProps> = ({ value, onChange, className }) => (
+export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className }) => (
   <input 
     type='text'
     value={value} 
