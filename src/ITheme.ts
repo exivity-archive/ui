@@ -5,20 +5,6 @@ export default interface ITheme {
     "fontFamily": "Fira Mono Latin Regular"
   },
   "colors": {
-    "gray": "#aaa",
-    "dark": {
-      "black": "#000",
-      "dark": "#000",
-      "deeppurple": "#000",
-      "test": {
-        "deeper": "hello",
-       "evenDeeper": {
-         "hello": "hello",
-         "deeperStill": {
-           "lastOne": "yeah"
-         }
-       }
-      }
-    }
+    "gray": "#aaa"
   }
 }
