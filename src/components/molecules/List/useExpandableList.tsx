@@ -27,7 +27,7 @@ export function iterateAllChildren (item: any, callback: any) {
     }
 }
 
-const createDataStructure = memoize((data: any, initialExpanded: boolean) => {
+const createDataStructure = memoize((data: any, expanded: boolean) => {
     const map = createMap(data)
 
     data.forEach((item: any) => {
@@ -45,11 +45,11 @@ const createDataStructure = memoize((data: any, initialExpanded: boolean) => {
     return Object.values(map).reduce((arr: any, next: any, index: number) => {
         if (!next.parent) {
             const addToArray = [next]
-            next.expanded = initialExpanded
+            next.expanded = expanded
             next.originalIndex = arr.length
 
             iterateAllChildren(next, (child: any) => {
-                child.expanded = initialExpanded
+                child.expanded = expanded
                 child.originalIndex = arr.length + addToArray.length
                 child.parentIndex = arr.length
                 addToArray.push(child)
@@ -91,8 +91,8 @@ function enrichItems (data: any, originalData: any, setStatus: any) {
     }))
 }
 
-export function useExpandableList (data: any, initialExpanded: boolean = false) {
-    const treeData: any = createDataStructure(data, initialExpanded)
+export function useExpandableList (data: any, expanded: boolean = false) {
+    const treeData: any = createDataStructure(data, expanded)
     const [storedData, setStatus] = useState(treeData)
 
     const visibleItems = getVisibleItems(storedData)
