@@ -10,7 +10,7 @@ ShallowWrapper {
           "gray": "#aaa",
         },
         "global": Object {
-          "fontFamily": "-apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, \\"Helvetica Neue\\", Arial, sans-serif !default;",
+          "fontFamily": "Fira Mono Latin Regular",
           "margin": "20px !default",
         },
       }

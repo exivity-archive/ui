@@ -1,14 +1,17 @@
 import React from 'react'
 import { FixedSizeList, areEqual } from 'react-window'
-import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
+import { createExpandedListItems } from '../components/molecules/List/useExpandableList/helpers'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import List, { Row } from '../components/molecules/List'
-import { useExpandableList } from '../components/molecules/List/useExpandableList'
+import { useExpandableList } from '../components/molecules/List/useExpandableList/useExpandableList'
+import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
+
+const getParent = (item) => item.parentId
 
 const ExpandableList = () => {
-  const props = useExpandableList(FLAT_LIST_TEST_DATA)
+  const props = useExpandableList(FLAT_LIST_TEST_DATA, getParent)
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} {...props}>
@@ -31,8 +34,8 @@ const Item = ({ data, index, style }) => {
   const space = new Array(item.attributes.level)
 
   return (
-    <div onClick={item.onClick} style={style}>
-      {item.children.length ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') +  String(item.value)}
+    <div onClick={item.expand} style={style}>
+      {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') +  String(item.value)}
     </div>
   )
 }
