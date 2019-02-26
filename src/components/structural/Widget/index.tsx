@@ -1,20 +1,31 @@
 import * as React from 'react'
 import styled from 'styled-components';
+import { Theme } from '../../../theme';
 
 const WidgetTitle = styled.h4`
-  font-weight: 200;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  font-size: 22px;
+  color: ${props => props.theme.colors.blue};
 `
+
+interface IWidgetSubTitleProps {
+  theme: Theme
+}
+
 const WidgetSubTitle = styled.span`
-  color: #999;
+  color: ${(props: IWidgetSubTitleProps) => props.theme.colors.gray};
   font-size: 0.8em;
   padding-left: 10px;
+  font-weight: 500;
 `
 
 interface IWidget {
   className?: string
-  children: JSX.Element | string
+  children: React.ReactNode
   title?: string
   subTitle?: string
+  theme: Theme;
 }
 
 const Widget: React.FC<IWidget> = ({ className, children, title, subTitle }) => (
@@ -36,5 +47,5 @@ export default styled(Widget)`
   position: relative;
   box-sizing: border-box;
   border-radius: 3px;
-  width: 65%
+  width: 100%;
 `

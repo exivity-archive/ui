@@ -36,7 +36,7 @@ ShallowWrapper {
   background: ",
             [Function],
             ";
-  color:black;
+  color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -89,7 +89,7 @@ ShallowWrapper {
   background: ",
               [Function],
               ";
-  color:black;
+  color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

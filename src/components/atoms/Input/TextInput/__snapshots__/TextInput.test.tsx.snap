@@ -25,10 +25,12 @@ ShallowWrapper {
         "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "sc-bdVaJa",
-          "isStatic": true,
+          "isStatic": false,
           "rules": Array [
             "
-  font-family: inherit;
+  font-family: ",
+            [Function],
+            ";
   color: #444444;
   height: 30px;
   width: 300px;
@@ -67,10 +69,12 @@ ShallowWrapper {
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
-            "isStatic": true,
+            "isStatic": false,
             "rules": Array [
               "
-  font-family: inherit;
+  font-family: ",
+              [Function],
+              ";
   color: #444444;
   height: 30px;
   width: 300px;
