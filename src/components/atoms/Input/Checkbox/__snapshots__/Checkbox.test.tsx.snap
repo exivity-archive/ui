@@ -5,7 +5,7 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ForwardRef
     checked={true}
-    onClick={[Function]}
+    onClick={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -62,7 +62,7 @@ ShallowWrapper {
         Symbol(Symbol.hasInstance): [Function],
       },
       "forwardedRef": null,
-      "onClick": [Function],
+      "onClick": [MockFunction],
     },
     "ref": null,
     "rendered": null,
@@ -115,7 +115,7 @@ ShallowWrapper {
           Symbol(Symbol.hasInstance): [Function],
         },
         "forwardedRef": null,
-        "onClick": [Function],
+        "onClick": [MockFunction],
       },
       "ref": null,
       "rendered": null,

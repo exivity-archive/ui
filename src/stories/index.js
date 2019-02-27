@@ -1,17 +1,18 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
-import { linkTo } from '@storybook/addon-links'
-
-import { Welcome } from '@storybook/react/demo'
-
-import { Welcome } from '@storybook/react/demo'
 
 import './input'
 import './flatlist'
-import './theme'
 import './structural'
-import './pages'
+import './label'
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
+storiesOf('Welcome', module)
+  .add('to Storybook', () => {
+    return <div>
+      Welcome to EPIC-UI from exivity!
+      <br/>
+      <br/>
+      All components are typed and tested.
+    </div>
+  })
 

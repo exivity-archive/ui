@@ -1,24 +1,57 @@
 import * as React from 'react'
-
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
 import Checkbox from '.'
 
 test('renders checkbox', () => {
-  const checkbox = shallow(
-      <Checkbox checked onClick={() => { return }} />
-  )
+  const checkbox = shallow(<Checkbox checked onClick={jest.fn()}/>)
   expect(checkbox).toMatchSnapshot()
 })
 
-test('checked gets flipped in value when checkbox is clicked', () => {
-  let checked: boolean = false
-  const mockCallBack = jest.fn(() => checked = !checked)
+test('onClick handler returns checkedValue', () => {
+  const onClickMock = jest.fn(x => x)
 
-  const checkbox = shallow(<Checkbox checked={checked} onClick={mockCallBack} />)
-  
-  checkbox.simulate('click')
-  expect(mockCallBack.mock.calls.length).toEqual(1)
-  // @ts-ignore
-  expect(checked === true).toBe(true)
+  const checkbox = mount(<Checkbox checked onClick={onClickMock} />)
+
+  checkbox
+      .find({ type: 'checkbox' })
+      .simulate('click', { target: { checked: false }})
+
+  expect(onClickMock.mock.results[0].value).toBe(false)
+})
+
+test('onChange handler returns checkedValue', () => {
+    const onChangeMock = jest.fn(x => x)
+
+    const checkbox = mount(<Checkbox checked onChange={onChangeMock} />)
+
+    checkbox
+        .find({ type: 'checkbox' })
+        .simulate('change', { target: { checked: false }})
+
+    expect(onChangeMock.mock.results[0].value).toBe(false)
+})
+
+test('checked prop to true', () => {
+    const checkbox = shallow(<Checkbox checked onChange={jest.fn()} />)
+    expect(checkbox.props().checked).toBe(true)
+})
+
+test('checked prop to false', () => {
+    const checkbox = shallow(<Checkbox checked={false} onChange={jest.fn()} />)
+    expect(checkbox.props().checked).toBe(false)
+})
+
+test('checked prop updates', () => {
+    const onChangeMock = jest.fn(x => x)
+
+    const checkbox = mount(<Checkbox checked={false} onChange={onChangeMock} />)
+
+    const checked = checkbox
+        .setProps({ checked: true })
+        .find({ type: 'checkbox' })
+        .props()
+        .checked
+    
+    expect(checked).toBe(true)
 })

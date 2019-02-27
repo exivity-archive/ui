@@ -1,14 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Widget snapshot 1`] = `
+exports[`Label snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ForwardRef
-    subTitle="Widget subTitle"
-    title="Widget title"
-  >
-    Widget
-  </ForwardRef>,
+    description="Label description"
+    name="Label name"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -23,30 +21,28 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "children": "Widget",
+      "description": "Label description",
       "forwardedComponent": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-htpNat",
+          "componentId": "sc-ifAKCX",
           "isStatic": true,
           "rules": Array [
             "
-  background: white;
-  box-shadow: 2px 2px 0 lightblue;
-  padding: 20px;
-  padding-bottom: 100px;
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  margin: 40px 0;
 ",
           ],
         },
-        "displayName": "Styled(Widget)",
+        "displayName": "Styled(Label)",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "sc-htpNat",
+        "styledComponentId": "sc-ifAKCX",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -54,11 +50,10 @@ ShallowWrapper {
         Symbol(Symbol.hasInstance): [Function],
       },
       "forwardedRef": null,
-      "subTitle": "Widget subTitle",
-      "title": "Widget title",
+      "name": "Label name",
     },
     "ref": null,
-    "rendered": "Widget",
+    "rendered": null,
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -67,30 +62,28 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "children": "Widget",
+        "description": "Label description",
         "forwardedComponent": Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-htpNat",
+            "componentId": "sc-ifAKCX",
             "isStatic": true,
             "rules": Array [
               "
-  background: white;
-  box-shadow: 2px 2px 0 lightblue;
-  padding: 20px;
-  padding-bottom: 100px;
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  margin: 40px 0;
 ",
             ],
           },
-          "displayName": "Styled(Widget)",
+          "displayName": "Styled(Label)",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-htpNat",
+          "styledComponentId": "sc-ifAKCX",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -98,11 +91,10 @@ ShallowWrapper {
           Symbol(Symbol.hasInstance): [Function],
         },
         "forwardedRef": null,
-        "subTitle": "Widget subTitle",
-        "title": "Widget title",
+        "name": "Label name",
       },
       "ref": null,
-      "rendered": "Widget",
+      "rendered": null,
       "type": [Function],
     },
   ],

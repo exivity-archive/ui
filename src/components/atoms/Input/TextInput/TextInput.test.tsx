@@ -1,26 +1,24 @@
 import * as React from 'react'
-
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 
 import TextInput from '.'
 
-test('renders checkbox', () => {
-  const textInput = shallow(
-      <TextInput onChange={() => { return }} />
-  )
+test('TextInput snapshot', () => {
+  const textInput = shallow(<TextInput onChange={jest.fn()}/>)
   expect(textInput).toMatchSnapshot()
 })
 
 test('value gets changed after an on change event', () => {
-  let value: string = 'hello'
-  const event = { target: { value: 'bye' } }
-  const mockCallBack = jest.fn((v) => { value = v })
+  const initialValue = 'initialValue'
+  const updatedValue = 'changed'
 
-  const textInput = shallow(
-      <TextInput value={value} onChange={mockCallBack} />
-  )
-  textInput.simulate('change', event)
-  expect(mockCallBack.mock.calls.length).toEqual(1)
-  expect(textInput.props().value === 'bye')
-  expect(value === 'bye')
+  const onChangeMock = jest.fn(x => x)
+
+  const textInput = mount(<TextInput value={initialValue} onChange={onChangeMock}/>)
+
+  textInput
+      .find('input')
+      .simulate('change', { target: { value: updatedValue }})
+
+  expect(onChangeMock.mock.results[0].value).toBe(updatedValue)
 })

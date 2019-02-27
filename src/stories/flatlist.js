@@ -21,7 +21,6 @@ const ExpandableList = () => {
 
 export default storiesOf('List hooks', module)
   .add('useExpandableList', () =>  <ExpandableList/>)
-  .add('useSearchList', () => <ExpandableList/>)
 
 const Item = ({ data, index, style }) => {
   const item = data[index]

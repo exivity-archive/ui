@@ -7,13 +7,14 @@ interface ITextInputProps {
   className?: string
 }
 
-export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className }) => (
-  <input 
-    type='text'
-    value={value} 
-    onChange={(event) => onChange(event.target.value)} 
-    className={className}
-  />
+export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, className, ...rest }) => (
+    <input
+        type='text'
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        className={className}
+        {...rest}
+    />
 )
 
 TextInput.defaultProps = {

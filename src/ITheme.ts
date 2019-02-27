@@ -1,4 +1,3 @@
-/*This is a generated file. Do not edit pls.*/
 export default interface ITheme {
   "global": {
     "margin": "20px !default",
@@ -16,16 +15,13 @@ export default interface ITheme {
     "silverish": "#eee",
     "light": "#f4f4f4",
     "white": "#fff",
-
-    "dark-blue": "#438dc7",
+    "darkblue": "#438dc7",
     "blue": "#00a8d8",
-    "light-blue": "#5cccea",
-    "lighter-blue": "#ccf4ff",
-    "lightest-blue": "#e6f9ff",
-
+    "lightblue": "#5cccea",
+    "lighterblue": "#ccf4ff",
+    "lightestblue": "#e6f9ff",
     "red": "#c33c32",
     "yellow": "#fff68c",
     "green": "#238e47"
   }
 }
-

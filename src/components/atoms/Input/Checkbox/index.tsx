@@ -12,38 +12,47 @@ const CheckboxWrapper = styled.div`
     height: 100px;
     overflow: hidden;
 
-    ${(props: ICheckboxWrapperProps) => props.checked && css`&:after {
-      position: relative;
-      left: 5px;
-      top: -30px;
-      transform: rotateZ(45deg);
-      border: solid #fff;
-      border-width: 0 3px 3px 0;
-      content: ' ';
-      display: block;
-      width: 6px;
-      height: 12px;
-    }
+    ${(props: ICheckboxWrapperProps) => props.checked && css`
+        &:after {
+          position: relative;
+          left: 5px;
+          top: -30px;
+          transform: rotateZ(45deg);
+          border: solid #fff;
+          border-width: 0 3px 3px 0;
+          content: ' ';
+          display: block;
+          width: 6px;
+          height: 12px;
+        }
     `}
 `
 
 export interface ICheckboxProps {
   checked: boolean
-  onClick?: () => void
+  onClick?: (value: boolean) => void
   onChange?: (value: boolean) => void
   className?: string
 }
 
 export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
-  return <CheckboxWrapper checked={checked}>
-      <input 
-        className={className} 
-        type='checkbox' 
-        onClick={onClick} 
-        onChange={onChange ? (e: React.ChangeEvent<HTMLInputElement>) => onChange(e.target.checked) : undefined} 
-        defaultChecked={checked} />
-      </CheckboxWrapper>
+  return (
+      <CheckboxWrapper checked={checked}>
+        <input
+            className={className}
+            type='checkbox'
+            onClick={(e: React.MouseEvent<HTMLInputElement>) => {
+                const checked = (e.target as HTMLInputElement).checked
+                onClick && onClick(checked)
+            }}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                onChange && onChange(e.target.checked)
+            }}
+            checked={checked}/>
+            </CheckboxWrapper>
+  )
 }
+
 
 export default styled(Checkbox)`
   width: 20px;
