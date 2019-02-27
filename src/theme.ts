@@ -1,9 +1,6 @@
-import ITheme from './ITheme'
 import { DeepReadonly } from './utils/types'
 
-export type Theme = DeepReadonly<ITheme>
-
-const theme: Theme = {
+const theme = {
     global: {
         margin: '20px !default',
         fontFamily: 'Fira Mono Latin Regular'
@@ -30,5 +27,7 @@ const theme: Theme = {
         green: '#238e47'
     }
 }
+
+export type Theme = DeepReadonly<typeof theme>
 
 export default theme

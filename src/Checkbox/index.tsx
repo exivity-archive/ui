@@ -24,6 +24,7 @@ const CheckboxWrapper = styled.div`
           display: block;
           width: 6px;
           height: 12px;
+          pointer-events: none;
         }
     `}
 `
