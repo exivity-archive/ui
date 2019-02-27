@@ -1,14 +1,68 @@
 import React from 'react'
+import { mount } from 'enzyme'
 
 import {
     getVisibleItems,
     noCollapsedParents,
     enrichItems,
     memoizeCreateParentChildrenMap,
-    transformAndOrder
+    transformAndOrder,
+    useExpandableList
 } from './useExpandableList'
 
 import { PARENT, CHILDREN } from './helpers'
+
+const ExpandableList = ({ children, data, accessor, expanded }: any) => {
+    return children(useExpandableList<any>(data, accessor, expanded))
+}
+
+test('useExpandableList expanded', () => {
+    let returnData: any[] = []
+
+    const list = [
+        { key: '1', parentId: null },
+        { key: '2', parentId: '3' },
+        { key: '3', parentId: '1' },
+        { key: '4', parentId: '2'  }q
+    ]
+
+    mount(
+        <ExpandableList data={list} accessor={(item: any) => item.parentId} expanded>
+            {(data: any) => {
+                returnData = data
+                return null
+            }}
+        </ExpandableList>)
+
+    expect(returnData.length).toBe(4)
+    returnData.forEach((item) => {
+        expect(item.expanded).toBe(true)
+    })
+})
+
+test('useExpandableList not expanded', () => {
+    let returnData: any[] = []
+
+    const list = [
+        { key: '1', parentId: null },
+        { key: '2', parentId: '3' },
+        { key: '3', parentId: '1' },
+        { key: '4', parentId: '2'  }
+    ]
+
+    mount(
+        <ExpandableList data={list} accessor={(item: any) => item.parentId}>
+            {(data: any) => {
+                returnData = data
+                return null
+            }}
+        </ExpandableList>)
+
+    expect(returnData.length).toBe(1)
+    returnData.forEach((item) => {
+        expect(item.expanded).toBe(false)
+    })
+})
 
 test('noCollapsedParents returns true', () => {
     const one = { key: '1', expanded: true, originalIndex: 0 }

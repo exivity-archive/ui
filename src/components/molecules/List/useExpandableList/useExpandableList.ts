@@ -2,7 +2,7 @@ import { useState } from 'react'
 import memoizeOne from 'memoize-one'
 
 import { createMap, Map } from '../helpers'
-import { iterateAllParents, iterateAllChildren, PARENT, isEqual, CHILDREN } from './helpers'
+import { iterateAllParents, iterateAllChildren, PARENT, areEqual, CHILDREN } from './helpers'
 import { IterateItem } from './helpers'
 
 type ListItem<T> = T & IterateItem
@@ -85,7 +85,7 @@ export const memoizeCreateParentChildrenMap = memoizeOne((
     parentKeyAccessor: ParentKeyAccessor<any>
 ) => {
     return createParentChildrenMap(data, parentKeyAccessor)
-}, isEqual)
+}, areEqual)
 
 export function noCollapsedParents<T> (item: ExpandedItem<T>, list: ExpandedItem<T>[]) {
     let parentsNotCollapsed = true
@@ -133,8 +133,5 @@ export function useExpandableList<T> (
     const visibleItems = getVisibleItems(list)
     const enrichedItems = enrichItems<T>(visibleItems, list, setList)
 
-    return {
-        itemData: enrichedItems,
-        itemCount: enrichedItems.length
-    }
+    return enrichedItems
 }

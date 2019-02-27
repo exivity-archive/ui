@@ -1,5 +1,4 @@
 import { MapItem } from '../helpers'
-import Faker from 'faker'
 
 export const PARENT = 'expandable-list-parent'
 export const CHILDREN = 'expandable-list-children'
@@ -27,7 +26,7 @@ export function iterateAllChildren (item: IterateItem, callback: Function) {
     }
 }
 
-export const isEqual = (newArgs: any, oldArgs: any) => {
+export const areEqual = (newArgs: any, oldArgs: any) => {
     const newData = newArgs[0]
     const oldData = oldArgs[0]
     const newExpanded = newArgs[2]
@@ -39,14 +38,3 @@ export const isEqual = (newArgs: any, oldArgs: any) => {
 
     return true
 }
-
-// export const createExpandedListItems = (
-//     nbOfChildrenPerItem: number,
-//     levels: number
-// ) => {
-//     let totalItems = 0
-//
-//     for (let level = 1; level <= levels; level++) {
-//         totalItems = totalItems + Math.pow(nbOfChildrenPerItem, level)
-//     }
-// }

@@ -1,4 +1,4 @@
-import { iterateAllParents, iterateAllChildren, isEqual, PARENT, CHILDREN } from './helpers'
+import { iterateAllParents, iterateAllChildren, areEqual, PARENT, CHILDREN } from './helpers'
 
 test(`iterateAllParents iterates recursively over all ${PARENT}`, () => {
     const mock = jest.fn()
@@ -38,7 +38,7 @@ test(`iterateAllChildren iterates recursively over all ${CHILDREN}`, () => {
     expect(mock).toHaveBeenCalledTimes(6)
 })
 
-test('isEqual returns true if first and thirth argument are unchanged', () => {
+test('areEqual returns true if first and thirth argument are unchanged', () => {
     const one = {}
     const two = {}
     const three = {}
@@ -55,10 +55,10 @@ test('isEqual returns true if first and thirth argument are unchanged', () => {
         three
     ]
 
-    expect(isEqual(args, newArgs)).toBe(true)
+    expect(areEqual(args, newArgs)).toBe(true)
 })
 
-test('isEqual returns false if first argument is changed', () => {
+test('areEqual returns false if first argument is changed', () => {
     const one = {}
     const two = {}
     const three = {}
@@ -75,10 +75,10 @@ test('isEqual returns false if first argument is changed', () => {
         three
     ]
 
-    expect(isEqual(args, newArgs)).toBe(false)
+    expect(areEqual(args, newArgs)).toBe(false)
 })
 
-test('isEqual returns false if thirth argument is changed', () => {
+test('areEqual returns false if thirth argument is changed', () => {
     const one = {}
     const two = {}
     const three = {}
@@ -95,10 +95,10 @@ test('isEqual returns false if thirth argument is changed', () => {
         {}
     ]
 
-    expect(isEqual(args, newArgs)).toBe(false)
+    expect(areEqual(args, newArgs)).toBe(false)
 })
 
-test('isEqual returns true if second argument is changed', () => {
+test('areEqual returns true if second argument is changed', () => {
     const one = {}
     const two = {}
     const three = {}
@@ -115,10 +115,10 @@ test('isEqual returns true if second argument is changed', () => {
         three
     ]
 
-    expect(isEqual(args, newArgs)).toBe(true)
+    expect(areEqual(args, newArgs)).toBe(true)
 })
 
-test('isEqual returns false if first and second argument is changed', () => {
+test('areEqual returns false if first and second argument is changed', () => {
     const one = {}
     const two = {}
     const three = {}
@@ -135,5 +135,5 @@ test('isEqual returns false if first and second argument is changed', () => {
         {}
     ]
 
-    expect(isEqual(args, newArgs)).toBe(false)
+    expect(areEqual(args, newArgs)).toBe(false)
 })
