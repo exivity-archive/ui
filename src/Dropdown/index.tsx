@@ -1,18 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react'
 import styled, { css } from 'styled-components';
 
-interface IDropdownContentPosition {
+interface IContentPosition {
   left?: 0
   right?: 0
   top?: string | 0
   bottom?: string | 0
 }
 
-interface IDropdownContentProps {
-  position: IDropdownContentPosition
+interface IContentProps {
+  position: IContentPosition
 }
 
-const DropdownContent = styled.div<IDropdownContentProps>`
+const Content = styled.div<IContentProps>`
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -55,7 +55,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
   layout
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
-  const getDropdownPosition = (layout: Layout): IDropdownContentPosition => {
+  const getDropdownPosition = (layout: Layout): IContentPosition => {
     if(dropdownRef.current) {
       const drop = dropdownRef.current
       const rect = drop.getBoundingClientRect()
@@ -84,7 +84,12 @@ const Dropdown: React.FC<IDropdownProps> = ({
     }
   }
 
-  const [dropdownPosition, setDropdownPosition] = useState<IDropdownContentPosition>(getDropdownPosition(layout))
+  const [contentPosition, setContentPosition] = useState<IContentPosition>({})
+
+  //  set initial position once dropdownRef.current is defined
+  useEffect(() => {
+    handleDropdownPosition()
+  }, [dropdownRef.current])
 
   useEffect(() => {
     window.addEventListener('resize', handleDropdownPosition)  
@@ -93,32 +98,20 @@ const Dropdown: React.FC<IDropdownProps> = ({
     }
   }, [])
 
-  const [showContent, setShowContent] = useState(false)
-
-  useEffect(() => {
-    if (opened === true) {
-      handleDropdownPosition()
-      setShowContent(true)
-    } else {
-      setShowContent(false)
-    }
-  }, [opened])
-
   const handleDropdownPosition = () => {
-   setDropdownPosition(getDropdownPosition(layout))
+   setContentPosition(getDropdownPosition(layout))
   }
 
   return (
     <div className={className}>
       {button}
-      {opened &&
-        <DropdownContent 
+        <Content 
           ref={dropdownRef}
-          position={dropdownPosition}
-          style={{visibility: showContent ? 'visible' : 'hidden'}}
+          position={contentPosition}
+          style={{ visibility: opened ? 'visible' : 'hidden' }}
           >
           {children}
-        </DropdownContent>}
+        </Content>
     </div>
   )
 }
