@@ -7,13 +7,13 @@ import {
     enrichItems,
     memoizeCreateParentChildrenMap,
     transformAndOrder,
-    index
+    useExpandableList
 } from '.'
 
 import { PARENT, CHILDREN } from './helpers'
 
 const ExpandableList = ({ children, data, accessor, expanded }: any) => {
-    return children(index<any>(data, accessor, expanded))
+    return children(useExpandableList<any>(data, accessor, expanded))
 }
 
 test('useExpandableList expanded', () => {
