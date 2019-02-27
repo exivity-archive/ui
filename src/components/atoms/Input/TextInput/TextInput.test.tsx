@@ -4,7 +4,7 @@ import { shallow } from 'enzyme'
 
 import TextInput from '.'
 
-test('renders checkbox', () => {
+test('renders textinput', () => {
   const textInput = shallow(
       <TextInput onChange={() => { return }} />
   )

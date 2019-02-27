@@ -1,11 +1,16 @@
-import * as React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import styled, { css } from 'styled-components';
 
-interface IDropdownContentProps {
-  horizontal: 'left' | 'right'
-  vertical: 'top' | 'bottom'
+interface IDropdownContentPosition {
+  left?: 0
+  right?: 0
+  top?: string | 0
+  bottom?: string | 0
 }
 
+interface IDropdownContentProps {
+  position: IDropdownContentPosition
+}
 
 const DropdownContent = styled.div<IDropdownContentProps>`
   position: absolute;
@@ -14,64 +19,116 @@ const DropdownContent = styled.div<IDropdownContentProps>`
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
   padding: 20px;
   padding-right: 10%;
-  margin-top: 5px;
-  ${props => props.horizontal === 'right' 
-    ? css`right: 0;
-      background: black;` 
-    : css`left: 0;
-      background: blue;`
-}
+  ${ ({position}) => css`
+    ${typeof position.left !== 'undefined' && css`
+      left: ${position.left};
+    `}
+    ${typeof position.right !== 'undefined' && css`
+      right: ${position.right};
+    `}
+    ${typeof position.bottom !== 'undefined' && css`
+      bottom: ${position.bottom};
+      margin-bottom: 5px;
+    `}
+    ${typeof position.top !== 'undefined' && css`
+      top: ${position.top};
+      margin-top: 5px;
+    `}
+  `}
 `
 
+type Vertical = 'top' | 'bottom'
+type Horizontal = 'left' | 'right'
+type Layout = [Vertical, Horizontal] | 'auto'
 interface IDropdownProps {
   className?: string
   button: React.ReactNode
   opened: boolean
-  layout: {
-    horizontal?: 'left' | 'right' | 'auto'
-    vertical: 'top' | 'bottom' | 'auto'
-  }
+  layout: Layout
 }
 
-const Dropdown: React.FC<IDropdownProps> = ({ className, button, children, opened, layout }) => {
-    const dropdownRef = React.useRef(null)
-    const [horizontal, setHorizontal] = React.useState<'left' | 'right'>('right')
-    const [vertical, setVertical] = React.useState<'top' | 'bottom'>('bottom')
+const Dropdown: React.FC<IDropdownProps> = ({ 
+  className, 
+  button, 
+  children, 
+  opened, 
+  layout
+}) => {
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const getDropdownPosition = (layout: Layout): IDropdownContentPosition => {
+    if(dropdownRef.current) {
+      const drop = dropdownRef.current
+      const rect = drop.getBoundingClientRect()
+      const parentRect = drop.parentElement!.getBoundingClientRect()
+      
+      let horizontal: Horizontal
+      let vertical: Vertical
+      
+      if (layout === 'auto') {
+        const closeToBottomBound = window.innerHeight - 20 < parentRect.bottom + rect.height
+        vertical = !closeToBottomBound ? 'top' : 'bottom'
+        const closeToRightBound = window.innerWidth - 20 < parentRect.left + rect.width 
+        horizontal = !closeToRightBound ? 'left' : 'right'
+      } else {
+        vertical = layout[0]
+        horizontal = layout[1]
+      }
+  
+      return {
+        [horizontal]: 0,
+        [vertical]: `${parentRect.height}px`
+      }
+    }
+    return {
+      left: 0
+    }
+  }
 
-    React.useLayoutEffect(() => {
-        if(dropdownRef !== null && dropdownRef.current !== null) {
-          const rect = dropdownRef!.current!.getBoundingClientRect()
+  const [dropdownPosition, setDropdownPosition] = useState<IDropdownContentPosition>(getDropdownPosition(layout))
 
-          const closeToRightBound = window.innerWidth - 20 < rect.left + rect.width
-          horizontal = layout.horizontal === 'auto' && closeToRightBound ? 'left' : 'right'
-          setHorizontal(horizontal)
-          
-          const closeToBottomBound = window.innerHeight - 20 < rect.top + rect.height
-          vertical = layout.vertical === 'auto' && closeToBottomBound ? 'top' : 'bottom'
-          setVertical(vertical)
-        }
-    }, [dropdownRef])
+  useEffect(() => {
+    window.addEventListener('resize', handleDropdownPosition)  
+    return () => {
+      window.removeEventListener('resize', handleDropdownPosition)  
+    }
+  }, [])
+
+  const [showContent, setShowContent] = useState(false)
+
+  useEffect(() => {
+    if (opened === true) {
+      handleDropdownPosition()
+      setShowContent(true)
+    } else {
+      setShowContent(false)
+    }
+  }, [opened])
+
+  const handleDropdownPosition = () => {
+   setDropdownPosition(getDropdownPosition(layout))
+  }
 
   return (
     <div className={className}>
       {button}
-      {opened && <DropdownContent vertical={vertical} horizontal={horizontal} ref={dropdownRef}>{children}</DropdownContent>}
+      {opened &&
+        <DropdownContent 
+          ref={dropdownRef}
+          position={dropdownPosition}
+          style={{visibility: showContent ? 'visible' : 'hidden'}}
+          >
+          {children}
+        </DropdownContent>}
     </div>
   )
 }
 
 Dropdown.defaultProps = {
-  layout: {
-    vertical: 'auto',
-    horizontal: 'auto'
-  }
-
+  layout: 'auto'
 }
 
 export default styled(Dropdown)`
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0px;
 `
-
