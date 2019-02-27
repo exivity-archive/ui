@@ -3,9 +3,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../decorators/StateDecorator'
 
-import TextInput from '../components/atoms/Input/TextInput'
-import Checkbox from '../components/atoms/Input/Checkbox'
-import Label from '../components/atoms/Label'
+import TextInput from '../TextInput'
+import Checkbox from '../Checkbox'
+import Label from '../Label'
 
 import { storeAndAction } from '../utils/storeAndAction'
 

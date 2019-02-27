@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components';
-import { Theme } from '../../../theme';
+import { Theme } from '../theme';
 
 const WidgetTitle = styled.h4`
   letter-spacing: -0.025em;

@@ -4,13 +4,13 @@ import { FixedSizeList } from 'react-window'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { useExpandableList } from '../components/molecules/List/useExpandableList/useExpandableList'
+import { index } from '../useExpandableList'
 import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
 
 const getParent = (item) => item.parentId
 
 const ExpandableList = () => {
-  const data = useExpandableList(FLAT_LIST_TEST_DATA, getParent)
+  const data = index(FLAT_LIST_TEST_DATA, getParent)
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>

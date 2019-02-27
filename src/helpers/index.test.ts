@@ -1,4 +1,4 @@
-import { createMap } from './'
+import { createMap } from '.'
 
 test('createMap creates a map by keyValue', () => {
     const data = [

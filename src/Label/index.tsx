@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components';
-import theme, { Theme } from '../../../theme'
+import theme, { Theme } from '../theme'
 
 const SubLabelWrapper = styled.div`
   display: flex;

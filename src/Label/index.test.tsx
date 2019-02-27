@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Label from '../Label'
+import Label from '.'
 
 test('Label snapshot', () => {
   const label = shallow(<Label name='Label name' description='Label description'/>)
