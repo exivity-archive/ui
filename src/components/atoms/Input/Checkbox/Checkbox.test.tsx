@@ -43,15 +43,13 @@ test('checked prop to false', () => {
 })
 
 test('checked prop updates', () => {
-    const onChangeMock = jest.fn(x => x)
-
-    const checkbox = mount(<Checkbox checked={false} onChange={onChangeMock} />)
+    const checkbox = mount(<Checkbox checked={false} onChange={jest.fn()} />)
 
     const checked = checkbox
         .setProps({ checked: true })
         .find({ type: 'checkbox' })
         .props()
         .checked
-    
+
     expect(checked).toBe(true)
 })
