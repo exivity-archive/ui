@@ -19,6 +19,13 @@
     src: url('../fonts/pt-sans-v8-latin-regular.ttf');
 }
 
+@font-face {
+    font-family: 'Pt Sans Latin Light';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/pt-sans-v8-latin-regular.ttf');
+}
+
 body {
      font-family: 'Fira Mono Latin Regular';
  }
