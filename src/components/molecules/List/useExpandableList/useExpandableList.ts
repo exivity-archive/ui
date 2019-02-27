@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import memoizeOne from 'memoize-one'
 
-import { createMap } from '../helpers'
-import { iterateAllParents, iterateAllChildren, PARENT, CHILDREN } from './helpers'
+import { createMap, Map } from '../helpers'
+import { iterateAllParents, iterateAllChildren, PARENT, isEqual, CHILDREN } from './helpers'
 import { IterateItem } from './helpers'
 
 type ListItem<T> = T & IterateItem
@@ -22,25 +22,38 @@ type ExpandableItem<T> = Expandable & ExpandedItem<T>
 
 type ParentKeyAccessor<T> = (mapItem: ListItem<T>) => string|null
 
-const isEqual = (newArgs: any, oldArgs: any) => {
-    const newData = newArgs[0]
-    const oldData = oldArgs[0]
-    const newExpanded = newArgs[2]
-    const oldExpanded = oldArgs[2]
+export function transformAndOrder<T> (map: Map<T>, expanded: boolean): ExpandedItem<T>[] {
+    return Object
+        .values(map)
+        .reduce((arr: ExpandedItem<any>[], next: ListItem<any>): ExpandedItem<any>[] => {
+            const expandableItem = <ExpandedItem<any>>next
+            if (!next[PARENT]) {
+                expandableItem.expanded = expanded
+                expandableItem.originalIndex = arr.length
 
-    if (newData !== oldData || newExpanded !== oldExpanded) {
-        return false
-    }
+                const addToArray: ExpandedItem<any>[] = [expandableItem]
 
-    return true
+                iterateAllChildren(next, (child: any) => {
+                    const expandableChild = <ExpandedItem<any>>child
+                    expandableChild.expanded = expanded
+                    expandableChild.originalIndex = arr.length + addToArray.length
+
+                    addToArray.push(expandableChild)
+                })
+
+                return arr.concat(addToArray)
+            }
+
+            return arr
+        }, [])
 }
 
+
 // @Todo Type any of curried function
-const createDataStructure = memoizeOne((
+export const createParentChildrenMap =(
     data: ListItem<any>[],
-    parentKeyAccessor: ParentKeyAccessor<any>,
-    expanded: boolean
-): ExpandedItem<any>[] => {
+    parentKeyAccessor: ParentKeyAccessor<any>
+): Map<any> => {
     const map = createMap<ListItem<any>>(data)
 
     data.forEach((item) => {
@@ -60,32 +73,21 @@ const createDataStructure = memoizeOne((
         }
     })
 
-        return Object
-            .values(map)
-            .reduce((arr: ExpandedItem<any>[], next: ListItem<any>): ExpandedItem<any>[] => {
-                const expandableItem = <ExpandedItem<any>>next
-                if (!next[PARENT]) {
-                    expandableItem.expanded = expanded
-                    expandableItem.originalIndex = arr.length
+    return map
+}
 
-                    const addToArray: ExpandedItem<any>[] = [expandableItem]
+export const memoizeTransFormAndOrder = memoizeOne((map: Map<any>, expanded: boolean) => {
+    return transformAndOrder<any>(map, expanded)
+})
 
-                    iterateAllChildren(next, (child: any) => {
-                        const expandableChild = <ExpandedItem<any>>child
-                        expandableChild.expanded = expanded
-                        expandableChild.originalIndex = arr.length + addToArray.length
+export const memoizeCreateParentChildrenMap = memoizeOne((
+    data: ListItem<any>[],
+    parentKeyAccessor: ParentKeyAccessor<any>
+) => {
+    return createParentChildrenMap(data, parentKeyAccessor)
+}, isEqual)
 
-                        addToArray.push(expandableChild)
-                    })
-
-                    return arr.concat(addToArray)
-                }
-
-                return arr
-            }, [])
-    }, isEqual)
-
-function noCollapsedParents <T> (item: ExpandedItem<T>, list: ExpandedItem<T>[]) {
+export function noCollapsedParents<T> (item: ExpandedItem<T>, list: ExpandedItem<T>[]) {
     let parentsNotCollapsed = true
     iterateAllParents(item, (parent: ExpandedItem<T>) => {
         const originalParent = list[parent.originalIndex]
@@ -96,7 +98,7 @@ function noCollapsedParents <T> (item: ExpandedItem<T>, list: ExpandedItem<T>[])
     return parentsNotCollapsed
 }
 
-function getVisibleItems<T> (list: ExpandedItem<T>[]): ExpandedItem<T>[] {
+export function getVisibleItems<T> (list: ExpandedItem<T>[]): ExpandedItem<T>[] {
     return list.filter((item) => {
         const noParentsCollapsed = noCollapsedParents(item, list)
         const noParent = !item[PARENT]
@@ -104,7 +106,7 @@ function getVisibleItems<T> (list: ExpandedItem<T>[]): ExpandedItem<T>[] {
     })
 }
 
-function enrichItems<T> (
+export function enrichItems<T> (
     list: ExpandedItem<T>[],
     originalList: ExpandedItem<T>[],
     setList: Function
@@ -124,7 +126,8 @@ export function useExpandableList<T> (
     parentKeyAccessor: ParentKeyAccessor<T>,
     expanded: boolean = false
 ) {
-    const expandableData: ExpandedItem<T>[] = createDataStructure(data, parentKeyAccessor,  expanded)
+    const parentChildrenMap: Map<T> = memoizeCreateParentChildrenMap(data, parentKeyAccessor)
+    const expandableData: ExpandedItem<T>[] = memoizeTransFormAndOrder(parentChildrenMap, expanded)
     const [list, setList] = useState(expandableData)
 
     const visibleItems = getVisibleItems(list)

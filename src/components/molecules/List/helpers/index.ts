@@ -4,7 +4,7 @@ export interface MapItem {
 
 type MapData<T> = T[]
 
-interface Map<T> {
+export interface Map<T> {
     [index: string]: T
 }
 
