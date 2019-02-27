@@ -28,4 +28,6 @@ const theme = {
     }
 }
 
-export default theme as DeepReadonly<typeof theme>
+export type Theme = DeepReadonly<typeof theme>
+
+export default theme

@@ -10,8 +10,8 @@ import Label from '../Label'
 
 
 import { storeAndAction } from '../utils/storeAndAction'
-import Dropdown from '../components/atoms/Input/Dropdown'
-import DropDownButton from '../components/atoms/Input/Dropdown/DropdownButton'
+import Dropdown from '../Dropdown'
+import DropDownButton from '../Dropdown/tempDropdownButton'
 
 export default storiesOf('Input', module)
   .addDecorator(withState('test'))
