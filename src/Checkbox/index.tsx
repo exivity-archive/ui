@@ -42,7 +42,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className
         <input
             className={className}
             type='checkbox'
-            onClick={(e: React.MouseEvent<HTMLInputElement>) => {
+            onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
                 const checked = (e.target as HTMLInputElement).checked
                 onClick && onClick(checked)
             }}

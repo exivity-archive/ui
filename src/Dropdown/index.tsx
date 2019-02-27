@@ -1,14 +1,14 @@
-import React, { useRef, useState, useEffect, useLayoutEffect } from 'react'
-import styled, { css } from 'styled-components';
+import React, { useRef, useState, useEffect } from 'react'
+import styled, { css } from 'styled-components'
 
-interface IContentPosition {
+interface IPosition {
   left?: 0
   right?: 0
-  top?: string | 0
-  bottom?: string | 0
+  top?: number
+  bottom?: number
 }
 
-interface IContentProps extends IContentPosition {
+interface IContentProps extends IPosition {
   opened: boolean
 }
 
@@ -20,7 +20,7 @@ const Content = styled.div<IContentProps>`
   padding: 20px;
   padding-right: 10%;
   visibility: ${({ opened }) => opened ? 'visible' : 'hidden'};
-  ${ ({left, right, top, bottom}) => css`
+  ${ ({ left, right, top, bottom }) => css`
     ${typeof left !== 'undefined' && css`
       left: ${left};
     `}
@@ -28,24 +28,27 @@ const Content = styled.div<IContentProps>`
       right: ${right};
     `}
     ${typeof top !== 'undefined' && css`
-      top: ${top};
+      top: ${top}px;
       margin-top: 5px;
     `}
     ${typeof bottom !== 'undefined' && css`
-      bottom: ${bottom};
+      bottom: ${bottom}px;
       margin-bottom: 5px;
     `}
   `}
 `
 
-type Vertical = 'top' | 'bottom'
-type Horizontal = 'left' | 'right'
-type Layout = [Vertical, Horizontal] | 'auto'
+type Vertical = 'to-top' | 'to-bottom'
+type Horizontal = 'to-left' | 'to-right'
+interface ILayout {
+  horizontal: Horizontal
+  vertical: Vertical,
+}
 interface IDropdownProps {
   className?: string
   button: React.ReactNode
   opened: boolean
-  layout: Layout
+  layout: ILayout | 'auto'
 }
 
 const Dropdown: React.FC<IDropdownProps> = ({ 
@@ -55,58 +58,59 @@ const Dropdown: React.FC<IDropdownProps> = ({
   opened, 
   layout
 }) => {
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [contentPosition, setContentPosition] = useState<IContentPosition>({})
+  const ref = useRef<HTMLDivElement>(null)
+  const [position, setPosition] = useState<IPosition | undefined>()
 
-  //  set initial position once contentRef.current is defined
+  //  set initial position once Ref.current is defined
   useEffect(() => {
-    handleDropdownPosition()
-  }, [contentRef.current])
+    handlePosition()
+  }, [ref.current])
 
   useEffect(() => {
-    window.addEventListener('resize', handleDropdownPosition)  
-    return () => window.removeEventListener('resize', handleDropdownPosition)  
+    window.addEventListener('resize', handlePosition)  
+    return () => window.removeEventListener('resize', handlePosition)  
   }, [])
 
-  const handleDropdownPosition = () => {
-    setContentPosition(getDropdownPosition(layout))
+  const handlePosition = () => {
+    setPosition(getPosition(layout))
    }
 
-  const getDropdownPosition = (layout: Layout): IContentPosition => {
-    if(contentRef.current) {
-      const rect = contentRef.current.getBoundingClientRect()
-      const parentRect = contentRef.current.parentElement!.getBoundingClientRect()
+  const getPosition = (layout: ILayout | 'auto') => {
+    if (layout !== 'auto' && position !== undefined) {
+      return position
+    } else if (ref.current) {
+      const rect = ref.current.getBoundingClientRect()
+      const parentRect = ref.current.parentElement!.getBoundingClientRect()
       
-      let horizontal: Horizontal
-      let vertical: Vertical
-      
+      const makePosition = ({ horizontal, vertical }: ILayout ): IPosition => ({
+        [horizontal === 'to-left' ? 'right' : 'left']: 0,
+        [vertical === 'to-top' ? 'bottom' : 'top']: parentRect.height
+      })
+
       if (layout === 'auto') {
-        const closeToBottomBound = window.innerHeight - 20 < parentRect.bottom + rect.height
-        vertical = closeToBottomBound ? 'bottom' : 'top'
-        const closeToRightBound = window.innerWidth - 20 < parentRect.left + rect.width 
-        horizontal = closeToRightBound ? 'right' : 'left'
+        const breakDistance = 20
+        const closeToBottomBound = parentRect.bottom + rect.height > window.innerHeight - breakDistance
+        const closeToRightBound = parentRect.left + rect.width > window.innerWidth - breakDistance 
+        
+        return makePosition({
+          vertical: closeToBottomBound ? 'to-top' : 'to-bottom', 
+          horizontal: closeToRightBound ? 'to-left' : 'to-right'
+        })
       } else {
-        vertical = layout[0]
-        horizontal = layout[1]
-      }
-  
-      return {
-        [horizontal]: 0,
-        [vertical]: `${parentRect.height}px`
+        return makePosition(layout)
       }
     }
-    return {}
   }
 
   return (
     <div className={className}>
       {button}
-        <Content 
-          ref={contentRef}
-          {...contentPosition}
+        <Content
+          ref={ref}
+          {...position}
           opened={opened}>
           {children}
-        </Content>
+        </ Content>
     </div>
   )
 }
@@ -117,6 +121,4 @@ Dropdown.defaultProps = {
 
 export default styled(Dropdown)`
   position: relative;
-  display: inline-block;
-  margin: 0;
 `
