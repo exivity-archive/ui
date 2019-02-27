@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e98eba3-8fcc-4857-9556-9f88b7775b8b" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/components/molecules/FlatList/extensions/Expandable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/molecules/FlatList/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/stories/flatlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stories/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+=======
       <change afterPath="$PROJECT_DIR$/.storybook/StateContainer.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.storybook/StateDecorator.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stories/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stories/input.js" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +52,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/components/molecules/FlatList/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+=======
         <entry file="file://$PROJECT_DIR$/.storybook/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="475">
@@ -49,26 +65,41 @@
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/components/molecules/FlatList/extensions/Expandable.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+=======
         <entry file="file://$PROJECT_DIR$/.storybook/addons.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/stories/flatlist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+=======
         <entry file="file://$PROJECT_DIR$/src/stories/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
+>>>>>>> master
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -77,33 +108,69 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/.storybook/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding>
+                <element signature="e#1#27#0" expanded="true" />
+              </folding>
+=======
         <entry file="file://$PROJECT_DIR$/.storybook/StateContainer.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="8" column="52" lean-forward="true" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+>>>>>>> master
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/.storybook/addons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+=======
         <entry file="file://$PROJECT_DIR$/.storybook/StateDecorator.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/src/stories/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stories/input.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="36" lean-forward="true" selection-end-line="17" selection-end-column="81" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+=======
         <entry file="file://$PROJECT_DIR$/src/stories/input.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+>>>>>>> master
               </folding>
             </state>
           </provider>
@@ -122,9 +189,12 @@
         <option value="$PROJECT_DIR$/src/components/molecules/FlatList/extensions/Expandable.tsx" />
         <option value="$PROJECT_DIR$/.storybook/config.js" />
         <option value="$PROJECT_DIR$/src/stories/index.js" />
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/.storybook/StateContainer.tsx" />
         <option value="$PROJECT_DIR$/.storybook/StateDecorator.tsx" />
         <option value="$PROJECT_DIR$/src/stories/input.js" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -167,7 +237,11 @@
               <item name="epic-ui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="molecules" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="Input" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="epic-ui" type="b2602c69:ProjectViewProjectNode" />
@@ -175,6 +249,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="molecules" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="FlatList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epic-ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epic-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="molecules" type="462c0819:PsiDirectoryNode" />
+              <item name="FlatList" type="462c0819:PsiDirectoryNode" />
+              <item name="extensions" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> master
             </path>
             <path>
               <item name="epic-ui" type="b2602c69:ProjectViewProjectNode" />
@@ -221,12 +308,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1550824293728</updated>
+<<<<<<< HEAD
+      <workItem from="1550824295035" duration="1529000" />
+=======
       <workItem from="1550824295035" duration="4183000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="1529000" />
+=======
     <option name="totallyTimeSpent" value="4183000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1096" height="1896" extended-state="6" />
@@ -259,6 +354,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/components/Input/Input.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/src/components/Input/TextInput/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -277,6 +378,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/stories/input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="36" lean-forward="true" selection-end-line="17" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/.storybook/addons.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -313,7 +427,11 @@
     <entry file="file://$PROJECT_DIR$/.storybook/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
+<<<<<<< HEAD
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+=======
           <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+>>>>>>> master
           <folding>
             <element signature="e#1#27#0" expanded="true" />
           </folding>
@@ -322,6 +440,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stories/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="152">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+=======
         <state relative-caret-position="190">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
@@ -357,6 +479,7 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+>>>>>>> master
         </state>
       </provider>
     </entry>

@@ -1,6 +1,5 @@
 import * as React from 'react'
-
-import { FlexDirectionProperty } from "csstype";
+import { FlexDirectionProperty } from 'csstype'
 
 const styles = {
   display: 'flex',
@@ -13,6 +12,8 @@ const styles = {
 
 export const CenterDecorator = (storyFn: any) => (
   <div style={styles}>
-    { storyFn() }
+    <div>
+      { storyFn() }
+    </div>
   </div>
 )
