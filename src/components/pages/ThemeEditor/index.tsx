@@ -2,7 +2,7 @@ import * as React from 'react'
 import { AnyObject } from '../../../utils/types';
 
 import { reassignNestedProp } from '../../../utils/reassignNestedProp'
-// import { updateTheme } from '../../../utils/updateTheme'
+import { updateTheme } from '../../../utils/updateTheme'
 
 import ThemeFields from './ThemeFields'
 import UpdateButton from '../../atoms/Input/Buttons/UpdateButton';
@@ -22,7 +22,7 @@ const ThemeEditor: React.FC<IThemeEditorProps> = ({ data }) => {
   }
 
   return <div>
-    <UpdateButton onClick={() => console.log("Todo")}></UpdateButton>
+    <UpdateButton onClick={() => updateTheme(theme)}></UpdateButton>
     <ThemeFields data={theme} history={[]} name='Theme' depth={1} onChange={onChange}/>
     </div>
 }

@@ -1,10 +1,10 @@
 import * as React from 'react'
 
 import styled from 'styled-components';
-import { MdKeyboardArrowDown } from 'react-icons/md'
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 import Icon from '../../Icon';
 
-const ArrowDownIcon = styled.div`
+const ArrowIcon = styled.div`
   float: right;
 `
 
@@ -17,14 +17,16 @@ interface IDropdownButtonProps {
   value: string
   className?: string
   onClick: () => void
+  opened: boolean
 }
 
-const DropdownButton: React.FC<IDropdownButtonProps> = ({ value, className, onClick }) => (
+const DropdownButton: React.FC<IDropdownButtonProps> = ({ value, className, onClick, opened }) => (
   <button className={className} onClick={onClick}>
     <SelectedValue >{value}</SelectedValue>
-    <ArrowDownIcon>
-      <Icon icon={<MdKeyboardArrowDown />}/>
-    </ArrowDownIcon>
+    <ArrowIcon>
+      {opened && <Icon icon={<MdKeyboardArrowDown />}/>}
+      {!opened && <Icon icon={<MdKeyboardArrowUp />}/>}
+    </ArrowIcon>
   </button>
 )
 

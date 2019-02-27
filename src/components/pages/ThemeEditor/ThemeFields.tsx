@@ -12,7 +12,7 @@ const FieldGroup = styled.div`
 
 const renderThemeFields = (data: AnyObject<string>, depth: number, history: string[], onChange: (value: string, history: string[]) => void) => (
   (key: string) => (
-      <ThemeFields data={data[key]} name={key} depth={depth + 1} history={[...history, key]} onChange={onChange} />
+      <ThemeFields data={data[key]} key={key} name={key} depth={depth + 1} history={[...history, key]} onChange={onChange} />
   )
 )
 

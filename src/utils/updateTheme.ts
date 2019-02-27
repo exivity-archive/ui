@@ -1,10 +1,7 @@
+import { AnyObject } from './types'
+import * as request from 'superagent'
 
-// import { AnyObject } from './types'
-// import * as fs from 'fs'
+export const updateTheme = (theme: AnyObject<string>) => {
+  return request.post('http://localhost:3000/theme').set('Content-Type', 'application/json').send(theme).then(console.log)
+}
 
-// export const updateTheme = (theme: AnyObject<string>) => {
-//   fs.writeFileSync('foo/some-file.txt', 'foo')
-// }
-
-
-export default 'hi'
