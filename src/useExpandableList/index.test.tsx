@@ -23,7 +23,7 @@ test('useExpandableList expanded', () => {
         { key: '1', parentId: null },
         { key: '2', parentId: '3' },
         { key: '3', parentId: '1' },
-        { key: '4', parentId: '2'  }
+        { key: '4', parentId: '2' }
   ]
 
   mount(
@@ -47,7 +47,7 @@ test('useExpandableList not expanded', () => {
         { key: '1', parentId: null },
         { key: '2', parentId: '3' },
         { key: '3', parentId: '1' },
-        { key: '4', parentId: '2'  }
+        { key: '4', parentId: '2' }
   ]
 
   mount(
