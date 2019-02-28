@@ -44,7 +44,7 @@ header "Push commit and tag"
 git push --follow-tags origin master
 
 header "Publish on NPM"
-npm publish
+npm publish --access public
 
 # header "Publish docs"
 # yarn publish:docs
