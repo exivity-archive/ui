@@ -33,5 +33,5 @@ Development
 
 | command | for |
 |---------|------|
-| yarn start | run storybook, typescript and jest in watch mode
+| yarn start | run storybook and jest in watch mode
 | yarn build | build docs and compile typescript
