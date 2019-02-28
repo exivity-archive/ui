@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
-    "test": "cross-env CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
     "test:update": "react-scripts test --update",
     "docs:watch": "start-storybook -p 9009 -s docs-public",
@@ -68,6 +68,12 @@
   ],
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{ts,tsx}",
+      "!<rootDir>/src/**/*.stories.ts"
+    ]
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
