@@ -48,11 +48,11 @@ interface IDropdownProps {
   layout: Layout
 }
 
-const Dropdown: React.FC<IDropdownProps> = ({ 
-  className, 
-  button, 
-  children, 
-  opened, 
+const Dropdown: React.FC<IDropdownProps> = ({
+  className,
+  button,
+  children,
+  opened,
   layout
 }) => {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -77,19 +77,21 @@ const Dropdown: React.FC<IDropdownProps> = ({
       const rect = contentRef.current.getBoundingClientRect()
       const parentRect = contentRef.current.parentElement!.getBoundingClientRect()
       
+
       let horizontal: Horizontal
       let vertical: Vertical
-      
+
       if (layout === 'auto') {
         const closeToBottomBound = window.innerHeight - 20 < parentRect.bottom + rect.height
         vertical = closeToBottomBound ? 'bottom' : 'top'
         const closeToRightBound = window.innerWidth - 20 < parentRect.left + rect.width 
         horizontal = closeToRightBound ? 'right' : 'left'
+
       } else {
         vertical = layout[0]
         horizontal = layout[1]
       }
-  
+
       return {
         [horizontal]: 0,
         [vertical]: `${parentRect.height}px`
@@ -105,6 +107,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
           ref={contentRef}
           {...contentPosition}
           opened={opened}>
+
           {children}
         </Content>
     </div>

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FlexDirectionProperty } from 'csstype';
+import { FlexDirectionProperty } from 'csstype'
 
 const styles = {
   display: 'flex',
