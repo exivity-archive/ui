@@ -40,23 +40,23 @@ const WRAPPER_ID = 'ex-checkbox-wrapper'
 export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
   return (
       <CheckboxWrapper id={WRAPPER_ID} checked={checked} onClickCapture={(event) => {
-          const targetId = (event.target as HTMLElement).id
-          if (targetId === WRAPPER_ID) {
-              event.stopPropagation()
-              onClick && onClick(!checked)
-              onChange && onChange(!checked)
-          }
+        const targetId = (event.target as HTMLElement).id
+        if (targetId === WRAPPER_ID) {
+          event.stopPropagation()
+          onClick && onClick(!checked)
+          onChange && onChange(!checked)
+        }
       }}>
           <input
               className={className}
               type='checkbox'
               onClick={(e: React.MouseEvent<HTMLInputElement>) => {
-                    const checked = (e.target as HTMLInputElement).checked
-                    onClick && onClick(checked)
-                }}
+                const checked = (e.target as HTMLInputElement).checked
+                onClick && onClick(checked)
+              }}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                    onChange && onChange(e.target.checked)
-                }}
+                onChange && onChange(e.target.checked)
+              }}
               checked={checked}
               {...props}
           />

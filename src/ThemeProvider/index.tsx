@@ -7,10 +7,10 @@ import { fontConfig } from '../fontConfig'
 import mainTheme, { Theme } from '../theme'
 
 interface ThemeAndFontProviderProps {
-    fontsConfig?: object
-    theme?: Theme
-    onFontStatus?: (status: string) => void
-    children: any
+  fontsConfig?: object
+  theme?: Theme
+  onFontStatus?: (status: string) => void
+  children: any
 }
 
 export const ThemeAndFontProvider: React.FC<ThemeAndFontProviderProps> = ({

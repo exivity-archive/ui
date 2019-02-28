@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 interface IDropdownContentPosition {
   left?: 0
@@ -19,7 +19,7 @@ const DropdownContent = styled.div<IDropdownContentProps>`
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   padding: 20px;
   padding-right: 10%;
-  ${ ({position}) => css`
+  ${ ({ position }) => css`
     ${typeof position.left !== 'undefined' && css`
       left: ${position.left};
     `}
@@ -47,33 +47,33 @@ interface IDropdownProps {
   layout: Layout
 }
 
-const Dropdown: React.FC<IDropdownProps> = ({ 
-  className, 
-  button, 
-  children, 
-  opened, 
+const Dropdown: React.FC<IDropdownProps> = ({
+  className,
+  button,
+  children,
+  opened,
   layout
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const getDropdownPosition = (layout: Layout): IDropdownContentPosition => {
-    if(dropdownRef.current) {
+    if (dropdownRef.current) {
       const drop = dropdownRef.current
       const rect = drop.getBoundingClientRect()
       const parentRect = drop.parentElement!.getBoundingClientRect()
-      
+
       let horizontal: Horizontal
       let vertical: Vertical
-      
+
       if (layout === 'auto') {
         const closeToBottomBound = window.innerHeight - 20 < parentRect.bottom + rect.height
         vertical = !closeToBottomBound ? 'top' : 'bottom'
-        const closeToRightBound = window.innerWidth - 20 < parentRect.left + rect.width 
+        const closeToRightBound = window.innerWidth - 20 < parentRect.left + rect.width
         horizontal = !closeToRightBound ? 'left' : 'right'
       } else {
         vertical = layout[0]
         horizontal = layout[1]
       }
-  
+
       return {
         [horizontal]: 0,
         [vertical]: `${parentRect.height}px`
@@ -87,9 +87,9 @@ const Dropdown: React.FC<IDropdownProps> = ({
   const [dropdownPosition, setDropdownPosition] = useState<IDropdownContentPosition>(getDropdownPosition(layout))
 
   useEffect(() => {
-    window.addEventListener('resize', handleDropdownPosition)  
+    window.addEventListener('resize', handleDropdownPosition)
     return () => {
-      window.removeEventListener('resize', handleDropdownPosition)  
+      window.removeEventListener('resize', handleDropdownPosition)
     }
   }, [])
 
@@ -105,17 +105,17 @@ const Dropdown: React.FC<IDropdownProps> = ({
   }, [opened])
 
   const handleDropdownPosition = () => {
-   setDropdownPosition(getDropdownPosition(layout))
+    setDropdownPosition(getDropdownPosition(layout))
   }
 
   return (
     <div className={className}>
       {button}
       {opened &&
-        <DropdownContent 
+        <DropdownContent
           ref={dropdownRef}
           position={dropdownPosition}
-          style={{visibility: showContent ? 'visible' : 'hidden'}}
+          style={{ visibility: showContent ? 'visible' : 'hidden' }}
           >
           {children}
         </DropdownContent>}
