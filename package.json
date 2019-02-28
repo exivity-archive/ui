@@ -1,5 +1,5 @@
 {
-  "name": "epic-ui",
+  "name": "@exivity/ui",
   "version": "0.2.0",
   "description": "A collection of components to build interfaces",
   "keywords": [
@@ -26,18 +26,20 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "scripts": {
-    "build": "yarn build:clean && yarn build:lib && yarn build:docs",
-    "build:clean": "rimraf lib",
-    "build:docs": "build-storybook -s public",
-    "build:lib": "tsc",
-    "docs": "start-storybook -p 9009 -s public",
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
-    "publish:docs": "git subtree push --prefix docs origin gh-pages",
-    "release": "bash scripts/release.sh",
-    "start": "run-p docs test",
-    "test": "react-scripts test",
-    "test:update": "react-scripts test --update"
+    "test": "CI=true react-scripts test",
+    "test:watch": "react-scripts test",
+    "test:update": "react-scripts test --update",
+    "docs:watch": "start-storybook -p 9009 -s public",
+    "docs:build": "build-storybook -s public",
+    "docs:publish": "git subtree push --prefix docs origin gh-pages",
+    "start": "run-p test:watch docs:watch",
+    "build": "yarn build:clean && yarn lib:build && yarn docs:build",
+    "build:clean": "rimraf lib",
+    "lib:build": "tsc",
+    "commit": "git-cz",
+    "release": "bash scripts/release.sh"
   },
   "husky": {
     "hooks": {
@@ -51,6 +53,11 @@
         "tslint --fix",
         "git add"
       ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "browserslist": [
@@ -85,6 +92,8 @@
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/styled-components": "^4.1.10",
     "babel-loader": "^8.0.5",
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "2.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "faker": "^4.1.0",

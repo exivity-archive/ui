@@ -34,9 +34,9 @@ yarn test
 header "Run build"
 yarn build
 
-header "Commit docs"
-git add docs
-git commit -m "chore: update docs" || true
+# header "Commit docs"
+# git add docs
+# git commit -m "chore: update docs" || true
 
 header "Cut release"
 yarn standard-version --sign
@@ -47,5 +47,5 @@ git push --follow-tags origin master
 header "Publish on NPM"
 npm publish
 
-header "Publish docs"
-yarn publish:docs
+# header "Publish docs"
+# yarn publish:docs
