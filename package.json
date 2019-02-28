@@ -28,7 +28,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
-    "test": "CI=true react-scripts test",
+    "test": "cross-env CI=true react-scripts test",
     "test:watch": "react-scripts test",
     "test:update": "react-scripts test --update",
     "docs:watch": "start-storybook -p 9009 -s public",
@@ -93,6 +93,7 @@
     "@types/styled-components": "^4.1.10",
     "babel-loader": "^8.0.5",
     "commitizen": "^3.0.7",
+    "cross-env": "^5.2.0",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
