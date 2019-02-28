@@ -37,7 +37,7 @@
     "start": "run-p test:watch docs:watch",
     "build": "yarn build:clean && yarn lib:build && yarn docs:build",
     "build:clean": "rimraf lib",
-    "lib:build": "tsc",
+    "lib:build": "tsc --outDir lib",
     "commit": "git-cz",
     "release": "bash scripts/release.sh"
   },
