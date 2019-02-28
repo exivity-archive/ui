@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useLayoutEffect } from 'react'
 import styled, { css } from 'styled-components'
 
 interface IPosition {
@@ -48,7 +48,7 @@ interface IDropdownProps {
   className?: string
   button: React.ReactNode
   opened: boolean
-  layout: ILayout | 'auto'
+  layout?: ILayout | 'auto'
 }
 
 const Dropdown: React.FC<IDropdownProps> = ({ 
@@ -56,24 +56,10 @@ const Dropdown: React.FC<IDropdownProps> = ({
   button, 
   children, 
   opened, 
-  layout
+  layout = 'auto'
 }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState<IPosition | undefined>()
-
-  //  set initial position once Ref.current is defined
-  useEffect(() => {
-    handlePosition()
-  }, [ref.current])
-
-  useEffect(() => {
-    window.addEventListener('resize', handlePosition)  
-    return () => window.removeEventListener('resize', handlePosition)  
-  }, [])
-
-  const handlePosition = () => {
-    setPosition(getPosition(layout))
-   }
 
   const getPosition = (layout: ILayout | 'auto') => {
     if (layout !== 'auto' && position !== undefined) {
@@ -82,7 +68,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
       const rect = ref.current.getBoundingClientRect()
       const parentRect = ref.current.parentElement!.getBoundingClientRect()
       
-      const makePosition = ({ horizontal, vertical }: ILayout ): IPosition => ({
+      const makePosition = ({ horizontal, vertical }: ILayout): IPosition => ({
         [horizontal === 'to-left' ? 'right' : 'left']: 0,
         [vertical === 'to-top' ? 'bottom' : 'top']: parentRect.height
       })
@@ -91,7 +77,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
         const breakDistance = 20
         const closeToBottomBound = parentRect.bottom + rect.height > window.innerHeight - breakDistance
         const closeToRightBound = parentRect.left + rect.width > window.innerWidth - breakDistance 
-        
+
         return makePosition({
           vertical: closeToBottomBound ? 'to-top' : 'to-bottom', 
           horizontal: closeToRightBound ? 'to-left' : 'to-right'
@@ -102,10 +88,20 @@ const Dropdown: React.FC<IDropdownProps> = ({
     }
   }
 
+  const handlePosition = () => setPosition(getPosition(layout))
+
+  useEffect(() => {
+    window.addEventListener('resize', handlePosition)  
+    return () => window.removeEventListener('resize', handlePosition)  
+  }, [])
+
+  useLayoutEffect(handlePosition, [])
+
   return (
-    <div className={className}>
+    <div className={className} data-test='dropdown'>
       {button}
-        <Content
+        <Content 
+          data-test='dropdown-content'
           ref={ref}
           {...position}
           opened={opened}>
@@ -113,10 +109,6 @@ const Dropdown: React.FC<IDropdownProps> = ({
         </ Content>
     </div>
   )
-}
-
-Dropdown.defaultProps = {
-  layout: 'auto'
 }
 
 export default styled(Dropdown)`
