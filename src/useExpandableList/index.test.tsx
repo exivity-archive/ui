@@ -84,7 +84,7 @@ test('noCollapsedParents returns true', () => {
 test('noCollapsedParents returns false', () => {
     const one = { key: '1', expanded: false, originalIndex: 0 }
     const two = { key: '2', expanded: true, originalIndex: 1, [PARENT]: one }
-    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two}
+    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two }
     const four = { key: '4', originalIndex: 3, [PARENT]: three }
 
     const list = [
@@ -101,7 +101,7 @@ test('noCollapsedParents returns false', () => {
 test('getVisibleItems filters items of which all parents are expanded', () => {
     const one = { key: '1', expanded: true, originalIndex: 0 }
     const two = { key: '2', expanded: false, originalIndex: 1, [PARENT]: one }
-    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two}
+    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two }
     const four = { key: '4', originalIndex: 3, [PARENT]: three }
 
     const list = [
@@ -117,7 +117,7 @@ test('getVisibleItems filters items of which all parents are expanded', () => {
 test('getVisibleItems returns all if all parents are expanded', () => {
     const one = { key: '1', expanded: true, originalIndex: 0 }
     const two = { key: '2', expanded: true, originalIndex: 1, [PARENT]: one }
-    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two}
+    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two }
     const four = { key: '4', originalIndex: 3, [PARENT]: three }
 
     const list = [
@@ -133,7 +133,7 @@ test('getVisibleItems returns all if all parents are expanded', () => {
 test('enrichItems enriches item from list with expand function', () => {
     const one = { key: '1', expanded: true, originalIndex: 0 }
     const two = { key: '2', expanded: true, originalIndex: 1, [PARENT]: one }
-    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two}
+    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two }
     const four = { key: '4', expanded: true, originalIndex: 3, [PARENT]: three }
 
     const expandMock = jest.fn()
@@ -158,7 +158,7 @@ test('enrichItems enriches item from list with expand function', () => {
 test('Expand mock should return a new copy of the original list', () => {
     const one = { key: '1', expanded: true, originalIndex: 0 }
     const two = { key: '2', expanded: true, originalIndex: 1, [PARENT]: one }
-    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two}
+    const three = { key: '3', expanded: true, originalIndex: 2, [PARENT]: two }
     const four = { key: '4', expanded: true, originalIndex: 3, [PARENT]: three }
 
     const expandMock = jest.fn(result => result)
@@ -186,7 +186,7 @@ test('memoizeCreateParentChildrenMap creates a map by keys', () => {
         { key: '1' , parentId: null },
         { key: '2', parentId: '1' },
         { key: '3', parentId: '2' },
-        { key: '4', parentId: '3'  }
+        { key: '4', parentId: '3' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -202,7 +202,7 @@ test('memoizeCreateParentChildrenMap creates a map with a parent reference', () 
         { key: '1' , parentId: null },
         { key: '2', parentId: '1' },
         { key: '3', parentId: '2' },
-        { key: '4', parentId: '3'  }
+        { key: '4', parentId: '3' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -218,7 +218,7 @@ test('memoizeCreateParentChildrenMap creates a map with child references', () =>
         { key: '1' , parentId: null },
         { key: '2', parentId: '1' },
         { key: '3', parentId: '2' },
-        { key: '4', parentId: '3'  }
+        { key: '4', parentId: '3' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -234,7 +234,7 @@ test('transformAndOrder creates a list from a map', () => {
         { key: '1' , parentId: null },
         { key: '2', parentId: '1' },
         { key: '3', parentId: '2' },
-        { key: '4', parentId: '3'  }
+        { key: '4', parentId: '3' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -248,7 +248,7 @@ test('transformAndOrder orders children directly under their parents', () => {
         { key: '1' , parentId: null },
         { key: '2', parentId: '3' },
         { key: '3', parentId: '1' },
-        { key: '4', parentId: '2'  }
+        { key: '4', parentId: '2' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -265,7 +265,7 @@ test('transformAndOrder extends items with expand attribute', () => {
         { key: '1', parentId: null },
         { key: '2', parentId: '3' },
         { key: '3', parentId: '1' },
-        { key: '4', parentId: '2'  }
+        { key: '4', parentId: '2' }
     ]
 
     const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)

@@ -14,8 +14,7 @@
     "react-scripts": "2.1.5",
     "react-window": "^1.5.2",
     "storybook-addon-styled-component-theme": "^1.1.1",
-    "styled-components": "^4.1.3",
-    "superagent": "^4.1.0"
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "node pre-storybook.js && start-storybook -p 9009 -s public",
@@ -50,7 +49,6 @@
     "@types/react-window": "^1.5.1",
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/styled-components": "^4.1.10",
-    "@types/superagent": "^3.8.6",
     "babel-loader": "^8.0.5",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
