@@ -12,8 +12,9 @@ yarn-error.log
 /coverage
 
 # production
-/build
+/lib
+/docs-static
 
-# ide
+# ide/os
 /.idea
 .DS_Store
