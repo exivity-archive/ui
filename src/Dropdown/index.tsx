@@ -51,6 +51,7 @@ interface IDropdownProps {
   layout?: ILayout | 'auto'
 }
 
+
 const Dropdown: React.FC<IDropdownProps> = ({ 
   className, 
   button, 
@@ -84,6 +85,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
         })
       } else {
         return makePosition(layout)
+
       }
     }
   }
@@ -105,6 +107,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
           ref={ref}
           {...position}
           opened={opened}>
+
           {children}
         </ Content>
     </div>

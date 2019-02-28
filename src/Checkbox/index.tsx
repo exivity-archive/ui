@@ -24,7 +24,7 @@ const CheckboxWrapper = styled.div`
           display: block;
           width: 6px;
           height: 12px;
-          pointer-events: none;
+          cursor: pointer;
         }
     `}
 `
@@ -36,7 +36,7 @@ export interface ICheckboxProps {
   className?: string
 }
 
-export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange }) => {
+export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
   return (
       <CheckboxWrapper checked={checked}>
         <input
@@ -45,15 +45,16 @@ export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className
             onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
                 const checked = (e.target as HTMLInputElement).checked
                 onClick && onClick(checked)
-            }}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              }}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 onChange && onChange(e.target.checked)
-            }}
-            checked={checked}/>
-            </CheckboxWrapper>
+              }}
+              checked={checked}
+              {...props}
+          />
+      </CheckboxWrapper>
   )
 }
-
 
 export default styled(Checkbox)`
   width: 20px;

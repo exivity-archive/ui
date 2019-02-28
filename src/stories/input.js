@@ -38,7 +38,7 @@ export default storiesOf('Input', module)
 storiesOf('Checkbox', module)
   .addDecorator(withState(true))
   .add('Checkbox', ({ state, storeState }) => {
-    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'toggle checkbox')}/>
+    return <Checkbox checked={state} onClick={storeAndAction(storeState, 'toggle checkbox')}/>
   })
 
 storiesOf('Dropdown', module).addDecorator(withState(false)).add('Dropdown', ({ state, storeState }) => {

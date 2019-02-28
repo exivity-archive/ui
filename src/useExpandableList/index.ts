@@ -121,7 +121,7 @@ export function enrichItems<T> (
     }))
 }
 
-export function index<T> (
+export function useExpandableList<T> (
     data: ListItem<T>[],
     parentKeyAccessor: ParentKeyAccessor<T>,
     expanded: boolean = false

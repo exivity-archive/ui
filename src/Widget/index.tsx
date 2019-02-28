@@ -1,6 +1,6 @@
 import * as React from 'react'
-import styled from 'styled-components';
-import { Theme } from '../theme';
+import styled from 'styled-components'
+import { Theme } from '../theme'
 
 const WidgetTitle = styled.h4`
   letter-spacing: -0.025em;
@@ -25,12 +25,12 @@ interface IWidget {
   children: React.ReactNode
   title?: string
   subTitle?: string
-  theme: Theme;
+  theme: Theme
 }
 
 const Widget: React.FC<IWidget> = ({ className, children, title, subTitle }) => (
   <div className={className}>
-    {title && 
+    {title &&
       <WidgetTitle>
         {title}
         {subTitle && <WidgetSubTitle>{subTitle}</WidgetSubTitle>}
