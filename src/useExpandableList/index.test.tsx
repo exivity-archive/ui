@@ -94,6 +94,29 @@ test('useExpandableList expanded boolean set to false', () => {
   })
 })
 
+test('useExpandableList will not filter items which do no have a parentId', () => {
+  let returnData: any[] = []
+
+  const list = [
+    { key: '1' , parentId: null },
+    { key: '2', parentId: '1' },
+    { key: 'grouping' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
+  ]
+
+  mount(
+    <ExpandableList data={list} accessor={(item: any) => item.parentId} expanded>
+      {(data: any) => {
+        returnData = data
+        return null
+      }}
+    </ExpandableList>)
+
+  expect(returnData.length).toBe(5)
+  expect(returnData[4].key).toBe('grouping')
+})
+
 test('noCollapsedParents returns true', () => {
   const one = { key: '1', expanded: true, originalIndex: 0 }
   const two = { key: '2', expanded: true, originalIndex: 1, [PARENT]: one }
