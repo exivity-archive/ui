@@ -40,16 +40,17 @@ const Content = styled.div<IContentProps>`
 
 type Vertical = 'top' | 'bottom' | 'auto'
 type Horizontal = 'left' | 'right' | 'auto'
-interface ILayout {
-  horizontal: Horizontal
-  vertical: Vertical,
-}
 interface IDropdownProps {
   className?: string
   button: React.ReactNode
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
+}
+
+interface ILayout {
+  horizontal: Horizontal
+  vertical: Vertical,
 }
 
 const Dropdown: React.FC<IDropdownProps> = ({

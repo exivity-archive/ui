@@ -45,7 +45,7 @@ storiesOf('Dropdown', module).addDecorator(withState(false)).add('Dropdown', ({ 
   return (
     <div style={{ paddingTop: 300 }}>
       <Dropdown 
-        opened={state}
+        open={state}
         button={
           <div onClick={() => storeState(!state)} >Click me</div>
           }>
