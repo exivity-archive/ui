@@ -20,11 +20,11 @@ fi
 header "Copy package.json"
 cp package.json lib
 
-header "Change to src folder"
+header "Change to lib folder"
 pushd lib
 
-header "Run npm pack"
-npm publish
+header "Run npm publish"
+npm publish --access=public
 
-header "Undo change to src folder"
+header "Back out of lib folder"
 popd

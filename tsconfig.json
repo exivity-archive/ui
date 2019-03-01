@@ -17,7 +17,7 @@
     "resolveJsonModule": true,
     "declaration": true,
     "jsx": "preserve",
-    "noEmit": false,
+    "noEmit": true,
     "allowJs": false,
     "isolatedModules": true
   },
