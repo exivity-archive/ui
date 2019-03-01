@@ -16,7 +16,37 @@ const ExpandableList = ({ children, data, accessor, expanded }: any) => {
   return children(useExpandableList<any>(data, accessor, expanded))
 }
 
-test('useExpandableList expanded', () => {
+test('useExpandableList with expanded callback', () => {
+  let returnData: any[] = []
+  const expandedItems = ['1', '2']
+  const callback = (item: any) => expandedItems.includes(item.key)
+
+  const list = [
+    { key: '1' , parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
+  ]
+
+  mount(
+    <ExpandableList data={list} accessor={(item: any) => item.parentId} expanded={callback}>
+      {(data: any) => {
+        returnData = data
+        return null
+      }}
+    </ExpandableList>)
+
+  expect(returnData.length).toBe(3)
+  returnData.forEach((item) => {
+    if (expandedItems.includes(item.key)) {
+      expect(item.expanded).toBe(true)
+    } else {
+      expect(item.expanded).toBe(false)
+    }
+  })
+})
+
+test('useExpandableList expanded boolean set to true', () => {
   let returnData: any[] = []
 
   const list = [
@@ -40,7 +70,7 @@ test('useExpandableList expanded', () => {
   })
 })
 
-test('useExpandableList not expanded', () => {
+test('useExpandableList expanded boolean set to false', () => {
   let returnData: any[] = []
 
   const list = [
