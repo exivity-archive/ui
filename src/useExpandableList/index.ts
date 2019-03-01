@@ -53,11 +53,6 @@ export function transformAndOrder<T> (map: Map<T>, expanded: boolean | ExpandedC
         return arr.concat(addToArray)
       }
 
-      // If it doesn't have parent or children it is related to other logic or hook
-      if (!next.hasOwnProperty(PARENT) && !next.hasOwnProperty(CHILDREN)) {
-        return arr.concat([next])
-      }
-
       return arr
     }, [])
 }
