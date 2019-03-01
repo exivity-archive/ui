@@ -8,7 +8,6 @@
     ],
     "module": "esnext",
     "outDir": "lib",
-    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -16,11 +15,16 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "declaration": true,
     "jsx": "preserve",
-    "isolatedModules": true,
     "noEmit": true
   },
   "include": [
-    "src"
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts*",
+    "**/*.stories.ts*"
   ]
 }
