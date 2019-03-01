@@ -20,11 +20,8 @@
     "Stefan Wullems <stefanwullems1998@gmail.com>",
     "Joram van den Boezem <joram@vandenboezem.nl>"
   ],
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",

@@ -35,5 +35,6 @@ jobs:
       name: "release & publish"
       before_script:
         - yarn build
-        - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ./.npmrc
+        - cat ./.npmrc
       script: bash scripts/release-and-publish-from-travis.sh
