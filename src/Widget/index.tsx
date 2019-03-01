@@ -31,10 +31,10 @@ interface IWidget {
 const Widget: React.FC<IWidget> = ({ className, children, title, subTitle }) => (
   <div className={className}>
     {title &&
-      <WidgetTitle>
-        {title}
-        {subTitle && <WidgetSubTitle>{subTitle}</WidgetSubTitle>}
-      </WidgetTitle>}
+    <WidgetTitle>
+      {title}
+      {subTitle && <WidgetSubTitle>{subTitle}</WidgetSubTitle>}
+    </WidgetTitle>}
     {children}
   </div>
 )

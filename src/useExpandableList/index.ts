@@ -1,16 +1,9 @@
-import { useState } from 'react'
 import memoizeOne from 'memoize-one'
+import { useState } from 'react'
 
 import { createMap, Map } from '../helpers'
 
-import {
-  IterateItem,
-  iterateAllParents,
-  iterateAllChildren,
-  PARENT,
-  CHILDREN,
-  areEqual
-} from './helpers'
+import { areEqual, CHILDREN, iterateAllChildren, iterateAllParents, IterateItem, PARENT } from './helpers'
 
 type ListItem<T> = T & IterateItem
 

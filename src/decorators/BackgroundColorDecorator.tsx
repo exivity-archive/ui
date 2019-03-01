@@ -1,5 +1,5 @@
-import * as React from 'react'
 import { FlexDirectionProperty } from 'csstype'
+import * as React from 'react'
 
 const styles = {
   display: 'flex',
@@ -12,6 +12,6 @@ const styles = {
 
 export const BackgroundColorDecorator = (color?: string) => (storyFn: any) => (
   <div style={{ backgroundColor: color || '#f4f4f4', ...styles }}>
-    { storyFn() }
+    {storyFn()}
   </div>
 )

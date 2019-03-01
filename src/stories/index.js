@@ -10,8 +10,8 @@ storiesOf('Welcome', module)
   .add('to Storybook', () => {
     return <div>
       Welcome to EPIC-UI from exivity!
-      <br/>
-      <br/>
+      <br />
+      <br />
       All components are typed and tested.
     </div>
   })

@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { shallow, mount } from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import 'jest-styled-components'
+import * as React from 'react'
 
 import Dropdown from '.'
 
