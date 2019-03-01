@@ -38,21 +38,21 @@ export interface ICheckboxProps {
 
 export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
   return (
-      <CheckboxWrapper checked={checked}>
-        <input
-            className={className}
-            type='checkbox'
-            onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-                const checked = (e.target as HTMLInputElement).checked
-                onClick && onClick(checked)
-              }}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                onChange && onChange(e.target.checked)
-              }}
-              checked={checked}
-              {...props}
-          />
-      </CheckboxWrapper>
+    <CheckboxWrapper checked={checked}>
+      <input
+        className={className}
+        type='checkbox'
+        onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+          const checked = (e.target as HTMLInputElement).checked
+          onClick && onClick(checked)
+        }}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          onChange && onChange(e.target.checked)
+        }}
+        checked={checked}
+        {...props}
+      />
+    </CheckboxWrapper>
   )
 }
 
