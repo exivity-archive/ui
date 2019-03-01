@@ -47,7 +47,7 @@ test('original keys should still be intact', () => {
   expect(enriched[1]).toHaveProperty('name', 'bas')
 
   expect(enriched[2]).toHaveProperty('id', 3)
-  expect(enriched[1]).toHaveProperty('hasName', false)
+  expect(enriched[2]).toHaveProperty('hasName', false)
 })
 
 test('the returned array should have the same order', () => {
