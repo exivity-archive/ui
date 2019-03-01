@@ -18,7 +18,7 @@ if [[ "$BRANCH" != "master" ]]; then
 fi
 
 header "Change to lib folder"
-pushd docs-static
+pushd docs/static
 
 header "Push to GitHub"
 git init
