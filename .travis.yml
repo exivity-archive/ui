@@ -2,9 +2,7 @@ if: tag IS blank
 
 language: node_js
 
-node_js:
-  - "8"
-  - "10"
+node_js: "10"
 
 cache: yarn
 
@@ -18,9 +16,12 @@ install: yarn
 jobs:
   include:
     - stage: test
+      name: "lint"
       script: yarn lint
-    - script: yarn typecheck
-    - before_script:
+    - name: "typecheck"
+      script: yarn lib:build
+    - name: "test"
+      before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
         - ./cc-test-reporter before-build
@@ -29,8 +30,10 @@ jobs:
       after_script:
         - codecov
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-    - script: yarn build
+    - name: "docs"
+      script: yarn docs:build
     - stage: deploy
+      name: "npm"
       node_js: "10"
       before_script: yarn build
       script: bash scripts/release-from-travis.sh
