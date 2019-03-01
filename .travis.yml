@@ -32,7 +32,7 @@ jobs:
     - name: "docs"
       script: yarn docs:build
     - stage: deploy
-      name: "npm"
+      name: "release & publish"
       before_script:
         - yarn build
         - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
