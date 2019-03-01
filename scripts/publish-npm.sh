@@ -27,4 +27,4 @@ header "Change to lib folder"
 pushd lib
 
 header "Run npm publish"
-npm publish --access=public
+npm publish

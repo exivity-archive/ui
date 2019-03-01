@@ -75,6 +75,9 @@
       "!<rootDir>/src/**/*.stories.{ts,tsx}"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
     "memoize-one": "^5.0.0",
