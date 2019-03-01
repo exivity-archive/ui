@@ -12,9 +12,7 @@ function header {
 }
 
 header "Check tags"
-git describe --exact-match --tags HEAD
-RETVAL=$?
-if [[ ${RETVAL} -eq 0 ]]; then
+if git describe --exact-match --tags HEAD; then
     echo "Do not release for commits containings tags"
     exit 0
 fi
