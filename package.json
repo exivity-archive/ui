@@ -35,10 +35,11 @@
     "docs:build": "build-storybook -s docs-public -o docs-static",
     "docs:publish": "git subtree push --prefix docs origin gh-pages",
     "start": "run-p test:watch docs:watch",
-    "build": "yarn build:clean && yarn lib:build && yarn docs:build",
-    "build:clean": "rimraf lib",
-    "lib:build": "tsc --outDir lib",
+    "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
+    "lib:clean": "rimraf lib",
+    "lib:build": "node scripts/build-lib.js",
     "commit": "git-cz",
+    "npm:publish": "bash scripts/publish-npm.sh",
     "release": "bash scripts/release.sh"
   },
   "husky": {
@@ -72,7 +73,7 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{ts,tsx}",
-      "!<rootDir>/src/**/*.stories.ts"
+      "!<rootDir>/src/**/*.stories.{ts,tsx}"
     ]
   },
   "dependencies": {
