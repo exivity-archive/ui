@@ -17,3 +17,9 @@ before_script:
 after_script:
   - codecov
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+deploy:
+  provider: script
+  script: bash release-from-travis.sh
+  on:
+    branch: master
