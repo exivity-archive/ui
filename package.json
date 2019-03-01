@@ -40,6 +40,8 @@
     "lib:build": "node scripts/build-lib.js",
     "commit": "git-cz",
     "npm:publish": "bash scripts/publish-npm.sh",
+    "version:bump": "yarn standard-version --sign",
+    "git:push": "git push --follow-tags origin master",
     "release": "bash scripts/release.sh"
   },
   "husky": {

@@ -38,12 +38,12 @@ yarn build
 # git commit -m "chore: update docs" || true
 
 header "Cut release"
-yarn standard-version --sign
+yarn version:bump
 
 header "Push commit and tag"
-git push --follow-tags origin master
+yarn git:push
 
-header "Publish"
+header "Publish to npm"
 yarn npm:publish
 
 # header "Publish docs"

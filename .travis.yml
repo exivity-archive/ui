@@ -20,7 +20,8 @@ after_script:
 
 deploy:
   provider: script
-  script: bash release-from-travis.sh
+  skip_cleanup: true
+  script: bash scripts/release-from-travis.sh
   on:
     branch: master
     node: "10"
