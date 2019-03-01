@@ -17,13 +17,11 @@ if [[ "$BRANCH" != "master" ]]; then
     exit 1
 fi
 
-header "Copy some root files"
-cp package.json lib
-cp README.md lib
-cp CHANGELOG.md lib
-
 header "Change to lib folder"
-pushd lib
+pushd docs-static
 
-header "Run npm publish"
-npm publish --access=public
+header "Push to GitHub"
+git init
+git add .
+git commit -m "Deploy to Github Pages"
+git push --force "https://${GH_TOKEN}@github.com/exivity/ui.git" master:gh-pages

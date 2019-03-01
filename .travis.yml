@@ -25,7 +25,6 @@ jobs:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
         - ./cc-test-reporter before-build
-        - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
       script: yarn test
       after_script:
         - codecov
@@ -34,6 +33,7 @@ jobs:
       script: yarn docs:build
     - stage: deploy
       name: "npm"
-      node_js: "10"
-      before_script: yarn build
-      script: bash scripts/release-from-travis.sh
+      before_script:
+        - yarn build
+        - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+      script: bash scripts/release-and-publish-from-travis.sh

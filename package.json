@@ -33,7 +33,7 @@
     "test:update": "react-scripts test --update",
     "docs:watch": "start-storybook -p 9009 -s docs-public",
     "docs:build": "build-storybook -s docs-public -o docs-static",
-    "docs:publish": "git subtree push --prefix docs origin gh-pages",
+    "docs:publish": "bash scripts/publish-docs.sh",
     "start": "run-p test:watch docs:watch",
     "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
     "lib:clean": "rimraf lib",
