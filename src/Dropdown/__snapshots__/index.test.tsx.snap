@@ -9,7 +9,7 @@ ShallowWrapper {
         test
       </div>
     }
-    opened={true}
+    open={true}
   >
     test
   </ForwardRef>,
@@ -54,7 +54,7 @@ ShallowWrapper {
         Symbol(Symbol.hasInstance): [Function],
       },
       "forwardedRef": null,
-      "opened": true,
+      "open": true,
     },
     "ref": null,
     "rendered": "test",
@@ -93,7 +93,7 @@ ShallowWrapper {
           Symbol(Symbol.hasInstance): [Function],
         },
         "forwardedRef": null,
-        "opened": true,
+        "open": true,
       },
       "ref": null,
       "rendered": "test",

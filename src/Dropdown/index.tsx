@@ -9,7 +9,7 @@ interface IPosition {
 }
 
 interface IContentProps extends IPosition {
-  opened: boolean
+  open: boolean
 }
 
 const Content = styled.div<IContentProps>`
@@ -19,7 +19,7 @@ const Content = styled.div<IContentProps>`
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   padding: 20px;
   padding-right: 10%;
-  visibility: ${({ opened }) => opened ? 'visible' : 'hidden'};
+  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   ${ ({ left, right, top, bottom }) => css`
     ${typeof left !== 'undefined' && css`
       left: ${left};
@@ -38,8 +38,8 @@ const Content = styled.div<IContentProps>`
   `}
 `
 
-type Vertical = 'to-top' | 'to-bottom'
-type Horizontal = 'to-left' | 'to-right'
+type Vertical = 'top' | 'bottom' | 'auto'
+type Horizontal = 'left' | 'right' | 'auto'
 interface ILayout {
   horizontal: Horizontal
   vertical: Vertical,
@@ -47,54 +47,56 @@ interface ILayout {
 interface IDropdownProps {
   className?: string
   button: React.ReactNode
-  opened: boolean
-  layout?: ILayout | 'auto'
+  open: boolean
+  vertical?: Vertical
+  horizontal?: Horizontal
 }
 
-
-const Dropdown: React.FC<IDropdownProps> = ({ 
-  className, 
-  button, 
-  children, 
-  opened, 
-  layout = 'auto'
+const Dropdown: React.FC<IDropdownProps> = ({
+  className,
+  button,
+  children,
+  open,
+  vertical = 'auto',
+  horizontal = 'auto'
 }) => {
   const ref = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState<IPosition>({})
 
-  const getPosition = (layout: ILayout | 'auto') => {
-    if (layout !== 'auto' && position !== undefined) {
+  const getPosition = () => {
+    if (vertical !== 'auto' && horizontal !== 'auto') {
       return position
     } else if (ref.current) {
       const rect = ref.current.getBoundingClientRect()
       const parentRect = ref.current.parentElement!.getBoundingClientRect()
-      
+
       const makePosition = ({ horizontal, vertical }: ILayout): IPosition => ({
-        [horizontal === 'to-left' ? 'right' : 'left']: 0,
-        [vertical === 'to-top' ? 'bottom' : 'top']: parentRect.height
+        [horizontal === 'left' ? 'right' : 'left']: 0,
+        [vertical === 'top' ? 'bottom' : 'top']: parentRect.height
       })
 
-      if (layout === 'auto') {
-        const breakDistance = 20
-        const closeToBottomBound = parentRect.bottom + rect.height > window.innerHeight - breakDistance
-        const closeToRightBound = parentRect.left + rect.width > window.innerWidth - breakDistance 
+      const breakDistance = 20
+      const layout: Partial<ILayout> = {}
 
-        return makePosition({
-          vertical: closeToBottomBound ? 'to-top' : 'to-bottom', 
-          horizontal: closeToRightBound ? 'to-left' : 'to-right'
-        })
-      } else {
-        return makePosition(layout)
+      if (vertical === 'auto') {
+        const closeToBottomBound = parentRect.bottom + rect.height > window.innerHeight - breakDistance
+        layout.vertical = closeToBottomBound ? 'top' : 'bottom'
       }
+      if (horizontal === 'auto') {
+        const closeToRightBound = parentRect.left + rect.width > window.innerWidth - breakDistance
+        layout.horizontal = closeToRightBound ? 'left' : 'right'
+      }
+
+      return makePosition(layout as ILayout)
     }
     return {}
   }
 
-  const handlePosition = () => setPosition(getPosition(layout))
+  const handlePosition = () => setPosition(getPosition())
 
   useEffect(() => {
-    window.addEventListener('resize', handlePosition)  
-    return () => window.removeEventListener('resize', handlePosition)  
+    window.addEventListener('resize', handlePosition)
+    return () => window.removeEventListener('resize', handlePosition)
   }, [])
 
   useLayoutEffect(handlePosition, [])
@@ -102,11 +104,11 @@ const Dropdown: React.FC<IDropdownProps> = ({
   return (
     <div className={className} data-test='dropdown'>
       {button}
-        <Content 
+        <Content
           data-test='dropdown-content'
           ref={ref}
           {...position}
-          opened={opened}>
+          open={open}>
 
           {children}
         </ Content>
