@@ -1,16 +1,16 @@
-import React from 'react'
 import { mount } from 'enzyme'
+import React from 'react'
 
 import {
-    getVisibleItems,
-    noCollapsedParents,
-    enrichItems,
-    memoizeCreateParentChildrenMap,
-    transformAndOrder,
-    useExpandableList
+  enrichItems,
+  getVisibleItems,
+  memoizeCreateParentChildrenMap,
+  noCollapsedParents,
+  transformAndOrder,
+  useExpandableList
 } from '.'
 
-import { PARENT, CHILDREN } from './helpers'
+import { CHILDREN, PARENT } from './helpers'
 
 const ExpandableList = ({ children, data, accessor, expanded }: any) => {
   return children(useExpandableList<any>(data, accessor, expanded))
@@ -22,7 +22,7 @@ test('useExpandableList with expanded callback', () => {
   const callback = (item: any) => expandedItems.includes(item.key)
 
   const list = [
-    { key: '1' , parentId: null },
+    { key: '1', parentId: null },
     { key: '2', parentId: '1' },
     { key: '3', parentId: '2' },
     { key: '4', parentId: '3' }
@@ -50,19 +50,19 @@ test('useExpandableList expanded boolean set to true', () => {
   let returnData: any[] = []
 
   const list = [
-        { key: '1', parentId: null },
-        { key: '2', parentId: '3' },
-        { key: '3', parentId: '1' },
-        { key: '4', parentId: '2' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '2' }
   ]
 
   mount(
-        <ExpandableList data={list} accessor={(item: any) => item.parentId} expanded>
-            {(data: any) => {
-              returnData = data
-              return null
-            }}
-        </ExpandableList>)
+    <ExpandableList data={list} accessor={(item: any) => item.parentId} expanded>
+      {(data: any) => {
+        returnData = data
+        return null
+      }}
+    </ExpandableList>)
 
   expect(returnData.length).toBe(4)
   returnData.forEach((item) => {
@@ -74,19 +74,19 @@ test('useExpandableList expanded boolean set to false', () => {
   let returnData: any[] = []
 
   const list = [
-        { key: '1', parentId: null },
-        { key: '2', parentId: '3' },
-        { key: '3', parentId: '1' },
-        { key: '4', parentId: '2' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '2' }
   ]
 
   mount(
-        <ExpandableList data={list} accessor={(item: any) => item.parentId}>
-            {(data: any) => {
-              returnData = data
-              return null
-            }}
-        </ExpandableList>)
+    <ExpandableList data={list} accessor={(item: any) => item.parentId}>
+      {(data: any) => {
+        returnData = data
+        return null
+      }}
+    </ExpandableList>)
 
   expect(returnData.length).toBe(1)
   returnData.forEach((item) => {
@@ -98,7 +98,7 @@ test('useExpandableList will not filter items which do no have a parentId', () =
   let returnData: any[] = []
 
   const list = [
-    { key: '1' , parentId: null },
+    { key: '1', parentId: null },
     { key: '2', parentId: '1' },
     { key: 'grouping' },
     { key: '3', parentId: '2' },
@@ -198,7 +198,7 @@ test('enrichItems enriches item from list with expand function', () => {
     four
   ]
 
-  const list = [ ...originalList ]
+  const list = [...originalList]
 
   const items = enrichItems<any>(list, originalList, expandMock)
   items.forEach((item) => {
@@ -223,7 +223,7 @@ test('Expand mock should return a new copy of the original list', () => {
     four
   ]
 
-  const list = [ ...originalList ].slice(0,2)
+  const list = [...originalList].slice(0, 2)
 
   const items = enrichItems<any>(list, originalList, expandMock)
   items[0].expand()
@@ -236,10 +236,10 @@ test('Expand mock should return a new copy of the original list', () => {
 
 test('memoizeCreateParentChildrenMap creates a map by keys', () => {
   const list = [
-        { key: '1' , parentId: null },
-        { key: '2', parentId: '1' },
-        { key: '3', parentId: '2' },
-        { key: '4', parentId: '3' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -252,10 +252,10 @@ test('memoizeCreateParentChildrenMap creates a map by keys', () => {
 
 test('memoizeCreateParentChildrenMap creates a map with a parent reference', () => {
   const list = [
-        { key: '1' , parentId: null },
-        { key: '2', parentId: '1' },
-        { key: '3', parentId: '2' },
-        { key: '4', parentId: '3' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -268,10 +268,10 @@ test('memoizeCreateParentChildrenMap creates a map with a parent reference', () 
 
 test('memoizeCreateParentChildrenMap creates a map with child references', () => {
   const list = [
-        { key: '1' , parentId: null },
-        { key: '2', parentId: '1' },
-        { key: '3', parentId: '2' },
-        { key: '4', parentId: '3' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -284,10 +284,10 @@ test('memoizeCreateParentChildrenMap creates a map with child references', () =>
 
 test('transformAndOrder creates a list from a map', () => {
   const list = [
-        { key: '1' , parentId: null },
-        { key: '2', parentId: '1' },
-        { key: '3', parentId: '2' },
-        { key: '4', parentId: '3' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -298,10 +298,10 @@ test('transformAndOrder creates a list from a map', () => {
 
 test('transformAndOrder orders children directly under their parents', () => {
   const list = [
-        { key: '1' , parentId: null },
-        { key: '2', parentId: '3' },
-        { key: '3', parentId: '1' },
-        { key: '4', parentId: '2' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '2' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -315,10 +315,10 @@ test('transformAndOrder orders children directly under their parents', () => {
 
 test('transformAndOrder extends items with expand attribute', () => {
   const list = [
-        { key: '1', parentId: null },
-        { key: '2', parentId: '3' },
-        { key: '3', parentId: '1' },
-        { key: '4', parentId: '2' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '2' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)
@@ -336,10 +336,10 @@ test('transformAndOrder extends items with expand attribute', () => {
 
 test('transformAndOrder extends items with originalIndex attribute which is result index', () => {
   const list = [
-        { key: '1', parentId: null },
-        { key: '2', parentId: '3' },
-        { key: '3', parentId: '1' },
-        { key: '4', parentId: '2' }
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '2' }
   ]
 
   const map = memoizeCreateParentChildrenMap(list, (item) => item.parentId)

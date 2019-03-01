@@ -13,6 +13,7 @@ const TopLabel = styled.span`
   font-weight: 600;
   color: #444444;
 `
+
 interface ISublabelProps {
   theme: Theme
 }
@@ -40,7 +41,7 @@ const Label: React.FC<ILabelProps> = ({ name, description, children, className }
       <SubLabel theme={theme}>{description}</SubLabel>
     </SubLabelWrapper>
     <LabelContent>
-    {children}
+      {children}
     </LabelContent>
   </div>
 )

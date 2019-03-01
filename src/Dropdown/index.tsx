@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 interface IPosition {
@@ -20,7 +20,7 @@ const Content = styled.div<IContentProps>`
   padding: 20px;
   padding-right: 10%;
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  ${ ({ left, right, top, bottom }) => css`
+  ${({ left, right, top, bottom }) => css`
     ${typeof left !== 'undefined' && css`
       left: ${left};
     `}
@@ -40,6 +40,7 @@ const Content = styled.div<IContentProps>`
 
 type Vertical = 'top' | 'bottom' | 'auto'
 type Horizontal = 'left' | 'right' | 'auto'
+
 interface IDropdownProps {
   className?: string
   button: React.ReactNode
@@ -103,14 +104,14 @@ const Dropdown: React.FC<IDropdownProps> = ({
   return (
     <div className={className} data-test='dropdown' ref={dropdownRef}>
       {button}
-        <Content
-          data-test='dropdown-content'
-          ref={dropdownContentRef}
-          {...position}
-          open={open}>
+      <Content
+        data-test='dropdown-content'
+        ref={dropdownContentRef}
+        {...position}
+        open={open}>
 
-          {children}
-        </ Content>
+        {children}
+      </ Content>
     </div>
   )
 }
