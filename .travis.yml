@@ -1,6 +1,8 @@
 if: tag IS blank
 
-node:
+language: node_js
+
+node_js:
   - "8"
   - "10"
 
@@ -29,6 +31,6 @@ jobs:
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - script: yarn build
     - stage: deploy
-      node: "10"
+      node_js: "10"
       before_script: yarn build
       script: bash scripts/release-from-travis.sh
