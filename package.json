@@ -28,6 +28,7 @@
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
+    "typecheck": "tsc --noEmit",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
     "test:update": "react-scripts test --update",

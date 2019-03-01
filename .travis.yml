@@ -1,28 +1,32 @@
-language: node_js
-
-node_js:
+node:
   - "8"
   - "10"
 
 cache: yarn
 
-install:
-  - yarn add --dev codecov
+stages:
+  - test
+  - name: deploy
+    if: branch = master
 
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
-  - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+install: yarn
 
-after_script:
-  - codecov
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: bash scripts/release-from-travis.sh
-  on:
-    branch: master
-    node: "10"
+jobs:
+  include:
+    - stage: test
+      script: yarn lint
+    - script: yarn typecheck
+    - before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+        - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ./.npmrc
+      script: yarn test
+      after_script:
+        - codecov
+        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+    - script: yarn build
+    - stage: deploy
+      node: "10"
+      before_script: yarn build
+      script: bash scripts/release-from-travis.sh

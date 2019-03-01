@@ -17,8 +17,10 @@ if [[ "$BRANCH" != "master" ]]; then
     exit 1
 fi
 
-header "Copy package.json"
+header "Copy some root files"
 cp package.json lib
+cp README.md lib
+cp CHANGELOG.md lib
 
 header "Change to lib folder"
 pushd lib
