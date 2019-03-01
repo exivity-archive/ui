@@ -60,7 +60,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
   layout = 'auto'
 }) => {
   const ref = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState<IPosition | undefined>()
+  const [position, setPosition] = useState<IPosition>({})
 
   const getPosition = (layout: ILayout | 'auto') => {
     if (layout !== 'auto' && position !== undefined) {
@@ -85,9 +85,9 @@ const Dropdown: React.FC<IDropdownProps> = ({
         })
       } else {
         return makePosition(layout)
-
       }
     }
+    return {}
   }
 
   const handlePosition = () => setPosition(getPosition(layout))
