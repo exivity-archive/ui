@@ -11,7 +11,6 @@ import Label from '../Label'
 
 import { storeAndAction } from '../utils/storeAndAction'
 import Dropdown from '../Dropdown'
-import DropDownButton from '../Dropdown/tempDropdownButton'
 
 export default storiesOf('Input', module)
   .addDecorator(withState('test'))
@@ -46,12 +45,9 @@ storiesOf('Dropdown', module).addDecorator(withState(false)).add('Dropdown', ({ 
   return (
     <div style={{ paddingTop: 300 }}>
       <Dropdown 
-        opened={state}
+        open={state}
         button={
-          <DropDownButton 
-            opened={state} 
-            onClick={() => storeState(!state)} 
-            value="Click me"/>
+          <div onClick={() => storeState(!state)} >Click me</div>
           }>
         <div style={{width: 500}} >
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
