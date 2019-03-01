@@ -31,6 +31,8 @@ Visit [exivity.github.io/ui](https://exivity.github.io/ui/) for more documentati
 Development
 -----------
 
+Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) for your commit messages so automatic releasing actually generates meaningful version numbers.
+
 | command | for |
 |---------|------|
 | yarn start | run storybook and jest in watch mode
