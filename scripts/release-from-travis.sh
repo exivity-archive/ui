@@ -20,12 +20,10 @@ fi
 header "Setup git"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
-git remote set-url origin https://${GH_TOKEN}@github.com/exivity/ui.git > /dev/null 2>&1
+git remote set-url origin https://${GH_TOKEN}@github.com/exivity/ui.git
 
-header "Reset yarn"
-git checkout package.json
-git checkout yarn.lock
-rm cc-test-reporter
+header "Reset git"
+git checkout master
 
 header "Cut release"
 yarn version:bump
