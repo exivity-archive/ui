@@ -4,6 +4,8 @@ const childProcess = require('child_process')
 const original = fs.readFileSync('tsconfig.json')
 const tsconfig = JSON.parse(original.toString())
 
+tsconfig.compilerOptions.allowJs = false
+tsconfig.compilerOptions.isolatedModules = false
 tsconfig.compilerOptions.noEmit = false
 
 fs.writeFileSync('tsconfig.json',
