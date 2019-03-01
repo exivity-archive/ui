@@ -31,6 +31,11 @@ header "Cut release"
 yarn version:bump
 
 header "Push commit and tag"
+git status
+git ls-remote
+git log | cat
+git rev-parse --abbrev-ref HEAD
+
 yarn git:push
 
 header "Publish to npm"
