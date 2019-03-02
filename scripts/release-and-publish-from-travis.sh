@@ -17,6 +17,12 @@ if git describe --exact-match --tags HEAD; then
     exit 0
 fi
 
+header "Check PR build"
+if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
+    echo "Do not release for PR builds"
+    exit 0
+fi
+
 header "Setup git"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Travis CI"
