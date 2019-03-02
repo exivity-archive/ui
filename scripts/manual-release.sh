@@ -46,5 +46,5 @@ yarn git:push
 header "Publish to npm"
 yarn npm:publish
 
-# header "Publish docs"
-# yarn docs:publish
+header "Publish to GitHub Pages"
+yarn docs:publish

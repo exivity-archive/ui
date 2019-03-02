@@ -26,11 +26,11 @@ git checkout master
 header "Cut release"
 yarn version:bump
 
+header "Publish to npm"
+bash scripts/publish-npm.sh
+
 header "Push commit and tag"
 yarn git:push
-
-header "Publish to npm"
-yarn npm:publish
 
 header "Publish to GitHub Pages"
 yarn docs:publish

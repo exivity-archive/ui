@@ -1,6 +1,6 @@
 {
   "name": "@exivity/ui",
-  "version": "0.2.5",
+  "version": "0.2.9",
   "description": "A collection of components to build interfaces",
   "keywords": [
     "exivity",
@@ -20,11 +20,8 @@
     "Stefan Wullems <stefanwullems1998@gmail.com>",
     "Joram van den Boezem <joram@vandenboezem.nl>"
   ],
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
@@ -77,6 +74,9 @@
       "<rootDir>/src/**/*.{ts,tsx}",
       "!<rootDir>/src/**/*.stories.{ts,tsx}"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
