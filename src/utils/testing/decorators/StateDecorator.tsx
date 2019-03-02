@@ -1,5 +1,5 @@
 import React from 'react'
-import StateContainer from './StateContainer'
+import StateContainer from '../StateContainer'
 
 export const withState = (initialState = {}) => (storyFunc: any, context: any) => (
   <StateContainer initialState={initialState}>

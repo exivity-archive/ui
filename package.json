@@ -28,8 +28,8 @@
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
     "test:update": "react-scripts test --update",
-    "docs:watch": "start-storybook -p 9009 -s docs-public",
-    "docs:build": "build-storybook -s docs-public -o docs-static",
+    "docs:watch": "start-storybook -p 9009 -c docs -s docs/public",
+    "docs:build": "build-storybook -c docs -s docs/public -o docs/static",
     "docs:publish": "bash scripts/publish-docs.sh",
     "start": "run-p test:watch docs:watch",
     "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
@@ -120,7 +120,6 @@
     "react-window": "^1.5.2",
     "rimraf": "^2.6.2",
     "standard-version": "^4.4.0",
-    "storybook-addon-styled-component-theme": "^1.1.1",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"

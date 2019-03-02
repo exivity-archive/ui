@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { withState } from '../decorators/StateDecorator'
+import { withState } from '../utils/testing/decorators/StateDecorator'
 
 import TextInput from '../TextInput'
 import Checkbox from '../Checkbox'
 import Label from '../Label'
 
-import { storeAndAction } from '../utils/storeAndAction'
+import { storeAndAction } from '../utils/testing/storeAndAction'
 import Dropdown from '../Dropdown'
 
 export default storiesOf('Input', module)

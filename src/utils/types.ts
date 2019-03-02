@@ -1,3 +1,5 @@
+import { Theme } from '../theme'
+
 export type primitive = string | number | boolean | undefined | null
 
 export type DeepReadonly<T> = T extends primitive ? T : DeepReadonlyObject<T>
@@ -8,4 +10,8 @@ export type DeepReadonlyObject<T> = {
 
 export interface AnyObject<T> {
   [key: string]: T | AnyObject<T>
+}
+
+export interface StyledProps {
+  theme: Theme
 }

@@ -13,7 +13,7 @@ yarn-error.log
 
 # production
 /lib
-/docs-static
+/docs/static
 
 # ide/os
 /.idea
