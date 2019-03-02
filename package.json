@@ -27,7 +27,7 @@
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
-    "test:update": "react-scripts test --update",
+    "test:update": "cross-env CI=true react-scripts test --updateSnapshot",
     "docs:watch": "start-storybook -p 9009 -c docs -s docs/public",
     "docs:build": "build-storybook -c docs -s docs/public -o docs/static",
     "docs:publish": "bash scripts/publish-docs.sh",

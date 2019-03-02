@@ -5,7 +5,7 @@ import { withState } from '../utils/testing/decorators/StateDecorator'
 
 import TextInput from '../TextInput'
 import Checkbox from '../Checkbox'
-import Label from '../Label'
+import Label from '../Label/Label'
 
 import { storeAndAction } from '../utils/testing/storeAndAction'
 import Dropdown from '../Dropdown'
