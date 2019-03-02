@@ -4,7 +4,7 @@ type InitCallback<T, TValue> = ((item: T) => TValue)
 type Set<TValue> = (value: TValue) => void
 type Enriched<TKey extends string, TSet extends string, TValue> = Record<TKey, TValue> & Record<TSet, Set<TValue>>
 
-function addDynamicAttribute<
+function useDynamicAttribute<
   T extends {},
   TKey extends string,
   TSet extends string,
@@ -19,7 +19,7 @@ function addDynamicAttribute<
   }
 
   const [data, setData] = useState(items = items.map((dataItem, i) => {
-    const setAttribute = (newValue: TValue) => {
+    const setAttribute = (newValue: TValue, data: (T & Enriched<TKey, TSet, TValue>)[]) => {
       const newData = [...data]
       const newItem = { ...dataItem, [key]: newValue, [set]: setAttribute }
       newData[i] = newItem as T & Enriched<TKey, TSet, TValue>
@@ -34,4 +34,4 @@ function addDynamicAttribute<
   return data
 }
 
-export default addDynamicAttribute
+export default useDynamicAttribute
