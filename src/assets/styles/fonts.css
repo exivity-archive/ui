@@ -1,31 +1,20 @@
 @font-face {
-    font-family: 'Fira Mono Latin Regular';
+    font-family: 'Fira Mono';
     font-style: normal;
     font-weight: normal;
     src: url('../fonts/fira-mono-v5-latin-regular.ttf');
 }
 
 @font-face {
-    font-family: 'Pt Sans Latin Bold';
+    font-family: 'Pt Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     src: url('../fonts/pt-sans-v8-latin-700.ttf');
 }
 
 @font-face {
-    font-family: 'Pt Sans Latin Regular';
+    font-family: 'Pt Sans';
     font-style: normal;
     font-weight: normal;
     src: url('../fonts/pt-sans-v8-latin-regular.ttf');
 }
-
-@font-face {
-    font-family: 'Pt Sans Latin Light';
-    font-style: normal;
-    font-weight: 200;
-    src: url('../fonts/pt-sans-v8-latin-regular.ttf');
-}
-
-body {
-     font-family: 'Fira Mono Latin Regular';
- }

@@ -1,9 +1,21 @@
 import { DeepReadonly } from './utils/types'
+import './assets/styles/fonts.css'
 
 const theme = {
+  fonts: {
+    custom: {
+      families: [
+        'Fira Mono',
+        'Pt Sans'
+      ],
+      urls: [
+        './assets/styles/fonts.css'
+      ]
+    }
+  },
   global: {
     margin: '20px !default',
-    fontFamily: 'Fira Mono Latin Regular'
+    fontFamily: 'Pt Sans'
   },
   colors: {
     gray: '#aaa',

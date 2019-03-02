@@ -1,7 +1,7 @@
 import memoizeOne from 'memoize-one'
 import { useState } from 'react'
 
-import { createMap, Map } from '../helpers'
+import { createMap, Map } from '../utils'
 
 import { areEqual, CHILDREN, iterateAllChildren, iterateAllParents, IterateItem, PARENT } from './helpers'
 

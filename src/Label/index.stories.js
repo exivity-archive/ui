@@ -2,7 +2,7 @@ import React from 'react'
 import Label from '../Label'
 
 import { storiesOf } from '@storybook/react'
-import { CenterDecorator } from '../decorators/CenterDecorator'
+import { CenterDecorator } from '../utils/testing/decorators/CenterDecorator'
 
 export default storiesOf('Label', module)
   .addDecorator(CenterDecorator)

@@ -1,4 +1,4 @@
-import { MapItem } from '../helpers'
+import { MapItem } from '../utils'
 
 export const PARENT = 'expandable-list-parent'
 export const CHILDREN = 'expandable-list-children'

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { withState } from '../decorators/StateDecorator'
+import { withState } from '../utils/testing/decorators/StateDecorator'
 
 import TextInput from '../TextInput'
 import Checkbox from '../Checkbox'

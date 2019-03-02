@@ -1,14 +1,9 @@
-import { configure } from '@storybook/react'
-import { addDecorator } from '@storybook/react'
-import { withThemesProvider } from 'storybook-addon-styled-component-theme'
-import { FontLoader } from '../src/decorators/FontLoader'
-import { CenterDecorator } from '../src/decorators/CenterDecorator'
-import theme from '../src/theme'
+import { addDecorator, configure } from '@storybook/react'
+import { CenterDecorator } from '../src/utils/testing/decorators/CenterDecorator'
+import { ThemeDecorator } from '../src/utils/testing/decorators/ThemeDecorator'
 
-const themes = [theme]
 addDecorator(CenterDecorator)
-addDecorator(withThemesProvider(themes))
-addDecorator(FontLoader)
+addDecorator(ThemeDecorator)
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.js$/)

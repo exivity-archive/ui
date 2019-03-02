@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import theme, { Theme } from '../theme'
+import { StyledProps } from '../utils/types'
 
 const SubLabelWrapper = styled.div`
   display: flex;
@@ -10,18 +10,15 @@ const SubLabelWrapper = styled.div`
 `
 
 const TopLabel = styled.span`
-  font-weight: 600;
-  color: #444444;
+  font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
+  color: ${(p: StyledProps) => p.theme.colors.dark};
 `
 
-interface ISublabelProps {
-  theme: Theme
-}
-
 const SubLabel = styled.div`
+  font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
   margin-top: 5px;
   font-size: 12px;
-  color: ${(p: ISublabelProps) => p.theme.colors.gray};
+  color: ${(p: StyledProps) => p.theme.colors.gray};
 `
 
 const LabelContent = styled.div`
@@ -38,7 +35,7 @@ const Label: React.FC<ILabelProps> = ({ name, description, children, className }
   <div className={className}>
     <SubLabelWrapper>
       <TopLabel>{name}</TopLabel>
-      <SubLabel theme={theme}>{description}</SubLabel>
+      <SubLabel>{description}</SubLabel>
     </SubLabelWrapper>
     <LabelContent>
       {children}
