@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { useExpandableList } from '../useExpandableList'
-import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
+import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
 const getParent = (item) => item.parentId
 
@@ -20,7 +20,7 @@ const ExpandableList = () => {
 }
 
 export default storiesOf('List hooks', module)
-  .add('useExpandableList', () =>  <ExpandableList/>)
+  .add('useExpandableList', () => <ExpandableList />)
 
 const Item = ({ data, index, style }) => {
   const item = data[index]
@@ -31,7 +31,7 @@ const Item = ({ data, index, style }) => {
       item.expand()
       action('expand')(item)
     }} style={style}>
-      {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') +  String(item.value)}
+      {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') + String(item.value)}
     </div>
   )
 }

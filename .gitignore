@@ -13,8 +13,11 @@ yarn-error.log
 
 # production
 /lib
-/docs-static
+/docs/static
 
 # ide/os
 /.idea
 .DS_Store
+
+# misc
+/src/react-app-env.d.ts

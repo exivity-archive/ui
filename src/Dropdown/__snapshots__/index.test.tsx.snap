@@ -1,12 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label snapshot 1`] = `
+exports[`renders dropdown 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ForwardRef
-    description="Label description"
-    name="Label name"
-  />,
+    button={
+      <div>
+        test
+      </div>
+    }
+    open={true}
+  >
+    test
+  </ForwardRef>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -21,28 +27,26 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "description": "Label description",
+      "button": <div>
+        test
+      </div>,
+      "children": "test",
       "forwardedComponent": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "sc-ifAKCX",
+          "componentId": "sc-bwzfXH",
           "isStatic": true,
           "rules": Array [
             "
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 40px 0;
+  position: relative;
 ",
           ],
         },
-        "displayName": "Styled(Label)",
+        "displayName": "Styled(Dropdown)",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "sc-ifAKCX",
+        "styledComponentId": "sc-bwzfXH",
         "target": [Function],
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -50,10 +54,10 @@ ShallowWrapper {
         Symbol(Symbol.hasInstance): [Function],
       },
       "forwardedRef": null,
-      "name": "Label name",
+      "open": true,
     },
     "ref": null,
-    "rendered": null,
+    "rendered": "test",
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -62,28 +66,26 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "description": "Label description",
+        "button": <div>
+          test
+        </div>,
+        "children": "test",
         "forwardedComponent": Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ifAKCX",
+            "componentId": "sc-bwzfXH",
             "isStatic": true,
             "rules": Array [
               "
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 40px 0;
+  position: relative;
 ",
             ],
           },
-          "displayName": "Styled(Label)",
+          "displayName": "Styled(Dropdown)",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ifAKCX",
+          "styledComponentId": "sc-bwzfXH",
           "target": [Function],
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -91,10 +93,10 @@ ShallowWrapper {
           Symbol(Symbol.hasInstance): [Function],
         },
         "forwardedRef": null,
-        "name": "Label name",
+        "open": true,
       },
       "ref": null,
-      "rendered": null,
+      "rendered": "test",
       "type": [Function],
     },
   ],

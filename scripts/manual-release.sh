@@ -14,7 +14,7 @@ function header {
 header "Current branch is master"
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$BRANCH" != "master" ]]; then
-  exit 1
+    exit 1
 fi
 
 header "Working copy doesn't contain changes"
@@ -38,13 +38,13 @@ yarn build
 # git commit -m "chore: update docs" || true
 
 header "Cut release"
-yarn standard-version --sign
+yarn version:bump
 
 header "Push commit and tag"
-git push --follow-tags origin master
+yarn git:push
 
-header "Publish on NPM"
-npm publish --access public
+header "Publish to npm"
+yarn npm:publish
 
-# header "Publish docs"
-# yarn publish:docs
+header "Publish to GitHub Pages"
+yarn docs:publish
