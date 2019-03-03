@@ -1,63 +1,117 @@
-import useDynamicAttribute from '.'
+import React, { useEffect, useState, Dispatch, SetStateAction } from 'react'
+import useDynamicAttribute, { Enriched } from '.'
+import { mount } from 'enzyme'
+
+interface IData { id: number }
+
+interface ICheckableListProps {
+  data: IData[]
+  children: ((items: (Enriched<IData, 'checked', 'setChecked', boolean>)[], useState: [any, Dispatch<SetStateAction<any>>]) => any)
+  initVal: boolean | ((item: IData) => boolean)
+  initState?: any
+}
+
+const CheckableList: React.FC<ICheckableListProps> = ({ children, data, initVal, initState }) => {
+  const state = typeof initState !== 'undefined' ? useState(initState) : useState(undefined)
+  return children(useDynamicAttribute<IData, 'checked', 'setChecked', boolean>(data, 'checked', 'setChecked', initVal), state)
+}
 
 test('passed in key and setter are defined on enriched data', () => {
-  interface ITest { id: number }
-  const testItems: ITest[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
 
-  const enriched = useDynamicAttribute<ITest, 'checked', 'setChecked', boolean>(testItems, 'checked', 'setChecked', true)
-
-  enriched.forEach((item) => {
-    expect(item.checked).toBe(true)
-    item.setChecked(false)
-    expect(item.setChecked).toHaveBeenCalled()
-  })
+  mount(
+    <CheckableList data={data} initVal={true}>
+      {(items) => {
+        items.forEach((item) => {
+          expect(item.checked).toBe(true)
+          spyOn(item, 'setChecked')
+          item.setChecked(false, items)
+          expect(item.setChecked).toHaveBeenCalled()
+        })
+        return null
+      }}
+    </CheckableList>
+  )
 })
 
 test('returns same amount of items as is passed in', () => {
-  interface ITest { id: number }
-  const testItems: ITest[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
 
-  const enriched = useDynamicAttribute<ITest, 'checked', 'setChecked', boolean>(testItems, 'checked', 'setChecked', true)
-
-  expect(enriched).toHaveLength(testItems.length)
+  mount(
+    <CheckableList data={data} initVal={true}>
+      {(items) => {
+        expect(items).toHaveLength(data.length)
+        return null
+      }}
+    </CheckableList>
+  )
 })
 
 test('once setter is called the value changes to passed in value', () => {
-  interface ITest { id: number }
-  const testItems: ITest[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
 
-  const enriched = useDynamicAttribute<ITest, 'checked', 'setChecked', boolean>(testItems, 'checked', 'setChecked', true)
-  const item = enriched[0]
+  mount(
+    <CheckableList data={data} initVal={true} initState={0}>
+      {(items, [timesRendered, setTimesRendered]) => {
+        const item = items[0]
+        if (timesRendered === 0) {
+          expect(item.checked).toBe(true)
+          item.setChecked(false, items)
+          setTimesRendered(timesRendered + 1)
+        } else {
+          expect(item.checked).toBe(false)
+        }
 
-  expect(item.checked).toBe(true)
-  item.setChecked(false)
-  expect(item.checked).toBe(false)
+        return null
+      }}
+    </CheckableList>
+  )
 })
 
 test('original keys should still be intact', () => {
-  interface ITest { id: number, hasName?: boolean, name?: string }
-  const testItems: ITest[] = [{ id: 1 },{ id: 2, hasName: true, name: 'bas' }, { id: 3, hasName: false }]
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
 
-  const enriched = useDynamicAttribute<ITest, 'checked', 'setChecked', boolean>(testItems, 'checked', 'setChecked', true)
+  mount(
+    <CheckableList data={data} initVal={true}>
+      {(items) => {
+        items.forEach(item => {
+          expect(item).toHaveProperty('id')
+        })
 
-  expect(enriched[0]).toHaveProperty('id', 1)
-
-  expect(enriched[1]).toHaveProperty('id', 2)
-  expect(enriched[1]).toHaveProperty('hasName', true)
-  expect(enriched[1]).toHaveProperty('name', 'bas')
-
-  expect(enriched[2]).toHaveProperty('id', 3)
-  expect(enriched[2]).toHaveProperty('hasName', false)
+        return null
+      }}
+    </CheckableList>
+  )
 })
 
 test('the returned array should have the same order', () => {
-  interface ITest { id: number }
-  const ids = [1, 2, 3]
-  const testItems: ITest[] = ids.map(n => ({ id: n }))
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
+  mount(
+    <CheckableList data={data} initVal={true}>
+      {(items) => {
+        expect(items[0]).toHaveProperty('id', 1)
+        expect(items[1]).toHaveProperty('id', 2)
+        expect(items[2]).toHaveProperty('id', 3)
 
-  const enriched = useDynamicAttribute<ITest, 'checked', 'setChecked', boolean>(testItems, 'checked', 'setChecked', true)
+        return null
+      }}
+    </CheckableList>
+  )
+})
 
-  ids.forEach((_, i) => {
-    expect(testItems[i].id).toEqual(enriched[i].id)
-  })
+test('init val can be a function that returns the initial state', () => {
+  const data: IData[] = [{ id: 1 },{ id: 2 }, { id: 3 }]
+  mount(
+    <CheckableList data={data} initVal={(item: IData) => {
+      return item.id % 2 === 0
+    }}>
+      {(items) => {
+        expect(items[0]).toHaveProperty('checked', false)
+        expect(items[1]).toHaveProperty('checked', true)
+        expect(items[2]).toHaveProperty('checked', false)
+
+        return null
+      }}
+    </CheckableList>
+  )
 })

@@ -50,9 +50,9 @@ const ExpandableItem = ({ data, index, style }) => {
 
 const CheckableItem = ({ data, index, style }) => {
   const item = data[index]
-  console.log(index, item.checked)
   return (
-    <div key={index}>
+    <div key={index} style={style}>
+    item {index}
       <input type='checkbox' checked={item.checked} onChange={(e) => item.setChecked(e.target.checked, data)}></input>
     </div>
   )

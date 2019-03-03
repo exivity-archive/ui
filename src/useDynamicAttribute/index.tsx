@@ -1,37 +1,40 @@
 import React, { useState } from 'react'
 
-type InitCallback<T, TValue> = ((item: T) => TValue)
-type Set<TValue> = (value: TValue) => void
-type Enriched<TKey extends string, TSet extends string, TValue> = Record<TKey, TValue> & Record<TSet, Set<TValue>>
+type Enrichment<T, TKey extends string, TSet extends string, TValue> =
+  & Record<TKey, TValue>
+  & Record<TSet, (value: TValue, data: (T & Enrichment<T, TKey, TSet, TValue>)[]) => void>
+
+export type Enriched<T, TKey extends string, TSet extends string, TValue> = T & Enrichment<T, TKey, TSet, TValue>
 
 function useDynamicAttribute<
   T extends {},
   TKey extends string,
   TSet extends string,
   TValue
-> (items: T[], key: TKey, set: TSet, initVal: InitCallback<T, TValue> | TValue): (T & Enriched<TKey, TSet, TValue>)[] {
+> (items: T[], key: TKey, set: TSet, initVal: (((item: T) => TValue)) | TValue): (T & Enrichment<T, TKey, TSet, TValue>)[] {
+  type Data = (T & Enrichment<T, TKey, TSet, TValue>)
 
   function getInitialState (item: T) {
     if (typeof initVal !== 'function') {
       return initVal
     }
-    return (initVal as InitCallback<T, TValue>)(item)
+    return (initVal as ((item: T) => TValue))(item)
   }
 
   const [data, setData] = useState(items = items.map((dataItem, i) => {
-    const setAttribute = (newValue: TValue, data: (T & Enriched<TKey, TSet, TValue>)[]) => {
+    const setAttribute = (newValue: TValue, data: Data[]) => {
       const newData = [...data]
       const newItem = { ...dataItem, [key]: newValue, [set]: setAttribute }
-      newData[i] = newItem as T & Enriched<TKey, TSet, TValue>
+      newData[i] = newItem as Data
       setData(newData)
     }
     const enrichment = { [key]: getInitialState(dataItem), [set]: setAttribute }
     return {
       ...dataItem,
-      ...(enrichment as Enriched<TKey, TSet, TValue>)
+      ...enrichment
     }
   }))
-  return data
+  return data as (T & Enrichment<T, TKey, TSet, TValue>)[]
 }
 
 export default useDynamicAttribute
