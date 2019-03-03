@@ -3,21 +3,23 @@ import { DeepReadonly } from '../utils/types'
 
 export const BASE_SIZE = 16
 
-export const PURPOSE_PRIMARY = 'primary'
-export const PURPOSE_SECONDARY = 'secondary'
-export const PURPOSE_SUCCESS = 'success'
-export const PURPOSE_DANGER = 'danger'
+export enum PURPOSES {
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  SUCCESS = 'success',
+  DANGER = 'danger'
+}
 
 const palette = {
   black: '#000',
   dark: '#222',
-  gray: '#777',
+  gray: '#999',
   lightGray: '#eee',
   white: '#fff',
   blue: '#00a8d8',
-  red: '#c33c32',
+  red: '#ef5350',
   yellow: '#fff68c',
-  green: '#238e47'
+  green: '#4caf50'
 }
 
 const theme = {
@@ -32,7 +34,7 @@ const theme = {
     google: {
       families: [
         'Fira Mono:400',
-        'Fira Sans Condensed:300,500',
+        'Fira Sans Condensed:500',
         'Fira Sans:400,600'
       ]
     }
@@ -40,22 +42,24 @@ const theme = {
   global: {
     baseSize: BASE_SIZE,
     fontFamily: `'Fira Sans', sans-serif`,
+    fontFamilyCompact: `'Fira Sans Condensed', sans-serif`,
+    fontFamilyMonospace: `'Fira Mono', monospace`,
     textColor: palette.dark,
-    textColorMuted: palette.gray,
+    textColorMuted: palette.lightGray,
     lineHeight: 1.5,
     borderRadius: '4px',
     borderWidth: '1px',
     outlineWidth: '4px',
-    spacing: '1em',
+    spacing: preciseEm(1.25), // 20px
     purposes: {
-      [PURPOSE_PRIMARY]: palette.blue,
-      [PURPOSE_SECONDARY]: palette.black,
-      [PURPOSE_SUCCESS]: palette.green,
-      [PURPOSE_DANGER]: palette.red
+      [PURPOSES.PRIMARY]: palette.blue,
+      [PURPOSES.SECONDARY]: palette.gray,
+      [PURPOSES.SUCCESS]: palette.green,
+      [PURPOSES.DANGER]: palette.red
     },
     sizes: {
-      small: preciseEm(0.85),
-      large: preciseEm(1.2)
+      small: preciseEm(0.85), // 14px
+      large: preciseEm(1.2) // 18px
     }
   },
   colours: {

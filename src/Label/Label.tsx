@@ -1,9 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Button from '../Button/Button'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, globalFont } from '../utils/theme'
-import { StyledProps } from '../utils/types'
+import { fromTheme, globalFont, StyledProps } from '../utils/theme'
 
 interface LabelProps extends StyledProps {
   secondary?: boolean
