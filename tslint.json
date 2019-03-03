@@ -4,8 +4,6 @@
     "tslint-config-standard"
   ],
   "jsRules": {},
-  "rules": {
-    "quotemark": [true, "single"]
-  },
+  "rules": {},
   "rulesDirectory": []
 }

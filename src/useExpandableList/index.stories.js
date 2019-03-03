@@ -14,7 +14,7 @@ const ExpandableList = () => {
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
-      {ExpandableItem}
+      {Item}
     </FixedSizeList>
   )
 }
@@ -22,7 +22,7 @@ const ExpandableList = () => {
 export default storiesOf('List hooks', module)
   .add('useExpandableList', () => <ExpandableList />)
 
-const ExpandableItem = ({ data, index, style }) => {
+const Item = ({ data, index, style }) => {
   const item = data[index]
   const space = new Array(item.attributes.level)
 

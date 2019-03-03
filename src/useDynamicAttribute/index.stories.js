@@ -12,7 +12,7 @@ const CheckableList = () => {
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
-      {CheckableItem}
+      {Item}
     </FixedSizeList>
   )
 }
@@ -20,7 +20,7 @@ const CheckableList = () => {
 export default storiesOf('List hooks', module)
   .add('useDynamicAttribute', () => <CheckableList />)
 
-const CheckableItem = ({ data, index, style }) => {
+const Item = ({ data, index, style }) => {
   const item = data[index]
   return (
     <div key={index} style={style}>
