@@ -34,7 +34,6 @@ const theme = {
     google: {
       families: [
         'Fira Mono:400',
-        'Fira Sans Condensed:500',
         'Fira Sans:400,600'
       ]
     }
@@ -42,10 +41,9 @@ const theme = {
   global: {
     baseSize: BASE_SIZE,
     fontFamily: `'Fira Sans', sans-serif`,
-    fontFamilyCompact: `'Fira Sans Condensed', sans-serif`,
     fontFamilyMonospace: `'Fira Mono', monospace`,
     textColor: palette.dark,
-    textColorMuted: palette.lightGray,
+    textColorMuted: palette.gray,
     lineHeight: 1.5,
     borderRadius: '4px',
     borderWidth: '1px',
