@@ -6,7 +6,7 @@ type Enrichment<T, TKey extends string, TSet extends string, TValue> =
 
 export type Enriched<T, TKey extends string, TSet extends string, TValue> = T & Enrichment<T, TKey, TSet, TValue>
 
-function useDynamicAttribute<
+export function useDynamicAttribute<
   T extends {},
   TKey extends string,
   TSet extends string,
@@ -36,5 +36,3 @@ function useDynamicAttribute<
   }))
   return data as (T & Enrichment<T, TKey, TSet, TValue>)[]
 }
-
-export default useDynamicAttribute

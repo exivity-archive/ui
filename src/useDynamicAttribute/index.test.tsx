@@ -1,19 +1,25 @@
-import React, { useEffect, useState, Dispatch, SetStateAction } from 'react'
-import useDynamicAttribute, { Enriched } from '.'
+import React, { useState, Dispatch, SetStateAction } from 'react'
+import { useDynamicAttribute, Enriched } from '.'
 import { mount } from 'enzyme'
 
 interface IData { id: number }
 
 interface ICheckableListProps {
   data: IData[]
-  children: ((items: (Enriched<IData, 'checked', 'setChecked', boolean>)[], useState: [any, Dispatch<SetStateAction<any>>]) => any)
+  children: (
+    items: Enriched<IData, 'checked', 'setChecked', boolean>[],
+    useState: [any, Dispatch<SetStateAction<any>>]
+  ) => any
   initVal: boolean | ((item: IData) => boolean)
   initState?: any
 }
 
 const CheckableList: React.FC<ICheckableListProps> = ({ children, data, initVal, initState }) => {
   const state = typeof initState !== 'undefined' ? useState(initState) : useState(undefined)
-  return children(useDynamicAttribute<IData, 'checked', 'setChecked', boolean>(data, 'checked', 'setChecked', initVal), state)
+  return children(
+    useDynamicAttribute<IData, 'checked', 'setChecked', boolean>(data, 'checked', 'setChecked', initVal),
+    state
+  )
 }
 
 test('passed in key and setter are defined on enriched data', () => {

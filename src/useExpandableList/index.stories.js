@@ -5,12 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { useExpandableList } from '../useExpandableList'
-<<<<<<< HEAD:src/stories/flatlist.js
-import { FLAT_LIST_TEST_DATA } from './Faker/flatlist'
-import useDynamicAttribute from '../useDynamicAttribute';
-=======
 import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
->>>>>>> master:src/useExpandableList/index.stories.js
 
 const getParent = (item) => item.parentId
 
@@ -24,23 +19,8 @@ const ExpandableList = () => {
   )
 }
 
-const CheckableList = () => {
-  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', true) 
-
-  return (
-    <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
-      {CheckableItem}
-    </FixedSizeList>
-  )
-}
-
 export default storiesOf('List hooks', module)
-<<<<<<< HEAD:src/stories/flatlist.js
-  .add('useExpandableList', () =>  <ExpandableList/>)
-  .add('useDynamicAttribute', () => <CheckableList/>)
-=======
   .add('useExpandableList', () => <ExpandableList />)
->>>>>>> master:src/useExpandableList/index.stories.js
 
 const ExpandableItem = ({ data, index, style }) => {
   const item = data[index]
@@ -52,16 +32,6 @@ const ExpandableItem = ({ data, index, style }) => {
       action('expand')(item)
     }} style={style}>
       {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') + String(item.value)}
-    </div>
-  )
-}
-
-const CheckableItem = ({ data, index, style }) => {
-  const item = data[index]
-  return (
-    <div key={index} style={style}>
-    item {index}
-      <input type='checkbox' checked={item.checked} onChange={(e) => item.setChecked(e.target.checked, data)}></input>
     </div>
   )
 }
