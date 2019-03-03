@@ -12,7 +12,7 @@ const LabelWrapper = styled.div`
 
 const TopLabel = styled.div`
   font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
-  color: ${(p: StyledProps) => p.theme.colors.dark};
+  color: ${(p: StyledProps) => p.theme.colours.dark};
 `
 TopLabel.defaultProps = defaultStyledProps
 
@@ -20,7 +20,7 @@ const SubLabel = styled.div`
   font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
   margin-top: 5px;
   font-size: 12px;
-  color: ${(p: StyledProps) => p.theme.colors.gray};
+  color: ${(p: StyledProps) => p.theme.colours.gray};
 `
 SubLabel.defaultProps = defaultStyledProps
 

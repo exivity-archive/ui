@@ -1,5 +1,24 @@
-import { DeepReadonly } from './utils/types'
 import './assets/styles/fonts.css'
+import { DeepReadonly } from './utils/types'
+
+export const BASE_SIZE = 16
+
+const PURPOSE_PRIMARY = 'primary'
+const PURPOSE_SECONDARY = 'secondary'
+const PURPOSE_SUCCESS = 'success'
+const PURPOSE_DANGER = 'danger'
+
+const palette = {
+  black: '#000',
+  dark: '#222',
+  gray: '#777',
+  lightGray: '#eee',
+  white: '#fff',
+  blue: '#00a8d8',
+  red: '#c33c32',
+  yellow: '#fff68c',
+  green: '#238e47'
+}
 
 const theme = {
   fonts: {
@@ -14,29 +33,26 @@ const theme = {
     }
   },
   global: {
-    margin: '20px !default',
-    fontFamily: 'Pt Sans'
+    fontFamily: 'Pt Sans',
+    textColor: palette.dark,
+    lineHeight: 1.5,
+    borderRadius: '4px',
+    borderWidth: '1px',
+    outlineWidth: '4px',
+    spacing: '1em',
+    purposes: {
+      [PURPOSE_PRIMARY]: palette.blue,
+      [PURPOSE_SECONDARY]: palette.black,
+      [PURPOSE_SUCCESS]: palette.green,
+      [PURPOSE_DANGER]: palette.red
+    },
+    sizes: {
+      small: '0.8em',
+      large: '1.4em'
+    }
   },
-  colors: {
-    gray: '#aaa',
-    black: '#000',
-    darker: '#222',
-    dark: '#2e2e2e',
-    kindadarkish: '#444',
-    darkish: '#777',
-    grayish: '#ccc',
-    silver: '#e2e2e2',
-    silverish: '#eee',
-    light: '#f4f4f4',
-    white: '#fff',
-    darkblue: '#438dc7',
-    blue: '#00a8d8',
-    lightblue: '#5cccea',
-    lighterblue: '#ccf4ff',
-    lightestblue: '#e6f9ff',
-    red: '#c33c32',
-    yellow: '#fff68c',
-    green: '#238e47'
+  colours: {
+    ...palette
   }
 }
 

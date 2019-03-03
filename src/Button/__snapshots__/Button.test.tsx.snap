@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders basic button 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 33%;
+  min-width: 250px;
+}
+
+.c1 {
+  font-family: Pt Sans;
+  color: #2e2e2e;
+}
+
+.c2 {
+  font-family: Pt Sans;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+<button
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+</button>
+`;
+
+exports[`renders large button 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 33%;
+  min-width: 250px;
+}
+
+.c1 {
+  font-family: Pt Sans;
+  color: #2e2e2e;
+}
+
+.c2 {
+  font-family: Pt Sans;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+<button
+  className="c0"
+>
+  <div
+    className="c1"
+  />
+  <div
+    className="c2"
+  />
+</button>
+`;
