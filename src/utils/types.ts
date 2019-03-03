@@ -1,4 +1,4 @@
-import { Theme } from '../theme'
+import { Theme } from '../defaultTheme/theme'
 
 export type primitive = string | number | boolean | undefined | null
 

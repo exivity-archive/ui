@@ -1,12 +1,12 @@
-import './assets/styles/fonts.css'
-import { DeepReadonly } from './utils/types'
+import { preciseEm } from '../utils/theme/isolated'
+import { DeepReadonly } from '../utils/types'
 
 export const BASE_SIZE = 16
 
-const PURPOSE_PRIMARY = 'primary'
-const PURPOSE_SECONDARY = 'secondary'
-const PURPOSE_SUCCESS = 'success'
-const PURPOSE_DANGER = 'danger'
+export const PURPOSE_PRIMARY = 'primary'
+export const PURPOSE_SECONDARY = 'secondary'
+export const PURPOSE_SUCCESS = 'success'
+export const PURPOSE_DANGER = 'danger'
 
 const palette = {
   black: '#000',
@@ -23,18 +23,25 @@ const palette = {
 const theme = {
   fonts: {
     custom: {
-      families: [
-        'Fira Mono',
-        'Pt Sans'
-      ],
+      families: [],
       urls: [
-        './assets/styles/fonts.css'
+        // Optional
+        // 'font/stylesheet.css'
+      ]
+    },
+    google: {
+      families: [
+        'Fira Mono:400',
+        'Fira Sans Condensed:300,500',
+        'Fira Sans:400,600'
       ]
     }
   },
   global: {
-    fontFamily: 'Pt Sans',
+    baseSize: BASE_SIZE,
+    fontFamily: `'Fira Sans', sans-serif`,
     textColor: palette.dark,
+    textColorMuted: palette.gray,
     lineHeight: 1.5,
     borderRadius: '4px',
     borderWidth: '1px',
@@ -47,8 +54,8 @@ const theme = {
       [PURPOSE_DANGER]: palette.red
     },
     sizes: {
-      small: '0.8em',
-      large: '1.4em'
+      small: preciseEm(0.85),
+      large: preciseEm(1.2)
     }
   },
   colours: {

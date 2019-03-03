@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 // @ts-ignore
 import WebfontLoader from '@dr-kobros/react-webfont-loader'
 
-import mainTheme, { Theme } from '../theme'
+import mainTheme, { Theme } from '../defaultTheme/theme'
 
 interface ThemeAndFontProviderProps {
   theme?: Theme

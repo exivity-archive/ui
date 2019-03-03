@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { fromTheme, hexToString, matchThemeProp, preciseRm } from '../utils/theme'
+import defaultStyledProps from '../utils/testing/defaultStyledProps'
+import { fromTheme, hexToString, matchThemeProp } from '../utils/theme'
+import { preciseEm } from '../utils/theme/isolated'
 import { StyledProps } from '../utils/types'
 
 export interface ButtonProps extends StyledProps {
@@ -34,7 +36,7 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   min-width: 2.5em;
   height: 2.5em;
-  padding: 0 ${preciseRm(1.2)}em;
+  padding: 0 ${preciseEm(1.2)}em;
   border: none;
   border-radius: ${fromTheme(theme => theme.global.borderRadius)};
   flex: none;
@@ -96,5 +98,7 @@ export const Button = styled.button<ButtonProps>`
     }
   `}
 `
+
+Button.defaultProps = defaultStyledProps
 
 export default Button

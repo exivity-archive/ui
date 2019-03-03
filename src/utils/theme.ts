@@ -1,8 +1,17 @@
 import color from 'color'
-import { BASE_SIZE, Theme } from '../theme'
+import { css } from 'styled-components'
+import { Theme } from '../defaultTheme/theme'
 import { StyledProps } from './types'
 
 type ThemeResolver = (theme: Theme) => any
+
+export const globalFont = css`
+  font-family: ${(props: StyledProps) => props.theme.global.fontFamily};
+  font-weight: normal;
+  font-size: ${(props: StyledProps) => props.theme.global.baseSize}px;
+  color: ${(props: StyledProps) => props.theme.global.textColor};
+  line-height: ${(props: StyledProps) => props.theme.global.lineHeight};
+`
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
   return themeResolver(props.theme)
@@ -22,10 +31,4 @@ export const hexToString = (hex: string) => {
   } catch (err) {
     return '0, 0, 0'
   }
-}
-
-export const preciseRm = (fraction: number, size = BASE_SIZE) => {
-  const rounded = Math.round(size * fraction)
-
-  return rounded / size
 }
