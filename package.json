@@ -1,6 +1,6 @@
 {
   "name": "@exivity/ui",
-  "version": "0.2.2",
+  "version": "0.2.11",
   "description": "A collection of components to build interfaces",
   "keywords": [
     "exivity",
@@ -20,25 +20,25 @@
     "Stefan Wullems <stefanwullems1998@gmail.com>",
     "Joram van den Boezem <joram@vandenboezem.nl>"
   ],
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
-    "test:update": "react-scripts test --update",
-    "docs:watch": "start-storybook -p 9009 -s docs-public",
-    "docs:build": "build-storybook -s docs-public -o docs-static",
-    "docs:publish": "git subtree push --prefix docs origin gh-pages",
+    "test:update": "cross-env CI=true react-scripts test --updateSnapshot",
+    "docs:watch": "start-storybook -p 9009 -c docs -s docs/public",
+    "docs:build": "build-storybook -c docs -s docs/public -o docs/static",
+    "docs:publish": "bash scripts/publish-docs.sh",
     "start": "run-p test:watch docs:watch",
-    "build": "yarn build:clean && yarn lib:build && yarn docs:build",
-    "build:clean": "rimraf lib",
-    "lib:build": "tsc --outDir lib",
+    "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
+    "lib:clean": "rimraf lib",
+    "lib:build": "node scripts/build-lib.js",
     "commit": "git-cz",
+    "npm:publish": "bash scripts/publish-npm.sh",
+    "version:bump": "yarn standard-version",
+    "git:push": "git push --follow-tags origin master",
     "release": "bash scripts/release.sh"
   },
   "husky": {
@@ -72,8 +72,11 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{ts,tsx}",
-      "!<rootDir>/src/**/*.stories.ts"
+      "!<rootDir>/src/**/*.stories.{ts,tsx}"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
@@ -98,6 +101,7 @@
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/styled-components": "^4.1.10",
     "babel-loader": "^8.0.5",
+    "codecov": "^3.2.0",
     "commitizen": "^3.0.7",
     "cross-env": "^5.2.0",
     "cz-conventional-changelog": "2.1.0",
@@ -116,8 +120,7 @@
     "react-window": "^1.5.2",
     "rimraf": "^2.6.2",
     "standard-version": "^4.4.0",
-    "storybook-addon-styled-component-theme": "^1.1.1",
-    "tslint": "^5.13.1",
+    "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"
   },

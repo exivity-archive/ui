@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions'
-import { SetStateAction } from 'react';
+import { SetStateAction } from 'react'
 
 export const storeAndAction = (storeState: SetStateAction<any>, label: string, newValue?: any) => {
   return (callbackValue: any) => {

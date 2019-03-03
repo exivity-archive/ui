@@ -1,19 +1,39 @@
+if: tag IS blank
+
 language: node_js
 
-node_js:
-  - "8"
-  - "10"
+node_js: "10"
 
 cache: yarn
 
-install:
-  - yarn add --dev codecov
+stages:
+  - test
+  - name: deploy
+    if: branch = master
 
-before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+install: yarn
 
-after_script:
-  - codecov
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+jobs:
+  include:
+    - stage: test
+      name: "lint"
+      script: yarn lint
+    - name: "typecheck"
+      script: yarn lib:build
+    - name: "test"
+      before_script:
+        - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+        - chmod +x ./cc-test-reporter
+        - ./cc-test-reporter before-build
+      script: yarn test
+      after_script:
+        - codecov
+        - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+    - name: "docs"
+      script: yarn docs:build
+    - stage: deploy
+      name: "release & publish"
+      before_script:
+        - yarn build
+        - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ./.npmrc
+      script: bash scripts/release-and-publish-from-travis.sh
