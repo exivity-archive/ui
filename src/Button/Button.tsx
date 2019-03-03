@@ -47,17 +47,17 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${matchThemeProp(theme => theme.global.purposes)};
 
   &:hover {
-    box-shadow: inset 10px 10px 999em ${fromTheme(theme => theme.colours.gray)};
+    box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);
   }
 
   &:focus {
-    box-shadow: inset 0 0 999em ${fromTheme(theme => theme.colours.gray)},
+    box-shadow: inset 0 0 999em rgba(0,0,0,0.15),
       0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
   }
 
   &:active,
   &.active {
-    box-shadow: inset 0 0 999em ${fromTheme(theme => theme.colours.lightGray)},
+    box-shadow: inset 0 0 999em rgba(0,0,0,0.3),
       0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
   }
 
