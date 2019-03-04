@@ -13,5 +13,7 @@ exclude_patterns:
   - "scripts/"
   - "tests/"
   - "**/*.d.ts"
+  - "**/__stories__/"
+  - "**/__tests__/"
   - "**/*.stories.*"
   - "**/*.test.*"
