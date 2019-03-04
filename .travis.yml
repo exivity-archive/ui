@@ -29,6 +29,8 @@ jobs:
       after_script:
         - codecov
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+    - name: "smoke"
+      script: yarn test:smoke
     - name: "docs"
       script: yarn docs:build
     - stage: deploy

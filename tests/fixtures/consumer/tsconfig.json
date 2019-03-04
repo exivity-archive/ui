@@ -6,27 +6,20 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "esnext",
-    "outDir": "lib",
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "declaration": true,
-    "jsx": "react",
+    "isolatedModules": true,
     "noEmit": true,
-    "allowJs": false,
-    "isolatedModules": true
+    "jsx": "preserve"
   },
   "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts*",
-    "**/*.stories.ts*"
+    "src"
   ]
 }

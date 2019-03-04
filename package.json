@@ -27,6 +27,7 @@
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
+    "test:smoke": "bash scripts/run-smoke-test.sh",
     "test:update": "cross-env CI=true react-scripts test --updateSnapshot",
     "docs:watch": "start-storybook -p 9009 -c docs -s docs/public",
     "docs:build": "build-storybook -c docs -s docs/public -o docs/static",
