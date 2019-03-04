@@ -25,16 +25,3 @@ export function iterateAllChildren (item: IterateItem, callback: Function) {
     })
   }
 }
-
-export const areEqual = (newArgs: any, oldArgs: any) => {
-  const newData = newArgs[0]
-  const oldData = oldArgs[0]
-  const newExpanded = newArgs[2]
-  const oldExpanded = oldArgs[2]
-
-  if (newData !== oldData || newExpanded !== oldExpanded) {
-    return false
-  }
-
-  return true
-}

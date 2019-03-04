@@ -80,7 +80,6 @@
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
-    "memoize-one": "^5.0.0",
     "styled-components": "^4.1.3"
   },
   "devDependencies": {
