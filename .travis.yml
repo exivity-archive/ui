@@ -18,7 +18,7 @@ jobs:
     - stage: test
       name: "lint"
       script: yarn lint
-    - name: "typecheck"
+    - name: "build"
       script: yarn lib:build
     - name: "test"
       before_script:
@@ -30,6 +30,7 @@ jobs:
         - codecov
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - name: "smoke"
+      before_script: yarn lib:build
       script: yarn test:smoke
     - name: "docs"
       script: yarn docs:build
