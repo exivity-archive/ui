@@ -1,14 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, hexToString, matchThemeProp } from '../utils/theme'
+import { fromTheme, hexToString, matchThemeProp, StyledProps } from '../utils/theme'
 import { preciseEm } from '../utils/theme/isolated'
-import { StyledProps } from '../utils/types'
+import Icon from '../Icon'
 
 export interface ButtonProps extends StyledProps {
-  // Internal props
-  colour?: string
-
   // Purposes
   primary?: boolean
   secondary?: boolean
@@ -24,9 +21,15 @@ export interface ButtonProps extends StyledProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  font-family: ${fromTheme(theme => theme.global.fontFamily)};
-  font-weight: bold;
-  font-size: ${matchThemeProp(theme => theme.global.sizes)};
+  font-family: ${fromTheme(theme => theme.global.fontFamilyCompact)};
+  font-weight: 500;
+  font-size: ${matchThemeProp(theme => theme.global.sizes, {
+    modifier: (em: number) => em * 16,
+    defaultValue: 16
+  })}px;
+  color: ${fromTheme(theme => theme.colours.white)};
+  line-height: ${fromTheme(theme => theme.global.lineHeight)};
+
   text-transform: uppercase;
   display: inline-flex;
   position: relative;
@@ -45,7 +48,7 @@ export const Button = styled.button<ButtonProps>`
   text-decoration: none;
   outline: none;
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, hexToString)};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
   background-color: ${matchThemeProp(theme => theme.global.purposes)};
 
   &:hover {
@@ -84,21 +87,28 @@ export const Button = styled.button<ButtonProps>`
 
   ${props => props.outlined && css`
     background-color: ${fromTheme(theme => theme.colours.white)};
-    color: ${fromTheme(theme => theme.colours.black)};
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.colours.blue)};
+    color: ${matchThemeProp(theme => theme.global.purposes)};
+    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)};
 
     &:hover {
-      color: ${fromTheme(theme => theme.colours.white)};
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.colours.gray)};
+      color: ${fromTheme(theme => theme.global.textColor)};
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.global.textColor)};
     }
 
     &:focus {
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.colours.black)},
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)},
        0 0 0 5px rgba(var(--focus-color), 0.3);
     }
   `}
+
+  ${Icon} {
+    margin-right: ${fromTheme(theme => theme.global.spacing / 2)}em;
+  }
 `
 
-Button.defaultProps = defaultStyledProps
+Button.defaultProps = {
+  ...defaultStyledProps,
+  primary: true
+}
 
 export default Button
