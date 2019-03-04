@@ -1,4 +1,8 @@
 version: "2"
+checks:
+  similar-code:
+    config:
+      threshold: 200
 plugins:
   tslint:
     enabled: true
