@@ -7,12 +7,17 @@ test('renders label without props', () => {
   expect(button.toJSON()).toMatchSnapshot()
 })
 
-test('renders label with name and description', () => {
-  const button = renderer.create(<Label name='Label name' description='Label description' />)
+test('renders label with text', () => {
+  const button = renderer.create(<Label>label</Label>)
   expect(button.toJSON()).toMatchSnapshot()
 })
 
-test('renders label with content', () => {
-  const button = renderer.create(<Label>Label content</Label>)
+test('renders secondary label', () => {
+  const button = renderer.create(<Label secondary>secondary</Label>)
+  expect(button.toJSON()).toMatchSnapshot()
+})
+
+test('renders nested label', () => {
+  const button = renderer.create(<Label>primary<Label>secondary</Label></Label>)
   expect(button.toJSON()).toMatchSnapshot()
 })

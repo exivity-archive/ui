@@ -1,12 +1,12 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Theme } from '../theme'
+import { Theme } from '../defaultTheme/theme'
 
 const WidgetTitle = styled.h4`
   letter-spacing: -0.025em;
   font-weight: 700;
   font-size: 22px;
-  color: ${props => props.theme.colors.blue};
+  color: ${props => props.theme.colours.blue};
 `
 
 interface IWidgetSubTitleProps {
@@ -14,7 +14,7 @@ interface IWidgetSubTitleProps {
 }
 
 const WidgetSubTitle = styled.span`
-  color: ${(props: IWidgetSubTitleProps) => props.theme.colors.gray};
+  color: ${(props: IWidgetSubTitleProps) => props.theme.colours.gray};
   font-size: 0.8em;
   padding-left: 10px;
   font-weight: 500;
