@@ -5,7 +5,7 @@ import { fromTheme, globalFont, hexToString, matchThemeProp, StyledProps } from 
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, StyledProps {
   value: string
-  onChange: ((value: string) => void) & ((event: ChangeEvent<HTMLInputElement>) => void)
+  onChange: ((value: string) => void) | any
 
   outlined?: boolean
 
