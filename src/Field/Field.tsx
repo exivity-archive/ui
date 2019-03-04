@@ -1,53 +1,62 @@
-import PropTypes from 'prop-types'
 import * as React from 'react'
-import styled, { StyledComponent } from 'styled-components'
+import styled, { css, StyledComponent } from 'styled-components'
+import Label from '../Label'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
+import { fromTheme, StyledProps } from '../utils/theme'
+import { preciseEm } from '../utils/theme/isolated'
 import Container from './Container'
+
+const ALIGNED_WIDTH = 20 // em
 
 export interface FieldProps {
   horizontal?: boolean
-  align?: true | 'left' | 'right'
+  align?: true | string
   nowrap?: boolean
 }
 
-type FieldType = StyledComponent<'fieldset', any, FieldProps, never> & {
+export type StyledFieldProps = FieldProps & StyledProps
+
+type FieldType = StyledComponent<'fieldset', any, StyledFieldProps, never> & {
   Container: typeof Container
 }
 
-const Field = styled.fieldset<FieldProps>`
+// Would like to use styled.fieldset but can't due to
+// https://github.com/w3c/csswg-drafts/issues/321
+const Field = styled.div<StyledFieldProps>`
   display: flex;
   flex-direction: ${props => props.horizontal ? 'row' : 'column'};
-  align-items: ${ifProp('horizontal', 'center', 'unset')};
+  align-items: ${props => props.horizontal ? 'center' : 'unset'};
   flex: 1;
-  white-space: ${ifProp('nowrap', 'nowrap', 'unset')};
+  white-space: ${props => props.nowrap ? 'nowrap' : 'unset'};
 
   &:not(:last-child) {
-    margin-bottom: ${t('base.spaceDouble')};
+    margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
   }
 
-  label {
-    padding-bottom: ${ifNotProp('horizontal', t('base.spaceHalf'), 'unset')};
-    margin-right: ${ifProp('horizontal', t('base.spaceDouble'), 'unset')};
-    flex-basis: ${withProp(['horizontal', 'align'], (horizontal, align) => {
-      return (horizontal && align)
-    ? (align === true) ? `${preciseRm(20)}em` : align
-    : 'auto'
-    })};
+  ${Label} {
+    padding-bottom: ${props => props.horizontal ? 'unset' : `${props.theme.global.spacing / 2}em`};
+    margin-right: ${props => props.horizontal ? `${props.theme.global.spacing}em` : 'unset'};
+    flex-basis: ${props => (props.horizontal && props.align)
+      ? (props.align === true) ? `${preciseEm(ALIGNED_WIDTH)}em` : props.align
+      : 'auto'
+    };
 
-    > label {
+    > ${Label} {
       padding-bottom: unset;
     }
   }
 
-  ${ifNotProp('horizontal', css`
-    > *:not(label):not(:last-child) {
-      margin-bottom: ${t('base.spaceDouble')};
+  ${(props: StyledFieldProps) => props.horizontal && css`
+    > *:not(${Label}):not(:last-child) {
+      margin-bottom: ${props.theme.global.spacing};
     }
-  `)}
+  `}
 ` as FieldType
 
 Field.Container = Container
 
 Field.defaultProps = defaultStyledProps
+
+Field.displayName = 'Field'
 
 export default Field

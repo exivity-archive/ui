@@ -1,11 +1,11 @@
-import * as React from 'react'
+import React, { ChangeEvent, InputHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, globalFont, hexToString, matchThemeProp } from '../utils/theme'
+import { fromTheme, globalFont, hexToString, matchThemeProp, StyledProps } from '../utils/theme'
 
-interface ITextInputProps {
+interface TextInputProps extends InputHTMLAttributes<HTMLInputElement>, StyledProps {
   value: string
-  onChange: (value: string) => void
+  onChange: ((value: string) => void) & ((event: ChangeEvent<HTMLInputElement>) => void)
 
   outlined?: boolean
 
@@ -20,7 +20,7 @@ interface ITextInputProps {
   large?: boolean
 }
 
-export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, ...rest }) => (
+export const TextInput: React.FC<TextInputProps> = ({ value, onChange, theme, ...rest }) => (
   <input
     type='text'
     value={value}
@@ -37,40 +37,45 @@ const StyledTextInput = styled(TextInput)`
   })}px;
 
   display: block;
+  box-sizing: border-box;
   width: 100%;
   padding: 0 0.5em;
   height: 2.5em;
-  background-color: ${fromTheme(theme => theme.colours.lightGray)};
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   outline: 0;
   border: 0;
 
-  ${props => props.outlined && css`
-    border: ${fromTheme(theme => theme.global.borderWidth)} solid ${matchThemeProp(theme => theme.global.purposes)};
-  `}
+  ${props => props.outlined
+    ? css`
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+      background-color: unset;
+
+      &:hover {
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+      }
+
+      &:focus {
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+      }
+    `
+    : css `
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
+      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+
+      &:hover {
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+      }
+
+      &:focus {
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+      }
+    `}
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
-
-  &:focus {
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
-  }
-
-  &[type="checkbox"],
-  &[type="radio"] {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 0;
-  }
 
   &::placeholder {
     color: currentcolor;
     opacity: 0.5;
-  }
-
-  textarea & {
-    padding: 0.5em;
-    height: auto;
   }
 
   &[disabled] {

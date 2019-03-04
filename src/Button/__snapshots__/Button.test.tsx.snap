@@ -46,16 +46,16 @@ exports[`renders basic button 1`] = `
 }
 
 .c0:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
 .c0:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.15), 0 0 0 4px rgba(var(--focus-color),0.3);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
 .c0:active,
 .c0.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.3), 0 0 0 4px rgba(var(--focus-color),0.3);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
 .c0:after {
@@ -133,16 +133,16 @@ exports[`renders large button 1`] = `
 }
 
 .c0:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
 .c0:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.15), 0 0 0 4px rgba(var(--focus-color),0.3);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
 .c0:active,
 .c0.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.3), 0 0 0 4px rgba(var(--focus-color),0.3);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
 .c0:after {
