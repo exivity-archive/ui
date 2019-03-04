@@ -1,148 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders label with content 1`] = `
+exports[`renders label with text 1`] = `
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 33%;
-  min-width: 250px;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
 }
 
-.c2 {
-  font-family: Pt Sans;
-  color: #2e2e2e;
+.c1 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
 }
 
-.c3 {
-  font-family: Pt Sans;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.c4 {
-  padding-left: 40px;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 40px 0;
-}
-
-<div
-  className="c0"
+<label
+  className="c0 c1"
 >
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-    />
-    <div
-      className="c3"
-    />
-  </div>
-  <div
-    className="c4"
-  >
-    Label content
-  </div>
-</div>
-`;
-
-exports[`renders label with name and description 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 33%;
-  min-width: 250px;
-}
-
-.c1 {
-  font-family: Pt Sans;
-  color: #2e2e2e;
-}
-
-.c2 {
-  font-family: Pt Sans;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #aaa;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    Label name
-  </div>
-  <div
-    className="c2"
-  >
-    Label description
-  </div>
-</div>
+  label
+</label>
 `;
 
 exports[`renders label without props 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  width: 33%;
-  min-width: 250px;
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c1 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
+}
+
+<label
+  className="c0 c1"
+/>
+`;
+
+exports[`renders nested label 1`] = `
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c1 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
+}
+
+.c2 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
+}
+
+<label
+  className="c0 c1"
+>
+  primary
+  <label
+    className="c0 c1"
+  >
+    secondary
+  </label>
+</label>
+`;
+
+exports[`renders secondary label 1`] = `
+.c2 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
 }
 
 .c1 {
-  font-family: Pt Sans;
-  color: #2e2e2e;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
 }
 
-.c2 {
-  font-family: Pt Sans;
-  margin-top: 5px;
-  font-size: 12px;
-  color: #aaa;
+.c1 > .c0 {
+  display: block;
+  font-size: 0.875em;
+  color: #eee;
 }
 
-<div
-  className="c0"
+<label
+  className="c0 c1"
 >
-  <div
-    className="c1"
-  />
-  <div
-    className="c2"
-  />
-</div>
+  secondary
+</label>
 `;

@@ -1,2 +1,1 @@
-import Label from './Label'
-export default Label
+export { default } from './Label'
