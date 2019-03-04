@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/exivity/ui/compare/v0.2.12...v0.3.0) (2019-03-04)
+
+
+### Features
+
+* button wip ([#9](https://github.com/exivity/ui/issues/9)) ([df1f5e9](https://github.com/exivity/ui/commit/df1f5e9))
+* font + label ([#11](https://github.com/exivity/ui/issues/11)) ([b523ea4](https://github.com/exivity/ui/commit/b523ea4))
+* input ([#12](https://github.com/exivity/ui/issues/12)) ([b3a431c](https://github.com/exivity/ui/commit/b3a431c))
+
+
+
 <a name="0.2.12"></a>
 ## [0.2.12](https://github.com/exivity/ui/compare/v0.2.11...v0.2.12) (2019-03-04)
 
