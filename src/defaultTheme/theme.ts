@@ -3,13 +3,6 @@ import { DeepReadonly } from '../utils/types'
 
 export const BASE_SIZE = 16
 
-export enum PURPOSES {
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  SUCCESS = 'success',
-  DANGER = 'danger'
-}
-
 const palette = {
   black: '#000',
   dark: '#222',
@@ -50,10 +43,10 @@ const theme = {
     outlineWidth: '4px',
     spacing: preciseEm(1.25), // 20px
     purposes: {
-      [PURPOSES.PRIMARY]: palette.blue,
-      [PURPOSES.SECONDARY]: palette.gray,
-      [PURPOSES.SUCCESS]: palette.green,
-      [PURPOSES.DANGER]: palette.red
+      primary: palette.blue,
+      secondary: palette.gray,
+      success: palette.green,
+      danger: palette.red
     },
     sizes: {
       small: preciseEm(0.85), // 14px
