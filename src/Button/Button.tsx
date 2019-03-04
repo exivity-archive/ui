@@ -21,11 +21,11 @@ export interface ButtonProps extends StyledProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  font-family: ${fromTheme(theme => theme.global.fontFamilyCompact)};
+  font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 16,
-    defaultValue: 16
+    modifier: (em: number) => em * 14,
+    defaultValue: 14
   })}px;
   color: ${fromTheme(theme => theme.colours.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
@@ -38,8 +38,8 @@ export const Button = styled.button<ButtonProps>`
   justify-content: center;
   cursor: pointer;
   min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 ${preciseEm(1.2)}em;
+  height: ${preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+  padding: 0 ${preciseEm(1.5)}em;
   border: none;
   border-radius: ${fromTheme(theme => theme.global.borderRadius)};
   flex: none;
@@ -48,8 +48,8 @@ export const Button = styled.button<ButtonProps>`
   text-decoration: none;
   outline: none;
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
   background-color: ${matchThemeProp(theme => theme.global.purposes)};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
   &:hover {
     box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);

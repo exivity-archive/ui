@@ -2,9 +2,9 @@
 
 exports[`renders basic button 1`] = `
 .c0 {
-  font-family: 'Fira Sans Condensed',sans-serif;
+  font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -26,8 +26,8 @@ exports[`renders basic button 1`] = `
   justify-content: center;
   cursor: pointer;
   min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.1875em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -41,8 +41,8 @@ exports[`renders basic button 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  --focus-color: 0,168,216;
   background-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c0:hover {
@@ -89,9 +89,9 @@ exports[`renders basic button 1`] = `
 
 exports[`renders large button 1`] = `
 .c0 {
-  font-family: 'Fira Sans Condensed',sans-serif;
+  font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 19px;
+  font-size: 16.625px;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -113,8 +113,8 @@ exports[`renders large button 1`] = `
   justify-content: center;
   cursor: pointer;
   min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.1875em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -128,8 +128,8 @@ exports[`renders large button 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  --focus-color: 0,168,216;
   background-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c0:hover {

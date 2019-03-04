@@ -1,10 +1,11 @@
 import { mount, shallow } from 'enzyme'
+import renderer from 'react-test-renderer'
 import * as React from 'react'
 
 import TextInput from '.'
 
 test('TextInput snapshot', () => {
-  const textInput = shallow(<TextInput onChange={jest.fn()} />)
+  const textInput = renderer.create(<TextInput onChange={jest.fn()} />)
   expect(textInput).toMatchSnapshot()
 })
 
