@@ -1,19 +1,19 @@
 version: "2"
+checks:
+  similar-code:
+    config:
+      threshold: 200
 plugins:
   tslint:
     enabled: true
     config: tslint.json
 exclude_patterns:
-  - "config/"
-  - "db/"
-  - "dist/"
-  - "features/"
   - "**/node_modules/"
-  - "script/"
-  - "**/spec/"
-  - "**/test/"
-  - "**/tests/"
-  - "Tests/"
-  - "**/vendor/"
-  - "**/*_test.go"
+  - "lib/"
+  - "scripts/"
+  - "tests/"
   - "**/*.d.ts"
+  - "**/__stories__/"
+  - "**/__tests__/"
+  - "**/*.stories.*"
+  - "**/*.test.*"
