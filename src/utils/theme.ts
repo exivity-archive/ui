@@ -57,7 +57,7 @@ export const globalFont = css`
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
-export const globalInput = css<StyledProps & { outlined?: boolean }>`
+export const globalInput = css <StyledProps & { outlined?: boolean }>`
    ${globalFont};
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 16,
