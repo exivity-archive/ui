@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput snapshot 1`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 0 0.5em;
+  height: 2.5em;
+  background-color: #eee;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c0[type="checkbox"],
+.c0[type="radio"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+.c0::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c0::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c0:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c0::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+textarea .c0 {
+  padding: 0.5em;
+  height: auto;
+}
+
+.c0[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<input
+  className="c0"
+  onChange={[Function]}
+  secondary={true}
+  theme={
+    Object {
+      "colours": Object {
+        "black": "#000",
+        "blue": "#00a8d8",
+        "dark": "#222",
+        "gray": "#999",
+        "green": "#4caf50",
+        "lightGray": "#eee",
+        "red": "#ef5350",
+        "white": "#fff",
+        "yellow": "#fff68c",
+      },
+      "fonts": Object {
+        "custom": Object {
+          "families": Array [],
+          "urls": Array [],
+        },
+        "google": Object {
+          "families": Array [
+            "Fira Mono:400",
+            "Fira Sans:400,600",
+          ],
+        },
+      },
+      "global": Object {
+        "baseSize": 16,
+        "borderRadius": "4px",
+        "borderWidth": "1px",
+        "fontFamily": "'Fira Sans', sans-serif",
+        "fontFamilyMonospace": "'Fira Mono', monospace",
+        "lineHeight": 1.5,
+        "outlineWidth": "4px",
+        "purposes": Object {
+          "danger": "#ef5350",
+          "primary": "#00a8d8",
+          "secondary": "#999",
+          "success": "#4caf50",
+        },
+        "sizes": Object {
+          "large": 1.1875,
+          "small": 0.875,
+        },
+        "spacing": 1.25,
+        "textColor": "#222",
+        "textColorMuted": "#999",
+      },
+    }
+  }
+  type="text"
+  value=""
+/>
+`;

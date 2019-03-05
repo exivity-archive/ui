@@ -1,64 +1,28 @@
-import * as React from 'react'
-import styled from 'styled-components'
+import React from 'react'
+import styled, { css } from 'styled-components'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { StyledProps } from '../utils/types'
+import { fromTheme, globalFont, StyledProps } from '../utils/theme'
 
-const LabelWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 33%;
-  min-width: 250px;
-`
-
-const TopLabel = styled.div`
-  font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
-  color: ${(p: StyledProps) => p.theme.colors.dark};
-`
-TopLabel.defaultProps = defaultStyledProps
-
-const SubLabel = styled.div`
-  font-family: ${(p: StyledProps) => p.theme.global.fontFamily};
-  margin-top: 5px;
-  font-size: 12px;
-  color: ${(p: StyledProps) => p.theme.colors.gray};
-`
-SubLabel.defaultProps = defaultStyledProps
-
-const LabelContent = styled.div`
-  padding-left: 40px;
-`
-
-const LabelWithContentWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 40px 0;
-`
-
-interface ILabelProps extends StyledProps {
-  name?: string
-  description?: string
+interface LabelProps extends StyledProps {
+  secondary?: boolean
 }
 
-const Label: React.FC<ILabelProps> = ({ name, description, children }) => {
-  const label = <LabelWrapper>
-    <TopLabel>{name}</TopLabel>
-    <SubLabel>{description}</SubLabel>
-  </LabelWrapper>
+const secondary = css`
+  display: block;
+  font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
+  color: ${fromTheme(theme => theme.global.textColorMuted)};
+`
 
-  if (!children) {
-    return label
+const Label = styled.label <LabelProps>`
+  ${globalFont}
+
+  ${props => props.secondary && secondary}
+
+  & > & {
+    ${secondary}
   }
+`
 
-  return <LabelWithContentWrapper>
-    {label}
-    <LabelContent>
-      {children}
-    </LabelContent>
-  </LabelWithContentWrapper>
-}
 Label.defaultProps = defaultStyledProps
 
 export default Label

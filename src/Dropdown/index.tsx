@@ -12,7 +12,7 @@ interface IContentProps extends IPosition {
   open: boolean
 }
 
-const Content = styled.div<IContentProps>`
+const Content = styled.div <IContentProps>`
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
