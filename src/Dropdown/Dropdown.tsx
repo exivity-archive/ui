@@ -59,7 +59,7 @@ const elementCrossedEdge = (absolutePosition: number, elementDimension: number, 
   return absolutePosition + elementDimension > edge
 }
 
-const Dropdown: React.FC<IDropdownProps> = ({
+const PlainDropdown: React.FC<IDropdownProps> = ({
       className,
       button,
       children,
@@ -119,6 +119,8 @@ const Dropdown: React.FC<IDropdownProps> = ({
   )
 }
 
-export default styled(Dropdown)`
+const Dropdown = styled(PlainDropdown)`
   position: relative;
 `
+
+export default Dropdown

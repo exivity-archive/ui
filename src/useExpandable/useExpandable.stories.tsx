@@ -1,13 +1,14 @@
 import React from 'react'
 import { FixedSizeList } from 'react-window'
 
+// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import { useExpandable } from './useExpandable'
-import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
+import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
-const getParent = (item) => item.parentId
+const getParent = (item: FakeRecord) => item.parentId
 
 const ExpandableList = () => {
   const data = useExpandable(FLAT_LIST_TEST_DATA, getParent)
@@ -19,10 +20,10 @@ const ExpandableList = () => {
   )
 }
 
-export default storiesOf('List hooks', module)
-  .add('useExpandable', () => <ExpandableList />)
+export default storiesOf('helpers|useExpandable', module)
+  .add('default', () => <ExpandableList />)
 
-const Item = ({ data, index, style }) => {
+const Item = ({ data, index, style }: { data: FakeRecord[], index: number, style: object}) => {
   const item = data[index]
   const space = new Array(item.attributes.level)
 
