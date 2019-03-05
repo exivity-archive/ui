@@ -41,7 +41,7 @@ export const Button = styled.button <ButtonProps>`
   height: ${preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
   padding: 0 ${preciseEm(1.5)}em;
   border: none;
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   flex: none;
   user-select: none;
   white-space: nowrap;
@@ -52,28 +52,28 @@ export const Button = styled.button <ButtonProps>`
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
   &:hover {
-    box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);
+    box-shadow: inset 10px 10px 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)});
   }
 
   &:focus {
-    box-shadow: inset 0 0 999em rgba(0,0,0,0.15),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
+    box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)}),
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
   }
 
   &:active,
   &.active {
-    box-shadow: inset 0 0 999em rgba(0,0,0,0.3),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
+    box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha * 2)}),
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
   }
 
   &:after {
     display: none;
     content: "";
     position: absolute;
-    top: -${fromTheme(theme => theme.global.borderWidth)};
-    right: -${fromTheme(theme => theme.global.borderWidth)};
-    bottom: -${fromTheme(theme => theme.global.borderWidth)};
-    left: -${fromTheme(theme => theme.global.borderWidth)};
+    top: -${fromTheme(theme => theme.global.borderWidth)}px;
+    right: -${fromTheme(theme => theme.global.borderWidth)}px;
+    bottom: -${fromTheme(theme => theme.global.borderWidth)}px;
+    left: -${fromTheme(theme => theme.global.borderWidth)}px;
     border-radius: inherit;
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -88,16 +88,16 @@ export const Button = styled.button <ButtonProps>`
   ${props => props.outlined && css`
     background-color: ${fromTheme(theme => theme.colours.white)};
     color: ${matchThemeProp(theme => theme.global.purposes)};
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)};
+    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
 
     &:hover {
       color: ${fromTheme(theme => theme.global.textColor)};
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.global.textColor)};
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${fromTheme(theme => theme.global.textColor)};
     }
 
     &:focus {
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)},
-       0 0 0 5px rgba(var(--focus-color), 0.3);
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)},
+       0 0 0 ${fromTheme(theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
     }
   `}
 

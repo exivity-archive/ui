@@ -11,3 +11,9 @@ export type DeepReadonlyObject<T> = {
 export interface AnyObject<T> {
   [key: string]: T | AnyObject<T>
 }
+
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+export type ObjectOf<T> = {
+  [key: string]: T
+}
