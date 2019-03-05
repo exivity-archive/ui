@@ -50,7 +50,7 @@ storiesOf('forms|Field', module)
       </Field>
       <Field>
         <Label/>
-        <Checkbox checked={true} onChange={() => ({})}/>
+        <Checkbox />
       </Field>
     </Field.Container>
   </React.Fragment>)

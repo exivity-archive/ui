@@ -13,6 +13,20 @@ export interface StyledProps {
   theme: Theme
 }
 
+export interface InputProps extends StyledProps {
+  outlined?: boolean
+
+  // Purposes
+  primary?: boolean
+  secondary?: boolean
+  success?: boolean
+  danger?: boolean
+
+  // Sizes
+  small?: boolean
+  large?: boolean
+}
+
 export const fromTheme = (
   themeResolver: ThemeResolver,
   options: ThemeHelperOptions = { }
@@ -57,32 +71,52 @@ export const globalFont = css`
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
-export const globalInput = css<StyledProps & { outlined?: boolean }>`
+export const globalInput = css<InputProps & { outlined?: boolean }>`
   ${globalFont};
+
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 16,
     defaultValue: 16
   })}px;
 
   display: block;
+  box-sizing: border-box;
   width: 100%;
-  padding: 0 0.5em;
-  background-color: ${fromTheme(theme => theme.colours.lightGray)};
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
+  padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
+
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   outline: 0;
   border: 0;
 
-  ${props => props.outlined && css`
-    border: ${fromTheme(theme => theme.global.borderWidth)}
-    solid ${matchThemeProp(theme => theme.global.purposes)};
-  `}
-
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
-  &:focus {
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}
-    rgba(var(--focus-color), 0.3);
-  }
+  ${props => props.outlined
+    ? css`
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+      background-color: unset;
+
+      &:hover {
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+      }
+
+      &:focus {
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+      }
+    `
+    : css `
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
+      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+
+      &:hover {
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+      }
+
+      &:focus {
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+      }
+    `}
+
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
   &::placeholder {
     color: currentcolor;

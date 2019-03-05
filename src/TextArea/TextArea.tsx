@@ -1,23 +1,23 @@
 import React, { TextareaHTMLAttributes, ChangeEvent } from 'react'
 import styled, { css } from 'styled-components'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { globalInput } from '../utils/theme'
+import { globalInput, InputProps } from '../utils/theme'
 import { Omit } from '../utils/types'
 
 type OmitOnChange = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 
-interface TextAreaProps {
+interface TextAreaProps extends InputProps {
   onChange: (value: string, event: ChangeEvent<HTMLTextAreaElement>) => void
   width?: string
-  outlined?: boolean
 }
 
-export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, outlined, ...rest }) => (
+export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
   <textarea onChange={(event) => onChange(event.target.value, event)} {...rest}/>
 )
 
 const StyledTextArea = styled(TextArea)`
-  ${globalInput}
+  ${globalInput};
+
   ${props => props.width && css`
     width: ${props.width}
   `}
@@ -25,7 +25,8 @@ const StyledTextArea = styled(TextArea)`
 
 StyledTextArea.defaultProps = {
   ...defaultStyledProps,
-  value: ''
+  value: '',
+  secondary: true
 }
 
 export default StyledTextArea
