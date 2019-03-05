@@ -11,10 +11,10 @@ const componentName = process.argv[2]
 const targetDir = path.resolve(__dirname, `../src/${componentName}`)
 const sourceDir = path.resolve(__dirname, `template`)
 const templateFiles = [
-  'Component.stub.js',
-  'Component.stories.stub.js',
-  'Component.test.stub.js',
-  'index.stub.js'
+  'Component.tsx.stub',
+  'Component.stories.tsx.stub',
+  'Component.test.tsx.stub',
+  'index.ts.stub'
 ]
 
 if (existsSync(targetDir)) {
@@ -27,7 +27,7 @@ console.log(`Created directory ${targetDir}.`)
 
 templateFiles.forEach(templateFile => {
   const sourceFile = `${sourceDir}/${templateFile}`
-  const targetFile = `${targetDir}/${templateFile.replace(/Component/g, componentName).replace('.stub.js', '.js')}`
+  const targetFile = `${targetDir}/${templateFile.replace(/Component/g, componentName).replace('.stub', '')}`
   const contents = String(readFileSync(sourceFile)).replace(/{Component}/g, componentName)
 
   writeFileSync(targetFile, contents)

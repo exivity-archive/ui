@@ -17,6 +17,3 @@ export default storiesOf('forms|TextArea', module)
     value={state}
     outlined
     onChange={storeAndAction(storeState, 'onChange')} />)
-
-
-

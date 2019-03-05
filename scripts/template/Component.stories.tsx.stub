@@ -1,0 +1,8 @@
+import React from 'react'
+// @ts-ignore
+import { storiesOf } from '@storybook/react'
+
+import {Component} from '.'
+
+storiesOf('atoms|{Component}', module)
+  .add('default', () => <{Component} />)
