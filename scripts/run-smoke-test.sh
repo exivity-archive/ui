@@ -11,6 +11,10 @@ function header {
     echo -e "\n${bluebg}${white}$1${reset}\n"
 }
 
+header "Clean & build lib"
+yarn lib:clean
+yarn lib:build
+
 header "Change into consumer"
 pushd tests/fixtures/consumer
 

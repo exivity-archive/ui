@@ -9,16 +9,24 @@ exports[`TextArea snapshot 1`] = `
   line-height: 1.5;
   font-size: 16px;
   display: block;
+  box-sizing: border-box;
   width: 100%;
-  padding: 0 0.5em;
-  background-color: #eee;
+  padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #eee;
+  background-color: #eee;
+  --focus-color: 153,153,153;
+}
+
+.c0:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+  border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
 .c0::-webkit-input-placeholder {
@@ -49,6 +57,7 @@ exports[`TextArea snapshot 1`] = `
 <textarea
   className="c0"
   onChange={[Function]}
+  secondary={true}
   theme={
     Object {
       "colours": Object {
@@ -76,18 +85,20 @@ exports[`TextArea snapshot 1`] = `
       },
       "global": Object {
         "baseSize": 16,
-        "borderRadius": "4px",
-        "borderWidth": "1px",
+        "borderRadius": 4,
+        "borderWidth": 1,
         "fontFamily": "'Fira Sans', sans-serif",
         "fontFamilyMonospace": "'Fira Mono', monospace",
         "lineHeight": 1.5,
-        "outlineWidth": "4px",
+        "outlineAlpha": 0.15,
+        "outlineWidth": 4,
         "purposes": Object {
           "danger": "#ef5350",
           "primary": "#00a8d8",
           "secondary": "#999",
           "success": "#4caf50",
         },
+        "shadowAlpha": 0.1,
         "sizes": Object {
           "large": 1.1875,
           "small": 0.875,
