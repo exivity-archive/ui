@@ -1,12 +1,12 @@
+import React from 'react'
 import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
-import * as React from 'react'
 
-import TextInput from '.'
+import TextArea from './'
 
-test('TextInput snapshot', () => {
-  const textInput = renderer.create(<TextInput onChange={jest.fn()} />)
-  expect(textInput).toMatchSnapshot()
+test('TextArea snapshot', () => {
+  const textArea = renderer.create(<TextArea onChange={jest.fn()} />)
+  expect(textArea).toMatchSnapshot()
 })
 
 test('value gets changed after an on change event', () => {
@@ -15,10 +15,10 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textInput = mount(<TextInput value={initialValue} onChange={onChangeMock} />)
+  const textArea = mount(<TextArea value={initialValue} onChange={onChangeMock} />)
 
-  textInput
-    .find('input')
+  textArea
+    .find('textarea')
     .simulate('change', { target: { value: updatedValue } })
 
   expect(onChangeMock.mock.results[0].value).toBe(updatedValue)

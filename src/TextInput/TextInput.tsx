@@ -1,7 +1,7 @@
 import * as React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, globalFont, hexToString, matchThemeProp } from '../utils/theme'
+import { globalInput } from '../utils/theme'
 
 interface ITextInputProps {
   value: string
@@ -30,30 +30,9 @@ export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, ...rest 
 )
 
 const StyledTextInput = styled(TextInput)`
-  ${globalFont};
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 16,
-    defaultValue: 16
-  })}px;
+  ${globalInput};
 
-  display: block;
-  width: 100%;
-  padding: 0 0.5em;
   height: 2.5em;
-  background-color: ${fromTheme(theme => theme.colours.lightGray)};
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
-  outline: 0;
-  border: 0;
-
-  ${props => props.outlined && css`
-    border: ${fromTheme(theme => theme.global.borderWidth)} solid ${matchThemeProp(theme => theme.global.purposes)};
-  `}
-
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
-
-  &:focus {
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
-  }
 
   &[type="checkbox"],
   &[type="radio"] {
@@ -63,19 +42,9 @@ const StyledTextInput = styled(TextInput)`
     padding: 0;
   }
 
-  &::placeholder {
-    color: currentcolor;
-    opacity: 0.5;
-  }
-
   textarea & {
     padding: 0.5em;
     height: auto;
-  }
-
-  &[disabled] {
-    cursor: not-allowed;
-    box-shadow: inset 0 0 999em rgba(128, 128, 128, 0.2);
   }
 `
 

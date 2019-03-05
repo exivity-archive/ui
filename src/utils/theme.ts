@@ -56,3 +56,41 @@ export const globalFont = css`
   color: ${fromTheme(theme => theme.global.textColor)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
+
+export const globalInput = css<StyledProps & { outlined?: boolean }>`
+   ${globalFont};
+  font-size: ${matchThemeProp(theme => theme.global.sizes, {
+    modifier: (em: number) => em * 16,
+    defaultValue: 16
+  })}px;
+
+  display: block;
+  width: 100%;
+  padding: 0 0.5em;
+  background-color: ${fromTheme(theme => theme.colours.lightGray)};
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
+  outline: 0;
+  border: 0;
+
+  ${props => props.outlined && css`
+    border: ${fromTheme(theme => theme.global.borderWidth)}
+    solid ${matchThemeProp(theme => theme.global.purposes)};
+  `}
+
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+
+  &:focus {
+    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}
+    rgba(var(--focus-color), 0.3);
+  }
+
+  &::placeholder {
+    color: currentcolor;
+    opacity: 0.5;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    box-shadow: inset 0 0 999em rgba(128, 128, 128, 0.2);
+  }
+`

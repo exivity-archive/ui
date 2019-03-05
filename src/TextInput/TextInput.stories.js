@@ -5,7 +5,6 @@ import { withState } from '../utils/testing/decorators/StateDecorator'
 import { storeAndAction } from '../utils/testing/storeAndAction'
 import TextInput from './TextInput'
 import Checkbox from '../Checkbox'
-import Label from '../Label'
 import Dropdown from '../Dropdown'
 
 const Row = styled.div`
@@ -31,18 +30,6 @@ export default storiesOf('forms|TextInput', module)
     <TextInput value='Default'/>
     <TextInput large value='Large'/>
   </Row>)
-  .add('TextInput with label', ({ state, storeState }) => {
-    return (
-      <div>
-        <Label name='Important field1'>
-          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')} />
-        </Label>
-        <Label name='Important field2' description='This field is very important'>
-          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')} />
-        </Label>
-      </div>
-    )
-  })
 
 storiesOf('Checkbox', module)
   .addDecorator(withState(true))
