@@ -13,7 +13,7 @@ const secondary = css`
   color: ${fromTheme(theme => theme.global.textColorMuted)};
 `
 
-const Label = styled.label<LabelProps>`
+const Label = styled.label <LabelProps>`
   ${globalFont}
 
   ${props => props.secondary && secondary}

@@ -5,7 +5,7 @@ import { fromTheme, StyledProps } from '../utils/theme'
 
 export interface IconProps extends StyledProps {}
 
-export const Icon = styled.span<IconProps>`
+export const Icon = styled.span <IconProps>`
   font-size: ${fromTheme(theme => theme.global.baseSize)}px;
   height: 1em;
   line-height: 1em;
