@@ -4,7 +4,7 @@ import { FixedSizeList } from 'react-window'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { useDynamicAttribute } from '.'
+import useDynamicAttribute from '.'
 import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
 const CheckableList = () => {

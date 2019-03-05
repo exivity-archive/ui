@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { MapItem } from '../utils'
-
-type Enrichment<T, TKey extends string, TSet extends string, TValue> =
-  & Record<TKey, TValue>
-  & Record<TSet, (value: TValue, data: (T & Enrichment<T, TKey, TSet, TValue>)[]) => void>
-
-export type Enriched<T, TKey extends string, TSet extends string, TValue> = T & Enrichment<T, TKey, TSet, TValue>
+import { Enrichment } from './types'
 
 export function useDynamicAttribute<
   T extends MapItem,

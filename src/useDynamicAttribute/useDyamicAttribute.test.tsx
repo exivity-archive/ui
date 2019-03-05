@@ -1,8 +1,10 @@
 import React, { useState, Dispatch, SetStateAction } from 'react'
-import { useDynamicAttribute, Enriched } from '.'
+import { useDynamicAttribute } from './useDynamicAttribute'
+import { Enriched } from './types'
 import { mount } from 'enzyme'
+import { MapItem } from '../utils'
 
-interface IData { id: number }
+interface IData extends MapItem { id: number }
 
 interface ICheckableListProps {
   data: IData[]
@@ -23,7 +25,7 @@ const CheckableList: React.FC<ICheckableListProps> = ({ children, data, initVal,
 }
 
 test('passed in key and setter are defined on enriched data', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
 
   mount(
     <CheckableList data={data} initVal={true}>
@@ -41,7 +43,7 @@ test('passed in key and setter are defined on enriched data', () => {
 })
 
 test('returns same amount of items as is passed in', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
 
   mount(
     <CheckableList data={data} initVal={true}>
@@ -54,7 +56,7 @@ test('returns same amount of items as is passed in', () => {
 })
 
 test('once setter is called the value changes to passed in value', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
 
   mount(
     <CheckableList data={data} initVal={true} initState={0}>
@@ -75,7 +77,7 @@ test('once setter is called the value changes to passed in value', () => {
 })
 
 test('original keys should still be intact', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
 
   mount(
     <CheckableList data={data} initVal={true}>
@@ -91,7 +93,7 @@ test('original keys should still be intact', () => {
 })
 
 test('the returned array should have the same order', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
   mount(
     <CheckableList data={data} initVal={true}>
       {(items) => {
@@ -106,7 +108,7 @@ test('the returned array should have the same order', () => {
 })
 
 test('init val can be a function that returns the initial state', () => {
-  const data: IData[] = [{ id: 1 }, { id: 2 }, { id: 3 }]
+  const data: IData[] = [{ id: 1, key: 'first' }, { id: 2, key: 'second' }, { id: 3, key: 'third' }]
   mount(
     <CheckableList data={data} initVal={(item: IData) => {
       return item.id % 2 === 0
