@@ -21,15 +21,15 @@ interface ITextInputProps {
 }
 
 export const TextInput: React.FC<ITextInputProps> = ({ value, onChange, ...rest }) => (
-  <input
+  <StyledInput
     type='text'
     value={value}
-    onChange={(event) => onChange(event.target.value)}
+    onChange={(event: any) => onChange(event.target.value)}
     {...rest}
   />
 )
 
-const StyledTextInput = styled(TextInput)`
+export const StyledInput = styled.input <ITextInputProps>`
   ${globalFont};
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 16,
@@ -79,10 +79,10 @@ const StyledTextInput = styled(TextInput)`
   }
 `
 
-StyledTextInput.defaultProps = {
+TextInput.defaultProps = {
   ...defaultStyledProps,
   value: '',
   secondary: true
 }
 
-export default StyledTextInput
+export default TextInput

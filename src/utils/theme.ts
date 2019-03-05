@@ -27,10 +27,15 @@ export const fromTheme = (
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
   options: ThemeHelperOptions = {}
-) => (props: StyledProps) => {
+) => (props: any) => {
   const themeObject = themeResolver(props.theme)
   const match = Object.keys(props)
-    .find(propKey => themeObject[propKey])
+    .find((propKey: string) => {
+      const prop = props[propKey]
+      if (prop !== undefined) {
+        return themeObject[propKey]
+      }
+    })
 
   if (!match) {
     return options.defaultValue
