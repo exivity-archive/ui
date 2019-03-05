@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { StyledProps } from '../utils/theme'
+import { defaultStyledProps, StyledProps } from '../utils/styled'
 
 export interface IconProps extends StyledProps {}
 

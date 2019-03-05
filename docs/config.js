@@ -1,6 +1,6 @@
 import { addDecorator, configure } from '@storybook/react'
-import { CanvasDecorator } from '../src/utils/testing/decorators/CanvasDecorator'
-import { ThemeDecorator } from '../src/utils/testing/decorators/ThemeDecorator'
+import { CanvasDecorator } from '../tests/utils/decorators/CanvasDecorator'
+import { ThemeDecorator } from '../tests/utils/decorators/ThemeDecorator'
 
 addDecorator(CanvasDecorator)
 addDecorator(ThemeDecorator)

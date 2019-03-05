@@ -2,8 +2,8 @@ import React from 'react'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/testing/decorators/StateDecorator'
-import { storeAndAction } from '../utils/testing/storeAndAction'
+import { withState } from '../../tests/utils/decorators/StateDecorator'
+import { storeAndAction } from '../../tests/utils/storeAndAction'
 import TextArea from './TextArea'
 
 export default storiesOf('forms|TextArea', module)

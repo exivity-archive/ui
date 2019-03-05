@@ -39,3 +39,5 @@ exports[`renders default Field 1`] = `
   className="c0"
 />
 `;
+
+exports[`renders default Field.Container 1`] = `null`;

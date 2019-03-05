@@ -115,7 +115,7 @@ export function enrichItems<T> (
   return list as ExpandableItem<T>[]
 }
 
-export function useExpandable<T> (
+export default function useExpandable<T> (
   data: ListItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>,
   expanded: boolean | ExpandedCallback<T> = false
@@ -132,5 +132,3 @@ export function useExpandable<T> (
   const enriched = enrichItems<T>(list, setList)
   return getVisibleItems<T>(enriched)
 }
-
-export { iterateAllChildren, iterateAllParents } from './helpers'

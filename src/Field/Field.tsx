@@ -1,9 +1,8 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import Label from '../Label'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { StyledProps } from '../utils/theme'
-import { preciseEm } from '../utils/theme/isolated'
+import { defaultStyledProps, StyledProps } from '../utils/styled'
+import { preciseEm } from '../utils/styled/isolated'
 import Container from './Container'
 
 const ALIGNED_WIDTH = 20 // em

@@ -1,9 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { hexToString, matchThemeProp, StyledProps } from '../utils/theme'
-import { preciseEm } from '../utils/theme/isolated'
 import Icon from '../Icon'
+import { defaultStyledProps, hexToString, matchThemeProp, StyledProps } from '../utils/styled'
+import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends StyledProps {
   // Purposes

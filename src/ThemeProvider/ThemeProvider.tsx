@@ -8,7 +8,7 @@ import defaultTheme, { Theme } from '../defaultTheme/theme'
 interface ThemeProviderProps {
   theme?: Theme
   onFontStatus?: (status: string) => void
-  children: any
+  children?: any
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({

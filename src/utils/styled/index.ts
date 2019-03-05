@@ -1,6 +1,6 @@
 import color from 'color'
 import { css } from 'styled-components'
-import { Theme } from '../defaultTheme/theme'
+import theme, { Theme } from '../../defaultTheme/theme'
 
 type ThemeResolver = (theme: Theme) => any
 
@@ -12,6 +12,10 @@ interface ThemeHelperOptions {
 export interface StyledProps {
   theme: Theme
 }
+
+export const defaultStyledProps = { theme }
+
+export default defaultStyledProps
 
 export interface InputProps extends StyledProps {
   outlined?: boolean
