@@ -5,7 +5,7 @@ import { FixedSizeList } from 'react-window'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { useExpandable } from './useExpandable'
+import useExpandable from './useExpandable'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
 const getParent = (item: FakeRecord) => item.parentId
