@@ -8,7 +8,7 @@ import { useDynamicAttribute } from '.'
 import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
 const CheckableList = () => {
-  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', (item) => item.checked) 
+  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', item => item.checked)
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
@@ -24,7 +24,7 @@ const Item = ({ data, index, style }) => {
   const item = data[index]
   return (
     <div key={index} style={style}>
-    {item.value}: 
+      {item.value}:
       <input type='checkbox' checked={item.checked} onChange={(e) => {
         item.setChecked(e.target.checked, data)
         action(`toggle checkbox for ${item.value}'`, e.target.checked)
