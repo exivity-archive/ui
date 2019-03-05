@@ -1,8 +1,8 @@
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { withState } from '../../tests/utils/decorators/StateDecorator'
-import { storeAndAction } from '../../tests/utils/storeAndAction'
+import { withState } from '../utils/tests/decorators/StateDecorator'
+import { storeAndAction } from '../utils/tests/storeAndAction'
 import Checkbox from '../Checkbox'
 
 storiesOf('forms|Checkbox', module)

@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { withState } from '../../tests/utils/decorators/StateDecorator'
-import { storeAndAction } from '../../tests/utils/storeAndAction'
+import { withState } from '../utils/tests/decorators/StateDecorator'
+import { storeAndAction } from '../utils/tests/storeAndAction'
 import TextInput from './TextInput'
 
 const Row = styled.div<{ columns?: number }>`

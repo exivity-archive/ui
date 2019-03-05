@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ThemeAndFontProvider from '../../../src/ThemeProvider/ThemeProvider'
+import ThemeAndFontProvider from '../../../ThemeProvider/ThemeProvider'
 
 export const ThemeDecorator = (storyFn: any) => (
   <ThemeAndFontProvider>

@@ -1,7 +1,7 @@
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { withState } from '../../tests/utils/decorators/StateDecorator'
+import { withState } from '../utils/tests/decorators/StateDecorator'
 import StyledDropdown from '../Dropdown'
 
 storiesOf('molecules|Dropdown', module)
