@@ -4,6 +4,20 @@
     "tslint-config-standard"
   ],
   "jsRules": {},
-  "rules": {},
+  "rules": {
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock",
+      "check-postbrace"
+    ]
+  },
   "rulesDirectory": []
 }

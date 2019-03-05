@@ -15,7 +15,7 @@ export interface StyledProps {
 
 export const fromTheme = (
   themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = {}
+  options: ThemeHelperOptions = { }
 ) => (props: StyledProps) => {
   const resolved = options.modifier
     ? options.modifier(themeResolver(props.theme))
@@ -26,7 +26,7 @@ export const fromTheme = (
 
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = {}
+  options: ThemeHelperOptions = { }
 ) => (props: StyledProps) => {
   const themeObject = themeResolver(props.theme)
   const match = Object.keys(props)
@@ -57,8 +57,8 @@ export const globalFont = css`
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
-export const globalInput = css < StyledProps & { outlined?: boolean } > `
-   ${globalFont};
+export const globalInput = css<StyledProps & { outlined?: boolean }>`
+  ${globalFont};
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 16,
     defaultValue: 16
