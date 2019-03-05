@@ -1,6 +1,7 @@
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
+import Checkbox from '../Checkbox'
 
 import Field from './Field'
 import TextInput from './../TextInput'
@@ -32,7 +33,7 @@ storiesOf('forms|Field', module)
         <TextInput id='email' placeholder='Please type email address' />
       </Field>
       <Field>
-        <Label htmlFor='name'>Full name</Label>
+        <Label htmlFor='name'>Receive newsletter</Label>
         <TextInput id='name' placeholder='Please type full name' />
       </Field>
     </Field.Container>
@@ -48,8 +49,8 @@ storiesOf('forms|Field', module)
         <TextInput id='email2' placeholder='Please type email address' />
       </Field>
       <Field>
-        <Label htmlFor='name2'>Full name</Label>
-        <TextInput id='name2' placeholder='Please type full name' />
+        <Label/>
+        <Checkbox checked={true} onChange={() => ({})}/>
       </Field>
     </Field.Container>
   </React.Fragment>)
