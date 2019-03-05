@@ -77,7 +77,7 @@
       "<rootDir>/src/**/*.{ts,tsx}",
       "!<rootDir>/src/**/*.stories.{ts,tsx}",
       "!<rootDir>/src/**/__stories__/*",
-      "!<rootDir>/src/utils/tests/*"
+      "!<rootDir>/src/utils/tests/**"
     ]
   },
   "publishConfig": {

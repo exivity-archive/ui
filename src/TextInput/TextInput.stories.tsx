@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -9,7 +9,9 @@ import TextInput from './TextInput'
 const Row = styled.div<{ columns?: number }>`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
+  ${props => props.columns !== false && css`
+    grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
+  `}
 `
 
 export default storiesOf('forms|TextInput', module)
@@ -29,7 +31,7 @@ export default storiesOf('forms|TextInput', module)
       <TextInput outlined success value='Success' />
       <TextInput outlined danger value='Danger' />
     </Row>)
-  .add('sizes', () => <Row>
+  .add('sizes', () => <Row columns={false}>
     <TextInput small value='Small' />
     <TextInput value='Default' />
     <TextInput large value='Large' />
