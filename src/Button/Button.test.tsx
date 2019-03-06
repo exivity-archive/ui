@@ -14,6 +14,11 @@ test('renders outlined button', () => {
   expect(button.toJSON()).toMatchSnapshot()
 })
 
+test('renders round button', () => {
+  const button = renderer.create(<Button round />)
+  expect(button.toJSON()).toMatchSnapshot()
+})
+
 // Sizes
 test('renders different size buttons', () => {
   ['large', 'small'].forEach(size => {

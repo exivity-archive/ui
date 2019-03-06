@@ -32,6 +32,7 @@ storiesOf('forms|TextInput', module)
       <TextInput outlined danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
+    <TextInput tiny value='Tiny' />
     <TextInput small value='Small' />
     <TextInput value='Default' />
     <TextInput large value='Large' />

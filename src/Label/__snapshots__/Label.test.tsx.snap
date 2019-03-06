@@ -11,7 +11,7 @@ exports[`renders label with text 1`] = `
 
 .c1 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -33,7 +33,7 @@ exports[`renders label without props 1`] = `
 
 .c1 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -53,13 +53,13 @@ exports[`renders nested label 1`] = `
 
 .c1 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
 .c2 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -78,7 +78,7 @@ exports[`renders nested label 1`] = `
 exports[`renders secondary label 1`] = `
 .c2 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -89,13 +89,13 @@ exports[`renders secondary label 1`] = `
   color: #222;
   line-height: 1.5;
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
 .c1 > .c0 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
