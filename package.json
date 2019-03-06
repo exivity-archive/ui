@@ -126,7 +126,7 @@
     "react-test-renderer": "^16.8.2",
     "react-window": "^1.5.2",
     "rimraf": "^2.6.2",
-    "standard-version": "^4.4.0",
+    "standard-version": "^5.0.1",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"
