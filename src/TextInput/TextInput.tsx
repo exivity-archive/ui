@@ -25,8 +25,7 @@ export const StyledInput = styled.input <TextInputProps> `
 
 TextInput.defaultProps = {
   ...defaultStyledProps,
-  value: '',
-  secondary: true
+  value: ''
 }
 
 export default TextInput

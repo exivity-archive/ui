@@ -43,7 +43,7 @@ export const matchThemeProp = (
   options: ThemeHelperOptions = {}
 ) => (props: any) => {
   const themeObject = themeResolver(props.theme)
-  const match = Object.keys(props)
+  let match = Object.keys(props)
     .find((propKey: string) => {
       const prop = props[propKey]
       if (prop !== undefined) {
@@ -51,13 +51,19 @@ export const matchThemeProp = (
       }
     })
 
-  if (!match) {
-    return options.defaultValue
+  if (!match && options.defaultValue) {
+    match = options.defaultValue
   }
 
-  return options.modifier
-    ? options.modifier(themeObject[match])
-    : themeObject[match]
+  if (!match) return null
+
+  if (themeObject[match]) {
+    return options.modifier
+      ? options.modifier(themeObject[match])
+      : themeObject[match]
+  }
+
+  return match
 }
 
 export const hexToString = (hex: string) => {
@@ -93,11 +99,10 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
   outline: 0;
   border: 0;
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
-
   ${props => props.outlined
     ? css`
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid
+        ${matchThemeProp(theme => theme.global.purposes, { defaultValue: 'primary' })};
       background-color: unset;
 
       &:hover {
@@ -121,7 +126,10 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
       }
     `}
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, {
+    modifier: hexToString,
+    defaultValue: 'primary'
+  })};
 
   &::placeholder {
     color: currentcolor;

@@ -9,5 +9,8 @@ import SelectInput from './'
 export default storiesOf('forms|SelectInput', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }) => (
-    <SelectInput large outlined/>
+    <div>
+      <SelectInput/>
+      <SelectInput disabled/>
+    </div>
   ))
