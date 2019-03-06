@@ -1,7 +1,6 @@
 import React, { TextareaHTMLAttributes, ChangeEvent } from 'react'
 import styled, { css } from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { globalInput, InputProps } from '../utils/theme'
+import { defaultStyledProps, globalInput, InputProps } from '../utils/styled'
 import { Omit } from '../utils/types'
 
 type OmitOnChange = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>

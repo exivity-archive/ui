@@ -1,9 +1,8 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import Label from '../Label'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, StyledProps } from '../utils/theme'
-import { preciseEm } from '../utils/theme/isolated'
+import { defaultStyledProps, StyledProps } from '../utils/styled'
+import { preciseEm } from '../utils/styled/isolated'
 import Container from './Container'
 
 const ALIGNED_WIDTH = 20 // em
@@ -30,7 +29,7 @@ const Field = styled.div<StyledFieldProps>`
   white-space: ${props => props.nowrap ? 'nowrap' : 'unset'};
 
   &:not(:last-child) {
-    margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
+    margin-bottom: ${props => props.theme.global.spacing}em;
   }
 
   ${Label} {

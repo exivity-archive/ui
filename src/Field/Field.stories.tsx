@@ -21,7 +21,7 @@ storiesOf('forms|Field', module)
     <TextInput id='username' placeholder='Please type username' />
   </Field>)
   .add('multiple', () => <React.Fragment>
-    <Field.Container>
+    <Field.Container style={{ marginBottom: '20px' }}>
       <Field>
         <Label htmlFor='username'>Username</Label>
         <TextInput id='username' placeholder='Please type username' />

@@ -1,6 +1,6 @@
 import color from 'color'
 import { css } from 'styled-components'
-import { Theme } from '../defaultTheme/theme'
+import theme, { Theme } from '../../defaultTheme/theme'
 
 type ThemeResolver = (theme: Theme) => any
 
@@ -12,6 +12,10 @@ interface ThemeHelperOptions {
 export interface StyledProps {
   theme: Theme
 }
+
+export const defaultStyledProps = { theme }
+
+export default defaultStyledProps
 
 export interface InputProps extends StyledProps {
   outlined?: boolean
@@ -25,17 +29,6 @@ export interface InputProps extends StyledProps {
   // Sizes
   small?: boolean
   large?: boolean
-}
-
-export const fromTheme = (
-  themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = { }
-) => (props: StyledProps) => {
-  const resolved = options.modifier
-    ? options.modifier(themeResolver(props.theme))
-    : themeResolver(props.theme)
-
-  return resolved || options.defaultValue
 }
 
 export const matchThemeProp = (
@@ -64,11 +57,11 @@ export const hexToString = (hex: string) => {
 }
 
 export const globalFont = css`
-  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+  font-family: ${props => props.theme.global.fontFamily};
   font-weight: normal;
-  font-size: ${fromTheme(theme => theme.global.baseSize)}px;
-  color: ${fromTheme(theme => theme.global.textColor)};
-  line-height: ${fromTheme(theme => theme.global.lineHeight)};
+  font-size: ${props => props.theme.global.baseSize}px;
+  color: ${props => props.theme.global.textColor};
+  line-height: ${props => props.theme.global.lineHeight};
 `
 
 export const globalInput = css<InputProps & { outlined?: boolean }>`
@@ -82,9 +75,9 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
+  padding: calc(0.5em - ${props => props.theme.global.borderWidth}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
 
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
+  border-radius: ${props => props.theme.global.borderRadius}px;
   outline: 0;
   border: 0;
 
@@ -92,27 +85,27 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
 
   ${props => props.outlined
     ? css`
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+      border: ${props => props.theme.global.borderWidth}px solid ${matchThemeProp(theme => theme.global.purposes)};
       background-color: unset;
 
       &:hover {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+        border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.gray};
       }
 
       &:focus {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+        border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.dark};
       }
     `
     : css `
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
-      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+      border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.lightGray};
+      background-color: ${props => props.theme.colours.lightGray};
 
       &:hover {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+        border-bottom: ${props => props.theme.global.borderWidth}px solid rgba(var(--focus-color), 0.5);
       }
 
       &:focus {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+        border-bottom: ${props => props.theme.global.borderWidth}px solid rgba(var(--focus-color), 1);
       }
     `}
 

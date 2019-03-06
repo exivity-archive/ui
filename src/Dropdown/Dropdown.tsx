@@ -119,6 +119,8 @@ const Dropdown: React.FC<IDropdownProps> = ({
   )
 }
 
-export default styled(Dropdown)`
+const StyledDropdown = styled(Dropdown)`
   position: relative;
 `
+
+export default StyledDropdown

@@ -1,4 +1,4 @@
-import { preciseEm } from '../utils/theme/isolated'
+import { preciseEm } from '../utils/styled/isolated'
 import { DeepReadonly } from '../utils/types'
 
 export const BASE_SIZE = 16

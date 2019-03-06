@@ -1,16 +1,15 @@
 import { mount } from 'enzyme'
 import React from 'react'
 
-import {
+import useExpandable, {
   enrichItems,
   getVisibleItems,
   createParentChildrenMap,
   noCollapsedParents,
   transformAndOrder,
-  useExpandable
-} from './useExpandable'
-
-import { CHILDREN, PARENT } from './helpers'
+  CHILDREN,
+  PARENT
+} from '.'
 
 const ExpandableList = ({ children, data, accessor, expanded }: any) => {
   return children(useExpandable<any>(data, accessor, expanded))
