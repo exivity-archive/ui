@@ -78,7 +78,7 @@ exports[`renders basic button 1`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -165,7 +165,7 @@ exports[`renders different purpose buttons 1`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -252,7 +252,7 @@ exports[`renders different purpose buttons 2`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -339,7 +339,7 @@ exports[`renders different purpose buttons 3`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -426,7 +426,7 @@ exports[`renders different purpose buttons 4`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -513,7 +513,7 @@ exports[`renders different size buttons 1`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -600,7 +600,7 @@ exports[`renders different size buttons 2`] = `
   display: block;
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
@@ -699,7 +699,7 @@ exports[`renders outlined button 1`] = `
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c0 {
+.c0 .c1 {
   margin-right: 0.625em;
 }
 
