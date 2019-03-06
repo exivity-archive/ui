@@ -64,8 +64,4 @@ const theme = {
 
 export type Theme = DeepReadonly<typeof theme>
 
-export const fromTheme = (themeResolver: ThemeResolver) => (theme: Theme) => {
-  return themeResolver(theme)
-}
-
 export default theme

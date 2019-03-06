@@ -31,6 +31,10 @@ export interface InputProps extends StyledProps {
   large?: boolean
 }
 
+export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
+  return themeResolver(props.theme)
+}
+
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
   options: ThemeHelperOptions = {}
@@ -57,11 +61,11 @@ export const hexToString = (hex: string) => {
 }
 
 export const globalFont = css`
-  font-family: ${props => props.theme.global.fontFamily};
+  font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: normal;
-  font-size: ${props => props.theme.global.baseSize}px;
-  color: ${props => props.theme.global.textColor};
-  line-height: ${props => props.theme.global.lineHeight};
+  font-size: ${fromTheme(theme => theme.global.baseSize)}px;
+  color: ${fromTheme(theme => theme.global.textColor)};
+  line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
 export const globalInput = css<InputProps & { outlined?: boolean }>`
@@ -75,9 +79,9 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
   display: block;
   box-sizing: border-box;
   width: 100%;
-  padding: calc(0.5em - ${props => props.theme.global.borderWidth}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
+  padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
 
-  border-radius: ${props => props.theme.global.borderRadius}px;
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   outline: 0;
   border: 0;
 
@@ -85,27 +89,27 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
 
   ${props => props.outlined
     ? css`
-      border: ${props => props.theme.global.borderWidth}px solid ${matchThemeProp(theme => theme.global.purposes)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
       background-color: unset;
 
       &:hover {
-        border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.gray};
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
       }
 
       &:focus {
-        border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.dark};
+        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
       }
     `
-    : css`
-      border: ${props => props.theme.global.borderWidth}px solid ${props => props.theme.colours.lightGray};
-      background-color: ${props => props.theme.colours.lightGray};
+    : css `
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
+      background-color: ${fromTheme(theme => theme.colours.lightGray)};
 
       &:hover {
-        border-bottom: ${props => props.theme.global.borderWidth}px solid rgba(var(--focus-color), 0.5);
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
       }
 
       &:focus {
-        border-bottom: ${props => props.theme.global.borderWidth}px solid rgba(var(--focus-color), 1);
+        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
       }
     `}
 
