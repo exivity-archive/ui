@@ -5,7 +5,8 @@
 [![Travis](https://img.shields.io/travis/com/exivity/ui.svg)](https://travis-ci.com/exivity/ui)
 [![Codecov](https://img.shields.io/codecov/c/github/exivity/ui.svg)](https://codecov.io/gh/exivity/ui)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg)](https://codeclimate.com/github/exivity/ui)
-[![Gitter](https://badges.gitter.im/exivity.svg)](https://gitter.im/exivity) [![Greenkeeper badge](https://badges.greenkeeper.io/exivity/ui.svg)](https://greenkeeper.io/)
+[![Gitter](https://badges.gitter.im/exivity.svg)](https://gitter.im/exivity)
+[![Greenkeeper](https://badges.greenkeeper.io/exivity/ui.svg)](https://greenkeeper.io/)
 
 A collection of components to build interfaces.
 
