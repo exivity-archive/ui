@@ -1,5 +1,7 @@
-import { preciseEm } from '../utils/theme/isolated'
+import { preciseEm } from '../utils/styled/isolated'
 import { DeepReadonly } from '../utils/types'
+import { StyledProps } from 'styled-components'
+import { ThemeResolver } from '../utils/styled'
 
 export const BASE_SIZE = 16
 
@@ -38,9 +40,11 @@ const theme = {
     textColor: palette.dark,
     textColorMuted: palette.gray,
     lineHeight: 1.5,
-    borderRadius: '4px',
-    borderWidth: '1px',
-    outlineWidth: '4px',
+    borderRadius: 4, // px
+    borderWidth: 1, // px
+    outlineWidth: 4, // px
+    outlineAlpha: 0.15,
+    shadowAlpha: 0.1,
     spacing: preciseEm(1.25), // 20px
     purposes: {
       primary: palette.blue,
@@ -59,5 +63,9 @@ const theme = {
 }
 
 export type Theme = DeepReadonly<typeof theme>
+
+export const fromTheme = (themeResolver: ThemeResolver) => (theme: Theme) => {
+  return themeResolver(theme)
+}
 
 export default theme

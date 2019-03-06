@@ -7,6 +7,9 @@ plugins:
   tslint:
     enabled: true
     config: tslint.json
+    checks:
+      whitespace:
+        enabled: false
 exclude_patterns:
   - "**/node_modules/"
   - "lib/"

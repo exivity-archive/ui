@@ -1,8 +1,7 @@
 import { ExpandableItem } from '../useExpandable'
-import { AnyObject } from '../../utils/types'
 
 export function distanceBetweenEvenLevelItem (
-  data: ExpandableItem<AnyObject<any> & { attributes: { level: number } }>[],
+  data: ExpandableItem<{ attributes: { level: number } }>[],
   index: number
 ) {
   if (data.length === 0) {

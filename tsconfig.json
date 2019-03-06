@@ -15,7 +15,10 @@
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+<<<<<<< HEAD
     "declaration": true,
+=======
+>>>>>>> master
     "jsx": "preserve",
     "noEmit": true,
     "allowJs": false,

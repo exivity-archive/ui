@@ -9,18 +9,18 @@ const WidgetTitle = styled.h4`
   color: ${props => props.theme.colours.blue};
 `
 
-interface IWidgetSubTitleProps {
+interface WidgetSubTitleProps {
   theme: Theme
 }
 
 const WidgetSubTitle = styled.span`
-  color: ${(props: IWidgetSubTitleProps) => props.theme.colours.gray};
+  color: ${(props: WidgetSubTitleProps) => props.theme.colours.gray};
   font-size: 0.8em;
   padding-left: 10px;
   font-weight: 500;
 `
 
-interface IWidget {
+interface WidgetProps {
   className?: string
   children: React.ReactNode
   title?: string
@@ -28,7 +28,7 @@ interface IWidget {
   theme: Theme
 }
 
-const Widget: React.FC<IWidget> = ({ className, children, title, subTitle }) => (
+const PlainWidget: React.FC<WidgetProps> = ({ className, children, title, subTitle }) => (
   <div className={className}>
     {title &&
     <WidgetTitle>
@@ -39,13 +39,14 @@ const Widget: React.FC<IWidget> = ({ className, children, title, subTitle }) => 
   </div>
 )
 
-export default styled(Widget)`
+const Widget = styled(PlainWidget)`
   background: white;
   box-shadow: 2px 2px 0 lightblue;
-  padding: 20px;
-  padding-bottom: 100px;
+  padding: 20px 20px 100px;
   position: relative;
   box-sizing: border-box;
   border-radius: 3px;
   width: 100%;
 `
+
+export default Widget

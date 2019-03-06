@@ -1,15 +1,16 @@
 import React from 'react'
 import { FixedSizeList } from 'react-window'
 
+// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { useExpandable } from './useExpandable'
 import Button from '../Button'
 import ExpandableSpacer, { distanceBetweenEvenLevelItem } from './ExpandableSpacer'
-import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
+import useExpandable from './useExpandable'
+import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
-const getParent = (item) => item.parentId
+const getParent = (item: FakeRecord) => item.parentId
 
 const ExpandableList = ({ item }) => {
   const data = useExpandable(FLAT_LIST_TEST_DATA, getParent)
@@ -21,11 +22,17 @@ const ExpandableList = ({ item }) => {
   )
 }
 
-export default storiesOf('List hooks', module)
-  .add('useExpandable', () => <ExpandableList item={Item} />)
-  .add('expandable spacer', () => <ExpandableList item={ItemWithSpacer} />)
+export default storiesOf('helpers|useExpandable', module)
+  .add('default', () => <ExpandableList item={Item} />)
+  .add('with spacer', () => <ExpandableList item={ItemWithSpacer} />)
 
-const Item = ({ data, index, style }) => {
+interface ItemProps {
+  data: (FakeRecord & { expand: () => void, expanded: boolean, index: number })[],
+  index: number,
+  style: object
+}
+
+const Item = ({ data, index, style }: ItemProps) => {
   const item = data[index]
   const space = new Array(item.attributes.level)
 
@@ -39,7 +46,7 @@ const Item = ({ data, index, style }) => {
   )
 }
 
-const ItemWithSpacer = ({ data, index, style }) => {
+const ItemWithSpacer = ({ data, index, style }: ItemProps) => {
   const item = data[index]
   return (
     <div style={style}>

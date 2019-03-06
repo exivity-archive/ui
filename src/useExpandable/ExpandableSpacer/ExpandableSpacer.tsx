@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { fromTheme } from '../../utils/theme'
+import { fromTheme } from '../../defaultTheme/theme'
 
 interface ExpandableSpacerProps {
   length: number

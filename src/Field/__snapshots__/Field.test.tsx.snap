@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default Field 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c0:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c0 .c1 {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c0 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`renders default Field.Container 1`] = `null`;
