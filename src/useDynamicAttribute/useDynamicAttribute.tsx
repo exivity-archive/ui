@@ -34,10 +34,8 @@ export function useDynamicAttribute<
 
   useMemo(() => {
     const newItems = mapItems(data)
-    console.log('memo')
     setFlatlistItems(newItems)
   }, [data])
 
-  console.log('render')
   return flatListItems
 }
