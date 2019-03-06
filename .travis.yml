@@ -18,6 +18,8 @@ jobs:
     - stage: test
       name: "lint"
       script: yarn lint
+    - name: "sonar"
+      script: sonar-scanner
     - name: "build"
       script: yarn lib:build
     - name: "test"
@@ -39,3 +41,7 @@ jobs:
         - yarn build
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ./.npmrc
       script: bash scripts/release-and-publish-from-travis.sh
+
+addons:
+  sonarcloud:
+    organization: "exivity"
