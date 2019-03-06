@@ -16,7 +16,7 @@ interface Expandable {
   expand (): void
 }
 
-type ExpandableItem<T> = Expandable & ExpandedItem<T>
+export type ExpandableItem<T> = Expandable & ExpandedItem<T>
 
 type ParentKeyAccessor<T> = (mapItem: ListItem<T>) => string | null
 

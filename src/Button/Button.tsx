@@ -30,6 +30,7 @@ export const Button = styled.button <ButtonProps>`
   color: ${fromTheme(theme => theme.colours.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
+  z-index: 2;
   text-transform: uppercase;
   display: inline-flex;
   position: relative;
