@@ -47,6 +47,7 @@ interface IDropdownProps {
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
+  breakDistance: number
 }
 
 interface ILayout {
@@ -54,42 +55,45 @@ interface ILayout {
   vertical: Vertical,
 }
 
+const elementCrossedEdge = (absolutePosition: number, elementDimension: number, edge: number) => {
+  return absolutePosition + elementDimension > edge
+}
+
 const Dropdown: React.FC<IDropdownProps> = ({
-  className,
-  button,
-  children,
-  open,
-  vertical = 'auto',
-  horizontal = 'auto'
-}) => {
+      className,
+      button,
+      children,
+      open,
+      horizontal = 'auto',
+      vertical = 'auto',
+      breakDistance = 20
+    }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const dropdownContentRef = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState<IPosition>({})
 
   const handlePosition = () => {
-    if ((vertical === 'auto' || horizontal === 'auto') && dropdownContentRef.current && dropdownRef.current) {
-      const dropdownRect = dropdownRef.current.getBoundingClientRect()
-      const dropdownContentRect = dropdownContentRef.current.getBoundingClientRect()
+    if (!dropdownContentRef.current || !dropdownRef.current) return
 
-      const breakDistance = 20
-      const layout: Partial<ILayout> = {}
+    const outer = dropdownRef.current.getBoundingClientRect()
+    const inner = dropdownContentRef.current.getBoundingClientRect()
 
-      if (vertical === 'auto') {
-        const closeToBottomBound = dropdownRect.bottom + dropdownContentRect.height > window.innerHeight - breakDistance
-        layout.vertical = closeToBottomBound ? 'top' : 'bottom'
-      } else {
-        layout.vertical = vertical
-      }
-      if (horizontal === 'auto') {
-        const closeToRightBound = dropdownRect.left + dropdownContentRect.width > window.innerWidth - breakDistance
-        layout.horizontal = closeToRightBound ? 'left' : 'right'
-      } else {
-        layout.horizontal = horizontal
-      }
+    const layout: Partial<ILayout> = { horizontal, vertical }
 
+    if (vertical === 'auto') {
+      layout.vertical = elementCrossedEdge(outer.bottom, inner.height, window.innerHeight - breakDistance)
+        ? 'top' : 'bottom'
+    }
+
+    if (horizontal === 'auto') {
+      layout.horizontal = elementCrossedEdge(outer.left, inner.width, window.innerWidth - breakDistance)
+        ? 'left' : 'right'
+    }
+
+    if (vertical === 'auto' || horizontal === 'auto') {
       setPosition({
         [layout.horizontal === 'left' ? 'right' : 'left']: 0,
-        [layout.vertical === 'top' ? 'bottom' : 'top']: dropdownRect.height
+        [layout.vertical === 'top' ? 'bottom' : 'top']: outer.height
       })
     }
   }
@@ -109,7 +113,6 @@ const Dropdown: React.FC<IDropdownProps> = ({
         ref={dropdownContentRef}
         {...position}
         open={open}>
-
         {children}
       </ Content>
     </div>

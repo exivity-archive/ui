@@ -5,13 +5,12 @@ import { withState } from '../utils/testing/decorators/StateDecorator'
 import { storeAndAction } from '../utils/testing/storeAndAction'
 import TextInput from './TextInput'
 import Checkbox from '../Checkbox'
-import Label from '../Label'
 import Dropdown from '../Dropdown'
 
 const Row = styled.div`
   display: grid;
-  grid-gap: 40px;
-  grid-template-columns: repeat(10, fit-content(200px));
+  grid-gap: 20px;
+  grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
 `
 
 export default storiesOf('forms|TextInput', module)
@@ -20,29 +19,23 @@ export default storiesOf('forms|TextInput', module)
     placeholder='Type something...'
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('purposes', () => <Row>
-    <TextInput primary value='Primary'/>
-    <TextInput secondary value='Secondary'/>
-    <TextInput success value='Success'/>
-    <TextInput danger value='Danger'/>
-  </Row>)
+  .add('outlined', () => <TextInput outlined value='Outlined' />)
+  .add('purposes', () => <Row columns={4}>
+      <TextInput primary value='Primary' />
+      <TextInput secondary value='Secondary' />
+      <TextInput success value='Success' />
+      <TextInput danger value='Danger' />
+      <TextInput outlined primary value='Primary' />
+      <TextInput outlined secondary value='Secondary' />
+      <TextInput outlined success value='Success' />
+      <TextInput outlined danger value='Danger' />
+    </Row>)
   .add('sizes', () => <Row>
-    <TextInput small value='Small'/>
-    <TextInput value='Default'/>
-    <TextInput large value='Large'/>
+    <TextInput small value='Small' />
+    <TextInput value='Default' />
+    <TextInput large value='Large' />
   </Row>)
-  .add('TextInput with label', ({ state, storeState }) => {
-    return (
-      <div>
-        <Label name='Important field1'>
-          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')} />
-        </Label>
-        <Label name='Important field2' description='This field is very important'>
-          <TextInput value={state} onChange={storeAndAction(storeState, 'typing')} />
-        </Label>
-      </div>
-    )
-  })
+  .add('disabled', () => <TextInput disabled value='Disabled' />)
 
 storiesOf('Checkbox', module)
   .addDecorator(withState(true))

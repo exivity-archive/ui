@@ -38,9 +38,11 @@ const theme = {
     textColor: palette.dark,
     textColorMuted: palette.gray,
     lineHeight: 1.5,
-    borderRadius: '4px',
-    borderWidth: '1px',
-    outlineWidth: '4px',
+    borderRadius: 4, // px
+    borderWidth: 1, // px
+    outlineWidth: 4, // px
+    outlineAlpha: 0.15,
+    shadowAlpha: 0.1,
     spacing: preciseEm(1.25), // 20px
     purposes: {
       primary: palette.blue,

@@ -25,10 +25,10 @@ const InputIcon = styled(Icon)<SelectInputProps>`
 `
 
 export const SelectInput: React.FC<SelectInputProps> = ({ small, large, ...rest }) => (
-  <StyledInput as={StyledContainer}>
+  <StyledContainer>
     <StyledSelectInput value='hallo' onChange={console.log} disabled large={large} small={small}/>
     <InputIcon large={large} small={small}><MdKeyboardArrowDown/></InputIcon>
-  </StyledInput>
+  </StyledContainer>
 )
 
 const StyledSelectInput = styled(StyledInput)`

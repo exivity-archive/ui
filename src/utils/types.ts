@@ -1,3 +1,5 @@
+import React, { useRef, useState } from 'react'
+
 export type primitive = string | number | boolean | undefined | null
 
 export type DeepReadonly <T> = T extends primitive ? T : DeepReadonlyObject<T>
@@ -8,4 +10,10 @@ export type DeepReadonlyObject<T> = {
 
 export interface AnyObject<T> {
   [key: string]: T | AnyObject<T>
+}
+
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+
+export type ObjectOf<T> = {
+  [key: string]: T
 }

@@ -36,7 +36,7 @@ export interface ICheckboxProps {
   className?: string
 }
 
-export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
+export const PlainCheckbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
   return (
     <CheckboxWrapper checked={checked}>
       <input
@@ -56,7 +56,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className
   )
 }
 
-export default styled(Checkbox)`
+const Checkbox = styled(PlainCheckbox)`
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -74,3 +74,5 @@ export default styled(Checkbox)`
     outline:0;
   }
 `
+
+export default Checkbox
