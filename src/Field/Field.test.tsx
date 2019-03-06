@@ -13,3 +13,8 @@ test('renders default Field.Container', () => {
   const component = renderer.create(<Field.Container />)
   expect(component.toJSON()).toMatchSnapshot()
 })
+
+test('renders Field.Container containing children', () => {
+  const component = renderer.create(<Field.Container><div/></Field.Container>)
+  expect(component.toJSON()).toMatchSnapshot()
+})
