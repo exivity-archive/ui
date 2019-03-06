@@ -5,10 +5,7 @@ import { MdFavorite } from 'react-icons/md'
 import styled from 'styled-components'
 
 import Icon from '../Icon'
-import Button from './Button'
-
-// import { MdFavorite, MdSync } from 'react-icons/md'
-// import Icon from './../Icon'
+import { Button, RoundButton } from '.'
 
 const Row = styled.div`
   display: grid;
@@ -37,3 +34,4 @@ storiesOf('atoms|Button', module)
   </Row>)
   .add('icon', () => <Button><Icon><MdFavorite /></Icon> Favorite</Button>)
   .add('disabled', () => <Button disabled>Disabled</Button>)
+  .add('round', () => <RoundButton>Round</RoundButton>)

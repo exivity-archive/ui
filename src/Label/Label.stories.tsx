@@ -1,6 +1,7 @@
 import React from 'react'
-import Label from './Label'
+import { Label } from '.'
 
+// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 export default storiesOf('atoms|Label', module)

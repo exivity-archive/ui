@@ -12,5 +12,3 @@ export const Icon = styled.span <IconProps>`
 `
 
 Icon.defaultProps = defaultStyledProps
-
-export default Icon

@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 
-import TextArea from './'
+import { TextArea } from '.'
 
 test('TextArea snapshot', () => {
   const textArea = renderer.create(<TextArea onChange={jest.fn()} />)

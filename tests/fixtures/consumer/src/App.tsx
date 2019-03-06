@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react'
 import ThemeAndFontProvider from '@exivity/ui/ThemeProvider'
-import TextInput from '@exivity/ui/TextInput'
+import { TextInput } from '@exivity/ui'
 
 class App extends Component {
   render () {

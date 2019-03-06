@@ -2,7 +2,7 @@ import { mount, shallow } from 'enzyme'
 import 'jest-styled-components'
 import * as React from 'react'
 
-import Dropdown from '.'
+import { Dropdown } from '.'
 
 //  @todo test position
 test('renders dropdown', () => {

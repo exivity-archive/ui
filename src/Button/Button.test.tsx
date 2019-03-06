@@ -2,7 +2,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Button from '.'
+import { Button } from '.'
 
 test('renders basic button', () => {
   const button = renderer.create(<Button />)

@@ -10,7 +10,7 @@ interface TextInputProps extends InputProps {
   onChange: (value: string, event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export const TextInput: React.FC<TextInputProps & OmitOnChange> = ({ onChange, ...rest }) => (
+export const PlainTextInput: React.FC<TextInputProps & OmitOnChange> = ({ onChange, ...rest }) => (
   <input
     type='text'
     onChange={(event) => onChange(event.target.value, event)}
@@ -18,14 +18,12 @@ export const TextInput: React.FC<TextInputProps & OmitOnChange> = ({ onChange, .
   />
 )
 
-const StyledTextInput = styled(TextInput)`
+export const TextInput = styled(PlainTextInput)`
   ${globalInput};
 `
 
-StyledTextInput.defaultProps = {
+TextInput.defaultProps = {
   ...defaultStyledProps,
   value: '',
   secondary: true
 }
-
-export default StyledTextInput

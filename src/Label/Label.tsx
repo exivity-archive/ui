@@ -12,7 +12,7 @@ const secondary = css`
   color: ${props => props.theme.global.textColorMuted};
 `
 
-const Label = styled.label <LabelProps>`
+export const Label = styled.label <LabelProps>`
   ${globalFont}
 
   ${props => props.secondary && secondary}
@@ -23,5 +23,3 @@ const Label = styled.label <LabelProps>`
 `
 
 Label.defaultProps = defaultStyledProps
-
-export default Label

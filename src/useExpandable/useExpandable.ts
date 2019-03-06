@@ -115,7 +115,7 @@ export function enrichItems<T> (
   return list as ExpandableItem<T>[]
 }
 
-export default function useExpandable<T> (
+export function useExpandable<T> (
   data: ListItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>,
   expanded: boolean | ExpandedCallback<T> = false

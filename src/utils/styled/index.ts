@@ -1,6 +1,6 @@
 import color from 'color'
 import { css } from 'styled-components'
-import theme, { Theme } from '../../defaultTheme/theme'
+import { lightTheme, Theme } from '../../themes'
 
 type ThemeResolver = (theme: Theme) => any
 
@@ -13,7 +13,7 @@ export interface StyledProps {
   theme: Theme
 }
 
-export const defaultStyledProps = { theme }
+export const defaultStyledProps = { theme: lightTheme }
 
 export default defaultStyledProps
 

@@ -2,7 +2,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Field from '.'
+import { Field } from '.'
 
 test('renders default Field', () => {
   const component = renderer.create(<Field />)

@@ -2,14 +2,14 @@ import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
-import StyledDropdown from '../Dropdown'
+import { Dropdown } from '.'
 
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState(false))
   .add('default', ({ state, storeState }: any) => {
     return (
       <div style={{ padding: '300px 0' }}>
-        <StyledDropdown
+        <Dropdown
           open={state}
           button={
             <div onClick={() => storeState(!state)}>Click me</div>
@@ -23,7 +23,7 @@ storiesOf('molecules|Dropdown', module)
             It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
           </div>
-        </StyledDropdown>
+        </Dropdown>
       </div>
     )
   })

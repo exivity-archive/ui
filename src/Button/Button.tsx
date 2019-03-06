@@ -19,7 +19,7 @@ export interface ButtonProps extends StyledProps {
   outlined?: boolean
 }
 
-export const Button = styled.button <ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   font-family: ${props => props.theme.global.fontFamily};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
@@ -109,5 +109,3 @@ Button.defaultProps = {
   ...defaultStyledProps,
   primary: true
 }
-
-export default Button

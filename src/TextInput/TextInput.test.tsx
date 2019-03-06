@@ -2,7 +2,7 @@ import { mount } from 'enzyme'
 import renderer from 'react-test-renderer'
 import * as React from 'react'
 
-import TextInput from '.'
+import { TextInput } from '.'
 
 test('TextInput snapshot', () => {
   const textInput = renderer.create(<TextInput onChange={jest.fn()} />)
