@@ -56,7 +56,7 @@ export const PlainCheckbox: React.FC<ICheckboxProps> = ({ checked, onClick, clas
   )
 }
 
-const Checkbox = styled(PlainCheckbox)`
+export const Checkbox = styled(PlainCheckbox)`
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -74,5 +74,3 @@ const Checkbox = styled(PlainCheckbox)`
     outline:0;
   }
 `
-
-export default Checkbox

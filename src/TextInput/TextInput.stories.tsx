@@ -4,9 +4,9 @@ import styled, { css } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
-import TextInput from './TextInput'
+import { TextInput } from '.'
 
-const Row = styled.div<{ columns?: number }>`
+const Row = styled.div<{ columns?: number | false }>`
   display: grid;
   grid-gap: 20px;
   ${props => props.columns !== false && css`
@@ -14,7 +14,7 @@ const Row = styled.div<{ columns?: number }>`
   `}
 `
 
-export default storiesOf('forms|TextInput', module)
+storiesOf('forms|TextInput', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'

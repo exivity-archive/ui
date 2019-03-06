@@ -4,9 +4,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
-import TextArea from './TextArea'
+import { TextArea } from '.'
 
-export default storiesOf('forms|TextArea', module)
+storiesOf('forms|TextArea', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }: any) => <TextArea
     rows={5}

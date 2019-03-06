@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { Theme } from '../defaultTheme/theme'
+import { Theme } from '../themes'
 import { fromTheme } from '../utils/styled'
 
 const WidgetTitle = styled.h4`
@@ -29,7 +29,7 @@ interface WidgetProps {
   theme: Theme
 }
 
-const PlainWidget: React.FC<WidgetProps> = ({ className, children, title, subTitle }) => (
+export const PlainWidget: React.FC<WidgetProps> = ({ className, children, title, subTitle }) => (
   <div className={className}>
     {title &&
     <WidgetTitle>
@@ -40,7 +40,7 @@ const PlainWidget: React.FC<WidgetProps> = ({ className, children, title, subTit
   </div>
 )
 
-const Widget = styled(PlainWidget)`
+export const Widget = styled(PlainWidget)`
   background: white;
   box-shadow: 2px 2px 0 lightblue;
   padding: 20px 20px 100px;
@@ -49,5 +49,3 @@ const Widget = styled(PlainWidget)`
   border-radius: 3px;
   width: 100%;
 `
-
-export default Widget

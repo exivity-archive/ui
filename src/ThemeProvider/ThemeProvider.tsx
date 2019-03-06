@@ -2,8 +2,7 @@ import React from 'react'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 // @ts-ignore
 import WebfontLoader from '@dr-kobros/react-webfont-loader'
-
-import defaultTheme, { Theme } from '../defaultTheme/theme'
+import { lightTheme, Theme } from '../themes'
 
 interface ThemeProviderProps {
   theme?: Theme
@@ -11,8 +10,8 @@ interface ThemeProviderProps {
   children?: any
 }
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  theme = defaultTheme,
+export const ThemeProvider: React.FC<ThemeProviderProps> = ({
+  theme = lightTheme,
   onFontStatus,
   children
 }) => (
@@ -22,5 +21,3 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
     </WebfontLoader>
   </StyledThemeProvider>
 )
-
-export default ThemeProvider

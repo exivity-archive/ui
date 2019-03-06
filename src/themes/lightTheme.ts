@@ -1,21 +1,9 @@
 import { preciseEm } from '../utils/styled/isolated'
-import { DeepReadonly } from '../utils/types'
+import { palette } from './palette'
 
 export const BASE_SIZE = 16
 
-const palette = {
-  black: '#000',
-  dark: '#222',
-  gray: '#999',
-  lightGray: '#eee',
-  white: '#fff',
-  blue: '#00a8d8',
-  red: '#ef5350',
-  yellow: '#fff68c',
-  green: '#4caf50'
-}
-
-const theme = {
+export const lightTheme = {
   fonts: {
     custom: {
       families: [],
@@ -59,7 +47,3 @@ const theme = {
     ...palette
   }
 }
-
-export type Theme = DeepReadonly<typeof theme>
-
-export default theme

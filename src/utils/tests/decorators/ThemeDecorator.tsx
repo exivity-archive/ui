@@ -1,8 +1,8 @@
 import * as React from 'react'
-import ThemeAndFontProvider from '../../../ThemeProvider/ThemeProvider'
+import { ThemeProvider } from '../../../ThemeProvider'
 
 export const ThemeDecorator = (storyFn: any) => (
-  <ThemeAndFontProvider>
+  <ThemeProvider>
     {storyFn()}
-  </ThemeAndFontProvider>
+  </ThemeProvider>
 )

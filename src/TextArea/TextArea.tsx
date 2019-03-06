@@ -10,11 +10,11 @@ interface TextAreaProps extends InputProps {
   width?: string
 }
 
-export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
+export const PlainTextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
   <textarea onChange={(event) => onChange(event.target.value, event)} {...rest}/>
 )
 
-const StyledTextArea = styled(TextArea)`
+export const TextArea = styled(PlainTextArea)`
   ${globalInput};
 
   ${props => props.width && css`
@@ -22,10 +22,8 @@ const StyledTextArea = styled(TextArea)`
   `}
 `
 
-StyledTextArea.defaultProps = {
+TextArea.defaultProps = {
   ...defaultStyledProps,
   value: '',
   secondary: true
 }
-
-export default StyledTextArea

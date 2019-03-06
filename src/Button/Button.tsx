@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 import { defaultStyledProps, fromTheme, hexToString, matchThemeProp, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
@@ -19,7 +19,7 @@ export interface ButtonProps extends StyledProps {
   outlined?: boolean
 }
 
-export const Button = styled.button <ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
@@ -109,5 +109,3 @@ Button.defaultProps = {
   ...defaultStyledProps,
   primary: true
 }
-
-export default Button

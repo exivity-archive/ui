@@ -3,7 +3,7 @@ import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 
-import Widget from './Widget'
+import { Widget } from '.'
 
 storiesOf('molecules|Widget', module)
   .add('default',

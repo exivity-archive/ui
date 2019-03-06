@@ -2,7 +2,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Icon from './Icon'
+import { Icon } from '.'
 
 test('renders basic icon', () => {
   const button = renderer.create(<Icon/>)
