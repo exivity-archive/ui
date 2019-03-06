@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FixedSizeList } from 'react-window'
 
 import { storiesOf } from '@storybook/react'
@@ -45,10 +45,10 @@ const ItemWithSpacer = ({ data, index, style }) => {
     <div style={style}>
       <ExpandableSpacer
         level={item.attributes.level}
-        button={<Button onClick={() => {
+        button={<Button style={{ zIndex: 2 }} onClick={() => {
           item.expand()
           action('expand')(item)
-        }} />}
+        }}>Expand</Button>}
         index={index}
         length={data.length}
         distance={distanceBetweenEvenLevelItem(data, index)}>
