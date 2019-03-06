@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Heading with different levels 1`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+<h1
+  className="c0"
+/>
+`;
+
+exports[`renders Heading with different levels 2`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+<h2
+  className="c0"
+/>
+`;
+
+exports[`renders Heading with different levels 3`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+<h3
+  className="c0"
+/>
+`;
+
+exports[`renders Heading with text 1`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+<h1
+  className="c0"
+>
+  Heading
+</h1>
+`;
+
+exports[`renders Heading without props 1`] = `
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+<h1
+  className="c0"
+/>
+`;
