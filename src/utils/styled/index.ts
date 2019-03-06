@@ -15,8 +15,6 @@ export interface StyledProps {
 
 export const defaultStyledProps = { theme: lightTheme }
 
-export default defaultStyledProps
-
 export interface InputProps extends StyledProps {
   outlined?: boolean
 

@@ -10,5 +10,3 @@ export const StateContainer: React.FC<StateContainerProps> = ({ initialState = {
 
   return children(state, setState)
 }
-
-export default StateContainer

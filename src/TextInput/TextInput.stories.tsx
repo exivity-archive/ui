@@ -14,7 +14,7 @@ const Row = styled.div<{ columns?: number | false }>`
   `}
 `
 
-export default storiesOf('forms|TextInput', module)
+storiesOf('forms|TextInput', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
