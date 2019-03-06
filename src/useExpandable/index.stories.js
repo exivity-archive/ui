@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { FixedSizeList } from 'react-window'
 
 import { storiesOf } from '@storybook/react'
