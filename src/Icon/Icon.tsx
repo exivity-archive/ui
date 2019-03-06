@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { defaultStyledProps, StyledProps } from '../utils/styled'
+import { defaultStyledProps, fromTheme, StyledProps } from '../utils/styled'
 
 export interface IconProps extends StyledProps {}
 
 export const Icon = styled.span <IconProps>`
-  font-size: ${props => props.theme.global.baseSize}px;
+  font-size: ${fromTheme(theme => theme.global.baseSize)}px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
