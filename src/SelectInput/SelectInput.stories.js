@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/testing/decorators/StateDecorator'
-import { storeAndAction } from '../utils/testing/storeAndAction'
+import { withState } from '../utils/tests/decorators/StateDecorator'
+import { storeAndAction } from '../utils/tests/storeAndAction'
 
 import SelectInput from './'
 

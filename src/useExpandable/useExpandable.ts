@@ -132,5 +132,3 @@ export function useExpandable<T> (
   const enriched = enrichItems<T>(list, setList)
   return getVisibleItems<T>(enriched)
 }
-
-export { iterateAllChildren, iterateAllParents } from './helpers'

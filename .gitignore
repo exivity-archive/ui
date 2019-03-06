@@ -17,6 +17,7 @@ yarn-error.log
 
 # ide/os
 /.idea
+/.vscode
 .DS_Store
 /.vscode
 

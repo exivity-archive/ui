@@ -4,17 +4,15 @@ import { FieldProps } from './Field'
 type FieldElement = FunctionComponentElement<any>
 
 interface ContainerProps extends FieldProps {
-  children: FieldElement | FieldElement[]
+  children?: FieldElement | FieldElement[]
 }
 
-const Container: React.FC<ContainerProps> = ({ children, ...otherProps }) => {
-  return <>
+export const Container: React.FC<ContainerProps> = ({ children, ...otherProps }) => {
+  return children ? <div>
     {React.Children.map(children, (child: FieldElement) => {
       return React.cloneElement(child, otherProps)
     })}
-  </>
+  </div> : null
 }
 
 Container.displayName = 'Field.Container'
-
-export default Container

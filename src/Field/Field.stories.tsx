@@ -1,11 +1,10 @@
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import Checkbox from '../Checkbox'
-
-import Field from './Field'
-import TextInput from './../TextInput'
-import Label from './../Label'
+import { Checkbox } from '../Checkbox'
+import { Field } from '.'
+import { TextInput } from '../TextInput'
+import { Label } from '../Label'
 
 storiesOf('forms|Field', module)
   .add('default', () => <Field>
@@ -21,7 +20,7 @@ storiesOf('forms|Field', module)
     <TextInput id='username' placeholder='Please type username' />
   </Field>)
   .add('multiple', () => <React.Fragment>
-    <Field.Container>
+    <Field.Container style={{ marginBottom: '20px' }}>
       <Field>
         <Label htmlFor='username'>Username</Label>
         <TextInput id='username' placeholder='Please type username' />

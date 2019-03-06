@@ -1,6 +1,6 @@
 {
   "name": "@exivity/ui",
-  "version": "0.3.3",
+  "version": "0.4.2",
   "description": "A collection of components to build interfaces",
   "keywords": [
     "exivity",
@@ -23,6 +23,7 @@
   "main": "index.js",
   "module": "index.js",
   "scripts": {
+    "create-component": "node scripts/create-component.js",
     "lint": "tslint 'src/**/*.ts?'",
     "lint:fix": "tslint 'src/**/*.ts?' --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
@@ -74,7 +75,9 @@
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{ts,tsx}",
-      "!<rootDir>/src/**/*.stories.{ts,tsx}"
+      "!<rootDir>/src/**/*.stories.{ts,tsx}",
+      "!<rootDir>/src/**/stories/**",
+      "!<rootDir>/src/**/tests/**"
     ]
   },
   "publishConfig": {
@@ -87,11 +90,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
-    "@storybook/addon-actions": "^5.0.0-rc.3",
-    "@storybook/addon-links": "^5.0.0-rc.3",
-    "@storybook/addons": "^5.0.0-rc.3",
-    "@storybook/cli": "^5.0.0-rc.3",
-    "@storybook/react": "^5.0.0-rc.3",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/cli": "^5.0.0",
+    "@storybook/react": "^5.0.0",
+    "@storybook/theming": "^5.0.0",
     "@types/color": "^3.0.0",
     "@types/enzyme": "^3.1.18",
     "@types/enzyme-adapter-react-16": "^1.0.4",
@@ -122,7 +126,7 @@
     "react-test-renderer": "^16.8.2",
     "react-window": "^1.5.2",
     "rimraf": "^2.6.2",
-    "standard-version": "^4.4.0",
+    "standard-version": "^5.0.1",
     "tslint": "^5.12.1",
     "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3"

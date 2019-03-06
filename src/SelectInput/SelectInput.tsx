@@ -1,10 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { matchThemeProp, globalInput } from '../utils/theme'
+import { matchThemeProp, globalInput } from '../utils/styled'
 
 import { StyledInput } from '../TextInput/TextInput'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 
 interface SelectInputProps {
   large?: boolean

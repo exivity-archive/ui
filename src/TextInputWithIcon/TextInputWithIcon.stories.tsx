@@ -1,35 +1,41 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+// @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/testing/decorators/StateDecorator'
-import { storeAndAction } from '../utils/testing/storeAndAction'
+import { withState } from '../utils/tests/decorators/StateDecorator'
+import { storeAndAction } from '../utils/tests/storeAndAction'
+import { MdVerifiedUser } from 'react-icons/md'
+import { TextInputWithIcon } from '.'
 
-const Row = styled.div`
+const Row = styled.div<{ columns?: number | false }>`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
+  ${props => props.columns !== false && css`
+    grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
+  `}
 `
 
-export default storiesOf('forms|TextInput', module)
+storiesOf('forms|TextInputWithIcon', module)
   .addDecorator(withState(''))
-  .add('default', ({ state, storeState }) => <TextInput
+  .add('default', ({ state, storeState }: any) => <TextInputWithIcon
+    icon={<MdVerifiedUser/>}
     placeholder='Type something...'
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('outlined', () => <TextInput outlined value='Outlined' />)
+  .add('outlined', () => <TextInputWithIcon icon={<MdVerifiedUser/>} outlined value='Outlined' />)
   .add('purposes', () => <Row columns={4}>
-    <TextInput primary value='Primary' />
-    <TextInput secondary value='Secondary' />
-    <TextInput success value='Success' />
-    <TextInput danger value='Danger' />
-    <TextInput outlined primary value='Primary' />
-    <TextInput outlined secondary value='Secondary' />
-    <TextInput outlined success value='Success' />
-    <TextInput outlined danger value='Danger' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} primary value='Primary' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} secondary value='Secondary' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} success value='Success' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} danger value='Danger' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} outlined primary value='Primary' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} outlined secondary value='Secondary' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} outlined success value='Success' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} outlined danger value='Danger' />
   </Row>)
-  .add('sizes', () => <Row>
-    <TextInput small value='Small' />
-    <TextInput value='Default' />
-    <TextInput large value='Large' />
+  .add('sizes', () => <Row columns={false}>
+    <TextInputWithIcon icon={<MdVerifiedUser/>} small value='Small' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} value='Default' />
+    <TextInputWithIcon icon={<MdVerifiedUser/>} large value='Large' />
   </Row>)
-  .add('disabled', () => <TextInput disabled value='Disabled' />)
+  .add('disabled', () => <TextInputWithIcon icon={<MdVerifiedUser/>} disabled value='Disabled' />)

@@ -1,7 +1,7 @@
 import { mount, shallow } from 'enzyme'
 import * as React from 'react'
 
-import Checkbox from '.'
+import { Checkbox } from '.'
 
 test('renders checkbox', () => {
   const checkbox = shallow(<Checkbox checked onClick={jest.fn()} />)

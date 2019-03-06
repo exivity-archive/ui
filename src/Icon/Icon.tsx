@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, StyledProps } from '../utils/theme'
+import { defaultStyledProps, fromTheme, StyledProps } from '../utils/styled'
 
 export interface IconProps extends StyledProps {}
 
@@ -13,5 +12,3 @@ export const Icon = styled.span <IconProps>`
 `
 
 Icon.defaultProps = defaultStyledProps
-
-export default Icon

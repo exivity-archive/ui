@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Label from '.'
+import { Label } from '.'
 
 test('renders label without props', () => {
   const button = renderer.create(<Label />)

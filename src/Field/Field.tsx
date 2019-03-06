@@ -1,10 +1,9 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
-import Label from '../Label'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, StyledProps } from '../utils/theme'
-import { preciseEm } from '../utils/theme/isolated'
-import Container from './Container'
+import { Label } from '../Label'
+import { defaultStyledProps, fromTheme, StyledProps } from '../utils/styled'
+import { preciseEm } from '../utils/styled/isolated'
+import { Container } from './Container'
 
 const ALIGNED_WIDTH = 20 // em
 
@@ -22,7 +21,7 @@ type FieldType = StyledComponent<'fieldset', any, StyledFieldProps, never> & {
 
 // Would like to use styled.fieldset but can't due to
 // https://github.com/w3c/csswg-drafts/issues/321
-const Field = styled.div<StyledFieldProps>`
+export const Field = styled.div<StyledFieldProps>`
   display: flex;
   flex-direction: ${props => props.horizontal ? 'row' : 'column'};
   align-items: ${props => props.horizontal ? 'center' : 'unset'};
@@ -58,5 +57,3 @@ Field.Container = Container
 Field.defaultProps = defaultStyledProps
 
 Field.displayName = 'Field'
-
-export default Field

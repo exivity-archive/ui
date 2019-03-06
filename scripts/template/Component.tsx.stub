@@ -1,0 +1,15 @@
+import styled from 'styled-components'
+import defaultStyledProps from '../utils/testing/defaultStyledProps'
+import { globalFont, StyledProps } from '../utils/theme'
+
+interface {Component}Props extends StyledProps {
+  someFlag?: boolean
+}
+
+export const {Component} = styled.div<{Component}Props>`
+  ${globalFont};
+
+  color: ${props => props.someFlag ? 'red' : 'green'};
+`
+
+{Component}.defaultProps = defaultStyledProps

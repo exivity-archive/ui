@@ -1,7 +1,6 @@
 import React, { ChangeEvent, InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { globalInput, InputProps } from '../utils/theme'
+import { defaultStyledProps, globalInput, InputProps } from '../utils/styled'
 import { Omit } from '../utils/types'
 
 type OmitOnChange = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
@@ -27,5 +26,3 @@ TextInput.defaultProps = {
   ...defaultStyledProps,
   value: ''
 }
-
-export default TextInput
