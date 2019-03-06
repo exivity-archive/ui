@@ -30,7 +30,7 @@ const Item = ({ data, index, style }) => {
     <div key={index} style={style}>
       {item.value}:
       <input type='checkbox' checked={item.checked} onChange={(e) => {
-        item.setChecked(e.target.checked, data)
+        item.setChecked(e.target.checked)
         action(`toggle checkbox for ${item.value}'`, e.target.checked)
       }
       }></input>
