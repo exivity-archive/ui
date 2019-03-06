@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import {matchThemeProp, globalInput, fromTheme} from '../utils/styled'
+import { matchThemeProp, globalInput, fromTheme } from '../utils/styled'
 
 import { StyledInput } from '../TextInput/TextInput'
 import { Icon } from '../Icon'
