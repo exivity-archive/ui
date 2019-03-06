@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import useExpandable from './useExpandable'
-import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
+import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 
 const getParent = (item: FakeRecord) => item.parentId
 
