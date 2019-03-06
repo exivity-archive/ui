@@ -101,7 +101,8 @@ exports[`TextInput snapshot 1`] = `
         "shadowAlpha": 0.1,
         "sizes": Object {
           "large": 1.1875,
-          "small": 0.875,
+          "small": 0.8125,
+          "tiny": 0.6875,
         },
         "spacing": 1.25,
         "textColor": "#222",

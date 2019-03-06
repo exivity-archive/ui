@@ -39,7 +39,8 @@ export const lightTheme = {
       danger: palette.red
     },
     sizes: {
-      small: preciseEm(0.85), // 14px
+      tiny: preciseEm(0.7), // 11px
+      small: preciseEm(0.8), // 13px
       large: preciseEm(1.2) // 18px
     }
   },
