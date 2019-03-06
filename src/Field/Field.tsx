@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import { Label } from '../Label'
-import { defaultStyledProps, StyledProps } from '../utils/styled'
+import { defaultStyledProps, fromTheme, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 import { Container } from './Container'
 
@@ -29,7 +29,7 @@ export const Field = styled.div<StyledFieldProps>`
   white-space: ${props => props.nowrap ? 'nowrap' : 'unset'};
 
   &:not(:last-child) {
-    margin-bottom: ${props => props.theme.global.spacing}em;
+    margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
   }
 
   ${Label} {

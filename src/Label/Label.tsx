@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { defaultStyledProps, globalFont, StyledProps } from '../utils/styled'
+import { defaultStyledProps, fromTheme, globalFont, StyledProps } from '../utils/styled'
 
 interface LabelProps extends StyledProps {
   secondary?: boolean
@@ -8,8 +8,8 @@ interface LabelProps extends StyledProps {
 
 const secondary = css`
   display: block;
-  font-size: ${props => props.theme.global.sizes.small}em;
-  color: ${props => props.theme.global.textColorMuted};
+  font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
+  color: ${fromTheme(theme => theme.global.textColorMuted)};
 `
 
 export const Label = styled.label <LabelProps>`

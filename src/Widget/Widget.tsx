@@ -1,12 +1,13 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { Theme } from '../themes'
+import { fromTheme } from '../utils/styled'
 
 const WidgetTitle = styled.h4`
   letter-spacing: -0.025em;
   font-weight: 700;
   font-size: 22px;
-  color: ${props => props.theme.colours.blue};
+  color: ${fromTheme(theme => theme.colours.blue)};
 `
 
 interface WidgetSubTitleProps {
