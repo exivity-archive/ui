@@ -7,8 +7,12 @@ import { action } from '@storybook/addon-actions'
 import useDynamicAttribute from '.'
 import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
 
+import useExpandable from '../useExpandable'
+const getParent = (item) => item.parentId
+
 const CheckableList = () => {
-  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', item => item.checked)
+  const data1 = useExpandable(FLAT_LIST_TEST_DATA, getParent)
+  const data = useDynamicAttribute(data1, 'checked', 'setChecked', item => item.checked)
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
