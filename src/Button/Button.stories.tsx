@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { MdFavorite } from 'react-icons/md'
 import styled from 'styled-components'
 
-import Icon from '../Icon'
-import { Button, RoundButton } from '.'
+import { Icon } from '../Icon'
+import { Button } from '.'
 
 const Row = styled.div`
   display: grid;

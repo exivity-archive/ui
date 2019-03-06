@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Icon from '../Icon'
+import { Icon } from '../Icon'
 import { defaultStyledProps, hexToString, matchThemeProp, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
