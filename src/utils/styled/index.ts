@@ -31,6 +31,7 @@ export interface InputProps extends StyledProps {
 
   // Variants
   outlined?: boolean
+  inlined?: boolean
 }
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
@@ -70,7 +71,7 @@ export const globalFont = css`
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
-export const globalInput = css<InputProps & { outlined?: boolean }>`
+export const globalInput = css<InputProps>`
   ${globalFont};
 
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
@@ -89,31 +90,45 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
-  ${props => props.outlined
-    ? css`
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
-      background-color: unset;
+  ${props => (!props.outlined && !props.inlined) && css`
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
+    background-color: ${fromTheme(theme => theme.colours.lightGray)};
 
-      &:hover {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
-      }
+    &:hover {
+      border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+    }
 
-      &:focus {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
-      }
-    `
-    : css `
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
-      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    &:focus {
+      border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+    }
+  `}
 
-      &:hover {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
-      }
+  ${props => props.outlined && css`
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+    background-color: unset;
 
-      &:focus {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
-      }
-    `}
+    &:hover {
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+    }
+
+    &:focus {
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+    }
+  `}
+
+  ${props => props.inlined && css`
+    padding: 0;
+
+    &:hover {
+      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+      outline-offset: 9px;
+    }
+
+    &:focus {
+      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+      outline-offset: 9px;
+    }
+  `}
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
