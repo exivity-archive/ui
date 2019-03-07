@@ -83,6 +83,7 @@ exports[`Storyshots atoms|Button default 1`] = `
 }
 
 .c1 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -183,6 +184,7 @@ exports[`Storyshots atoms|Button disabled 1`] = `
 }
 
 .c1 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -207,7 +209,6 @@ exports[`Storyshots atoms|Button icon 1`] = `
 }
 
 .c3 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -291,42 +292,57 @@ exports[`Storyshots atoms|Button icon 1`] = `
 }
 
 .c1 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c4 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c5 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c6 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c7 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c8 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c9 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c2 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -460,6 +476,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 }
 
 .c2 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -553,6 +570,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 }
 
 .c3 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -646,6 +664,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 }
 
 .c4 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -739,6 +758,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 }
 
 .c5 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -864,6 +884,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 }
 
 .c2 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -945,6 +966,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 }
 
 .c3 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -1026,6 +1048,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 }
 
 .c4 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -1107,6 +1130,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 }
 
 .c5 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -1149,9 +1173,155 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 </div>
 `;
 
-exports[`Storyshots atoms|Button sizes 1`] = `
+exports[`Storyshots atoms|Button round 1`] = `
 .c0 {
   padding: 20px;
+}
+
+.c17 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+}
+
+.c18 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c28 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c2:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c2:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c2:active,
+.c2.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c2:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c2[disabled] {
+  pointer-events: none;
+}
+
+.c2[disabled]:after {
+  display: block;
+}
+
+.c2 .c16 {
+  font-size: 1.5em;
 }
 
 .c3 {
@@ -1194,8 +1364,12 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  background-color: #999;
+  --focus-color: 153,153,153;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
 .c3:hover {
@@ -1231,14 +1405,184 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   display: block;
 }
 
-.c3 .c5 {
-  margin-right: 0.625em;
+.c3 .c16 {
+  font-size: 1.5em;
 }
 
-.c2 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 12.25px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c4:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c4:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c4:active,
+.c4.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c4:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c4[disabled] {
+  pointer-events: none;
+}
+
+.c4[disabled]:after {
+  display: block;
+}
+
+.c4 .c16 {
+  font-size: 1.5em;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #ef5350;
+  --focus-color: 239,83,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c5:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c5:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:active,
+.c5.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c5[disabled] {
+  pointer-events: none;
+}
+
+.c5[disabled]:after {
+  display: block;
+}
+
+.c5 .c16 {
+  font-size: 1.5em;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1277,22 +1621,29 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: #fff;
+  color: #00a8d8;
+  box-shadow: 0 0 0 1px #00a8d8;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
-.c2:hover {
+.c6:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c2:focus {
+.c6:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c2:active,
-.c2.active {
+.c6:active,
+.c6.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c2:after {
+.c6:after {
   display: none;
   content: "";
   position: absolute;
@@ -1304,22 +1655,1383 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c2[disabled] {
+.c6[disabled] {
   pointer-events: none;
 }
 
-.c2[disabled]:after {
+.c6[disabled]:after {
   display: block;
 }
 
-.c2 .c5 {
-  margin-right: 0.625em;
+.c6:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c6:focus {
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c6 .c16 {
+  font-size: 1.5em;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #999;
+  --focus-color: 153,153,153;
+  background-color: #fff;
+  color: #999;
+  box-shadow: 0 0 0 1px #999;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c7:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c7:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c7:active,
+.c7.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c7:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c7[disabled] {
+  pointer-events: none;
+}
+
+.c7[disabled]:after {
+  display: block;
+}
+
+.c7:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c7:focus {
+  box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c7 .c16 {
+  font-size: 1.5em;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+  background-color: #fff;
+  color: #4caf50;
+  box-shadow: 0 0 0 1px #4caf50;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c8:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c8:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:active,
+.c8.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c8[disabled] {
+  pointer-events: none;
+}
+
+.c8[disabled]:after {
+  display: block;
+}
+
+.c8:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c8:focus {
+  box-shadow: 0 0 0 1px #4caf50, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c8 .c16 {
+  font-size: 1.5em;
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #ef5350;
+  --focus-color: 239,83,80;
+  background-color: #fff;
+  color: #ef5350;
+  box-shadow: 0 0 0 1px #ef5350;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c9:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c9:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c9:active,
+.c9.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c9:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c9[disabled] {
+  pointer-events: none;
+}
+
+.c9[disabled]:after {
+  display: block;
+}
+
+.c9:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c9:focus {
+  box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c9 .c16 {
+  font-size: 1.5em;
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.5em;
+}
+
+.c10:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c10:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c10:active,
+.c10.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c10:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c10[disabled] {
+  pointer-events: none;
+}
+
+.c10[disabled]:after {
+  display: block;
+}
+
+.c10 .c16 {
+  font-size: 1.5em;
+}
+
+.c11 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c11:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c11:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c11:active,
+.c11.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c11:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c11[disabled] {
+  pointer-events: none;
+}
+
+.c11[disabled]:after {
+  display: block;
+}
+
+.c11 .c16 {
+  font-size: 1.5em;
+}
+
+.c12 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c12:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c12:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c12:active,
+.c12.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c12:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c12[disabled] {
+  pointer-events: none;
+}
+
+.c12[disabled]:after {
+  display: block;
+}
+
+.c12 .c16 {
+  font-size: 1.5em;
+}
+
+.c13 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  background-color: #fff;
+  color: #00a8d8;
+  box-shadow: 0 0 0 1px #00a8d8;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.5em;
+}
+
+.c13:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c13:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c13:active,
+.c13.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c13:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c13[disabled] {
+  pointer-events: none;
+}
+
+.c13[disabled]:after {
+  display: block;
+}
+
+.c13:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c13:focus {
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c13 .c16 {
+  font-size: 1.5em;
+}
+
+.c14 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  background-color: #fff;
+  color: #00a8d8;
+  box-shadow: 0 0 0 1px #00a8d8;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c14:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c14:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c14:active,
+.c14.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c14:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c14[disabled] {
+  pointer-events: none;
+}
+
+.c14[disabled]:after {
+  display: block;
+}
+
+.c14:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c14:focus {
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c14 .c16 {
+  font-size: 1.5em;
+}
+
+.c15 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  background-color: #fff;
+  color: #00a8d8;
+  box-shadow: 0 0 0 1px #00a8d8;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c15:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c15:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c15:active,
+.c15.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c15:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c15[disabled] {
+  pointer-events: none;
+}
+
+.c15[disabled]:after {
+  display: block;
+}
+
+.c15:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c15:focus {
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c15 .c16 {
+  font-size: 1.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4,fit-content(200px));
+}
+
+<div
+  className="c0"
+>
+  <style>
+    body { margin: 0; }
+  </style>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+    >
+      ☁️
+    </button>
+    <button
+      className="c3"
+    >
+      🔥
+    </button>
+    <button
+      className="c4"
+    >
+      💾
+    </button>
+    <button
+      className="c5"
+    >
+      ❌
+    </button>
+    <button
+      className="c6"
+    >
+      ☁️
+    </button>
+    <button
+      className="c7"
+    >
+      🔥
+    </button>
+    <button
+      className="c8"
+    >
+      💾
+    </button>
+    <button
+      className="c9"
+    >
+      ❌
+    </button>
+    <button
+      className="c10"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c11"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c2"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c12"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c13"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c14"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c6"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c15"
+    >
+      ❤️️
+    </button>
+    <button
+      className="c2"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c3"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c4"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c5"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c6"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c7"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c8"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c9"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="c10"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c11"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c2"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c12"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c13"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c14"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c6"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c15"
+    >
+      <span
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <span />
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms|Button sizes 1`] = `
+.c0 {
+  padding: 20px;
 }
 
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 16.625px;
+  font-size: 14px;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1393,7 +3105,254 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   display: block;
 }
 
-.c4 .c5 {
+.c4 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c2:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c2:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c2:active,
+.c2.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c2:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c2[disabled] {
+  pointer-events: none;
+}
+
+.c2[disabled]:after {
+  display: block;
+}
+
+.c2 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c3:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c3:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c3:active,
+.c3.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c3:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c3[disabled] {
+  pointer-events: none;
+}
+
+.c3[disabled]:after {
+  display: block;
+}
+
+.c3 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c5:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c5:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:active,
+.c5.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c5[disabled] {
+  pointer-events: none;
+}
+
+.c5[disabled]:after {
+  display: block;
+}
+
+.c5 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
@@ -1415,15 +3374,20 @@ exports[`Storyshots atoms|Button sizes 1`] = `
     <button
       className="c2"
     >
-      Small
+      Tiny
     </button>
     <button
       className="c3"
     >
-      Default
+      Small
     </button>
     <button
       className="c4"
+    >
+      Default
+    </button>
+    <button
+      className="c5"
     >
       Large
     </button>
@@ -1437,50 +3401,120 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c2 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
 }
 
 .c3 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c4 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c5 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c6 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c7 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c8 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c9 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c1 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c13 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c1 {
+  font-size: 1.5em;
+}
+
+.c15 .c1 {
+  font-size: 1.5em;
+}
+
+.c16 .c1 {
+  font-size: 1.5em;
+}
+
+.c17 .c1 {
+  font-size: 1.5em;
+}
+
+.c18 .c1 {
+  font-size: 1.5em;
+}
+
+.c19 .c1 {
+  font-size: 1.5em;
+}
+
+.c20 .c1 {
+  font-size: 1.5em;
+}
+
+.c21 .c1 {
+  font-size: 1.5em;
+}
+
+.c22 .c1 {
+  font-size: 1.5em;
+}
+
+.c23 .c1 {
+  font-size: 1.5em;
+}
+
+.c24 .c1 {
+  font-size: 1.5em;
+}
+
+.c25 .c1 {
+  font-size: 1.5em;
+}
+
+.c26 .c1 {
+  font-size: 1.5em;
+}
+
+.c27 .c1 {
+  font-size: 1.5em;
 }
 
 <div
@@ -1528,7 +3562,7 @@ exports[`Storyshots atoms|Label default 1`] = `
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -1621,13 +3655,13 @@ exports[`Storyshots atoms|Label nested 1`] = `
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
 .c3 > .c1 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -1717,7 +3751,7 @@ exports[`Storyshots atoms|Label secondary 1`] = `
 
 .c3 > .c1 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -1728,13 +3762,13 @@ exports[`Storyshots atoms|Label secondary 1`] = `
   color: #222;
   line-height: 1.5;
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -2006,7 +4040,7 @@ exports[`Storyshots forms|Field align 1`] = `
 
 .c3 > .c2 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -2170,7 +4204,7 @@ exports[`Storyshots forms|Field default 1`] = `
 
 .c3 > .c2 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -2302,7 +4336,7 @@ exports[`Storyshots forms|Field horizontal 1`] = `
 
 .c3 > .c2 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -2478,7 +4512,7 @@ exports[`Storyshots forms|Field multiple 1`] = `
 
 .c3 > .c2 {
   display: block;
-  font-size: 0.875em;
+  font-size: 0.8125em;
   color: #999;
 }
 
@@ -2789,43 +4823,114 @@ exports[`Storyshots forms|SelectInput default 1`] = `
 }
 
 .c10 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c19 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c20 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c7 {
+  font-size: 1.5em;
+}
+
+.c22 .c7 {
+  font-size: 1.5em;
+}
+
+.c23 .c7 {
+  font-size: 1.5em;
+}
+
+.c24 .c7 {
+  font-size: 1.5em;
+}
+
+.c25 .c7 {
+  font-size: 1.5em;
+}
+
+.c26 .c7 {
+  font-size: 1.5em;
+}
+
+.c27 .c7 {
+  font-size: 1.5em;
+}
+
+.c28 .c7 {
+  font-size: 1.5em;
+}
+
+.c29 .c7 {
+  font-size: 1.5em;
+}
+
+.c30 .c7 {
+  font-size: 1.5em;
+}
+
+.c31 .c7 {
+  font-size: 1.5em;
+}
+
+.c32 .c7 {
+  font-size: 1.5em;
+}
+
+.c33 .c7 {
+  font-size: 1.5em;
+}
+
+.c34 .c7 {
+  font-size: 1.5em;
 }
 
 .c9 {
@@ -2915,7 +5020,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -3005,43 +5109,114 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
 }
 
 .c9 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
 }
 
 .c5 {
@@ -3169,7 +5344,6 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
 }
 
 .c7 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -3277,43 +5451,114 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
 }
 
 .c8 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c9 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c18 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
 }
 
 .c5 {
@@ -3389,7 +5634,6 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
 }
 
 .c7 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -3498,43 +5742,114 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
 }
 
 .c16 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c19 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c20 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c21 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c22 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c23 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c24 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c25 .c7 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c26 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c7 {
+  font-size: 1.5em;
+}
+
+.c28 .c7 {
+  font-size: 1.5em;
+}
+
+.c29 .c7 {
+  font-size: 1.5em;
+}
+
+.c30 .c7 {
+  font-size: 1.5em;
+}
+
+.c31 .c7 {
+  font-size: 1.5em;
+}
+
+.c32 .c7 {
+  font-size: 1.5em;
+}
+
+.c33 .c7 {
+  font-size: 1.5em;
+}
+
+.c34 .c7 {
+  font-size: 1.5em;
+}
+
+.c35 .c7 {
+  font-size: 1.5em;
+}
+
+.c36 .c7 {
+  font-size: 1.5em;
+}
+
+.c37 .c7 {
+  font-size: 1.5em;
+}
+
+.c38 .c7 {
+  font-size: 1.5em;
+}
+
+.c39 .c7 {
+  font-size: 1.5em;
+}
+
+.c40 .c7 {
+  font-size: 1.5em;
 }
 
 .c6 {
@@ -3974,7 +6289,6 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -4291,43 +6605,114 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
 }
 
 .c12 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c19 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c20 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c21 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c36 .c6 {
+  font-size: 1.5em;
 }
 
 .c8 {
@@ -4388,7 +6773,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -4507,7 +6892,6 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
 }
 
 .c9 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -4518,18 +6902,16 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
 }
 
 .c7 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 17.5px;
+  font-size: 16.25px;
   cursor: not-allowed;
   right: 0.5em;
 }
 
 .c11 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -4686,7 +7068,7 @@ exports[`Storyshots forms|TextArea default 1`] = `
   border: 0;
   border: 1px solid #eee;
   background-color: #eee;
-  --focus-color: 153,153,153;
+  --focus-color: 0,168,216;
 }
 
 .c1:hover {
@@ -4732,58 +7114,6 @@ exports[`Storyshots forms|TextArea default 1`] = `
     className="c1"
     onChange={[Function]}
     rows={5}
-    secondary={true}
-    theme={
-      Object {
-        "colours": Object {
-          "black": "#000",
-          "blue": "#00a8d8",
-          "dark": "#222",
-          "gray": "#999",
-          "green": "#4caf50",
-          "lightGray": "#eee",
-          "red": "#ef5350",
-          "white": "#fff",
-          "yellow": "#fff68c",
-        },
-        "fonts": Object {
-          "custom": Object {
-            "families": Array [],
-            "urls": Array [],
-          },
-          "google": Object {
-            "families": Array [
-              "Fira Mono:400",
-              "Fira Sans:400,600",
-            ],
-          },
-        },
-        "global": Object {
-          "baseSize": 16,
-          "borderRadius": 4,
-          "borderWidth": 1,
-          "fontFamily": "'Fira Sans', sans-serif",
-          "fontFamilyMonospace": "'Fira Mono', monospace",
-          "lineHeight": 1.5,
-          "outlineAlpha": 0.15,
-          "outlineWidth": 4,
-          "purposes": Object {
-            "danger": "#ef5350",
-            "primary": "#00a8d8",
-            "secondary": "#999",
-            "success": "#4caf50",
-          },
-          "shadowAlpha": 0.1,
-          "sizes": Object {
-            "large": 1.1875,
-            "small": 0.875,
-          },
-          "spacing": 1.25,
-          "textColor": "#222",
-          "textColorMuted": "#999",
-        },
-      }
-    }
     value=""
   />
 </div>
@@ -4810,7 +7140,7 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   border: 0;
   border: 1px solid #eee;
   background-color: #eee;
-  --focus-color: 153,153,153;
+  --focus-color: 0,168,216;
 }
 
 .c2:hover {
@@ -4860,9 +7190,9 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  border: 1px solid #999;
+  border: 1px solid #00a8d8;
   background-color: unset;
-  --focus-color: 153,153,153;
+  --focus-color: 0,168,216;
 }
 
 .c3:hover {
@@ -4918,118 +7248,13 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
       disabled={true}
       onChange={[Function]}
       rows={5}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value=""
     />
     <textarea
       className="c3"
       disabled={true}
       onChange={[Function]}
-      outlined={true}
       rows={5}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value=""
     />
   </div>
@@ -5055,9 +7280,9 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  border: 1px solid #999;
+  border: 1px solid #00a8d8;
   background-color: unset;
-  --focus-color: 153,153,153;
+  --focus-color: 0,168,216;
 }
 
 .c1:hover {
@@ -5102,60 +7327,7 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
   <textarea
     className="c1"
     onChange={[Function]}
-    outlined={true}
     rows={5}
-    secondary={true}
-    theme={
-      Object {
-        "colours": Object {
-          "black": "#000",
-          "blue": "#00a8d8",
-          "dark": "#222",
-          "gray": "#999",
-          "green": "#4caf50",
-          "lightGray": "#eee",
-          "red": "#ef5350",
-          "white": "#fff",
-          "yellow": "#fff68c",
-        },
-        "fonts": Object {
-          "custom": Object {
-            "families": Array [],
-            "urls": Array [],
-          },
-          "google": Object {
-            "families": Array [
-              "Fira Mono:400",
-              "Fira Sans:400,600",
-            ],
-          },
-        },
-        "global": Object {
-          "baseSize": 16,
-          "borderRadius": 4,
-          "borderWidth": 1,
-          "fontFamily": "'Fira Sans', sans-serif",
-          "fontFamilyMonospace": "'Fira Mono', monospace",
-          "lineHeight": 1.5,
-          "outlineAlpha": 0.15,
-          "outlineWidth": 4,
-          "purposes": Object {
-            "danger": "#ef5350",
-            "primary": "#00a8d8",
-            "secondary": "#999",
-            "success": "#4caf50",
-          },
-          "shadowAlpha": 0.1,
-          "sizes": Object {
-            "large": 1.1875,
-            "small": 0.875,
-          },
-          "spacing": 1.25,
-          "textColor": "#222",
-          "textColorMuted": "#999",
-        },
-      }
-    }
     value=""
   />
 </div>
@@ -5164,110 +7336,6 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
 exports[`Storyshots forms|TextArea purposes 1`] = `
 .c0 {
   padding: 20px;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  border: 1px solid #eee;
-  background-color: #eee;
-  --focus-color: 153,153,153;
-}
-
-.c3:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c3:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c3::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c7 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  border: 1px solid #999;
-  background-color: unset;
-  --focus-color: 153,153,153;
-}
-
-.c7:hover {
-  border: 1px solid #999;
-}
-
-.c7:focus {
-  border: 1px solid #222;
-}
-
-.c7::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c7::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c7:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c7::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c7[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
 .c2 {
@@ -5318,6 +7386,110 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
 }
 
 .c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+  --focus-color: 0,168,216;
+}
+
+.c6:hover {
+  border: 1px solid #999;
+}
+
+.c6:focus {
+  border: 1px solid #222;
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #eee;
+  background-color: #eee;
+  --focus-color: 153,153,153;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -5426,7 +7598,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c6 {
+.c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -5440,40 +7612,40 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  border: 1px solid #00a8d8;
+  border: 1px solid #999;
   background-color: unset;
-  --focus-color: 0,168,216;
+  --focus-color: 153,153,153;
 }
 
-.c6:hover {
+.c7:hover {
   border: 1px solid #999;
 }
 
-.c6:focus {
+.c7:focus {
   border: 1px solid #222;
 }
 
-.c6::-webkit-input-placeholder {
+.c7::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::-moz-placeholder {
+.c7::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6:-ms-input-placeholder {
+.c7:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::placeholder {
+.c7::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6[disabled] {
+.c7[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -5600,467 +7772,41 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
     <textarea
       className="c2"
       onChange={[Function]}
-      primary={true}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Primary"
     />
     <textarea
       className="c3"
       onChange={[Function]}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Secondary"
     />
     <textarea
       className="c4"
       onChange={[Function]}
-      secondary={true}
-      success={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Success"
     />
     <textarea
       className="c5"
-      danger={true}
       onChange={[Function]}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Danger"
     />
     <textarea
       className="c6"
       onChange={[Function]}
-      outlined={true}
-      primary={true}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Primary"
     />
     <textarea
       className="c7"
       onChange={[Function]}
-      outlined={true}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Secondary"
     />
     <textarea
       className="c8"
       onChange={[Function]}
-      outlined={true}
-      secondary={true}
-      success={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Success"
     />
     <textarea
       className="c9"
-      danger={true}
       onChange={[Function]}
-      outlined={true}
-      secondary={true}
-      theme={
-        Object {
-          "colours": Object {
-            "black": "#000",
-            "blue": "#00a8d8",
-            "dark": "#222",
-            "gray": "#999",
-            "green": "#4caf50",
-            "lightGray": "#eee",
-            "red": "#ef5350",
-            "white": "#fff",
-            "yellow": "#fff68c",
-          },
-          "fonts": Object {
-            "custom": Object {
-              "families": Array [],
-              "urls": Array [],
-            },
-            "google": Object {
-              "families": Array [
-                "Fira Mono:400",
-                "Fira Sans:400,600",
-              ],
-            },
-          },
-          "global": Object {
-            "baseSize": 16,
-            "borderRadius": 4,
-            "borderWidth": 1,
-            "fontFamily": "'Fira Sans', sans-serif",
-            "fontFamilyMonospace": "'Fira Mono', monospace",
-            "lineHeight": 1.5,
-            "outlineAlpha": 0.15,
-            "outlineWidth": 4,
-            "purposes": Object {
-              "danger": "#ef5350",
-              "primary": "#00a8d8",
-              "secondary": "#999",
-              "success": "#4caf50",
-            },
-            "shadowAlpha": 0.1,
-            "sizes": Object {
-              "large": 1.1875,
-              "small": 0.875,
-            },
-            "spacing": 1.25,
-            "textColor": "#222",
-            "textColorMuted": "#999",
-          },
-        }
-      }
       value="Danger"
     />
   </div>
@@ -6778,117 +8524,13 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   padding: 20px;
 }
 
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  border: 1px solid #eee;
-  background-color: #eee;
-  --focus-color: 0,168,216;
-}
-
-.c3:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c3:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c3::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c3[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c2 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 14px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  border: 1px solid #eee;
-  background-color: #eee;
-  --focus-color: 0,168,216;
-}
-
-.c2:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c2:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c2::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c2::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c2:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c2::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c2[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 16px;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6934,6 +8576,162 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 13px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #eee;
+  background-color: #eee;
+  --focus-color: 0,168,216;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 19px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #eee;
+  background-color: #eee;
+  --focus-color: 0,168,216;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 11px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #eee;
+  background-color: #eee;
+  --focus-color: 0,168,216;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -6952,16 +8750,22 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
       className="c2"
       onChange={[Function]}
       type="text"
-      value="Small"
+      value="Tiny"
     />
     <input
       className="c3"
       onChange={[Function]}
       type="text"
-      value="Default"
+      value="Small"
     />
     <input
       className="c4"
+      onChange={[Function]}
+      type="text"
+      value="Default"
+    />
+    <input
+      className="c5"
       onChange={[Function]}
       type="text"
       value="Large"
@@ -6976,43 +8780,114 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
 }
 
 .c9 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
 }
 
 .c4 {
@@ -7092,7 +8967,6 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
 }
 
 .c6 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7102,7 +8976,6 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7200,43 +9073,114 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
 }
 
 .c9 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
 }
 
 .c4 {
@@ -7316,7 +9260,6 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
 }
 
 .c6 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7327,7 +9270,6 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7428,43 +9370,114 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
 }
 
 .c9 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c10 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c11 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c12 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c13 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c14 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c15 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
 }
 
 .c4 {
@@ -7544,7 +9557,6 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
 }
 
 .c6 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7554,7 +9566,6 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -7650,43 +9661,114 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
 }
 
 .c17 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c19 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c20 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c21 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c22 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c23 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c24 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c25 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c26 .c6 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c38 .c6 {
+  font-size: 1.5em;
+}
+
+.c39 .c6 {
+  font-size: 1.5em;
+}
+
+.c40 .c6 {
+  font-size: 1.5em;
+}
+
+.c41 .c6 {
+  font-size: 1.5em;
 }
 
 .c5 {
@@ -8130,7 +10212,6 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
 }
 
 .c7 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -8140,7 +10221,6 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
 }
 
 .c16 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -8685,43 +10765,114 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 }
 
 .c15 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c16 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c17 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c18 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c19 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c20 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c21 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c22 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c23 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
 }
 
 .c24 .c5 {
+  font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
+}
+
+.c34 .c5 {
+  font-size: 1.5em;
+}
+
+.c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
 }
 
 .c7 {
@@ -8782,7 +10933,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8905,7 +11056,6 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 }
 
 .c8 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -8915,7 +11065,6 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 }
 
 .c13 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -8925,17 +11074,15 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 }
 
 .c6 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 17.5px;
+  font-size: 16.25px;
   right: 0.5em;
 }
 
 .c10 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -8945,17 +11092,15 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 }
 
 .c12 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 17.5px;
+  font-size: 16.25px;
   left: 0.5em;
 }
 
 .c14 {
-  font-size: 16px;
   height: 1em;
   line-height: 1em;
   text-transform: none;
