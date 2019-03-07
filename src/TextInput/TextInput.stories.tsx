@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextInput } from '.'
+import { Heading } from '../Heading'
 
 const Row = styled.div<{ columns?: number | false }>`
   display: grid;
@@ -38,3 +39,4 @@ storiesOf('forms|TextInput', module)
     <TextInput large value='Large' />
   </Row>)
   .add('disabled', () => <TextInput disabled value='Disabled' />)
+  .add('as heading', () => <Heading type='screen' value='Editable heading' as={TextInput} />)

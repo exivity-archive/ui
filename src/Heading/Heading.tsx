@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Icon } from '../Icon'
 import { defaultStyledProps, fromTheme, globalFont, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
@@ -27,11 +28,11 @@ const StyledHeading = styled.div<HeadingProps>`
   }
 
   ${(props: HeadingProps) => props.type === 'header' && css`
-    font-size: ${preciseEm(1.5)}em;
+    font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
   `}
 
   ${(props: HeadingProps) => props.type === 'screen' && css`
-    font-size: ${preciseEm(1.5)}em;
+    font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
     color: ${fromTheme(theme => theme.global.purposes.primary)};
   `}
 
@@ -54,6 +55,13 @@ const StyledHeading = styled.div<HeadingProps>`
 
     &:after { left: 1.5%; }
   `}
+
+  ${Icon} {
+    margin-right: ${fromTheme(theme => theme.global.spacing)}em;
+    display: inline-block;
+    transform: scale(1.5);
+    transform-origin: left 25%; // 25% from trial and error
+  }
 `
 export const Heading: React.FC<HeadingProps> = ({ type, ...rest }: HeadingProps) => (
   <StyledHeading as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'} type={type} {...rest} />

@@ -41,7 +41,8 @@ export const lightTheme = {
     sizes: {
       tiny: preciseEm(0.7), // 11px
       small: preciseEm(0.8), // 13px
-      large: preciseEm(1.2) // 18px
+      large: preciseEm(1.2), // 18px
+      huge: preciseEm(1.5) // 24px
     }
   },
   colours: {
