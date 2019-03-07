@@ -11,7 +11,7 @@ interface IPosition {
 interface IContentProps extends IPosition {
   open: boolean
   useButtonWidth?: boolean
-  width: number | null
+  width?: string
 }
 
 const Content = styled.div <IContentProps>`
@@ -23,7 +23,7 @@ const Content = styled.div <IContentProps>`
 
   min-width: 160px;
   ${props => (props.useButtonWidth && props.width) && css`
-    width: ${props.width}px;
+    width: ${props.width};
   `}
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
@@ -113,7 +113,9 @@ const PlainDropdown: React.FC<IDropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
-  const width = dropdownRef.current && dropdownRef.current.clientWidth
+  const width = dropdownRef.current
+    ? `${dropdownRef.current.clientWidth}px`
+    : undefined
 
   return (
     <div className={className} data-test='dropdown' ref={dropdownRef}>

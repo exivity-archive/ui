@@ -5096,7 +5096,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
         className="c9"
         data-test="dropdown-content"
         open={false}
-        width={null}
       />
     </div>
   </div>
@@ -11607,7 +11606,6 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
         className="c2"
         data-test="dropdown-content"
         open={false}
-        width={null}
       >
         <div
           style={
