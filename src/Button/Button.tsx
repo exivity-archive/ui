@@ -1,29 +1,19 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { defaultStyledProps, fromTheme, hexToString, matchThemeProp, StyledProps } from '../utils/styled'
+import { defaultStyledProps, fromTheme, hexToString, InputProps, matchThemeProp } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
-export interface ButtonProps extends StyledProps {
-  // Purposes
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  danger?: boolean
-
-  // Sizes
-  small?: boolean
-  large?: boolean
-
+export interface ButtonProps extends InputProps {
   // Variants
-  outlined?: boolean
+  round?: boolean
 }
 
 export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 14,
+    modifier: (em: number) => preciseEm(em, 14) * 14,
     defaultValue: 14
   })}px;
   color: ${fromTheme(theme => theme.colours.white)};
@@ -37,7 +27,9 @@ export const Button = styled.button<ButtonProps>`
   justify-content: center;
   cursor: pointer;
   min-width: 2.5em;
-  height: ${preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+  height: ${props => props.tiny
+    ? `${preciseEm(2.5, 10)}em` // 25px
+    : `${preciseEm(2.85, 14)}em`}; // 40px = 2.5 * 16
   padding: 0 ${preciseEm(1.5)}em;
   border: none;
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
@@ -84,7 +76,7 @@ export const Button = styled.button<ButtonProps>`
     }
   }
 
-  ${props => props.outlined && css`
+  ${(props: ButtonProps) => props.outlined && css`
     background-color: ${fromTheme(theme => theme.colours.white)};
     color: ${matchThemeProp(theme => theme.global.purposes)};
     box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
@@ -100,8 +92,20 @@ export const Button = styled.button<ButtonProps>`
     }
   `}
 
+  ${(props: ButtonProps) => props.round && css`
+    border-radius: 50%;
+    min-width: auto;
+    padding: 0;
+    width: ${props.tiny
+    ? preciseEm(2.5, 10) // 25px
+    : preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+  `}
+
   ${Icon} {
-    margin-right: ${fromTheme(theme => theme.global.spacing / 2)}em;
+    font-size: 1.5em;
+    ${(props: ButtonProps) => props.round !== true && css`
+      margin-right: ${fromTheme(theme => theme.global.spacing / 2)}em;
+    `}
   }
 `
 
