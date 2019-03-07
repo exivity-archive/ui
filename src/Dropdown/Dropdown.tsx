@@ -10,15 +10,22 @@ interface IPosition {
 
 interface IContentProps extends IPosition {
   open: boolean
+  useButtonWidth?: boolean
+  width: number | null
 }
 
 const Content = styled.div <IContentProps>`
+  box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   padding: 20px;
-  padding-right: 10%;
+
+  min-width: 160px;
+  ${props => (props.useButtonWidth && props.width) && css`
+    width: ${props.width}px;
+  `}
+
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   ${({ left, right, top, bottom }) => css`
     ${typeof left !== 'undefined' && css`
@@ -47,7 +54,8 @@ interface IDropdownProps {
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
-  breakDistance: number
+  breakDistance?: number
+  useButtonWidth?: boolean
 }
 
 interface ILayout {
@@ -66,7 +74,8 @@ const PlainDropdown: React.FC<IDropdownProps> = ({
       open,
       horizontal = 'auto',
       vertical = 'auto',
-      breakDistance = 20
+      breakDistance = 20,
+      useButtonWidth
     }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const dropdownContentRef = useRef<HTMLDivElement>(null)
@@ -104,11 +113,12 @@ const PlainDropdown: React.FC<IDropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
+  const width = dropdownRef.current && dropdownRef.current.clientWidth
 
   return (
     <div className={className} data-test='dropdown' ref={dropdownRef}>
       {button}
-      <Content
+      <Content useButtonWidth={useButtonWidth} width={width}
         data-test='dropdown-content'
         ref={dropdownContentRef}
         {...position}

@@ -15,7 +15,6 @@ exports[`TextArea snapshot 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 153,153,153;
   border: 1px solid #eee;
   background-color: #eee;
   --focus-color: 153,153,153;

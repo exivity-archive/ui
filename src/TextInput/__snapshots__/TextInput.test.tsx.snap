@@ -15,10 +15,9 @@ exports[`TextInput snapshot 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 153,153,153;
   border: 1px solid #eee;
   background-color: #eee;
-  --focus-color: 153,153,153;
+  --focus-color: 0,168,216;
 }
 
 .c0:hover {
@@ -57,58 +56,6 @@ exports[`TextInput snapshot 1`] = `
 <input
   className="c0"
   onChange={[Function]}
-  secondary={true}
-  theme={
-    Object {
-      "colours": Object {
-        "black": "#000",
-        "blue": "#00a8d8",
-        "dark": "#222",
-        "gray": "#999",
-        "green": "#4caf50",
-        "lightGray": "#eee",
-        "red": "#ef5350",
-        "white": "#fff",
-        "yellow": "#fff68c",
-      },
-      "fonts": Object {
-        "custom": Object {
-          "families": Array [],
-          "urls": Array [],
-        },
-        "google": Object {
-          "families": Array [
-            "Fira Mono:400",
-            "Fira Sans:400,600",
-          ],
-        },
-      },
-      "global": Object {
-        "baseSize": 16,
-        "borderRadius": 4,
-        "borderWidth": 1,
-        "fontFamily": "'Fira Sans', sans-serif",
-        "fontFamilyMonospace": "'Fira Mono', monospace",
-        "lineHeight": 1.5,
-        "outlineAlpha": 0.15,
-        "outlineWidth": 4,
-        "purposes": Object {
-          "danger": "#ef5350",
-          "primary": "#00a8d8",
-          "secondary": "#999",
-          "success": "#4caf50",
-        },
-        "shadowAlpha": 0.1,
-        "sizes": Object {
-          "large": 1.1875,
-          "small": 0.875,
-        },
-        "spacing": 1.25,
-        "textColor": "#222",
-        "textColorMuted": "#999",
-      },
-    }
-  }
   type="text"
   value=""
 />

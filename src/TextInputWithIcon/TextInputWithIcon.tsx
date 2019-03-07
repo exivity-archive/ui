@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components'
 import { IconType } from 'react-icons/src'
 
 import { TextInput, TextInputProps, OmitOnChangeHTMLInputAttributes } from '../TextInput/TextInput'
-import { matchThemeProp, InputProps } from '../utils/styled'
+import { matchThemeProp, InputProps, defaultStyledProps } from '../utils/styled'
 import { Icon } from '../Icon'
 
-interface TextInputWithIconProps extends TextInputProps {
-  icon: IconType
+export interface TextInputWithIconProps extends TextInputProps {
+  icon: React.ReactElement<null, IconType>
   iconLeft?: boolean
 }
 
@@ -63,11 +63,19 @@ export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHT
     value,
     onChange,
     disabled,
+    className,
+    onClick,
     ...rest
 }) => (
-  <StyledContainer>
+  <StyledContainer onClick={onClick}>
     <StyledSelectInput iconLeft={iconLeft} value={value || ''} onChange={onChange} large={large} small={small}
-                       disabled={disabled} {...rest}/>
-    <InputIcon iconLeft={iconLeft} large={large} small={small} disabled={disabled}>{icon}</InputIcon>
+                       disabled={disabled} className={className} {...rest}/>
+    <InputIcon className={className} iconLeft={iconLeft} large={large} small={small} disabled={disabled}>
+      {icon}
+    </InputIcon>
   </StyledContainer>
 )
+
+TextInputWithIcon.defaultProps = {
+  ...defaultStyledProps
+}
