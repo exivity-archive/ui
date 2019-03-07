@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
 import useDynamicAttribute from '.'
-import { FLAT_LIST_TEST_DATA } from './__stories__/seed'
+import { FLAT_LIST_TEST_DATA } from '../useExpandable/__stories__/seed'
 
 import useExpandable from '../useExpandable'
 const getParent = (item) => item.parentId
@@ -27,7 +27,9 @@ export default storiesOf('List hooks', module)
 const Item = ({ data, index, style }) => {
   const item = data[index]
   return (
-    <div key={index} style={style}>
+    <div key={index} onClick={() => {
+      item.expand()
+    }} style={style}>
       {item.value}:
       <input type='checkbox' checked={item.checked} onChange={(e) => {
         item.setChecked(e.target.checked)
