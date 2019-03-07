@@ -7,11 +7,6 @@ import { Heading } from '.'
 import { Paragraph } from '../Paragraph'
 
 storiesOf('atoms|Heading', module)
-  .add('default', () => <>
-    <Heading>{faker.lorem.sentence(4)}</Heading>
-    <Paragraph>{faker.lorem.paragraphs(2)}</Paragraph>
-    <Heading level={2}>{faker.lorem.sentence(4)}</Heading>
-    <Paragraph>{faker.lorem.paragraphs(2)}</Paragraph>
-    <Heading level={3}>{faker.lorem.sentence(4)}</Heading>
-    <Paragraph>{faker.lorem.paragraphs(2)}</Paragraph>
-  </>)
+  .add('header', () => <Heading type='header'>{faker.lorem.sentence(4)}</Heading>)
+  .add('screen', () => <Heading type='screen'>{faker.lorem.sentence(4)}</Heading>)
+  .add('section', () => <Heading type='section'>{faker.lorem.sentence(4)}</Heading>)
