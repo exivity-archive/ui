@@ -1,13 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import renderer from 'react-test-renderer'
 
 import { TextArea } from '.'
-
-test('TextArea snapshot', () => {
-  const textArea = renderer.create(<TextArea onChange={jest.fn()} />)
-  expect(textArea).toMatchSnapshot()
-})
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'

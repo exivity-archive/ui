@@ -1,12 +1,7 @@
-import { mount, shallow } from 'enzyme'
 import * as React from 'react'
+import { mount, shallow } from 'enzyme'
 
 import { Checkbox } from '.'
-
-test('renders checkbox', () => {
-  const checkbox = shallow(<Checkbox checked onClick={jest.fn()} />)
-  expect(checkbox).toMatchSnapshot()
-})
 
 test('onClick handler returns checkedValue', () => {
   const onClickMock = jest.fn(x => x)

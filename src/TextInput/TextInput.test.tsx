@@ -1,13 +1,7 @@
-import { mount } from 'enzyme'
-import renderer from 'react-test-renderer'
 import * as React from 'react'
+import { mount } from 'enzyme'
 
 import { TextInput } from '.'
-
-test('TextInput snapshot', () => {
-  const textInput = renderer.create(<TextInput onChange={jest.fn()} />)
-  expect(textInput).toMatchSnapshot()
-})
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'
