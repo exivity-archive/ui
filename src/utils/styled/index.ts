@@ -16,8 +16,6 @@ export interface StyledProps {
 export const defaultStyledProps = { theme: lightTheme }
 
 export interface InputProps extends StyledProps {
-  outlined?: boolean
-
   // Purposes
   primary?: boolean
   secondary?: boolean
@@ -25,8 +23,12 @@ export interface InputProps extends StyledProps {
   danger?: boolean
 
   // Sizes
+  tiny?: boolean
   small?: boolean
   large?: boolean
+
+  // Variants
+  outlined?: boolean
 }
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
