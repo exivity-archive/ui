@@ -7,9 +7,29 @@ exports[`renders Heading with different levels 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
+  margin: 0;
 }
 
-<h1
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<hundefined
   className="c0"
 />
 `;
@@ -21,9 +41,29 @@ exports[`renders Heading with different levels 2`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
+  margin: 0;
 }
 
-<h2
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<hundefined
   className="c0"
 />
 `;
@@ -35,9 +75,29 @@ exports[`renders Heading with different levels 3`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
+  margin: 0;
 }
 
-<h3
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<hundefined
   className="c0"
 />
 `;
@@ -49,13 +109,33 @@ exports[`renders Heading with text 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
+  margin: 0;
 }
 
-<h1
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<hundefined
   className="c0"
 >
   Heading
-</h1>
+</hundefined>
 `;
 
 exports[`renders Heading without props 1`] = `
@@ -65,9 +145,29 @@ exports[`renders Heading without props 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
+  margin: 0;
 }
 
-<h1
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<hundefined
   className="c0"
 />
 `;

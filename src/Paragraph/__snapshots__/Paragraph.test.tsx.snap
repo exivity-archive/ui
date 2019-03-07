@@ -7,10 +7,14 @@ exports[`renders Paragraph without props 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  color: green;
+  margin-top: 0;
 }
 
-<div
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
   className="c0"
 />
 `;
