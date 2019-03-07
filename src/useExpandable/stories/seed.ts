@@ -10,7 +10,7 @@ export interface FakeRecord {
 const lvl1 = new Array(100).fill(null)
   .map((item, index): FakeRecord => ({
     key: String(index + 1),
-    value: 'FakeName' + String(index),
+    value: 'FakeName ' + String(index + 1),
     attributes: {
       level: 1
     },

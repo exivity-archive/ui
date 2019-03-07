@@ -9214,7 +9214,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName0
+        +  FakeName 1
       </div>
       <div
         onClick={[Function]}
@@ -9228,7 +9228,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName1
+        +  FakeName 2
       </div>
       <div
         onClick={[Function]}
@@ -9242,7 +9242,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName2
+        +  FakeName 3
       </div>
       <div
         onClick={[Function]}
@@ -9256,7 +9256,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName3
+        +  FakeName 4
       </div>
       <div
         onClick={[Function]}
@@ -9270,7 +9270,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName4
+        +  FakeName 5
       </div>
       <div
         onClick={[Function]}
@@ -9284,7 +9284,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName5
+        +  FakeName 6
       </div>
       <div
         onClick={[Function]}
@@ -9298,7 +9298,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName6
+        +  FakeName 7
       </div>
       <div
         onClick={[Function]}
@@ -9312,7 +9312,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName7
+        +  FakeName 8
       </div>
       <div
         onClick={[Function]}
@@ -9326,7 +9326,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName8
+        +  FakeName 9
       </div>
       <div
         onClick={[Function]}
@@ -9340,7 +9340,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName9
+        +  FakeName 10
       </div>
       <div
         onClick={[Function]}
@@ -9354,7 +9354,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName10
+        +  FakeName 11
       </div>
       <div
         onClick={[Function]}
@@ -9368,7 +9368,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName11
+        +  FakeName 12
       </div>
       <div
         onClick={[Function]}
@@ -9382,7 +9382,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName12
+        +  FakeName 13
       </div>
       <div
         onClick={[Function]}
@@ -9396,7 +9396,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName13
+        +  FakeName 14
       </div>
       <div
         onClick={[Function]}
@@ -9410,7 +9410,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           }
         }
       >
-        +  FakeName14
+        +  FakeName 15
       </div>
     </div>
   </div>
