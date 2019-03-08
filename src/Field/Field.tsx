@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import { Label } from '../Label'
-import { defaultStyledProps, fromTheme, StyledProps } from '../utils/styled'
+import { fromTheme, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 import { Container } from './Container'
 
@@ -33,8 +33,8 @@ export const Field = styled.div<StyledFieldProps>`
   }
 
   ${Label} {
-    padding-bottom: ${props => props.horizontal ? 'unset' : `${props.theme.global.spacing / 2}em`};
-    margin-right: ${props => props.horizontal ? `${props.theme.global.spacing}em` : 'unset'};
+    padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.spacing / 2)}em`};
+    margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.spacing)}em` : 'unset'};
     flex-basis: ${props => (props.horizontal && props.align)
       ? (props.align === true) ? `${preciseEm(ALIGNED_WIDTH)}em` : props.align
       : 'auto'
@@ -47,13 +47,11 @@ export const Field = styled.div<StyledFieldProps>`
 
   ${(props: StyledFieldProps) => props.horizontal && css`
     > *:not(${Label}):not(:last-child) {
-      margin-bottom: ${props.theme.global.spacing};
+      margin-bottom: ${fromTheme(theme => theme.global.spacing)};
     }
   `}
 ` as FieldType
 
 Field.Container = Container
-
-Field.defaultProps = defaultStyledProps
 
 Field.displayName = 'Field'

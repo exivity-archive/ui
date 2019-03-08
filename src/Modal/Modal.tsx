@@ -42,6 +42,7 @@ interface ModalProps extends StyledProps {
   buttons: React.ReactElement[]
 }
 
+
 const PlainModal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
   <Overlay>
     <ModalWrapper>

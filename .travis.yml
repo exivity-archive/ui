@@ -18,8 +18,6 @@ jobs:
     - stage: test
       name: "lint"
       script: yarn lint
-    - name: "sonar"
-      script: sonar-scanner
     - name: "build"
       script: yarn lib:build
     - name: "test"
@@ -30,6 +28,7 @@ jobs:
       script: yarn test
       after_script:
         - codecov
+        - sonar-scanner
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - name: "smoke"
       script: yarn test:smoke
