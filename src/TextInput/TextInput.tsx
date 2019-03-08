@@ -1,6 +1,6 @@
 import React, { ChangeEvent, InputHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { defaultStyledProps, globalInput, InputProps } from '../utils/styled'
+import { globalInput, InputProps } from '../utils/styled'
 import { Omit } from '../utils/types'
 
 export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
@@ -21,7 +21,3 @@ export const TextInput: React.FC<TextInputProps & OmitOnChangeHTMLInputAttribute
     {...rest}
   />
 )
-
-TextInput.defaultProps = {
-  ...defaultStyledProps
-}

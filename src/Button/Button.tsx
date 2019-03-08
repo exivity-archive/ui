@@ -108,8 +108,3 @@ export const Button = styled.button<ButtonProps>`
     `}
   }
 `
-
-Button.defaultProps = {
-  ...defaultStyledProps,
-  primary: true
-}

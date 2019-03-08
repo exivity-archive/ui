@@ -10,7 +10,7 @@ interface ThemeHelperOptions {
 }
 
 export interface StyledProps {
-  theme: Theme
+  theme?: Theme
 }
 
 export const defaultStyledProps = { theme: lightTheme }
@@ -32,7 +32,7 @@ export interface InputProps extends StyledProps {
 }
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
-  return themeResolver(props.theme)
+  return props.theme ? themeResolver(props.theme) : themeResolver(lightTheme)
 }
 
 export const matchThemeProp = (
