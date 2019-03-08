@@ -52,6 +52,10 @@ export const matchThemeProp = (
     match = options.defaultValue
   }
 
+  if (!match && !options.defaultValue && themeObject.default) {
+    match = themeObject.default
+  }
+
   if (!match) return null
 
   if (themeObject[match]) {

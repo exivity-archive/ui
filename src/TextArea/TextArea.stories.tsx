@@ -5,15 +5,9 @@ import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextArea } from '.'
-import styled, { css } from 'styled-components'
 
-const Row = styled.div<{ columns?: number | false }>`
-  display: grid;
-  grid-gap: 20px;
-  ${props => props.columns !== false && css`
-    grid-template-columns: repeat(${props => props.columns || 10}, fit-content(350px));
-  `}
-`
+import { Row } from '../utils/stories/components'
+import { mockFn } from '../utils/stories/mocks'
 
 storiesOf('forms|TextArea', module)
   .addDecorator(withState(''))
@@ -26,17 +20,17 @@ storiesOf('forms|TextArea', module)
     value={state}
     outlined
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('purposes', () => <Row columns={4}>
-    <TextArea primary value='Primary' />
-    <TextArea secondary value='Secondary' />
-    <TextArea success value='Success' />
-    <TextArea danger value='Danger' />
-    <TextArea outlined primary value='Primary' />
-    <TextArea outlined secondary value='Secondary' />
-    <TextArea outlined success value='Success' />
-    <TextArea outlined danger value='Danger' />
+  .add('purposes', () => <Row columns={4} columnWidth={350}>
+    <TextArea primary value='Primary' onChange={mockFn} />
+    <TextArea secondary value='Secondary' onChange={mockFn} />
+    <TextArea success value='Success' onChange={mockFn} />
+    <TextArea danger value='Danger' onChange={mockFn} />
+    <TextArea outlined primary value='Primary' onChange={mockFn} />
+    <TextArea outlined secondary value='Secondary' onChange={mockFn} />
+    <TextArea outlined success value='Success' onChange={mockFn} />
+    <TextArea outlined danger value='Danger' onChange={mockFn} />
   </Row>)
-  .add('disabled', ({ state, storeState }: any) => <Row columns={2}>
+  .add('disabled', ({ state, storeState }: any) => <Row columns={2} columnWidth={350}>
     <TextArea
     rows={5}
     value={state}

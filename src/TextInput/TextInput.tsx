@@ -6,7 +6,7 @@ import { Omit } from '../utils/types'
 export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 
 export interface TextInputProps extends InputProps {
-  value: string
+  value?: string
   onChange: (value: string, event: ChangeEvent<HTMLInputElement>) => void
 }
 

@@ -5,51 +5,53 @@ import { Checkbox } from '../Checkbox'
 import { Field } from '.'
 import { TextInput } from '../TextInput'
 import { Label } from '../Label'
+import { mockFn } from '../utils/stories/mocks'
 
 storiesOf('forms|Field', module)
   .add('default', () => <Field>
     <Label htmlFor='username'>Username</Label>
-    <TextInput id='username' placeholder='Please type username' />
+    <TextInput id='username' placeholder='Please type username' onChange={mockFn}/>
   </Field>)
   .add('horizontal', () => <Field horizontal>
     <Label htmlFor='username'>Username</Label>
-    <TextInput id='username' placeholder='Please type username' />
+    <TextInput id='username' placeholder='Please type username' onChange={mockFn}/>
   </Field>)
   .add('align', () => <Field horizontal align>
     <Label htmlFor='username'>Username</Label>
-    <TextInput id='username' placeholder='Please type username' />
+    <TextInput id='username' placeholder='Please type username' onChange={mockFn}/>
   </Field>)
   .add('multiple', () => <React.Fragment>
-    <Field.Container style={{ marginBottom: '20px' }}>
+    <Field.Container>
       <Field>
         <Label htmlFor='username'>Username</Label>
-        <TextInput id='username' placeholder='Please type username' />
+        <TextInput id='username' placeholder='Please type username' onChange={mockFn}/>
       </Field>
       <Field>
         <Label htmlFor='email'>Email address
           <Label>We will never sell your email address and we will never spam you!</Label>
         </Label>
-        <TextInput id='email' placeholder='Please type email address' />
+        <TextInput id='email' placeholder='Please type email address' onChange={mockFn}/>
       </Field>
       <Field>
         <Label htmlFor='name'>Receive newsletter</Label>
-        <TextInput id='name' placeholder='Please type full name' />
+        <TextInput id='name' placeholder='Please type full name' onChange={mockFn}/>
       </Field>
     </Field.Container>
+    <div style={{ height: '20px' }}/>
     <Field.Container horizontal align='40%'>
       <Field>
         <Label htmlFor='username2'>Username</Label>
-        <TextInput id='username2' placeholder='Please type username' />
+        <TextInput id='username2' placeholder='Please type username' onChange={mockFn}/>
       </Field>
       <Field>
         <Label htmlFor='email2'>Email address
           <Label>We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.</Label>
         </Label>
-        <TextInput id='email2' placeholder='Please type email address' />
+        <TextInput id='email2' placeholder='Please type email address' onChange={mockFn}/>
       </Field>
       <Field>
         <Label/>
-        <Checkbox />
+        <Checkbox checked/>
       </Field>
     </Field.Container>
   </React.Fragment>)

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { mount } from 'enzyme'
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
 import { SelectInput } from '.'
 
@@ -9,7 +9,7 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const selectInput = mount(<SelectInput value={initialValue} onChange={onChangeMock} />)
+  const selectInput = mountWithTheme(<SelectInput value={initialValue} onChange={onChangeMock} />)
 
   selectInput
     .find('input')

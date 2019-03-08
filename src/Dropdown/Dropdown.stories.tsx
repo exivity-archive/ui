@@ -11,7 +11,7 @@ storiesOf('molecules|Dropdown', module)
       <div style={{ padding: '300px 0' }}>
         <Dropdown
           open={state}
-          button={
+          triggerComponent={
             <div onClick={() => storeState(!state)}>Click me</div>
           }>
           <div style={{ width: 500 }}>

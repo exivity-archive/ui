@@ -10,7 +10,7 @@ interface IPosition {
 
 interface IContentProps extends IPosition {
   open: boolean
-  useButtonWidth?: boolean
+  useTriggerComponentWidth?: boolean
   width?: string
 }
 
@@ -22,7 +22,7 @@ const Content = styled.div <IContentProps>`
   padding: 20px;
 
   min-width: 160px;
-  ${props => (props.useButtonWidth && props.width) && css`
+  ${props => (props.useTriggerComponentWidth && props.width) && css`
     width: ${props.width};
   `}
 
@@ -50,12 +50,12 @@ type Horizontal = 'left' | 'right' | 'auto'
 
 interface IDropdownProps {
   className?: string
-  button: React.ReactNode
+  triggerComponent: React.ReactNode
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
   breakDistance?: number
-  useButtonWidth?: boolean
+  useTriggerComponentWidth?: boolean
 }
 
 interface ILayout {
@@ -69,13 +69,13 @@ const elementCrossedEdge = (absolutePosition: number, elementDimension: number, 
 
 const PlainDropdown: React.FC<IDropdownProps> = ({
       className,
-      button,
+      triggerComponent,
       children,
       open,
       horizontal = 'auto',
       vertical = 'auto',
       breakDistance = 20,
-      useButtonWidth
+      useTriggerComponentWidth
     }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const dropdownContentRef = useRef<HTMLDivElement>(null)
@@ -119,8 +119,8 @@ const PlainDropdown: React.FC<IDropdownProps> = ({
 
   return (
     <div className={className} data-test='dropdown' ref={dropdownRef}>
-      {button}
-      <Content useButtonWidth={useButtonWidth} width={width}
+      {triggerComponent}
+      <Content useTriggerComponentWidth={useTriggerComponentWidth} width={width}
         data-test='dropdown-content'
         ref={dropdownContentRef}
         {...position}

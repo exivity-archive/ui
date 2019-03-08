@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { mount } from 'enzyme'
 import { MdVerifiedUser } from 'react-icons/md'
 
 import { TextInputWithIcon } from '.'
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'
@@ -10,7 +10,9 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textInputWithIcon = mount(<TextInputWithIcon icon={<MdVerifiedUser/>} value={initialValue} onChange={onChangeMock} />)
+  const textInputWithIcon = mountWithTheme(
+    <TextInputWithIcon icon={<MdVerifiedUser/>} value={initialValue} onChange={onChangeMock}/>
+  )
 
   textInputWithIcon
     .find('input')

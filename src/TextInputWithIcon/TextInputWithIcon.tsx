@@ -3,16 +3,18 @@ import styled, { css } from 'styled-components'
 import { IconType } from 'react-icons/src'
 
 import { TextInput, TextInputProps, OmitOnChangeHTMLInputAttributes } from '../TextInput/TextInput'
-import { matchThemeProp, InputProps, defaultStyledProps } from '../utils/styled'
+import { matchThemeProp, InputProps } from '../utils/styled'
 import { Icon } from '../Icon'
 
 export interface TextInputWithIconProps extends TextInputProps {
   icon: React.ReactElement<null, IconType>
-  iconLeft?: boolean
+  iconPosition?: IconPosition
 }
 
+type IconPosition = 'left' | 'right'
+
 interface InputIconProps extends InputProps {
-  iconLeft?: boolean
+  iconPosition?: IconPosition
   disabled?: boolean
 }
 
@@ -28,7 +30,7 @@ const StyledContainer = styled.div `
 `
 
 const StyledSelectInput = styled(TextInput)<InputIconProps>`
-  ${props => props.iconLeft
+  ${props => props.iconPosition === 'left'
   ? css`
         padding-left: 2.2em;
       `
@@ -49,7 +51,7 @@ const InputIcon = styled(Icon)<InputIconProps>`
     cursor: not-allowed;
   `}
 
-  ${props => props.iconLeft
+  ${props => props.iconPosition === 'left'
     ? css`
       left: 0.5em;
     `
@@ -61,7 +63,7 @@ const InputIcon = styled(Icon)<InputIconProps>`
 
 export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHTMLInputAttributes> = ({
     icon,
-    iconLeft,
+    iconPosition = 'right',
     large,
     small,
     value,
@@ -72,14 +74,10 @@ export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHT
     ...rest
 }) => (
   <StyledContainer onClick={onClick}>
-    <StyledSelectInput iconLeft={iconLeft} value={value || ''} onChange={onChange} large={large} small={small}
+    <StyledSelectInput iconPosition={iconPosition} value={value} onChange={onChange} large={large} small={small}
                        disabled={disabled} className={className} {...rest}/>
-    <InputIcon className={className} iconLeft={iconLeft} large={large} small={small} disabled={disabled}>
+    <InputIcon className={className} iconPosition={iconPosition} large={large} small={small} disabled={disabled}>
       {icon}
     </InputIcon>
   </StyledContainer>
 )
-
-TextInputWithIcon.defaultProps = {
-  ...defaultStyledProps
-}
