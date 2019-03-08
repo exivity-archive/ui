@@ -4,9 +4,12 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
-import TextArea from './TextArea'
+import { TextArea } from '.'
 
-export default storiesOf('forms|TextArea', module)
+import { Row } from '../utils/stories/components'
+import { mockFn } from '../utils/stories/mocks'
+
+storiesOf('forms|TextArea', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }: any) => <TextArea
     rows={5}
@@ -17,3 +20,26 @@ export default storiesOf('forms|TextArea', module)
     value={state}
     outlined
     onChange={storeAndAction(storeState, 'onChange')} />)
+  .add('purposes', () => <Row columns={4} columnWidth={350}>
+    <TextArea primary value='Primary' onChange={mockFn} />
+    <TextArea secondary value='Secondary' onChange={mockFn} />
+    <TextArea success value='Success' onChange={mockFn} />
+    <TextArea danger value='Danger' onChange={mockFn} />
+    <TextArea outlined primary value='Primary' onChange={mockFn} />
+    <TextArea outlined secondary value='Secondary' onChange={mockFn} />
+    <TextArea outlined success value='Success' onChange={mockFn} />
+    <TextArea outlined danger value='Danger' onChange={mockFn} />
+  </Row>)
+  .add('disabled', ({ state, storeState }: any) => <Row columns={2} columnWidth={350}>
+    <TextArea
+    rows={5}
+    value={state}
+    disabled
+    onChange={storeAndAction(storeState, 'onChange')} />
+    <TextArea
+      rows={5}
+      value={state}
+      disabled
+      outlined
+      onChange={storeAndAction(storeState, 'onChange')} />
+  </Row>)

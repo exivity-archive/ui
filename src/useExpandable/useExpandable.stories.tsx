@@ -32,6 +32,7 @@ interface ItemProps {
 }
 
 const Item = ({ data, index, style }: ItemProps) => {
+
   const item = data[index]
   const space = new Array(item.attributes.level)
 

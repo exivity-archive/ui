@@ -1,13 +1,7 @@
 import React from 'react'
-import { mount } from 'enzyme'
-import renderer from 'react-test-renderer'
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
-import TextArea from './'
-
-test('TextArea snapshot', () => {
-  const textArea = renderer.create(<TextArea onChange={jest.fn()} />)
-  expect(textArea).toMatchSnapshot()
-})
+import { TextArea } from '.'
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'
@@ -15,7 +9,7 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textArea = mount(<TextArea value={initialValue} onChange={onChangeMock} />)
+  const textArea = mountWithTheme(<TextArea value={initialValue} onChange={onChangeMock}/>)
 
   textArea
     .find('textarea')

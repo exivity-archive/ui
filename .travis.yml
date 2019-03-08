@@ -28,6 +28,7 @@ jobs:
       script: yarn test
       after_script:
         - codecov
+        - sonar-scanner
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - name: "smoke"
       script: yarn test:smoke
@@ -39,3 +40,7 @@ jobs:
         - yarn build
         - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ./.npmrc
       script: bash scripts/release-and-publish-from-travis.sh
+
+addons:
+  sonarcloud:
+    organization: "exivity"

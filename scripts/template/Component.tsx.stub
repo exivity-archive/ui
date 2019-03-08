@@ -6,12 +6,10 @@ interface {Component}Props extends StyledProps {
   someFlag?: boolean
 }
 
-const {Component} = styled.div<{Component}Props>`
+export const {Component} = styled.div<{Component}Props>`
   ${globalFont};
 
   color: ${props => props.someFlag ? 'red' : 'green'};
 `
 
 {Component}.defaultProps = defaultStyledProps
-
-export default {Component}

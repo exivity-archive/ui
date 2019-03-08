@@ -10,15 +10,22 @@ interface IPosition {
 
 interface IContentProps extends IPosition {
   open: boolean
+  useTriggerComponentWidth?: boolean
+  width?: string
 }
 
 const Content = styled.div <IContentProps>`
+  box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   padding: 20px;
-  padding-right: 10%;
+
+  min-width: 160px;
+  ${props => (props.useTriggerComponentWidth && props.width) && css`
+    width: ${props.width};
+  `}
+
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   ${({ left, right, top, bottom }) => css`
     ${typeof left !== 'undefined' && css`
@@ -43,11 +50,12 @@ type Horizontal = 'left' | 'right' | 'auto'
 
 interface IDropdownProps {
   className?: string
-  button: React.ReactNode
+  triggerComponent: React.ReactNode
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
-  breakDistance: number
+  breakDistance?: number
+  useTriggerComponentWidth?: boolean
 }
 
 interface ILayout {
@@ -59,14 +67,15 @@ const elementCrossedEdge = (absolutePosition: number, elementDimension: number, 
   return absolutePosition + elementDimension > edge
 }
 
-const Dropdown: React.FC<IDropdownProps> = ({
+const PlainDropdown: React.FC<IDropdownProps> = ({
       className,
-      button,
+      triggerComponent,
       children,
       open,
       horizontal = 'auto',
       vertical = 'auto',
-      breakDistance = 20
+      breakDistance = 20,
+      useTriggerComponentWidth
     }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const dropdownContentRef = useRef<HTMLDivElement>(null)
@@ -104,11 +113,14 @@ const Dropdown: React.FC<IDropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
+  const width = dropdownRef.current
+    ? `${dropdownRef.current.clientWidth}px`
+    : undefined
 
   return (
     <div className={className} data-test='dropdown' ref={dropdownRef}>
-      {button}
-      <Content
+      {triggerComponent}
+      <Content useTriggerComponentWidth={useTriggerComponentWidth} width={width}
         data-test='dropdown-content'
         ref={dropdownContentRef}
         {...position}
@@ -119,8 +131,6 @@ const Dropdown: React.FC<IDropdownProps> = ({
   )
 }
 
-const StyledDropdown = styled(Dropdown)`
+export const Dropdown = styled(PlainDropdown)`
   position: relative;
 `
-
-export default StyledDropdown
