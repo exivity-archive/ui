@@ -9,6 +9,6 @@ import { Icon } from '../Icon'
 
 storiesOf('atoms|Heading', module)
   .add('header', () => <Heading type='header'>{faker.lorem.sentence(4)}</Heading>)
-  .add('screen', () => <Heading type='screen'>{faker.lorem.sentence(4)}</Heading>)
   .add('section', () => <Heading type='section'>{faker.lorem.sentence(4)}</Heading>)
-  .add('icon', () => <Heading type='section'><Icon><MdFavorite /></Icon> {faker.lorem.sentence(4)}</Heading>)
+  .add('sub', () => <Heading type='sub'>{faker.lorem.sentence(4)}</Heading>)
+  .add('icon', () => <Heading type='sub'><Icon><MdFavorite /></Icon> {faker.lorem.sentence(4)}</Heading>)

@@ -1,6 +1,7 @@
 import color from 'color'
 import { css } from 'styled-components'
 import { lightTheme, Theme } from '../../themes'
+import { preciseEm } from './isolated'
 
 type ThemeResolver = (theme: Theme) => any
 
@@ -10,11 +11,15 @@ interface ThemeHelperOptions {
 }
 
 export interface StyledProps {
-  theme: Theme
+  theme?: Theme
 }
 
 export const defaultStyledProps = {
   theme: lightTheme
+}
+
+export interface BlockProps {
+  noMargin?: boolean
 }
 
 export interface InputProps extends StyledProps {
@@ -62,6 +67,18 @@ export const hexToString = (hex: string) => {
     return '0, 0, 0'
   }
 }
+
+export const globalBlockSpacing = css`
+  margin: ${(props: BlockProps) => props.noMargin ? 0 : preciseEm(1)}rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
 
 export const globalFont = css`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};

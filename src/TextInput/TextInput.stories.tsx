@@ -51,6 +51,6 @@ storiesOf('forms|TextInput', module)
   </Row>)
   .add('disabled', () => <TextInput disabled value='Disabled' />)
   .add('as heading', () => <div>
-    <Heading type='screen' value='Editable heading' inlined style={{ marginBottom: '1em' }} as={TextInput} />
+    <Heading type='section' value='Editable heading' inlined as={TextInput} />
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)

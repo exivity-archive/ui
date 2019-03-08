@@ -1,14 +1,9 @@
 import styled from 'styled-components'
-import { defaultStyledProps, globalFont, StyledProps } from '../utils/styled'
+import { BlockProps, defaultStyledProps, globalBlockSpacing, globalFont, StyledProps } from '../utils/styled'
 
-export const Paragraph = styled.p<StyledProps>`
+export const Paragraph = styled.p<StyledProps & BlockProps>`
   ${globalFont};
-
-  margin-top: 0;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  ${globalBlockSpacing};
 `
 
 Paragraph.defaultProps = {

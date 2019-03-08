@@ -1,42 +1,36 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { defaultStyledProps, fromTheme, globalFont, StyledProps } from '../utils/styled'
+import { BlockProps, fromTheme, globalBlockSpacing, globalFont, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 enum Levels {
   'header' = 1,
-  'screen' = 2,
-  'section' = 3
+  'section' = 2,
+  'sub' = 3
 }
+
+export type HeadingType = 'header' | 'section' | 'sub'
 
 interface HeadingProps extends StyledProps {
-  type: 'header' | 'screen' | 'section'
+  type?: HeadingType
+  children?: ReactNode
 }
 
-const StyledHeading = styled.div<HeadingProps>`
+const StyledHeading = styled.div<HeadingProps & BlockProps>`
   ${globalFont};
-
-  margin: 0;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  ${globalBlockSpacing};
 
   ${(props: HeadingProps) => props.type === 'header' && css`
     font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
   `}
 
-  ${(props: HeadingProps) => props.type === 'screen' && css`
+  ${(props: HeadingProps) => props.type === 'section' && css`
     font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
     color: ${fromTheme(theme => theme.global.purposes.primary)};
   `}
 
-  ${(props: HeadingProps) => props.type === 'section' && css`
+  ${(props: HeadingProps) => props.type === 'sub' && css`
     font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
     text-transform: uppercase;
     color: ${fromTheme(theme => theme.colours.gray)};
@@ -63,12 +57,12 @@ const StyledHeading = styled.div<HeadingProps>`
     transform-origin: left 25%; // 25% from trial and error
   }
 `
-export const Heading: React.FC<HeadingProps> = ({ type, ...rest }: HeadingProps) => (
-  <StyledHeading as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'} type={type} {...rest} />
+export const Heading = ({ type = 'header', ...rest }: HeadingProps) => (
+  <StyledHeading
+    as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'}
+    type={type}
+    {...rest}
+  />
 )
-
-Heading.defaultProps = {
-  ...defaultStyledProps
-}
 
 Heading.displayName = 'Heading'
