@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { fromTheme, defaultStyledProps, StyledProps } from '../utils/styled'
-import { Theme } from '../themes'
+import { fromTheme } from '../utils/styled'
 
 const ModalWrapper = styled.div`
   position: absolute;
