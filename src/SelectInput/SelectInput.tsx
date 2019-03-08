@@ -15,25 +15,17 @@ export const SelectInput: React.FC<SelectInputProps & OmitOnChangeHTMLInputAttri
   <StyledSelectInput icon={<MdKeyboardArrowDown/>} {...rest} disabled isDisabled={disabled}/>
 )
 
-const StyledSelectInput = styled(TextInputWithIcon) <{ isDisabled?: boolean }> `
+const StyledSelectInput = styled(TextInputWithIcon)<{ isDisabled?: boolean }>`
   ${props => props.isDisabled
     ? css`
        &[disabled] {
           cursor: not-allowed;
         }
-
-       span {
-          cursor: not-allowed;
-       }
       `
     : css`
       &[disabled] {
         cursor: pointer;
         box-shadow: none;
-      }
-
-      span {
-        cursor: pointer;
       }
     `
   }

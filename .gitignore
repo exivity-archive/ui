@@ -19,7 +19,6 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
-/.vscode
 
 # misc
 /src/react-app-env.d.ts

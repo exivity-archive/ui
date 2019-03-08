@@ -21,6 +21,10 @@ const StyledContainer = styled.div `
   display: flex;
   justify-content: column;
   align-items: center;
+
+  ${Icon} {
+    pointer-events: none;
+  }
 `
 
 const StyledSelectInput = styled(TextInput)<InputIconProps>`

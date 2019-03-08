@@ -10,17 +10,17 @@ interface TextAreaProps extends InputProps {
   width?: string
 }
 
-export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
-  <StyledTextArea onChange={(event) => onChange(event.target.value, event)} {...rest}/>
-)
-
-export const StyledTextArea = styled('textarea') <{ width?: string }>`
+export const StyledTextArea = styled('textarea')<{ width?: string }>`
   ${globalInput};
 
   ${props => props.width && css`
     width: ${props.width}
   `}
 `
+
+export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
+  <StyledTextArea onChange={(event) => onChange(event.target.value, event)} {...rest}/>
+)
 
 TextArea.defaultProps = {
   ...defaultStyledProps

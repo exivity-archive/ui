@@ -10,19 +10,18 @@ export interface TextInputProps extends InputProps {
   onChange: (value: string, event: ChangeEvent<HTMLInputElement>) => void
 }
 
+export const StyledInput = styled.input`
+  ${globalInput};
+`
+
 export const TextInput: React.FC<TextInputProps & OmitOnChangeHTMLInputAttributes> = ({ onChange, ...rest }) => (
   <StyledInput
     type='text'
-    onChange={(event: any) => onChange(event.target.value, event)}
+    onChange={(event) => onChange(event.target.value, event)}
     {...rest}
   />
 )
 
-export const StyledInput = styled.input <TextInputProps> `
-  ${globalInput};
-`
-
 TextInput.defaultProps = {
-  ...defaultStyledProps,
-  value: ''
+  ...defaultStyledProps
 }
