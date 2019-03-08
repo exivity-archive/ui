@@ -1,8 +1,8 @@
 import React, { ReactNode, useEffect, useState } from 'react'
 // @ts-ignore
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism-light'
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light'
 // @ts-ignore
-import solarizedlight from 'react-syntax-highlighter/dist/esm/styles/prism/solarizedlight'
+import solarizedlight from 'react-syntax-highlighter/dist/cjs/styles/prism/solarizedlight'
 import styled, { css } from 'styled-components'
 import { BlockProps, fromTheme } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
@@ -21,7 +21,7 @@ const useDynamicLanguage = (language: string) => {
 
   useEffect(() => {
     if (language !== 'text') {
-      import(`react-syntax-highlighter/dist/esm/languages/prism/${language}`)
+      import(`react-syntax-highlighter/dist/cjs/languages/prism/${language}`)
         .then(definition => {
           SyntaxHighlighter.registerLanguage(language, definition.default)
           setCurrent(language)

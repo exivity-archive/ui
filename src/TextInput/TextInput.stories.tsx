@@ -2,6 +2,7 @@ import faker from 'faker'
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
+import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
@@ -30,6 +31,10 @@ storiesOf('forms|TextInput', module)
       <TextInput onChange={mockFn} outlined secondary value='Secondary' />
       <TextInput onChange={mockFn} outlined success value='Success' />
       <TextInput onChange={mockFn} outlined danger value='Danger' />
+      <TextInput onChange={mockFn} inlined primary value='Primary' />
+      <TextInput onChange={mockFn} inlined secondary value='Secondary' />
+      <TextInput onChange={mockFn} inlined success value='Success' />
+      <TextInput onChange={mockFn} inlined danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
     <TextInput onChange={mockFn} tiny value='Tiny' />

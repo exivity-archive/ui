@@ -2,6 +2,7 @@ import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Markdown } from '../src/Markdown'
+import { ensureString } from '../src/utils'
 import { MaxWidth } from '../src/utils/tests/decorators/MaxWidth'
 
 // @ts-ignore
@@ -15,7 +16,9 @@ import * as development from './guide/development.md'
 
 storiesOf('docs|Guide 👋', module)
   .addDecorator(MaxWidth)
-  .add('Introduction', () => <Markdown>{readme}</Markdown>)
-  .add('Installation', () => <Markdown>{installation}</Markdown>)
-  .add('Usage', () => <Markdown>{usage}</Markdown>)
-  .add('Development', () => <Markdown>{development}</Markdown>)
+  // Check typeof readme because README.md is not imported from Jest
+  // (storyshots) and triggers a React warning
+  .add('Introduction', () => <Markdown>{ensureString(readme)}</Markdown>)
+  .add('Installation', () => <Markdown>{ensureString(installation)}</Markdown>)
+  .add('Usage', () => <Markdown>{ensureString(usage)}</Markdown>)
+  .add('Development', () => <Markdown>{ensureString(development)}</Markdown>)
