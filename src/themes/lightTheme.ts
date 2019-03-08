@@ -36,7 +36,8 @@ export const lightTheme = {
       primary: palette.blue,
       secondary: palette.gray,
       success: palette.green,
-      danger: palette.red
+      danger: palette.red,
+      default: palette.blue
     },
     sizes: {
       tiny: preciseEm(0.7), // 11px

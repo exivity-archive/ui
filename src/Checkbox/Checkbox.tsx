@@ -25,6 +25,7 @@ const CheckboxWrapper = styled.div`
           width: 6px;
           height: 12px;
           cursor: pointer;
+          pointer-events: none;
         }
     `}
 `
@@ -36,27 +37,7 @@ export interface ICheckboxProps {
   className?: string
 }
 
-export const PlainCheckbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => {
-  return (
-    <CheckboxWrapper checked={checked}>
-      <input
-        className={className}
-        type='checkbox'
-        onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-          const checked = (e.target as HTMLInputElement).checked
-          onClick && onClick(checked)
-        }}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          onChange && onChange(e.target.checked)
-        }}
-        checked={checked}
-        {...props}
-      />
-    </CheckboxWrapper>
-  )
-}
-
-export const Checkbox = styled(PlainCheckbox)`
+export const StyledCheckbox = styled.input`
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -74,3 +55,21 @@ export const Checkbox = styled(PlainCheckbox)`
     outline:0;
   }
 `
+
+export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => (
+  <CheckboxWrapper checked={checked}>
+    <StyledCheckbox
+      className={className}
+      type='checkbox'
+      onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+        const checked = (e.target as HTMLInputElement).checked
+        onClick && onClick(checked)
+      }}
+      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+        onChange && onChange(e.target.checked)
+      }}
+      checked={checked}
+      {...props}
+    />
+  </CheckboxWrapper>
+)

@@ -40,24 +40,39 @@ export interface InputProps extends StyledProps {
 }
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
-  return themeResolver(props.theme)
+  return props.theme ? themeResolver(props.theme) : themeResolver(lightTheme)
 }
 
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = { }
-) => (props: StyledProps) => {
+  options: ThemeHelperOptions = {}
+) => (props: any) => {
   const themeObject = themeResolver(props.theme)
-  const match = Object.keys(props)
-    .find(propKey => themeObject[propKey])
+  let match = Object.keys(props)
+    .find((propKey: string) => {
+      const prop = props[propKey]
+      if (prop !== undefined) {
+        return themeObject[propKey]
+      }
+    })
 
-  if (!match) {
-    return options.defaultValue
+  if (!match && options.defaultValue) {
+    match = options.defaultValue
   }
 
-  return options.modifier
-    ? options.modifier(themeObject[match])
-    : themeObject[match]
+  if (!match && !options.defaultValue && themeObject.default) {
+    match = themeObject.default
+  }
+
+  if (!match) return null
+
+  if (themeObject[match]) {
+    return options.modifier
+      ? options.modifier(themeObject[match])
+      : themeObject[match]
+  }
+
+  return match
 }
 
 export const hexToString = (hex: string) => {
@@ -143,11 +158,11 @@ export const globalInput = css<InputProps>`
 
     &:focus {
       outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
-      outline-offset: 9px;
-    }
-  `}
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, {
+    modifier: hexToString,
+    defaultValue: 'primary'
+  })};
 
   &::placeholder {
     color: currentcolor;

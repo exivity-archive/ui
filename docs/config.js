@@ -2,6 +2,7 @@ import { addDecorator, addParameters, configure } from '@storybook/react'
 import { create } from '@storybook/theming'
 import { CanvasDecorator } from '../src/utils/tests/decorators/CanvasDecorator'
 import { ThemeDecorator } from '../src/utils/tests/decorators/ThemeDecorator'
+import requireContext from 'require-context.macro'
 
 addDecorator(CanvasDecorator)
 addDecorator(ThemeDecorator)
@@ -21,8 +22,8 @@ addParameters({
 });
 
 // Automatically import all files ending in *.stories.js
-const docs = require.context('../docs', true, /.stories.(js|tsx)$/)
-const src = require.context('../src', true, /.stories.(js|tsx)$/)
+const docs = requireContext('../docs', true, /.stories.(js|tsx)$/)
+const src = requireContext('../src', true, /.stories.(js|tsx)$/)
 
 function loadStories () {
   docs.keys().forEach(filename => docs(filename))
