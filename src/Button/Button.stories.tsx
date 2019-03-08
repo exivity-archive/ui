@@ -2,18 +2,10 @@ import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { MdClear, MdCloud, MdFavorite, MdSave, MdWhatshot } from 'react-icons/md'
-import styled, { css } from 'styled-components'
 
 import { Icon } from '../Icon'
 import { Button } from '.'
-
-const Row = styled.div<{ columns?: number | false }>`
-  display: grid;
-  grid-gap: 20px;
-  ${props => props.columns !== false && css`
-    grid-template-columns: repeat(${props => props.columns || 10}, fit-content(200px));
-  `}
-`
+import { Row } from '../utils/stories/components'
 
 storiesOf('atoms|Button', module)
   .add('default', () => <Button>Default</Button>)
