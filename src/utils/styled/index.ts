@@ -2,7 +2,7 @@ import color from 'color'
 import { css } from 'styled-components'
 import theme, { Theme } from '../../defaultTheme/theme'
 
-export type ThemeResolver = (theme: Theme) => any
+type ThemeResolver = (theme: Theme) => any
 
 interface ThemeHelperOptions {
   defaultValue?: any
@@ -37,7 +37,7 @@ export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) 
 
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = {}
+  options: ThemeHelperOptions = { }
 ) => (props: StyledProps) => {
   const themeObject = themeResolver(props.theme)
   const match = Object.keys(props)
@@ -100,7 +100,7 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
         border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
       }
     `
-    : css `
+    : css`
       border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
       background-color: ${fromTheme(theme => theme.colours.lightGray)};
 

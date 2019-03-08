@@ -1,7 +1,5 @@
 import { preciseEm } from '../utils/styled/isolated'
 import { DeepReadonly } from '../utils/types'
-import { StyledProps } from 'styled-components'
-import { ThemeResolver } from '../utils/styled'
 
 export const BASE_SIZE = 16
 

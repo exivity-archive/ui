@@ -2,16 +2,15 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import ExpandableSpacer from './ExpandableSpacer'
-import { ExpandableItem } from '../useExpandable'
 import { distanceBetweenEvenLevelItem } from './helpers'
 
-interface IItem {
+interface Data {
   attributes: { level: number },
   [key: string]: any
 }
 
 test('it renders', () => {
-  const data: ExpandableItem<IItem>[] = [{
+  const data: Data[] = [{
     attributes: { level: 1 },
     expand: () => { return },
     expanded: true,
@@ -28,7 +27,7 @@ test('it renders', () => {
 })
 
 test('it renders with button', () => {
-  const data: ExpandableItem<IItem>[] = []
+  const data: Data[] = []
   shallow(
     <ExpandableSpacer
       length={data.length}

@@ -7,7 +7,6 @@ exports[`renders basic button 1`] = `
   font-size: 14px;
   color: #fff;
   line-height: 1.5;
-  z-index: 2;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -443,7 +442,6 @@ exports[`renders different size buttons 1`] = `
   font-size: 16.625px;
   color: #fff;
   line-height: 1.5;
-  z-index: 2;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

@@ -5,7 +5,6 @@ import { FixedSizeList } from 'react-window'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Button from '../Button'
 import ExpandableSpacer, { distanceBetweenEvenLevelItem } from './ExpandableSpacer'
 import useExpandable from './useExpandable'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
@@ -52,10 +51,10 @@ const ItemWithSpacer = ({ data, index, style }: ItemProps) => {
     <div style={style}>
       <ExpandableSpacer
         level={item.attributes.level}
-        button={<Button style={{ zIndex: 2 }} onClick={() => {
+        button={<button style={{ zIndex: 2 }} onClick={() => {
           item.expand()
           action('expand')(item)
-        }}>Expand</Button>}
+        }}>Expand</button>}
         index={index}
         length={data.length}
         distance={distanceBetweenEvenLevelItem(data, index)}>
