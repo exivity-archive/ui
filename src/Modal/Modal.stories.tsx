@@ -6,12 +6,13 @@ import { Button } from '../Button/Button'
 
 storiesOf('molecules|Modal', module)
   .add('default', () => {
-    return (<Modal
-      title='Disclaimer'
-      text={loremIpsum}
-      buttons={[
-        <Button onClick={() => { return }}>Whatsup</Button>,
-        <Button danger onClick={() => { return }}>Delete</Button>
-      ]} />
+    return (
+      <Modal
+        title='Disclaimer'
+        text={loremIpsum}
+        buttons={[
+          <Button onClick={() => { return }}>Whatsup</Button>,
+          <Button danger onClick={() => { return }}>Delete</Button>
+        ]} />
     )
   })

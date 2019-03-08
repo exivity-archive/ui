@@ -33,7 +33,7 @@ const ButtonWrapper = styled.div`
   margin-left: 20px;
 `
 
-interface ModalProps extends StyledProps {
+interface ModalProps {
   title: string
   text: string
   buttons: React.ReactElement[]
@@ -46,7 +46,3 @@ export const Modal: FC<ModalProps> = ({ title, text, buttons = [] }) => (
     <Footer>{buttons.map((button, i) => (<ButtonWrapper key={i}>{button}</ButtonWrapper>))}</Footer>
   </ModalWrapper>
 )
-
-Modal.defaultProps = {
-  ...defaultStyledProps
-}
