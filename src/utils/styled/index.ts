@@ -158,11 +158,8 @@ export const globalInput = css<InputProps>`
 
     &:focus {
       outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
-
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, {
-    modifier: hexToString,
-    defaultValue: 'primary'
-  })};
+    }
+  `}
 
   &::placeholder {
     color: currentcolor;

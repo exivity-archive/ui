@@ -4,7 +4,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism-light'
 // @ts-ignore
 import solarizedlight from 'react-syntax-highlighter/dist/esm/styles/prism/solarizedlight'
 import styled, { css } from 'styled-components'
-import { BlockProps, fromTheme, globalBlockSpacing } from '../utils/styled'
+import { BlockProps, fromTheme } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 interface CodeProps extends SyntaxHighlighterProps {
