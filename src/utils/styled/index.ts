@@ -100,7 +100,7 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
         border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
       }
     `
-    : css`
+    : css `
       border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
       background-color: ${fromTheme(theme => theme.colours.lightGray)};
 
