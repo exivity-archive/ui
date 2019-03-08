@@ -9,10 +9,9 @@ storiesOf('molecules|Modal', module)
     return (
       <Modal
         title='Disclaimer'
-        text={loremIpsum}
         buttons={[
           <Button onClick={() => { return }}>Whatsup</Button>,
           <Button danger onClick={() => { return }}>Delete</Button>
-        ]} />
+        ]}>{loremIpsum}</Modal>
     )
   })
