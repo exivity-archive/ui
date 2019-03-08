@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { fromTheme } from '../utils/styled'
+import { fromTheme, defaultStyledProps, StyledProps } from '../utils/styled'
 import { Button } from '../Button'
 
 const Overlay = styled.div`
@@ -36,13 +36,13 @@ const Footer = styled.div`
   }
 `
 
-interface ModalProps {
+interface ModalProps extends StyledProps {
   title: string
   children: React.ReactNode
   buttons: React.ReactElement[]
 }
 
-export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
+const PlainModal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
   <Overlay>
     <ModalWrapper>
       <Body>{children}</Body>
@@ -50,3 +50,9 @@ export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
     </ModalWrapper>
   </Overlay>
 )
+
+export const Modal = styled(PlainModal)
+
+PlainModal.defaultProps = {
+  ...defaultStyledProps
+}
