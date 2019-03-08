@@ -13093,7 +13093,7 @@ and more recently with desktop publishing software like Aldus PageMaker includin
 
 exports[`Storyshots molecules|Modal default 1`] = `
 .c0 {
-  padding: 12px;
+  padding: 20px;
 }
 
 .c6 {

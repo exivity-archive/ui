@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+
 import { fromTheme } from '../utils/styled'
 import { Button } from '../Button'
 
