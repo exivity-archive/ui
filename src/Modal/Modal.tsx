@@ -1,47 +1,55 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { fromTheme } from '../utils/styled'
+
+import { fromTheme, defaultStyledProps, StyledProps } from '../utils/styled'
+import { Button } from '../Button'
+
+const Overlay = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.1);
+  position: absolute;
+`
 
 const ModalWrapper = styled.div`
   position: absolute;
   width: 600px;
-`
-
-const Header = styled.div`
-  padding: 15px 30px;
-  color: ${fromTheme(theme => theme.colours.gray)};
-  font-size: 28px;
-  font-weight: 700;
+  background-color: ${fromTheme(theme => theme.colours.white)};
+  left: calc((100vw - 600px) / 2);
+  top: 50px;
 `
 
 const Body = styled.div`
-  padding: 30px;
-  height: 400px;
+  padding: ${fromTheme(theme => theme.global.spacing * 1.5)}em;
+  max-height: 400px;
   border-top: solid 1px ${fromTheme(theme => theme.colours.gray)};
   border-bottom: solid 1px ${fromTheme(theme => theme.colours.gray)};
+  overflow-y: auto;
 `
 
 const Footer = styled.div`
-  padding: 20px 30px 20px 30px;
+  padding: ${fromTheme(theme => theme.global.spacing)}em ${fromTheme(theme => theme.global.spacing * 2)}em;
   color: ${fromTheme(theme => theme.colours.gray)};
   display: flex;
   flex-direction: row-reverse;
+  ${Button} {
+    margin-left: 20px;
+  }
 `
 
-const ButtonWrapper = styled.div`
-  margin-left: 20px;
-`
-
-interface ModalProps {
+interface ModalProps extends StyledProps {
   title: string
-  text: string
+  children: React.ReactNode
   buttons: React.ReactElement[]
 }
 
-export const Modal: FC<ModalProps> = ({ title, text, buttons = [] }) => (
-  <ModalWrapper>
-    <Header>{title}</Header>
-    <Body>{text}</Body>
-    <Footer>{buttons.map((button, i) => (<ButtonWrapper key={i}>{button}</ButtonWrapper>))}</Footer>
-  </ModalWrapper>
+const PlainModal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
+  <Overlay>
+    <ModalWrapper>
+      <Body>{children}</Body>
+      <Footer>{buttons}</Footer>
+    </ModalWrapper>
+  </Overlay>
 )
+
+export const Modal = PlainModal
