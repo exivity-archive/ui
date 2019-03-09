@@ -40,39 +40,32 @@ export interface InputProps extends StyledProps {
 }
 
 export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
-  return props.theme ? themeResolver(props.theme) : themeResolver(lightTheme)
+  return themeResolver(props.theme || lightTheme)
 }
 
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
   options: ThemeHelperOptions = {}
 ) => (props: any) => {
-  const themeObject = themeResolver(props.theme)
+  const themeObject = themeResolver(props.theme || lightTheme)
   let match = Object.keys(props)
     .find((propKey: string) => {
-      const prop = props[propKey]
-      if (prop !== undefined) {
-        return themeObject[propKey]
-      }
+      return props[propKey] && themeObject[propKey]
     })
 
   if (!match && options.defaultValue) {
     match = options.defaultValue
   }
 
-  if (!match && !options.defaultValue && themeObject.default) {
-    match = themeObject.default
+  if (!match && !options.defaultValue && themeObject._default) {
+    match = themeObject._default
   }
 
-  if (!match) return null
+  if (!match || !themeObject[match]) return null
 
-  if (themeObject[match]) {
-    return options.modifier
-      ? options.modifier(themeObject[match])
-      : themeObject[match]
-  }
-
-  return match
+  return options.modifier
+    ? options.modifier(themeObject[match])
+    : themeObject[match]
 }
 
 export const hexToString = (hex: string) => {
@@ -106,10 +99,7 @@ export const globalFont = css`
 export const globalInput = css<InputProps>`
   ${globalFont};
 
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 16,
-    defaultValue: 16
-  })}px;
+  font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
   display: block;
   box-sizing: border-box;
@@ -150,10 +140,10 @@ export const globalInput = css<InputProps>`
 
   ${props => props.inlined && css`
     padding: 0;
+    outline-offset: 9px;
 
     &:hover {
       outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
-      outline-offset: 9px;
     }
 
     &:focus {

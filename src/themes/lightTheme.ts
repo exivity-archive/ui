@@ -33,15 +33,17 @@ export const lightTheme = {
     shadowAlpha: 0.1,
     spacing: preciseEm(1.25), // 20px
     purposes: {
+      _default: 'primary',
       primary: palette.blue,
       secondary: palette.gray,
       success: palette.green,
-      danger: palette.red,
-      default: palette.blue
+      danger: palette.red
     },
     sizes: {
+      _default: 'base',
       tiny: preciseEm(0.7), // 11px
       small: preciseEm(0.8), // 13px
+      base: preciseEm(1), // 16px
       large: preciseEm(1.2), // 18px
       huge: preciseEm(1.5) // 24px
     }

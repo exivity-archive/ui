@@ -21,34 +21,38 @@ const StyledHeading = styled.div<HeadingProps & BlockProps>`
   ${globalFont};
   ${globalBlockSpacing};
 
-  ${(props: HeadingProps) => props.type === 'header' && css`
-    font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
-  `}
+  // Add extra specificity when rendered as input
+  &, input& {
+    ${(props: HeadingProps) => props.type === 'header' && css`
+      font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
+    `}
 
-  ${(props: HeadingProps) => props.type === 'section' && css`
-    font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
-    color: ${fromTheme(theme => theme.global.purposes.primary)};
-  `}
+    ${(props: HeadingProps) => props.type === 'section' && css`
+      font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
+      color: ${fromTheme(theme => theme.global.purposes.primary)};
+    `}
 
-  ${(props: HeadingProps) => props.type === 'sub' && css`
-    font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
-    text-transform: uppercase;
-    color: ${fromTheme(theme => theme.colours.gray)};
-    display: table;
-    overflow: hidden;
-    white-space: nowrap;
+    ${(props: HeadingProps) => props.type === 'sub' && css`
+      font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
+      text-transform: uppercase;
+      color: ${fromTheme(theme => theme.colours.gray)};
+      display: table;
+      overflow: hidden;
+      white-space: nowrap;
 
-    &:after {
-      border-top: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: ${preciseEm(0.6)}em;
-      width: 100%;
-    }
+      &:after {
+        border-top: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: ${preciseEm(0.6)}em;
+        width: 100%;
+      }
 
-    &:after { left: 1.5%; }
-  `}
+      &:after { left: 1.5%; }
+    `}
+
+  }
 
   ${Icon} {
     margin-right: ${fromTheme(theme => theme.global.spacing)}em;
