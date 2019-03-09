@@ -8,7 +8,7 @@ exports[`Storyshots atoms|Button default 1`] = `
 .c1 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -46,7 +46,7 @@ exports[`Storyshots atoms|Button default 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c1:hover {
@@ -106,7 +106,7 @@ exports[`Storyshots atoms|Button disabled 1`] = `
 .c1 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -144,7 +144,7 @@ exports[`Storyshots atoms|Button disabled 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c1:hover {
@@ -211,7 +211,7 @@ exports[`Storyshots atoms|Button icon 1`] = `
 .c1 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -249,7 +249,7 @@ exports[`Storyshots atoms|Button icon 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c1:hover {
@@ -340,11 +340,6 @@ exports[`Storyshots atoms|Button icon 1`] = `
   margin-right: 0.625em;
 }
 
-.c14 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 <div
   className="c0"
 >
@@ -385,7 +380,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -479,7 +474,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -573,7 +568,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -667,7 +662,7 @@ exports[`Storyshots atoms|Button outlined 1`] = `
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -802,7 +797,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -884,7 +879,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -966,7 +961,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1048,7 +1043,7 @@ exports[`Storyshots atoms|Button purposes 1`] = `
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1168,68 +1163,63 @@ exports[`Storyshots atoms|Button round 1`] = `
   padding: 12px;
 }
 
-.c19 {
+.c17 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
 }
 
-.c20 .c18 {
+.c18 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c18 {
+.c19 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c18 {
+.c20 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c18 {
+.c21 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c18 {
+.c22 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c25 .c18 {
+.c23 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c26 .c18 {
+.c24 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c27 .c18 {
+.c25 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c28 .c18 {
+.c26 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c29 .c18 {
+.c27 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c30 .c18 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c31 .c18 {
+.c28 .c16 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -1237,7 +1227,7 @@ exports[`Storyshots atoms|Button round 1`] = `
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1315,14 +1305,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c2 .c18 {
+.c2 .c16 {
   font-size: 1.5em;
 }
 
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1400,14 +1390,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c3 .c18 {
+.c3 .c16 {
   font-size: 1.5em;
 }
 
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1485,14 +1475,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c4 .c18 {
+.c4 .c16 {
   font-size: 1.5em;
 }
 
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1570,14 +1560,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c5 .c18 {
+.c5 .c16 {
   font-size: 1.5em;
 }
 
 .c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1667,14 +1657,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c6 .c18 {
+.c6 .c16 {
   font-size: 1.5em;
 }
 
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1764,14 +1754,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c7 .c18 {
+.c7 .c16 {
   font-size: 1.5em;
 }
 
 .c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1861,14 +1851,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #4caf50, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c8 .c18 {
+.c8 .c16 {
   font-size: 1.5em;
 }
 
 .c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -1958,14 +1948,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c9 .c18 {
+.c9 .c16 {
   font-size: 1.5em;
 }
 
 .c10 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.6015625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2003,7 +1993,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -2043,14 +2033,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c10 .c18 {
+.c10 .c16 {
   font-size: 1.5em;
 }
 
 .c11 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 0.7109375em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2088,7 +2078,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -2128,14 +2118,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c11 .c18 {
+.c11 .c16 {
   font-size: 1.5em;
 }
 
 .c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 1.0390625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2173,7 +2163,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -2213,99 +2203,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   display: block;
 }
 
-.c12 .c18 {
+.c12 .c16 {
   font-size: 1.5em;
 }
 
 .c13 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 17px;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #00a8d8;
-  --focus-color: #00a8d8;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c13:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c13:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c13:active,
-.c13.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c13:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c13[disabled] {
-  pointer-events: none;
-}
-
-.c13[disabled]:after {
-  display: block;
-}
-
-.c13 .c18 {
-  font-size: 1.5em;
-}
-
-.c14 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 10px;
+  font-size: 0.6015625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2343,7 +2248,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   background-color: #fff;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
@@ -2351,6 +2256,103 @@ exports[`Storyshots atoms|Button round 1`] = `
   min-width: auto;
   padding: 0;
   width: 2.5em;
+}
+
+.c13:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c13:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c13:active,
+.c13.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c13:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c13[disabled] {
+  pointer-events: none;
+}
+
+.c13[disabled]:after {
+  display: block;
+}
+
+.c13:hover {
+  color: #222;
+  box-shadow: 0 0 0 1px #222;
+}
+
+.c13:focus {
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+}
+
+.c13 .c16 {
+  font-size: 1.5em;
+}
+
+.c14 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.7109375em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  background-color: #fff;
+  color: #00a8d8;
+  box-shadow: 0 0 0 1px #00a8d8;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
 .c14:hover {
@@ -2395,14 +2397,14 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c14 .c18 {
+.c14 .c16 {
   font-size: 1.5em;
 }
 
 .c15 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 1.0390625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -2440,7 +2442,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   background-color: #fff;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
@@ -2492,201 +2494,7 @@ exports[`Storyshots atoms|Button round 1`] = `
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c15 .c18 {
-  font-size: 1.5em;
-}
-
-.c16 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #00a8d8;
-  --focus-color: #00a8d8;
-  background-color: #fff;
-  color: #00a8d8;
-  box-shadow: 0 0 0 1px #00a8d8;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c16:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c16:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c16:active,
-.c16.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c16:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c16[disabled] {
-  pointer-events: none;
-}
-
-.c16[disabled]:after {
-  display: block;
-}
-
-.c16:hover {
-  color: #222;
-  box-shadow: 0 0 0 1px #222;
-}
-
-.c16:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
-}
-
-.c16 .c18 {
-  font-size: 1.5em;
-}
-
-.c17 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 17px;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #00a8d8;
-  --focus-color: #00a8d8;
-  background-color: #fff;
-  color: #00a8d8;
-  box-shadow: 0 0 0 1px #00a8d8;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c17:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c17:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c17:active,
-.c17.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c17:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c17[disabled] {
-  pointer-events: none;
-}
-
-.c17[disabled]:after {
-  display: block;
-}
-
-.c17:hover {
-  color: #222;
-  box-shadow: 0 0 0 1px #222;
-}
-
-.c17:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
-}
-
-.c17 .c18 {
+.c15 .c16 {
   font-size: 1.5em;
 }
 
@@ -2753,6 +2561,11 @@ exports[`Storyshots atoms|Button round 1`] = `
       ❤️️
     </button>
     <button
+      className="c2"
+    >
+      ❤️️
+    </button>
+    <button
       className="c12"
     >
       ❤️️
@@ -2768,17 +2581,12 @@ exports[`Storyshots atoms|Button round 1`] = `
       ❤️️
     </button>
     <button
+      className="c6"
+    >
+      ❤️️
+    </button>
+    <button
       className="c15"
-    >
-      ❤️️
-    </button>
-    <button
-      className="c16"
-    >
-      ❤️️
-    </button>
-    <button
-      className="c17"
     >
       ❤️️
     </button>
@@ -2786,7 +2594,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c2"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2812,7 +2620,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c3"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2837,7 +2645,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c4"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2862,7 +2670,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c5"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2887,7 +2695,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c6"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2913,7 +2721,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c7"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2938,7 +2746,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c8"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2963,7 +2771,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c9"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -2988,7 +2796,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c10"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3014,7 +2822,33 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c11"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c2"
+    >
+      <span
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3040,7 +2874,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c12"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3066,7 +2900,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c13"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3092,7 +2926,33 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c14"
     >
       <span
-        className="c18 c19"
+        className="c16 c17"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
+      </span>
+      ️
+    </button>
+    <button
+      className="c6"
+    >
+      <span
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3118,59 +2978,7 @@ exports[`Storyshots atoms|Button round 1`] = `
       className="c15"
     >
       <span
-        className="c18 c19"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <path
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-          />
-        </svg>
-      </span>
-      ️
-    </button>
-    <button
-      className="c16"
-    >
-      <span
-        className="c18 c19"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-        >
-          <path
-            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
-          />
-        </svg>
-      </span>
-      ️
-    </button>
-    <button
-      className="c17"
-    >
-      <span
-        className="c18 c19"
+        className="c16 c17"
       >
         <svg
           fill="currentColor"
@@ -3205,7 +3013,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -3243,7 +3051,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c4:hover {
@@ -3287,7 +3095,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 0.6015625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -3325,7 +3133,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c2:hover {
@@ -3369,7 +3177,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 0.7109375em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -3407,7 +3215,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c3:hover {
@@ -3451,7 +3259,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 1.0390625em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -3489,7 +3297,7 @@ exports[`Storyshots atoms|Button sizes 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c5:hover {
@@ -3773,7 +3581,6 @@ exports[`Storyshots atoms|Heading header 1`] = `
   color: #222;
   line-height: 1.5;
   margin: 1rem 0;
-  font-size: 1.5em;
 }
 
 .c1:first-child {
@@ -3782,6 +3589,11 @@ exports[`Storyshots atoms|Heading header 1`] = `
 
 .c1:last-child {
   margin-bottom: 0;
+}
+
+.c1,
+input.c1 {
+  font-size: 1.5em;
 }
 
 .c1 .c2 {
@@ -3802,7 +3614,7 @@ exports[`Storyshots atoms|Heading header 1`] = `
     className="c1"
     type="header"
   >
-    Blanditiis aliquid qui voluptas.
+    Ut nisi repudiandae explicabo.
   </h1>
 </div>
 `;
@@ -3847,12 +3659,6 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   color: #222;
   line-height: 1.5;
   margin: 1rem 0;
-  font-size: 0.8125em;
-  text-transform: uppercase;
-  color: #999;
-  display: table;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .c1:first-child {
@@ -3863,7 +3669,18 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   margin-bottom: 0;
 }
 
-.c1:after {
+.c1,
+input.c1 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c1:after,
+input.c1:after {
   border-top: 1px solid #eee;
   content: '';
   display: table-cell;
@@ -3872,7 +3689,8 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   width: 100%;
 }
 
-.c1:after {
+.c1:after,
+input.c1:after {
   left: 1.5%;
 }
 
@@ -3944,7 +3762,6 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 
 .c17 .c2 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c18 .c2 {
@@ -3999,18 +3816,6 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   font-size: 1.5em;
 }
 
-.c31 .c2 {
-  font-size: 1.5em;
-}
-
-.c32 .c2 {
-  font-size: 1.5em;
-}
-
-.c33 .c2 {
-  font-size: 1.5em;
-}
-
 <div
   className="c0"
 >
@@ -4040,7 +3845,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
       </svg>
     </span>
      
-    Fugiat dolorem eligendi quia.
+    Neque aut provident sint.
   </h3>
 </div>
 `;
@@ -4057,8 +3862,6 @@ exports[`Storyshots atoms|Heading section 1`] = `
   color: #222;
   line-height: 1.5;
   margin: 1rem 0;
-  font-size: 1.5em;
-  color: #00a8d8;
 }
 
 .c1:first-child {
@@ -4067,6 +3870,12 @@ exports[`Storyshots atoms|Heading section 1`] = `
 
 .c1:last-child {
   margin-bottom: 0;
+}
+
+.c1,
+input.c1 {
+  font-size: 1.5em;
+  color: #00a8d8;
 }
 
 .c1 .c2 {
@@ -4087,7 +3896,7 @@ exports[`Storyshots atoms|Heading section 1`] = `
     className="c1"
     type="section"
   >
-    Sit sapiente esse asperiores.
+    Aut dignissimos rerum porro.
   </h2>
 </div>
 `;
@@ -4104,12 +3913,6 @@ exports[`Storyshots atoms|Heading sub 1`] = `
   color: #222;
   line-height: 1.5;
   margin: 1rem 0;
-  font-size: 0.8125em;
-  text-transform: uppercase;
-  color: #999;
-  display: table;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .c1:first-child {
@@ -4120,7 +3923,18 @@ exports[`Storyshots atoms|Heading sub 1`] = `
   margin-bottom: 0;
 }
 
-.c1:after {
+.c1,
+input.c1 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c1:after,
+input.c1:after {
   border-top: 1px solid #eee;
   content: '';
   display: table-cell;
@@ -4129,7 +3943,8 @@ exports[`Storyshots atoms|Heading sub 1`] = `
   width: 100%;
 }
 
-.c1:after {
+.c1:after,
+input.c1:after {
   left: 1.5%;
 }
 
@@ -4151,7 +3966,7 @@ exports[`Storyshots atoms|Heading sub 1`] = `
     className="c1"
     type="sub"
   >
-    Cupiditate ipsam nisi eaque.
+    Ab numquam quaerat architecto.
   </h3>
 </div>
 `;
@@ -4257,7 +4072,6 @@ exports[`Storyshots atoms|Icon default 1`] = `
 
 .c17 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c18 .c1 {
@@ -4309,18 +4123,6 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c30 .c1 {
-  font-size: 1.5em;
-}
-
-.c31 .c1 {
-  font-size: 1.5em;
-}
-
-.c32 .c1 {
-  font-size: 1.5em;
-}
-
-.c33 .c1 {
   font-size: 1.5em;
 }
 
@@ -4679,13 +4481,13 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   <p
     className="c1"
   >
-    Totam neque non dolores blanditiis ipsa expedita. Aut itaque rerum enim iste delectus voluptatem. Reprehenderit nobis eveniet pariatur aut et sit. Animi ut magnam eos quis quos.
+    Sit perspiciatis vitae nulla asperiores asperiores. Voluptatem omnis quia numquam voluptatem tempora perferendis cupiditate. Ratione non perspiciatis aut. Ipsum aliquid ut et mollitia nisi natus in. Commodi labore consequuntur necessitatibus pariatur dolore iure nulla praesentium et. Tempora sed autem ea occaecati sit dolore incidunt.
  
-Est modi earum laborum numquam velit qui. Rerum voluptatem minus aut itaque optio eos dolorem esse. Voluptatum quod temporibus dolores dolore ut. Nobis neque ullam rem. Et non accusamus nostrum. Iusto sit dolores optio aliquam culpa velit dolorem.
+Ut rem autem qui sed beatae nihil dolores. Voluptatum sed mollitia placeat impedit unde assumenda quisquam sit. Tempore ea eius tempore rerum est rem. Id quaerat ut maxime ullam qui rem in vel excepturi.
  
-Nihil placeat ea velit quidem qui laboriosam ut. Ab ad velit placeat nihil. Accusantium voluptatem aut molestiae aliquid consequuntur. Maiores est aspernatur accusantium similique. Non earum est nulla ab sunt architecto temporibus et maxime. Dolor dolorem maxime delectus odit.
+Sapiente aspernatur harum rem sit quos. Sunt neque aliquam quisquam dolorem sit cum. Enim aut quis nihil omnis. Fugiat aut a fugiat quis qui voluptates. Occaecati facilis eligendi aut aperiam.
  
-In rerum optio voluptatem autem assumenda eius ut laboriosam. Ut aut aut in autem aut omnis. Ex molestias qui quaerat quia.
+Non aut sequi nihil nobis. Autem illo voluptatem doloribus. Ut in veniam enim autem. Consequatur rerum est natus enim nostrum odit.
   </p>
 </div>
 `;
@@ -4849,7 +4651,7 @@ exports[`Storyshots forms|Field align 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -4857,7 +4659,7 @@ exports[`Storyshots forms|Field align 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -4977,7 +4779,7 @@ exports[`Storyshots forms|Field default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -4985,7 +4787,7 @@ exports[`Storyshots forms|Field default 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -5121,7 +4923,7 @@ exports[`Storyshots forms|Field horizontal 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -5129,7 +4931,7 @@ exports[`Storyshots forms|Field horizontal 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -5364,7 +5166,7 @@ exports[`Storyshots forms|Field multiple 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -5372,7 +5174,7 @@ exports[`Storyshots forms|Field multiple 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -5636,7 +5438,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
 
 .c24 .c7 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c25 .c7 {
@@ -5691,18 +5492,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   font-size: 1.5em;
 }
 
-.c38 .c7 {
-  font-size: 1.5em;
-}
-
-.c39 .c7 {
-  font-size: 1.5em;
-}
-
-.c40 .c7 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -5729,7 +5518,7 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -5737,7 +5526,7 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -5804,7 +5593,7 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -5963,7 +5752,6 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
 
 .c23 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c24 .c6 {
@@ -6018,18 +5806,6 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   font-size: 1.5em;
 }
 
-.c37 .c6 {
-  font-size: 1.5em;
-}
-
-.c38 .c6 {
-  font-size: 1.5em;
-}
-
-.c39 .c6 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -6041,7 +5817,7 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6049,7 +5825,7 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -6093,7 +5869,7 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6168,7 +5944,7 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -6348,7 +6124,6 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
 
 .c22 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c23 .c6 {
@@ -6403,18 +6178,6 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
   font-size: 1.5em;
 }
 
-.c36 .c6 {
-  font-size: 1.5em;
-}
-
-.c37 .c6 {
-  font-size: 1.5em;
-}
-
-.c38 .c6 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -6426,7 +6189,7 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6434,7 +6197,7 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -6501,7 +6264,7 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -6682,7 +6445,6 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
 
 .c30 .c7 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c31 .c7 {
@@ -6737,18 +6499,6 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 1.5em;
 }
 
-.c44 .c7 {
-  font-size: 1.5em;
-}
-
-.c45 .c7 {
-  font-size: 1.5em;
-}
-
-.c46 .c7 {
-  font-size: 1.5em;
-}
-
 .c2 {
   display: grid;
   grid-gap: 20px;
@@ -6766,7 +6516,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6812,13 +6562,65 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c12 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c12:hover {
+  border: 1px solid #999;
+}
+
+.c12:focus {
+  border: 1px solid #222;
+}
+
+.c12::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6870,7 +6672,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6922,7 +6724,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -6968,65 +6770,13 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c12 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  border: 1px solid #00a8d8;
-  background-color: unset;
-}
-
-.c12:hover {
-  border: 1px solid #999;
-}
-
-.c12:focus {
-  border: 1px solid #222;
-}
-
-.c12::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
 .c13 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7078,7 +6828,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7130,7 +6880,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7205,7 +6955,7 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -7588,7 +7338,6 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
 
 .c26 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c27 .c6 {
@@ -7643,18 +7392,6 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 1.5em;
 }
 
-.c40 .c6 {
-  font-size: 1.5em;
-}
-
-.c41 .c6 {
-  font-size: 1.5em;
-}
-
-.c42 .c6 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -7666,7 +7403,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7674,7 +7411,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -7718,7 +7455,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 0.8125rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7726,7 +7463,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -7770,7 +7507,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 1.1875rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -7778,7 +7515,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -7845,7 +7582,7 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -7995,7 +7732,7 @@ exports[`Storyshots forms|TextArea default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8003,7 +7740,7 @@ exports[`Storyshots forms|TextArea default 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -8070,7 +7807,7 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8078,7 +7815,7 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -8122,7 +7859,7 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8130,7 +7867,7 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -8220,7 +7957,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8228,13 +7965,13 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   padding: 0;
+  outline-offset: 9px;
 }
 
 .c2:hover {
   outline: 1px solid rgba(var(--focus-color),0.5);
-  outline-offset: 9px;
 }
 
 .c2:focus {
@@ -8273,7 +8010,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
     <p
       className="c1"
     >
-      Maiores voluptatem possimus. Tenetur eum harum voluptates fugiat corrupti id repudiandae est. Rem unde blanditiis in a ad numquam totam.
+      Voluptate rerum repellat. Alias et et velit placeat sed architecto cumque nemo. Qui earum nam aspernatur quibusdam molestiae sapiente.
     </p>
     <textarea
       className="c2"
@@ -8284,12 +8021,12 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Minus quod cupiditate dolor eveniet nisi repudiandae voluptatem. Consequatur corporis quaerat. Voluptas ex placeat enim molestias quis ut ea autem sed. Quia sint sit consequatur. Et placeat nesciunt quisquam."
+      value="Soluta at accusantium voluptatem et minus consequatur. Quo aliquid quos officia nam. Necessitatibus praesentium eum in sunt quos aut. Eius corporis doloribus debitis delectus laudantium vitae ut iste magni. Eum neque sapiente voluptatibus laborum."
     />
     <p
       className="c1"
     >
-      Soluta porro provident suscipit. Minima cupiditate at fugit.
+      Beatae maxime molestias voluptatibus officiis voluptatibus expedita. Nemo nam veritatis est voluptatem.
     </p>
   </div>
 </div>
@@ -8306,7 +8043,7 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8314,7 +8051,7 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -8381,7 +8118,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8427,13 +8164,65 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c6:hover {
+  border: 1px solid #999;
+}
+
+.c6:focus {
+  border: 1px solid #222;
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8485,7 +8274,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8537,7 +8326,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8583,65 +8372,13 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  border: 1px solid #00a8d8;
-  background-color: unset;
-}
-
-.c6:hover {
-  border: 1px solid #999;
-}
-
-.c6:focus {
-  border: 1px solid #222;
-}
-
-.c6::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8693,7 +8430,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8745,7 +8482,7 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8853,8 +8590,6 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
   color: #222;
   line-height: 1.5;
   margin: 1rem 0;
-  font-size: 1.5em;
-  color: #00a8d8;
 }
 
 .c1:first-child {
@@ -8863,6 +8598,12 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
 
 .c1:last-child {
   margin-bottom: 0;
+}
+
+.c1,
+input.c1 {
+  font-size: 1.5em;
+  color: #00a8d8;
 }
 
 .c1 .c4 {
@@ -8899,7 +8640,7 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8907,13 +8648,13 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   padding: 0;
+  outline-offset: 9px;
 }
 
 .c2:hover {
   outline: 1px solid rgba(var(--focus-color),0.5);
-  outline-offset: 9px;
 }
 
 .c2:focus {
@@ -8958,7 +8699,7 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
     <p
       className="c3"
     >
-      Consequatur excepturi natus illum ea hic dignissimos omnis libero. Maxime a tenetur autem adipisci.
+      Eius occaecati temporibus iste. Nulla ratione dolorem rerum commodi itaque vero.
     </p>
   </div>
 </div>
@@ -8975,7 +8716,7 @@ exports[`Storyshots forms|TextInput default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -8983,7 +8724,7 @@ exports[`Storyshots forms|TextInput default 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -9045,7 +8786,7 @@ exports[`Storyshots forms|TextInput disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9053,7 +8794,7 @@ exports[`Storyshots forms|TextInput disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -9132,7 +8873,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9140,13 +8881,13 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   padding: 0;
+  outline-offset: 9px;
 }
 
 .c2:hover {
   outline: 1px solid rgba(var(--focus-color),0.5);
-  outline-offset: 9px;
 }
 
 .c2:focus {
@@ -9185,7 +8926,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
     <p
       className="c1"
     >
-      voluptatibus odio qui cumque
+      quibusdam quis impedit eligendi
     </p>
     <input
       className="c2"
@@ -9196,12 +8937,12 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
         }
       }
       type="text"
-      value="sapiente dolore aut id"
+      value="et dolorem iusto modi"
     />
     <p
       className="c1"
     >
-      rerum deserunt ipsam officia
+      consequatur nobis fuga ex
     </p>
   </div>
 </div>
@@ -9218,7 +8959,7 @@ exports[`Storyshots forms|TextInput outlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9226,7 +8967,7 @@ exports[`Storyshots forms|TextInput outlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -9293,7 +9034,7 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9339,13 +9080,65 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c6:hover {
+  border: 1px solid #999;
+}
+
+.c6:focus {
+  border: 1px solid #222;
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9397,7 +9190,7 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9449,7 +9242,7 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9495,65 +9288,13 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  border: 1px solid #00a8d8;
-  background-color: unset;
-}
-
-.c6:hover {
-  border: 1px solid #999;
-}
-
-.c6:focus {
-  border: 1px solid #222;
-}
-
-.c6::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9605,7 +9346,7 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9657,7 +9398,7 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9699,6 +9440,214 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
 }
 
 .c9[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c10:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c10:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c10::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c11 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c11:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c11:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c11::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c12 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c12:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c12:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c12::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c13 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c13:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c13:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c13::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -9757,6 +9706,30 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
       type="text"
       value="Danger"
     />
+    <input
+      className="c10"
+      onChange={[Function]}
+      type="text"
+      value="Primary"
+    />
+    <input
+      className="c11"
+      onChange={[Function]}
+      type="text"
+      value="Secondary"
+    />
+    <input
+      className="c12"
+      onChange={[Function]}
+      type="text"
+      value="Success"
+    />
+    <input
+      className="c13"
+      onChange={[Function]}
+      type="text"
+      value="Danger"
+    />
   </div>
 </div>
 `;
@@ -9777,7 +9750,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9785,7 +9758,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -9829,7 +9802,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 0.8125rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9837,7 +9810,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -9881,7 +9854,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 1.1875rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9889,7 +9862,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -9933,7 +9906,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 11px;
+  font-size: 0.6875rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -9941,7 +9914,7 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -10108,7 +10081,6 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
 
 .c23 .c5 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c24 .c5 {
@@ -10163,18 +10135,6 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   font-size: 1.5em;
 }
 
-.c37 .c5 {
-  font-size: 1.5em;
-}
-
-.c38 .c5 {
-  font-size: 1.5em;
-}
-
-.c39 .c5 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -10186,7 +10146,7 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -10194,7 +10154,7 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -10265,7 +10225,7 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   right: 0.5em;
 }
 
@@ -10274,7 +10234,7 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   left: 0.5em;
 }
 
@@ -10447,7 +10407,6 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
 
 .c23 .c5 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c24 .c5 {
@@ -10502,18 +10461,6 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   font-size: 1.5em;
 }
 
-.c37 .c5 {
-  font-size: 1.5em;
-}
-
-.c38 .c5 {
-  font-size: 1.5em;
-}
-
-.c39 .c5 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -10525,7 +10472,7 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -10533,7 +10480,7 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -10604,7 +10551,7 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -10614,7 +10561,7 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   cursor: not-allowed;
   left: 0.5em;
 }
@@ -10790,7 +10737,6 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
 
 .c23 .c5 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c24 .c5 {
@@ -10845,18 +10791,6 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   font-size: 1.5em;
 }
 
-.c37 .c5 {
-  font-size: 1.5em;
-}
-
-.c38 .c5 {
-  font-size: 1.5em;
-}
-
-.c39 .c5 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -10868,7 +10802,7 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -10876,7 +10810,7 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -10947,7 +10881,7 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   right: 0.5em;
 }
 
@@ -10956,7 +10890,7 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   left: 0.5em;
 }
 
@@ -11127,7 +11061,6 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
 
 .c31 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c32 .c6 {
@@ -11182,18 +11115,6 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 1.5em;
 }
 
-.c45 .c6 {
-  font-size: 1.5em;
-}
-
-.c46 .c6 {
-  font-size: 1.5em;
-}
-
-.c47 .c6 {
-  font-size: 1.5em;
-}
-
 .c2 {
   display: grid;
   grid-gap: 20px;
@@ -11211,7 +11132,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11257,13 +11178,65 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c11 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c11:hover {
+  border: 1px solid #999;
+}
+
+.c11:focus {
+  border: 1px solid #222;
+}
+
+.c11::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11315,7 +11288,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11367,7 +11340,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11413,65 +11386,13 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c11 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 16px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  border: 1px solid #00a8d8;
-  background-color: unset;
-}
-
-.c11:hover {
-  border: 1px solid #999;
-}
-
-.c11:focus {
-  border: 1px solid #222;
-}
-
-.c11::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c11::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c11:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c11::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c11[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
 .c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11523,7 +11444,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11575,7 +11496,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -11654,7 +11575,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   right: 0.5em;
 }
 
@@ -11663,7 +11584,7 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   left: 0.5em;
 }
 
@@ -12276,7 +12197,6 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
 
 .c29 .c5 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c30 .c5 {
@@ -12331,18 +12251,6 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 1.5em;
 }
 
-.c43 .c5 {
-  font-size: 1.5em;
-}
-
-.c44 .c5 {
-  font-size: 1.5em;
-}
-
-.c45 .c5 {
-  font-size: 1.5em;
-}
-
 .c1 {
   display: grid;
   grid-gap: 20px;
@@ -12354,7 +12262,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -12362,7 +12270,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -12406,7 +12314,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: 0.8125rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -12414,7 +12322,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -12458,7 +12366,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 1.1875rem;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -12466,7 +12374,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -12537,7 +12445,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   right: 0.5em;
 }
 
@@ -12546,7 +12454,7 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: 20px;
+  font-size: NaNpx;
   left: 0.5em;
 }
 
@@ -13093,13 +13001,13 @@ and more recently with desktop publishing software like Aldus PageMaker includin
 
 exports[`Storyshots molecules|Modal default 1`] = `
 .c0 {
-  padding: 20px;
+  padding: 12px;
 }
 
 .c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
@@ -13137,7 +13045,7 @@ exports[`Storyshots molecules|Modal default 1`] = `
   text-decoration: none;
   outline: none;
   background-color: #00a8d8;
-  --focus-color: #00a8d8;
+  --focus-color: 0,168,216;
 }
 
 .c6:hover {
@@ -13181,7 +13089,7 @@ exports[`Storyshots molecules|Modal default 1`] = `
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875em;
   color: #fff;
   line-height: 1.5;
   text-transform: uppercase;
