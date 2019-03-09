@@ -48,24 +48,23 @@ export const matchThemeProp = (
   options: ThemeHelperOptions = {}
 ) => (props: any) => {
   const themeObject = themeResolver(props.theme || lightTheme)
+  const optionallyModify = options.modifier || ((val: any) => val)
   let match = Object.keys(props)
     .find((propKey: string) => {
       return props[propKey] && themeObject[propKey]
     })
 
   if (!match && options.defaultValue) {
-    match = options.defaultValue
+    return optionallyModify(options.defaultValue)
   }
 
-  if (!match && !options.defaultValue && themeObject._default) {
+  if (!match && themeObject._default) {
     match = themeObject._default
   }
 
   if (!match || !themeObject[match]) return null
 
-  return options.modifier
-    ? options.modifier(themeObject[match])
-    : themeObject[match]
+  return optionallyModify(themeObject[match])
 }
 
 export const hexToString = (hex: string) => {

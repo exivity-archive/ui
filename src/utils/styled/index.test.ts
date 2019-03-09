@@ -1,6 +1,5 @@
 import { fromTheme, matchThemeProp } from '.'
 import { lightTheme } from '../../themes'
-import { preciseEm } from './isolated'
 
 describe('fromTheme', () => {
   const theme = {
@@ -88,5 +87,27 @@ describe('matchThemeProp', () => {
     const fn = matchThemeProp((theme: any) => theme.global.purposes, { modifier })
     // @ts-ignore
     expect(fn({})).toEqual(modifier(lightTheme.global.purposes[lightTheme.global.purposes._default]))
+  })
+
+  const defaultValue = 'val3'
+
+  test('matchThemeProp should return default value given theme prop and a no prop key match', () => {
+    const fn = matchThemeProp((theme: any) => theme.test, { defaultValue })
+    expect(fn({ theme })).toBe(defaultValue)
+  })
+
+  test('matchThemeProp should return modified default value given theme prop and a no prop key match', () => {
+    const fn = matchThemeProp((theme: any) => theme.test, { modifier, defaultValue })
+    expect(fn({ theme })).toBe(modifier(defaultValue))
+  })
+
+  test('matchThemeProp should return default value if no theme prop is available and a no prop key match', () => {
+    const fn = matchThemeProp((theme: any) => theme.test, { defaultValue })
+    expect(fn({})).toBe(defaultValue)
+  })
+
+  test('matchThemeProp should return modified default value if no theme prop is available and a no prop key match', () => {
+    const fn = matchThemeProp((theme: any) => theme.test, { modifier, defaultValue })
+    expect(fn({})).toBe(modifier(defaultValue))
   })
 })
