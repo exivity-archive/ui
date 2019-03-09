@@ -62,7 +62,9 @@ export const matchThemeProp = (
     match = themeObject._default
   }
 
-  if (!match || !themeObject[match]) return null
+  if (!match || !themeObject[match]) {
+    return null
+  }
 
   return optionallyModify(themeObject[match])
 }
