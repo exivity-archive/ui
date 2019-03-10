@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import { Code } from '../Code'
 import { Heading } from '../Heading'
 import { HeadingType } from '../Heading/Heading'
+import { Link } from '../Link'
 import { Paragraph } from '../Paragraph'
 import { ObjectOf } from '../utils/types'
 
@@ -13,6 +14,7 @@ const headingLevelToType: {
 } = { 1: 'header', 2: 'section', 3: 'sub', 4: 'sub', 5: 'sub', 6: 'sub' }
 
 const defaultRenderers: ObjectOf<Renderer> = {
+  link: props => <Link {...props} />,
   paragraph: props => <Paragraph {...props} />,
   heading: ({ level, ...rest }) => <Heading type={headingLevelToType[level]} {...rest} />,
   inlineCode: props => <Code {...props} />,

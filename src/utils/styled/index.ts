@@ -3,7 +3,7 @@ import { css } from 'styled-components'
 import { lightTheme, Theme } from '../../themes'
 import { preciseEm } from './isolated'
 
-type ThemeResolver = (theme: Theme) => any
+type ThemeResolver<T = any> = (theme: Theme) => T
 
 interface ThemeHelperOptions {
   defaultValue?: any
@@ -39,8 +39,10 @@ export interface InputProps extends StyledProps {
   inlined?: boolean
 }
 
-export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
-  return themeResolver(props.theme || lightTheme)
+const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length === 0
+
+export const fromTheme = <T>(themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
+  return themeResolver(isEmptyTheme(props.theme) ? lightTheme as Theme : props.theme!)
 }
 
 export const matchThemeProp = (
@@ -90,7 +92,9 @@ export const globalBlockSpacing = css`
 `
 
 export const globalFont = css`
-  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+  font-family: ${fromTheme(theme => {
+    return theme.global.fontFamily
+  })};
   font-weight: normal;
   font-size: ${fromTheme(theme => theme.global.baseSize)}px;
   color: ${fromTheme(theme => theme.global.textColor)};
