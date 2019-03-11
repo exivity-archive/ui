@@ -10,3 +10,5 @@ export const {Component} = styled.div<{Component}Props>`
 
   color: ${props => props.someFlag ? 'red' : 'green'};
 `
+
+{Component}.displayName = '{Component}'

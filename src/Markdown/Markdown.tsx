@@ -4,7 +4,9 @@ import { Code } from '../Code'
 import { Heading } from '../Heading'
 import { HeadingType } from '../Heading/Heading'
 import { Link } from '../Link'
+import { List } from '../List'
 import { Paragraph } from '../Paragraph'
+import { Table } from '../Table'
 import { ObjectOf } from '../utils/types'
 
 type Renderer = (props: any) => ReactElement
@@ -14,11 +16,13 @@ const headingLevelToType: {
 } = { 1: 'header', 2: 'section', 3: 'sub', 4: 'sub', 5: 'sub', 6: 'sub' }
 
 const defaultRenderers: ObjectOf<Renderer> = {
-  link: props => <Link {...props} />,
-  paragraph: props => <Paragraph {...props} />,
+  code: props => <Code block {...props}>{props.value}</Code>,
   heading: ({ level, ...rest }) => <Heading type={headingLevelToType[level]} {...rest} />,
   inlineCode: props => <Code {...props} />,
-  code: props => <Code block {...props}>{props.value}</Code>
+  link: props => <Link {...props} />,
+  list: props => <List {...props} unordered={!props.ordered} />,
+  paragraph: props => <Paragraph {...props} />,
+  table: props => <Table {...props} />
 }
 
 interface MarkdownProps {

@@ -80,7 +80,8 @@ export const hexToString = (hex: string) => {
 }
 
 export const globalBlockSpacing = css`
-  margin: ${(props: BlockProps) => props.noMargin ? 0 : preciseEm(1)}rem 0;
+  margin: ${(props: BlockProps & StyledProps) => props.noMargin
+    ? 0 : fromTheme(theme => theme.global.spacing)(props)}rem 0;
 
   &:first-child {
     margin-top: 0;
@@ -89,6 +90,13 @@ export const globalBlockSpacing = css`
   &:last-child {
     margin-bottom: 0;
   }
+`
+
+export const resetBox = css`
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
 `
 
 export const globalFont = css`
