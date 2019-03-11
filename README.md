@@ -22,19 +22,14 @@ yarn add @exivity/ui
 Start using it
 
 ```jsx
-import Button from '@exivity/ui/Button'
+import { Button } from '@exivity/ui'
 
 <Button>Click me!</Button>
 ```
 
 Visit [exivity.github.io/ui](https://exivity.github.io/ui/) for more documentation and examples.
 
-Development
------------
+License
+-------
 
-Please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) for your commit messages so automatic releasing actually generates meaningful version numbers.
-
-| command | for |
-|---------|------|
-| yarn start | run storybook and jest in watch mode
-| yarn build | build docs and compile typescript
+MIT
