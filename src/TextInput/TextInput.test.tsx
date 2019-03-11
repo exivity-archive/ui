@@ -1,13 +1,7 @@
-import { mount } from 'enzyme'
-import renderer from 'react-test-renderer'
 import * as React from 'react'
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
 import { TextInput } from '.'
-
-test('TextInput snapshot', () => {
-  const textInput = renderer.create(<TextInput onChange={jest.fn()} />)
-  expect(textInput).toMatchSnapshot()
-})
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'
@@ -15,7 +9,7 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textInput = mount(<TextInput value={initialValue} onChange={onChangeMock} />)
+  const textInput = mountWithTheme(<TextInput value={initialValue} onChange={onChangeMock}/>)
 
   textInput
     .find('input')

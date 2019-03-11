@@ -1,8 +1,9 @@
 import color from 'color'
 import { css } from 'styled-components'
 import { lightTheme, Theme } from '../../themes'
+import { preciseEm } from './isolated'
 
-type ThemeResolver = (theme: Theme) => any
+type ThemeResolver<T = any> = (theme: Theme) => T
 
 interface ThemeHelperOptions {
   defaultValue?: any
@@ -10,10 +11,16 @@ interface ThemeHelperOptions {
 }
 
 export interface StyledProps {
-  theme: Theme
+  theme?: Theme
 }
 
-export const defaultStyledProps = { theme: lightTheme }
+export const defaultStyledProps = {
+  theme: lightTheme
+}
+
+export interface BlockProps {
+  noMargin?: boolean
+}
 
 export interface InputProps extends StyledProps {
   // Purposes
@@ -29,27 +36,39 @@ export interface InputProps extends StyledProps {
 
   // Variants
   outlined?: boolean
+  inlined?: boolean
 }
 
-export const fromTheme = (themeResolver: ThemeResolver) => (props: StyledProps) => {
-  return themeResolver(props.theme)
+const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length === 0
+
+export const fromTheme = <T>(themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
+  return themeResolver(isEmptyTheme(props.theme) ? lightTheme as Theme : props.theme!)
 }
 
 export const matchThemeProp = (
   themeResolver: ThemeResolver,
-  options: ThemeHelperOptions = { }
-) => (props: StyledProps) => {
-  const themeObject = themeResolver(props.theme)
-  const match = Object.keys(props)
-    .find(propKey => themeObject[propKey])
+  options: ThemeHelperOptions = {}
+) => (props: any) => {
+  const themeObject = themeResolver(props.theme || lightTheme)
+  const optionallyModify = options.modifier || ((val: any) => val)
+  let match = Object.keys(props)
+    .find((propKey: string) => {
+      return props[propKey] && themeObject[propKey]
+    })
 
-  if (!match) {
-    return options.defaultValue
+  if (!match && options.defaultValue) {
+    return optionallyModify(options.defaultValue)
   }
 
-  return options.modifier
-    ? options.modifier(themeObject[match])
-    : themeObject[match]
+  if (!match && themeObject._default) {
+    match = themeObject._default
+  }
+
+  if (!match || !themeObject[match]) {
+    return null
+  }
+
+  return optionallyModify(themeObject[match])
 }
 
 export const hexToString = (hex: string) => {
@@ -60,21 +79,40 @@ export const hexToString = (hex: string) => {
   }
 }
 
+export const globalBlockSpacing = css`
+  margin: ${(props: BlockProps & StyledProps) => props.noMargin
+    ? 0 : fromTheme(theme => theme.global.spacing)(props)}rem 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`
+
+export const resetBox = css`
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+`
+
 export const globalFont = css`
-  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+  font-family: ${fromTheme(theme => {
+    return theme.global.fontFamily
+  })};
   font-weight: normal;
   font-size: ${fromTheme(theme => theme.global.baseSize)}px;
   color: ${fromTheme(theme => theme.global.textColor)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
 
-export const globalInput = css<InputProps & { outlined?: boolean }>`
+export const globalInput = css<InputProps>`
   ${globalFont};
 
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 16,
-    defaultValue: 16
-  })}px;
+  font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
   display: block;
   box-sizing: border-box;
@@ -87,33 +125,44 @@ export const globalInput = css<InputProps & { outlined?: boolean }>`
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
-  ${props => props.outlined
-    ? css`
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
-      background-color: unset;
+  ${props => (!props.outlined && !props.inlined) && css`
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
+    background-color: ${fromTheme(theme => theme.colours.lightGray)};
 
-      &:hover {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
-      }
+    &:hover {
+      border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+    }
 
-      &:focus {
-        border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
-      }
-    `
-    : css `
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
-      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    &:focus {
+      border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+    }
+  `}
 
-      &:hover {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
-      }
+  ${props => props.outlined && css`
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
+    background-color: unset;
 
-      &:focus {
-        border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
-      }
-    `}
+    &:hover {
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+    }
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+    &:focus {
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+    }
+  `}
+
+  ${props => props.inlined && css`
+    padding: 0;
+    outline-offset: 9px;
+
+    &:hover {
+      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+    }
+
+    &:focus {
+      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+    }
+  `}
 
   &::placeholder {
     color: currentcolor;

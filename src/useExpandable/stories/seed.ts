@@ -1,4 +1,4 @@
-import Faker from 'faker'
+import faker from 'faker'
 
 export interface FakeRecord {
   key: string
@@ -12,7 +12,7 @@ export interface FakeRecord {
 const lvl1 = new Array(100).fill(null)
   .map((item, index): FakeRecord => ({
     key: String(index + 1),
-    value: Faker.name.firstName(),
+    value: faker.name.firstName(),
     attributes: {
       level: 1
     },
@@ -24,7 +24,7 @@ const lvl2 = new Array(200).fill(null)
     if (index > 99) {
       return {
         key: String(index + 101),
-        value: Faker.name.firstName(),
+        value: faker.name.firstName(),
         attributes: {
           level: 2
         },
@@ -33,7 +33,7 @@ const lvl2 = new Array(200).fill(null)
     } else {
       return {
         key: String(index + 101),
-        value: Faker.name.firstName(),
+        value: faker.name.firstName(),
         attributes: {
           level: 2
         },
@@ -47,7 +47,7 @@ const lvl3 = new Array(400).fill(null)
     if (index > 199) {
       return {
         key: String(index + 301),
-        value: Faker.name.firstName(),
+        value: faker.name.firstName(),
         attributes: {
           level: 3
         },
@@ -56,7 +56,7 @@ const lvl3 = new Array(400).fill(null)
     } else {
       return {
         key: String(index + 301),
-        value: Faker.name.firstName(),
+        value: faker.name.firstName(),
         attributes: {
           level: 3
         },

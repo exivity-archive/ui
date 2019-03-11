@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { defaultStyledProps, fromTheme, hexToString, InputProps, matchThemeProp } from '../utils/styled'
+import { fromTheme, hexToString, InputProps, matchThemeProp } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends InputProps {
@@ -13,9 +13,8 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => preciseEm(em, 14) * 14,
-    defaultValue: 14
-  })}px;
+    modifier: (em: number) => em / 16 * 14
+  })}em;
   color: ${fromTheme(theme => theme.colours.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
@@ -108,8 +107,3 @@ export const Button = styled.button<ButtonProps>`
     `}
   }
 `
-
-Button.defaultProps = {
-  ...defaultStyledProps,
-  primary: true
-}
