@@ -69,17 +69,25 @@ const TabList: FC<TabListProps> = ({ children }) => {
   )
 }
 
-const TabPanel = animated.div
+const TabPanel: FC = ({ children }) => {
+  const animationDef = { opacity: 1, transform: 'translateX(0px)', from: { opacity: 0, transform: 'translateX(-10px)' } }
+  const [animation, set] = useSpring(() => ({ ...animationDef }))
+  console.log(' render')
 
+  return (
+    <animated.div style={animation}>
+      {children}
+    </animated.div>
+  )
+}
 interface TabPanelsProps {
   children: React.ReactNodeArray
 }
 
-const animationDef = { opacity: 1, transform: 'translateX(0px)', from: { opacity: 0, transform: 'translateX(-10px)' } }
 const TabPanels: FC<TabPanelsProps> = ({ children }) => {
   const { activeIndex } = useTabsContext()
-  const [animation] = useSpring(() => ({ ...animationDef }))
-  return <div>{React.cloneElement((children[activeIndex] as any), { style: animation })}</div>
+
+  return <TabPanel>{children[activeIndex]}</TabPanel>
 }
 
 interface TabsSubComponents {

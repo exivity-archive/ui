@@ -11,7 +11,7 @@ test('it throws an error when a TabList component is not rendered within a Tabs 
 
 test('it throws an error when a TabPanels component is not rendered within a Tabs component', () => {
   const mountTabPanels = () => {
-    mount(<Tabs.TabPanels><Tabs.TabPanel></Tabs.TabPanel>></Tabs.TabPanels>)
+    mount(<Tabs.TabPanels>h<Tabs.TabPanel></Tabs.TabPanel></Tabs.TabPanels>)
   }
   expect(mountTabPanels).toThrow()
 })
