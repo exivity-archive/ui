@@ -56,7 +56,8 @@ export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
         <Heading>{title}</Heading>
       </Header>
       <Body>{children}</Body>
-      <Footer>{buttons}</Footer>
+      <Footer>{React.Children.map(buttons,
+        (child, index) => React.cloneElement(child, { ...child.props, key: index }))}</Footer>
     </ModalWrapper>
   </Overlay>
 )
