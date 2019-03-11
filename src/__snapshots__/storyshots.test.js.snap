@@ -3512,7 +3512,7 @@ exports[`Storyshots atoms|Code default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -3597,7 +3597,7 @@ exports[`Storyshots atoms|Heading header 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -3675,7 +3675,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -3879,7 +3879,7 @@ exports[`Storyshots atoms|Heading section 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -3930,7 +3930,7 @@ exports[`Storyshots atoms|Heading sub 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -4462,6 +4462,206 @@ exports[`Storyshots atoms|Label secondary 1`] = `
 </div>
 `;
 
+exports[`Storyshots atoms|Link default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="https://github.com/exivity/ui"
+  >
+    Visit GitHub repository
+  </a>
+</div>
+`;
+
+exports[`Storyshots atoms|List default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: none;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots atoms|List ordered 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ol
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots atoms|List unordered 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: disc;
+  padding-left: 2.5em;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ul>
+</div>
+`;
+
 exports[`Storyshots atoms|Markdown default 1`] = `
 .c0 {
   padding: 12px;
@@ -4483,7 +4683,7 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -4508,6 +4708,214 @@ Aut quaerat aperiam error impedit magni laudantium quis. Vitae modi quas ut elig
  
 Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
   </p>
+</div>
+`;
+
+exports[`Storyshots atoms|Table compact 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c1 thead tr,
+.c1 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c1 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c1 caption {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c1 td,
+.c1 th {
+  padding: 0em 0;
+  vertical-align: middle;
+}
+
+.c1 td:not(:first-child),
+.c1 th:not(:first-child) {
+  padding-left: 0.125em;
+}
+
+.c1 td:not(:last-child),
+.c1 th:not(:last-child) {
+  padding-right: 0.125em;
+}
+
+.c1 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<div
+  className="c0"
+>
+  <table
+    className="c1"
+  >
+    <caption
+      align="bottom"
+    >
+      Table caption
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Component
+        </th>
+        <th>
+          Dependency
+        </th>
+        <th>
+          Version
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          CodeBlock
+        </td>
+        <td>
+          react-syntax-highlighter
+        </td>
+        <td>
+          ^9.0.0
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Markdown
+        </td>
+        <td>
+          react-markdown
+        </td>
+        <td>
+          ^4.0.3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots atoms|Table default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c1 thead tr,
+.c1 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c1 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c1 caption {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c1 td,
+.c1 th {
+  padding: 0.1875em 0;
+  vertical-align: middle;
+}
+
+.c1 td:not(:first-child),
+.c1 th:not(:first-child) {
+  padding-left: 0.375em;
+}
+
+.c1 td:not(:last-child),
+.c1 th:not(:last-child) {
+  padding-right: 0.375em;
+}
+
+.c1 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<div
+  className="c0"
+>
+  <table
+    className="c1"
+  >
+    <caption
+      align="bottom"
+    >
+      Table caption
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Component
+        </th>
+        <th>
+          Dependency
+        </th>
+        <th>
+          Version
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          CodeBlock
+        </td>
+        <td>
+          react-syntax-highlighter
+        </td>
+        <td>
+          ^9.0.0
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Markdown
+        </td>
+        <td>
+          react-markdown
+        </td>
+        <td>
+          ^4.0.3
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;
 
@@ -5016,14 +5424,14 @@ exports[`Storyshots forms|Field multiple 1`] = `
   padding: 12px;
 }
 
-.c6 {
+.c7 {
   margin: 20px;
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
 
-.c6:after {
+.c7:after {
   position: relative;
   left: 5px;
   top: -30px;
@@ -5040,7 +5448,7 @@ exports[`Storyshots forms|Field multiple 1`] = `
   pointer-events: none;
 }
 
-.c7 {
+.c8 {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -5057,11 +5465,11 @@ exports[`Storyshots forms|Field multiple 1`] = `
   top: -5px;
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
 }
 
-.c3 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -5069,13 +5477,25 @@ exports[`Storyshots forms|Field multiple 1`] = `
   line-height: 1.5;
 }
 
-.c3 > .c2 {
+.c4 > .c3 {
   display: block;
   font-size: 0.8125em;
   color: #999;
 }
 
 .c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5093,11 +5513,11 @@ exports[`Storyshots forms|Field multiple 1`] = `
   white-space: unset;
 }
 
-.c1:not(:last-child) {
+.c2:not(:last-child) {
   margin-bottom: 1.25em;
 }
 
-.c1 .c2 {
+.c2 .c3 {
   padding-bottom: 0.625em;
   margin-right: unset;
   -webkit-flex-basis: auto;
@@ -5105,11 +5525,11 @@ exports[`Storyshots forms|Field multiple 1`] = `
   flex-basis: auto;
 }
 
-.c1 .c2 > .c2 {
+.c2 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c8 .c2 {
+.c9 .c3 {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-flex-basis: auto;
@@ -5117,15 +5537,15 @@ exports[`Storyshots forms|Field multiple 1`] = `
   flex-basis: auto;
 }
 
-.c8 .c2 > .c2 {
+.c9 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c8 > *:not(.c2):not(:last-child) {
+.c9 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25;
 }
 
-.c9 .c2 {
+.c10 .c3 {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-flex-basis: 20em;
@@ -5133,15 +5553,15 @@ exports[`Storyshots forms|Field multiple 1`] = `
   flex-basis: 20em;
 }
 
-.c9 .c2 > .c2 {
+.c10 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c9 > *:not(.c2):not(:last-child) {
+.c10 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25;
 }
 
-.c5 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5159,11 +5579,11 @@ exports[`Storyshots forms|Field multiple 1`] = `
   white-space: unset;
 }
 
-.c5:not(:last-child) {
+.c6:not(:last-child) {
   margin-bottom: 1.25em;
 }
 
-.c5 .c2 {
+.c6 .c3 {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-flex-basis: 40%;
@@ -5171,15 +5591,15 @@ exports[`Storyshots forms|Field multiple 1`] = `
   flex-basis: 40%;
 }
 
-.c5 .c2 > .c2 {
+.c6 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c5 > *:not(.c2):not(:last-child) {
+.c6 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25;
 }
 
-.c4 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -5198,35 +5618,35 @@ exports[`Storyshots forms|Field multiple 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -5234,18 +5654,20 @@ exports[`Storyshots forms|Field multiple 1`] = `
 <div
   className="c0"
 >
-  <div>
+  <div
+    className="c1"
+  >
     <div
-      className="c1"
+      className="c2"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
         htmlFor="username"
       >
         Username
       </label>
       <input
-        className="c4"
+        className="c5"
         id="username"
         onChange={[Function]}
         placeholder="Please type username"
@@ -5253,21 +5675,21 @@ exports[`Storyshots forms|Field multiple 1`] = `
       />
     </div>
     <div
-      className="c1"
+      className="c2"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
         htmlFor="email"
       >
         Email address
         <label
-          className="c2 c3"
+          className="c3 c4"
         >
           We will never sell your email address and we will never spam you!
         </label>
       </label>
       <input
-        className="c4"
+        className="c5"
         id="email"
         onChange={[Function]}
         placeholder="Please type email address"
@@ -5275,16 +5697,16 @@ exports[`Storyshots forms|Field multiple 1`] = `
       />
     </div>
     <div
-      className="c1"
+      className="c2"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
         htmlFor="name"
       >
         Receive newsletter
       </label>
       <input
-        className="c4"
+        className="c5"
         id="name"
         onChange={[Function]}
         placeholder="Please type full name"
@@ -5293,24 +5715,19 @@ exports[`Storyshots forms|Field multiple 1`] = `
     </div>
   </div>
   <div
-    style={
-      Object {
-        "height": "20px",
-      }
-    }
-  />
-  <div>
+    className="c1"
+  >
     <div
-      className="c5"
+      className="c6"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
         htmlFor="username2"
       >
         Username
       </label>
       <input
-        className="c4"
+        className="c5"
         id="username2"
         onChange={[Function]}
         placeholder="Please type username"
@@ -5318,21 +5735,21 @@ exports[`Storyshots forms|Field multiple 1`] = `
       />
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
         htmlFor="email2"
       >
         Email address
         <label
-          className="c2 c3"
+          className="c3 c4"
         >
           We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.
         </label>
       </label>
       <input
-        className="c4"
+        className="c5"
         id="email2"
         onChange={[Function]}
         placeholder="Please type email address"
@@ -5340,18 +5757,18 @@ exports[`Storyshots forms|Field multiple 1`] = `
       />
     </div>
     <div
-      className="c5"
+      className="c6"
     >
       <label
-        className="c2 c3"
+        className="c3 c4"
       />
       <div
         checked={true}
-        className="c6"
+        className="c7"
       >
         <input
           checked={true}
-          className="c7"
+          className="c8"
           onChange={[Function]}
           onClick={[Function]}
           type="checkbox"
@@ -7975,7 +8392,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -8624,7 +9041,7 @@ exports[`Storyshots forms|TextInput as heading 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -8658,7 +9075,7 @@ input.c1 {
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c3:first-child {
@@ -8891,7 +9308,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin: 1.25rem 0;
 }
 
 .c1:first-child {
@@ -13317,27 +13734,41 @@ exports[`Storyshots molecules|Widget default 1`] = `
   padding: 12px;
 }
 
-.c2 {
-  -webkit-letter-spacing: -0.025em;
-  -moz-letter-spacing: -0.025em;
-  -ms-letter-spacing: -0.025em;
-  letter-spacing: -0.025em;
-  font-weight: 700;
-  font-size: 22px;
-  color: #00a8d8;
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
 }
 
-.c3 {
-  color: #999;
-  font-size: 0.8em;
-  padding-left: 10px;
-  font-weight: 500;
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.5em;
+  color: #00a8d8;
 }
 
 .c1 {
   background: white;
-  box-shadow: 2px 2px 0 lightblue;
-  padding: 20px 20px 100px;
+  box-shadow: 1px 1px 0 rgba(0,168,216,0.4);
+  padding: 1.875em;
   position: relative;
   box-sizing: border-box;
   border-radius: 3px;
@@ -13354,13 +13785,18 @@ exports[`Storyshots molecules|Widget default 1`] = `
       className="c2"
     >
       Title
-      <span
-        className="c3"
-      >
-        subtitle
-      </span>
     </h4>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <p
+      className="c3"
+    >
+      Vel et rerum tempora consequuntur dicta voluptate tempora ex. Voluptatem quia vero est aut. Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
+ 
+Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+ 
+Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+ 
+Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+    </p>
   </div>
 </div>
 `;
