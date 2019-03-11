@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 
 import { createMap, Map } from '../utils'
 import { CHILDREN, iterateAllChildren, iterateAllParents, IterateItem, PARENT } from './helpers'
@@ -123,12 +123,14 @@ export function useExpandable<T> (
   const initialState: ExpandedItem<T>[] = []
   const [list, setList] = useState(initialState)
 
-  useMemo(() => {
+  useEffect(() => {
     const parentChildrenMap: Map<ListItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
     const expandableData: ExpandedItem<T>[] = transformAndOrder<T>(parentChildrenMap, expanded)
     setList(expandableData)
   }, [data])
 
-  const enriched = enrichItems<T>(list, setList)
-  return getVisibleItems<T>(enriched)
+  return useMemo(() => {
+    const enriched = enrichItems<T>(list, setList)
+    return getVisibleItems<T>(enriched)
+  }, [list])
 }
