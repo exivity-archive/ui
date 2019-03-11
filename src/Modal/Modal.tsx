@@ -46,7 +46,7 @@ const Footer = styled.div`
 interface ModalProps {
   title: string
   children: React.ReactNode
-  buttons: React.ReactElement[]
+  buttons: JSX.Element[]
 }
 
 export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
