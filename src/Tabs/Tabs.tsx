@@ -1,4 +1,4 @@
-import React, { createContext, FC, useContext, useState, useEffect } from 'react'
+import React, { createContext, FC, useContext, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 
@@ -6,22 +6,18 @@ interface TabsContextShape {
   initialized: boolean
   activeIndex: number
   setActiveIndex: (index: number) => void
-  focused: boolean
-  setFocused: (focused: boolean) => void
 }
 
 const TabsContext = createContext<TabsContextShape>({
   initialized: false,
   activeIndex: 0,
-  setActiveIndex: x => undefined,
-  focused: false,
-  setFocused: y => undefined
+  setActiveIndex: x => undefined
 })
 
 const useTabsContext = () => {
   const context = useContext(TabsContext)
   if (!context.initialized) {
-    throw new Error('Tabs compound components must be rendered within the Tabs component ')
+    throw new Error('Tabs compound components must be rendered within the Tabs component')
   }
   return context
 }
@@ -71,9 +67,11 @@ const TabList: FC<TabListProps> = ({ children }) => {
   const { activeIndex, setActiveIndex } = useTabsContext()
   const [focused, setFocused] = useState(false)
 
+  const onFocus = () => setFocused(true)
+
   const onKeyDown = (e: KeyboardEvent) => {
     if (focused) {
-      e.key === 'ArrowRight' && activeIndex < children.length && setActiveIndex(activeIndex + 1)
+      e.key === 'ArrowRight' && activeIndex < children.length - 1 && setActiveIndex(activeIndex + 1)
       e.key === 'ArrowLeft' && activeIndex > 0 && setActiveIndex(activeIndex - 1)
     }
   }
@@ -84,8 +82,8 @@ const TabList: FC<TabListProps> = ({ children }) => {
         child && React.cloneElement(child as any, {
           isActive: activeIndex === index,
           tabIndex: -1,
-          onFocus: () => { setFocused(true) },
-          onBlur: () => { setFocused(true) },
+          onFocus,
+          onBlur: () => { setFocused(false) },
           onKeyDown,
           onClick: () => { setActiveIndex(index) },
           'data-test': 'tab'
@@ -139,8 +137,7 @@ type TabsComponent = FC<TabsProps> & TabsSubComponents
 
 export const Tabs: TabsComponent = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const [focused, setFocused] = useState(false)
-  const contextValue = { activeIndex, setActiveIndex, focused, setFocused, initialized: true }
+  const contextValue = { activeIndex, setActiveIndex, initialized: true }
 
   return (
     <TabsContext.Provider value={contextValue} >
