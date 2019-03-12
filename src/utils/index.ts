@@ -1,6 +1,6 @@
 import { Omit } from './types'
 
-export interface MapItem {
+export interface ListItem {
   key: string
 }
 
@@ -10,7 +10,7 @@ export interface Map<T> {
   [index: string]: T
 }
 
-export function createMap<T extends MapItem> (data: MapData<T>): Map<T> {
+export function createMap<T extends ListItem> (data: MapData<T>): Map<T> {
   const map: Map<T> = {}
 
   data.forEach((item) => {

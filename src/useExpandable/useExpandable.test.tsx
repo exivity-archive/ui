@@ -8,7 +8,7 @@ import {
   getVisibleItems,
   noCollapsedParents,
   PARENT,
-  transformAndOrder,
+  orderChildrenUnderParents,
   useExpandable
 } from '.'
 
@@ -304,7 +304,7 @@ test('createParentChildrenMap creates a map with child references', () => {
   expect(map['4'][CHILDREN]).toBe(undefined)
 })
 
-test('transformAndOrder creates a list from a map', () => {
+test('orderChildrenUnderParents creates a list from a map', () => {
   const list = [
     { key: '1', parentId: null },
     { key: '2', parentId: '1' },
@@ -314,11 +314,11 @@ test('transformAndOrder creates a list from a map', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  const items = transformAndOrder<any>(map, true)
+  const items = orderChildrenUnderParents<any>(map, true)
   expect(items.length).toBe(4)
 })
 
-test('transformAndOrder orders children directly under their parents', () => {
+test('orderChildrenUnderParents orders children directly under their parents', () => {
   const list = [
     { key: '1', parentId: null },
     { key: '2', parentId: '3' },
@@ -328,14 +328,14 @@ test('transformAndOrder orders children directly under their parents', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  const items = transformAndOrder<any>(map, true)
+  const items = orderChildrenUnderParents<any>(map, true)
   expect(items[0].key).toBe('1')
   expect(items[1].key).toBe('3')
   expect(items[2].key).toBe('2')
   expect(items[3].key).toBe('4')
 })
 
-test('transformAndOrder extends items with expand attribute', () => {
+test('orderChildrenUnderParents extends items with expand attribute', () => {
   const list = [
     { key: '1', parentId: null },
     { key: '2', parentId: '3' },
@@ -345,12 +345,12 @@ test('transformAndOrder extends items with expand attribute', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  const itemsTrue = transformAndOrder<any>(map, true)
+  const itemsTrue = orderChildrenUnderParents<any>(map, true)
   itemsTrue.forEach((item) => {
     expect(item.expanded).toBe(true)
   })
 
-  const itemsFalse = transformAndOrder<any>(map, false)
+  const itemsFalse = orderChildrenUnderParents<any>(map, false)
   itemsFalse.forEach((item) => {
     expect(item.expanded).toBe(false)
   })

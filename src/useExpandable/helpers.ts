@@ -1,14 +1,14 @@
-import { MapItem } from '../utils'
+import { ListItem } from '../utils'
 
 export const PARENT = 'expandable-list-parent'
 export const CHILDREN = 'expandable-list-children'
 
-export interface IterateItem extends MapItem {
-  [PARENT]?: IterateItem
-  [CHILDREN]?: IterateItem[]
+export interface TreeItem extends ListItem {
+  [PARENT]?: TreeItem
+  [CHILDREN]?: TreeItem[]
 }
 
-export function iterateAllParents (item: IterateItem, callback: Function) {
+export function iterateAllParents (item: TreeItem, callback: Function) {
   const parent = item[PARENT]
   if (parent) {
     callback(parent)
@@ -16,7 +16,7 @@ export function iterateAllParents (item: IterateItem, callback: Function) {
   }
 }
 
-export function iterateAllChildren (item: IterateItem, callback: Function) {
+export function iterateAllChildren (item: TreeItem, callback: Function) {
   const children = item[CHILDREN]
   if (children) {
     children.map((child) => {

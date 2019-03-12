@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FixedSizeList } from 'react-window'
 
 // @ts-ignore
@@ -12,12 +12,15 @@ import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 const getParent = (item: FakeRecord) => item.parentId
 
 const ExpandableList = () => {
-  const data = useExpandable(FLAT_LIST_TEST_DATA, getParent)
-  const [selected, selectableData] = useSelectable(data)
-  // console.log(selectableData, selected)
+  const [data, tree] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent)
+
+  useEffect(() => {
+    // @ts-ignore
+    // tree.expand.children(data[1])
+  }, [])
 
   return (
-    <FixedSizeList height={600} width={400} itemSize={50} itemData={selectableData} itemCount={selectableData.length}>
+    <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
       {Item}
     </FixedSizeList>
   )
@@ -30,7 +33,6 @@ const Item = ({ data, index, style }: { data: FakeRecord[], index: number, style
   return (
     <div onClick={() => {
       item.expand()
-      item.select()
       action('expand')(item)
     }} style={style}>
       {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') + String(item.value)}

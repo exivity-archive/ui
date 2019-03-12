@@ -31,7 +31,6 @@ export const useSelectable = (data: any) => {
   const [selected, onSelect] = useState(null)
 
   useEffect(() => {
-    console.log('hi')
     enrichData(data, onSelect)
     setList(data)
   }, [data])

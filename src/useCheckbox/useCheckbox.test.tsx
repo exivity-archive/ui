@@ -1,5 +1,5 @@
 import React, { useState, Dispatch, SetStateAction } from 'react'
-import { useDynamicAttribute } from './useDynamicAttribute'
+import { useCheckbox } from './useCheckbox'
 import { Enriched } from './types'
 import { mount } from 'enzyme'
 import { MapItem } from '../utils'
@@ -19,7 +19,7 @@ interface ICheckableListProps {
 const CheckableList: React.FC<ICheckableListProps> = ({ children, data, initVal, initState }) => {
   const state = typeof initState !== 'undefined' ? useState(initState) : useState(undefined)
   return children(
-    useDynamicAttribute<IData, 'checked', 'setChecked', boolean>(data, 'checked', 'setChecked', initVal),
+    useCheckbox<IData, 'checked', 'setChecked', boolean>(data, 'checked', 'setChecked', initVal),
     state
   )
 }
