@@ -1,5 +1,4 @@
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Dropdown } from '.'

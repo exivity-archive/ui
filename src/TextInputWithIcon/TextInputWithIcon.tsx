@@ -21,7 +21,6 @@ interface InputIconProps extends InputProps {
 const StyledContainer = styled.div `
   position: relative;
   display: flex;
-  justify-content: column;
   align-items: center;
 
   ${Icon} {

@@ -1,4 +1,3 @@
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import faker from 'faker'
 import React from 'react'
