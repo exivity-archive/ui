@@ -13746,6 +13746,7 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  outline: none;
   color: #6F6F6F;
   border-bottom: 4px solid #ccc;
 }
@@ -13766,6 +13767,7 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  outline: none;
 }
 
 .c3:first-child {
@@ -13785,25 +13787,49 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   >
     <li
       className="c2"
+      data-test="tab"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
     >
       Tab one
     </li>
     <li
       className="c3"
+      data-test="tab"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
     >
       Tab two
     </li>
     <li
       className="c3"
+      data-test="tab"
+      onBlur={[Function]}
       onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
     >
       Tab three
     </li>
   </ol>
-  <div>
+  <div
+    data-test="tab-panel"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateX(-10px)",
+      }
+    }
+  >
     <div
+      data-test="tab-panel"
       style={
         Object {
           "opacity": 0,
@@ -13812,52 +13838,8 @@ exports[`Storyshots molecules|Tabs default 1`] = `
       }
     >
       Panel one
-      <ol
-        className="c1"
-      >
-        <li
-          className="c2"
-          onClick={[Function]}
-        >
-          Tab one
-        </li>
-        <li
-          className="c3"
-          onClick={[Function]}
-        >
-          Tab two
-        </li>
-        <li
-          className="c3"
-          onClick={[Function]}
-        >
-          Tab three
-        </li>
-      </ol>
     </div>
   </div>
-  <ol
-    className="c1"
-  >
-    <li
-      className="c2"
-      onClick={[Function]}
-    >
-      Tab one
-    </li>
-    <li
-      className="c3"
-      onClick={[Function]}
-    >
-      Tab two
-    </li>
-    <li
-      className="c3"
-      onClick={[Function]}
-    >
-      Tab three
-    </li>
-  </ol>
 </div>
 `;
 
