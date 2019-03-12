@@ -1,6 +1,6 @@
 import color from 'color'
 import { css } from 'styled-components'
-import { lightTheme, Theme } from '../../themes'
+import { defaultTheme, Theme } from '../../themes'
 
 type ThemeResolver<T = any> = (theme: Theme) => T
 
@@ -14,7 +14,7 @@ export interface StyledProps {
 }
 
 export const defaultStyledProps = {
-  theme: lightTheme
+  theme: defaultTheme
 }
 
 export interface BlockProps {
@@ -24,7 +24,7 @@ export interface BlockProps {
 const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length === 0
 
 export const fromTheme = <T>(themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
-  return themeResolver(isEmptyTheme(props.theme) ? lightTheme as Theme : props.theme!)
+  return themeResolver(isEmptyTheme(props.theme) ? defaultTheme as Theme : props.theme!)
 }
 
 export const matchThemeProp = (
@@ -32,7 +32,7 @@ export const matchThemeProp = (
   options: ThemeHelperOptions = {}
 ) => (props: any) => {
   const themeObject = themeResolver(isEmptyTheme(props.theme)
-    ? lightTheme as Theme
+    ? defaultTheme as Theme
     : props.theme!)
   const optionallyModify = options.modifier || ((val: any) => val)
   let match = Object.keys(props)
