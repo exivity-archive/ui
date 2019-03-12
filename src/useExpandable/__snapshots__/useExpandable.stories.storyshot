@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots helpers|useExpandable default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    onScroll={[Function]}
+    style={
+      Object {
+        "WebkitOverflowScrolling": "touch",
+        "direction": "ltr",
+        "height": 600,
+        "overflow": "auto",
+        "position": "relative",
+        "width": 400,
+        "willChange": "transform",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": 5000,
+          "pointerEvents": "",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        +  Hayden
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 50,
+            "width": "100%",
+          }
+        }
+      >
+        +  Zion
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 100,
+            "width": "100%",
+          }
+        }
+      >
+        +  Mina
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 150,
+            "width": "100%",
+          }
+        }
+      >
+        +  Torey
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 200,
+            "width": "100%",
+          }
+        }
+      >
+        +  Aaliyah
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 250,
+            "width": "100%",
+          }
+        }
+      >
+        +  Branson
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 300,
+            "width": "100%",
+          }
+        }
+      >
+        +  Elizabeth
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 350,
+            "width": "100%",
+          }
+        }
+      >
+        +  Zola
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 400,
+            "width": "100%",
+          }
+        }
+      >
+        +  Caesar
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 450,
+            "width": "100%",
+          }
+        }
+      >
+        +  Darwin
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 500,
+            "width": "100%",
+          }
+        }
+      >
+        +  Audrey
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 550,
+            "width": "100%",
+          }
+        }
+      >
+        +  Grace
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 600,
+            "width": "100%",
+          }
+        }
+      >
+        +  Chyna
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 650,
+            "width": "100%",
+          }
+        }
+      >
+        +  Gideon
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 700,
+            "width": "100%",
+          }
+        }
+      >
+        +  Ezequiel
+      </div>
+    </div>
+  </div>
+</div>
+`;

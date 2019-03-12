@@ -1,0 +1,858 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|TextArea default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <textarea
+    className="c1"
+    onChange={[Function]}
+    rows={5}
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots interact|TextArea disabled 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, fit-content(350px));
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c3:hover {
+  border: 1px solid #999;
+}
+
+.c3:focus {
+  border: 1px solid #222;
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <textarea
+      className="c2"
+      disabled={true}
+      onChange={[Function]}
+      rows={5}
+      value=""
+    />
+    <textarea
+      className="c3"
+      disabled={true}
+      onChange={[Function]}
+      rows={5}
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextArea inlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c2:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <p
+      className="c1"
+    >
+      Ea accusantium a. Maiores qui iure maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+    </p>
+    <textarea
+      className="c2"
+      onChange={[Function]}
+      rows={3}
+      style={
+        Object {
+          "marginBottom": "1em",
+        }
+      }
+      value="Et asperiores eaque et est eaque consequuntur quisquam dolorum. Aut est ut odit alias minima hic omnis. Necessitatibus quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet. Fuga optio et iste doloribus eos quo maxime minus. Voluptates repellat in sunt magnam."
+    />
+    <p
+      className="c1"
+    >
+      Quia corrupti sed necessitatibus vel officiis ratione pariatur. Est illum qui enim veniam.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextArea outlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c1:hover {
+  border: 1px solid #999;
+}
+
+.c1:focus {
+  border: 1px solid #222;
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <textarea
+    className="c1"
+    onChange={[Function]}
+    rows={5}
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots interact|TextArea purposes 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(350px));
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c6:hover {
+  border: 1px solid #999;
+}
+
+.c6:focus {
+  border: 1px solid #222;
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #999;
+  background-color: unset;
+}
+
+.c7:hover {
+  border: 1px solid #999;
+}
+
+.c7:focus {
+  border: 1px solid #222;
+}
+
+.c7::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #4caf50;
+  background-color: unset;
+}
+
+.c8:hover {
+  border: 1px solid #999;
+}
+
+.c8:focus {
+  border: 1px solid #222;
+}
+
+.c8::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #ef5350;
+  background-color: unset;
+}
+
+.c9:hover {
+  border: 1px solid #999;
+}
+
+.c9:focus {
+  border: 1px solid #222;
+}
+
+.c9::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <textarea
+      className="c2"
+      onChange={[Function]}
+      value="Primary"
+    />
+    <textarea
+      className="c3"
+      onChange={[Function]}
+      value="Secondary"
+    />
+    <textarea
+      className="c4"
+      onChange={[Function]}
+      value="Success"
+    />
+    <textarea
+      className="c5"
+      onChange={[Function]}
+      value="Danger"
+    />
+    <textarea
+      className="c6"
+      onChange={[Function]}
+      value="Primary"
+    />
+    <textarea
+      className="c7"
+      onChange={[Function]}
+      value="Secondary"
+    />
+    <textarea
+      className="c8"
+      onChange={[Function]}
+      value="Success"
+    />
+    <textarea
+      className="c9"
+      onChange={[Function]}
+      value="Danger"
+    />
+  </div>
+</div>
+`;

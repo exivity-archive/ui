@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules|Widget default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c1 {
+  background: white;
+  box-shadow: 1px 1px 0 rgba(0,168,216,0.4);
+  padding: 1.875em;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h4
+      className="c2"
+    >
+      Title
+    </h4>
+    <p
+      className="c3"
+    >
+      Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
+ 
+Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
+ 
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
+ 
+Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+    </p>
+  </div>
+</div>
+`;

@@ -1,0 +1,2375 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|SelectInput default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c10 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c12 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c13 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c7 {
+  font-size: 1.5em;
+}
+
+.c25 .c7 {
+  font-size: 1.5em;
+}
+
+.c26 .c7 {
+  font-size: 1.5em;
+}
+
+.c27 .c7 {
+  font-size: 1.5em;
+}
+
+.c28 .c7 {
+  font-size: 1.5em;
+}
+
+.c29 .c7 {
+  font-size: 1.5em;
+}
+
+.c30 .c7 {
+  font-size: 1.5em;
+}
+
+.c31 .c7 {
+  font-size: 1.5em;
+}
+
+.c32 .c7 {
+  font-size: 1.5em;
+}
+
+.c33 .c7 {
+  font-size: 1.5em;
+}
+
+.c34 .c7 {
+  font-size: 1.5em;
+}
+
+.c35 .c7 {
+  font-size: 1.5em;
+}
+
+.c36 .c7 {
+  font-size: 1.5em;
+}
+
+.c37 .c7 {
+  font-size: 1.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, fit-content(200px));
+}
+
+.c9 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  padding-right: 2.2em;
+}
+
+.c8 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c4[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      data-test="dropdown"
+    >
+      <div
+        className="c3"
+        onClick={[Function]}
+      >
+        <input
+          className="c4 c5 c6"
+          disabled={true}
+          onChange={[Function]}
+          placeholder="Choose option"
+          type="text"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c9"
+        data-test="dropdown-content"
+        open={false}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|SelectInput disabled 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c9 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c10 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c12 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #999;
+  background-color: unset;
+}
+
+.c8:hover {
+  border: 1px solid #999;
+}
+
+.c8:focus {
+  border: 1px solid #222;
+}
+
+.c8::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c4 {
+  padding-right: 2.2em;
+}
+
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c5"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Disabled"
+      />
+      <span
+        className="c6 c3 c7"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c8"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Disabled"
+      />
+      <span
+        className="c6 c3 c7"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|SelectInput outlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c8 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c9 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c10 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c5:hover {
+  border: 1px solid #999;
+}
+
+.c5:focus {
+  border: 1px solid #222;
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c4 {
+  padding-right: 2.2em;
+}
+
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c3[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c5"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Outlined"
+      />
+      <span
+        className="c6 c3 c7"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c5"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Outlined"
+      />
+      <span
+        className="c6 c3 c7"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|SelectInput purposes 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c16 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c17 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c18 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c19 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c28 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c29 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c30 .c7 {
+  font-size: 1.5em;
+}
+
+.c31 .c7 {
+  font-size: 1.5em;
+}
+
+.c32 .c7 {
+  font-size: 1.5em;
+}
+
+.c33 .c7 {
+  font-size: 1.5em;
+}
+
+.c34 .c7 {
+  font-size: 1.5em;
+}
+
+.c35 .c7 {
+  font-size: 1.5em;
+}
+
+.c36 .c7 {
+  font-size: 1.5em;
+}
+
+.c37 .c7 {
+  font-size: 1.5em;
+}
+
+.c38 .c7 {
+  font-size: 1.5em;
+}
+
+.c39 .c7 {
+  font-size: 1.5em;
+}
+
+.c40 .c7 {
+  font-size: 1.5em;
+}
+
+.c41 .c7 {
+  font-size: 1.5em;
+}
+
+.c42 .c7 {
+  font-size: 1.5em;
+}
+
+.c43 .c7 {
+  font-size: 1.5em;
+}
+
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c12 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c12:hover {
+  border: 1px solid #999;
+}
+
+.c12:focus {
+  border: 1px solid #222;
+}
+
+.c12::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c9:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c9:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c9::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c10:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c10:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c10::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c11 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c11:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c11:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c11::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c13 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #999;
+  background-color: unset;
+}
+
+.c13:hover {
+  border: 1px solid #999;
+}
+
+.c13:focus {
+  border: 1px solid #222;
+}
+
+.c13::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c14 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #4caf50;
+  background-color: unset;
+}
+
+.c14:hover {
+  border: 1px solid #999;
+}
+
+.c14:focus {
+  border: 1px solid #222;
+}
+
+.c14::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c15 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #ef5350;
+  background-color: unset;
+}
+
+.c15:hover {
+  border: 1px solid #999;
+}
+
+.c15:focus {
+  border: 1px solid #222;
+}
+
+.c15::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c15::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c15:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c15::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c15[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  padding-right: 2.2em;
+}
+
+.c8 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c4[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c6"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Primary"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c9"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Secondary"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c10"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Success"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c11"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Danger"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c12"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Primary"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c13"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Secondary"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c14"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Success"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c5 c15"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Danger"
+        />
+        <span
+          className="c7 c4 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|SelectInput sizes 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c12 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c13 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c14 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c15 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c38 .c6 {
+  font-size: 1.5em;
+}
+
+.c39 .c6 {
+  font-size: 1.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c8:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c8:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c8::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 0.8125rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.1875rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c10:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c10:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c10::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c4 {
+  padding-right: 2.2em;
+}
+
+.c9 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: 16.25px;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c11 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: 23.75px;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c3[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c5"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Small"
+      />
+      <span
+        className="c6 c3 c7"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c8"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Default"
+      />
+      <span
+        className="c6 c3 c9"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3 c4 c10"
+        disabled={true}
+        onChange={[Function]}
+        type="text"
+        value="Large"
+      />
+      <span
+        className="c6 c3 c11"
+        disabled={true}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;

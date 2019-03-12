@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules|Dropdown default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  padding: 20px;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+.c1 {
+  position: relative;
+}
+
+<div
+  className="c0"
+>
+  <div
+    style={
+      Object {
+        "padding": "300px 0",
+      }
+    }
+  >
+    <div
+      className="c1"
+      data-test="dropdown"
+    >
+      <div
+        onClick={[Function]}
+      >
+        Click me
+      </div>
+      <div
+        className="c2"
+        data-test="dropdown-content"
+        open={false}
+      >
+        <div
+          style={
+            Object {
+              "width": 500,
+            }
+          }
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries,
+but also the leap into electronic typesetting, remaining essentially unchanged.
+It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

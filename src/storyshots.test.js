@@ -1,13 +1,14 @@
 import initStoryshots, { multiSnapshotWithOptions, Stories2SnapsConverter } from '@storybook/addon-storyshots'
+import { styleSheetSerializer } from 'jest-styled-components/serializer'
 
 initStoryshots({
   configPath: 'docs',
   storyKindRegex: /^((?!(docs)).)*$/,
-  suite: 'Snapshot for',
-  stories2snapsConverter: new Stories2SnapsConverter({
+  snapshotSerializers: [styleSheetSerializer],
+  test: multiSnapshotWithOptions({}),
+  stories2SnapsConverter: new Stories2SnapsConverter({
     snapshotsDirName: '__snapshots__',
     snapshotExtension: '.snap',
-    storiesExtensions: ['.stories.jsx']
-  }),
-  test: multiSnapshotWithOptions()
+    storiesExtensions: ['.js', '.jsx', '.ts', '.tsx'],
+  })
 })
