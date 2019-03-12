@@ -1,13 +1,20 @@
-import React, { createContext, FC, useContext, useState } from 'react'
-import styled, { css } from 'styled-components'
+import React, { createContext, FC, useContext, useState, useEffect } from 'react'
+import styled, { css, StyledComponent } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 
 interface TabsContextShape {
   activeIndex: number
   setActiveIndex: (index: number) => void
+  focused: boolean
+  setFocused: (focused: boolean) => void
 }
 
-const TabsContext = createContext<TabsContextShape>({ activeIndex: 0, setActiveIndex: (i: number) => 0 })
+const TabsContext = createContext<TabsContextShape>({
+  activeIndex: 0,
+  setActiveIndex: x => undefined,
+  focused: false,
+  setFocused: y => undefined
+})
 
 const useTabsContext = () => {
   const context = useContext(TabsContext)
@@ -19,7 +26,7 @@ const useTabsContext = () => {
 
 interface TabProps {
   isActive?: boolean
-  hasFocus?: () => void
+  onClick?: () => void
   children: React.ReactNode
 }
 
@@ -32,6 +39,7 @@ const Tab = styled.li<TabProps>`
   margin: 0 10px -1px 10px;
   user-select: none;
   cursor: pointer;
+  outline: none;
 
   &:first-child {
     margin-left: 0;
@@ -49,20 +57,21 @@ const TabsList = styled.ol`
 `
 
 interface TabListProps {
-  children: any
+  children: StyledComponent<'li', HTMLLIElement, TabProps, never>[]
 }
 
 const TabList: FC<TabListProps> = ({ children }) => {
-  const { activeIndex, setActiveIndex } = useTabsContext()
+  const { activeIndex, setActiveIndex, setFocused } = useTabsContext()
+
   return (
     <TabsList>
       {React.Children.map(children, (child, index) => (
-        child && React.cloneElement(child, {
+        child && React.cloneElement(child as React.DetailedReactHTMLElement<TabProps, HTMLLIElement>, {
           isActive: activeIndex === index,
-          onClick: () => {
-            console.log(index)
-            setActiveIndex(index)
-          }
+          tabIndex: -1,
+          onFocus: () => { setFocused(true) },
+          onBlur: () => { setFocused(true) },
+          onClick: () => { setActiveIndex(index) }
         })
       ))}
     </TabsList>
@@ -70,9 +79,17 @@ const TabList: FC<TabListProps> = ({ children }) => {
 }
 
 const TabPanel: FC = ({ children }) => {
-  const animationDef = { opacity: 1, transform: 'translateX(0px)', from: { opacity: 0, transform: 'translateX(-10px)' } }
-  const [animation, set] = useSpring(() => ({ ...animationDef }))
-  console.log(' render')
+  const { activeIndex } = useTabsContext()
+  const [lastActiveIndex, setLastActiveIndex] = useState(activeIndex)
+
+  const animation = useSpring({
+    to: { opacity: 1, transform: 'translateX(0px)' },
+    from: { opacity: 0, transform: 'translateX(-10px)' },
+    reset: activeIndex !== lastActiveIndex,
+    onStart: () => {
+      setLastActiveIndex(activeIndex)
+    }
+  })
 
   return (
     <animated.div style={animation}>
@@ -91,18 +108,37 @@ const TabPanels: FC<TabPanelsProps> = ({ children }) => {
 }
 
 interface TabsSubComponents {
-  TabList: typeof TabList, Tab: typeof Tab, TabPanels: typeof TabPanels, TabPanel: typeof TabPanel
+  TabList: typeof TabList,
+  Tab: typeof Tab,
+  TabPanels: typeof TabPanels,
+  TabPanel: typeof TabPanel
 }
 
 interface TabsProps {
-  children: React.ReactNode
+  children: React.ReactNodeArray
 }
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
 export const Tabs: TabsComponent = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const contextValue = { activeIndex, setActiveIndex }
+  const [focused, setFocused] = useState(false)
+  const contextValue = { activeIndex, setActiveIndex, focused, setFocused }
+
+  const next = () => setActiveIndex(activeIndex + 1)
+  const prev = () => setActiveIndex(activeIndex - 1)
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (focused) {
+        e.key === 'ArrowRight' && activeIndex < children.length - 1 && next()
+        e.key === 'ArrowLeft' && activeIndex > 0 && prev()
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  })
+
   return (
     <TabsContext.Provider value={contextValue} >
       {children}
