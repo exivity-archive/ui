@@ -1,0 +1,4072 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Markdown with sample content 1`] = `
+Array [
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h1
+    className="c0"
+    type="header"
+  >
+    h1 Heading 8-)
+  </h1>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    h2 Heading
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    h3 Heading
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    h4 Heading
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    h5 Heading
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    h6 Heading
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Horizontal Rules
+  </h2>,
+  <hr />,
+  <hr />,
+  <hr />,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Typographic replacements
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Enable typographer option to see result.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    (c) (C) (r) (R) (tm) (TM) (p) (P) +-
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    test.. test... test..... test?..... test!....
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    !!!!!! ???? ,,  -- ---
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    "Smartypants, double quotes" and 'single quotes'
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Emphasis
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <strong>
+      This is bold text
+    </strong>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <strong>
+      This is bold text
+    </strong>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <em>
+      This is italic text
+    </em>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <em>
+      This is italic text
+    </em>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <del>
+      Strikethrough
+    </del>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Blockquotes
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<blockquote>
+    <p
+      className="c0"
+    >
+      Blockquotes can also be nested...
+    </p>
+    <blockquote>
+      <p
+        className="c0"
+      >
+        ...by using additional greater-than signs right next to each other...
+      </p>
+      <blockquote>
+        <p
+          className="c0"
+        >
+          ...or with spaces between arrows.
+        </p>
+      </blockquote>
+    </blockquote>
+  </blockquote>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Lists
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Unordered
+  </p>,
+  .c1 {
+  margin: 1rem 0 !important;
+}
+
+.c1:first-child {
+  margin-top: 0 !important;
+}
+
+.c1:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c1 {
+  background-color: #eee !important;
+  padding: 0.3125em !important;
+}
+
+.c1,
+.c1 code,
+.c1 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: disc;
+  padding-left: 2.5em;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li {
+  margin-bottom: 0.35em;
+}
+
+<ul
+    className="c0"
+    start={null}
+  >
+    <li>
+      Create a list by starting a line with 
+      <span
+        className="c1"
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "backgroundColor": "#fdf6e3",
+            "borderRadius": "0.3em",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "margin": ".5em 0",
+            "msHyphens": "none",
+            "overflow": "auto",
+            "padding": "1em",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        <code
+          style={
+            Object {
+              "MozHyphens": "none",
+              "MozTabSize": "4",
+              "OTabSize": "4",
+              "WebkitHyphens": "none",
+              "color": "#657b83",
+              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+              "hyphens": "none",
+              "lineHeight": "1.5",
+              "msHyphens": "none",
+              "tabSize": "4",
+              "textAlign": "left",
+              "whiteSpace": "pre",
+              "wordBreak": "normal",
+              "wordSpacing": "normal",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          +
+        </code>
+      </span>
+      , 
+      <span
+        className="c1"
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "backgroundColor": "#fdf6e3",
+            "borderRadius": "0.3em",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "margin": ".5em 0",
+            "msHyphens": "none",
+            "overflow": "auto",
+            "padding": "1em",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        <code
+          style={
+            Object {
+              "MozHyphens": "none",
+              "MozTabSize": "4",
+              "OTabSize": "4",
+              "WebkitHyphens": "none",
+              "color": "#657b83",
+              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+              "hyphens": "none",
+              "lineHeight": "1.5",
+              "msHyphens": "none",
+              "tabSize": "4",
+              "textAlign": "left",
+              "whiteSpace": "pre",
+              "wordBreak": "normal",
+              "wordSpacing": "normal",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          -
+        </code>
+      </span>
+      , or 
+      <span
+        className="c1"
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "backgroundColor": "#fdf6e3",
+            "borderRadius": "0.3em",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "margin": ".5em 0",
+            "msHyphens": "none",
+            "overflow": "auto",
+            "padding": "1em",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        <code
+          style={
+            Object {
+              "MozHyphens": "none",
+              "MozTabSize": "4",
+              "OTabSize": "4",
+              "WebkitHyphens": "none",
+              "color": "#657b83",
+              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+              "hyphens": "none",
+              "lineHeight": "1.5",
+              "msHyphens": "none",
+              "tabSize": "4",
+              "textAlign": "left",
+              "whiteSpace": "pre",
+              "wordBreak": "normal",
+              "wordSpacing": "normal",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          *
+        </code>
+      </span>
+    </li>
+    <li>
+      Sub-lists are made by indenting 2 spaces:
+      <ul
+        className="c0"
+        start={null}
+      >
+        <li>
+          Marker character change forces new list start:
+          <ul
+            className="c0"
+            start={null}
+          >
+            <li>
+              Ac tristique libero volutpat at
+            </li>
+          </ul>
+          <ul
+            className="c0"
+            start={null}
+          >
+            <li>
+              Facilisis in pretium nisl aliquet
+            </li>
+          </ul>
+          <ul
+            className="c0"
+            start={null}
+          >
+            <li>
+              Nulla volutpat aliquam velit
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Very easy!
+    </li>
+  </ul>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Ordered
+  </p>,
+  .c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li {
+  margin-bottom: 0.35em;
+}
+
+<ol
+    className="c0"
+    start={1}
+  >
+    <li>
+      Lorem ipsum dolor sit amet
+    </li>
+    <li>
+      Consectetur adipiscing elit
+    </li>
+    <li>
+      Integer molestie lorem at massa
+    </li>
+  </ol>,
+  .c1 {
+  margin: 1rem 0 !important;
+}
+
+.c1:first-child {
+  margin-top: 0 !important;
+}
+
+.c1:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c1 {
+  background-color: #eee !important;
+  padding: 0.3125em !important;
+}
+
+.c1,
+.c1 code,
+.c1 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+.c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li {
+  margin-bottom: 0.35em;
+}
+
+<ol
+    className="c0"
+    start={1}
+  >
+    <li>
+      You can use sequential numbers...
+    </li>
+    <li>
+      ...or keep all the numbers as 
+      <span
+        className="c1"
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "backgroundColor": "#fdf6e3",
+            "borderRadius": "0.3em",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "margin": ".5em 0",
+            "msHyphens": "none",
+            "overflow": "auto",
+            "padding": "1em",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        <code
+          style={
+            Object {
+              "MozHyphens": "none",
+              "MozTabSize": "4",
+              "OTabSize": "4",
+              "WebkitHyphens": "none",
+              "color": "#657b83",
+              "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+              "hyphens": "none",
+              "lineHeight": "1.5",
+              "msHyphens": "none",
+              "tabSize": "4",
+              "textAlign": "left",
+              "whiteSpace": "pre",
+              "wordBreak": "normal",
+              "wordSpacing": "normal",
+              "wordWrap": "normal",
+            }
+          }
+        >
+          1.
+        </code>
+      </span>
+    </li>
+  </ol>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Start numbering with offset:
+  </p>,
+  .c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li {
+  margin-bottom: 0.35em;
+}
+
+<ol
+    className="c0"
+    start={57}
+  >
+    <li>
+      foo
+    </li>
+    <li>
+      bar
+    </li>
+  </ol>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Code
+  </h2>,
+  .c1 {
+  margin: 1rem 0 !important;
+}
+
+.c1:first-child {
+  margin-top: 0 !important;
+}
+
+.c1:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c1 {
+  background-color: #eee !important;
+  padding: 0.3125em !important;
+}
+
+.c1,
+.c1 code,
+.c1 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Inline 
+    <span
+      className="c1"
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "backgroundColor": "#fdf6e3",
+          "borderRadius": "0.3em",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "margin": ".5em 0",
+          "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        code
+      </code>
+    </span>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Indented code
+  </p>,
+  .c0 {
+  margin: 1rem 0 !important;
+}
+
+.c0:first-child {
+  margin-top: 0 !important;
+}
+
+.c0:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c0 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c0,
+.c0 code,
+.c0 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<pre
+    className="c0"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      // Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+    </code>
+  </pre>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Block code "fences"
+  </p>,
+  .c0 {
+  margin: 1rem 0 !important;
+}
+
+.c0:first-child {
+  margin-top: 0 !important;
+}
+
+.c0:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c0 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c0,
+.c0 code,
+.c0 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<pre
+    className="c0"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      Sample text here...
+    </code>
+  </pre>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Syntax highlighting
+  </p>,
+  .c0 {
+  margin: 1rem 0 !important;
+}
+
+.c0:first-child {
+  margin-top: 0 !important;
+}
+
+.c0:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c0 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c0,
+.c0 code,
+.c0 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<pre
+    className="c0"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+    </code>
+  </pre>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Tables
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c0 thead tr,
+.c0 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c0 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c0 caption {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c0 td,
+.c0 th {
+  padding: 0.1875em 0;
+  vertical-align: middle;
+}
+
+.c0 td:not(:first-child),
+.c0 th:not(:first-child) {
+  padding-left: 0.375em;
+}
+
+.c0 td:not(:last-child),
+.c0 th:not(:last-child) {
+  padding-right: 0.375em;
+}
+
+.c0 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<table
+    className="c0"
+  >
+    <thead>
+      <tr>
+        <th>
+          Option
+        </th>
+        <th>
+          Description
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          data
+        </td>
+        <td>
+          path to data files to supply the data that will be passed into templates.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          engine
+        </td>
+        <td>
+          engine to be used for processing templates. Handlebars is the default.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ext
+        </td>
+        <td>
+          extension to be used for dest files.
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Right aligned columns
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c0 thead tr,
+.c0 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c0 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c0 caption {
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c0 td,
+.c0 th {
+  padding: 0.1875em 0;
+  vertical-align: middle;
+}
+
+.c0 td:not(:first-child),
+.c0 th:not(:first-child) {
+  padding-left: 0.375em;
+}
+
+.c0 td:not(:last-child),
+.c0 th:not(:last-child) {
+  padding-right: 0.375em;
+}
+
+.c0 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<table
+    className="c0"
+  >
+    <thead>
+      <tr>
+        <th
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          Option
+        </th>
+        <th
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          Description
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          data
+        </td>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          path to data files to supply the data that will be passed into templates.
+        </td>
+      </tr>
+      <tr>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          engine
+        </td>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          engine to be used for processing templates. Handlebars is the default.
+        </td>
+      </tr>
+      <tr>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          ext
+        </td>
+        <td
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          extension to be used for dest files.
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Links
+  </h2>,
+  .c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <a
+      className="c1"
+      href="http://dev.nodeca.com"
+    >
+      link text
+    </a>
+  </p>,
+  .c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <a
+      className="c1"
+      href="http://nodeca.github.io/pica/demo/"
+      title="title text!"
+    >
+      link with title
+    </a>
+  </p>,
+  .c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Autoconverted link 
+    <a
+      className="c1"
+      href="https://github.com/nodeca/pica"
+    >
+      https://github.com/nodeca/pica
+    </a>
+     (enable linkify to see)
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Images
+  </h2>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <img
+      alt="Minion"
+      src="https://octodex.github.com/images/minion.png"
+    />
+    
+
+    <img
+      alt="Stormtroopocat"
+      src="https://octodex.github.com/images/stormtroopocat.jpg"
+      title="The Stormtroopocat"
+    />
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Like links, Images also have a footnote style syntax
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <img
+      alt="Alt text"
+      src="https://octodex.github.com/images/dojocat.jpg"
+      title="The Dojocat"
+    />
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    With a reference later in the document defining the URL location:
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c0 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<h2
+    className="c0"
+    type="section"
+  >
+    Plugins
+  </h2>,
+  .c1 {
+  margin: 1rem 0 !important;
+}
+
+.c1:first-child {
+  margin-top: 0 !important;
+}
+
+.c1:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c1 {
+  background-color: #eee !important;
+  padding: 0.3125em !important;
+}
+
+.c1,
+.c1 code,
+.c1 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c2:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c2:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    The killer feature of 
+    <span
+      className="c1"
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "backgroundColor": "#fdf6e3",
+          "borderRadius": "0.3em",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "margin": ".5em 0",
+          "msHyphens": "none",
+          "overflow": "auto",
+          "padding": "1em",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      <code
+        style={
+          Object {
+            "MozHyphens": "none",
+            "MozTabSize": "4",
+            "OTabSize": "4",
+            "WebkitHyphens": "none",
+            "color": "#657b83",
+            "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+            "hyphens": "none",
+            "lineHeight": "1.5",
+            "msHyphens": "none",
+            "tabSize": "4",
+            "textAlign": "left",
+            "whiteSpace": "pre",
+            "wordBreak": "normal",
+            "wordSpacing": "normal",
+            "wordWrap": "normal",
+          }
+        }
+      >
+        markdown-it
+      </code>
+    </span>
+     is very effective support of
+
+    <a
+      className="c2"
+      href="https://www.npmjs.org/browse/keyword/markdown-it-plugin"
+    >
+      syntax plugins
+    </a>
+    .
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-emoji"
+    >
+      Emojies
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<blockquote>
+    <p
+      className="c0"
+    >
+      Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+    </p>
+    <p
+      className="c0"
+    >
+      Shortcuts (emoticons): :-) :-( 8-) ;)
+    </p>
+  </blockquote>,
+  .c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    see 
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-emoji#change-output"
+    >
+      how to change output
+    </a>
+     with twemoji.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-sub"
+    >
+      Subscript
+    </a>
+     / 
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-sup"
+    >
+      Superscript
+    </a>
+  </h3>,
+  .c0 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: disc;
+  padding-left: 2.5em;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0 li {
+  margin-bottom: 0.35em;
+}
+
+<ul
+    className="c0"
+    start={null}
+  >
+    <li>
+      19^th^
+    </li>
+    <li>
+      H~2~O
+    </li>
+  </ul>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-ins"
+    >
+      \\
+      &lt;ins&gt;
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    ++Inserted text++
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-mark"
+    >
+      \\
+      &lt;mark&gt;
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    ==Marked text==
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-footnote"
+    >
+      Footnotes
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Footnote 1 link
+    <a
+      href=""
+    >
+      ^first
+    </a>
+    .
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Footnote 2 link
+    <a
+      href=""
+    >
+      ^second
+    </a>
+    .
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Inline footnote^
+    <a
+      href=""
+    >
+      Text of inline footnote
+    </a>
+     definition.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Duplicated footnote reference
+    <a
+      href=""
+    >
+      ^second
+    </a>
+    .
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <a
+      href=""
+    >
+      ^first
+    </a>
+    : Footnote 
+    <strong>
+      can have markup
+    </strong>
+  </p>,
+  .c0 {
+  margin: 1rem 0 !important;
+}
+
+.c0:first-child {
+  margin-top: 0 !important;
+}
+
+.c0:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c0 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c0,
+.c0 code,
+.c0 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<pre
+    className="c0"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      and multiple paragraphs.
+    </code>
+  </pre>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <a
+      href=""
+    >
+      ^second
+    </a>
+    : Footnote text.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-deflist"
+    >
+      Definition lists
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Term 1
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    :   Definition 1
+with lazy continuation.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Term 2 with 
+    <em>
+      inline markup
+    </em>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    :   Definition 2
+  </p>,
+  .c0 {
+  margin: 1rem 0 !important;
+}
+
+.c0:first-child {
+  margin-top: 0 !important;
+}
+
+.c0:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c0 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c0,
+.c0 code,
+.c0 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<pre
+    className="c0"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+          { some code, part of Definition 2 }
+
+Third paragraph of definition 2.
+    </code>
+  </pre>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    <em>
+      Compact style:
+    </em>
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Term 1
+  ~ Definition 1
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-abbr"
+    >
+      Abbreviations
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    This is HTML abbreviation example.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    *
+    <a
+      href=""
+    >
+      HTML
+    </a>
+    : Hyper Text Markup Language
+  </p>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+.c0,
+input.c0 {
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  color: #999;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.c0:after,
+input.c0:after {
+  border-top: 1px solid #eee;
+  content: '';
+  display: table-cell;
+  position: relative;
+  top: 0.625em;
+  width: 100%;
+}
+
+.c0:after,
+input.c0:after {
+  left: 1.5%;
+}
+
+.c0 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<h3
+    className="c0"
+    type="sub"
+  >
+    <a
+      className="c1"
+      href="https://github.com/markdown-it/markdown-it-container"
+    >
+      Custom containers
+    </a>
+  </h3>,
+  .c0 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c0:first-child {
+  margin-top: 0;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<p
+    className="c0"
+  >
+    ::: warning
+
+    <em>
+      here be dragons
+    </em>
+    
+:::
+  </p>,
+]
+`;

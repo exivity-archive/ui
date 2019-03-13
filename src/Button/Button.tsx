@@ -13,9 +13,8 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => preciseEm(em, 14) * 14,
-    defaultValue: 14
-  })}px;
+    modifier: (em: number) => em / 16 * 14
+  })}em;
   color: ${fromTheme(theme => theme.colours.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 

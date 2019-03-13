@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { {Component} } from '.'
 
+// Modify or remove, stories are snapshotted automatically
 test('renders {Component} without props', () => {
   const component = renderer.create(<{Component} />)
   expect(component.toJSON()).toMatchSnapshot()

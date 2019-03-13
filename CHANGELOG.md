@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.7.0](https://github.com/exivity/ui/compare/v0.6.0...v0.7.0) (2019-03-11)
+
+
+### Features
+
+* misc ([#28](https://github.com/exivity/ui/issues/28)) ([1b73ea8](https://github.com/exivity/ui/commit/1b73ea8))
+
+
+
+# [0.6.0](https://github.com/exivity/ui/compare/v0.5.5...v0.6.0) (2019-03-08)
+
+
+### Features
+
+* **SelectInput:** add component ([#30](https://github.com/exivity/ui/issues/30)) ([3c424b9](https://github.com/exivity/ui/commit/3c424b9))
+
+
+
 ## [0.5.5](https://github.com/exivity/ui/compare/v0.5.4...v0.5.5) (2019-03-08)
 
 
