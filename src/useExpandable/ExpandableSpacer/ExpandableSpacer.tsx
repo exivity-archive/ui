@@ -1,10 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../../utils/styled'
-import { makeSpacerLines, SpacerLines } from './helpers'
 
 interface StyledExpandableSpacerProps {
-  spacerLines: SpacerLines
+  leftSpacerLine: number
   level: number
   distance: number
 }
@@ -13,14 +12,13 @@ export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
   margin-left: ${({ level }) => (level * 40)}px;
   margin-right: 20px;
   height: 100%;
-  z-index: 1;
 
-  ${({ spacerLines, distance }) => css`&:after {
+  ${({ leftSpacerLine, distance }) => css`&:after {
       position: relative;
       left: -20px;
       top: calc(-${(100 * distance)}% - 50%);
       border: solid ${fromTheme(theme => theme.colours.lightGray)};
-      border-width: ${spacerLines.top}px ${spacerLines.right}px ${spacerLines.bottom}px ${spacerLines.left}px;
+      border-width: 0px 0px 1px ${leftSpacerLine}px;
       content: ' ';
       display: block;
       width: 20px;
@@ -38,16 +36,15 @@ const Content = styled.div`
 
 interface ExpandableSpacerProps {
   button?: React.ReactComponentElement<'button', {}>
-  length: number
   index: number
   level: number
   distance: number
 }
 
-export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ button, children, length, index, level, distance }) => {
+export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ button, children, index, level, distance }) => {
   return (
     <StyledExpandableSpacer
-      spacerLines={makeSpacerLines(level, index, length)}
+      leftSpacerLine={index > 0 ? 1 : 0}
       level={level}
       distance={distance}>
       <Content>{button}{children}</Content>

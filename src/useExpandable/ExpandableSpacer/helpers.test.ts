@@ -1,4 +1,4 @@
-import { distanceBetweenEvenLevelItem, makeSpacerLines, SpacerLines } from './helpers'
+import { distanceBetweenEvenLevelItem } from './helpers'
 
 interface Data {
   attributes: { level: number }
@@ -72,44 +72,4 @@ test('distanceBetweenEvenLevelItems should work for non root elements', () => {
     { attributes: { level: 2 } }]
   const dist = distanceBetweenEvenLevelItem(data, 5)
   expect(dist).toBe(4)
-})
-
-test('makeSpacerLines should not make spacer lines for top list item', () => {
-  const expected: SpacerLines = {
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0
-  }
-  expect(makeSpacerLines(1, 0, 100)).toMatchObject(expected)
-})
-
-test('makeSpacerLines should make left and top lines for level 1 items in the middle of the list ', () => {
-  const expected: SpacerLines = {
-    top: 1,
-    right: 0,
-    bottom: 0,
-    left: 1
-  }
-  expect(makeSpacerLines(1, 1, 100)).toMatchObject(expected)
-})
-
-test('makeSpacerLines should make left, top and bottom lines for level 1 1 item if it\'s the last one at the bottom ', () => {
-  const expected: SpacerLines = {
-    top: 1,
-    right: 0,
-    bottom: 1,
-    left: 1
-  }
-  expect(makeSpacerLines(1, 99, 100)).toMatchObject(expected)
-})
-
-test('makeSpacerLines should make right and bottom lines for non level 1 item', () => {
-  const expected: SpacerLines = {
-    top: 0,
-    right: 0,
-    bottom: 1,
-    left: 1
-  }
-  expect(makeSpacerLines(2, 4, 100)).toMatchObject(expected)
 })

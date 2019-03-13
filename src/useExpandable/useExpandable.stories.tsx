@@ -57,7 +57,6 @@ const ItemWithSpacer = ({ data, index, style }: ItemProps) => {
           action('expand')(item)
         }}>Expand</button>}
         index={index}
-        length={data.length}
         distance={distanceBetweenEvenLevelItem(data, index)}>
         {item.value}
       </ExpandableSpacer>
