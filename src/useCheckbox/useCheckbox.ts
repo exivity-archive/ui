@@ -27,7 +27,7 @@ const enhance = (data: any, setData: any, getter: any) => {
   return newData
 }
 
-export function useCheckbox<T extends ListItem, TValue> (data: T[], valueKey: string, initialValue?: boolean | Function) {
+export function useCheckbox<T, TValue> (data: T[], valueKey: string, initialValue?: boolean | Function) {
   const [list, setData] = useState(data)
 
   useEffect(() => {
