@@ -1,9 +1,9 @@
 import React from 'react'
+import Faker from 'faker'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Modal } from './'
-import { loremIpsum } from '../utils/loremIpsum'
 import { Button } from '../Button'
 
 storiesOf('molecules|Modal', module)
@@ -12,9 +12,9 @@ storiesOf('molecules|Modal', module)
       <Modal
         title='Disclaimer'
         buttons={[
-          <Button onClick={() => { return }} key={1}>Whatsup</Button>,
-          <Button danger onClick={() => { return }} key={2}>Delete</Button>
+          <Button onClick={() => { return }}>Whatsup</Button>,
+          <Button danger onClick={() => { return }}>Delete</Button>
         ]
-        }> {loremIpsum}</Modal >
+        }> {Faker.lorem.paragraph(30)}</Modal >
     )
   })
