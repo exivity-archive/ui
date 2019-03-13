@@ -5,9 +5,9 @@ import { FixedSizeList } from 'react-window'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import ExpandableSpacer, { distanceBetweenEvenLevelItem } from './ExpandableSpacer'
-import useExpandable from './useExpandable'
-import { FakeRecord, FLAT_LIST_TEST_DATA } from './__stories__/seed'
+import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+import { useExpandable } from './useExpandable'
+import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 
 const getParent = (item: FakeRecord) => item.parentId
 

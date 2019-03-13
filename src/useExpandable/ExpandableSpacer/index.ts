@@ -1,2 +1,2 @@
-export { default } from './ExpandableSpacer'
+export { ExpandableSpacer } from './ExpandableSpacer'
 export { distanceBetweenEvenLevelItem } from './helpers'
