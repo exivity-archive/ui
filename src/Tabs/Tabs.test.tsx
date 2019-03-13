@@ -31,14 +31,6 @@ test('it throws an error when a TabPanels component is not rendered within a Tab
   }
 })
 
-type Key = 'ArrowLeft' | 'ArrowRight'
-type Panel = 'Panel one' | 'Panel two' | 'Panel three'
-
-interface Test {
-  key: Key
-  panel: Panel
-}
-
 test('when focussed on a tab you can use arrows to navigate', () => {
   const tabs = mount(
     <Tabs>
@@ -55,11 +47,12 @@ test('when focussed on a tab you can use arrows to navigate', () => {
     </Tabs>
   )
 
-  // focus on tabs so navigation becomes possible
-  enzymeFind(tabs, Tabs.Tab).first().props().onFocus()
-  tabs.update()
+  interface KeyboardNavigationTest {
+    key: 'ArrowLeft' | 'ArrowRight'
+    panel: 'Panel one' | 'Panel two' | 'Panel three'
+  }
 
-  const testArrowNavigation = ({ key, panel }: Test) => {
+  const testArrowNavigation = ({ key, panel }: KeyboardNavigationTest) => {
     enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
     tabs.update()
     expect(
@@ -69,7 +62,7 @@ test('when focussed on a tab you can use arrows to navigate', () => {
     ).toBeTruthy()
   }
 
-  const tests: Test[] = [
+  const tests: KeyboardNavigationTest[] = [
     { key: 'ArrowRight', panel: 'Panel two' },
     { key: 'ArrowRight', panel: 'Panel three' },
     { key: 'ArrowRight', panel: 'Panel three' },
@@ -78,5 +71,108 @@ test('when focussed on a tab you can use arrows to navigate', () => {
     { key: 'ArrowLeft', panel: 'Panel one' }
   ]
 
+  // focus on tabs so navigation becomes possible
+  enzymeFind(tabs, Tabs.Tab).first().props().onFocus()
+  tabs.update()
+
   tests.forEach(test => testArrowNavigation(test))
+})
+
+test('when blurred, arrow navigation should not work anymore', () => {
+  const tabs = mount(
+    <Tabs>
+      <Tabs.TabList>
+        <Tabs.Tab>Tab one</Tabs.Tab>
+        <Tabs.Tab>Tab two</Tabs.Tab>
+        <Tabs.Tab>Tab three</Tabs.Tab>
+      </Tabs.TabList>
+      <Tabs.TabPanels>
+        <Tabs.TabPanel>Panel one</Tabs.TabPanel>
+        <Tabs.TabPanel>Panel two</Tabs.TabPanel>
+        <Tabs.TabPanel>Panel three</Tabs.TabPanel>
+      </Tabs.TabPanels>
+    </Tabs>
+  )
+  const tab = enzymeFind(tabs, Tabs.Tab).first()
+
+  interface KeyboardNavigationTest {
+    key: 'ArrowLeft' | 'ArrowRight'
+    panel: 'Panel one' | 'Panel two' | 'Panel three'
+  }
+
+  const testArrowNavigation = ({ key, panel }: KeyboardNavigationTest) => {
+    enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
+    tabs.update()
+    expect(
+      tabs.containsMatchingElement(
+        <div>{panel}</div>
+      )
+    ).toBeTruthy()
+  }
+
+  // focus on tabs so navigation becomes possible
+  tab.props().onFocus()
+  tabs.update()
+
+  const testsWhenFocussed: KeyboardNavigationTest[] = [
+    { key: 'ArrowRight', panel: 'Panel two' },
+    { key: 'ArrowRight', panel: 'Panel three' }
+  ]
+
+  testsWhenFocussed.forEach(test => testArrowNavigation(test))
+
+  // blur tabs so navigation doesn't work anymore
+  tab.props().onBlur()
+  tabs.update()
+
+  const testsWhenUnfocussed: KeyboardNavigationTest[] = [
+    { key: 'ArrowLeft', panel: 'Panel three' },
+    { key: 'ArrowLeft', panel: 'Panel three' }
+  ]
+
+  testsWhenUnfocussed.forEach(test => testArrowNavigation(test))
+})
+
+test('you can navigate to a tab by clicking on it', () => {
+  const tabs = mount(
+    <Tabs>
+      <Tabs.TabList>
+        <Tabs.Tab>Tab one</Tabs.Tab>
+        <Tabs.Tab>Tab two</Tabs.Tab>
+        <Tabs.Tab>Tab three</Tabs.Tab>
+      </Tabs.TabList>
+      <Tabs.TabPanels>
+        <Tabs.TabPanel>Panel one</Tabs.TabPanel>
+        <Tabs.TabPanel>Panel two</Tabs.TabPanel>
+        <Tabs.TabPanel>Panel three</Tabs.TabPanel>
+      </Tabs.TabPanels>
+    </Tabs>
+  )
+
+  interface ClickNavigationTest {
+    tabIndex: 0 | 1 | 2
+    panel: 'Panel one' | 'Panel two' | 'Panel three'
+  }
+
+  const testClickNavigation = ({ tabIndex, panel }: ClickNavigationTest) => {
+    enzymeFind(tabs, Tabs.Tab).get(tabIndex).props.onClick()
+    tabs.update()
+    expect(
+      tabs.containsMatchingElement(
+        <div>{panel}</div>
+      )
+    ).toBeTruthy()
+  }
+
+  const tests: ClickNavigationTest[] = [
+    { tabIndex: 2, panel: 'Panel three' },
+    { tabIndex: 0, panel: 'Panel one' },
+    { tabIndex: 1, panel: 'Panel two' }
+  ]
+
+  // focus on tabs so navigation becomes possible
+  enzymeFind(tabs, Tabs.Tab).first().props().onFocus()
+  tabs.update()
+
+  tests.forEach(test => testClickNavigation(test))
 })
