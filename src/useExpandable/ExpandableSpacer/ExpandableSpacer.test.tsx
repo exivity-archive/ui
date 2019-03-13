@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import ExpandableSpacer from './ExpandableSpacer'
+import { ExpandableSpacer } from './ExpandableSpacer'
 import { distanceBetweenEvenLevelItem } from './helpers'
 
 interface Data {
