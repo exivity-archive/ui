@@ -10,7 +10,7 @@ const Overlay = styled.div`
   height: 100vh;
   background-color: rgba(0,0,0,0.1);
   position: absolute;
-  z-index: 99999999999999999999999;
+  z-index: ${fromTheme(theme => theme.global.zPriority.three)};
 `
 
 const ModalWrapper = styled.div`
