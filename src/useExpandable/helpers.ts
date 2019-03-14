@@ -30,10 +30,10 @@ export function iterateAllChildren<T> (item: TreeItem<T>, callback: Function): v
   }
 }
 
-export function hasNoCollapsedParents<T> (item: TreeListItem<T>, expanded: string[]): boolean {
+export function hasNoCollapsedParents<T> (item: TreeItem<T>, expanded: string[]): boolean {
   let parentsAreNotCollapsed = true
 
-  iterateAllParents<T>(item, (parent: TreeListItem<T>) => {
+  iterateAllParents<T>(item, (parent: TreeItem<T>) => {
     if (!expanded.includes(parent.key)) {
       parentsAreNotCollapsed = false
     }

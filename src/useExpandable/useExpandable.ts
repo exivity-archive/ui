@@ -75,7 +75,7 @@ export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], set
 
 export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[]): TreeListItem<T>[] {
   return list.filter((item) => {
-    const hasNoParentsCollapsed = hasNoCollapsedParents(item, expanded)
+    const hasNoParentsCollapsed = hasNoCollapsedParents<T>(item, expanded)
     const hasNoParent = !item[PARENT]
     return hasNoParent || hasNoParentsCollapsed
   }).map((item) => {
