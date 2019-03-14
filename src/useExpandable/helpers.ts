@@ -44,36 +44,44 @@ export function hasNoCollapsedParents<T> (item: TreeItem<T>, expanded: string[])
 
 export function expandOrCollapseItem (key: string, expanded: string[], setExpanded: Function): void {
   if (expanded.includes(key)) {
-    setExpanded(expanded.filter(item => item !== key))
+    collapseFn([key], expanded, setExpanded)
   } else {
-    setExpanded(expanded.concat([key]))
+    expandFn([key], expanded, setExpanded)
   }
 }
 
-function expandFn (keys: string[], expanded: string[], setExpanded: Function): void {
+export function expandFn (keys: string[], expanded: string[], setExpanded: Function): void {
   const keysToAdd = keys.filter((key: string) => !expanded.includes(key))
+
   if (keysToAdd.length) {
-    setExpanded(expanded.concat(keys))
+    setExpanded(expanded.concat(keysToAdd))
   }
 }
 
-function collapseFn (keys: string[], expanded: string[], setExpanded: Function): void {
+export function collapseFn (keys: string[], expanded: string[], setExpanded: Function): void {
   const shouldFilter = keys.some(key => expanded.includes(key))
   if (shouldFilter) {
     setExpanded(expanded.filter((key) => !keys.includes(key)))
   }
 }
 
+export type ExpandOrCollapseTree<T> = (
+  fn: typeof iterateAllParents | typeof iterateAllChildren,
+  expand?: boolean
+) => ExpandOrCollapse<T>
+
+export type ExpandOrCollapse<T> = (item: TreeListItem<T>) => void
+
 export function expandOrCollapseItemTree<T> (
   expanded: string[],
   setExpanded: Function
-): Function {
+): ExpandOrCollapseTree<T> {
   return (
-    fn: typeof iterateAllParents | typeof iterateAllChildren,
-    expand: boolean = false
-  ): Function => (
-    item: TreeListItem <T>)
-    : void => {
+    fn,
+    expand = false
+  ): ExpandOrCollapse<T> => (
+    item
+  ) => {
     const keys: string[] = [item.key]
 
     fn(item, (relatedItem: any) => {

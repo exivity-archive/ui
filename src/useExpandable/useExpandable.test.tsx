@@ -6,7 +6,6 @@ import {
   createParentChildrenMap,
   enrichTreeItems,
   getVisibleItems,
-  hasNoCollapsedParents,
   PARENT,
   orderChildrenUnderParents,
   useExpandable
@@ -39,7 +38,6 @@ test('useExpandable without expandedKeys', () => {
       }}
     </ExpandableList>)
 
-  console.log(returnData)
   expect(returnData.length).toBe(1)
 })
 
@@ -114,30 +112,6 @@ test('useExpandable will not filter items which do no have a parentId', () => {
 
   expect(returnData.length).toBe(5)
   expect(returnData[4].key).toBe('grouping')
-})
-
-test('hasNoCollapsedParents returns true', () => {
-  const one = { key: '1', [PARENT]: null }
-  const two = { key: '2', [PARENT]: one }
-  const three = { key: '3', [PARENT]: two }
-  const four = { key: '4', [PARENT]: three }
-
-  const expandedKeys = ['1', '2', '3']
-
-  const noneCollapsed = hasNoCollapsedParents<any>(four, expandedKeys)
-  expect(noneCollapsed).toBe(true)
-})
-
-test('hasNoCollapsedParents returns false', () => {
-  const one = { key: '1', [PARENT]: null }
-  const two = { key: '2', [PARENT]: one }
-  const three = { key: '3', [PARENT]: two }
-  const four = { key: '4', [PARENT]: three }
-
-  const expandedKeys = ['2', '3']
-
-  const noneCollapsed = hasNoCollapsedParents<any>(four, expandedKeys)
-  expect(noneCollapsed).toBe(false)
 })
 
 test('getVisibleItems filters items of which all parents are expanded', () => {

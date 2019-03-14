@@ -9,7 +9,8 @@ import {
   iterateAllParents,
   expandOrCollapseItemTree,
   expandOrCollapseItem,
-  hasNoCollapsedParents
+  hasNoCollapsedParents,
+  ExpandOrCollapse
 } from './helpers'
 
 import { createMap, Map, ListItem } from '../utils'
@@ -102,13 +103,23 @@ export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[])
   })
 }
 
+type Helpers<T> = {
+  expand: ExpandOrCollapse<T>,
+  collapse: ExpandOrCollapse<T>
+}
+
+type UseExpandableReturn<T> = [
+  TreeListItem<T>[],
+  Helpers<T>
+]
+
 export function useExpandable<T> (
   data: ListItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>,
   expandedKeys?: string[]
-) {
+): UseExpandableReturn<T> {
   const [expanded, setExpanded] = useState<string[]>(expandedKeys ? expandedKeys : [])
-  const [list, setList] = useState(createTree<T>(data, parentKeyAccessor))
+  const [list, setList] = useState<TreeItem<T>[]>(createTree<T>(data, parentKeyAccessor))
 
   useEffect(() => {
     expandedKeys && setExpanded(expandedKeys)
@@ -120,7 +131,7 @@ export function useExpandable<T> (
   }, [data])
 
   return useMemo(() => {
-    const expandOrcollapseTree = expandOrCollapseItemTree(expanded, setExpanded)
+    const expandOrcollapseTree = expandOrCollapseItemTree<T>(expanded, setExpanded)
 
     const expand = {
       parents: expandOrcollapseTree(iterateAllParents, true),
@@ -132,9 +143,12 @@ export function useExpandable<T> (
       children: expandOrcollapseTree(iterateAllChildren)
     }
 
-    const enriched = enrichTreeItems<T>(list, expanded, setExpanded)
-    const data = getVisibleItems(enriched, expanded)
+    const enriched: TreeListItem<T>[] = enrichTreeItems<T>(list, expanded, setExpanded)
+    const data: TreeListItem<T>[] = getVisibleItems<T>(enriched, expanded)
 
-    return [data, { expand, collapse }]
+    const arr = []
+    arr[0] = data
+    arr[1] = { expand, collapse }
+    return arr as UseExpandableReturn<T>
   }, [list, expanded])
 }
