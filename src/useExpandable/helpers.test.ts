@@ -8,8 +8,10 @@ import {
   expandOrCollapseItem,
   expandFn,
   collapseFn,
+  createExpandOrCollapseTreeHelpers,
+  ExpandOrCollapseChildrenOrParents,
   ExpandOrCollapseTree,
-  ExpandOrCollapse
+  disableEnumerable
 } from './helpers'
 
 test(`iterateAllParents iterates recursively over all ${PARENT}`, () => {
@@ -164,8 +166,8 @@ test('expandOrCollapseItemTree expand all parents', () => {
 
   const setExpanded = jest.fn(result => result)
 
-  const expandOrcollapse: ExpandOrCollapseTree<any> = expandOrCollapseItemTree(expanded, setExpanded)
-  const expand: ExpandOrCollapse<any> = expandOrcollapse(iterateAllParents, true)
+  const expandOrcollapse: ExpandOrCollapseChildrenOrParents<any> = expandOrCollapseItemTree(expanded, setExpanded)
+  const expand: ExpandOrCollapseTree<any> = expandOrcollapse(iterateAllParents, true)
   expand(four)
 
   const resultSetExpanded = setExpanded.mock.results[0].value
@@ -183,8 +185,8 @@ test('expandOrCollapseItemTree expand all children', () => {
 
   const setExpanded = jest.fn(result => result)
 
-  const expandOrcollapse: ExpandOrCollapseTree<any> = expandOrCollapseItemTree(expanded, setExpanded)
-  const expand: ExpandOrCollapse<any> = expandOrcollapse(iterateAllChildren, true)
+  const expandOrcollapse: ExpandOrCollapseChildrenOrParents<any> = expandOrCollapseItemTree(expanded, setExpanded)
+  const expand: ExpandOrCollapseTree<any> = expandOrcollapse(iterateAllChildren, true)
   expand(one)
 
   const resultSetExpanded = setExpanded.mock.results[0].value
@@ -202,8 +204,8 @@ test('expandOrCollapseItemTree collapse all parents', () => {
 
   const setExpanded = jest.fn(result => result)
 
-  const expandOrcollapse: ExpandOrCollapseTree<any> = expandOrCollapseItemTree(expanded, setExpanded)
-  const collapse: ExpandOrCollapse<any> = expandOrcollapse(iterateAllParents)
+  const expandOrcollapse: ExpandOrCollapseChildrenOrParents<any> = expandOrCollapseItemTree(expanded, setExpanded)
+  const collapse: ExpandOrCollapseTree<any> = expandOrcollapse(iterateAllParents)
   collapse(four)
 
   const resultSetExpanded = setExpanded.mock.results[0].value
@@ -221,11 +223,89 @@ test('expandOrCollapseItemTree collapse all children', () => {
 
   const setExpanded = jest.fn(result => result)
 
-  const expandOrcollapse: ExpandOrCollapseTree<any> = expandOrCollapseItemTree(expanded, setExpanded)
-  const collapse: ExpandOrCollapse<any> = expandOrcollapse(iterateAllChildren)
+  const expandOrcollapse: ExpandOrCollapseChildrenOrParents<any> = expandOrCollapseItemTree(expanded, setExpanded)
+  const collapse: ExpandOrCollapseTree<any> = expandOrcollapse(iterateAllChildren)
   collapse(one)
 
   const resultSetExpanded = setExpanded.mock.results[0].value
 
   expect(resultSetExpanded).toEqual([])
+})
+
+test('createExpandOrCollapseTreeHelpers returns object with collapse.children helper', () => {
+  const expanded: string[] = ['1','2','4','3']
+  const setExpanded = jest.fn(result => result)
+
+  const four = { key: '4' }
+  const three = { key: '3' }
+  const two = { key: '2', [CHILDREN]: [four] }
+  const one = { key: '1', [CHILDREN]: [two, three] }
+
+  const helpers = createExpandOrCollapseTreeHelpers<any>(expanded, setExpanded)
+  helpers.collapse.children(one)
+
+  const resultSetExpanded = setExpanded.mock.results[0].value
+
+  expect(resultSetExpanded).toEqual([])
+})
+
+test('createExpandOrCollapseTreeHelpers returns object with expand.children helper', () => {
+  const expanded: string[] = []
+  const setExpanded = jest.fn(result => result)
+
+  const four = { key: '4' }
+  const three = { key: '3' }
+  const two = { key: '2', [CHILDREN]: [four] }
+  const one = { key: '1', [CHILDREN]: [two, three] }
+
+  const helpers = createExpandOrCollapseTreeHelpers<any>(expanded, setExpanded)
+  helpers.expand.children(one)
+
+  const resultSetExpanded = setExpanded.mock.results[0].value
+
+  expect(resultSetExpanded).toEqual(['1','2','4','3'])
+})
+
+test('createExpandOrCollapseTreeHelpers returns object with collapse.parents helper', () => {
+  const expanded: string[] = ['1','2','4','3']
+  const setExpanded = jest.fn(result => result)
+
+  const one = { key: '1', [PARENT]: null }
+  const two = { key: '2', [PARENT]: one }
+  const three = { key: '3', [PARENT]: two }
+  const four = { key: '4', [PARENT]: three }
+
+  const helpers = createExpandOrCollapseTreeHelpers<any>(expanded, setExpanded)
+  helpers.collapse.parents(four)
+
+  const resultSetExpanded = setExpanded.mock.results[0].value
+
+  expect(resultSetExpanded).toEqual([])
+})
+
+test('createExpandOrCollapseTreeHelpers returns object with expand.parents helper', () => {
+  const expanded: string[] = []
+  const setExpanded = jest.fn(result => result)
+
+  const one = { key: '1', [PARENT]: null }
+  const two = { key: '2', [PARENT]: one }
+  const three = { key: '3', [PARENT]: two }
+  const four = { key: '4', [PARENT]: three }
+
+  const helpers = createExpandOrCollapseTreeHelpers<any>(expanded, setExpanded)
+  helpers.expand.parents(four)
+
+  const resultSetExpanded = setExpanded.mock.results[0].value
+
+  expect(resultSetExpanded).toEqual(['4', '3', '2', '1'])
+})
+
+test('disableEnumerable sets property enumerable to false', () => {
+  const obj = { key: '1', test: 'test' }
+
+  disableEnumerable(obj, 'test')
+
+  const newObj = { ...obj }
+
+  expect(newObj.hasOwnProperty('test')).toBe(false)
 })
