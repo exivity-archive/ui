@@ -31,10 +31,10 @@ export function createParentChildrenMap<T> (
       mapItem[PARENT] = mapItemParent
       const parentChildren = mapItemParent[CHILDREN]
 
-      if (parentChildren && !parentChildren.includes(mapItem)) {
-        parentChildren.push(mapItem)
-      } else {
+      if (!parentChildren) {
         mapItemParent[CHILDREN] = [mapItem]
+      } else if (!parentChildren.includes(mapItem)) {
+        parentChildren.push(mapItem)
       }
     }
   })
@@ -78,6 +78,27 @@ export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[])
     const hasNoParentsCollapsed = hasNoCollapsedParents(item, expanded)
     const hasNoParent = !item[PARENT]
     return hasNoParent || hasNoParentsCollapsed
+  }).map((item) => {
+    if (item[PARENT]) {
+      Object.defineProperty(item, PARENT, {
+        enumerable: false,
+        configurable: true
+      })
+    }
+
+    if (item[CHILDREN]) {
+      Object.defineProperty(item, CHILDREN, {
+        enumerable: false,
+        configurable: true
+      })
+    }
+
+    Object.defineProperty(item, 'expand', {
+      enumerable: false,
+      configurable: true
+    })
+
+    return item
   })
 }
 
@@ -86,7 +107,7 @@ export function useExpandable<T> (
   parentKeyAccessor: ParentKeyAccessor<T>,
   expandedKeys?: string[]
 ) {
-  const [expanded, setExpanded] = useState<string[]>([])
+  const [expanded, setExpanded] = useState<string[]>(expandedKeys ? expandedKeys : [])
   const [list, setList] = useState(createTree<T>(data, parentKeyAccessor))
 
   useEffect(() => {
@@ -112,6 +133,8 @@ export function useExpandable<T> (
     }
 
     const enriched = enrichTreeItems<T>(list, expanded, setExpanded)
-    return [getVisibleItems(enriched, expanded), { expand, collapse }]
+    const data = getVisibleItems(enriched, expanded)
+
+    return [data, { expand, collapse }]
   }, [list, expanded])
 }

@@ -1,7 +1,7 @@
 import { ListItem } from '../utils'
 
-export const PARENT = 'expandable-list-parent'
-export const CHILDREN = 'expandable-list-children'
+export const PARENT = 'parent'
+export const CHILDREN = 'children'
 
 export type TreeItem<T> = ListItem<T> & {
   [PARENT]?: TreeItem<T>
