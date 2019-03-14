@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { fromTheme, globalFont, hexToString, resetBox, StyledProps } from '../utils/styled'
+
+import { fromTheme, hexToString, StyledProps } from '../utils/styled'
 import { Heading } from '../Heading'
 
 interface StyledWidgetProps {
@@ -16,14 +17,6 @@ const StyledWidget = styled.div<StyledWidgetProps>`
   border-radius: 3px;
   width: 100%;
 `
-
-// const Title = styled.h4`
-//   ${resetBox};
-//   ${globalFont};
-
-//   font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
-//   color: ${fromTheme(theme => theme.global.purposes.primary)};
-// `
 
 interface WidgetProps extends StyledProps {
   header?: string
