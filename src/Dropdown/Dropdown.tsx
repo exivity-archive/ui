@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { getPosition, Vertical, Horizontal, Refs, Layout } from './helpers'
+import { getPosition, Vertical, Horizontal, Layout, Rects } from './helpers'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -70,18 +70,18 @@ export const Dropdown: React.FC<DropdownProps> = ({
   breakDistance = 20,
   useTriggerComponentWidth
 }) => {
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState<Position>({})
-  const refs: Refs = {
-    dropdown: useRef<HTMLDivElement>(null),
-    content: useRef<HTMLDivElement>(null)
-  }
-
-  const layout: Layout = { horizontal, vertical }
 
   const handlePosition = () => {
-    const newPosition = getPosition(refs, layout, breakDistance)
-    if (newPosition) {
-      setPosition(newPosition)
+    if (dropdownRef.current && contentRef.current) {
+      const layout: Layout = { horizontal, vertical }
+      const rects: Rects = {
+        inner: contentRef.current.getBoundingClientRect(),
+        outer: dropdownRef.current.getBoundingClientRect()
+      }
+      setPosition(getPosition(rects, layout, breakDistance))
     }
   }
 
@@ -91,17 +91,17 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
-  const width = refs.dropdown.current
-    ? `${refs.dropdown.current.clientWidth}px`
+  const width = dropdownRef.current
+    ? `${dropdownRef.current.clientWidth}px`
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test='dropdown' ref={refs.dropdown}>
+    <StyledDropdown className={className} data-test='dropdown' ref={dropdownRef}>
       {triggerComponent}
       <Content useTriggerComponentWidth={useTriggerComponentWidth}
         width={width}
         data-test='dropdown-content'
-        ref={refs.content}
+        ref={contentRef}
         {...position}
         open={open}>
         {children}

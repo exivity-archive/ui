@@ -1,8 +1,6 @@
-import { RefObject } from 'react'
-
-export interface Refs {
-  content: RefObject<HTMLDivElement>
-  dropdown: RefObject<HTMLDivElement>
+export interface Rects {
+  outer: ClientRect | DOMRect
+  inner: ClientRect | DOMRect
 }
 
 export type Vertical = 'top' | 'bottom' | 'auto'
@@ -17,15 +15,12 @@ const elementCrossedEdge = (absolutePosition: number, elementDimension: number, 
   return absolutePosition + elementDimension > edge
 }
 
-interface Rects {
-  outer: ClientRect | DOMRect
-  inner: ClientRect | DOMRect
-}
-
 function getVertical (vertical: Vertical, { outer, inner }: Rects, breakDistance: number) {
   if (vertical === 'auto') {
     return elementCrossedEdge(outer.bottom, inner.height, window.innerHeight - breakDistance)
       ? 'top' : 'bottom'
+  } else {
+    return vertical
   }
 }
 
@@ -33,23 +28,20 @@ function getHorizontal (horizontal: Horizontal, { outer, inner }: Rects, breakDi
   if (horizontal === 'auto') {
     return elementCrossedEdge(outer.left, inner.width, window.innerWidth - breakDistance)
       ? 'left' : 'right'
+  } else {
+    return horizontal
   }
 }
 
-export function getPosition ({ dropdown, content }: Refs, { horizontal, vertical }: Layout, breakDistance: number) {
-  if (!content.current || !dropdown.current) return
+export function getPosition (rects: Rects, layout: Layout, breakDistance: number) {
+  const vertical = getVertical(layout.vertical, rects, breakDistance)
+  const horizontal = getHorizontal(layout.horizontal, rects, breakDistance)
 
-  const outer = dropdown.current.getBoundingClientRect()
-  const inner = content.current.getBoundingClientRect()
-  const rects: Rects = { outer, inner }
+  const flippedVertical = vertical === 'top' ? 'bottom' : 'top'
+  const flippedHorizontal = horizontal === 'left' ? 'right' : 'left'
 
-  const newVertical = getVertical(vertical, rects, breakDistance) || vertical
-  const newHorizontal = getHorizontal(horizontal, rects, breakDistance) || horizontal
-
-  if (vertical === 'auto' || horizontal === 'auto') {
-    return {
-      [newHorizontal === 'left' ? 'right' : 'left']: 0,
-      [newVertical === 'top' ? 'bottom' : 'top']: outer.height
-    }
+  return {
+    [flippedVertical]: rects.outer.height,
+    [flippedHorizontal]: 0
   }
 }
