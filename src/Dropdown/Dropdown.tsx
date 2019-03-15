@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
+import { fromTheme } from '../utils/styled'
 
 interface IPosition {
   left?: 0
@@ -19,6 +20,7 @@ const Content = styled.div <IContentProps>`
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: ${fromTheme(theme => theme.global.priority.one)};
 
   min-width: 160px;
   ${props => (props.useTriggerComponentWidth && props.width) && css`
