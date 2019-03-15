@@ -1,17 +1,17 @@
 import { Omit } from './types'
 
-export interface MapItem {
+export type Item<T> = T
+
+export type ListItem<T> = Item<T> & {
   key: string
 }
-
-type MapData<T> = T[]
 
 export interface Map<T> {
   [index: string]: T
 }
 
-export function createMap<T extends MapItem> (data: MapData<T>): Map<T> {
-  const map: Map<T> = {}
+export function createMap<T> (data: ListItem<T>[]): Map<ListItem<T>> {
+  const map: Map<ListItem<T>> = {}
 
   data.forEach((item) => {
     map[item.key] = item

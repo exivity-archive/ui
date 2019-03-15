@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NB_OF_ITEMS = 10
 export const ITEM_HEIGHT = 30
 export const MAX_HEIGHT = NB_OF_ITEMS * ITEM_HEIGHT
@@ -16,7 +14,7 @@ export const handleKeyDown = (event: any) => {
   const first = list.querySelector('li:first-child')
   const last = list.querySelector('li:last-child')
   const focused = list.querySelector(':focus')
-
+  console.log(focused)
   // Prevent default action on our trigger keys (up/down arrow, enter)
   if ([38, 40, 13].indexOf(event.which) !== -1) {
     event.preventDefault()

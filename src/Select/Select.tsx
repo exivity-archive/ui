@@ -18,7 +18,7 @@ interface SelectProps {
   onChange: any
 }
 
-const StyledList = styled(List)`
+export const StyledList = styled(List)`
   padding: 20px 0;
 
   ul {

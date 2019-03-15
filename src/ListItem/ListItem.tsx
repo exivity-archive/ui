@@ -22,15 +22,14 @@ const StyledLi = styled.li`
 `
 
 const StyledInnerItem = styled.div`
-  display: flex;
+  width: 100%;
+  height: 100%;
   padding: 0 20px;
 `
 
-export const focusElement = (event: any) => {
-  event.target.focus()
-}
+export const focusElement = (event: any) => event.currentTarget.focus()
 
-export const ListItem: React.FC = ({ children, ...rest }) => (
+export const ListItem: React.FC = ({ children, ...rest }: any) => (
   <StyledLi {...rest} onMouseOver={focusElement}>
     <StyledInnerItem>
       {children}
