@@ -1,32 +1,43 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { fromTheme, globalFont, hexToString, resetBox, StyledProps } from '../utils/styled'
 
-const Title = styled.h4`
-  ${resetBox};
-  ${globalFont};
+import { fromTheme, hexToString, StyledProps } from '../utils/styled'
+import { Heading } from '../Heading'
 
-  font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
-  color: ${fromTheme(theme => theme.global.purposes.primary)};
-`
+interface StyledWidgetProps {
+  noPadding?: boolean
+}
 
-const Wrapper = styled.div`
+const StyledWidget = styled.div<StyledWidgetProps>`
   background: white;
   box-shadow: 1px 1px 0 rgba(${fromTheme(theme => hexToString(theme.global.purposes.primary))},0.4);
-  padding: ${fromTheme(theme => theme.global.spacing * 1.5)}em;
+  padding: ${({ noPadding }) => noPadding ? 0 : fromTheme(theme => theme.global.spacing * 1.5)}em;
   position: relative;
   box-sizing: border-box;
   border-radius: 3px;
   width: 100%;
 `
 
-interface WidgetProps extends StyledProps {
-  title?: string
+interface HeaderProps {
+  padding?: boolean
 }
 
-export const Widget: React.FC<WidgetProps> = ({ children, title }) => (
-  <Wrapper>
-    {title && <Title>{title}</Title>}
+const Header = styled.div<HeaderProps>`
+  padding: ${({ padding }) => padding ? fromTheme(theme => theme.global.spacing * 1.5) : 0}em;
+`
+
+interface WidgetProps extends StyledProps {
+  header?: string
+  noPadding?: boolean
+}
+
+export const Widget: React.FC<WidgetProps> = ({ children, header, noPadding }) => (
+  <StyledWidget noPadding={noPadding}>
+    {header && (
+      <Header padding={noPadding}>
+        <Heading>{header}</Heading>
+      </Header>
+    )}
     {children}
-  </Wrapper>
+  </StyledWidget>
 )
