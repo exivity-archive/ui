@@ -18,6 +18,14 @@ const StyledWidget = styled.div<StyledWidgetProps>`
   width: 100%;
 `
 
+interface HeaderProps {
+  padding?: boolean
+}
+
+const Header = styled.div<HeaderProps>`
+  padding: ${({ padding }) => padding ? fromTheme(theme => theme.global.spacing * 1.5) : 0}em;
+`
+
 interface WidgetProps extends StyledProps {
   header?: string
   noPadding?: boolean
@@ -25,7 +33,11 @@ interface WidgetProps extends StyledProps {
 
 export const Widget: React.FC<WidgetProps> = ({ children, header, noPadding }) => (
   <StyledWidget noPadding={noPadding}>
-    {header && <Heading>{header}</Heading>}
+    {header && (
+      <Header padding={noPadding}>
+        <Heading>{header}</Heading>
+      </Header>
+    )}
     {children}
   </StyledWidget>
 )
