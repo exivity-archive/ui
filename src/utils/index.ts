@@ -26,4 +26,8 @@ export function omit<T, E extends keyof T> (obj: T, keys: E[]): Omit<T, E> {
     .reduce((obj, [key, val]) => Object.assign(obj, { [key]: val }), {}) as Omit<T, E>
 }
 
-export const tuple = <T extends string[]>(...args: T) => args
+export const tuple = <T extends string[]> (...args: T) => args
+
+export function ensureString (test: any) {
+  return typeof test === 'string' ? test : ''
+}

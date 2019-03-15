@@ -44,7 +44,7 @@ const InputIcon = styled(Icon)<InputIconProps>`
   position: absolute;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 20,
-    defaultValue: 20
+    defaultValue: 'base'
   })}px;
 
   ${props => props.disabled && css`

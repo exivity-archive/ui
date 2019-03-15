@@ -10,6 +10,7 @@ if (process.argv.length === 2) {
 const componentName = process.argv[2]
 const targetDir = path.resolve(__dirname, `../src/${componentName}`)
 const sourceDir = path.resolve(__dirname, `template`)
+const indexPath = path.resolve(__dirname, `../src/index.ts`)
 const templateFiles = [
   'Component.tsx.stub',
   'Component.stories.tsx.stub',
@@ -33,5 +34,18 @@ templateFiles.forEach(templateFile => {
   writeFileSync(targetFile, contents)
   console.log(`Written file ${targetFile}.`)
 })
+
+const indexContents = readFileSync(indexPath).toString()
+const indexContentsMap = new Map()
+indexContents.split('\n').forEach(line => {
+  if (line.trim()) {
+    const key = line.match(/export { (.+?) }/)[1]
+    indexContentsMap.set(key, line.trim())
+  }
+})
+indexContentsMap.set(componentName, `export { ${componentName} } from './${componentName}'`)
+const newIndexContents = Array.from(indexContentsMap.keys()).sort().map(key => indexContentsMap.get(key))
+writeFileSync(indexPath, `${newIndexContents.join('\n')}\n`)
+console.log(`Added ${componentName} to index.ts.`)
 
 console.log('Done.')

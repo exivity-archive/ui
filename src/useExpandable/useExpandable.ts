@@ -70,6 +70,7 @@ export function createTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKey
 export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
   return list.map((item: TreeItem<T>): TreeListItem<T> => ({
     ...item,
+    expanded: expanded.includes(item.key),
     expand: () => expandOrCollapseItem(item.key, expanded, setExpanded)
   }))
 }
@@ -83,6 +84,7 @@ export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[])
     if (item[PARENT]) disableEnumerable(item, PARENT)
     if (item[CHILDREN]) disableEnumerable(item, CHILDREN)
     disableEnumerable(item, 'expand')
+    disableEnumerable(item, 'expanded')
 
     return item
   })

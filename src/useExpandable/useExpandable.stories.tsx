@@ -1,38 +1,78 @@
 import React, { useMemo } from 'react'
+import styled from 'styled-components'
 import { FixedSizeList } from 'react-window'
+import { MdAdd, MdRemove } from 'react-icons/md'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
-import { useExpandable, TreeListItem } from '.'
+import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
+import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
 
 const getParent = (item: FakeRecord) => item.parentId
-const keys = ['1', '101', '201']
-const ExpandableList = () => {
-  const [data] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, keys)
+
+export default storiesOf('helpers|useExpandable', module)
+  .add('default', () => <ExpandableList expandedKeys={[]}/>)
+  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+
+const ExpandableList = ({ expandedKeys }: any) => {
+  const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
-    <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length} >
-      {Item}
+    <FixedSizeList height={800} width={600} itemSize={50} itemData={[data, helpers]} itemCount={data.length}>
+      {ItemSpacer}
     </FixedSizeList>
   )
 }
 
-const Item = ({ data, index, style }: { data: TreeListItem<FakeRecord>[], index: number, style: object}) => {
-  const item = data[index]
-  const space = new Array(item.attributes.level)
+const SpaceBetween = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+  width: 600px;
+`
+
+interface ItemProps {
+  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>],
+  index: number,
+  style: object
+}
+
+const ItemSpacer = ({ data, index, style }: ItemProps) => {
+  const [items, helpers] = data
+  const item = items[index]
+
+  const button = (item.children ?
+    <Button round small success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+      <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
+    </Button>
+      : null
+  )
 
   return useMemo(() => {
     return (
-      <div onClick={item.expand} style={style}>
-        {item
-          ? space.join('|----  ') + '+  ' + String(item.value)
-          : space.join('|----  ') + String(item.value)}
+      <div style={style}>
+        <ExpandableSpacer
+          level={item.attributes.level}
+          button={button}
+          index={index}
+          distance={distanceBetweenEvenLevelItem(items, index)}>
+          <SpaceBetween>
+            {item.value}
+            {!item.expanded && item.children &&
+              <Button tiny secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+            {item.expanded && item.children &&
+              <Button tiny secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
+            {item.expanded && item.parent &&
+              <Button tiny secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
+          </SpaceBetween>
+        </ExpandableSpacer>
       </div>
     )
   }, [item])
 }
-
-storiesOf('helpers|useExpandable', module)
-  .add('default', () => <ExpandableList />)

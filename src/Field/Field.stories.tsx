@@ -37,7 +37,6 @@ storiesOf('forms|Field', module)
         <TextInput id='name' placeholder='Please type full name' onChange={mockFn}/>
       </Field>
     </Field.Container>
-    <div style={{ height: '20px' }}/>
     <Field.Container horizontal align='40%'>
       <Field>
         <Label htmlFor='username2'>Username</Label>

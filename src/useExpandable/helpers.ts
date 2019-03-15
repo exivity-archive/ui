@@ -9,6 +9,7 @@ export type TreeItem<T> = ListItem<T> & {
 }
 
 export type TreeListItem<T> = TreeItem<T> & {
+  expanded: boolean
   expand (): void
 }
 

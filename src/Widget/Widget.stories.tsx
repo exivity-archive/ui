@@ -1,15 +1,19 @@
-import React from 'react'
-
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
+import faker from 'faker'
+import React from 'react'
 
 import { Widget } from '.'
+import { Paragraph } from '../Paragraph'
 
 storiesOf('molecules|Widget', module)
-  .add('default',
-    () => <Widget title='Title' subTitle='subtitle'>Lorem Ipsum is simply dummy text of the printing and typesetting
-      industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-      took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-      also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-      the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-      like Aldus PageMaker including versions of Lorem Ipsum.</Widget>)
+  .add('default', () => (
+    <Widget header='Title'>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))
+  .add('no padding', () => (
+    <Widget header='Title' noPadding>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))
