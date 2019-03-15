@@ -1,20 +1,25 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
+import { getPosition, Vertical, Horizontal, Refs, Layout } from './helpers'
 
-interface IPosition {
+const StyledDropdown = styled.div`
+  position: relative;
+`
+
+interface Position {
   left?: 0
   right?: 0
   top?: number
   bottom?: number
 }
 
-interface IContentProps extends IPosition {
+interface ContentProps extends Position {
   open: boolean
   useTriggerComponentWidth?: boolean
   width?: string
 }
 
-const Content = styled.div <IContentProps>`
+const Content = styled.div <ContentProps>`
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -28,27 +33,24 @@ const Content = styled.div <IContentProps>`
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   ${({ left, right, top, bottom }) => css`
-    ${typeof left !== 'undefined' && css`
+    ${left !== undefined && css`
       left: ${left};
     `}
-    ${typeof right !== 'undefined' && css`
+    ${right !== undefined && css`
       right: ${right};
     `}
-    ${typeof top !== 'undefined' && css`
+    ${top !== undefined && css`
       top: ${top}px;
       margin-top: 5px;
     `}
-    ${typeof bottom !== 'undefined' && css`
+    ${bottom !== undefined && css`
       bottom: ${bottom}px;
       margin-bottom: 5px;
     `}
   `}
 `
 
-type Vertical = 'top' | 'bottom' | 'auto'
-type Horizontal = 'left' | 'right' | 'auto'
-
-interface IDropdownProps {
+interface DropdownProps {
   className?: string
   triggerComponent: React.ReactNode
   open: boolean
@@ -58,52 +60,28 @@ interface IDropdownProps {
   useTriggerComponentWidth?: boolean
 }
 
-interface ILayout {
-  horizontal: Horizontal
-  vertical: Vertical,
-}
+export const Dropdown: React.FC<DropdownProps> = ({
+  className,
+  triggerComponent,
+  children,
+  open,
+  horizontal = 'auto',
+  vertical = 'auto',
+  breakDistance = 20,
+  useTriggerComponentWidth
+}) => {
+  const [position, setPosition] = useState<Position>({})
+  const refs: Refs = {
+    dropdown: useRef<HTMLDivElement>(null),
+    content: useRef<HTMLDivElement>(null)
+  }
 
-const elementCrossedEdge = (absolutePosition: number, elementDimension: number, edge: number) => {
-  return absolutePosition + elementDimension > edge
-}
-
-const PlainDropdown: React.FC<IDropdownProps> = ({
-      className,
-      triggerComponent,
-      children,
-      open,
-      horizontal = 'auto',
-      vertical = 'auto',
-      breakDistance = 20,
-      useTriggerComponentWidth
-    }) => {
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const dropdownContentRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState<IPosition>({})
+  const layout: Layout = { horizontal, vertical }
 
   const handlePosition = () => {
-    if (!dropdownContentRef.current || !dropdownRef.current) return
-
-    const outer = dropdownRef.current.getBoundingClientRect()
-    const inner = dropdownContentRef.current.getBoundingClientRect()
-
-    const layout: Partial<ILayout> = { horizontal, vertical }
-
-    if (vertical === 'auto') {
-      layout.vertical = elementCrossedEdge(outer.bottom, inner.height, window.innerHeight - breakDistance)
-        ? 'top' : 'bottom'
-    }
-
-    if (horizontal === 'auto') {
-      layout.horizontal = elementCrossedEdge(outer.left, inner.width, window.innerWidth - breakDistance)
-        ? 'left' : 'right'
-    }
-
-    if (vertical === 'auto' || horizontal === 'auto') {
-      setPosition({
-        [layout.horizontal === 'left' ? 'right' : 'left']: 0,
-        [layout.vertical === 'top' ? 'bottom' : 'top']: outer.height
-      })
+    const newPosition = getPosition(refs, layout, breakDistance)
+    if (newPosition) {
+      setPosition(newPosition)
     }
   }
 
@@ -113,24 +91,21 @@ const PlainDropdown: React.FC<IDropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
-  const width = dropdownRef.current
-    ? `${dropdownRef.current.clientWidth}px`
+  const width = refs.dropdown.current
+    ? `${refs.dropdown.current.clientWidth}px`
     : undefined
 
   return (
-    <div className={className} data-test='dropdown' ref={dropdownRef}>
+    <StyledDropdown className={className} data-test='dropdown' ref={refs.dropdown}>
       {triggerComponent}
-      <Content useTriggerComponentWidth={useTriggerComponentWidth} width={width}
+      <Content useTriggerComponentWidth={useTriggerComponentWidth}
+        width={width}
         data-test='dropdown-content'
-        ref={dropdownContentRef}
+        ref={refs.content}
         {...position}
         open={open}>
         {children}
       </ Content>
-    </div>
+    </StyledDropdown>
   )
 }
-
-export const Dropdown = styled(PlainDropdown)`
-  position: relative;
-`

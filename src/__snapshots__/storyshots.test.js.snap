@@ -5934,6 +5934,10 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   grid-template-columns: repeat(1, fit-content(200px));
 }
 
+.c2 {
+  position: relative;
+}
+
 .c9 {
   box-sizing: border-box;
   position: absolute;
@@ -5942,10 +5946,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   padding: 20px;
   min-width: 160px;
   visibility: hidden;
-}
-
-.c2 {
-  position: relative;
 }
 
 .c6 {
@@ -13973,6 +13973,10 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 12px;
 }
 
+.c1 {
+  position: relative;
+}
+
 .c2 {
   box-sizing: border-box;
   position: absolute;
@@ -13981,10 +13985,6 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 20px;
   min-width: 160px;
   visibility: hidden;
-}
-
-.c1 {
-  position: relative;
 }
 
 <div
