@@ -1,65 +1,78 @@
-import React from 'react'
+import React, { useMemo } from 'react'
+import styled from 'styled-components'
 import { FixedSizeList } from 'react-window'
+import { MdAdd, MdRemove } from 'react-icons/md'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
-import { useExpandable } from './useExpandable'
+import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
+import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+import { Button } from '../Button'
+import { Icon } from '../Icon'
 
 const getParent = (item: FakeRecord) => item.parentId
 
-const ExpandableList = ({ item }) => {
-  const data = useExpandable(FLAT_LIST_TEST_DATA, getParent)
+export default storiesOf('helpers|useExpandable', module)
+  .add('default', () => <ExpandableList expandedKeys={[]}/>)
+  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+
+const ExpandableList = ({ expandedKeys }: any) => {
+  const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
-    <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
-      {item}
+    <FixedSizeList height={800} width={600} itemSize={50} itemData={[data, helpers]} itemCount={data.length}>
+      {ItemSpacer}
     </FixedSizeList>
   )
 }
 
-export default storiesOf('helpers|useExpandable', module)
-  .add('default', () => <ExpandableList item={Item} />)
-  .add('with spacer', () => <ExpandableList item={ItemWithSpacer} />)
+const SpaceBetween = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 20px;
+  width: 600px;
+`
 
 interface ItemProps {
-  data: (FakeRecord & { expand: () => void, expanded: boolean, index: number })[],
+  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>],
   index: number,
   style: object
 }
 
-const Item = ({ data, index, style }: ItemProps) => {
+const ItemSpacer = ({ data, index, style }: ItemProps) => {
+  const [items, helpers] = data
+  const item = items[index]
 
-  const item = data[index]
-  const space = new Array(item.attributes.level)
-
-  return (
-    <div onClick={() => {
-      item.expand()
-      action('expand')(item)
-    }} style={style}>
-      {item ? space.join('|----  ') + '+  ' + String(item.value) : space.join('|----  ') + String(item.value)}
-    </div>
+  const button = (item.children ?
+    <Button round small success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+      <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
+    </Button>
+      : null
   )
-}
 
-const ItemWithSpacer = ({ data, index, style }: ItemProps) => {
-  const item = data[index]
-  return (
-    <div style={style}>
-      <ExpandableSpacer
-        level={item.attributes.level}
-        button={<button style={{ zIndex: 2 }} onClick={() => {
-          item.expand()
-          action('expand')(item)
-        }}>Expand</button>}
-        index={index}
-        distance={distanceBetweenEvenLevelItem(data, index)}>
-        {item.value}
-      </ExpandableSpacer>
-    </div>
-  )
+  return useMemo(() => {
+    return (
+      <div style={style}>
+        <ExpandableSpacer
+          level={item.attributes.level}
+          button={button}
+          index={index}
+          distance={distanceBetweenEvenLevelItem(items, index)}>
+          <SpaceBetween>
+            {item.value}
+            {!item.expanded && item.children &&
+              <Button tiny secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+            {item.expanded && item.children &&
+              <Button tiny secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
+            {item.expanded && item.parent &&
+              <Button tiny secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
+          </SpaceBetween>
+        </ExpandableSpacer>
+      </div>
+    )
+  }, [item])
 }
