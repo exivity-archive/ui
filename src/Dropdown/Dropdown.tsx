@@ -1,22 +1,23 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { getPosition, Vertical, Horizontal, Layout, Rects } from './helpers'
+import {
+  getPosition,
+  Vertical,
+  Horizontal,
+  Layout,
+  Rects,
+  makeCssPosition
+} from './helpers'
 
 const StyledDropdown = styled.div`
   position: relative;
 `
 
-interface Position {
-  left?: 0
-  right?: 0
-  top?: number
-  bottom?: number
-}
-
-interface ContentProps extends Position {
+interface ContentProps {
   open: boolean
   useTriggerComponentWidth?: boolean
   width?: string
+  position: string
 }
 
 const Content = styled.div <ContentProps>`
@@ -32,22 +33,7 @@ const Content = styled.div <ContentProps>`
   `}
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  ${({ left, right, top, bottom }) => css`
-    ${left !== undefined && css`
-      left: ${left};
-    `}
-    ${right !== undefined && css`
-      right: ${right};
-    `}
-    ${top !== undefined && css`
-      top: ${top}px;
-      margin-top: 5px;
-    `}
-    ${bottom !== undefined && css`
-      bottom: ${bottom}px;
-      margin-bottom: 5px;
-    `}
-  `}
+  ${({ position }) => `${position}`}
 `
 
 interface DropdownProps {
@@ -72,7 +58,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState<Position>({})
+  const [position, setPosition] = useState<string>('')
 
   const handlePosition = () => {
     if (dropdownRef.current && contentRef.current) {
@@ -81,7 +67,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
         inner: contentRef.current.getBoundingClientRect(),
         outer: dropdownRef.current.getBoundingClientRect()
       }
-      setPosition(getPosition(rects, layout, breakDistance))
+      const position = getPosition(rects, layout, breakDistance)
+      setPosition(makeCssPosition(position))
     }
   }
 
@@ -102,7 +89,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         width={width}
         data-test='dropdown-content'
         ref={contentRef}
-        {...position}
+        position={position}
         open={open}>
         {children}
       </ Content>
