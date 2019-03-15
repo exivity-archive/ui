@@ -13416,6 +13416,558 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 </div>
 `;
 
+exports[`Storyshots helpers|useExpandable with spacer 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin-left: 40px;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.c1:after {
+  position: relative;
+  left: -20px;
+  top: calc(-100% - 50%);
+  border: solid #eee;
+  border-width: 0px 0px 1px 0px;
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+
+.c3 {
+  margin-left: 40px;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.c3:after {
+  position: relative;
+  left: -20px;
+  top: calc(-100% - 50%);
+  border: solid #eee;
+  border-width: 0px 0px 1px 1px;
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+
+.c2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    onScroll={[Function]}
+    style={
+      Object {
+        "WebkitOverflowScrolling": "touch",
+        "direction": "ltr",
+        "height": 600,
+        "overflow": "auto",
+        "position": "relative",
+        "width": 400,
+        "willChange": "transform",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": 5000,
+          "pointerEvents": "",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c1"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Hayden
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 50,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Zion
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 100,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Mina
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 150,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Torey
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 200,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Aaliyah
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 250,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Branson
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 300,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Elizabeth
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 350,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Zola
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 400,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Caesar
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 450,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Darwin
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 500,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Audrey
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 550,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Grace
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 600,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Chyna
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 650,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Gideon
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "height": 50,
+            "left": 0,
+            "position": "absolute",
+            "top": 700,
+            "width": "100%",
+          }
+        }
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c2"
+          >
+            <button
+              onClick={[Function]}
+              style={
+                Object {
+                  "zIndex": 2,
+                }
+              }
+            >
+              Expand
+            </button>
+            Ezequiel
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots molecules|Dropdown default 1`] = `
 .c0 {
   padding: 12px;
