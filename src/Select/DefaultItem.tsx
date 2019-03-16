@@ -1,27 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
+import { ListChildComponentProps } from 'react-window'
 
-import { ListItem } from '../ListItem'
+import { ListItem, CenterText } from '../ListItem'
 
-const CenterText = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-`
-
-export const DefaultItem = ({ data, index, style }: any) => {
+export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, style }) => {
   const { items, setIsOpen, onChange } = data
   const item = items[index]
 
   const handleOnClick = () => {
-    // setIsOpen(false)
+    setIsOpen(false)
     onChange(item)
   }
 
-  style.top = style.top + 20
+  const newStyle = {
+    ...style,
+    top: typeof style.top === 'number' ? style.top + 20 : style.top
+  }
 
   return (
-    <ListItem style={style} tabIndex={index + 1} onClick={handleOnClick}>
+    <ListItem style={newStyle} tabIndex={index + 1} onClick={handleOnClick}>
       <CenterText>
         {item.value}
       </CenterText>

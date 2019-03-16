@@ -9,12 +9,12 @@ export const calculateHeight = (data: any) => {
 
 export const getSelectedItem = (key: string, data: any[]) => data.find((item: any) => item.key === key)
 
-export const handleKeyDown = (event: any) => {
+export const handleKeyDownFocusListItem = (event: any) => {
   const list = event.currentTarget.querySelector('ul')
   const first = list.querySelector('li:first-child')
   const last = list.querySelector('li:last-child')
   const focused = list.querySelector(':focus')
-  console.log(focused)
+
   // Prevent default action on our trigger keys (up/down arrow, enter)
   if ([38, 40, 13].indexOf(event.which) !== -1) {
     event.preventDefault()

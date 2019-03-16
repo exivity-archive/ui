@@ -6,16 +6,26 @@ import { SelectInput } from '../SelectInput'
 import { Dropdown } from '../Dropdown'
 
 import { DefaultItem } from './DefaultItem'
-import { calculateHeight, getSelectedItem, handleKeyDown, ITEM_HEIGHT } from './helpers'
+import { calculateHeight, getSelectedItem, handleKeyDownFocusListItem, ITEM_HEIGHT } from './helpers'
+
+interface SelectItem {
+  key: string
+  value: string
+}
+
+interface InjectValueAndHandler {
+  value: string
+  onClick: () => void
+}
 
 interface SelectProps {
   value: string
-  data: any[]
-  valueComponent?: any
-  itemComponent?: any
+  data: SelectItem[]
+  valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange: any
+  onChange: (item: SelectItem) => void
+  children?: any
 }
 
 export const StyledList = styled(List)`
@@ -27,13 +37,17 @@ export const StyledList = styled(List)`
     list-style-type: none;
   }
 `
-const injectComponent = (component: any, props: any) => React.cloneElement(component, {
-  ...props,
-  ...component.props
-})
 
-const getTriggerComponent = (valueComponent: any, props: any) => {
+const injectComponent = (component: React.ReactElement<any>, props: InjectValueAndHandler) => {
+  return React.cloneElement(component, {
+    ...props,
+    ...component.props
+  })
+}
+
+const getTriggerComponent = (valueComponent: React.ReactElement<any>, props: InjectValueAndHandler) => {
   if (valueComponent) return injectComponent(valueComponent, props)
+    // Does not need onChange because SelectInput only display data
   return <SelectInput {...props}/>
 }
 
@@ -42,15 +56,15 @@ export const Select: React.FC<SelectProps> = ({
   data,
   onChange,
   valueComponent,
-  itemComponent,
   useTriggerComponentWidth = true,
-  innerElementType = 'ul'
+  innerElementType = 'ul',
+  children
 }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
   const selectedItem = getSelectedItem(value, data)
 
   const valueComponentProps = {
-    value: selectedItem.value,
+    value: selectedItem ? selectedItem.value : '',
     onClick: () => setIsOpen(!isOpen)
   }
 
@@ -60,7 +74,7 @@ export const Select: React.FC<SelectProps> = ({
   const itemData = useMemo(() => ({ items: data, setIsOpen, onChange }), [data, setIsOpen])
 
   return (
-    <div onKeyDown={handleKeyDown}>
+    <div onKeyDown={handleKeyDownFocusListItem}>
       <Dropdown open={isOpen} triggerComponent={triggerComponent} useTriggerComponentWidth={useTriggerComponentWidth}>
         <StyledList
           height={height}
@@ -69,7 +83,7 @@ export const Select: React.FC<SelectProps> = ({
           itemSize={ITEM_HEIGHT}
           innerElementType={innerElementType}
           width='100%'>
-          {itemComponent ? itemComponent : DefaultItem}
+          {children ? children : DefaultItem}
         </StyledList>
       </Dropdown>
     </div>

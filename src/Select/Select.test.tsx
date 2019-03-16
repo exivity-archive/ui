@@ -12,10 +12,7 @@ test('Select renders a list of items', () => {
 
   const wrapper = mountWithTheme(<Select data={items}/>)
 
-  wrapper.find('input')
-    .simulate('click')
-
-  // find list
+  expect(wrapper.find('li').length).toBe(4)
 })
 
 test('Select returns an item onChange', () => {
@@ -32,11 +29,8 @@ test('Select returns an item onChange', () => {
 
   const wrapper = mountWithTheme(<Select onChange={onChange} data={items}/>)
 
-  wrapper.find('input')
-    .simulate('click')
-
-  // @ToDo select item
-  wrapper.find('input')
+  wrapper.find('li')
+    .first()
     .simulate('click')
 
   const onChangeResult = onChange.mock.results[0].value
@@ -44,7 +38,7 @@ test('Select returns an item onChange', () => {
   expect(onChangeResult).toBe(itemOne)
 })
 
-test('Select inject value component with selected value', () => {
+test('Select injects value component with selected value', () => {
   const items = [
     { key: '1', value: 'one' },
     { key: '2', value: 'two' },
@@ -67,8 +61,7 @@ test('Select uses a default item component', () => {
 
   const wrapper = mountWithTheme(<Select data={items}/>)
 
-  wrapper.find('input')
-    .simulate('click')
+  expect(wrapper.find('li').length).toBe(4)
 })
 
 test('Select uses a custom item component', () => {
@@ -79,10 +72,12 @@ test('Select uses a custom item component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select data={items}/>)
+  const Custom = ({ style }: any) => <div style={style} className='test-id'/>
 
-  wrapper.find('input')
-    .simulate('click')
+  const wrapper = mountWithTheme(<Select data={items}>{Custom}</Select>)
+
+  expect(wrapper.find('.test-id').length).toBe(4)
+  expect(wrapper.find('li').length).toBe(0)
 })
 
 test('Select uses a default value component', () => {
@@ -95,11 +90,11 @@ test('Select uses a default value component', () => {
 
   const wrapper = mountWithTheme(<Select value='1' data={items}/>)
 
-  expect(wrapper.find('input')).toEqual(true)
+  expect(wrapper.find('input')).toBeDefined()
 })
 
 test('Select uses a custom value component', () => {
-  const ValueComp = () => <select/>
+  const ValueComp = <input id='test-id' onChange={jest.fn}/>
 
   const items = [
     { key: '1', value: 'one' },
@@ -110,5 +105,20 @@ test('Select uses a custom value component', () => {
 
   const wrapper = mountWithTheme(<Select value='1' data={items} valueComponent={ValueComp}/>)
 
-  expect(wrapper.find('select')).toEqual(true)
+  expect(wrapper.find('#test-id')).toBeDefined()
+})
+
+test('Select inject value component with selected value', () => {
+  const ValueComp = <input id='test-id' onChange={jest.fn}/>
+
+  const items = [
+    { key: '1', value: 'one' },
+    { key: '2', value: 'two' },
+    { key: '3', value: 'three' },
+    { key: '4', value: 'four' }
+  ]
+
+  const wrapper = mountWithTheme(<Select value='1' data={items} valueComponent={ValueComp}/>)
+
+  expect(wrapper.find('#test-id').props().value).toBe('one')
 })

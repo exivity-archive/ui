@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { HtmlHTMLAttributes } from 'react'
 import styled from 'styled-components'
+import { ListChildComponentProps } from 'react-window'
 
 import { fromTheme, matchThemeProp } from '../utils/styled'
 
@@ -29,7 +30,18 @@ const StyledInnerItem = styled.div`
 
 export const focusElement = (event: any) => event.currentTarget.focus()
 
-export const ListItem: React.FC = ({ children, ...rest }: any) => (
+export const CenterText = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+`
+
+interface ListItemProps extends HtmlHTMLAttributes<HTMLLIElement> {
+  style?: React.CSSProperties
+  tabIndex?: number
+}
+
+export const ListItem: React.FC<ListItemProps> = ({ children, ...rest }) => (
   <StyledLi {...rest} onMouseOver={focusElement}>
     <StyledInnerItem>
       {children}

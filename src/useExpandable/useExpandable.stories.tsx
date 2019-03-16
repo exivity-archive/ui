@@ -15,6 +15,7 @@ import { StyledList } from '../Select/Select'
 import { ListItem } from '../ListItem'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
+import { handleKeyDownFocusListItem } from '../Select/helpers'
 
 const getParent = (item: FakeRecord) => item.parentId
 
@@ -26,10 +27,12 @@ const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
-    <StyledList height={800} width={600} itemSize={50} itemData={[data, helpers]} itemCount={data.length}
-      innerElementType='ul'>
-      {ItemSpacer}
-    </StyledList>
+    <div onKeyDown={handleKeyDownFocusListItem}>
+      <StyledList height={800} width={800} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+        innerElementType='ul'>
+        {ItemSpacer}
+      </StyledList>
+    </div>
   )
 }
 
@@ -70,11 +73,11 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           <SpaceBetween>
             {item.value}
             {!item.expanded && item.children &&
-              <Button tiny secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+              <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&
-              <Button tiny secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
             {item.expanded && item.parent &&
-              <Button tiny secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
           </SpaceBetween>
         </ExpandableSpacer>
       </ListItem>

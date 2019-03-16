@@ -2,10 +2,11 @@ import React from 'react'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Row } from '../utils/stories/components'
 import { SelectInput } from '../SelectInput'
+import { LONG_LIST } from './stories/seed'
+import { mockFn } from '../utils/stories/mocks'
 
 import { Select } from './'
 
@@ -16,26 +17,46 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
+const CustomItem: React.FC = ({ data, style, index }: any) => {
+  const { items, setIsOpen, onChange } = data
+  const item = items[index]
+
+  const handleOnClick = () => {
+    setIsOpen(false)
+    onChange(item)
+  }
+
+  return <div style={{ ...style, backgroundColor: 'purple', color: 'white' }} onClick={handleOnClick}>
+    {item.value}
+  </div>
+}
+
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState({ key: '1', value: 'one' }))
-  .add('default', ({ state, storeState }) => <Select value={state.key} onChange={storeState} data={items}/>)
-  .add('custom valueComponent', ({ state, storeState }) => (
+  .add('default', ({ state, storeState }: any) => <Select value={state.key} onChange={storeState} data={items}/>)
+  .add('custom valueComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select valueComponent={<SelectInput primary/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} primary/>}
         value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput secondary/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} secondary/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput success/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} success/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput danger/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} danger/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput primary outlined/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} primary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput secondary outlined/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} secondary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput success outlined/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} success outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput danger outlined/>}
+      <Select valueComponent={<SelectInput onChange={mockFn} danger outlined/>}
               value={state.key} onChange={storeState} data={items}/>
     </Row>
   ))
+  .add('Custom item', ({ state, storeState }: any) => (
+    <Select value={state.key} onChange={storeState} data={items}>
+      {CustomItem}
+    </Select>
+  ))
+  .add('long', ({ state, storeState }: any) => <Select value={state.key} onChange={storeState} data={LONG_LIST}/>)

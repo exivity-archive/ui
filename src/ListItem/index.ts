@@ -1,1 +1,1 @@
-export { ListItem } from './ListItem'
+export { ListItem, CenterText } from './ListItem'

@@ -8,11 +8,15 @@ import { Omit } from '../utils/types'
 
 export type SelectInputProps = Omit<TextInputWithIconProps, 'icon'>
 
+// Little hack as SelectInput doesnt need onChange but derives typings from TextInput
+const mockOnChange = () => ({})
+
 export const SelectInput: React.FC<SelectInputProps & OmitOnChangeHTMLInputAttributes> = ({
   disabled,
+  onChange = mockOnChange,
   ...rest
 }) => (
-  <StyledSelectInput icon={<MdKeyboardArrowDown/>} {...rest} disabled isDisabled={disabled}/>
+  <StyledSelectInput icon={<MdKeyboardArrowDown/>} onChange={onChange} {...rest} disabled isDisabled={disabled}/>
 )
 
 const StyledSelectInput = styled(TextInputWithIcon)<{ isDisabled?: boolean }>`
