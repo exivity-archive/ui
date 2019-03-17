@@ -1,7 +1,7 @@
 import { KeyboardEvent } from 'react'
 import { SelectItem } from './Select'
 
-const NB_OF_ITEMS = 10
+export const NB_OF_ITEMS = 10
 export const ITEM_HEIGHT = 30
 export const MAX_HEIGHT = NB_OF_ITEMS * ITEM_HEIGHT
 
