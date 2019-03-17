@@ -27,10 +27,15 @@ export const handleKeyDownFocusListItem = (event: KeyboardEvent) => {
     event.preventDefault()
   }
 
-  focusSibling(event.which, focused, first, last)
+  handleFocus(event.which, focused, first, last)
 }
 
-const focusSibling = (
+const focusSibling = (sibling: HTMLLIElement | null, fallback: HTMLLIElement | null) => {
+  if (sibling) sibling.focus()
+  if (fallback && !sibling) fallback.focus()
+}
+
+const handleFocus = (
   key: number,
   focused: HTMLLIElement | null,
   first: HTMLLIElement | null,
@@ -41,15 +46,13 @@ const focusSibling = (
     // Down arrow key
     case 40:
       const next = focused && focused.nextSibling as HTMLLIElement | null
-      if (next) next.focus()
-      if (first && !next) first.focus()
+      focusSibling(next, first)
       break
 
     // Up arrow key
     case 38:
       const previous = focused && focused.previousSibling as HTMLLIElement | null
-      if (previous) previous.focus()
-      if (last && !previous) last.focus()
+      focusSibling(previous, last)
       break
 
     // Enter key
