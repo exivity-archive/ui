@@ -8,7 +8,7 @@ import { Dropdown } from '../Dropdown'
 import { DefaultItem } from './DefaultItem'
 import { calculateHeight, getSelectedItem, handleKeyDownFocusListItem, ITEM_HEIGHT } from './helpers'
 
-interface SelectItem {
+export interface SelectItem {
   key: string
   value: string
 }
