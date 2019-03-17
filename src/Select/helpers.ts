@@ -12,6 +12,8 @@ export const calculateHeight = (data: any[]) => {
 
 export const getSelectedItem = (key: string, data: SelectItem[]) => data.find((item) => item.key === key)
 
+const PREVENT_DEFAULT_KEYS = [38, 40, 13]
+
 export const handleKeyDownFocusListItem = (event: KeyboardEvent) => {
   const list = event.currentTarget.querySelector('ul')
   if (!list) return
@@ -21,7 +23,7 @@ export const handleKeyDownFocusListItem = (event: KeyboardEvent) => {
   const focused: HTMLLIElement | null = list.querySelector(':focus')
 
   // Prevent default action on our trigger keys (up/down arrow, enter)
-  if ([38, 40, 13].indexOf(event.which) !== -1) {
+  if (PREVENT_DEFAULT_KEYS.includes(event.which)) {
     event.preventDefault()
   }
 
@@ -29,38 +31,21 @@ export const handleKeyDownFocusListItem = (event: KeyboardEvent) => {
   switch (event.which) {
     // Down arrow key
     case 40:
-      if (focused) {
-        const next = focused.nextSibling as HTMLLIElement | null
-        if (!next) first.focus()
-        if (next) {
-          next.focus()
-        } else {
-          first && first.focus()
-        }
-      } else {
-        first && first.focus()
-      }
+      const next = focused && focused.nextSibling as HTMLLIElement | null
+      if (next) next.focus()
+      if (first && !next) first.focus()
       break
 
     // Up arrow key
     case 38:
-      if (focused) {
-        const previous = focused.previousSibling as HTMLLIElement | null
-        if (previous) {
-          previous.focus()
-        } else {
-          last && last.focus()
-        }
-      } else {
-        last && last.focus()
-      }
+      const previous = focused && focused.previousSibling as HTMLLIElement | null
+      if (previous) previous.focus()
+      if (last && !previous) last.focus()
       break
 
     // Enter key
     case 13:
-      if (focused) {
-        focused.click()
-      }
+      focused && focused.click()
       break
 
     default:
