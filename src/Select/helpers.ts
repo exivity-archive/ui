@@ -27,8 +27,17 @@ export const handleKeyDownFocusListItem = (event: KeyboardEvent) => {
     event.preventDefault()
   }
 
+  focusSibling(event.which, focused, first, last)
+}
+
+const focusSibling = (
+  key: number,
+  focused: HTMLLIElement | null,
+  first: HTMLLIElement | null,
+  last: HTMLLIElement | null
+) => {
   // Perform actions for trigger keys
-  switch (event.which) {
+  switch (key) {
     // Down arrow key
     case 40:
       const next = focused && focused.nextSibling as HTMLLIElement | null
