@@ -40,7 +40,7 @@ export const StyledList = styled(List)`
   }
 `
 
-const injectComponent = (component: React.ReactElement<any>, props: InjectValueAndHandler) => {
+export const injectComponent = (component: React.ReactElement<any>, props: InjectValueAndHandler) => {
   return React.cloneElement(component, {
     ...props,
     ...component.props

@@ -1,7 +1,8 @@
 import React from 'react'
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
-import { Select } from './Select'
+import { Select, injectComponent } from './Select'
+import { SelectInput } from '../SelectInput'
 import { mockFn } from '../utils/stories/mocks'
 
 test('Select renders a list of items', () => {
@@ -123,4 +124,13 @@ test('Select inject value component with selected value', () => {
   const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items} valueComponent={ValueComp}/>)
 
   expect(wrapper.find('#test-id').props().value).toBe('one')
+})
+
+test('injectComponents', () => {
+  const injectedValue = 'injected'
+  const wrapper = mountWithTheme(<SelectInput value='test' onChange={mockFn}/>)
+  const input = wrapper.find('input')
+
+  const injectedComponent = injectComponent(input, { value: injectedValue })
+  expect(injectedComponent.props.value).toBe(injectedValue)
 })
