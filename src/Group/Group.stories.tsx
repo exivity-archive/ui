@@ -4,6 +4,10 @@ import Faker from 'faker'
 import { storiesOf } from '@storybook/react'
 
 import { Group } from '.'
+import { Markdown } from '../Markdown'
+import { ensureString } from '../utils'
+
+import * as useGroupContextDocs from './docs/useGroupContext.md'
 
 storiesOf('molecules|Group', module)
   .add('default', () => (
@@ -53,4 +57,7 @@ storiesOf('molecules|Group', module)
         <Group.Title>Configuration</Group.Title>
       </Group.Header>
     </Group>
+  ))
+  .add('useGroupContext', () => (
+    <Markdown>{ensureString(useGroupContextDocs)}</Markdown>
   ))
