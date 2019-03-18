@@ -3631,7 +3631,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Assumenda ut minus corporis.
+    Et et aut nihil.
   </h1>
 </div>
 `;
@@ -3863,7 +3863,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Quibusdam excepturi ducimus et.
+    Voluptate sed recusandae et.
   </h3>
 </div>
 `;
@@ -3914,7 +3914,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Quaerat ipsam quaerat tempora.
+    Doloremque deleniti et consequuntur.
   </h2>
 </div>
 `;
@@ -3984,7 +3984,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Harum tempore nisi omnis.
+    Autem reiciendis est nesciunt.
   </h3>
 </div>
 `;
@@ -4700,13 +4700,13 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   <p
     className="c1"
   >
-    Doloribus ducimus ullam. Qui ea ut omnis ut velit aut delectus quidem sed. Asperiores perspiciatis distinctio non consequatur dolores praesentium ex rerum accusantium. Nesciunt in maxime sint doloremque ipsam consequatur. Eos aut eligendi deleniti eligendi corrupti amet voluptas. Iste culpa enim doloribus corrupti sed.
+    Ducimus ratione voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non. Quae minus ea rerum architecto. Molestiae dolor laboriosam illo temporibus fugiat.
  
-Tempora voluptatem est placeat. Blanditiis velit inventore aut molestias laudantium non est quibusdam corporis. Corrupti accusantium sed deserunt sunt. Dolorem vel quas placeat temporibus excepturi ut ut eius.
+Laudantium qui vitae ullam. Beatae architecto et saepe. Quisquam provident ducimus dolores in. Sed quia quisquam architecto. Molestias similique voluptatem est ex ut odit saepe temporibus.
  
-Aut quaerat aperiam error impedit magni laudantium quis. Vitae modi quas ut eligendi vitae blanditiis molestiae ea aut. Harum quae et iure optio praesentium voluptas id nisi. Nulla minima molestiae illum dolorem expedita fuga aut qui id. Id sit soluta. Qui praesentium sunt.
+Repellendus maiores temporibus. Voluptatibus sunt nobis quae. Repellendus quasi consectetur provident non qui quod iure voluptatem voluptatem. Ducimus numquam unde omnis nulla est illum. Voluptatem eos voluptatibus sit.
  
-Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+Suscipit natus nihil ea est possimus quia porro maxime. Reiciendis minima esse alias sunt recusandae voluptatem vero tempora qui. Sint non impedit aperiam dolor omnis autem nihil assumenda. Placeat cumque laborum mollitia. Ad optio veritatis alias nihil est. Eveniet est labore non quia.
   </p>
 </div>
 `;
@@ -8462,7 +8462,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
     <p
       className="c1"
     >
-      Et asperiores eaque et est eaque consequuntur quisquam dolorum. Aut est ut odit alias minima hic omnis. Necessitatibus quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet.
+      Eius ex corporis. Aut dolor perspiciatis consectetur quis sed eos quia nostrum et. Hic quia eaque blanditiis laudantium dignissimos quasi.
     </p>
     <textarea
       className="c2"
@@ -8473,12 +8473,12 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Fuga optio et iste doloribus eos quo maxime minus. Voluptates repellat in sunt magnam. Quia corrupti sed necessitatibus vel officiis ratione pariatur. Est illum qui enim veniam. Doloribus ut et provident et ipsam est voluptates quia consequatur."
+      value="Deserunt molestiae animi ut aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis. Ducimus qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores. Itaque et eum voluptas atque et libero."
     />
     <p
       className="c1"
     >
-      Et quae excepturi tempora itaque voluptas doloremque nemo porro atque. Est accusantium qui occaecati nemo voluptas rerum eos rerum natus.
+      Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero.
     </p>
   </div>
 </div>
@@ -9151,7 +9151,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Enim qui sint quo. Cupiditate molestiae neque dolore hic quis inventore recusandae rerum itaque.
+      Eos aut aut qui dicta eos molestiae odio officia aliquam. Et et voluptatum provident dolores quo non maxime eveniet.
     </p>
   </div>
 </div>
@@ -9378,7 +9378,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
     <p
       className="c1"
     >
-      sint est ut qui
+      fuga nihil quo dolor
     </p>
     <input
       className="c2"
@@ -9389,12 +9389,12 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
         }
       }
       type="text"
-      value="aut et dolores nostrum"
+      value="consequatur dolorum doloribus iste"
     />
     <p
       className="c1"
     >
-      suscipit aut saepe in
+      beatae veritatis quia odio
     </p>
   </div>
 </div>
@@ -14032,6 +14032,974 @@ and more recently with desktop publishing software like Aldus PageMaker includin
 </div>
 `;
 
+exports[`Storyshots molecules|Group default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c5 {
+  font-size: 1.5em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c4 {
+  width: 100%;
+  height: 0;
+  margin: 20px 20px;
+}
+
+.c3 {
+  font-size: 28px;
+  color: #999;
+  margin: 0;
+}
+
+.c6 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  width: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1 c2"
+    type="header"
+  >
+    <span
+      className="c3"
+    >
+      Configuration
+    </span>
+    <hr
+      className="c4"
+    />
+    <span
+      className="c5 c6"
+      data-test="group-collapser"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+        />
+      </svg>
+    </span>
+  </h1>
+  <div>
+    Minus corporis quaerat ipsam quaerat tempora harum tempore nisi omnis. Excepturi ducimus et dolor quae doloribus ducimus ullam ut. Ea ut omnis ut. Aut delectus quidem sed asperiores asperiores. Distinctio non consequatur dolores praesentium ex rerum. Provident nesciunt in.
+ 
+Doloremque ipsam consequatur est eos aut eligendi deleniti eligendi corrupti. Voluptas dignissimos iste culpa. Doloribus corrupti sed ad dolore. Voluptatem est placeat et. Velit inventore aut molestias laudantium non.
+ 
+Corporis ullam corrupti accusantium sed deserunt sunt nulla dolorem. Quas placeat temporibus excepturi ut ut. A id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut.
+ 
+Blanditiis molestiae ea. Illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima. Illum dolorem expedita fuga aut qui. Beatae id sit soluta et qui praesentium sunt.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Group x-inverted 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c3 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c3 {
+  font-size: 1.5em;
+}
+
+.c19 .c3 {
+  font-size: 1.5em;
+}
+
+.c20 .c3 {
+  font-size: 1.5em;
+}
+
+.c21 .c3 {
+  font-size: 1.5em;
+}
+
+.c22 .c3 {
+  font-size: 1.5em;
+}
+
+.c23 .c3 {
+  font-size: 1.5em;
+}
+
+.c24 .c3 {
+  font-size: 1.5em;
+}
+
+.c25 .c3 {
+  font-size: 1.5em;
+}
+
+.c26 .c3 {
+  font-size: 1.5em;
+}
+
+.c27 .c3 {
+  font-size: 1.5em;
+}
+
+.c28 .c3 {
+  font-size: 1.5em;
+}
+
+.c29 .c3 {
+  font-size: 1.5em;
+}
+
+.c30 .c3 {
+  font-size: 1.5em;
+}
+
+.c31 .c3 {
+  font-size: 1.5em;
+}
+
+.c5 {
+  width: 100%;
+  height: 0;
+  margin: 20px 20px;
+}
+
+.c6 {
+  font-size: 28px;
+  color: #999;
+  margin: 0;
+}
+
+.c4 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  width: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+<div
+  className="c0"
+>
+  <h1
+    className="c1 c2"
+    type="header"
+  >
+    <span
+      className="c3 c4"
+      data-test="group-collapser"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+        />
+      </svg>
+    </span>
+    <hr
+      className="c5"
+    />
+    <span
+      className="c6"
+    >
+      Configuration
+    </span>
+  </h1>
+  <div>
+    Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+ 
+Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
+ 
+Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
+ 
+Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Group xy-inverted 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c3 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c3 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c3 {
+  font-size: 1.5em;
+}
+
+.c19 .c3 {
+  font-size: 1.5em;
+}
+
+.c20 .c3 {
+  font-size: 1.5em;
+}
+
+.c21 .c3 {
+  font-size: 1.5em;
+}
+
+.c22 .c3 {
+  font-size: 1.5em;
+}
+
+.c23 .c3 {
+  font-size: 1.5em;
+}
+
+.c24 .c3 {
+  font-size: 1.5em;
+}
+
+.c25 .c3 {
+  font-size: 1.5em;
+}
+
+.c26 .c3 {
+  font-size: 1.5em;
+}
+
+.c27 .c3 {
+  font-size: 1.5em;
+}
+
+.c28 .c3 {
+  font-size: 1.5em;
+}
+
+.c29 .c3 {
+  font-size: 1.5em;
+}
+
+.c30 .c3 {
+  font-size: 1.5em;
+}
+
+.c31 .c3 {
+  font-size: 1.5em;
+}
+
+.c5 {
+  width: 100%;
+  height: 0;
+  margin: 20px 20px;
+}
+
+.c6 {
+  font-size: 28px;
+  color: #999;
+  margin: 0;
+}
+
+.c4 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  width: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+<div
+  className="c0"
+>
+  <div>
+    Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+ 
+Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+ 
+Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+ 
+Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+  </div>
+  <h1
+    className="c1 c2"
+    type="header"
+  >
+    <span
+      className="c3 c4"
+      data-test="group-collapser"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+        />
+      </svg>
+    </span>
+    <hr
+      className="c5"
+    />
+    <span
+      className="c6"
+    >
+      Configuration
+    </span>
+  </h1>
+</div>
+`;
+
+exports[`Storyshots molecules|Group y-inverted 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c5 {
+  font-size: 1.5em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c4 {
+  width: 100%;
+  height: 0;
+  margin: 20px 20px;
+}
+
+.c3 {
+  font-size: 28px;
+  color: #999;
+  margin: 0;
+}
+
+.c6 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 8px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 16px;
+  width: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+<div
+  className="c0"
+>
+  <div>
+    Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
+ 
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
+ 
+Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+ 
+Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+  </div>
+  <h1
+    className="c1 c2"
+    type="header"
+  >
+    <span
+      className="c3"
+    >
+      Configuration
+    </span>
+    <hr
+      className="c4"
+    />
+    <span
+      className="c5 c6"
+      data-test="group-collapser"
+      onClick={[Function]}
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+        />
+      </svg>
+    </span>
+  </h1>
+</div>
+`;
+
 exports[`Storyshots molecules|Modal default 1`] = `
 .c0 {
   padding: 12px;
@@ -14361,13 +15329,13 @@ input.c2 {
     <p
       className="c3"
     >
-      Vel et rerum tempora consequuntur dicta voluptate tempora ex. Voluptatem quia vero est aut. Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
+      Et vero et quam est nobis. In iure quas. Consectetur saepe delectus itaque exercitationem eius aut. Qui dolores perferendis impedit porro sequi error.
  
-Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+Perferendis molestias eius autem et optio veritatis omnis nostrum. Ratione est et dolor qui quia. Ipsum tenetur voluptate sint et.
  
-Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+Cupiditate aut aspernatur voluptatem ratione voluptatibus. Quidem cupiditate autem veniam vero voluptatem. Blanditiis magnam qui autem qui et consequatur. Laborum sit doloremque optio veritatis. Quaerat consequatur deserunt exercitationem dicta. Eos corrupti architecto at voluptas necessitatibus consequatur.
  
-Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+Qui dolore eveniet iste ducimus natus et voluptatum minima qui. Itaque soluta reprehenderit tempora quae perferendis aliquam. Et itaque exercitationem nisi ut dolor.
     </p>
   </div>
 </div>
@@ -14453,13 +15421,13 @@ input.c2 {
     <p
       className="c3"
     >
-      Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+      Et nisi est ratione. Porro ipsum cumque nihil est placeat aliquam. Eligendi atque tempora. Nihil sed quis neque ex quidem inventore. Harum nesciunt impedit iure. Quas est dolorem ipsum iste voluptatem consequatur.
  
-Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+Officiis omnis sit voluptatibus. Earum molestiae laboriosam dolores eligendi neque. Nisi eum voluptatem nulla nulla iste et tempore. Et est consequatur ratione quo molestias. Exercitationem consectetur eos eos tempore vel harum.
  
-Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+Veritatis rem aut. Voluptatibus hic est facilis alias voluptatem rem rerum ut error. Totam et molestiae et animi veritatis pariatur. Facere quos culpa velit molestiae. Et corrupti doloribus veritatis illo.
  
-Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
+Hic nihil facere odit. Fuga qui quae. Veniam facilis veritatis nam nihil tempora libero vitae vel sunt.
     </p>
   </div>
 </div>

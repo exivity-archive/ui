@@ -1,2 +1,2 @@
 export { Group } from './Group'
-export { useGroupContext } from './useGroupContext'
+export { useGroupContext, GroupContext } from './useGroupContext'
