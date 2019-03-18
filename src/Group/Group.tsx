@@ -1,96 +1,62 @@
-import React, { FC, FunctionComponentElement, ReactNodeArray, ReactNode, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { FC, useState } from 'react'
 import { Heading } from '../Heading'
 import styled from 'styled-components'
 import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { isPrimitive } from '../utils/isPrimitive'
+import { useGroupContext, GroupContextShape, GroupContext } from './useGroupContext'
+import { fromTheme } from '../utils/styled'
 
 const GroupSeparator = styled.hr`
-  height: 2px;
   width: 100%;
+  height: 0;
   margin: 20px 20px;
+`
+
+const GroupTitle = styled.span`
+  font-size: 28px;
+  color: ${fromTheme(theme => theme.colours.gray)};
+  margin: 0;
 `
 
 const GroupIcon = styled(Icon)`
   margin-top: 8px;
 `
 
-interface GroupCollapserProps {
-  collapsed: boolean
-  toggleCollapse: () => void
-}
-
-const CollapserIcon = styled(GroupIcon)`
+const StyledGroupCollapser = styled(GroupIcon)`
   cursor: pointer;
   user-select: none;
+  font-size: 16px;
+  width: 0;
 `
 
-export const GroupCollapser: FC<GroupCollapserProps> = ({ collapsed, toggleCollapse }) => (
-  <CollapserIcon onClick={toggleCollapse}>
-    {collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
-  </CollapserIcon>
-)
+const GroupCollapser: FC = () => {
+  const { toggleCollapse, collapsed } = useGroupContext()
+  return (
+    <StyledGroupCollapser onClick={toggleCollapse} data-test='group-collapser'>
+      {collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
+    </StyledGroupCollapser>
+  )
+}
 
-const StyledGroupHeader = styled.div`
+const StyledGroupHeader = styled(Heading)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
 `
 
-function isFunctionComponentElement (el: any): el is FunctionComponentElement<any> {
-  if (!isPrimitive(el) && el.type && el.type.displayName) return true
-  return false
-}
-
-function isEnrichPropsFunction (obj: any): obj is ((props: { toggleCollapse: () => void, collapsed?: boolean }) => React.ReactNode) {
-  if (typeof obj === 'function') return true
-  else return false
-}
-
-interface GroupHeaderProps {
-  toggleCollapse: () => void
-  children: React.ReactNode | ((props: { toggleCollapse: () => void }) => React.ReactNode)
-}
-
-export const GroupHeader: FC<GroupHeaderProps> = (props) => {
-  let children: ReactNode | ReactNodeArray = React.Children.map(props.children, (child: FunctionComponentElement<any> | React.ReactNode) => {
-    if (isFunctionComponentElement(child) && child.type.displayName === 'GroupCollapser') {
-      return React.cloneElement(child, {
-        ...child.props,
-        ...props,
-        toggleCollapse: props.toggleCollapse
-      })
-    } else {
-      return child
-    }
-  })
-
-  if (isEnrichPropsFunction(props.children)) {
-    children = props.children({
-      toggleCollapse: props.toggleCollapse
-    })
-  }
-
-  return (
-    <div className='ex-group__header'>
-      {children}
-    </div>
-  )
-}
-
-interface GroupContentProps {
-  collapsed: boolean
-}
-
-export const GroupContent: FC<GroupContentProps> = ({ collapsed, children }) => (
-  collapsed ? null : <div>{children}</div>
+const GroupHeader: FC = ({ children }) => (
+  <StyledGroupHeader>{children}</StyledGroupHeader>
 )
+
+const GroupContent: FC = ({ children }) => {
+  const { collapsed } = useGroupContext()
+  return collapsed ? null : <div>{children}</div>
+}
 
 interface GroupSubComponents {
   Header: typeof GroupHeader
-  Title: typeof Heading
+  Title: typeof GroupTitle
   Separator: typeof GroupSeparator
   Icon: typeof GroupIcon
   Content: typeof GroupContent
@@ -103,53 +69,26 @@ interface GroupProps {
   toggleCollapse?: () => void
 }
 
-const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = false, collapsed, toggleCollapse, children }) => {
-
+export const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = false, collapsed, toggleCollapse, children }) => {
   const [uncontrolledCollapsed, setUncontrolledCollapsed] = useState(initialCollapsed)
-  const uncontrolledToggleCollapse = () => setUncontrolledCollapsed(!uncontrolledCollapsed)
 
-  toggleCollapse = collapsed !== undefined ? toggleCollapse : uncontrolledToggleCollapse
-  if (!toggleCollapse) throw new Error('The controlled version of this component should take in a toggleCollapse prop')
-
-  let newChildren = React.Children.map(children, (child: FunctionComponentElement<any> | React.ReactNode) => {
-    if (isFunctionComponentElement(child)) {
-      if (child.type.displayName === 'GroupHeader') {
-        return React.cloneElement(child, {
-          ...child.props,
-          toggleCollapse,
-          collapsed
-        })
-      } else if (child.type.displayName === 'GroupContent') {
-        return React.cloneElement(child, {
-          ...child.props,
-          toggleCollapse,
-          collapsed
-        })
-      } else {
-        return child
-      }
-    }
-  })
-
-  if (isEnrichPropsFunction(children)) {
-    children = children({
-      toggleCollapse,
-      collapsed
-    })
+  if (collapsed !== undefined && !toggleCollapse) {
+    throw new Error('The controlled version of this component should take in a toggleCollapse prop')
+  } else {
+    toggleCollapse = () => setUncontrolledCollapsed(!uncontrolledCollapsed)
   }
 
-  return (
-    <div className='ex-group'>
-      {children}
-    </div>
-  )
+  const groupContext: GroupContextShape = {
+    collapsed: collapsed !== undefined ? collapsed : uncontrolledCollapsed,
+    toggleCollapse
+  }
+
+  return <GroupContext.Provider value={groupContext}>{children}</GroupContext.Provider>
 }
 
 Group.Header = GroupHeader
-Group.Title = Heading
+Group.Title = GroupTitle
 Group.Separator = GroupSeparator
 Group.Icon = GroupIcon
 Group.Content = GroupContent
 Group.Collapser = GroupCollapser
-
-export default Group
