@@ -1,11 +1,11 @@
 import { createContext, useContext } from 'react'
 
 export interface GroupContextShape {
-  collapsed: boolean
-  toggleCollapse: () => void
+  collapsed?: boolean
+  toggleCollapse?: () => void
 }
 
-export const GroupContext = createContext<GroupContextShape>({ collapsed: false, toggleCollapse: () => { return } })
+export const GroupContext = createContext<GroupContextShape | null>(null)
 
 export function useGroupContext () {
   const context = useContext(GroupContext)
