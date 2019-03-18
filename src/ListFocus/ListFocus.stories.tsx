@@ -2,7 +2,7 @@ import React from 'react'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { ListFocus } from './ListFocus'
+import { ListFocus } from '.'
 import { ListItem } from '../ListItem'
 
 const style = {

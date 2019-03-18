@@ -1,6 +1,5 @@
 import React, { HtmlHTMLAttributes } from 'react'
 import styled from 'styled-components'
-import { ListChildComponentProps } from 'react-window'
 
 import { fromTheme, matchThemeProp } from '../utils/styled'
 

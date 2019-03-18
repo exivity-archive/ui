@@ -1,7 +1,8 @@
 import React from 'react'
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
-import { Select, injectComponent } from './Select'
+import { Select } from '.'
+import { injectComponent } from './Select'
 import { SelectInput } from '../SelectInput'
 import { mockFn } from '../utils/stories/mocks'
 
