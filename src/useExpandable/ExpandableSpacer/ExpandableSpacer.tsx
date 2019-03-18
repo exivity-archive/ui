@@ -23,6 +23,7 @@ export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
       display: block;
       width: 20px;
       height: ${distance * 100}%;
+      z-index: -1;
     }`
   }
 `
@@ -35,7 +36,7 @@ const Content = styled.div`
 `
 
 interface ExpandableSpacerProps {
-  button?: React.ReactComponentElement<'button', {}>
+  button?: React.ReactComponentElement<'button', {}> | null
   index: number
   level: number
   distance: number
