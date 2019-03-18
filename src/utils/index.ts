@@ -1,3 +1,4 @@
+import React from 'react'
 import { Omit } from './types'
 
 export type Item<T> = T

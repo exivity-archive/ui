@@ -4,9 +4,11 @@ import { FixedSizeList as List } from 'react-window'
 
 import { SelectInput } from '../SelectInput'
 import { Dropdown } from '../Dropdown'
+import { ListFocus } from '../ListFocus'
 
 import { DefaultItem } from './DefaultItem'
-import { calculateHeight, getSelectedItem, handleKeyDownFocusListItem, ITEM_HEIGHT } from './helpers'
+import { calculateHeight, getSelectedItem, ITEM_HEIGHT } from './helpers'
+import { mockFn } from '../utils/stories/mocks'
 
 export interface SelectItem {
   key: string
@@ -45,10 +47,10 @@ const injectComponent = (component: React.ReactElement<any>, props: InjectValueA
   })
 }
 
-const getTriggerComponent = (valueComponent: React.ReactElement<any>, props: InjectValueAndHandler) => {
+const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: React.ReactElement<any>) => {
   if (valueComponent) return injectComponent(valueComponent, props)
     // Does not need onChange because SelectInput only display data
-  return <SelectInput {...props}/>
+  return <SelectInput onChange={mockFn} {...props}/>
 }
 
 export const Select: React.FC<SelectProps> = ({
@@ -68,13 +70,13 @@ export const Select: React.FC<SelectProps> = ({
     onClick: () => setIsOpen(!isOpen)
   }
 
-  const triggerComponent = getTriggerComponent(valueComponent, valueComponentProps)
+  const triggerComponent = getTriggerComponent(valueComponentProps, valueComponent)
   const height = calculateHeight(data)
 
   const itemData = useMemo(() => ({ items: data, setIsOpen, onChange }), [data, setIsOpen])
 
   return (
-    <div onKeyDown={handleKeyDownFocusListItem}>
+    <ListFocus>
       <Dropdown open={isOpen} triggerComponent={triggerComponent} useTriggerComponentWidth={useTriggerComponentWidth}>
         <StyledList
           height={height}
@@ -86,6 +88,6 @@ export const Select: React.FC<SelectProps> = ({
           {children ? children : DefaultItem}
         </StyledList>
       </Dropdown>
-    </div>
+    </ListFocus>
   )
 }

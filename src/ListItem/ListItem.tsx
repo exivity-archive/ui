@@ -39,12 +39,15 @@ export const CenterText = styled.div`
 interface ListItemProps extends HtmlHTMLAttributes<HTMLLIElement> {
   style?: React.CSSProperties
   tabIndex?: number
+  focusable?: boolean
 }
 
-export const ListItem: React.FC<ListItemProps> = ({ children, ...rest }) => (
-  <StyledLi {...rest} onMouseOver={focusElement}>
+export const ListItem: React.FC<ListItemProps> = ({ children, focusable = true, ...rest }) => (
+  <StyledLi {...rest} onMouseOver={focusElement} tabIndex={focusable ? -1 : undefined}>
     <StyledInnerItem>
       {children}
     </StyledInnerItem>
   </StyledLi>
 )
+
+ListItem.displayName = 'ListItem'

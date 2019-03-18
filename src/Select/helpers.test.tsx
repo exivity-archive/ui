@@ -1,3 +1,5 @@
+import React from 'react'
+import { mount } from 'enzyme'
 import { calculateHeight, getSelectedItem, ITEM_HEIGHT, MAX_HEIGHT, NB_OF_ITEMS } from './helpers'
 
 test(`calculate height should return array length times ${ITEM_HEIGHT}`, () => {

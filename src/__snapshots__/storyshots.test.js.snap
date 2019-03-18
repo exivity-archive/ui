@@ -1,5 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms/ListFocus list focus 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c1:hover,
+.c1:focus {
+  background-color: #eee;
+}
+
+.c2 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    onKeyDown={[Function]}
+  >
+    <ul
+      style={
+        Object {
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      <li
+        className="c1"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c2"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            onHover focus element
+          </div>
+        </div>
+      </li>
+      <li
+        className="c1"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c2"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            Key down
+          </div>
+        </div>
+      </li>
+      <li
+        className="c1"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c2"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            or up
+          </div>
+        </div>
+      </li>
+      <li
+        className="c1"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c2"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            to shift
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
 exports[`Storyshots atoms/ListItem hover focus 1`] = `
 .c0 {
   padding: 12px;
@@ -38,7 +193,7 @@ exports[`Storyshots atoms/ListItem hover focus 1`] = `
   <li
     className="c1"
     onMouseOver={[Function]}
-    tabIndex={0}
+    tabIndex={-1}
   >
     <div
       className="c2"
@@ -13701,7 +13856,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={1}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -13766,7 +13921,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={2}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -13831,7 +13986,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={3}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -13896,7 +14051,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={4}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -13961,7 +14116,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={5}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14026,7 +14181,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={6}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14091,7 +14246,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={7}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14156,7 +14311,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={8}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14221,7 +14376,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={9}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14286,7 +14441,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={10}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14351,7 +14506,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={11}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14416,7 +14571,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={12}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -14481,7 +14636,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={13}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15277,7 +15432,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={1}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15342,7 +15497,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={2}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15413,7 +15568,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={3}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15445,7 +15600,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={4}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15477,7 +15632,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={5}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15548,7 +15703,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={6}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15580,7 +15735,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={7}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15612,7 +15767,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={8}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15677,7 +15832,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={9}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15742,7 +15897,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={10}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15807,7 +15962,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={11}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15872,7 +16027,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={12}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -15937,7 +16092,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
               "width": "100%",
             }
           }
-          tabIndex={13}
+          tabIndex={-1}
         >
           <div
             className="c3"
@@ -17169,7 +17324,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17194,7 +17349,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17219,7 +17374,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17244,7 +17399,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17345,7 +17500,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17370,7 +17525,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17395,7 +17550,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17420,7 +17575,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17521,7 +17676,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17546,7 +17701,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17571,7 +17726,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17596,7 +17751,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17697,7 +17852,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17722,7 +17877,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17747,7 +17902,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17772,7 +17927,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17873,7 +18028,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17898,7 +18053,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17923,7 +18078,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -17948,7 +18103,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18049,7 +18204,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18074,7 +18229,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18099,7 +18254,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18124,7 +18279,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18225,7 +18380,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18250,7 +18405,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18275,7 +18430,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18300,7 +18455,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18401,7 +18556,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={1}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18426,7 +18581,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={2}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18451,7 +18606,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={3}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18476,7 +18631,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
                     "width": "100%",
                   }
                 }
-                tabIndex={4}
+                tabIndex={-1}
               >
                 <div
                   className="c12"
@@ -18887,7 +19042,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={1}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -18912,7 +19067,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={2}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -18937,7 +19092,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={3}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -18962,7 +19117,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={4}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19372,7 +19527,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={1}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19397,7 +19552,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={2}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19422,7 +19577,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={3}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19447,7 +19602,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={4}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19472,7 +19627,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={5}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19497,7 +19652,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={6}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19522,7 +19677,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={7}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19547,7 +19702,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={8}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19572,7 +19727,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={9}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19597,7 +19752,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={10}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19622,7 +19777,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={11}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19647,7 +19802,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={12}
+              tabIndex={-1}
             >
               <div
                 className="c11"
@@ -19672,7 +19827,7 @@ exports[`Storyshots molecules/Select long 1`] = `
                   "width": "100%",
                 }
               }
-              tabIndex={13}
+              tabIndex={-1}
             >
               <div
                 className="c11"

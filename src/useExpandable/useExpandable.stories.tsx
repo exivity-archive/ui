@@ -5,17 +5,16 @@ import { MdAdd, MdRemove } from 'react-icons/md'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
 
 import { StyledList } from '../Select/Select'
+import { ListFocus } from '../ListFocus'
 import { ListItem } from '../ListItem'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
-import { handleKeyDownFocusListItem } from '../Select/helpers'
 
 const getParent = (item: FakeRecord) => item.parentId
 
@@ -27,12 +26,12 @@ const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
-    <div onKeyDown={handleKeyDownFocusListItem}>
+    <ListFocus>
       <StyledList height={800} width={800} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
         innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
-    </div>
+    </ListFocus>
   )
 }
 
@@ -64,7 +63,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
 
   return useMemo(() => {
     return (
-      <ListItem style={style} tabIndex={index + 1}>
+      <ListItem style={style}>
         <ExpandableSpacer
           level={item.attributes.level}
           button={button}
