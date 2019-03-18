@@ -1,26 +1,7 @@
-import React, { createContext, FC, useContext, useState } from 'react'
+import React, { FC, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-
-interface TabsContextShape {
-  initialized: boolean
-  activeIndex: number
-  setActiveIndex: (index: number) => void
-}
-
-const TabsContext = createContext<TabsContextShape>({
-  initialized: false,
-  activeIndex: 0,
-  setActiveIndex: x => undefined
-})
-
-const useTabsContext = () => {
-  const context = useContext(TabsContext)
-  if (!context.initialized) {
-    throw new Error('Tabs compound components must be rendered within the Tabs component')
-  }
-  return context
-}
+import { useTabsContext, TabsContext } from './useTabsContext'
 
 interface TabProps {
   isActive?: boolean
