@@ -6,6 +6,13 @@ import { Widget } from '.'
 import { Paragraph } from '../Paragraph'
 
 storiesOf('molecules|Widget', module)
-  .add('default', () => <Widget title='Title'>
-    <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
-  </Widget>)
+  .add('default', () => (
+    <Widget header='Title'>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))
+  .add('no padding', () => (
+    <Widget header='Title' noPadding>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))

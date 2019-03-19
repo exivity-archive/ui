@@ -1,73 +1,41 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 
-import { createMap, Map } from '../utils'
-import { CHILDREN, iterateAllChildren, iterateAllParents, IterateItem, PARENT } from './helpers'
+import {
+  PARENT,
+  CHILDREN,
+  TreeItem,
+  TreeListItem,
+  iterateAllChildren,
+  createExpandOrCollapseTreeHelpers,
+  expandOrCollapseItem,
+  hasNoCollapsedParents,
+  disableEnumerable,
+  Helpers
+} from './helpers'
 
-type ListItem<T> = T & IterateItem
+import { createMap, Map, ListItem } from '../utils'
 
-interface Expanded {
-  expanded: boolean
-  index: number
-}
-
-type ExpandedItem<T> = Expanded & ListItem<T>
-
-interface Expandable {
-  expand (): void
-}
-
-type ExpandableItem<T> = Expandable & ExpandedItem<T>
-
-type ParentKeyAccessor<T> = (mapItem: ListItem<T>) => string | null
-
-type ExpandedCallback<T> = (mapItem: ListItem<T>) => boolean
-
-export function transformAndOrder<T> (
-  map: Map<ListItem<T>>,
-  expanded: boolean | ExpandedCallback<T>
-): ExpandedItem<T>[] {
-  return Object
-    .values(map)
-    .reduce((arr: ExpandedItem<T>[], next: ListItem<T>): ExpandedItem<T>[] => {
-      const expandableItem = next as ExpandedItem<T>
-
-      if (!next[PARENT]) {
-        expandableItem.expanded = typeof expanded === 'function' ? expanded(next) : expanded
-        expandableItem.index = arr.length
-        const addToArray: ExpandedItem<T>[] = [expandableItem]
-
-        iterateAllChildren(next, (child: ExpandedItem<T>) => {
-          child.expanded = typeof expanded === 'function' ? expanded(child) : expanded
-          child.index = arr.length + addToArray.length
-          addToArray.push(child)
-        })
-
-        return arr.concat(addToArray)
-      }
-
-      return arr
-    }, [])
-}
+type ParentKeyAccessor<T> = (mapItem: TreeItem<T>) => string | null
 
 export function createParentChildrenMap<T> (
   data: ListItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>
-): Map<ListItem<T>> {
-  const map = createMap<ListItem<T>>(data)
+): Map<TreeItem<T>> {
+  const map = createMap<T>(data)
 
   data.forEach((item) => {
-    const mapItem = map[item.key]
+    const mapItem = map[item.key] as TreeItem<T>
     const parentKey = parentKeyAccessor(mapItem)
-    const mapItemParent = parentKey && map[parentKey]
+    const parent = parentKey && map[parentKey] as TreeItem<T>
 
-    if (mapItemParent) {
-      mapItem[PARENT] = mapItemParent
-      const parentChildren = mapItemParent[CHILDREN]
+    if (parent) {
+      mapItem[PARENT] = parent
+      const parentChildren = parent[CHILDREN]
 
-      if (parentChildren && !parentChildren.includes(mapItem)) {
+      if (!parentChildren) {
+        parent[CHILDREN] = [mapItem]
+      } else if (!parentChildren.includes(mapItem)) {
         parentChildren.push(mapItem)
-      } else {
-        mapItemParent[CHILDREN] = [mapItem]
       }
     }
   })
@@ -75,60 +43,82 @@ export function createParentChildrenMap<T> (
   return map
 }
 
-export function noCollapsedParents<T> (item: ExpandedItem<T>, list: ExpandedItem<T>[]) {
-  let parentsNotCollapsed = true
+export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T>[] {
+  return Object
+    .values(map)
+    .reduce((list: TreeItem<T>[], item: TreeItem<T>): TreeItem<T>[] => {
 
-  iterateAllParents(item, (parent: ExpandedItem<T>) => {
-    const originalParent = list[parent.index]
-    if (!originalParent.expanded) {
-      parentsNotCollapsed = false
-    }
-  })
+      if (!item[PARENT]) {
+        const addToList: TreeItem<T>[] = [item]
 
-  return parentsNotCollapsed
+        iterateAllChildren(item, (child: TreeItem<T>) => {
+          addToList.push(child)
+        })
+
+        return list.concat(addToList)
+      }
+
+      return list
+    }, [])
 }
 
-export function getVisibleItems<T> (list: ExpandedItem<T>[]): ExpandedItem<T>[] {
+export function createTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
+  const parentChildrenMap: Map<TreeItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
+  return orderChildrenUnderParents<T>(parentChildrenMap)
+}
+
+export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
+  return list.map((item: TreeItem<T>): TreeListItem<T> => ({
+    ...item,
+    expanded: expanded.includes(item.key),
+    expand: () => expandOrCollapseItem(item.key, expanded, setExpanded)
+  }))
+}
+
+export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[]): TreeListItem<T>[] {
   return list.filter((item) => {
-    const noParentsCollapsed = noCollapsedParents(item, list)
-    const noParent = !item[PARENT]
-    return noParent || noParentsCollapsed
+    const hasNoParentsCollapsed = hasNoCollapsedParents<T>(item, expanded)
+    const hasNoParent = !item[PARENT]
+    return hasNoParent || hasNoParentsCollapsed
+  }).map((item) => {
+    if (item[PARENT]) disableEnumerable(item, PARENT)
+    if (item[CHILDREN]) disableEnumerable(item, CHILDREN)
+    disableEnumerable(item, 'expand')
+    disableEnumerable(item, 'expanded')
+
+    return item
   })
 }
 
-export function enrichItems<T> (
-  list: ExpandedItem<T>[],
-  setList: Function
-): ExpandableItem<T>[] {
-  list.forEach((item, index) => {
-    const expandableItem = item as ExpandableItem<T>
-
-    expandableItem.expand = function () {
-      const newList = [...list]
-      const newItem = { ...list[index] }
-      newItem.expanded = !newItem.expanded
-      newList[index] = newItem
-      setList([...newList])
-    }
-  })
-
-  return list as ExpandableItem<T>[]
-}
+type UseExpandableReturn<T> = [
+  TreeListItem<T>[],
+  Helpers<T>
+]
 
 export function useExpandable<T> (
   data: ListItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>,
-  expanded: boolean | ExpandedCallback<T> = false
-) {
-  const initialState: ExpandedItem<T>[] = []
-  const [list, setList] = useState(initialState)
+  expandedKeys?: string[]
+): UseExpandableReturn<T> {
+  const [expanded, setExpanded] = useState<string[]>(expandedKeys ? expandedKeys : [])
+  const [list, setList] = useState<TreeItem<T>[]>(createTree<T>(data, parentKeyAccessor))
 
-  useMemo(() => {
-    const parentChildrenMap: Map<ListItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
-    const expandableData: ExpandedItem<T>[] = transformAndOrder<T>(parentChildrenMap, expanded)
-    setList(expandableData)
+  useEffect(() => {
+    expandedKeys && setExpanded(expandedKeys)
+  }, [expandedKeys])
+
+  useEffect(() => {
+    const treeList: TreeItem<T>[] = createTree<T>(data, parentKeyAccessor)
+    setList(treeList)
   }, [data])
 
-  const enriched = enrichItems<T>(list, setList)
-  return getVisibleItems<T>(enriched)
+  return useMemo(() => {
+    const result = []
+    const enriched: TreeListItem<T>[] = enrichTreeItems<T>(list, expanded, setExpanded)
+
+    result[0] = getVisibleItems<T>(enriched, expanded)
+    result[1] = createExpandOrCollapseTreeHelpers<T>(expanded, setExpanded)
+
+    return result as UseExpandableReturn<T>
+  }, [list, expanded])
 }

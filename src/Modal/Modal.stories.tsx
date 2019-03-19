@@ -1,7 +1,8 @@
 import React from 'react'
+import Faker from 'faker'
+
 import { storiesOf } from '@storybook/react'
 import { Modal } from './'
-import { loremIpsum } from '../utils/loremIpsum'
 import { Button } from '../Button'
 
 storiesOf('molecules|Modal', module)
@@ -12,6 +13,7 @@ storiesOf('molecules|Modal', module)
         buttons={[
           <Button onClick={() => { return }}>Whatsup</Button>,
           <Button danger onClick={() => { return }}>Delete</Button>
-        ]}>{loremIpsum}</Modal>
+        ]
+        }> {Faker.lorem.paragraph(30)}</Modal >
     )
   })

@@ -1,9 +1,8 @@
 import React from 'react'
+import Faker from 'faker'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Dropdown } from '.'
-
-import { loremIpsum } from '../utils/loremIpsum'
 
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState(false))
@@ -16,7 +15,7 @@ storiesOf('molecules|Dropdown', module)
             <div onClick={() => storeState(!state)}>Click me</div>
           }>
           <div style={{ width: 500 }}>
-            {loremIpsum}
+            {Faker.lorem.paragraphs(2)}
           </div>
         </Dropdown>
       </div>
