@@ -10,7 +10,7 @@ export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, st
 
   const handleOnClick = () => {
     setIsOpen(false)
-    onChange(item)
+    onChange && onChange(item)
   }
 
   const newStyle = {
