@@ -4904,9 +4904,9 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   <p
     className="c1"
   >
-    Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+    Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea
  
-Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
+Ducimus in repudiandae dolores facilis consequatur consequatur odit atque. Vero error eum fuga est. Tempore vel culpa dolore ad nihil. Aut tempore unde aliquid dolore vero aut. Dolore placeat magnam nostrum.
  
 Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
  
@@ -9582,6 +9582,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
     <p
       className="c1"
     >
+
       tenetur aut esse assumenda
     </p>
     <input
@@ -19912,7 +19913,40 @@ exports[`Storyshots molecules|Modal default 1`] = `
   padding: 12px;
 }
 
-.c6 {
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c4:first-child {
+  margin-top: 0;
+}
+
+.c4:last-child {
+  margin-bottom: 0;
+}
+
+.c4,
+input.c4 {
+  font-size: 1.5em;
+}
+
+.c4 .c10 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
@@ -19956,20 +19990,20 @@ exports[`Storyshots molecules|Modal default 1`] = `
   --focus-color: 0,168,216;
 }
 
-.c6:hover {
+.c8:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c6:focus {
+.c8:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c6:active,
-.c6.active {
+.c8:active,
+.c8.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c6:after {
+.c8:after {
   display: none;
   content: "";
   position: absolute;
@@ -19981,20 +20015,20 @@ exports[`Storyshots molecules|Modal default 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c6[disabled] {
+.c8[disabled] {
   pointer-events: none;
 }
 
-.c6[disabled]:after {
+.c8[disabled]:after {
   display: block;
 }
 
-.c6 .c8 {
+.c8 .c10 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c7 {
+.c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
@@ -20038,20 +20072,20 @@ exports[`Storyshots molecules|Modal default 1`] = `
   --focus-color: 239,83,80;
 }
 
-.c7:hover {
+.c9:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c7:focus {
+.c9:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:active,
-.c7.active {
+.c9:active,
+.c9.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:after {
+.c9:after {
   display: none;
   content: "";
   position: absolute;
@@ -20063,15 +20097,15 @@ exports[`Storyshots molecules|Modal default 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c7[disabled] {
+.c9[disabled] {
   pointer-events: none;
 }
 
-.c7[disabled]:after {
+.c9[disabled]:after {
   display: block;
 }
 
-.c7 .c8 {
+.c9 .c10 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -20081,6 +20115,7 @@ exports[`Storyshots molecules|Modal default 1`] = `
   height: 100vh;
   background-color: rgba(0,0,0,0.1);
   position: absolute;
+  z-index: 3;
 }
 
 .c2 {
@@ -20092,6 +20127,10 @@ exports[`Storyshots molecules|Modal default 1`] = `
 }
 
 .c3 {
+  padding: 1.25em 1.875em;
+}
+
+.c5 {
   padding: 1.875em;
   max-height: 400px;
   border-top: solid 1px #999;
@@ -20099,7 +20138,7 @@ exports[`Storyshots molecules|Modal default 1`] = `
   overflow-y: auto;
 }
 
-.c4 {
+.c6 {
   padding: 1.25em 2.5em;
   color: #999;
   display: -webkit-box;
@@ -20111,7 +20150,7 @@ exports[`Storyshots molecules|Modal default 1`] = `
   flex-direction: row-reverse;
 }
 
-.c4 .c5 {
+.c6 .c7 {
   margin-left: 20px;
 }
 
@@ -20127,25 +20166,30 @@ exports[`Storyshots molecules|Modal default 1`] = `
       <div
         className="c3"
       >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-It has survived not only five centuries,
-but also the leap into electronic typesetting, remaining essentially unchanged.
-It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        <h1
+          className="c4"
+          type="header"
+        >
+          Disclaimer
+        </h1>
       </div>
       <div
-        className="c4"
+        className="c5"
+      >
+         
+        Eius a id aut quaerat aperiam error. Magni laudantium quis rerum vitae modi quas ut. Vitae blanditiis molestiae ea aut illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima. Illum dolorem expedita fuga aut qui. Beatae id sit soluta et qui praesentium sunt. Ea accusantium a. Maiores qui iure maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea. Et asperiores eaque et est eaque consequuntur quisquam dolorum. Aut est ut odit alias minima hic omnis. Necessitatibus quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet. Fuga optio et iste doloribus eos quo maxime minus. Voluptates repellat in sunt magnam. Quia corrupti sed necessitatibus vel officiis ratione pariatur. Est illum qui enim veniam. Doloribus ut et provident et ipsam est voluptates quia consequatur. Et quae excepturi tempora itaque voluptas doloremque nemo porro atque. Est accusantium qui occaecati nemo voluptas rerum eos rerum natus. Est ut qui aut et dolores nostrum. Aut saepe in sed enim. Sint quo sint cupiditate molestiae neque dolore hic quis. Recusandae rerum itaque. Nulla vel et rerum tempora consequuntur dicta. Tempora ex ipsam voluptatem quia vero. Aut velit tenetur illum dolorem amet odio. Nesciunt labore debitis sunt deleniti ut in inventore. Tempora ab nam eos dolores. Occaecati dolor quia qui sunt non repellat odit illum. Deserunt sequi reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi. Aut autem voluptatem aut id dolorem. Aut esse assumenda adipisci dolorem dolorem harum fuga libero inventore.
+      </div>
+      <div
+        className="c6"
       >
         <button
-          className="c5 c6"
+          className="c7 c8"
           onClick={[Function]}
         >
           Whatsup
         </button>
         <button
-          className="c5 c7"
+          className="c7 c9"
           onClick={[Function]}
         >
           Delete
@@ -20344,6 +20388,7 @@ input.c3 {
     <p
       className="c4"
     >
+
       Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
  
 Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
@@ -20351,6 +20396,7 @@ Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetu
 Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
  
 Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
+
     </p>
   </div>
 </div>

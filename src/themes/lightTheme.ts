@@ -47,8 +47,10 @@ export const lightTheme = {
       large: preciseEm(1.2), // 18px
       huge: preciseEm(1.5) // 24px
     },
-    priority: {
-      one: 1
+    zPriority: {
+      one: 1,
+      two: 2,
+      three: 3
     }
   },
   colours: {
