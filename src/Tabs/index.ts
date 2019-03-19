@@ -1,2 +1,2 @@
 export { Tabs } from './Tabs'
-export { useTabsContext, TabsContext } from './useTabsContext'
+export { useTabsContext } from './helpers'

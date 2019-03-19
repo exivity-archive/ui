@@ -2,7 +2,6 @@ import React from 'react'
 import { mount } from 'enzyme'
 import { Tabs } from './Tabs'
 import { enzymeFind } from 'styled-components/test-utils'
-import { act } from 'react-test-renderer'
 
 test('it throws an error when a TabList component is not rendered within a Tabs component', () => {
   try {

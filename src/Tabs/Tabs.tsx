@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import { useTabsContext, TabsContext } from './useTabsContext'
+import { useTabsContext, TabsContext } from './helpers'
 
 interface TabProps {
   isActive?: boolean
@@ -118,7 +118,7 @@ type TabsComponent = FC<TabsProps> & TabsSubComponents
 
 export const Tabs: TabsComponent = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
-  const contextValue = { activeIndex, setActiveIndex, initialized: true }
+  const contextValue = { activeIndex, setActiveIndex }
 
   return (
     <TabsContext.Provider value={contextValue} >

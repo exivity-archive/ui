@@ -13843,6 +13843,130 @@ exports[`Storyshots molecules|Tabs default 1`] = `
 </div>
 `;
 
+exports[`Storyshots molecules|Tabs flipped 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  display: inline-block;
+  font-weight: bold;
+  color: #A2A2A2;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  color: #6F6F6F;
+  border-bottom: 4px solid #ccc;
+}
+
+.c2:first-child {
+  margin-left: 0;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: bold;
+  color: #A2A2A2;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c3:first-child {
+  margin-left: 0;
+}
+
+.c1 {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+<div
+  className="c0"
+>
+  <div
+    data-test="tab-panel"
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateX(-10px)",
+      }
+    }
+  >
+    <div
+      data-test="tab-panel"
+      style={
+        Object {
+          "opacity": 0,
+          "transform": "translateX(-10px)",
+        }
+      }
+    >
+      Panel one
+    </div>
+  </div>
+  <ol
+    className="c1"
+  >
+    <li
+      className="c2"
+      data-test="tab"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
+    >
+      Tab one
+    </li>
+    <li
+      className="c3"
+      data-test="tab"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
+    >
+      Tab two
+    </li>
+    <li
+      className="c3"
+      data-test="tab"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={-1}
+    >
+      Tab three
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots molecules|Tabs helpers 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`Storyshots molecules|Widget default 1`] = `
 .c0 {
   padding: 12px;
