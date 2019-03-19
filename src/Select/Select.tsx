@@ -8,7 +8,6 @@ import { ListFocus } from '../ListFocus'
 
 import { DefaultItem } from './DefaultItem'
 import { calculateHeight, getSelectedItem, ITEM_HEIGHT } from './helpers'
-import { mockFn } from '../utils/stories/mocks'
 
 export interface SelectItem {
   key: string
@@ -26,7 +25,7 @@ interface SelectProps {
   valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange: (item: SelectItem) => void
+  onChange?: (item: SelectItem) => void
   children?: any
 }
 
@@ -50,7 +49,7 @@ export const injectComponent = (component: React.ReactElement<any>, props: Injec
 const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: React.ReactElement<any>) => {
   if (valueComponent) return injectComponent(valueComponent, props)
     // Does not need onChange because SelectInput only display data
-  return <SelectInput onChange={mockFn} {...props}/>
+  return <SelectInput {...props}/>
 }
 
 export const Select: React.FC<SelectProps> = ({

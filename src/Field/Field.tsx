@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import { Label } from '../Label'
-import { fromTheme, globalBlockSpacing, StyledProps } from '../utils/styled'
+import { fromTheme, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 import { Container } from './Container'
 

@@ -6,7 +6,6 @@ import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Row } from '../utils/stories/components'
 import { SelectInput } from '../SelectInput'
 import { LONG_LIST } from './stories/seed'
-import { mockFn } from '../utils/stories/mocks'
 
 import { Select } from './'
 
@@ -36,21 +35,21 @@ export default storiesOf('molecules/Select', module)
   .add('default', ({ state, storeState }: any) => <Select value={state.key} onChange={storeState} data={items}/>)
   .add('custom valueComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select valueComponent={<SelectInput onChange={mockFn} primary/>}
+      <Select valueComponent={<SelectInput primary/>}
         value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} secondary/>}
+      <Select valueComponent={<SelectInput secondary/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} success/>}
+      <Select valueComponent={<SelectInput success/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} danger/>}
+      <Select valueComponent={<SelectInput danger/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} primary outlined/>}
+      <Select valueComponent={<SelectInput primary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} secondary outlined/>}
+      <Select valueComponent={<SelectInput secondary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} success outlined/>}
+      <Select valueComponent={<SelectInput success outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} danger outlined/>}
+      <Select valueComponent={<SelectInput danger outlined/>}
               value={state.key} onChange={storeState} data={items}/>
     </Row>
   ))

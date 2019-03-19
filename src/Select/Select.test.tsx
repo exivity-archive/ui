@@ -4,7 +4,6 @@ import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { Select } from '.'
 import { injectComponent } from './Select'
 import { SelectInput } from '../SelectInput'
-import { mockFn } from '../utils/stories/mocks'
 
 test('Select renders a list of items', () => {
   const items = [
@@ -14,7 +13,7 @@ test('Select renders a list of items', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items}/>)
 
   expect(wrapper.find('li').length).toBe(4)
 })
@@ -50,7 +49,7 @@ test('Select injects value component with selected value', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items}/>)
 
   expect(wrapper.find('input').props().value).toBe('one')
 })
@@ -63,7 +62,7 @@ test('Select uses a default item component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items}/>)
 
   expect(wrapper.find('li').length).toBe(4)
 })
@@ -78,7 +77,7 @@ test('Select uses a custom item component', () => {
 
   const Custom = ({ style }: any) => <div style={style} className='test-id'/>
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items}>{Custom}</Select>)
+  const wrapper = mountWithTheme(<Select value='1' data={items}>{Custom}</Select>)
 
   expect(wrapper.find('.test-id').length).toBe(4)
   expect(wrapper.find('li').length).toBe(0)
@@ -92,7 +91,7 @@ test('Select uses a default value component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items}/>)
 
   expect(wrapper.find('input')).toBeDefined()
 })
@@ -107,7 +106,7 @@ test('Select uses a custom value component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items} valueComponent={ValueComp}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items} valueComponent={ValueComp}/>)
 
   expect(wrapper.find('#test-id')).toBeDefined()
 })
@@ -122,16 +121,17 @@ test('Select inject value component with selected value', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<Select value='1' onChange={mockFn} data={items} valueComponent={ValueComp}/>)
+  const wrapper = mountWithTheme(<Select value='1' data={items} valueComponent={ValueComp}/>)
 
   expect(wrapper.find('#test-id').props().value).toBe('one')
 })
 
 test('injectComponents', () => {
   const injectedValue = 'injected'
-  const wrapper = mountWithTheme(<SelectInput value='test' onChange={mockFn}/>)
+  const wrapper = mountWithTheme(<SelectInput value='test'/>)
   const input = wrapper.find('input')
 
+  // @ts-ignore
   const injectedComponent = injectComponent(input, { value: injectedValue })
   expect(injectedComponent.props.value).toBe(injectedValue)
 })
