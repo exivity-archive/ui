@@ -8,12 +8,14 @@ import { Checkbox } from '.'
 
 storiesOf('interact|Checkbox', module)
   .addDecorator(withState(true))
-  .add('default', ({ state, storeState }: any) => {
-    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} />
-  })
-  .add('with label', ({ state, storeState }: any) => {
-    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} label='Enable this setting' />
-  })
-  .add('with custom label', ({ state, storeState }: any) => {
-    return <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} label={<Heading>Enable this setting</Heading>} />
-  })
+  .add('default', ({ state, storeState }: any) => (
+    <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} />
+  ))
+  .add('with label', ({ state, storeState }: any) => (
+    <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} label='Enable this setting' />
+  ))
+  .add('with custom label', ({ state, storeState }: any) => (
+    <Checkbox checked={state} onChange={storeAndAction(storeState, 'onChange')} label={
+      <Heading style={{ marginTop: 0 }}>Enable this setting</Heading>
+    } />
+  ))

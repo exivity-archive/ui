@@ -68,7 +68,7 @@ export const StyledCheckbox = styled.input.attrs({
 export const Checkbox = ({ checked, onChange, label = '', id, ...props }: CheckboxProps) => {
   const memoizedId = useMemo(() => id || randomId(), [])
 
-  return <>
+  return <span>
     <StyledCheckbox
       onChange={event => {
         onChange && onChange(event.target.checked, event)
@@ -80,5 +80,5 @@ export const Checkbox = ({ checked, onChange, label = '', id, ...props }: Checkb
     {typeof label === 'string'
       ? <Label htmlFor={memoizedId}>{label}</Label>
       : React.cloneElement(label as ReactElement, { as: 'label', htmlFor: memoizedId })}
-  </>
+  </span>
 }

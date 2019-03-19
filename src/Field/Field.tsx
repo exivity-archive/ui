@@ -32,9 +32,10 @@ export const Field = styled.div<StyledFieldProps>`
     margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
   }
 
-  ${Label}:first-child {
+  > ${Label}:first-child {
     padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.spacing / 2)}em`};
     margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.spacing)}em` : 'unset'};
+    flex-grow: 0;
     flex-basis: ${props => (props.horizontal && props.align)
       ? (props.align === true) ? `${preciseEm(ALIGNED_WIDTH)}em` : props.align
       : 'auto'
@@ -46,6 +47,10 @@ export const Field = styled.div<StyledFieldProps>`
   }
 
   ${props => props.horizontal && css`
+    > * {
+      flex-grow: 1;
+    }
+
     > *:not(${Label}):not(:last-child) {
       margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
     }
