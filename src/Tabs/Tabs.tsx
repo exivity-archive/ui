@@ -77,6 +77,7 @@ const TabList: FC<TabListProps> = ({ children }) => {
 const TabPanel: FC = ({ children }) => {
   const { activeIndex } = useTabsContext()
   const [lastActiveIndex, setLastActiveIndex] = useState(activeIndex)
+  const [lastChildren, setLastChildren] = useState(children)
 
   const animation = useSpring({
     to: { opacity: 1, transform: 'translateX(0px)' },
@@ -84,12 +85,13 @@ const TabPanel: FC = ({ children }) => {
     reset: activeIndex !== lastActiveIndex,
     onStart: () => {
       setLastActiveIndex(activeIndex)
+      setLastChildren(children)
     }
   })
 
   return (
     <animated.div style={animation} data-test='tab-panel'>
-      {children}
+      {lastChildren}
     </animated.div>
   )
 }
