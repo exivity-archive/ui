@@ -161,9 +161,7 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -485,9 +483,7 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -813,9 +809,7 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1141,9 +1135,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1193,9 +1185,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1245,9 +1235,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1297,9 +1285,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1349,9 +1335,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1401,9 +1385,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1453,9 +1435,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1505,9 +1485,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -2283,9 +2261,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -2335,9 +2311,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 0.8125rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -2387,9 +2361,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1.1875rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;

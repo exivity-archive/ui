@@ -170,9 +170,7 @@ exports[`Storyshots molecules/Select Custom item 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -578,9 +576,7 @@ exports[`Storyshots molecules/Select custom noDataText 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -986,9 +982,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1038,9 +1032,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1090,9 +1082,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1142,9 +1132,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1194,9 +1182,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1246,9 +1232,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1298,9 +1282,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1350,9 +1332,7 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -3083,9 +3063,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -3566,9 +3544,7 @@ exports[`Storyshots molecules/Select long 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -4274,9 +4250,7 @@ exports[`Storyshots molecules/Select no data 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;

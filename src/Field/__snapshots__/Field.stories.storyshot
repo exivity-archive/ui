@@ -19,32 +19,40 @@ exports[`Storyshots interact|Field align 1`] = `
   color: #999;
 }
 
-.c5 .c2 {
+.c5 > .c2:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c5 .c2 > .c2 {
+.c5 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
-.c6 .c2 {
+.c6 > .c2:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c6 .c2 > .c2 {
+.c6 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
 .c6 > *:not(.c2):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 .c1 {
@@ -69,20 +77,31 @@ exports[`Storyshots interact|Field align 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c1 .c2 {
+.c1 > .c2:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: 20em;
   -ms-flex-preferred-size: 20em;
   flex-basis: 20em;
 }
 
-.c1 .c2 > .c2 {
+.c1 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
+.c1 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c1 > *:not(.c2):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 .c4 {
@@ -92,9 +111,7 @@ exports[`Storyshots interact|Field align 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -201,15 +218,19 @@ exports[`Storyshots interact|Field default 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c1 .c2 {
+.c1 > .c2:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c1 .c2 > .c2 {
+.c1 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
@@ -220,9 +241,7 @@ exports[`Storyshots interact|Field default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -307,15 +326,19 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   color: #999;
 }
 
-.c5 .c2 {
+.c5 > .c2:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c5 .c2 > .c2 {
+.c5 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
@@ -341,20 +364,31 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c1 .c2 {
+.c1 > .c2:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c1 .c2 > .c2 {
+.c1 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
+.c1 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
 .c1 > *:not(.c2):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 .c4 {
@@ -364,9 +398,7 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -437,51 +469,6 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding: 12px;
 }
 
-.c7 {
-  margin: 20px;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
-
-.c7:after {
-  position: relative;
-  left: 5px;
-  top: -30px;
-  -webkit-transform: rotateZ(45deg);
-  -ms-transform: rotateZ(45deg);
-  transform: rotateZ(45deg);
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  content: ' ';
-  display: block;
-  width: 6px;
-  height: 12px;
-  cursor: pointer;
-  pointer-events: none;
-}
-
-.c8 {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  background: rgba(40,40,40,0.7);
-  color: black;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  position: relative;
-  left: -5px;
-  top: -5px;
-}
-
-.c8:focus {
-  outline: 0;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -494,6 +481,59 @@ exports[`Storyshots interact|Field multiple 1`] = `
   display: block;
   font-size: 0.8125em;
   color: #999;
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.c7 + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+  line-height: 1em;
+  height: 1em;
+}
+
+.c7 + label:empty {
+  padding: 0 0 0 1em;
+}
+
+.c7 + label::before,
+.c7 + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.c7 + label::before {
+  content: " ";
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.c7 + label::after {
+  content: "\\2714";
+  color: #2c3e50;
+  line-height: 1.1em;
+  text-align: center;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c7:checked + label::after {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .c1 {
@@ -530,48 +570,60 @@ exports[`Storyshots interact|Field multiple 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c2 .c3 {
+.c2 > .c3:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c2 .c3 > .c3 {
+.c2 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c9 .c3 {
+.c8 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c9 .c3 > .c3 {
+.c8 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c9 > *:not(.c3):not(:last-child) {
-  margin-bottom: 1.25;
+.c8 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
 }
 
-.c10 .c3 {
+.c9 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-flex-basis: 20em;
   -ms-flex-preferred-size: 20em;
   flex-basis: 20em;
 }
 
-.c10 .c3 > .c3 {
+.c9 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c10 > *:not(.c3):not(:last-child) {
-  margin-bottom: 1.25;
+.c9 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
 }
 
 .c6 {
@@ -596,20 +648,31 @@ exports[`Storyshots interact|Field multiple 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c6 .c3 {
+.c6 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
-  -webkit-flex-basis: 40%;
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
 }
 
-.c6 .c3 > .c3 {
+.c6 > .c3:first-child > .c3 {
   padding-bottom: unset;
+}
+
+.c6 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .c6 > *:not(.c3):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 .c5 {
@@ -619,9 +682,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -774,19 +835,24 @@ exports[`Storyshots interact|Field multiple 1`] = `
     >
       <label
         className="c3 c4"
-      />
-      <div
-        checked={true}
-        className="c7"
       >
+        Privacy consent
+      </label>
+      <span>
         <input
           checked={true}
-          className="c8"
+          className="c7"
+          id="3"
           onChange={[Function]}
-          onClick={[Function]}
           type="checkbox"
         />
-      </div>
+        <label
+          className="c3 c4"
+          htmlFor="3"
+        >
+          I want cookies
+        </label>
+      </span>
     </div>
   </div>
 </div>

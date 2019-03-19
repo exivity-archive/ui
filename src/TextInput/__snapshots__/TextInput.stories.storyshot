@@ -63,14 +63,14 @@ input.c1 {
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -121,9 +121,78 @@ input.c1 {
     <p
       className="c3"
     >
-      Quia porro maxime maiores reiciendis minima esse alias sunt. Voluptatem vero tempora qui fugiat sint non impedit aperiam dolor.
+      Ad optio veritatis alias nihil est. Eveniet est labore non quia.
     </p>
   </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextInput block 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    type="text"
+    value="Block"
+  />
 </div>
 `;
 
@@ -139,9 +208,7 @@ exports[`Storyshots interact|TextInput default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -209,9 +276,7 @@ exports[`Storyshots interact|TextInput disabled 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -289,6 +354,18 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
   margin-bottom: 0;
 }
 
+.c3 {
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -296,9 +373,7 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -341,6 +416,58 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c4:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 <div
   className="c0"
 >
@@ -349,24 +476,109 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
       className="c1"
     >
       quia voluptatem eos voluptatibus
-    </p>
-    <input
-      className="c2"
-      onChange={[Function]}
-      style={
-        Object {
-          "marginBottom": "1em",
+       
+      <input
+        className="c2"
+        onChange={[Function]}
+        style={
+          Object {
+            "width": "2em",
+          }
         }
-      }
-      type="text"
-      value="sit non eos suscipit"
-    />
+        type="text"
+        value="and"
+      />
+       
+      sit non eos suscipit natus nihil ea est
+    </p>
     <p
       className="c1"
     >
-      natus nihil ea est
+      Quia porro maxime maiores reiciendis minima esse alias sunt.
+    </p>
+    <div
+      className="c3"
+    >
+      <input
+        className="c4"
+        onChange={[Function]}
+        type="text"
+        value="recusandae voluptatem vero tempora"
+      />
+    </div>
+    <p
+      className="c1"
+    >
+      Fugiat sint non impedit aperiam dolor omnis autem. Assumenda dolor placeat cumque laborum mollitia.
     </p>
   </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextInput outlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c1:hover {
+  border: 1px solid #999;
+}
+
+.c1:focus {
+  border: 1px solid #222;
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    type="text"
+    value="Outlined"
+  />
 </div>
 `;
 
@@ -388,9 +600,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -440,9 +650,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -492,9 +700,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -544,9 +750,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -596,9 +800,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -648,9 +850,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -700,9 +900,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -752,9 +950,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -804,9 +1000,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -856,9 +1050,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -908,9 +1100,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -960,9 +1150,7 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1099,9 +1287,7 @@ exports[`Storyshots interact|TextInput required 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1175,9 +1361,7 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1227,9 +1411,7 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 0.6875rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1279,9 +1461,7 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 0.8125rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1331,9 +1511,7 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1.1875rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
@@ -1376,6 +1554,56 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 <div
   className="c0"
 >
@@ -1405,6 +1633,12 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
       onChange={[Function]}
       type="text"
       value="Large"
+    />
+    <input
+      className="c6"
+      onChange={[Function]}
+      type="text"
+      value="Huge"
     />
   </div>
 </div>
