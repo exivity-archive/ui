@@ -155,18 +155,18 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   grid-template-columns: repeat(1, fit-content(200px));
 }
 
+.c2 {
+  position: relative;
+}
+
 .c9 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  padding: 20px;
+  z-index: 1;
   min-width: 160px;
   visibility: hidden;
-}
-
-.c2 {
-  position: relative;
 }
 
 .c6 {

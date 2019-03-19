@@ -45,7 +45,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Assumenda ut minus corporis.
+    Molestiae illum dolorem expedita.
   </h1>
 </div>
 `;
@@ -277,7 +277,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Quibusdam excepturi ducimus et.
+    Et qui praesentium sunt.
   </h3>
 </div>
 `;
@@ -328,7 +328,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Quaerat ipsam quaerat tempora.
+    Fuga aut qui id.
   </h2>
 </div>
 `;
@@ -398,7 +398,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Harum tempore nisi omnis.
+    Beatae id sit soluta.
   </h3>
 </div>
 `;

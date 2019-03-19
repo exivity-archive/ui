@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
+      Quia porro maxime maiores reiciendis minima esse alias sunt. Voluptatem vero tempora qui fugiat sint non impedit aperiam dolor.
     </p>
   </div>
 </div>
@@ -348,7 +348,7 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
     <p
       className="c1"
     >
-      voluptatibus doloribus ut et
+      quia voluptatem eos voluptatibus
     </p>
     <input
       className="c2"
@@ -359,12 +359,12 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
         }
       }
       type="text"
-      value="provident et ipsam est"
+      value="sit non eos suscipit"
     />
     <p
       className="c1"
     >
-      voluptates quia consequatur et
+      natus nihil ea est
     </p>
   </div>
 </div>
