@@ -6,9 +6,9 @@ initStoryshots({
   storyKindRegex: /^((?!(docs)).)*$/,
   snapshotSerializers: [styleSheetSerializer],
   test: multiSnapshotWithOptions({}),
-  stories2SnapsConverter: new Stories2SnapsConverter({
+  stories2snapsConverter: new Stories2SnapsConverter({
     snapshotsDirName: '__snapshots__',
     snapshotExtension: '.snap',
-    storiesExtensions: ['.js', '.jsx', '.ts', '.tsx'],
+    storiesExtensions: ['.ts', '.tsx'],
   })
 })
