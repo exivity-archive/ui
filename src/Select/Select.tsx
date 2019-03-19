@@ -27,7 +27,7 @@ interface SelectProps {
   valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange: (item: SelectItem) => void
+  onChange?: (item: SelectItem) => void
   noDataText?: string
   children?: any
 }
