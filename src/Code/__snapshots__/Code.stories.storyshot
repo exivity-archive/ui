@@ -194,3 +194,88 @@ exports[`Storyshots atoms|Code default 1`] = `
   </p>
 </div>
 `;
+
+exports[`Storyshots atoms|Code non-existing 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: 1rem 0 !important;
+}
+
+.c1:first-child {
+  margin-top: 0 !important;
+}
+
+.c1:last-child {
+  margin-bottom: 0 !important;
+}
+
+.c1 {
+  background-color: #eee !important;
+  padding: 1.25em !important;
+}
+
+.c1,
+.c1 code,
+.c1 pre {
+  font-family: 'Fira Mono',monospace !important;
+}
+
+<div
+  className="c0"
+>
+  <pre
+    className="c1"
+    style={
+      Object {
+        "MozHyphens": "none",
+        "MozTabSize": "4",
+        "OTabSize": "4",
+        "WebkitHyphens": "none",
+        "backgroundColor": "#fdf6e3",
+        "borderRadius": "0.3em",
+        "color": "#657b83",
+        "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        "hyphens": "none",
+        "lineHeight": "1.5",
+        "margin": ".5em 0",
+        "msHyphens": "none",
+        "overflow": "auto",
+        "padding": "1em",
+        "tabSize": "4",
+        "textAlign": "left",
+        "whiteSpace": "pre",
+        "wordBreak": "normal",
+        "wordSpacing": "normal",
+        "wordWrap": "normal",
+      }
+    }
+  >
+    <code
+      style={
+        Object {
+          "MozHyphens": "none",
+          "MozTabSize": "4",
+          "OTabSize": "4",
+          "WebkitHyphens": "none",
+          "color": "#657b83",
+          "fontFamily": "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+          "hyphens": "none",
+          "lineHeight": "1.5",
+          "msHyphens": "none",
+          "tabSize": "4",
+          "textAlign": "left",
+          "whiteSpace": "pre",
+          "wordBreak": "normal",
+          "wordSpacing": "normal",
+          "wordWrap": "normal",
+        }
+      }
+    >
+      Unsupported language displayed as text
+    </code>
+  </pre>
+</div>
+`;
