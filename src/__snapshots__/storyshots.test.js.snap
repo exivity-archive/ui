@@ -13734,10 +13734,10 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   padding: 12px;
 }
 
-.c2 {
+.c3 {
   display: inline-block;
   font-weight: bold;
-  color: #A2A2A2;
+  color: #999;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
@@ -13751,14 +13751,14 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   border-bottom: 4px solid #ccc;
 }
 
-.c2:first-child {
+.c3:first-child {
   margin-left: 0;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
   font-weight: bold;
-  color: #A2A2A2;
+  color: #999;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
@@ -13770,64 +13770,62 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   outline: none;
 }
 
-.c3:first-child {
+.c4:first-child {
   margin-left: 0;
 }
 
-.c1 {
+.c2 {
   border-bottom: 1px solid #ccc;
   padding-left: 0;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 <div
   className="c0"
 >
-  <ol
+  <div
     className="c1"
   >
-    <li
+    <ol
       className="c2"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
     >
-      Tab one
-    </li>
-    <li
-      className="c3"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
-    >
-      Tab two
-    </li>
-    <li
-      className="c3"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
-    >
-      Tab three
-    </li>
-  </ol>
-  <div
-    data-test="tab-panel"
-    style={
-      Object {
-        "opacity": 0,
-        "transform": "translateX(-10px)",
-      }
-    }
-  >
+      <li
+        className="c3"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab one
+      </li>
+      <li
+        className="c4"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab two
+      </li>
+      <li
+        className="c4"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab three
+      </li>
+    </ol>
     <div
       data-test="tab-panel"
       style={
@@ -13837,7 +13835,17 @@ exports[`Storyshots molecules|Tabs default 1`] = `
         }
       }
     >
-      Panel one
+      <div
+        data-test="tab-panel"
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateX(-10px)",
+          }
+        }
+      >
+        Panel one
+      </div>
     </div>
   </div>
 </div>
@@ -13848,10 +13856,10 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
   padding: 12px;
 }
 
-.c2 {
+.c3 {
   display: inline-block;
   font-weight: bold;
-  color: #A2A2A2;
+  color: #999;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
@@ -13865,14 +13873,14 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
   border-bottom: 4px solid #ccc;
 }
 
-.c2:first-child {
+.c3:first-child {
   margin-left: 0;
 }
 
-.c3 {
+.c4 {
   display: inline-block;
   font-weight: bold;
-  color: #A2A2A2;
+  color: #999;
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
@@ -13884,26 +13892,24 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
   outline: none;
 }
 
-.c3:first-child {
+.c4:first-child {
   margin-left: 0;
 }
 
-.c1 {
+.c2 {
   border-bottom: 1px solid #ccc;
   padding-left: 0;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 <div
   className="c0"
 >
   <div
-    data-test="tab-panel"
-    style={
-      Object {
-        "opacity": 0,
-        "transform": "translateX(-10px)",
-      }
-    }
+    className="c1"
   >
     <div
       data-test="tab-panel"
@@ -13914,46 +13920,56 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
         }
       }
     >
-      Panel one
+      <div
+        data-test="tab-panel"
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translateX(-10px)",
+          }
+        }
+      >
+        Panel one
+      </div>
     </div>
-  </div>
-  <ol
-    className="c1"
-  >
-    <li
+    <ol
       className="c2"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
     >
-      Tab one
-    </li>
-    <li
-      className="c3"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
-    >
-      Tab two
-    </li>
-    <li
-      className="c3"
-      data-test="tab"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={-1}
-    >
-      Tab three
-    </li>
-  </ol>
+      <li
+        className="c3"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab one
+      </li>
+      <li
+        className="c4"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab two
+      </li>
+      <li
+        className="c4"
+        data-test="tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab three
+      </li>
+    </ol>
+  </div>
 </div>
 `;
 

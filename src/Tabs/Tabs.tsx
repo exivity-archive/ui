@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import { useTabsContext, TabsContext } from './helpers'
+import { fromTheme } from '../utils/styled'
 
 interface TabProps {
   isActive?: boolean
@@ -17,7 +18,7 @@ interface TabProps {
 const Tab = styled.li<TabProps>`
   display: inline-block;
   font-weight: bold;
-  color: #A2A2A2;
+  color: ${fromTheme(theme => theme.colours.gray)};
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
@@ -105,6 +106,10 @@ const TabPanels: FC<TabPanelsProps> = ({ children }) => {
   return <TabPanel data-test='tab-panels'>{children[activeIndex]}</TabPanel>
 }
 
+const StyledTabs = styled.div`
+  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+`
+
 interface TabsSubComponents {
   TabList: typeof TabList,
   Tab: typeof Tab,
@@ -124,7 +129,9 @@ export const Tabs: TabsComponent = ({ children }) => {
 
   return (
     <TabsContext.Provider value={contextValue} >
-      {children}
+      <StyledTabs>
+        {children}
+      </StyledTabs>
     </TabsContext.Provider>
   )
 }
