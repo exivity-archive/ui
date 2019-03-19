@@ -1,19 +1,20 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { IconType } from 'react-icons/src'
+import { InputProps, OmitOnChangeHTMLInputAttributes, StyledInputProps } from '../AbstractInput/AbstractInput'
 
-import { TextInput, TextInputProps, OmitOnChangeHTMLInputAttributes } from '../TextInput/TextInput'
-import { matchThemeProp, InputProps } from '../utils/styled'
+import { TextInput } from '../TextInput'
+import { matchThemeProp } from '../utils/styled'
 import { Icon } from '../Icon'
 
-export interface TextInputWithIconProps extends TextInputProps {
+export interface TextInputWithIconProps extends InputProps {
   icon: React.ReactElement<null, IconType>
   iconPosition?: IconPosition
 }
 
 type IconPosition = 'left' | 'right'
 
-interface InputIconProps extends InputProps {
+interface InputIconProps extends StyledInputProps {
   iconPosition?: IconPosition
   disabled?: boolean
 }

@@ -3,8 +3,8 @@ import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { TextInputWithIcon, TextInputWithIconProps } from '../TextInputWithIcon/TextInputWithIcon'
-import { OmitOnChangeHTMLInputAttributes } from '../TextInput/TextInput'
 import { Omit } from '../utils/types'
+import { OmitOnChangeHTMLInputAttributes } from '../AbstractInput/AbstractInput'
 
 export type SelectInputProps = Omit<TextInputWithIconProps, 'icon'>
 
