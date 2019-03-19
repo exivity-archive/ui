@@ -1,5 +1,5 @@
 export { Block } from './Block'
-export { Button } from './Button'
+export * from './Button'
 export { Checkbox } from './Checkbox'
 export { Code } from './Code'
 export { Dropdown } from './Dropdown'
