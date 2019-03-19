@@ -5,11 +5,14 @@ import { MdAdd, MdRemove } from 'react-icons/md'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+
+import { StyledList } from '../Select/Select'
+import { ListFocus } from '../ListFocus'
+import { ListItem } from '../ListItem'
 import { Button } from '../Button'
 import { Icon } from '../Icon'
 
@@ -23,18 +26,22 @@ const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
-    <FixedSizeList height={800} width={600} itemSize={50} itemData={[data, helpers]} itemCount={data.length}>
-      {ItemSpacer}
-    </FixedSizeList>
+    <ListFocus>
+      <StyledList height={800} width={800} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+        innerElementType='ul'>
+        {ItemSpacer}
+      </StyledList>
+    </ListFocus>
   )
 }
 
 const SpaceBetween = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   margin-left: 20px;
-  width: 600px;
+  width: 100%;
 `
 
 interface ItemProps {
@@ -56,7 +63,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
 
   return useMemo(() => {
     return (
-      <div style={style}>
+      <ListItem style={style}>
         <ExpandableSpacer
           level={item.attributes.level}
           button={button}
@@ -65,14 +72,14 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           <SpaceBetween>
             {item.value}
             {!item.expanded && item.children &&
-              <Button tiny secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+              <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&
-              <Button tiny secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
             {item.expanded && item.parent &&
-              <Button tiny secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
           </SpaceBetween>
         </ExpandableSpacer>
-      </div>
+      </ListItem>
     )
   }, [item])
 }

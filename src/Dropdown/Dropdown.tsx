@@ -1,5 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
+
 import {
   getPosition,
   Vertical,
@@ -8,6 +9,7 @@ import {
   Rects,
   makeCssPosition
 } from './helpers'
+import { fromTheme } from '../utils/styled'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -25,7 +27,7 @@ const Content = styled.div <ContentProps>`
   position: absolute;
   background-color: #f9f9f9;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  padding: 20px;
+  z-index: ${fromTheme(theme => theme.global.zPriority.one)};
 
   min-width: 160px;
   ${props => (props.useTriggerComponentWidth && props.width) && css`

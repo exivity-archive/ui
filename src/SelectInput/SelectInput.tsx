@@ -10,9 +10,10 @@ export type SelectInputProps = Omit<TextInputWithIconProps, 'icon'>
 
 export const SelectInput: React.FC<SelectInputProps & OmitOnChangeHTMLInputAttributes> = ({
   disabled,
+  onChange,
   ...rest
 }) => (
-  <StyledSelectInput icon={<MdKeyboardArrowDown/>} {...rest} disabled isDisabled={disabled}/>
+  <StyledSelectInput icon={<MdKeyboardArrowDown/>} onChange={onChange} {...rest} disabled isDisabled={disabled}/>
 )
 
 const StyledSelectInput = styled(TextInputWithIcon)<{ isDisabled?: boolean }>`
