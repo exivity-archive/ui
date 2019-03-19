@@ -167,6 +167,8 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -489,6 +491,8 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -815,6 +819,8 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -1141,6 +1147,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1191,6 +1199,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -1241,6 +1251,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1291,6 +1303,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1341,6 +1355,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1391,6 +1407,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   background-color: unset;
 }
@@ -1441,6 +1459,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #4caf50;
   background-color: unset;
 }
@@ -1491,6 +1511,8 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #ef5350;
   background-color: unset;
 }
@@ -2267,6 +2289,8 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -2317,6 +2341,8 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -2367,6 +2393,8 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }

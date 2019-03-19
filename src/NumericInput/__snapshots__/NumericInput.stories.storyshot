@@ -69,16 +69,18 @@ input.c1 {
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
-  padding: 0;
-  outline-offset: 9px;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
 }
 
 .c2:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
 .c2:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
+  border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
 .c2::-webkit-input-placeholder {
@@ -143,6 +145,8 @@ exports[`Storyshots interact|NumericInput default 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -211,6 +215,8 @@ exports[`Storyshots interact|NumericInput disabled 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -261,7 +267,7 @@ exports[`Storyshots interact|NumericInput disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots interact|NumericInput inlined 1`] = `
+exports[`Storyshots interact|NumericInput flat 1`] = `
 .c0 {
   padding: 12px;
 }
@@ -308,6 +314,8 @@ exports[`Storyshots interact|NumericInput inlined 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -391,6 +399,8 @@ exports[`Storyshots interact|NumericInput min 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -461,6 +471,8 @@ exports[`Storyshots interact|NumericInput outlined 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -534,6 +546,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -584,6 +598,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -634,6 +650,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -684,6 +702,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -734,6 +754,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -784,6 +806,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -834,6 +858,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   background-color: unset;
 }
@@ -884,6 +910,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #4caf50;
   background-color: unset;
 }
@@ -934,6 +962,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #ef5350;
   background-color: unset;
 }
@@ -984,6 +1014,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -1034,6 +1066,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -1084,6 +1118,8 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -1226,6 +1262,8 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1276,6 +1314,8 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1326,6 +1366,8 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1376,6 +1418,8 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1465,6 +1509,8 @@ exports[`Storyshots interact|NumericInput step 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }

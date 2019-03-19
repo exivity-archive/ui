@@ -22,17 +22,15 @@ storiesOf('interact|TextInput', module)
     required
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('block', () => <TextInput block value='Block' />)
-  .add('outlined', () => <TextInput outlined value='Outlined' />)
-  .add('inlined', () => <div>
-    <Paragraph>
-      {faker.lorem.words(4)}{' '}
-      <TextInput inlined value='and' style={{ width: '2em' }} />{' '}
-      {faker.lorem.words(8)}
-    </Paragraph>
+  .add('inline', () => <Paragraph>
+    {faker.lorem.words(4)}{' '}
+    <TextInput inline value={faker.lorem.words(4)} />{' '}
+    {faker.lorem.words(8)}
+  </Paragraph>)
+  .add('flat', () => <div>
     <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
     <Block>
-      <TextInput inlined block value={faker.lorem.words(4)} />
+      <TextInput flat value={faker.lorem.words(4)} />
     </Block>
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
@@ -45,10 +43,10 @@ storiesOf('interact|TextInput', module)
       <TextInput outlined secondary value='Secondary' />
       <TextInput outlined success value='Success' />
       <TextInput outlined danger value='Danger' />
-      <TextInput inlined primary value='Primary' />
-      <TextInput inlined secondary value='Secondary' />
-      <TextInput inlined success value='Success' />
-      <TextInput inlined danger value='Danger' />
+      <TextInput flat primary value='Primary' />
+      <TextInput flat secondary value='Secondary' />
+      <TextInput flat success value='Success' />
+      <TextInput flat danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
     <TextInput tiny value='Tiny' />
@@ -59,6 +57,6 @@ storiesOf('interact|TextInput', module)
   </Row>)
   .add('disabled', () => <TextInput disabled value='Disabled' />)
   .add('as heading', () => <div>
-    <Heading type='section' value='Editable heading' inlined block as={TextInput} />
+    <Heading type='section' value='Editable heading' flat as={TextInput} />
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)

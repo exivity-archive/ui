@@ -176,6 +176,8 @@ exports[`Storyshots molecules/Select Custom item 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -582,6 +584,8 @@ exports[`Storyshots molecules/Select custom noDataText 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -988,6 +992,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1038,6 +1044,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -1088,6 +1096,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1138,6 +1148,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1188,6 +1200,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1238,6 +1252,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   background-color: unset;
 }
@@ -1288,6 +1304,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #4caf50;
   background-color: unset;
 }
@@ -1338,6 +1356,8 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #ef5350;
   background-color: unset;
 }
@@ -3069,6 +3089,8 @@ exports[`Storyshots molecules/Select default 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -3550,6 +3572,8 @@ exports[`Storyshots molecules/Select long 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -4256,6 +4280,8 @@ exports[`Storyshots molecules/Select no data 1`] = `
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
