@@ -32,7 +32,7 @@ export const Field = styled.div<StyledFieldProps>`
     margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
   }
 
-  ${Label} {
+  ${Label}:first-child {
     padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.spacing / 2)}em`};
     margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.spacing)}em` : 'unset'};
     flex-basis: ${props => (props.horizontal && props.align)
@@ -43,6 +43,13 @@ export const Field = styled.div<StyledFieldProps>`
     > ${Label} {
       padding-bottom: unset;
     }
+  }
+
+  ${Label}:first-child + * {
+    flex-basis: ${props => (props.horizontal && props.align)
+      ? (props.align === true) ? `calc(100% - ${preciseEm(ALIGNED_WIDTH)}em)` : `calc(100% - ${props.align})`
+      : 'auto'
+    };
   }
 
   ${(props: StyledFieldProps) => props.horizontal && css`

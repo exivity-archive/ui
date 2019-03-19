@@ -48,7 +48,6 @@ export const inputStyles = css<StyledInputProps>`
 
   display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
 
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;

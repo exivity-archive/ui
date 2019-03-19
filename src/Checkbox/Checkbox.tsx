@@ -1,9 +1,10 @@
-import React, { ReactNode } from 'react'
+import React, { ReactElement, ReactNode, useMemo } from 'react'
 
 import styled, { css } from 'styled-components'
 import { OmitOnChangeHTMLInputAttributes, OnChange } from '../AbstractInput/AbstractInput'
 import { Label } from '../Label'
-import { StyledProps } from '../utils/styled'
+import { fromTheme, StyledProps } from '../utils/styled'
+import { randomId } from '../utils/randomId'
 
 export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttributes {
   checked?: boolean
@@ -14,86 +15,70 @@ export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttribu
 export const StyledCheckbox = styled.input.attrs({
   type: 'checkbox' as string
 })`
-  // Take it out of document flow
+  // Take it out of document flow and hide it
   position: absolute;
-
-  // Hide it
   opacity: 0;
+  z-index: -1;
 
-  & + ${Label} {
+  & + label {
     position: relative;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  & + label:before {
-    content: '';
-    margin-right: 10px;
     display: inline-block;
-    vertical-align: text-top;
-    width: 20px;
-    height: 20px;
-    background: white;
+    padding: 0 0 0 2em;
+    cursor: pointer;
+    line-height: 1em;
+    height: 1em;
+
+    &:empty {
+      padding: 0 0 0 1em;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 1em;
+      height: 1em;
+      transition: .25s all ease;
+    }
+
+    &::before {
+      content: " ";
+      border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
+      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    }
+
+    &::after {
+      content: "\\2714";
+      color: #2c3e50;
+      line-height: 1.1em;
+      text-align: center;
+      transform: scale(0);
+    }
   }
 
-  // Box hover
-  &:hover + label:before {
-    background: #f35429;
-  }
-
-  // Box focus
-  &:focus + label:before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-  }
-
-  // Box checked
-  &:checked + label:before {
-    background: #f35429;
-  }
-
-  // Disabled state label.
-  &:disabled + label {
-    color: #b8b8b8;
-    cursor: auto;
-  }
-
-  // Disabled box.
-  &:disabled + label:before {
-    box-shadow: none;
-    background: #ddd;
-  }
-
-  // Checkmark. Could be replaced with an image
-  &:checked + label:after {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: 9px;
-    background: white;
-    width: 2px;
-    height: 2px;
-    box-shadow:
-      2px 0 0 white,
-      4px 0 0 white,
-      4px -2px 0 white,
-      4px -4px 0 white,
-      4px -6px 0 white,
-      4px -8px 0 white;
-    transform: rotate(45deg);
+  &:checked {
+    & + label::after {
+      transform: scale(0.9);
+    }
   }
 `
 
-export const Checkbox = ({ checked, onChange, label, ...props }: CheckboxProps) => (
-  <>
+export const Checkbox = ({ checked, onChange, label = '', id, ...props }: CheckboxProps) => {
+  const memoizedId = useMemo(() => id || randomId(), [])
+
+  return <>
     <StyledCheckbox
       onChange={event => {
         onChange && onChange(event.target.checked, event)
       }}
       checked={checked}
+      id={memoizedId}
       {...props}
     />
     {typeof label === 'string'
-      ? <Label>{label}</Label>
-      : label}
+      ? <Label htmlFor={memoizedId}>{label}</Label>
+      : React.cloneElement(label as ReactElement, { as: 'label', htmlFor: memoizedId })}
   </>
-)
+}
