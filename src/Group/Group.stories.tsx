@@ -7,6 +7,7 @@ import { Group } from '.'
 import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
+// @ts-ignore
 import * as useGroupContextDocs from './docs/useGroupContext.md'
 
 storiesOf('molecules|Group', module)
@@ -58,6 +59,6 @@ storiesOf('molecules|Group', module)
       </Group.Header>
     </Group>
   ))
-  .add('useGroupContext', () => (
+  .add('helpers', () => (
     <Markdown>{ensureString(useGroupContextDocs)}</Markdown>
   ))

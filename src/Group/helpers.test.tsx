@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import { useGroupContext } from './useGroupContext'
+import { useGroupContext } from './helpers'
 
 test('should throw an error when called outside of a Group component', () => {
   let message: string

@@ -3631,7 +3631,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Et et aut nihil.
+    Et saepe quis quisquam.
   </h1>
 </div>
 `;
@@ -3863,7 +3863,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Voluptate sed recusandae et.
+    Architecto nulla molestias similique.
   </h3>
 </div>
 `;
@@ -3914,7 +3914,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Doloremque deleniti et consequuntur.
+    Provident ducimus dolores in.
   </h2>
 </div>
 `;
@@ -3984,7 +3984,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Autem reiciendis est nesciunt.
+    Magni sed quia quisquam.
   </h3>
 </div>
 `;
@@ -4700,13 +4700,13 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   <p
     className="c1"
   >
-    Ducimus ratione voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non. Quae minus ea rerum architecto. Molestiae dolor laboriosam illo temporibus fugiat.
+    Ex ut odit saepe temporibus animi odit. Maiores temporibus dolor voluptatibus sunt nobis quae et repellendus. Consectetur provident non. Quod iure voluptatem voluptatem omnis ducimus numquam.
  
-Laudantium qui vitae ullam. Beatae architecto et saepe. Quisquam provident ducimus dolores in. Sed quia quisquam architecto. Molestias similique voluptatem est ex ut odit saepe temporibus.
+Nulla est illum quia voluptatem eos voluptatibus sit non. Suscipit natus nihil ea est possimus quia porro maxime. Reiciendis minima esse alias sunt recusandae voluptatem vero tempora qui. Sint non impedit aperiam dolor omnis autem nihil assumenda. Placeat cumque laborum mollitia.
  
-Repellendus maiores temporibus. Voluptatibus sunt nobis quae. Repellendus quasi consectetur provident non qui quod iure voluptatem voluptatem. Ducimus numquam unde omnis nulla est illum. Voluptatem eos voluptatibus sit.
+Optio veritatis alias nihil est. Eveniet est labore non quia. Eius ex corporis. Aut dolor perspiciatis consectetur quis sed eos quia nostrum et.
  
-Suscipit natus nihil ea est possimus quia porro maxime. Reiciendis minima esse alias sunt recusandae voluptatem vero tempora qui. Sint non impedit aperiam dolor omnis autem nihil assumenda. Placeat cumque laborum mollitia. Ad optio veritatis alias nihil est. Eveniet est labore non quia.
+Quia eaque blanditiis laudantium dignissimos quasi eum deserunt molestiae animi. Aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis. Ducimus qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores.
   </p>
 </div>
 `;
@@ -8462,7 +8462,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
     <p
       className="c1"
     >
-      Eius ex corporis. Aut dolor perspiciatis consectetur quis sed eos quia nostrum et. Hic quia eaque blanditiis laudantium dignissimos quasi.
+      Itaque et eum voluptas atque et libero. Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero.
     </p>
     <textarea
       className="c2"
@@ -8473,12 +8473,12 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Deserunt molestiae animi ut aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis. Ducimus qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores. Itaque et eum voluptas atque et libero."
+      value="Nihil quo dolor consequatur dolorum doloribus iste. Veritatis quia odio. Eos aut aut qui dicta eos molestiae odio officia aliquam. Et et voluptatum provident dolores quo non maxime eveniet. Quos et vero et quam."
     />
     <p
       className="c1"
     >
-      Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero.
+      Nobis et in iure quas sed consectetur. Delectus itaque exercitationem eius aut natus qui dolores perferendis impedit.
     </p>
   </div>
 </div>
@@ -9151,7 +9151,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Eos aut aut qui dicta eos molestiae odio officia aliquam. Et et voluptatum provident dolores quo non maxime eveniet.
+      Nostrum voluptate ratione est et dolor qui quia enim. Tenetur voluptate sint et.
     </p>
   </div>
 </div>
@@ -9378,7 +9378,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
     <p
       className="c1"
     >
-      fuga nihil quo dolor
+      porro sequi error alias
     </p>
     <input
       className="c2"
@@ -9389,12 +9389,12 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
         }
       }
       type="text"
-      value="consequatur dolorum doloribus iste"
+      value="autem perferendis molestias eius"
     />
     <p
       className="c1"
     >
-      beatae veritatis quia odio
+      autem et optio veritatis
     </p>
   </div>
 </div>
@@ -16660,15 +16660,25 @@ input.c2 {
     </span>
   </h1>
   <div>
-    Minus corporis quaerat ipsam quaerat tempora harum tempore nisi omnis. Excepturi ducimus et dolor quae doloribus ducimus ullam ut. Ea ut omnis ut. Aut delectus quidem sed asperiores asperiores. Distinctio non consequatur dolores praesentium ex rerum. Provident nesciunt in.
- 
-Doloremque ipsam consequatur est eos aut eligendi deleniti eligendi corrupti. Voluptas dignissimos iste culpa. Doloribus corrupti sed ad dolore. Voluptatem est placeat et. Velit inventore aut molestias laudantium non.
- 
-Corporis ullam corrupti accusantium sed deserunt sunt nulla dolorem. Quas placeat temporibus excepturi ut ut. A id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut.
+    Corporis ullam corrupti accusantium sed deserunt sunt nulla dolorem. Quas placeat temporibus excepturi ut ut. A id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut.
  
 Blanditiis molestiae ea. Illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima. Illum dolorem expedita fuga aut qui. Beatae id sit soluta et qui praesentium sunt.
+ 
+Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+ 
+Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
   </div>
 </div>
+`;
+
+exports[`Storyshots molecules|Group helpers 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
 `;
 
 exports[`Storyshots molecules|Group x-inverted 1`] = `
@@ -16902,13 +16912,13 @@ input.c2 {
     </span>
   </h1>
   <div>
-    Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
- 
-Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
- 
-Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
+    Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
  
 Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
+ 
+Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
+ 
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
   </div>
 </div>
 `;
@@ -17107,13 +17117,13 @@ input.c2 {
   className="c0"
 >
   <div>
-    Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
- 
-Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
- 
-Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+    Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
  
 Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+ 
+Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
+ 
+Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
   </div>
   <h1
     className="c1 c2"
@@ -17349,13 +17359,13 @@ input.c2 {
   className="c0"
 >
   <div>
-    Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
- 
-Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
- 
-Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+    Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
  
 Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+ 
+Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+ 
+Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
   </div>
   <h1
     className="c1 c2"
@@ -17734,13 +17744,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Et vero et quam est nobis. In iure quas. Consectetur saepe delectus itaque exercitationem eius aut. Qui dolores perferendis impedit porro sequi error.
- 
-Perferendis molestias eius autem et optio veritatis omnis nostrum. Ratione est et dolor qui quia. Ipsum tenetur voluptate sint et.
- 
-Cupiditate aut aspernatur voluptatem ratione voluptatibus. Quidem cupiditate autem veniam vero voluptatem. Blanditiis magnam qui autem qui et consequatur. Laborum sit doloremque optio veritatis. Quaerat consequatur deserunt exercitationem dicta. Eos corrupti architecto at voluptas necessitatibus consequatur.
+      Cupiditate aut aspernatur voluptatem ratione voluptatibus. Quidem cupiditate autem veniam vero voluptatem. Blanditiis magnam qui autem qui et consequatur. Laborum sit doloremque optio veritatis. Quaerat consequatur deserunt exercitationem dicta. Eos corrupti architecto at voluptas necessitatibus consequatur.
  
 Qui dolore eveniet iste ducimus natus et voluptatum minima qui. Itaque soluta reprehenderit tempora quae perferendis aliquam. Et itaque exercitationem nisi ut dolor.
+ 
+Et nisi est ratione. Porro ipsum cumque nihil est placeat aliquam. Eligendi atque tempora. Nihil sed quis neque ex quidem inventore. Harum nesciunt impedit iure. Quas est dolorem ipsum iste voluptatem consequatur.
+ 
+Officiis omnis sit voluptatibus. Earum molestiae laboriosam dolores eligendi neque. Nisi eum voluptatem nulla nulla iste et tempore. Et est consequatur ratione quo molestias. Exercitationem consectetur eos eos tempore vel harum.
     </p>
   </div>
 </div>
@@ -17834,13 +17844,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Et nisi est ratione. Porro ipsum cumque nihil est placeat aliquam. Eligendi atque tempora. Nihil sed quis neque ex quidem inventore. Harum nesciunt impedit iure. Quas est dolorem ipsum iste voluptatem consequatur.
- 
-Officiis omnis sit voluptatibus. Earum molestiae laboriosam dolores eligendi neque. Nisi eum voluptatem nulla nulla iste et tempore. Et est consequatur ratione quo molestias. Exercitationem consectetur eos eos tempore vel harum.
- 
-Veritatis rem aut. Voluptatibus hic est facilis alias voluptatem rem rerum ut error. Totam et molestiae et animi veritatis pariatur. Facere quos culpa velit molestiae. Et corrupti doloribus veritatis illo.
+      Veritatis rem aut. Voluptatibus hic est facilis alias voluptatem rem rerum ut error. Totam et molestiae et animi veritatis pariatur. Facere quos culpa velit molestiae. Et corrupti doloribus veritatis illo.
  
 Hic nihil facere odit. Fuga qui quae. Veniam facilis veritatis nam nihil tempora libero vitae vel sunt.
+ 
+Placeat a laboriosam. Quibusdam voluptas corrupti. Cupiditate et doloremque dicta facilis perferendis aliquid.
+ 
+Aut iusto aut eum. Totam animi reiciendis velit. Id est quidem omnis et.
     </p>
   </div>
 </div>

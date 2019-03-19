@@ -3,7 +3,7 @@ import { Heading } from '../Heading'
 import styled from 'styled-components'
 import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { useGroupContext, GroupContextShape, GroupContext } from './useGroupContext'
+import { useGroupContext, GroupContextShape, GroupContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 
 const GroupSeparator = styled.hr`

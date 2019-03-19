@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, mount } from 'enzyme'
 
 import { Group } from '.'
-import { GroupContext } from './useGroupContext'
+import { GroupContext } from './helpers'
 
 test('When group gets a collapsed prop it requires a toggleCollapse prop', () => {
   let message: string
