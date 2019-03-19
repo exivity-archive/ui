@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 
-import { ThemeProvider } from 'styled-components'
-import { lightTheme } from '../../themes'
+import { ThemeProvider } from '../../ThemeProvider'
 
 export const mountWithTheme = (children: any) => mount(
-  <ThemeProvider theme={lightTheme}>{children}</ThemeProvider>
+  <ThemeProvider>{children}</ThemeProvider>
 )

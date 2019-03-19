@@ -1,6 +1,6 @@
-import faker from 'faker'
 import React from 'react'
-// @ts-ignore
+import faker from 'faker'
+
 import { storiesOf } from '@storybook/react'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
@@ -9,13 +9,18 @@ import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
 
-storiesOf('forms|TextInput', module)
+storiesOf('interact|TextInput', module)
   .addDecorator(withState(''))
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('outlined', () => <TextInput outlined value='Outlined' />)
+  .add('required', ({ state, storeState }: any) => <TextInput
+    placeholder='Type something...'
+    required
+    value={state}
+    onChange={storeAndAction(storeState, 'onChange')} />)
   .add('inlined', () => <div>
     <Paragraph>{faker.lorem.words(4)}</Paragraph>
     <TextInput inlined value={faker.lorem.words(4)} style={{ marginBottom: '1em' }} />

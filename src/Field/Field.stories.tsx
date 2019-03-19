@@ -1,12 +1,11 @@
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Checkbox } from '../Checkbox'
 import { Field } from '.'
 import { TextInput } from '../TextInput'
 import { Label } from '../Label'
 
-storiesOf('forms|Field', module)
+storiesOf('interact|Field', module)
   .add('default', () => <Field>
     <Label htmlFor='username'>Username</Label>
     <TextInput id='username' placeholder='Please type username'/>

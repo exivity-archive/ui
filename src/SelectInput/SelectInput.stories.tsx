@@ -1,5 +1,5 @@
 import React from 'react'
-// @ts-ignore
+
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Dropdown } from '../Dropdown'
@@ -7,10 +7,11 @@ import { Row } from '../utils/stories/components'
 
 import { SelectInput } from './'
 
-export default storiesOf('forms|SelectInput', module)
+storiesOf('interact|SelectInput', module)
   .addDecorator(withState({
     isOpen: false
   }))
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
     <Row columns={1}>
       <Dropdown useTriggerComponentWidth open={state.isOpen} triggerComponent={

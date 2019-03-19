@@ -7,7 +7,7 @@ import { Dropdown } from '../Dropdown'
 import { ListFocus } from '../ListFocus'
 
 import { DefaultItem } from './DefaultItem'
-import { calculateHeight, getSelectedItem, ITEM_HEIGHT } from './helpers'
+import { calculateHeight, getSelectedItem, getNoDataPlaceholder, ITEM_HEIGHT, emptyFn } from './helpers'
 
 export interface SelectItem {
   key: string
@@ -20,12 +20,15 @@ interface InjectValueAndHandler {
 }
 
 interface SelectProps {
-  value: string
+  name?: string
+  value?: string
+  placeholder?: string
   data: SelectItem[]
   valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange?: (item: SelectItem) => void
+  onChange: (item: SelectItem) => void
+  noDataText?: string
   children?: any
 }
 
@@ -53,26 +56,38 @@ const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: Reac
 }
 
 export const Select: React.FC<SelectProps> = ({
+  name,
   value,
+  placeholder,
   data,
   onChange,
   valueComponent,
   useTriggerComponentWidth = true,
   innerElementType = 'ul',
+  noDataText,
   children
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const selectedItem = getSelectedItem(value, data)
+  const componentData = getNoDataPlaceholder(data, noDataText)
+  const selectedItem = getSelectedItem(value, componentData)
 
   const valueComponentProps = {
+    name,
+    placeholder,
     value: selectedItem ? selectedItem.value : '',
     onClick: () => setIsOpen(!isOpen)
   }
 
   const triggerComponent = getTriggerComponent(valueComponentProps, valueComponent)
-  const height = calculateHeight(data)
+  const height = calculateHeight(componentData)
 
-  const itemData = useMemo(() => ({ items: data, setIsOpen, onChange }), [data, setIsOpen])
+  const itemData = useMemo(() => {
+    if (!data.length) {
+      return { items: componentData, setIsOpen: emptyFn, onChange: emptyFn }
+    }
+
+    return { items: componentData, setIsOpen, onChange }
+  }, [data, setIsOpen])
 
   return (
     <ListFocus>
@@ -80,7 +95,7 @@ export const Select: React.FC<SelectProps> = ({
         <StyledList
           height={height}
           itemData={itemData}
-          itemCount={data.length}
+          itemCount={componentData.length}
           itemSize={ITEM_HEIGHT}
           innerElementType={innerElementType}
           width='100%'>

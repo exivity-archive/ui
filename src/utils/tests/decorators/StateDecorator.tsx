@@ -1,7 +1,7 @@
 import React from 'react'
 import { StateContainer } from '../StateContainer'
 
-export const withState = (initialState = {}) => (storyFunc: any, context: any) => (
+export const withState = (initialState: any = null) => (storyFunc: any, context: any) => (
   <StateContainer initialState={initialState}>
     {(state: any, storeState: any) => {
       context.state = state

@@ -1,9 +1,9 @@
 import React, { HtmlHTMLAttributes } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { fromTheme, matchThemeProp } from '../utils/styled'
 
-const StyledLi = styled.li`
+const StyledLi = styled.li<ListItemProps>`
   display: flex;
   align-items: center;
 
@@ -13,12 +13,18 @@ const StyledLi = styled.li`
     modifier: (em: number) => em / 16 * 14
   })}em;
 
-  &:hover, :focus {
-    background-color: ${fromTheme(theme => theme.colours.lightGray)};
-  }
-
   outline: none;
-  cursor: pointer;
+
+  ${props => props.noDataPlaceholder
+    ? css`
+      color: ${fromTheme(theme => theme.colours.gray)};
+    `
+    : css`
+      &:hover, :focus {
+       background-color: ${fromTheme(theme => theme.colours.lightGray)};
+      }
+      cursor: pointer;
+    `}
 `
 
 const StyledInnerItem = styled.div`
@@ -39,6 +45,7 @@ interface ListItemProps extends HtmlHTMLAttributes<HTMLLIElement> {
   style?: React.CSSProperties
   tabIndex?: number
   focusable?: boolean
+  noDataPlaceholder?: boolean
 }
 
 export const ListItem: React.FC<ListItemProps> = ({ children, focusable = true, ...rest }) => (
