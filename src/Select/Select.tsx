@@ -7,8 +7,7 @@ import { Dropdown } from '../Dropdown'
 import { ListFocus } from '../ListFocus'
 
 import { DefaultItem } from './DefaultItem'
-import { calculateHeight, getSelectedItem, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
-import { mockFn } from '../utils/stories/mocks'
+import { calculateHeight, getSelectedItem, getNoDataPlaceholder, ITEM_HEIGHT, emptyFn } from './helpers'
 
 export interface SelectItem {
   key: string
@@ -28,7 +27,7 @@ interface SelectProps {
   valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange: (item: SelectItem) => void
+  onChange?: (item: SelectItem) => void
   noDataText?: string
   children?: any
 }
@@ -53,7 +52,7 @@ export const injectComponent = (component: React.ReactElement<any>, props: Injec
 const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: React.ReactElement<any>) => {
   if (valueComponent) return injectComponent(valueComponent, props)
     // Does not need onChange because SelectInput only display data
-  return <SelectInput onChange={mockFn} {...props}/>
+  return <SelectInput {...props}/>
 }
 
 export const Select: React.FC<SelectProps> = ({
@@ -84,7 +83,7 @@ export const Select: React.FC<SelectProps> = ({
 
   const itemData = useMemo(() => {
     if (!data.length) {
-      return { items: componentData, setIsOpen: mockFn, onChange: mockFn }
+      return { items: componentData, setIsOpen: emptyFn, onChange: emptyFn }
     }
 
     return { items: componentData, setIsOpen, onChange }

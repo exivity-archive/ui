@@ -24,15 +24,17 @@ export interface StyledInputProps extends StyledProps {
   tiny?: boolean
   small?: boolean
   large?: boolean
+  huge?: boolean
 
   // Variants
   outlined?: boolean
   inlined?: boolean
+  block?: boolean
 }
 
 export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttributes {
   value?: string | number
-  onChange: OnChange
+  onChange?: OnChange
   required?: boolean
 }
 
@@ -46,7 +48,6 @@ export const inputStyles = css<StyledInputProps>`
 
   font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
-  display: block;
   box-sizing: border-box;
   padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
 
@@ -55,6 +56,11 @@ export const inputStyles = css<StyledInputProps>`
   border: 0;
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+
+  ${props => (props.block) && css`
+    display: block;
+    width: 100%;
+  `}
 
   ${props => (!props.outlined && !props.inlined) && css`
     border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
@@ -117,7 +123,7 @@ export const AbstractInput =
       type={type || 'text'}
       danger={!valid}
       onChange={(event) => {
-        onChange(event.target.value, event)
+        onChange && onChange(event.target.value, event)
         event.target.checkValidity && setValid(event.target.checkValidity())
       }}
       {...rest}

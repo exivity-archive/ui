@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
 import { Label } from '../Label'
-import { fromTheme, globalBlockSpacing, StyledProps } from '../utils/styled'
+import { fromTheme, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 import { Container } from './Container'
 
@@ -45,16 +45,9 @@ export const Field = styled.div<StyledFieldProps>`
     }
   }
 
-  ${Label}:first-child + * {
-    flex-basis: ${props => (props.horizontal && props.align)
-      ? (props.align === true) ? `calc(100% - ${preciseEm(ALIGNED_WIDTH)}em)` : `calc(100% - ${props.align})`
-      : 'auto'
-    };
-  }
-
-  ${(props: StyledFieldProps) => props.horizontal && css`
+  ${props => props.horizontal && css`
     > *:not(${Label}):not(:last-child) {
-      margin-bottom: ${fromTheme(theme => theme.global.spacing)};
+      margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
     }
   `}
 ` as FieldType
