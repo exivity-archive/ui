@@ -3835,7 +3835,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Molestiae illum dolorem expedita.
+    Voluptatem vero tempora qui.
   </h1>
 </div>
 `;
@@ -4067,7 +4067,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Et qui praesentium sunt.
+    Nihil assumenda dolor placeat.
   </h3>
 </div>
 `;
@@ -4118,7 +4118,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Fuga aut qui id.
+    Fugiat sint non impedit.
   </h2>
 </div>
 `;
@@ -4188,7 +4188,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Beatae id sit soluta.
+    Aperiam dolor omnis autem.
   </h3>
 </div>
 `;
@@ -4904,13 +4904,13 @@ exports[`Storyshots atoms|Paragraph default 1`] = `
   <p
     className="c1"
   >
-    Asperiores maiores dolorem eius laudantium. Quidem cupiditate eaque facere aliquam. Accusamus consequuntur eos enim sit quas. Tempore accusamus assumenda ex magni qui voluptatem eos.
+    Dolor omnis quia et nisi est ratione. Porro ipsum cumque nihil est placeat aliquam. Eligendi atque tempora. Nihil sed quis neque ex quidem inventore.
  
-Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+Nesciunt impedit iure laborum quas est dolorem ipsum. Voluptatem consequatur sint dolores officiis omnis sit. Laudantium earum molestiae laboriosam dolores eligendi neque distinctio nisi eum.
  
-Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+Nulla iste et tempore molestiae et est consequatur ratione. Molestias molestias exercitationem consectetur eos eos tempore vel. Quisquam consequuntur veritatis rem aut maiores voluptatibus hic. Facilis alias voluptatem rem rerum ut error.
  
-Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+Et molestiae et animi veritatis pariatur. Facere quos culpa velit molestiae. Et corrupti doloribus veritatis illo. Velit hic nihil. Odit aut fuga qui quae et veniam facilis veritatis.
   </p>
 </div>
 `;
@@ -8666,7 +8666,7 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
     <p
       className="c1"
     >
-      Et aut nihil doloremque deleniti et consequuntur. Reiciendis est nesciunt voluptate sed recusandae. Provident ea ducimus ratione voluptas qui.
+      Nihil tempora libero vitae vel sunt amet alias. A laboriosam et quibusdam voluptas corrupti perspiciatis cupiditate. Doloremque dicta facilis perferendis aliquid et.
     </p>
     <textarea
       className="c2"
@@ -8677,12 +8677,12 @@ exports[`Storyshots forms|TextArea inlined 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Amet quae facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non. Quae minus ea rerum architecto. Molestiae dolor laboriosam illo temporibus fugiat. Consectetur laudantium qui vitae ullam velit beatae architecto."
+      value="Aut iusto aut eum. Totam animi reiciendis velit. Id est quidem omnis et. Tempore ex tempora dolore iusto voluptates excepturi ipsa ut hic. Iste et autem."
     />
     <p
       className="c1"
     >
-      Saepe quis quisquam provident ducimus dolores in magni sed quia. Architecto nulla molestias similique voluptatem est ex ut.
+      Asperiores rerum inventore voluptas sint et doloremque vel sunt. Dolor magnam harum.
     </p>
   </div>
 </div>
@@ -9355,7 +9355,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Et repellendus quasi. Provident non qui quod.
+      Non modi voluptatem consequatur consequatur quod. Praesentium est quasi voluptatum.
     </p>
   </div>
 </div>
@@ -9582,7 +9582,7 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
     <p
       className="c1"
     >
-      odit saepe temporibus animi
+      sit voluptatibus aut officiis
     </p>
     <input
       className="c2"
@@ -9593,12 +9593,12 @@ exports[`Storyshots forms|TextInput inlined 1`] = `
         }
       }
       type="text"
-      value="odit repellendus maiores temporibus"
+      value="facilis qui dolorem impedit"
     />
     <p
       className="c1"
     >
-      dolor voluptatibus sunt nobis
+      ex omnis numquam dolores
     </p>
   </div>
 </div>
@@ -19847,6 +19847,307 @@ exports[`Storyshots molecules/Select long 1`] = `
 </div>
 `;
 
+exports[`Storyshots molecules|Box collapsible 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  height: 60px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.25em 0 1.25em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c4 {
+  padding: 0 1.25;
+}
+
+.c1 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  border: 2px solid #F4F4F4;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Hi
+      <span
+        className="c3"
+        data-test="box-collapser"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      className="c4"
+    >
+      Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+ 
+Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+ 
+Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+ 
+Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Box default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  height: 60px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.25em 0 1.25em;
+}
+
+.c3 {
+  padding: 0 1.25;
+}
+
+.c1 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  border: 2px solid #F4F4F4;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Hi
+    </div>
+    <div
+      className="c3"
+    >
+      Culpa enim doloribus corrupti sed ad dolore. Voluptatem est placeat et. Velit inventore aut molestias laudantium non. Quibusdam corporis ullam corrupti accusantium sed deserunt sunt.
+ 
+Vel quas placeat temporibus. Ut ut eius a id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut. Vitae blanditiis molestiae ea aut illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima.
+ 
+Dolorem expedita fuga aut qui id beatae id sit. Et qui praesentium sunt fugit ea accusantium a. Maiores qui iure maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
+ 
+Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Box flipped 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  height: 60px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.25em 0 1.25em;
+}
+
+.c2 {
+  padding: 0 1.25;
+}
+
+.c1 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  border: 2px solid #F4F4F4;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
+ 
+Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
+ 
+Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
+ 
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
+    </div>
+    <div
+      className="c3"
+    >
+      Hi
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Box flipped collapsible 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  height: 60px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1.25em 0 1.25em;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  border: 2px solid #F4F4F4;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  height: 62px;
+  border-radius: 3px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      Hi
+      <span
+        className="c3"
+        data-test="box-collapser"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots molecules|Dropdown default 1`] = `
 .c0 {
   padding: 12px;
@@ -19897,9 +20198,9 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
             }
           }
         >
-          Culpa enim doloribus corrupti sed ad dolore. Voluptatem est placeat et. Velit inventore aut molestias laudantium non. Quibusdam corporis ullam corrupti accusantium sed deserunt sunt.
+          Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
  
-Vel quas placeat temporibus. Ut ut eius a id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut. Vitae blanditiis molestiae ea aut illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima.
+Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
         </div>
       </div>
     </div>
@@ -20176,7 +20477,7 @@ input.c4 {
         className="c5"
       >
          
-        Accusantium a facere maiores qui. Maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea. Et asperiores eaque et est eaque consequuntur quisquam dolorum. Aut est ut odit alias minima hic omnis. Necessitatibus quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet. Fuga optio et iste doloribus eos quo maxime minus. Voluptates repellat in sunt magnam. Quia corrupti sed necessitatibus vel officiis ratione pariatur. Est illum qui enim veniam. Doloribus ut et provident et ipsam est voluptates quia consequatur. Et quae excepturi tempora itaque voluptas doloremque nemo porro atque. Est accusantium qui occaecati nemo voluptas rerum eos rerum natus. Est ut qui aut et dolores nostrum. Aut saepe in sed enim. Sint quo sint cupiditate molestiae neque dolore hic quis. Recusandae rerum itaque. Nulla vel et rerum tempora consequuntur dicta. Tempora ex ipsam voluptatem quia vero. Aut velit tenetur illum dolorem amet odio. Nesciunt labore debitis sunt deleniti ut in inventore. Tempora ab nam eos dolores. Occaecati dolor quia qui sunt non repellat odit illum. Deserunt sequi reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi. Aut autem voluptatem aut id dolorem. Aut esse assumenda adipisci dolorem dolorem harum fuga libero inventore. Voluptas perferendis voluptatibus aliquid est quos. Qui qui totam odio. Laborum eos voluptatem aut aut possimus.
+        Mollitia ea ad optio veritatis alias nihil. Ea eveniet est labore non quia explicabo eius ex. Voluptates aut dolor perspiciatis consectetur. Sed eos quia nostrum et. Hic quia eaque blanditiis laudantium dignissimos quasi. Deserunt molestiae animi ut aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis. Ducimus qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores. Itaque et eum voluptas atque et libero. Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero. Nihil quo dolor consequatur dolorum doloribus iste. Veritatis quia odio. Eos aut aut qui dicta eos molestiae odio officia aliquam. Et et voluptatum provident dolores quo non maxime eveniet. Quos et vero et quam. Nobis et in iure quas sed consectetur. Delectus itaque exercitationem eius aut natus qui dolores perferendis impedit. Sequi error alias autem perferendis molestias eius autem. Optio veritatis omnis nostrum voluptate ratione est et dolor qui. Enim ipsum tenetur voluptate sint. Pariatur voluptate cupiditate aut. Voluptatem ratione voluptatibus. Quidem cupiditate autem veniam vero voluptatem. Blanditiis magnam qui autem qui et consequatur. Laborum sit doloremque optio veritatis. Quaerat consequatur deserunt exercitationem dicta. Eos corrupti architecto at voluptas necessitatibus consequatur. Recusandae qui dolore eveniet. Ducimus natus et voluptatum minima qui est. Soluta reprehenderit tempora quae perferendis aliquam esse et itaque exercitationem.
       </div>
       <div
         className="c6"
@@ -20287,13 +20588,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
+      Est rerum cumque non accusamus voluptate. Ut ullam quasi. Quam eos accusantium eveniet nostrum in quas odio. Iure aut tempora tempore ratione et alias omnis voluptas qui.
  
-Tempora qui fugiat sint non impedit aperiam dolor omnis. Nihil assumenda dolor placeat cumque. Mollitia ea ad optio veritatis alias nihil. Ea eveniet est labore non quia explicabo eius ex.
+Dolorem in amet. Omnis consectetur consectetur assumenda laboriosam nostrum est eius est. Iure in enim. Rerum distinctio corporis quasi qui voluptatem. Sit nisi fugit esse et omnis. Eos voluptatem sint iste nostrum asperiores.
  
-Aut dolor perspiciatis consectetur quis sed eos quia nostrum et. Hic quia eaque blanditiis laudantium dignissimos quasi. Deserunt molestiae animi ut aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis.
+A cumque repellat sint unde eaque placeat quasi id. Ullam ut vero itaque nisi corrupti. Ut voluptatum saepe aliquam ducimus explicabo debitis odit aliquam.
  
-Qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores. Itaque et eum voluptas atque et libero. Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero.
+Qui voluptas quod unde voluptatem. Dolores tempore vero qui. Explicabo quae accusamus aspernatur ut tempora iure ea sunt qui. Repellendus architecto quis officiis veritatis hic est.
     </p>
   </div>
 </div>
@@ -20387,13 +20688,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Quo dolor consequatur dolorum doloribus iste beatae veritatis. Odio rerum eos aut aut. Dicta eos molestiae odio officia aliquam eos et et. Provident dolores quo non maxime eveniet. Quos et vero et quam.
+      Veniam corrupti non impedit laboriosam. Iste magnam aut facere enim molestiae libero. Voluptas delectus est aperiam voluptas deleniti necessitatibus vitae facere nihil. Voluptatem totam iste non nam ipsa hic quia suscipit. Molestias eligendi officiis. Magnam et est assumenda dolorem sed aliquid eaque.
  
-Et in iure quas sed consectetur saepe delectus. Exercitationem eius aut natus qui dolores perferendis impedit porro sequi. Alias autem perferendis molestias eius autem et. Veritatis omnis nostrum voluptate ratione est et dolor. Quia enim ipsum tenetur.
+Ipsa adipisci harum suscipit. Illo illum id qui excepturi quo et neque et. Pariatur accusamus blanditiis aut perferendis molestiae officiis. Expedita pariatur qui magnam hic. Ab dignissimos ut. Veritatis et quam blanditiis et nostrum vitae.
  
-Et pariatur voluptate cupiditate aut aspernatur voluptatem ratione voluptatibus esse. Cupiditate autem veniam vero voluptatem dolorum blanditiis magnam. Autem qui et consequatur ea laborum. Doloremque optio veritatis ut quaerat.
+Voluptate consequuntur delectus est non voluptas. Ipsa consequatur corrupti ex. Ea tenetur a rerum. Laborum earum aut nihil nisi doloremque eveniet voluptate iusto non. Dolorem earum distinctio nobis.
  
-Exercitationem dicta perspiciatis eos corrupti architecto at. Necessitatibus consequatur sit recusandae qui. Eveniet iste ducimus natus. Voluptatum minima qui est itaque soluta reprehenderit tempora quae perferendis. Esse et itaque exercitationem nisi. Dolor omnis quia et nisi est ratione.
+Quas accusamus cum. Est id dolores minus perferendis aliquam rem animi. Vel eligendi illo perspiciatis magni. Voluptas in et cumque provident quo dolore non exercitationem.
     </p>
   </div>
 </div>
