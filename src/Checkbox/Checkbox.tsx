@@ -1,75 +1,99 @@
-import * as React from 'react'
+import React, { ReactNode } from 'react'
 
 import styled, { css } from 'styled-components'
+import { OmitOnChangeHTMLInputAttributes, OnChange } from '../AbstractInput/AbstractInput'
+import { Label } from '../Label'
+import { StyledProps } from '../utils/styled'
 
-interface ICheckboxWrapperProps {
-  checked: boolean
+export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttributes {
+  checked?: boolean
+  onChange?: OnChange<boolean>
+  label?: string | ReactNode
 }
 
-const CheckboxWrapper = styled.div`
-    margin: 20px;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
+export const StyledCheckbox = styled.input.attrs({
+  type: 'checkbox' as string
+})`
+  // Take it out of document flow
+  position: absolute;
 
-    ${(props: ICheckboxWrapperProps) => props.checked && css`
-        &:after {
-          position: relative;
-          left: 5px;
-          top: -30px;
-          transform: rotateZ(45deg);
-          border: solid #fff;
-          border-width: 0 3px 3px 0;
-          content: ' ';
-          display: block;
-          width: 6px;
-          height: 12px;
-          cursor: pointer;
-          pointer-events: none;
-        }
-    `}
-`
+  // Hide it
+  opacity: 0;
 
-export interface ICheckboxProps {
-  checked: boolean
-  onClick?: (value: boolean) => void
-  onChange?: (value: boolean) => void
-  className?: string
-}
+  & + ${Label} {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
 
-export const StyledCheckbox = styled.input`
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  background: ${props => props.checked ? 'rgba(40,40,40,0.7)' : 'rgba(40,40,40,0.2)'};
-  color: black;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  position: relative;
-  left: -5px;
-  top: -5px;
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+  }
 
-  :focus {
-    outline:0;
+  // Box hover
+  &:hover + label:before {
+    background: #f35429;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: #f35429;
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
   }
 `
 
-export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => (
-  <CheckboxWrapper checked={checked}>
+export const Checkbox = ({ checked, onChange, label, ...props }: CheckboxProps) => (
+  <>
     <StyledCheckbox
-      className={className}
-      type='checkbox'
-      onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-        const checked = (e.target as HTMLInputElement).checked
-        onClick && onClick(checked)
-      }}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e.target.checked)
+      onChange={event => {
+        onChange && onChange(event.target.checked, event)
       }}
       checked={checked}
       {...props}
     />
-  </CheckboxWrapper>
+    {typeof label === 'string'
+      ? <Label>{label}</Label>
+      : label}
+  </>
 )
