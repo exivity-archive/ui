@@ -1,0 +1,1563 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|NumericInput as heading 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1,
+input.c1 {
+  font-size: 1.5em;
+  color: #00a8d8;
+}
+
+.c1 .c4 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c2:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <input
+      className="c1 c2"
+      onChange={[Function]}
+      type="section"
+      value="42"
+    />
+    <p
+      className="c3"
+    >
+      Cupiditate eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    placeholder="Type an integer..."
+    type="number"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput disabled 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    disabled={true}
+    onChange={[Function]}
+    type="number"
+    value="42"
+  />
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput inlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c3:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <p
+      className="c1"
+    >
+      enim voluptatem asperiores maiores
+    </p>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3"
+        onChange={[Function]}
+        type="number"
+        value={42}
+      />
+    </div>
+    <p
+      className="c1"
+    >
+      dolorem eius laudantium laboriosam
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput min 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    min="0"
+    onChange={[Function]}
+    placeholder="Type a positive float (2 decimal precision)..."
+    step="0.01"
+    type="number"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput outlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c1:hover {
+  border: 1px solid #999;
+}
+
+.c1:focus {
+  border: 1px solid #222;
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    type="number"
+    value="42"
+  />
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput purposes 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c6:hover {
+  border: 1px solid #999;
+}
+
+.c6:focus {
+  border: 1px solid #222;
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c10:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c10:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c10::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  border: 1px solid #999;
+  background-color: unset;
+}
+
+.c7:hover {
+  border: 1px solid #999;
+}
+
+.c7:focus {
+  border: 1px solid #222;
+}
+
+.c7::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  border: 1px solid #4caf50;
+  background-color: unset;
+}
+
+.c8:hover {
+  border: 1px solid #999;
+}
+
+.c8:focus {
+  border: 1px solid #222;
+}
+
+.c8::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  border: 1px solid #ef5350;
+  background-color: unset;
+}
+
+.c9:hover {
+  border: 1px solid #999;
+}
+
+.c9:focus {
+  border: 1px solid #222;
+}
+
+.c9::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c11 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c11:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c11:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c11::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c11[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c12 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c12:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c12:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c12::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c13 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c13:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c13:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c13::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c3"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c4"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c5"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c6"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c7"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c8"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c9"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c10"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c11"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c12"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c13"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput sizes 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 0.6875rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c2:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c2::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c2[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 0.8125rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.1875rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <input
+      className="c2"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c3"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c4"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+    <input
+      className="c5"
+      onChange={[Function]}
+      type="number"
+      value="42"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|NumericInput step 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c1:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c1:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    placeholder="Type a float..."
+    step="any"
+    type="number"
+    value=""
+  />
+</div>
+`;
