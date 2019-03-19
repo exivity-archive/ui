@@ -5,7 +5,6 @@ import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Row } from '../utils/stories/components'
 import { SelectInput } from '../SelectInput'
 import { LONG_LIST } from './stories/seed'
-import { mockFn } from '../utils/stories/mocks'
 
 import { Select } from '.'
 
@@ -39,21 +38,21 @@ export default storiesOf('molecules/Select', module)
   ))
   .add('custom valueComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} primary/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput primary/>}
         value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} secondary/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput secondary/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} success/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput success/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} danger/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput danger/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} primary outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput primary outlined/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} secondary outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput secondary outlined/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} success outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput success outlined/>}
               value={state && state.key} onChange={storeState} data={items}/>
-      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} danger outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput danger outlined/>}
               value={state && state.key} onChange={storeState} data={items}/>
     </Row>
   ))

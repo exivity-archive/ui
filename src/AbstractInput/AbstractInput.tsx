@@ -32,7 +32,7 @@ export interface StyledInputProps extends StyledProps {
 
 export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttributes {
   value?: string | number
-  onChange: OnChange
+  onChange?: OnChange
   required?: boolean
 }
 
@@ -118,7 +118,7 @@ export const AbstractInput =
       type={type || 'text'}
       danger={!valid}
       onChange={(event) => {
-        onChange(event.target.value, event)
+        onChange && onChange(event.target.value, event)
         event.target.checkValidity && setValid(event.target.checkValidity())
       }}
       {...rest}

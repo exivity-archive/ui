@@ -23,3 +23,5 @@ export const getNoDataPlaceholder = (data: SelectItem[], noDataText?: string): S
 
   return data
 }
+
+export const emptyFn = () => ({})
