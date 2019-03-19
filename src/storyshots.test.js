@@ -9,6 +9,6 @@ initStoryshots({
   stories2snapsConverter: new Stories2SnapsConverter({
     snapshotsDirName: '__snapshots__',
     snapshotExtension: '.snap',
-    storiesExtensions: ['.ts', '.tsx'],
+    storiesExtensions: ['.js', '.jsx', '.ts', '.tsx'],
   })
 })
