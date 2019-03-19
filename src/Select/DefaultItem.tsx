@@ -2,6 +2,7 @@ import React from 'react'
 import { ListChildComponentProps } from 'react-window'
 
 import { ListItem, CenterText } from '../ListItem'
+import { NO_DATA_KEY } from './helpers'
 
 export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, style }) => {
   const { items, setIsOpen, onChange } = data
@@ -18,7 +19,7 @@ export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, st
   }
 
   return (
-    <ListItem style={newStyle} tabIndex={index + 1} onClick={handleOnClick}>
+    <ListItem style={newStyle} tabIndex={index + 1} onClick={handleOnClick} noDataPlaceholder={item.key === NO_DATA_KEY}>
       <CenterText>
         {item.value}
       </CenterText>
