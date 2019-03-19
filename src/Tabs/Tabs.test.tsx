@@ -55,10 +55,8 @@ test('when focussed on a tab you can use arrows to navigate', () => {
     enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
     tabs.update()
     expect(
-      tabs.containsMatchingElement(
-        <div>{panel}</div>
-      )
-    ).toBeTruthy()
+      tabs.find({ 'data-test': 'tab-panels' }).get(0).props.children.props.children === panel
+    ).toBe(true)
   }
 
   const tests: KeyboardNavigationTest[] = [
@@ -103,10 +101,8 @@ test('when blurred, arrow navigation should not work anymore', () => {
     enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
     tabs.update()
     expect(
-      tabs.containsMatchingElement(
-        <div>{panel}</div>
-      )
-    ).toBeTruthy()
+      tabs.find({ 'data-test': 'tab-panels' }).get(0).props.children.props.children === panel
+    ).toBe(true)
   }
 
   // focus on tabs so navigation becomes possible
@@ -156,11 +152,10 @@ test('you can navigate to a tab by clicking on it', () => {
   const testClickNavigation = ({ tabIndex, panel }: ClickNavigationTest) => {
     enzymeFind(tabs, Tabs.Tab).get(tabIndex).props.onClick()
     tabs.update()
+    tabs.update()
     expect(
-      tabs.containsMatchingElement(
-        <div>{panel}</div>
-      )
-    ).toBeTruthy()
+      tabs.find({ 'data-test': 'tab-panels' }).get(0).props.children.props.children === panel
+    ).toBe(true)
   }
 
   const tests: ClickNavigationTest[] = [
