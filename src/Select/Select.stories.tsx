@@ -31,32 +31,44 @@ const CustomItem: React.FC = ({ data, style, index }: any) => {
   </div>
 }
 
+const customNoData = 'Custom noData item'
+
 export default storiesOf('molecules/Select', module)
-  .addDecorator(withState({ key: '1', value: 'one' }))
-  .add('default', ({ state, storeState }: any) => <Select value={state.key} onChange={storeState} data={items}/>)
+  .addDecorator(withState())
+  .add('default', ({ state, storeState }: any) => (
+    <Select name='Select' placeholder='Choose option' value={state.key} onChange={storeState} data={items}/>
+  ))
   .add('custom valueComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select valueComponent={<SelectInput onChange={mockFn} primary/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} primary/>}
         value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} secondary/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} secondary/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} success/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} success/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} danger/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} danger/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} primary outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} primary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} secondary outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} secondary outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} success outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} success outlined/>}
               value={state.key} onChange={storeState} data={items}/>
-      <Select valueComponent={<SelectInput onChange={mockFn} danger outlined/>}
+      <Select name='Select' placeholder='Choose option' valueComponent={<SelectInput onChange={mockFn} danger outlined/>}
               value={state.key} onChange={storeState} data={items}/>
     </Row>
   ))
   .add('Custom item', ({ state, storeState }: any) => (
-    <Select value={state.key} onChange={storeState} data={items}>
+    <Select name='Select' placeholder='Choose option' value={state.key} onChange={storeState} data={items}>
       {CustomItem}
     </Select>
   ))
-  .add('long', ({ state, storeState }: any) => <Select value={state.key} onChange={storeState} data={LONG_LIST}/>)
+  .add('long', ({ state, storeState }: any) => (
+    <Select name='Select' placeholder='Choose option' value={state.key} onChange={storeState} data={LONG_LIST}/>
+  ))
+  .add('no data', ({ state, storeState }: any) => (
+    <Select name='Select' placeholder='Choose option' value={state.key} onChange={storeState} data={[]}/>
+  ))
+  .add('custom noDataText', ({ state, storeState }: any) => (
+    <Select name='Select' value={state.key} onChange={storeState} data={[]} noDataText={customNoData}/>
+  ))
