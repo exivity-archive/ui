@@ -1,7 +1,6 @@
 import faker from 'faker'
 import React from 'react'
 
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Paragraph } from '../Paragraph'
 import { TextInput } from '../TextInput'
@@ -12,7 +11,7 @@ import { TextArea } from '.'
 import { Row } from '../utils/stories/components'
 import { mockFn } from '../utils/stories/mocks'
 
-storiesOf('forms|TextArea', module)
+storiesOf('interact|TextArea', module)
   .addDecorator(withState(''))
   .add('default', ({ state, storeState }: any) => <TextArea
     rows={5}

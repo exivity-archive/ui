@@ -1,5 +1,5 @@
 import { fromTheme, matchThemeProp } from '.'
-import { lightTheme } from '../../themes'
+import { defaultTheme } from '../../themes'
 
 describe('fromTheme', () => {
   const theme = {
@@ -11,9 +11,9 @@ describe('fromTheme', () => {
     expect(fn({ theme })).toBe('val')
   })
 
-  test('fromTheme should resolve to lightTheme if no theme prop is available', () => {
+  test('fromTheme should resolve to defaultTheme if no theme prop is available', () => {
     const fn = fromTheme((theme: any) => theme.global.baseSize)
-    expect(fn({})).toBe(lightTheme.global.baseSize)
+    expect(fn({})).toBe(defaultTheme.global.baseSize)
   })
 })
 
@@ -50,15 +50,15 @@ describe('matchThemeProp', () => {
     expect(fn({ theme })).toBeNull()
   })
 
-  test('matchThemeProp should resolve to lightTheme if no theme prop is available', () => {
+  test('matchThemeProp should resolve to defaultTheme if no theme prop is available', () => {
     const fn = matchThemeProp((theme: any) => theme.global.sizes)
-    expect(fn({ small: true })).toEqual(lightTheme.global.sizes.small)
+    expect(fn({ small: true })).toEqual(defaultTheme.global.sizes.small)
   })
 
-  test('matchThemeProp should resolve to lightTheme if no theme prop is available and return default value', () => {
+  test('matchThemeProp should resolve to defaultTheme if no theme prop is available and return default value', () => {
     const fn = matchThemeProp((theme: any) => theme.global.sizes)
     // @ts-ignore
-    expect(fn({})).toEqual(lightTheme.global.sizes[lightTheme.global.sizes._default])
+    expect(fn({})).toEqual(defaultTheme.global.sizes[defaultTheme.global.sizes._default])
   })
 
   const modifier = (match: string) => match.repeat(2)
@@ -78,15 +78,15 @@ describe('matchThemeProp', () => {
     expect(fn({ theme })).toBeNull()
   })
 
-  test('matchThemeProp should resolve to lightTheme if no theme prop is available (modifier)', () => {
+  test('matchThemeProp should resolve to defaultTheme if no theme prop is available (modifier)', () => {
     const fn = matchThemeProp((theme: any) => theme.global.purposes, { modifier })
-    expect(fn({ secondary: true })).toEqual(modifier(lightTheme.global.purposes.secondary))
+    expect(fn({ secondary: true })).toEqual(modifier(defaultTheme.global.purposes.secondary))
   })
 
-  test('matchThemeProp should resolve to lightTheme if no theme prop is available and return modified default value', () => {
+  test('matchThemeProp should resolve to defaultTheme if no theme prop is available and return modified default value', () => {
     const fn = matchThemeProp((theme: any) => theme.global.purposes, { modifier })
     // @ts-ignore
-    expect(fn({})).toEqual(modifier(lightTheme.global.purposes[lightTheme.global.purposes._default]))
+    expect(fn({})).toEqual(modifier(defaultTheme.global.purposes[defaultTheme.global.purposes._default]))
   })
 
   const defaultValue = 'val3'

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { FixedSizeList } from 'react-window'
 import { MdAdd, MdRemove } from 'react-icons/md'
 
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 import { useExpandable, TreeListItem, Helpers } from '.'

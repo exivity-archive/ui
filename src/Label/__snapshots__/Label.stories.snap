@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|Label default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c2 > .c1 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c3 .c1 {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c3 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c4 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c4 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c4 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c5 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c5 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c5 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c6 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+}
+
+.c6 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c6 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1 c2"
+  >
+    Default label
+  </label>
+</div>
+`;
+
+exports[`Storyshots atoms|Label nested 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c2 > .c1 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c3 > .c1 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c4 .c1 {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c4 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c5 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c5 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c5 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c6 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c6 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c6 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c7 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+}
+
+.c7 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c7 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1 c2"
+  >
+    Primary label
+    <label
+      className="c1 c2"
+    >
+      Secondary label
+    </label>
+  </label>
+</div>
+`;
+
+exports[`Storyshots atoms|Label secondary 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 > .c1 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c2 > .c1 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c4 .c1 {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c4 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c5 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c5 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c5 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c6 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c6 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c6 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+.c7 .c1 {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-flex-basis: 40%;
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%;
+}
+
+.c7 .c1 > .c1 {
+  padding-bottom: unset;
+}
+
+.c7 > *:not(.c1):not(:last-child) {
+  margin-bottom: 1.25;
+}
+
+<div
+  className="c0"
+>
+  <label
+    className="c1 c2"
+  >
+    Secondary label
+  </label>
+</div>
+`;

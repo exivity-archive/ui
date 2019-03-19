@@ -1,7 +1,6 @@
 import React from 'react'
 import { Label } from '.'
 
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 storiesOf('atoms|Label', module)

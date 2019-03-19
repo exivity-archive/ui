@@ -1,7 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { InputProps } from '../AbstractInput/AbstractInput'
 import { Icon } from '../Icon'
-import { fromTheme, hexToString, InputProps, matchThemeProp } from '../utils/styled'
+import { fromTheme, hexToString, matchThemeProp } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends InputProps {

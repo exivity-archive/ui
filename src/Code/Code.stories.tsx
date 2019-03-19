@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 import { Code } from '.'

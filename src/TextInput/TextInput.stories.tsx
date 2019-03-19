@@ -1,6 +1,5 @@
 import faker from 'faker'
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
@@ -10,10 +9,16 @@ import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
 import { mockFn } from '../utils/stories/mocks'
 
-storiesOf('forms|TextInput', module)
+storiesOf('interact|TextInput', module)
   .addDecorator(withState(''))
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
+    value={state}
+    onChange={storeAndAction(storeState, 'onChange')} />)
+  .add('required', ({ state, storeState }: any) => <TextInput
+    placeholder='Type something...'
+    required
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
   .add('outlined', () => <TextInput onChange={mockFn} outlined value='Outlined' />)

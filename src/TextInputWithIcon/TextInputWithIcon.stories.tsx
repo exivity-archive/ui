@@ -1,5 +1,4 @@
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
@@ -8,8 +7,9 @@ import { TextInputWithIcon } from '.'
 import { Row } from '../utils/stories/components'
 import { mockFn } from '../utils/stories/mocks'
 
-storiesOf('forms|TextInputWithIcon', module)
+storiesOf('interact|TextInputWithIcon', module)
   .addDecorator(withState(''))
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => <Row columns={false}>
     <TextInputWithIcon
       icon={<MdVerifiedUser/>}
