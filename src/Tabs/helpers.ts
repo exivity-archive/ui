@@ -9,8 +9,7 @@ export const TabsContext = createContext<TabsContextShape | null>(null)
 
 export const useTabsContext = () => {
   const context = useContext(TabsContext)
-  if (!context) {
-    throw new Error('Tabs compound components must be rendered within the Tabs component')
-  }
-  return context
+
+  if (context) return context
+  else throw new Error('useTabsContext should only be called within a child of a Tabs component')
 }

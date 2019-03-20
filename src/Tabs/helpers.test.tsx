@@ -15,7 +15,7 @@ test('it throws an error when a TabList component is not rendered within a Tabs 
   } catch (err) {
     message = err.message
   }
-  expect(message).toBe('Tabs compound components must be rendered within the Tabs component')
+  expect(message).toBe('useTabsContext should only be called within a child of a Tabs component')
 })
 
 test('it doesn\'t throws an error when a TabPanels component is rendered within a Tabs component', () => {
