@@ -39,11 +39,15 @@ const indexContents = readFileSync(indexPath).toString()
 const indexContentsMap = new Map()
 indexContents.split('\n').forEach(line => {
   if (line.trim()) {
-    const key = line.match(/export { (.+?) }/)[1]
+    const matches = line.match(/^export \* from '\.\/(.+)'/)
+    if (!matches) {
+      throw new Error('Couldn\'t parse index.ts')
+    }
+    const key = matches[1]
     indexContentsMap.set(key, line.trim())
   }
 })
-indexContentsMap.set(componentName, `export { ${componentName} } from './${componentName}'`)
+indexContentsMap.set(componentName, `export * from './${componentName}'`)
 const newIndexContents = Array.from(indexContentsMap.keys()).sort().map(key => indexContentsMap.get(key))
 writeFileSync(indexPath, `${newIndexContents.join('\n')}\n`)
 console.log(`Added ${componentName} to index.ts.`)

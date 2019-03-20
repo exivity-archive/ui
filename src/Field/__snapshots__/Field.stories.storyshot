@@ -642,6 +642,14 @@ exports[`Storyshots interact|Field multiple 1`] = `
   cursor: pointer;
   line-height: 1em;
   height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c7 + label:focus {
+  outline: 0;
 }
 
 .c19 + label:empty {
@@ -656,8 +664,10 @@ exports[`Storyshots interact|Field multiple 1`] = `
   display: block;
   width: 1em;
   height: 1em;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .c19 + label::before {
@@ -665,6 +675,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   border-radius: 4px;
   background-color: #eee;
 }
+
 
 .c19 + label::after {
   content: "\\2714";
@@ -675,6 +686,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   -ms-transform: scale(0);
   transform: scale(0);
 }
+
 
 .c19:checked + label::after {
   -webkit-transform: scale(0.9);
@@ -1218,7 +1230,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
         />
         <label
           className="c3 c4"
-          htmlFor="3"
+          htmlFor="4"
         >
           I want cookies
         </label>

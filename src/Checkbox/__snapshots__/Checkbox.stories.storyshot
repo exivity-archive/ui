@@ -5,7 +5,19 @@ exports[`Storyshots interact|Checkbox default 1`] = `
   padding: 12px;
 }
 
-.c3 {
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -13,60 +25,86 @@ exports[`Storyshots interact|Checkbox default 1`] = `
   line-height: 1.5;
 }
 
-.c3 > .c2 {
+.c4 > .c3 {
   display: block;
   font-size: 0.8125em;
   color: #999;
 }
 
-.c1 {
+.c2 {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-.c1 + label {
+.c2 + label {
   position: relative;
   display: inline-block;
   padding: 0 0 0 2em;
   cursor: pointer;
   line-height: 1em;
   height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
 }
 
-.c1 + label:empty {
+.c2 + label:focus {
+  outline: 0;
+}
+
+.c2 + label:empty {
   padding: 0 0 0 1em;
 }
 
-.c1 + label::before,
-.c1 + label::after {
+.c2 + label::before,
+.c2 + label::after {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
   width: 1em;
   height: 1em;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
-.c1 + label::before {
+.c2 + label::before {
   content: " ";
   border-radius: 4px;
   background-color: #eee;
 }
 
-.c1 + label::after {
-  content: "\\2714";
-  color: #2c3e50;
-  line-height: 1.1em;
-  text-align: center;
+.c2 + label::after {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c1:checked + label::after {
+.c2 + label::after {
+  content: "\\2714";
+  color: #fff;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.c2:focus + label::before,
+.c2 + label:hover::before {
+  background-color: #999;
+}
+
+.c2:checked + label {
+  color: #222;
+}
+
+.c2:checked + label::before {
+  background-color: #222;
+}
+
+.c2:checked + label::after {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -75,21 +113,44 @@ exports[`Storyshots interact|Checkbox default 1`] = `
 <div
   className="c0"
 >
-  <span>
-    <input
-      checked={true}
-      className="c1"
-      id="0"
-      onChange={[Function]}
-      type="checkbox"
-    />
-    <label
-      className="c2 c3"
-      htmlFor="0"
-    >
-      
-    </label>
-  </span>
+  <div
+    className="c1"
+  >
+    <span>
+      <input
+        checked={true}
+        className="c2"
+        id="0"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="0"
+      >
+        
+      </label>
+    </span>
+  </div>
+  <div
+    className="c1"
+  >
+    <span>
+      <input
+        checked={false}
+        className="c2"
+        id="1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="1"
+      >
+        
+      </label>
+    </span>
+  </div>
 </div>
 `;
 
@@ -144,6 +205,14 @@ input.c2 {
   cursor: pointer;
   line-height: 1em;
   height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c1 + label:focus {
+  outline: 0;
 }
 
 .c1 + label:empty {
@@ -158,8 +227,10 @@ input.c2 {
   display: block;
   width: 1em;
   height: 1em;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .c1 + label::before {
@@ -169,13 +240,29 @@ input.c2 {
 }
 
 .c1 + label::after {
-  content: "\\2714";
-  color: #2c3e50;
-  line-height: 1.1em;
-  text-align: center;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+}
+
+.c1 + label::after {
+  content: "\\2714";
+  color: #fff;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.c1:focus + label::before,
+.c1 + label:hover::before {
+  background-color: #999;
+}
+
+.c1:checked + label {
+  color: #222;
+}
+
+.c1:checked + label::before {
+  background-color: #222;
 }
 
 .c1:checked + label::after {
@@ -191,13 +278,13 @@ input.c2 {
     <input
       checked={true}
       className="c1"
-      id="2"
+      id="3"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="c2"
-      htmlFor="2"
+      htmlFor="3"
       style={
         Object {
           "marginTop": 0,
@@ -205,7 +292,7 @@ input.c2 {
       }
       type="header"
     >
-      Enable this setting
+      Check me out
     </label>
   </span>
 </div>
@@ -243,6 +330,14 @@ exports[`Storyshots interact|Checkbox with label 1`] = `
   cursor: pointer;
   line-height: 1em;
   height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c1 + label:focus {
+  outline: 0;
 }
 
 .c1 + label:empty {
@@ -257,8 +352,10 @@ exports[`Storyshots interact|Checkbox with label 1`] = `
   display: block;
   width: 1em;
   height: 1em;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .c1 + label::before {
@@ -268,13 +365,29 @@ exports[`Storyshots interact|Checkbox with label 1`] = `
 }
 
 .c1 + label::after {
-  content: "\\2714";
-  color: #2c3e50;
-  line-height: 1.1em;
-  text-align: center;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+}
+
+.c1 + label::after {
+  content: "\\2714";
+  color: #fff;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.c1:focus + label::before,
+.c1 + label:hover::before {
+  background-color: #999;
+}
+
+.c1:checked + label {
+  color: #222;
+}
+
+.c1:checked + label::before {
+  background-color: #222;
 }
 
 .c1:checked + label::after {
@@ -290,13 +403,13 @@ exports[`Storyshots interact|Checkbox with label 1`] = `
     <input
       checked={true}
       className="c1"
-      id="1"
+      id="2"
       onChange={[Function]}
       type="checkbox"
     />
     <label
       className="c2 c3"
-      htmlFor="1"
+      htmlFor="2"
     >
       Enable this setting
     </label>
