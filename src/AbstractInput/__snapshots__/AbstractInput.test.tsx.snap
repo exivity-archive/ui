@@ -8,14 +8,14 @@ exports[`renders AbstractInput without props 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }

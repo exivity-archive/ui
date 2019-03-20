@@ -24,10 +24,14 @@ export interface StyledInputProps extends StyledProps {
   tiny?: boolean
   small?: boolean
   large?: boolean
+  huge?: boolean
 
   // Variants
   outlined?: boolean
-  inlined?: boolean
+  flat?: boolean
+
+  // Layout
+  inline?: boolean
 }
 
 export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttributes {
@@ -46,9 +50,7 @@ export const inputStyles = css<StyledInputProps>`
 
   font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - ${fromTheme(theme => theme.global.borderWidth)}px) 0.5em; // subtract border to get a height of exactly 2.5em for single line items
 
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
@@ -57,7 +59,12 @@ export const inputStyles = css<StyledInputProps>`
 
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
-  ${props => (!props.outlined && !props.inlined) && css`
+  ${props => (!props.inline) && css`
+    display: block;
+    width: 100%;
+  `}
+
+  ${props => (!props.outlined && !props.flat) && css`
     border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
     background-color: ${fromTheme(theme => theme.colours.lightGray)};
 
@@ -83,7 +90,7 @@ export const inputStyles = css<StyledInputProps>`
     }
   `}
 
-  ${props => props.inlined && css`
+  ${props => props.flat && css`
     padding: 0;
     outline-offset: 9px;
 

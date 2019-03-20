@@ -12,14 +12,14 @@ exports[`Storyshots interact|TextArea default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -87,14 +87,14 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -139,14 +139,14 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -208,7 +208,7 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots interact|TextArea inlined 1`] = `
+exports[`Storyshots interact|TextArea flat 1`] = `
 .c0 {
   padding: 12px;
 }
@@ -237,14 +237,14 @@ exports[`Storyshots interact|TextArea inlined 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -289,7 +289,7 @@ exports[`Storyshots interact|TextArea inlined 1`] = `
     <p
       className="c1"
     >
-      Quae minus ea rerum architecto. Molestiae dolor laboriosam illo temporibus fugiat. Consectetur laudantium qui vitae ullam velit beatae architecto.
+      Alias placeat a laboriosam. Quibusdam voluptas corrupti. Cupiditate et doloremque dicta facilis perferendis aliquid.
     </p>
     <textarea
       className="c2"
@@ -300,12 +300,12 @@ exports[`Storyshots interact|TextArea inlined 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Saepe quis quisquam provident ducimus dolores in magni sed quia. Architecto nulla molestias similique voluptatem est ex ut. Saepe temporibus animi. Repellendus maiores temporibus. Voluptatibus sunt nobis quae."
+      value="Incidunt aut iusto. Eum voluptatem totam animi reiciendis velit commodi id est quidem. Et necessitatibus tempore ex tempora dolore iusto. Excepturi ipsa ut hic alias iste et autem nulla asperiores. Inventore voluptas sint et doloremque vel sunt alias dolor magnam."
     />
     <p
       className="c1"
     >
-      Repellendus quasi consectetur provident non qui quod iure voluptatem voluptatem. Ducimus numquam unde omnis nulla est illum.
+      Sit voluptatibus aut officiis facilis qui dolorem impedit. Omnis numquam dolores voluptatum non.
     </p>
   </div>
 </div>
@@ -323,14 +323,14 @@ exports[`Storyshots interact|TextArea outlined 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -398,14 +398,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -450,14 +450,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -502,14 +502,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -554,14 +554,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -606,14 +606,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -658,14 +658,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   background-color: unset;
 }
@@ -710,14 +710,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #4caf50;
   background-color: unset;
 }
@@ -762,14 +762,14 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #ef5350;
   background-color: unset;
 }

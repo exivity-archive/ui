@@ -1,75 +1,84 @@
-import * as React from 'react'
+import React, { ReactElement, ReactNode, useMemo } from 'react'
 
 import styled, { css } from 'styled-components'
+import { OmitOnChangeHTMLInputAttributes, OnChange } from '../AbstractInput/AbstractInput'
+import { Label } from '../Label'
+import { fromTheme, StyledProps } from '../utils/styled'
+import { randomId } from '../utils/randomId'
 
-interface ICheckboxWrapperProps {
-  checked: boolean
+export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttributes {
+  checked?: boolean
+  onChange?: OnChange<boolean>
+  label?: string | ReactNode
 }
 
-const CheckboxWrapper = styled.div`
-    margin: 20px;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
+export const StyledCheckbox = styled.input.attrs({
+  type: 'checkbox' as string
+})`
+  // Take it out of document flow and hide it
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
 
-    ${(props: ICheckboxWrapperProps) => props.checked && css`
-        &:after {
-          position: relative;
-          left: 5px;
-          top: -30px;
-          transform: rotateZ(45deg);
-          border: solid #fff;
-          border-width: 0 3px 3px 0;
-          content: ' ';
-          display: block;
-          width: 6px;
-          height: 12px;
-          cursor: pointer;
-          pointer-events: none;
-        }
-    `}
-`
+  & + label {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 2em;
+    cursor: pointer;
+    line-height: 1em;
+    height: 1em;
 
-export interface ICheckboxProps {
-  checked: boolean
-  onClick?: (value: boolean) => void
-  onChange?: (value: boolean) => void
-  className?: string
-}
+    &:empty {
+      padding: 0 0 0 1em;
+    }
 
-export const StyledCheckbox = styled.input`
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  background: ${props => props.checked ? 'rgba(40,40,40,0.7)' : 'rgba(40,40,40,0.2)'};
-  color: black;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  position: relative;
-  left: -5px;
-  top: -5px;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 1em;
+      height: 1em;
+      transition: .25s all ease;
+    }
 
-  :focus {
-    outline:0;
+    &::before {
+      content: " ";
+      border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
+      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    }
+
+    &::after {
+      content: "\\2714";
+      color: #2c3e50;
+      line-height: 1.1em;
+      text-align: center;
+      transform: scale(0);
+    }
+  }
+
+  &:checked {
+    & + label::after {
+      transform: scale(0.9);
+    }
   }
 `
 
-export const Checkbox: React.FC<ICheckboxProps> = ({ checked, onClick, className, onChange, ...props }) => (
-  <CheckboxWrapper checked={checked}>
+export const Checkbox = ({ checked, onChange, label = '', id, ...props }: CheckboxProps) => {
+  const memoizedId = useMemo(() => id || randomId(), [])
+
+  return <span>
     <StyledCheckbox
-      className={className}
-      type='checkbox'
-      onClick={(e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-        const checked = (e.target as HTMLInputElement).checked
-        onClick && onClick(checked)
-      }}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange && onChange(e.target.checked)
+      onChange={event => {
+        onChange && onChange(event.target.checked, event)
       }}
       checked={checked}
+      id={memoizedId}
       {...props}
     />
-  </CheckboxWrapper>
-)
+    {typeof label === 'string'
+      ? <Label htmlFor={memoizedId}>{label}</Label>
+      : React.cloneElement(label as ReactElement, { as: 'label', htmlFor: memoizedId })}
+  </span>
+}

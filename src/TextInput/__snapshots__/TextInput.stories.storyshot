@@ -63,14 +63,14 @@ input.c1 {
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Quia porro maxime maiores reiciendis minima esse alias sunt. Voluptatem vero tempora qui fugiat sint non impedit aperiam dolor.
+      In amet quibusdam omnis consectetur consectetur assumenda laboriosam nostrum. Eius est sit iure in enim vel.
     </p>
   </div>
 </div>
@@ -139,14 +139,14 @@ exports[`Storyshots interact|TextInput default 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -209,14 +209,14 @@ exports[`Storyshots interact|TextInput disabled 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -267,7 +267,121 @@ exports[`Storyshots interact|TextInput disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots interact|TextInput inlined 1`] = `
+exports[`Storyshots interact|TextInput flat 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c3:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c3:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <p
+      className="c1"
+    >
+      Voluptate consequatur ut ullam quasi placeat quam eos accusantium.
+    </p>
+    <div
+      className="c2"
+    >
+      <input
+        className="c3"
+        onChange={[Function]}
+        type="text"
+        value="eveniet nostrum in quas"
+      />
+    </div>
+    <p
+      className="c1"
+    >
+      Delectus iure aut tempora tempore ratione. Alias omnis voluptas qui reiciendis vitae.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextInput inline 1`] = `
 .c0 {
   padding: 12px;
 }
@@ -296,24 +410,22 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
-  padding: 0;
-  outline-offset: 9px;
+  border: 1px solid #eee;
+  background-color: #eee;
 }
 
 .c2:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
 .c2:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
+  border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
 .c2::-webkit-input-placeholder {
@@ -344,29 +456,20 @@ exports[`Storyshots interact|TextInput inlined 1`] = `
 <div
   className="c0"
 >
-  <div>
-    <p
-      className="c1"
-    >
-      quia voluptatem eos voluptatibus
-    </p>
+  <p
+    className="c1"
+  >
+    modi voluptatem consequatur consequatur
+     
     <input
       className="c2"
       onChange={[Function]}
-      style={
-        Object {
-          "marginBottom": "1em",
-        }
-      }
       type="text"
-      value="sit non eos suscipit"
+      value="quod qui praesentium est"
     />
-    <p
-      className="c1"
-    >
-      natus nihil ea est
-    </p>
-  </div>
+     
+    quasi voluptatum suscipit ducimus est rerum cumque non
+  </p>
 </div>
 `;
 
@@ -388,14 +491,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -440,14 +543,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #00a8d8;
   background-color: unset;
 }
@@ -492,14 +595,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -544,14 +647,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -596,14 +699,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -648,14 +751,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -700,14 +803,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   border: 1px solid #999;
   background-color: unset;
 }
@@ -752,14 +855,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   border: 1px solid #4caf50;
   background-color: unset;
 }
@@ -804,14 +907,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   border: 1px solid #ef5350;
   background-color: unset;
 }
@@ -856,14 +959,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -908,14 +1011,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -960,14 +1063,14 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
   padding: 0;
   outline-offset: 9px;
 }
@@ -1099,14 +1202,14 @@ exports[`Storyshots interact|TextInput required 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1175,14 +1278,14 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1227,14 +1330,14 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 0.6875rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1279,14 +1382,14 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 0.8125rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1331,14 +1434,14 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   color: #222;
   line-height: 1.5;
   font-size: 1.1875rem;
-  display: block;
   box-sizing: border-box;
-  width: 100%;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
   outline: 0;
   border: 0;
   --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
   border: 1px solid #eee;
   background-color: #eee;
 }
@@ -1376,6 +1479,58 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 <div
   className="c0"
 >
@@ -1405,6 +1560,12 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
       onChange={[Function]}
       type="text"
       value="Large"
+    />
+    <input
+      className="c6"
+      onChange={[Function]}
+      type="text"
+      value="Huge"
     />
   </div>
 </div>

@@ -20,9 +20,9 @@ storiesOf('interact|TextArea', module)
     value={state}
     outlined
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('inlined', () => <div>
+  .add('flat', () => <div>
     <Paragraph>{faker.lorem.sentences(3)}</Paragraph>
-    <TextArea inlined rows={3} value={faker.lorem.sentences(5)} style={{ marginBottom: '1em' }} />
+    <TextArea flat rows={3} value={faker.lorem.sentences(5)} style={{ marginBottom: '1em' }} />
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4} columnWidth={350}>

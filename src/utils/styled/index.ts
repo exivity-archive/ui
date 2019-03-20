@@ -84,9 +84,7 @@ export const resetBox = css`
 `
 
 export const globalFont = css`
-  font-family: ${fromTheme(theme => {
-    return theme.global.fontFamily
-  })};
+  font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: normal;
   font-size: ${fromTheme(theme => theme.global.baseSize)}px;
   color: ${fromTheme(theme => theme.global.textColor)};

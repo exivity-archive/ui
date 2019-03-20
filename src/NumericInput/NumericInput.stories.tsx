@@ -28,10 +28,10 @@ storiesOf('interact|NumericInput', module)
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
   .add('outlined', () => <NumericInput outlined value='42' />)
-  .add('inlined', () => <div>
+  .add('flat', () => <div>
     <Paragraph>{faker.lorem.words(4)}</Paragraph>
     <Block>
-      <NumericInput inlined value={42} />
+      <NumericInput flat value={42} />
     </Block>
     <Paragraph>{faker.lorem.words(4)}</Paragraph>
   </div>)
@@ -44,10 +44,10 @@ storiesOf('interact|NumericInput', module)
     <NumericInput outlined secondary value='42' />
     <NumericInput outlined success value='42' />
     <NumericInput outlined danger value='42' />
-    <NumericInput inlined primary value='42' />
-    <NumericInput inlined secondary value='42' />
-    <NumericInput inlined success value='42' />
-    <NumericInput inlined danger value='42' />
+    <NumericInput flat primary value='42' />
+    <NumericInput flat secondary value='42' />
+    <NumericInput flat success value='42' />
+    <NumericInput flat danger value='42' />
   </Row>)
   .add('sizes', () => <Row columns={false}>
     <NumericInput tiny value='42' />

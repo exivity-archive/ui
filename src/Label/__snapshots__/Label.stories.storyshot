@@ -19,64 +19,92 @@ exports[`Storyshots atoms|Label default 1`] = `
   color: #999;
 }
 
-.c3 .c1 {
+.c3 > .c1:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c3 .c1 > .c1 {
+.c3 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
-.c4 .c1 {
+.c4 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c4 .c1 > .c1 {
+.c4 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c4 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c5 .c1 {
+.c5 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: 20em;
   -ms-flex-preferred-size: 20em;
   flex-basis: 20em;
 }
 
-.c5 .c1 > .c1 {
+.c5 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c5 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c6 .c1 {
+.c6 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
-  -webkit-flex-basis: 40%;
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
 }
 
-.c6 .c1 > .c1 {
+.c6 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c6 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 <div
@@ -115,64 +143,92 @@ exports[`Storyshots atoms|Label nested 1`] = `
   color: #999;
 }
 
-.c4 .c1 {
+.c4 > .c1:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c4 .c1 > .c1 {
+.c4 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
-.c5 .c1 {
+.c5 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c5 .c1 > .c1 {
+.c5 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c5 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c6 .c1 {
+.c6 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: 20em;
   -ms-flex-preferred-size: 20em;
   flex-basis: 20em;
 }
 
-.c6 .c1 > .c1 {
+.c6 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c6 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c7 .c1 {
+.c7 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
-  -webkit-flex-basis: 40%;
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
 }
 
-.c7 .c1 > .c1 {
+.c7 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c7 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 <div
@@ -219,64 +275,92 @@ exports[`Storyshots atoms|Label secondary 1`] = `
   color: #999;
 }
 
-.c4 .c1 {
+.c4 > .c1:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c4 .c1 > .c1 {
+.c4 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
-.c5 .c1 {
+.c5 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: auto;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
 }
 
-.c5 .c1 > .c1 {
+.c5 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c5 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c6 .c1 {
+.c6 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   -webkit-flex-basis: 20em;
   -ms-flex-preferred-size: 20em;
   flex-basis: 20em;
 }
 
-.c6 .c1 > .c1 {
+.c6 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c6 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
-.c7 .c1 {
+.c7 > .c1:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
-  -webkit-flex-basis: 40%;
-  -ms-flex-preferred-size: 40%;
-  flex-basis: 40%;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
 }
 
-.c7 .c1 > .c1 {
+.c7 > .c1:first-child > .c1 {
   padding-bottom: unset;
 }
 
 .c7 > *:not(.c1):not(:last-child) {
-  margin-bottom: 1.25;
+  margin-bottom: 1.25em;
 }
 
 <div
