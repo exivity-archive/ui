@@ -1,5 +1,4 @@
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { MdClear, MdCloud, MdFavorite, MdSave, MdWhatshot } from 'react-icons/md'
 
@@ -7,7 +6,7 @@ import { Icon } from '../Icon'
 import { Button } from '.'
 import { Row } from '../utils/stories/components'
 
-storiesOf('atoms|Button', module)
+storiesOf('interact|Button', module)
   .add('default', () => <Button>Default</Button>)
   .add('purposes', () => <Row>
     <Button primary>Primary</Button>

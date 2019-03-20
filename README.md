@@ -1,12 +1,11 @@
 @exivity/ui
 ===========
 
-[![npm](https://img.shields.io/npm/v/@exivity/ui.svg)](https://www.npmjs.com/package/@exivity/ui)
-[![Travis](https://img.shields.io/travis/com/exivity/ui.svg)](https://travis-ci.com/exivity/ui)
-[![Codecov](https://img.shields.io/codecov/c/github/exivity/ui.svg)](https://codecov.io/gh/exivity/ui)
-[![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg)](https://codeclimate.com/github/exivity/ui)
-[![Gitter](https://badges.gitter.im/exivity.svg)](https://gitter.im/exivity)
-[![Greenkeeper](https://badges.greenkeeper.io/exivity/ui.svg)](https://greenkeeper.io/)
+[![npm](https://img.shields.io/npm/v/@exivity/ui.svg?style=flat-square)](https://www.npmjs.com/package/@exivity/ui)
+[![Travis](https://img.shields.io/travis/com/exivity/ui.svg?style=flat-square)](https://travis-ci.com/exivity/ui)
+[![Code Climate](https://img.shields.io/codeclimate/coverage/exivity/ui.svg?style=flat-square)](https://codecov.io/gh/exivity/ui)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg?style=flat-square)](https://codeclimate.com/github/exivity/ui)
+![Bunlephobia](https://img.shields.io/bundlephobia/min/@exivity/ui.svg?label=bundlesize&style=flat-square)
 
 A collection of components to build interfaces.
 

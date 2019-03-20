@@ -14,11 +14,13 @@ const Wrapper = styled.div`
 `
 
 export const Container: React.FC<ContainerProps> = ({ children, ...otherProps }) => {
-  return children ? <Wrapper>
-    {React.Children.map(children, (child: FieldElement) => {
-      return React.cloneElement(child, otherProps)
-    })}
-  </Wrapper> : null
+  return children
+    ? <Wrapper>
+      {React.Children.map(children, (child: FieldElement) => {
+        return React.cloneElement(child, otherProps)
+      })}
+    </Wrapper>
+    : null
 }
 
 Container.displayName = 'Field.Container'

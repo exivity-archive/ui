@@ -31,6 +31,6 @@ The following packages may be installed in your project if you plan to use the f
 
 | component | dependency | version |
 |-----------|------------|---------|
-| `<Code />` | react-syntax-highlighter | ^10.1
-| `<Icon />` | react-icons | ^3.4
+| `<Code />` | react-syntax-highlighter | ^10.2
+| `<Icon />` | react-icons | ^3.5
 | `<Markdown />` | react-markdown | ^4.0

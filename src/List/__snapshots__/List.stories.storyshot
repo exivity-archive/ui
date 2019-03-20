@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|List default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: none;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots atoms|List ordered 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: decimal;
+  padding-left: 2.5em;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ol
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots atoms|List unordered 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  margin: unset;
+  padding: unset;
+  border: unset;
+  box-sizing: border-box;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+  list-style: disc;
+  padding-left: 2.5em;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c1 li {
+  margin-bottom: 0.35em;
+}
+
+<div
+  className="c0"
+>
+  <ul
+    className="c1"
+  >
+    <li>
+      Item 1
+    </li>
+    <li>
+      Item 2
+    </li>
+    <li>
+      Item 3
+    </li>
+  </ul>
+</div>
+`;
