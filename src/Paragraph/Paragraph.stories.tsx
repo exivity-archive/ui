@@ -1,6 +1,5 @@
 import faker from 'faker'
 import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 import { Paragraph } from '.'

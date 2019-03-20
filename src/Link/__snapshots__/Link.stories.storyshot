@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|Link default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  display: inline-grid;
+  grid-gap: 0.25em;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-flow: column;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #00a8d8;
+  --focus-color: 0,168,216;
+}
+
+.c1:focus {
+  outline: none;
+  border-radius: 1px;
+  background-color: rgba(var(--focus-color),0.3);
+  box-shadow: 0 0 0 4px rgba(var(--focus-color),0.3);
+}
+
+.c1:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+<div
+  className="c0"
+>
+  <a
+    className="c1"
+    href="https://github.com/exivity/ui"
+  >
+    Visit GitHub repository
+  </a>
+</div>
+`;
