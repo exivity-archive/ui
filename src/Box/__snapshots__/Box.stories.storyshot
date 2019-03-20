@@ -5,12 +5,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   padding: 12px;
 }
 
-.c6 .c3 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c4 {
+.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -33,15 +28,15 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 1.25em 0 1.25em;
+  padding: 0 em 0 em;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.c5 {
-  padding: 0 1.25;
+.c4 {
+  padding: 0;
 }
 
 .c1 {
@@ -64,7 +59,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
     >
       Hi
       <span
-        className="c3 c4"
+        className="c3"
         data-test="box-collapser"
         onClick={[Function]}
       >
@@ -89,7 +84,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
       </span>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
  
@@ -120,11 +115,11 @@ exports[`Storyshots molecules|Box default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 1.25em 0 1.25em;
+  padding: 0 em 0 em;
 }
 
 .c3 {
-  padding: 0 1.25;
+  padding: 0;
 }
 
 .c1 {
@@ -179,11 +174,11 @@ exports[`Storyshots molecules|Box flipped 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 1.25em 0 1.25em;
+  padding: 0 em 0 em;
 }
 
 .c2 {
-  padding: 0 1.25;
+  padding: 0;
 }
 
 .c1 {
@@ -226,12 +221,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   padding: 12px;
 }
 
-.c6 .c4 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c5 {
+.c4 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -254,7 +244,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 1.25em 0 1.25em;
+  padding: 0 em 0 em;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -262,7 +252,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
 }
 
 .c2 {
-  padding: 0 1.25;
+  padding: 0;
 }
 
 .c1 {
@@ -296,7 +286,7 @@ Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetu
     >
       Hi
       <span
-        className="c4 c5"
+        className="c4"
         data-test="box-collapser"
         onClick={[Function]}
       >
