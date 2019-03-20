@@ -26,6 +26,10 @@ exports[`Storyshots molecules|Tabs default 1`] = `
   margin-left: 0;
 }
 
+.c3:focus {
+  border-bottom-color: #6F6F6F;
+}
+
 .c4 {
   display: inline-block;
   font-weight: bold;
@@ -70,7 +74,7 @@ exports[`Storyshots molecules|Tabs default 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
-        tabIndex={-1}
+        tabIndex={0}
       >
         Tab one
       </li>
@@ -148,6 +152,10 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
   margin-left: 0;
 }
 
+.c3:focus {
+  border-bottom-color: #6F6F6F;
+}
+
 .c4 {
   display: inline-block;
   font-weight: bold;
@@ -213,7 +221,7 @@ exports[`Storyshots molecules|Tabs flipped 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
-        tabIndex={-1}
+        tabIndex={0}
       >
         Tab one
       </li>
