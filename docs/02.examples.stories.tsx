@@ -3,5 +3,6 @@ import { storiesOf } from '@storybook/react'
 import { Heading } from '../src/Heading'
 
 storiesOf('docs|Examples', module)
-  .add('Kitchensink', () => <Heading>Kitchensink</Heading>)
-  .add('App', () => <Heading>App</Heading>)
+  .add('Dashboard', () => <Heading>Dashboard</Heading>)
+  .add('Master/Detail', () => <Heading>Master/Detail</Heading>)
+  .add('Settings', () => <Heading>Settings</Heading>)
