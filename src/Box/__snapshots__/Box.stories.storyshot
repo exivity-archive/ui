@@ -28,7 +28,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 em 0 em;
+  padding: 0 1.25em 0 1.25em;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -36,7 +36,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
 }
 
 .c4 {
-  padding: 0;
+  padding: 0 1.25em;
 }
 
 .c1 {
@@ -115,11 +115,11 @@ exports[`Storyshots molecules|Box default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 em 0 em;
+  padding: 0 1.25em 0 1.25em;
 }
 
 .c3 {
-  padding: 0;
+  padding: 0 1.25em;
 }
 
 .c1 {
@@ -174,11 +174,11 @@ exports[`Storyshots molecules|Box flipped 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 em 0 em;
+  padding: 0 1.25em 0 1.25em;
 }
 
 .c2 {
-  padding: 0;
+  padding: 0 1.25em;
 }
 
 .c1 {
@@ -244,7 +244,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 em 0 em;
+  padding: 0 1.25em 0 1.25em;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -252,7 +252,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
 }
 
 .c2 {
-  padding: 0;
+  padding: 0 1.25em;
 }
 
 .c1 {
