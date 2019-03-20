@@ -12,12 +12,12 @@ enum Levels {
 
 export type HeadingType = 'header' | 'section' | 'sub'
 
-interface HeadingProps extends StyledProps {
+export interface HeadingProps extends StyledProps {
   type?: HeadingType
   children?: ReactNode
 }
 
-const StyledHeading = styled.div<HeadingProps & SectionProps>`
+export const StyledHeading = styled.div<HeadingProps & SectionProps>`
   ${globalFont};
   ${globalSectionSpacing};
 

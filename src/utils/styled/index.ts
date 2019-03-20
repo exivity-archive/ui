@@ -90,3 +90,24 @@ export const globalFont = css`
   color: ${fromTheme(theme => theme.global.textColor)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 `
+
+export const globalScrollbar = css`
+  ::-webkit-scrollbar {
+    width: ${fromTheme(theme => theme.global.sizes.base)}em;
+  }
+
+  ::-webkit-scrollbar-track {
+      background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: rgba(128, 128, 128, 0.4);
+      border-radius: 6px;
+      border: 4px solid transparent;
+      background-clip: padding-box !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background: rgba(128, 128, 128, 0.6);
+  }
+`

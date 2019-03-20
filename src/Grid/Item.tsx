@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { StyledProps } from '../utils/styled'
+import { Block, BlockProps } from '../Block'
 
-export interface GridItemProps extends StyledProps {
+export interface GridItemProps extends BlockProps {
   area?: string
 }
 
-export const GridItem = styled.div<GridItemProps>`
+export const GridItem = styled(Block)<GridItemProps>`
   grid-area: ${props => props.area};
 `
 
