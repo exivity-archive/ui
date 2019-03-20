@@ -520,6 +520,14 @@ exports[`Storyshots interact|Field multiple 1`] = `
   cursor: pointer;
   line-height: 1em;
   height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c7 + label:focus {
+  outline: 0;
 }
 
 .c7 + label:empty {
@@ -534,8 +542,10 @@ exports[`Storyshots interact|Field multiple 1`] = `
   display: block;
   width: 1em;
   height: 1em;
-  -webkit-transition: .25s all ease;
-  transition: .25s all ease;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .c7 + label::before {
@@ -545,13 +555,29 @@ exports[`Storyshots interact|Field multiple 1`] = `
 }
 
 .c7 + label::after {
-  content: "\\2714";
-  color: #2c3e50;
-  line-height: 1.1em;
-  text-align: center;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+}
+
+.c7 + label::after {
+  content: "\\2714";
+  color: #fff;
+  line-height: 1.1em;
+  text-align: center;
+}
+
+.c7:focus + label::before,
+.c7 + label:hover::before {
+  background-color: #999;
+}
+
+.c7:checked + label {
+  color: #222;
+}
+
+.c7:checked + label::before {
+  background-color: #222;
 }
 
 .c7:checked + label::after {
@@ -880,13 +906,13 @@ exports[`Storyshots interact|Field multiple 1`] = `
         <input
           checked={true}
           className="c7"
-          id="3"
+          id="4"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="c3 c4"
-          htmlFor="3"
+          htmlFor="4"
         >
           I want cookies
         </label>
