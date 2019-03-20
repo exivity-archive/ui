@@ -149,11 +149,6 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -246,6 +241,11 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -473,11 +473,6 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -572,6 +567,11 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   font-size: NaNpx;
   cursor: not-allowed;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -801,11 +801,6 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -898,6 +893,11 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -1121,17 +1121,6 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
 
 .c44 .c6 {
   font-size: 1.5em;
-}
-
-.c2 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 .c5 {
@@ -1590,6 +1579,17 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -2271,11 +2271,6 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -2508,6 +2503,11 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   position: absolute;
   font-size: 23.75px;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div

@@ -74,12 +74,6 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
   padding: 12px;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, fit-content(350px));
-}
-
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -182,6 +176,12 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
 .c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, fit-content(350px));
 }
 
 <div
@@ -289,7 +289,7 @@ exports[`Storyshots interact|TextArea flat 1`] = `
     <p
       className="c1"
     >
-      Alias placeat a laboriosam. Quibusdam voluptas corrupti. Cupiditate et doloremque dicta facilis perferendis aliquid.
+      Ut doloribus quo non rerum voluptatem. Qui odit praesentium explicabo. Iusto dolor aut corrupti sunt quam voluptas.
     </p>
     <textarea
       className="c2"
@@ -300,12 +300,12 @@ exports[`Storyshots interact|TextArea flat 1`] = `
           "marginBottom": "1em",
         }
       }
-      value="Incidunt aut iusto. Eum voluptatem totam animi reiciendis velit commodi id est quidem. Et necessitatibus tempore ex tempora dolore iusto. Excepturi ipsa ut hic alias iste et autem nulla asperiores. Inventore voluptas sint et doloremque vel sunt alias dolor magnam."
+      value="Aut voluptates quidem voluptatem cum. Officia amet ea nobis delectus ex sed aut quas. Ad amet eum. Et qui quae enim qui alias vitae tempora suscipit ratione. Sed nihil eveniet magni officiis dolor."
     />
     <p
       className="c1"
     >
-      Sit voluptatibus aut officiis facilis qui dolorem impedit. Omnis numquam dolores voluptatum non.
+      Voluptatem rem quia dolorem voluptatibus dolores et commodi. Ad veniam molestiae voluptatibus.
     </p>
   </div>
 </div>
@@ -383,12 +383,6 @@ exports[`Storyshots interact|TextArea outlined 1`] = `
 exports[`Storyshots interact|TextArea purposes 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(350px));
 }
 
 .c2 {
@@ -805,6 +799,12 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
 .c9[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(350px));
 }
 
 <div

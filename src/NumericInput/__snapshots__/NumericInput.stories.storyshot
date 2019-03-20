@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Error porro ipsum cumque. Est placeat aliquam aperiam eligendi atque.
+      Quisquam officia non voluptatem atque nemo. Quis necessitatibus et sunt qui delectus optio dolores quasi molestiae.
     </p>
   </div>
 </div>
@@ -360,7 +360,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      nisi ut dolor omnis
+      culpa illo exercitationem unde
     </p>
     <div
       className="c2"
@@ -375,7 +375,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      quia et nisi est
+      non sed molestias at
     </p>
   </div>
 </div>
@@ -525,12 +525,6 @@ exports[`Storyshots interact|NumericInput outlined 1`] = `
 exports[`Storyshots interact|NumericInput purposes 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
 }
 
 .c2 {
@@ -1157,6 +1151,12 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
 <div
   className="c0"
 >
@@ -1242,11 +1242,6 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
 exports[`Storyshots interact|NumericInput sizes 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 .c4 {
@@ -1455,6 +1450,11 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
