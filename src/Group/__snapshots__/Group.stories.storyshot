@@ -38,11 +38,6 @@ input.c2 {
   transform-origin: left 25%;
 }
 
-.c7 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c8 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -95,6 +90,7 @@ input.c2 {
 
 .c18 .c5 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c5 {
@@ -149,14 +145,19 @@ input.c2 {
   font-size: 1.5em;
 }
 
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
 .c4 {
   width: 100%;
-  height: 0;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
   margin: 20px 20px;
 }
 
 .c3 {
-  font-size: 28px;
   color: #999;
   margin: 0;
 }
@@ -188,6 +189,10 @@ input.c2 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 <div
@@ -230,7 +235,9 @@ input.c2 {
       </svg>
     </span>
   </h1>
-  <div>
+  <div
+    className="c7"
+  >
     Dolorem expedita fuga aut qui id beatae id sit. Et qui praesentium sunt fugit ea accusantium a. Maiores qui iure maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
  
 Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
@@ -290,11 +297,6 @@ input.c2 {
   transform-origin: left 25%;
 }
 
-.c7 .c3 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c8 .c3 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -347,6 +349,7 @@ input.c2 {
 
 .c18 .c3 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c3 {
@@ -401,14 +404,19 @@ input.c2 {
   font-size: 1.5em;
 }
 
+.c32 .c3 {
+  font-size: 1.5em;
+}
+
 .c5 {
   width: 100%;
-  height: 0;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
   margin: 20px 20px;
 }
 
 .c6 {
-  font-size: 28px;
   color: #999;
   margin: 0;
 }
@@ -440,6 +448,10 @@ input.c2 {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 10px;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 <div
@@ -482,7 +494,9 @@ input.c2 {
       Configuration
     </span>
   </h1>
-  <div>
+  <div
+    className="c7"
+  >
     Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
  
 Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
@@ -499,7 +513,7 @@ exports[`Storyshots molecules|Group xy-inverted 1`] = `
   padding: 12px;
 }
 
-.c2 {
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -508,20 +522,20 @@ exports[`Storyshots molecules|Group xy-inverted 1`] = `
   margin: 1.25rem 0;
 }
 
-.c2:first-child {
+.c3:first-child {
   margin-top: 0;
 }
 
-.c2:last-child {
+.c3:last-child {
   margin-bottom: 0;
 }
 
-.c2,
-input.c2 {
+.c3,
+input.c3 {
   font-size: 1.5em;
 }
 
-.c2 .c3 {
+.c3 .c4 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -532,130 +546,131 @@ input.c2 {
   transform-origin: left 25%;
 }
 
-.c7 .c3 {
+.c8 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c8 .c3 {
+.c9 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c9 .c3 {
+.c10 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c10 .c3 {
+.c11 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c11 .c3 {
+.c12 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c12 .c3 {
+.c13 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c13 .c3 {
+.c14 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c14 .c3 {
+.c15 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c15 .c3 {
+.c16 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c16 .c3 {
+.c17 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c17 .c3 {
+.c18 .c4 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c3 {
+.c19 .c4 {
   font-size: 1.5em;
 }
 
-.c19 .c3 {
+.c20 .c4 {
   font-size: 1.5em;
 }
 
-.c20 .c3 {
+.c21 .c4 {
   font-size: 1.5em;
 }
 
-.c21 .c3 {
+.c22 .c4 {
   font-size: 1.5em;
 }
 
-.c22 .c3 {
+.c23 .c4 {
   font-size: 1.5em;
 }
 
-.c23 .c3 {
+.c24 .c4 {
   font-size: 1.5em;
 }
 
-.c24 .c3 {
+.c25 .c4 {
   font-size: 1.5em;
 }
 
-.c25 .c3 {
+.c26 .c4 {
   font-size: 1.5em;
 }
 
-.c26 .c3 {
+.c27 .c4 {
   font-size: 1.5em;
 }
 
-.c27 .c3 {
+.c28 .c4 {
   font-size: 1.5em;
 }
 
-.c28 .c3 {
+.c29 .c4 {
   font-size: 1.5em;
 }
 
-.c29 .c3 {
+.c30 .c4 {
   font-size: 1.5em;
 }
 
-.c30 .c3 {
+.c31 .c4 {
   font-size: 1.5em;
 }
 
-.c31 .c3 {
+.c32 .c4 {
   font-size: 1.5em;
-}
-
-.c5 {
-  width: 100%;
-  height: 0;
-  margin: 20px 20px;
 }
 
 .c6 {
-  font-size: 28px;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
+  margin: 20px 20px;
+}
+
+.c7 {
   color: #999;
   margin: 0;
 }
 
-.c4 {
+.c5 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -669,7 +684,7 @@ input.c2 {
   width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,10 +699,16 @@ input.c2 {
   margin-bottom: 10px;
 }
 
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
 <div
   className="c0"
 >
-  <div>
+  <div
+    className="c1"
+  >
     Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
  
 Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
@@ -697,11 +718,11 @@ Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molest
 Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
   </div>
   <h1
-    className="c1 c2"
+    className="c2 c3"
     type="header"
   >
     <span
-      className="c3 c4"
+      className="c4 c5"
       data-test="group-collapser"
       onClick={[Function]}
     >
@@ -725,10 +746,10 @@ Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit
       </svg>
     </span>
     <hr
-      className="c5"
+      className="c6"
     />
     <span
-      className="c6"
+      className="c7"
     >
       Configuration
     </span>
@@ -741,7 +762,7 @@ exports[`Storyshots molecules|Group y-inverted 1`] = `
   padding: 12px;
 }
 
-.c2 {
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -750,20 +771,20 @@ exports[`Storyshots molecules|Group y-inverted 1`] = `
   margin: 1.25rem 0;
 }
 
-.c2:first-child {
+.c3:first-child {
   margin-top: 0;
 }
 
-.c2:last-child {
+.c3:last-child {
   margin-bottom: 0;
 }
 
-.c2,
-input.c2 {
+.c3,
+input.c3 {
   font-size: 1.5em;
 }
 
-.c2 .c5 {
+.c3 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -774,130 +795,131 @@ input.c2 {
   transform-origin: left 25%;
 }
 
-.c7 .c5 {
+.c8 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c8 .c5 {
+.c9 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c9 .c5 {
+.c10 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c10 .c5 {
+.c11 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c11 .c5 {
+.c12 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c12 .c5 {
+.c13 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c13 .c5 {
+.c14 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c14 .c5 {
+.c15 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c15 .c5 {
+.c16 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c16 .c5 {
+.c17 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c17 .c5 {
+.c18 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c5 {
+.c19 .c6 {
   font-size: 1.5em;
 }
 
-.c19 .c5 {
+.c20 .c6 {
   font-size: 1.5em;
 }
 
-.c20 .c5 {
+.c21 .c6 {
   font-size: 1.5em;
 }
 
-.c21 .c5 {
+.c22 .c6 {
   font-size: 1.5em;
 }
 
-.c22 .c5 {
+.c23 .c6 {
   font-size: 1.5em;
 }
 
-.c23 .c5 {
+.c24 .c6 {
   font-size: 1.5em;
 }
 
-.c24 .c5 {
+.c25 .c6 {
   font-size: 1.5em;
 }
 
-.c25 .c5 {
+.c26 .c6 {
   font-size: 1.5em;
 }
 
-.c26 .c5 {
+.c27 .c6 {
   font-size: 1.5em;
 }
 
-.c27 .c5 {
+.c28 .c6 {
   font-size: 1.5em;
 }
 
-.c28 .c5 {
+.c29 .c6 {
   font-size: 1.5em;
 }
 
-.c29 .c5 {
+.c30 .c6 {
   font-size: 1.5em;
 }
 
-.c30 .c5 {
+.c31 .c6 {
   font-size: 1.5em;
 }
 
-.c31 .c5 {
+.c32 .c6 {
   font-size: 1.5em;
 }
 
-.c4 {
+.c5 {
   width: 100%;
-  height: 0;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
   margin: 20px 20px;
 }
 
-.c3 {
-  font-size: 28px;
+.c4 {
   color: #999;
   margin: 0;
 }
 
-.c6 {
+.c7 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -911,7 +933,7 @@ input.c2 {
   width: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -926,10 +948,16 @@ input.c2 {
   margin-bottom: 10px;
 }
 
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
 <div
   className="c0"
 >
-  <div>
+  <div
+    className="c1"
+  >
     Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
  
 Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
@@ -939,19 +967,19 @@ Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus invent
 Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
   </div>
   <h1
-    className="c1 c2"
+    className="c2 c3"
     type="header"
   >
     <span
-      className="c3"
+      className="c4"
     >
       Configuration
     </span>
     <hr
-      className="c4"
+      className="c5"
     />
     <span
-      className="c5 c6"
+      className="c6 c7"
       data-test="group-collapser"
       onClick={[Function]}
     >

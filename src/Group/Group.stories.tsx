@@ -12,12 +12,7 @@ import * as useGroupContextDocs from './docs/useGroupContext.md'
 
 storiesOf('molecules|Group', module)
   .add('default', () => (
-    <Group>
-      <Group.Header>
-        <Group.Title>Configuration</Group.Title>
-        <Group.Separator />
-        <Group.Collapser />
-      </Group.Header>
+    <Group header='Configuration'>
       <Group.Content>
         {Faker.lorem.paragraphs(4)}
       </Group.Content>

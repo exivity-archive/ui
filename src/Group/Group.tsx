@@ -8,12 +8,13 @@ import { fromTheme } from '../utils/styled'
 
 const GroupSeparator = styled.hr`
   width: 100%;
-  height: 0;
+  height: 1px;
+  background-color: ${fromTheme(theme => theme.colours.lightGray)};
+  border: 0;
   margin: 20px 20px;
 `
 
 const GroupTitle = styled.span`
-  font-size: 28px;
   color: ${fromTheme(theme => theme.colours.gray)};
   margin: 0;
 `
@@ -49,9 +50,13 @@ const GroupHeader: FC = ({ children }) => (
   <StyledGroupHeader>{children}</StyledGroupHeader>
 )
 
+const StyledGroupContent = styled.div`
+  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+`
+
 const GroupContent: FC = ({ children }) => {
   const { collapsed } = useGroupContext()
-  return collapsed ? null : <div>{children}</div>
+  return collapsed ? null : <StyledGroupContent>{children}</StyledGroupContent>
 }
 
 interface GroupSubComponents {
@@ -67,9 +72,10 @@ interface GroupProps {
   initialCollapsed?: boolean
   collapsed?: boolean
   toggleCollapse?: () => void
+  header?: string
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = false, collapsed, toggleCollapse, children }) => {
+export const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = false, collapsed, toggleCollapse, children, header }) => {
   const [uncontrolledCollapsed, setUncontrolledCollapsed] = useState(initialCollapsed)
 
   if (collapsed !== undefined && !toggleCollapse) {
@@ -83,7 +89,15 @@ export const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = 
     toggleCollapse
   }
 
-  return <GroupContext.Provider value={groupContext}>{children}</GroupContext.Provider>
+  const Header = header ? (
+    <GroupHeader>
+      <GroupTitle>{header}</GroupTitle>
+      <GroupSeparator />
+      <GroupCollapser />
+    </GroupHeader>
+  ) : null
+
+  return <GroupContext.Provider value={groupContext}>{Header}{children}</GroupContext.Provider>
 }
 
 Group.Header = GroupHeader
