@@ -7,18 +7,13 @@ export function useIsUncontrolled<T> (
 ): [T, (newValue: T) => void] {
   const uncontrolledState = useState(defaultValue)
 
-  const onlyControlledValueIsUndef = controlledValue !== undefined && controlledSetValue === undefined
-  const onlyControlledSetValueIsUndef = controlledValue === undefined && controlledSetValue !== undefined
-  const oneOfControlledIsUndef = onlyControlledValueIsUndef || onlyControlledSetValueIsUndef
-
-  if (oneOfControlledIsUndef) {
-    throw new Error(
-      'Either controlledValue or controlledSetValue is undefined while the other isn\'t. '
-      + 'They should either both be defined or both be undefined.'
-    )
+  if (controlledValue === undefined && controlledSetValue === undefined) {
+    return uncontrolledState
   } else if (controlledValue !== undefined && controlledSetValue !== undefined) {
     return [controlledValue, controlledSetValue]
-  } else {
-    return uncontrolledState
   }
+  throw new Error(
+    'Either controlledValue or controlledSetValue is undefined while the other isn\'t. '
+    + 'They should either both be defined or both be undefined.'
+  )
 }
