@@ -155,6 +155,10 @@ exports[`Storyshots atoms|Icon default 1`] = `
   font-size: 1.5em;
 }
 
+.c31 .c1 {
+  pointer-events: none;
+}
+
 <div
   className="c0"
 >

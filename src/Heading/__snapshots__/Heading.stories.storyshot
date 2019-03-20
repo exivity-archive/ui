@@ -247,6 +247,10 @@ input.c1:after {
   font-size: 1.5em;
 }
 
+.c31 .c2 {
+  pointer-events: none;
+}
+
 <div
   className="c0"
 >

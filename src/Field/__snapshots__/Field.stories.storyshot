@@ -437,14 +437,125 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding: 12px;
 }
 
-.c7 {
+.c21 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c28 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c29 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c30 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c31 .c11 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c32 .c11 {
+  font-size: 1.5em;
+}
+
+.c33 .c11 {
+  font-size: 1.5em;
+}
+
+.c34 .c11 {
+  font-size: 1.5em;
+}
+
+.c35 .c11 {
+  font-size: 1.5em;
+}
+
+.c36 .c11 {
+  font-size: 1.5em;
+}
+
+.c37 .c11 {
+  font-size: 1.5em;
+}
+
+.c38 .c11 {
+  font-size: 1.5em;
+}
+
+.c39 .c11 {
+  font-size: 1.5em;
+}
+
+.c40 .c11 {
+  font-size: 1.5em;
+}
+
+.c41 .c11 {
+  font-size: 1.5em;
+}
+
+.c42 .c11 {
+  font-size: 1.5em;
+}
+
+.c43 .c11 {
+  font-size: 1.5em;
+}
+
+.c44 .c11 {
+  font-size: 1.5em;
+}
+
+.c45 .c11 {
+  font-size: 1.5em;
+}
+
+.c19 {
   margin: 20px;
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
 
-.c7:after {
+.c19:after {
   position: relative;
   left: 5px;
   top: -30px;
@@ -461,7 +572,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   pointer-events: none;
 }
 
-.c8 {
+.c20 {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -478,8 +589,23 @@ exports[`Storyshots interact|Field multiple 1`] = `
   top: -5px;
 }
 
-.c8:focus {
+.c20:focus {
   outline: 0;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+}
+
+.c13 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+  min-width: 160px;
+  visibility: hidden;
 }
 
 .c4 {
@@ -542,7 +668,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding-bottom: unset;
 }
 
-.c9 .c3 {
+.c46 .c3 {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-flex-basis: auto;
@@ -550,15 +676,15 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: auto;
 }
 
-.c9 .c3 > .c3 {
+.c46 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c9 > *:not(.c3):not(:last-child) {
+.c46 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25;
 }
 
-.c10 .c3 {
+.c47 .c3 {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-flex-basis: 20em;
@@ -566,11 +692,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: 20em;
 }
 
-.c10 .c3 > .c3 {
+.c47 .c3 > .c3 {
   padding-bottom: unset;
 }
 
-.c10 > *:not(.c3):not(:last-child) {
+.c47 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25;
 }
 
@@ -662,6 +788,90 @@ exports[`Storyshots interact|Field multiple 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 .c11 {
+  pointer-events: none;
+}
+
+.c10 {
+  padding-right: 2.2em;
+}
+
+.c12 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c9[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  color: #999;
+}
+
+.c17 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c14 {
+  height: 100%;
+  width: 100%;
+}
+
+.c15 {
+  padding: 20px 0;
+}
+
+.c15 ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 <div
@@ -774,14 +984,125 @@ exports[`Storyshots interact|Field multiple 1`] = `
     >
       <label
         className="c3 c4"
+      >
+        Select a value
+      </label>
+      <div
+        className="c7"
+        data-test="dropdown"
+      >
+        <div
+          className="c8"
+          onClick={[Function]}
+        >
+          <input
+            className="c9 c10 c5"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Select with SelectList"
+            type="text"
+          />
+          <span
+            className="c11 c9 c12"
+            disabled={true}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c13"
+          data-test="dropdown-content"
+          open={false}
+        >
+          <div
+            className="c14"
+            onKeyDown={[Function]}
+          >
+            <div
+              className="c15"
+              onScroll={[Function]}
+              style={
+                Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "direction": "ltr",
+                  "height": 30,
+                  "overflow": "auto",
+                  "position": "relative",
+                  "width": "100%",
+                  "willChange": "transform",
+                }
+              }
+            >
+              <ul
+                style={
+                  Object {
+                    "height": 30,
+                    "pointerEvents": "",
+                    "width": "100%",
+                  }
+                }
+              >
+                <li
+                  className="c16"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 20,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c17"
+                  >
+                    <div
+                      className="c18"
+                    >
+                      No items in this list...
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c6"
+    >
+      <label
+        className="c3 c4"
       />
       <div
         checked={true}
-        className="c7"
+        className="c19"
       >
         <input
           checked={true}
-          className="c8"
+          className="c20"
           onChange={[Function]}
           onClick={[Function]}
           type="checkbox"

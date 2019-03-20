@@ -4,6 +4,8 @@ import { Checkbox } from '../Checkbox'
 import { Field } from '.'
 import { TextInput } from '../TextInput'
 import { Label } from '../Label'
+import { Select } from '../Select'
+import { SelectList } from '../SelectList'
 
 storiesOf('interact|Field', module)
   .add('default', () => <Field>
@@ -45,6 +47,12 @@ storiesOf('interact|Field', module)
           <Label>We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.</Label>
         </Label>
         <TextInput id='email2' placeholder='Please type email address'/>
+      </Field>
+      <Field>
+        <Label>Select a value</Label>
+        <Select placeholder='Select with SelectList'>
+          <SelectList data={[]}/>
+        </Select>
       </Field>
       <Field>
         <Label/>
