@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { FixedSizeList } from 'react-window'
 import { MdAdd, MdRemove } from 'react-icons/md'
 
 import { storiesOf } from '@storybook/react'
@@ -9,7 +8,7 @@ import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
 
-import { StyledList } from '../Select/Select'
+import { StyledList } from '../SelectList/SelectList'
 import { ListFocus } from '../ListFocus'
 import { ListItem } from '../ListItem'
 import { Button } from '../Button'

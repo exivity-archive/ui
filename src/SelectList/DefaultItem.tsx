@@ -5,13 +5,10 @@ import { ListItem, CenterText } from '../ListItem'
 import { NO_DATA_KEY } from './helpers'
 
 export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, style }) => {
-  const { items, setIsOpen, onChange } = data
+  const { items, onChange } = data
   const item = items[index]
 
-  const handleOnClick = () => {
-    setIsOpen(false)
-    onChange && onChange(item)
-  }
+  const handleOnClick = () => onChange && onChange(item)
 
   const newStyle = {
     ...style,
