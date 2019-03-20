@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { globalFont, StyledProps } from '../utils/styled'
 
-export interface {Component}Props extends StyledProps {
+export interface RadioProps extends StyledProps {
   someFlag?: boolean
 }
 
-export const {Component} = styled.div<{Component}Props>`
+export const Radio = styled.div<RadioProps>`
   ${globalFont};
 
   color: ${props => props.someFlag ? 'red' : 'green'};
 `
 
-{Component}.displayName = '{Component}'
+Radio.displayName = 'Radio'
