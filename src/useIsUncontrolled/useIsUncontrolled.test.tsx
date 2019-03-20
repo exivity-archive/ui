@@ -33,7 +33,10 @@ test('If only the open parameter is given it throws an error', () => {
   } catch (error) {
     message = error.message
   }
-  expect(message).toBe('If useIsUncontrolled takes in a defined controlledValue, the controlledSetValue should also be defined')
+  expect(message).toBe(
+    'Either controlledValue or controlledSetValue is undefined while the other isn\'t. '
+    + 'They should either both be defined or both be undefined.'
+  )
 })
 
 test('If only the setOpen parameter is given it throws an error', () => {
@@ -43,7 +46,10 @@ test('If only the setOpen parameter is given it throws an error', () => {
   } catch (error) {
     message = error.message
   }
-  expect(message).toBe('If useIsUncontrolled takes in a defined controlledSetValue, the controlledValue should also be defined')
+  expect(message).toBe(
+    'Either controlledValue or controlledSetValue is undefined while the other isn\'t. '
+    + 'They should either both be defined or both be undefined.'
+  )
 })
 
 test('It uses controlled value-setter when both are given', () => {
