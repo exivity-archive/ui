@@ -571,6 +571,40 @@ exports[`Storyshots molecules/Select custom noDataText 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  color: #999;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -621,40 +655,6 @@ exports[`Storyshots molecules/Select custom noDataText 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  color: #999;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {
@@ -959,12 +959,6 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
 .c2 {
   position: relative;
 }
@@ -977,6 +971,45 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c11:hover,
+.c11:focus {
+  background-color: #eee;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c6 {
@@ -1395,45 +1428,6 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c11:hover,
-.c11:focus {
-  background-color: #eee;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
 .c3 {
   position: relative;
   display: -webkit-box;
@@ -1477,6 +1471,12 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
 }
 
 <div
@@ -3076,6 +3076,45 @@ exports[`Storyshots molecules/Select default 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c10:hover,
+.c10:focus {
+  background-color: #eee;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -3126,45 +3165,6 @@ exports[`Storyshots molecules/Select default 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c10:hover,
-.c10:focus {
-  background-color: #eee;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {
@@ -3559,6 +3559,45 @@ exports[`Storyshots molecules/Select long 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c10:hover,
+.c10:focus {
+  background-color: #eee;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -3609,45 +3648,6 @@ exports[`Storyshots molecules/Select long 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c10:hover,
-.c10:focus {
-  background-color: #eee;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {
@@ -4267,6 +4267,40 @@ exports[`Storyshots molecules/Select no data 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  color: #999;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -4317,40 +4351,6 @@ exports[`Storyshots molecules/Select no data 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  color: #999;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {

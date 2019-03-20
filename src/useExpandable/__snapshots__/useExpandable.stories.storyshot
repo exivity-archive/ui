@@ -349,11 +349,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 0 20px;
 }
 
-.c41 .c6 {
-  margin-left: 20px;
-}
-
-.c42 .c8 {
+.c41 .c8 {
   pointer-events: none;
 }
 
@@ -418,6 +414,10 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c42 .c6 {
+  margin-left: 20px;
 }
 
 .c10 {
@@ -1849,11 +1849,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 0 20px;
 }
 
-.c47 .c6 {
-  margin-left: 20px;
-}
-
-.c48 .c8 {
+.c47 .c8 {
   pointer-events: none;
 }
 
@@ -1994,6 +1990,10 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c48 .c6 {
+  margin-left: 20px;
 }
 
 .c10 {

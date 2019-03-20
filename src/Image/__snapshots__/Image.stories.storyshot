@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|Image default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+>
+  <img
+    className=""
+  />
+</div>
+`;
