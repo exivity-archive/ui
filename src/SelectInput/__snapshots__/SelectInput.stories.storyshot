@@ -151,6 +151,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 
 .c2 {
   position: relative;
+  width: 100%;
 }
 
 .c9 {
