@@ -50,6 +50,7 @@ export const StyledCheckbox = styled.input`
       display: block;
       width: 1em;
       height: 1em;
+      box-sizing: border-box;
       will-change: transform, background-color, color;
       transition: ${animationSpeed} all ease;
     }
@@ -78,10 +79,6 @@ export const StyledCheckbox = styled.input`
     ${props => props.type === 'radio' && css`
       &::after {
         content: " ";
-        top: .25em;
-        left: .25em;
-        width: 0.5em;
-        height: 0.5em;
         background: ${fromTheme(theme => theme.colours.dark)};
         border: .2em solid ${fromTheme(theme => theme.colours.lightGray)};
         border-radius: 50%;
