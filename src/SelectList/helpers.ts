@@ -1,4 +1,4 @@
-import { SelectItem } from './Select'
+import { SelectListItem } from './SelectList'
 
 export const NB_OF_ITEMS = 10
 export const ITEM_HEIGHT = 30
@@ -12,16 +12,10 @@ export const calculateHeight = (data: any[]) => {
   return totalHeight < MAX_HEIGHT ? totalHeight : MAX_HEIGHT
 }
 
-export const getSelectedItem = (key: string | undefined, data: SelectItem[]) => {
-  return data.find((item) => item.key === key)
-}
-
-export const getNoDataPlaceholder = (data: SelectItem[], noDataText?: string): SelectItem[] => {
+export const getNoDataPlaceholder = (data: SelectListItem[], noDataText?: string): SelectListItem[] => {
   if (!data.length) {
     return [{ key: NO_DATA_KEY, value: noDataText ? noDataText : NO_DATA_TEXT }]
   }
 
   return data
 }
-
-export const emptyFn = () => ({})

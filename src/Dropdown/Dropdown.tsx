@@ -9,10 +9,12 @@ import {
   Rects,
   makeCssPosition
 } from './helpers'
+
 import { fromTheme } from '../utils/styled'
 
 const StyledDropdown = styled.div`
   position: relative;
+  width: 100%;
 `
 
 interface ContentProps {
