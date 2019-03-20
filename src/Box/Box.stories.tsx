@@ -30,7 +30,7 @@ storiesOf('molecules|Box', module)
     </Box>
   ))
   .add('flipped collapsible', () => (
-    <Box initialCollapsed>
+    <Box initialCollapsed={false}>
       <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
       <Box.Bar>Hi</Box.Bar>
     </Box>

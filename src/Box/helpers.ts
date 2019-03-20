@@ -4,7 +4,6 @@ export interface BoxContextShape {
   collapsed: boolean
   setCollapsed: (newValue: boolean) => void
   collapsible: boolean
-  setCollapsible: (newValue: boolean) => void
 }
 
 export const BoxContext = createContext<BoxContextShape | null>(null)

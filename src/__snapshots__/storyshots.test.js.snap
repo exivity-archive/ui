@@ -20078,7 +20078,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   padding: 12px;
 }
 
-.c3 {
+.c4 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -20089,7 +20089,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   user-select: none;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20108,6 +20108,10 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   justify-content: space-between;
 }
 
+.c2 {
+  padding: 0 1.25;
+}
+
 .c1 {
   box-sizing: border-box;
   width: 100%;
@@ -20115,8 +20119,6 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
   border: 2px solid #F4F4F4;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  height: 62px;
-  border-radius: 3px;
 }
 
 <div
@@ -20128,9 +20130,20 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
     <div
       className="c2"
     >
+      Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+ 
+Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+ 
+Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
+ 
+Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
+    </div>
+    <div
+      className="c3"
+    >
       Hi
       <span
-        className="c3"
+        className="c4"
         data-test="box-collapser"
         onClick={[Function]}
       >
@@ -20149,7 +20162,7 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
           />
         </svg>
       </span>

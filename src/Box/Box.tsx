@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
 import { Icon } from '../Icon'
@@ -33,8 +33,6 @@ export const BoxBar: FC = ({ children }) => {
   function toggleCollapsed () {
     setCollapsed(!collapsed)
   }
-
-  console.log(collapsible)
 
   return (
     <StyledBoxBar collapsible={collapsible}>
@@ -98,18 +96,16 @@ export const Box: FC<BoxProps> & BoxSubComponents = ({ children, ...rest }) => {
   const recievesStateProps = rest.collapsed !== undefined || rest.initialCollapsed !== undefined
 
   const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
-  const [collapsible, setCollapsible] = useState(recievesStateProps)
 
   const boxContext: BoxContextShape = {
     collapsed,
     setCollapsed,
-    collapsible,
-    setCollapsible
+    collapsible: recievesStateProps
   }
 
   return (
     <BoxContext.Provider value={boxContext}>
-      <StyledBox collapsed={boxContext.collapsed}>
+      <StyledBox collapsed={collapsed}>
         {children}
       </StyledBox>
     </BoxContext.Provider >
