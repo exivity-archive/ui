@@ -35,7 +35,7 @@ storiesOf('interact|Field', module)
         <TextInput id='name' placeholder='Please type full name'/>
       </Field>
     </Field.Container>
-    <Field.Container horizontal align='40%'>
+    <Field.Container horizontal align='30em'>
       <Field>
         <Label htmlFor='username2'>Username</Label>
         <TextInput id='username2' placeholder='Please type username'/>
@@ -47,8 +47,8 @@ storiesOf('interact|Field', module)
         <TextInput id='email2' placeholder='Please type email address'/>
       </Field>
       <Field>
-        <Label/>
-        <Checkbox checked/>
+        <Label>Privacy consent</Label>
+        <Checkbox label='I want cookies' checked />
       </Field>
     </Field.Container>
   </React.Fragment>)

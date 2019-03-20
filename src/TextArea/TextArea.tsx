@@ -19,5 +19,8 @@ export const StyledTextArea = styled.textarea<{ width?: string }>`
 `
 
 export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
-  <StyledTextArea onChange={(event) => onChange && onChange(event.target.value, event)} {...rest}/>
+  <StyledTextArea
+    onChange={(event) => onChange && onChange(event.target.value, event)}
+    {...rest}
+  />
 )

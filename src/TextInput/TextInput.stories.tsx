@@ -2,6 +2,7 @@ import React from 'react'
 import faker from 'faker'
 
 import { storiesOf } from '@storybook/react'
+import { Block } from '../Block'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -21,10 +22,17 @@ storiesOf('interact|TextInput', module)
     required
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('inlined', () => <div>
-    <Paragraph>{faker.lorem.words(4)}</Paragraph>
-    <TextInput inlined value={faker.lorem.words(4)} style={{ marginBottom: '1em' }} />
-    <Paragraph>{faker.lorem.words(4)}</Paragraph>
+  .add('inline', () => <Paragraph>
+    {faker.lorem.words(4)}{' '}
+    <TextInput inline value={faker.lorem.words(4)} />{' '}
+    {faker.lorem.words(8)}
+  </Paragraph>)
+  .add('flat', () => <div>
+    <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
+    <Block>
+      <TextInput flat value={faker.lorem.words(4)} />
+    </Block>
+    <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4}>
       <TextInput primary value='Primary' />
@@ -35,19 +43,20 @@ storiesOf('interact|TextInput', module)
       <TextInput outlined secondary value='Secondary' />
       <TextInput outlined success value='Success' />
       <TextInput outlined danger value='Danger' />
-      <TextInput inlined primary value='Primary' />
-      <TextInput inlined secondary value='Secondary' />
-      <TextInput inlined success value='Success' />
-      <TextInput inlined danger value='Danger' />
+      <TextInput flat primary value='Primary' />
+      <TextInput flat secondary value='Secondary' />
+      <TextInput flat success value='Success' />
+      <TextInput flat danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
     <TextInput tiny value='Tiny' />
     <TextInput small value='Small' />
     <TextInput value='Default' />
     <TextInput large value='Large' />
+    <TextInput huge value='Huge' />
   </Row>)
   .add('disabled', () => <TextInput disabled value='Disabled' />)
   .add('as heading', () => <div>
-    <Heading type='section' value='Editable heading' inlined as={TextInput} />
+    <Heading type='section' value='Editable heading' flat as={TextInput} />
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
