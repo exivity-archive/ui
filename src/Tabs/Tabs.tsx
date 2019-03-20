@@ -33,6 +33,10 @@ const Tab = styled.li<TabProps>`
   ${({ isActive }) => isActive && css`
     color: #6F6F6F;
     border-bottom: 4px solid #ccc;
+
+    &:focus {
+      border-bottom-color: #6F6F6F;
+    }
   `}
 `
 
@@ -63,7 +67,7 @@ const TabList: FC<TabListProps> = ({ children }) => {
       {React.Children.map(children, (child, index) => (
         child && React.cloneElement(child as any, {
           isActive: activeIndex === index,
-          tabIndex: -1,
+          tabIndex: activeIndex === index ? 0 : -1,
           onFocus,
           onBlur: () => { setFocused(false) },
           onKeyDown,
