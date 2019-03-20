@@ -1,14 +1,5 @@
-import styled from 'styled-components'
-import { globalFont, StyledProps } from '../utils/styled'
+import React from 'react'
 
-export interface RadioProps extends StyledProps {
-  someFlag?: boolean
-}
+import { Checkbox, CheckboxProps } from '../Checkbox'
 
-export const Radio = styled.div<RadioProps>`
-  ${globalFont};
-
-  color: ${props => props.someFlag ? 'red' : 'green'};
-`
-
-Radio.displayName = 'Radio'
+export const Radio = (props: CheckboxProps) => <Checkbox radio {...props} />
