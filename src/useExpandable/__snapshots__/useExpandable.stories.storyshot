@@ -314,8 +314,9 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   margin-right: 0.625em;
 }
 
-.c41 .c9 {
-  pointer-events: none;
+.c1 {
+  height: 100%;
+  width: 100%;
 }
 
 .c3 {
@@ -345,9 +346,8 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 0 20px;
 }
 
-.c1 {
-  height: 100%;
-  width: 100%;
+.c41 .c9 {
+  pointer-events: none;
 }
 
 .c2 {
@@ -358,10 +358,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.c42 .c7 {
-  margin-left: 20px;
 }
 
 .c5 {
@@ -413,6 +409,10 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c42 .c7 {
+  margin-left: 20px;
 }
 
 .c11 {
@@ -1841,8 +1841,9 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   margin-right: 0.625em;
 }
 
-.c44 .c9 {
-  pointer-events: none;
+.c1 {
+  height: 100%;
+  width: 100%;
 }
 
 .c3 {
@@ -1872,9 +1873,8 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 0 20px;
 }
 
-.c1 {
-  height: 100%;
-  width: 100%;
+.c44 .c9 {
+  pointer-events: none;
 }
 
 .c2 {
@@ -1885,10 +1885,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.c45 .c7 {
-  margin-left: 20px;
 }
 
 .c5 {
@@ -1976,6 +1972,10 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c45 .c7 {
+  margin-left: 20px;
 }
 
 .c11 {

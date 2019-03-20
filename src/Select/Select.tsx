@@ -17,7 +17,7 @@ export interface SelectProps {
   valueComponent?: React.ReactElement<any>
   useTriggerComponentWidth?: boolean
   onChange?: (value: any) => void
-  children: React.FunctionComponentElement<any>
+  children: any
 }
 
 export const injectComponent = (component: React.ReactElement<any>, props: InjectValueAndHandler) => {
