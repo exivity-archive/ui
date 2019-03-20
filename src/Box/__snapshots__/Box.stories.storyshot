@@ -68,7 +68,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
     <div
       className="c2"
     >
-      Hi
+      Notifications
       <span
         className="c3 c4"
         data-test="container-collapser"
@@ -159,7 +159,7 @@ exports[`Storyshots molecules|Box default 1`] = `
     <div
       className="c2"
     >
-      Hi
+      Notifications
     </div>
     <div
       className="c3"
@@ -241,7 +241,7 @@ Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In invento
     <div
       className="c4"
     >
-      Hi
+      Notifications
     </div>
   </div>
 </div>
@@ -330,7 +330,7 @@ Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetu
     <div
       className="c4"
     >
-      Hi
+      Notifications
       <span
         className="c5 c6"
         data-test="container-collapser"

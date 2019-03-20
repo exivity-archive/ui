@@ -11,7 +11,7 @@ import {
 import { Icon } from '../Icon'
 
 const GroupIcon = styled(Icon)`
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 30px;
 `
 
@@ -54,7 +54,7 @@ interface GroupProps extends CollapsibleContainerProps {
   header?: string
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, ...rest }) => {
+export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, initialCollapsed = false, ...rest }) => {
   const Header = header ? (
     <Group.Header>
       <Group.Title>{header}</Group.Title>
@@ -63,7 +63,7 @@ export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, .
     </Group.Header>
   ) : null
 
-  return <CollapsibleContainer {...rest} initialCollapsed={false}>{Header}{children}</CollapsibleContainer>
+  return <CollapsibleContainer {...rest} initialCollapsed={initialCollapsed}>{Header}{children}</CollapsibleContainer>
 }
 
 Group.Header = GroupHeader

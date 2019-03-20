@@ -19,22 +19,6 @@ storiesOf('molecules|Group', module)
       </Group.Content>
     </Group>
   ))
-  .add('icons', () => (
-    <Group>
-      <Group.Header>
-        <Group.Title>Configuration</Group.Title>
-        <Group.Separator />
-        <Group.Separator />
-        <Group.Icon><MdMail /></Group.Icon>
-        <Group.Icon><MdNotifications /></Group.Icon>
-        <Group.Icon><MdAccountBox /></Group.Icon>
-        <Group.Separator />
-      </Group.Header>
-      <Group.Content>
-        {Faker.lorem.paragraphs(4)}
-      </Group.Content>
-    </Group>
-  ))
   .add('x-inverted', () => (
     <Group>
       <Group.Header>
@@ -69,6 +53,22 @@ storiesOf('molecules|Group', module)
         <Group.Separator />
         <Group.Title>Configuration</Group.Title>
       </Group.Header>
+    </Group>
+  ))
+  .add('icons', () => (
+    <Group>
+      <Group.Header>
+        <Group.Title>Configuration</Group.Title>
+        <Group.Separator />
+        <Group.Separator />
+        <Group.Icon><MdMail /></Group.Icon>
+        <Group.Icon><MdNotifications /></Group.Icon>
+        <Group.Icon><MdAccountBox /></Group.Icon>
+        <Group.Separator />
+      </Group.Header>
+      <Group.Content>
+        {Faker.lorem.paragraphs(4)}
+      </Group.Content>
     </Group>
   ))
   .add('helpers', () => (
