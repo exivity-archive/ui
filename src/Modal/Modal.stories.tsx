@@ -1,7 +1,6 @@
 import React from 'react'
 import Faker from 'faker'
 
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { Modal } from './'
 import { Button } from '../Button'

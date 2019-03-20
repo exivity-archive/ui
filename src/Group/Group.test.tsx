@@ -4,6 +4,26 @@ import { shallow, mount } from 'enzyme'
 import { Group } from '.'
 import { GroupContext } from './helpers'
 
+test('group collapser should throw an error when rendered outside a box component', () => {
+  let message: string
+  try {
+    mount(<Group.Collapser></Group.Collapser>)
+  } catch (error) {
+    message = error.message
+  }
+  expect(message).toBe('useGroupContext should only be called within a child of a Group component')
+})
+
+test('group content should throw an error when rendered outside a box component', () => {
+  let message: string
+  try {
+    mount(<Group.Content></Group.Content>)
+  } catch (error) {
+    message = error.message
+  }
+  expect(message).toBe('useGroupContext should only be called within a child of a Group component')
+})
+
 test('When group gets a collapsed prop it requires a toggleCollapse prop', () => {
   let message: string
   try {

@@ -1,49 +1,62 @@
-import faker from 'faker'
 import React from 'react'
-// @ts-ignore
+import faker from 'faker'
+
 import { storiesOf } from '@storybook/react'
+import { Block } from '../Block'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
-import { mockFn } from '../utils/stories/mocks'
 
-storiesOf('forms|TextInput', module)
+storiesOf('interact|TextInput', module)
   .addDecorator(withState(''))
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
-  .add('outlined', () => <TextInput onChange={mockFn} outlined value='Outlined' />)
-  .add('inlined', () => <div>
-    <Paragraph>{faker.lorem.words(4)}</Paragraph>
-    <TextInput inlined value={faker.lorem.words(4)} style={{ marginBottom: '1em' }} />
-    <Paragraph>{faker.lorem.words(4)}</Paragraph>
+  .add('required', ({ state, storeState }: any) => <TextInput
+    placeholder='Type something...'
+    required
+    value={state}
+    onChange={storeAndAction(storeState, 'onChange')} />)
+  .add('inline', () => <Paragraph>
+    {faker.lorem.words(4)}{' '}
+    <TextInput inline value={faker.lorem.words(4)} />{' '}
+    {faker.lorem.words(8)}
+  </Paragraph>)
+  .add('flat', () => <div>
+    <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
+    <Block>
+      <TextInput flat value={faker.lorem.words(4)} />
+    </Block>
+    <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4}>
-      <TextInput onChange={mockFn} primary value='Primary' />
-      <TextInput onChange={mockFn} secondary value='Secondary' />
-      <TextInput onChange={mockFn} success value='Success' />
-      <TextInput onChange={mockFn} danger value='Danger' />
-      <TextInput onChange={mockFn} outlined primary value='Primary' />
-      <TextInput onChange={mockFn} outlined secondary value='Secondary' />
-      <TextInput onChange={mockFn} outlined success value='Success' />
-      <TextInput onChange={mockFn} outlined danger value='Danger' />
-      <TextInput onChange={mockFn} inlined primary value='Primary' />
-      <TextInput onChange={mockFn} inlined secondary value='Secondary' />
-      <TextInput onChange={mockFn} inlined success value='Success' />
-      <TextInput onChange={mockFn} inlined danger value='Danger' />
+      <TextInput primary value='Primary' />
+      <TextInput secondary value='Secondary' />
+      <TextInput success value='Success' />
+      <TextInput danger value='Danger' />
+      <TextInput outlined primary value='Primary' />
+      <TextInput outlined secondary value='Secondary' />
+      <TextInput outlined success value='Success' />
+      <TextInput outlined danger value='Danger' />
+      <TextInput flat primary value='Primary' />
+      <TextInput flat secondary value='Secondary' />
+      <TextInput flat success value='Success' />
+      <TextInput flat danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
-    <TextInput onChange={mockFn} tiny value='Tiny' />
-    <TextInput onChange={mockFn} small value='Small' />
-    <TextInput onChange={mockFn} value='Default' />
-    <TextInput onChange={mockFn} large value='Large' />
+    <TextInput tiny value='Tiny' />
+    <TextInput small value='Small' />
+    <TextInput value='Default' />
+    <TextInput large value='Large' />
+    <TextInput huge value='Huge' />
   </Row>)
-  .add('disabled', () => <TextInput onChange={mockFn} disabled value='Disabled' />)
+  .add('disabled', () => <TextInput disabled value='Disabled' />)
   .add('as heading', () => <div>
-    <Heading type='section' value='Editable heading' inlined as={TextInput} />
+    <Heading type='section' value='Editable heading' flat as={TextInput} />
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)

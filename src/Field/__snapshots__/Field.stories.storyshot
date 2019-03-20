@@ -1,0 +1,897 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|Field align 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c3 > .c2 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c5 > .c2:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c5 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c6 > .c2:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c6 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c6 > *:not(.c2):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 > .c2:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c1 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c1 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 > *:not(.c2):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2 c3"
+      htmlFor="username"
+    >
+      Username
+    </label>
+    <input
+      className="c4"
+      id="username"
+      onChange={[Function]}
+      placeholder="Please type username"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Field default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c3 > .c2 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 > .c2:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c1 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2 c3"
+      htmlFor="username"
+    >
+      Username
+    </label>
+    <input
+      className="c4"
+      id="username"
+      onChange={[Function]}
+      placeholder="Please type username"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Field horizontal 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c3 > .c2 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c5 > .c2:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c5 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c1:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 > .c2:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c1 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c1 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c1 > *:not(.c2):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c4:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c4:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c4::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c4[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <label
+      className="c2 c3"
+      htmlFor="username"
+    >
+      Username
+    </label>
+    <input
+      className="c4"
+      id="username"
+      onChange={[Function]}
+      placeholder="Please type username"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Field multiple 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c4 > .c3 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.c7 + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+  line-height: 1em;
+  height: 1em;
+}
+
+.c7 + label:empty {
+  padding: 0 0 0 1em;
+}
+
+.c7 + label::before,
+.c7 + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  -webkit-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+.c7 + label::before {
+  content: " ";
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.c7 + label::after {
+  content: "\\2714";
+  color: #2c3e50;
+  line-height: 1.1em;
+  text-align: center;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c7:checked + label::after {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: unset;
+  -webkit-box-align: unset;
+  -ms-flex-align: unset;
+  align-items: unset;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c2:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c2 > .c3:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c2 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c8 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c8 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c8 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c9 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c9 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c9 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  white-space: unset;
+}
+
+.c6:not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c6 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
+}
+
+.c6 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c6 > * {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c6 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <label
+        className="c3 c4"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        className="c5"
+        id="username"
+        onChange={[Function]}
+        placeholder="Please type username"
+        type="text"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <label
+        className="c3 c4"
+        htmlFor="email"
+      >
+        Email address
+        <label
+          className="c3 c4"
+        >
+          We will never sell your email address and we will never spam you!
+        </label>
+      </label>
+      <input
+        className="c5"
+        id="email"
+        onChange={[Function]}
+        placeholder="Please type email address"
+        type="text"
+      />
+    </div>
+    <div
+      className="c2"
+    >
+      <label
+        className="c3 c4"
+        htmlFor="name"
+      >
+        Receive newsletter
+      </label>
+      <input
+        className="c5"
+        id="name"
+        onChange={[Function]}
+        placeholder="Please type full name"
+        type="text"
+      />
+    </div>
+  </div>
+  <div
+    className="c1"
+  >
+    <div
+      className="c6"
+    >
+      <label
+        className="c3 c4"
+        htmlFor="username2"
+      >
+        Username
+      </label>
+      <input
+        className="c5"
+        id="username2"
+        onChange={[Function]}
+        placeholder="Please type username"
+        type="text"
+      />
+    </div>
+    <div
+      className="c6"
+    >
+      <label
+        className="c3 c4"
+        htmlFor="email2"
+      >
+        Email address
+        <label
+          className="c3 c4"
+        >
+          We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.
+        </label>
+      </label>
+      <input
+        className="c5"
+        id="email2"
+        onChange={[Function]}
+        placeholder="Please type email address"
+        type="text"
+      />
+    </div>
+    <div
+      className="c6"
+    >
+      <label
+        className="c3 c4"
+      >
+        Privacy consent
+      </label>
+      <span>
+        <input
+          checked={true}
+          className="c7"
+          id="3"
+          onChange={[Function]}
+          type="checkbox"
+        />
+        <label
+          className="c3 c4"
+          htmlFor="3"
+        >
+          I want cookies
+        </label>
+      </span>
+    </div>
+  </div>
+</div>
+`;

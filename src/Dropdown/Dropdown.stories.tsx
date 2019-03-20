@@ -1,6 +1,5 @@
 import React from 'react'
 import Faker from 'faker'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Dropdown } from '.'

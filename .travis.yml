@@ -27,7 +27,6 @@ jobs:
         - ./cc-test-reporter before-build
       script: yarn test
       after_script:
-        - codecov
         - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
     - name: "smoke"
       script: yarn test:smoke

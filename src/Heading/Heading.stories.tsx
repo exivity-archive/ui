@@ -1,6 +1,5 @@
 import React from 'react'
 import faker from 'faker'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 import { MdFavorite } from 'react-icons/md'
 
