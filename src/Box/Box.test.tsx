@@ -4,6 +4,26 @@ import { mount } from 'enzyme'
 import { Box } from './Box'
 import { BoxContext } from './helpers'
 
+test('box bar should throw an error when rendered outside a box component', () => {
+  let message: string
+  try {
+    mount(<Box.Bar></Box.Bar>)
+  } catch (error) {
+    message = error.message
+  }
+  expect(message).toBe('useBoxContext should only be called within a child of a Box component')
+})
+
+test('box content should throw an error when rendered outside a box component', () => {
+  let message: string
+  try {
+    mount(<Box.Content></Box.Content>)
+  } catch (error) {
+    message = error.message
+  }
+  expect(message).toBe('useBoxContext should only be called within a child of a Box component')
+})
+
 test('collapser shouldn\'t be visible when no props are given', () => {
   const box = mount(
     <Box><Box.Bar />

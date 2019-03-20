@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|Paragraph default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    Nihil sed quis neque ex quidem inventore. Harum nesciunt impedit iure. Quas est dolorem ipsum iste voluptatem consequatur.
+ 
+Officiis omnis sit voluptatibus. Earum molestiae laboriosam dolores eligendi neque. Nisi eum voluptatem nulla nulla iste et tempore. Et est consequatur ratione quo molestias. Exercitationem consectetur eos eos tempore vel harum.
+ 
+Veritatis rem aut. Voluptatibus hic est facilis alias voluptatem rem rerum ut error. Totam et molestiae et animi veritatis pariatur. Facere quos culpa velit molestiae. Et corrupti doloribus veritatis illo.
+ 
+Hic nihil facere odit. Fuga qui quae. Veniam facilis veritatis nam nihil tempora libero vitae vel sunt.
+  </p>
+</div>
+`;

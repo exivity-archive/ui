@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules|Dropdown default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c2 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+<div
+  className="c0"
+>
+  <div
+    style={
+      Object {
+        "padding": "300px 0",
+      }
+    }
+  >
+    <div
+      className="c1"
+      data-test="dropdown"
+    >
+      <div
+        onClick={[Function]}
+      >
+        Click me
+      </div>
+      <div
+        className="c2"
+        data-test="dropdown-content"
+        open={false}
+      >
+        <div
+          style={
+            Object {
+              "width": 500,
+            }
+          }
+        >
+          Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
+ 
+Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
