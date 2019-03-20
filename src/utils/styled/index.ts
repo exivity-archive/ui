@@ -17,7 +17,7 @@ export const defaultStyledProps = {
   theme: defaultTheme
 }
 
-export interface BlockProps {
+export interface SectionProps {
   noMargin?: boolean
 }
 
@@ -63,9 +63,9 @@ export const hexToString = (hex: string) => {
   }
 }
 
-export const globalBlockSpacing = css`
-  margin: ${(props: BlockProps & StyledProps) => props.noMargin
-    ? 0 : fromTheme(theme => theme.global.spacing)(props)}rem 0;
+export const globalSectionSpacing = css`
+  margin: ${(props: SectionProps & StyledProps) => props.noMargin
+    ? 0 : fromTheme(theme => theme.global.baseSpacing)(props)}rem 0;
 
   &:first-child {
     margin-top: 0;

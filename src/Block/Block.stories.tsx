@@ -1,12 +1,21 @@
-import React from 'react'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
+import React from 'react'
 
 import { Block } from '.'
-import { Button } from '../Button'
+import { Code } from '../Code'
+import { Text } from '../Text'
 
 storiesOf('atoms|Block', module)
-  .add('default', () => <>
-    <Block><Button>Action</Button></Block>
-    <Block><Button>Another action</Button></Block>
-  </>)
+  .add('default', () => (
+    <Block>
+      <Text>I'm Jenny from the <Code>&lt;Block/&gt;</Code></Text>
+    </Block>
+  ))
+  .add('dimensions', () => (
+    <Block width={100} height={100} bg='blue' />
+  ))
+  .add('padding', () => (
+    <Block width={3 / 4} px={2} py={1} bg='yellow'>
+      <Text color='red'>Padding and foreground color</Text>
+    </Block>
+  ))

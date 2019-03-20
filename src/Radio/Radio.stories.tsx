@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Block } from '../Block'
+import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
@@ -10,18 +10,18 @@ storiesOf('interact|Radio', module)
   .addDecorator(withState(1))
   .add('default', () => (
     <>
-      <Block><Radio checked={true} /></Block>
-      <Block><Radio checked={false} /></Block>
+      <Section><Radio checked={true} /></Section>
+      <Section><Radio checked={false} /></Section>
     </>
   ))
   .add('with label', ({ state, storeState }: any) => (
     <>
-      <Block>
+      <Section>
         <Radio checked={state === 1} onChange={storeAndAction(storeState, 'onChange', 1)} label='Choose option 1' />
-      </Block>
-      <Block>
+      </Section>
+      <Section>
         <Radio checked={state === 2} onChange={storeAndAction(storeState, 'onChange', 2)} label='Choose option 2' />
-      </Block>
+      </Section>
     </>
   ))
   .add('with custom label', () => (

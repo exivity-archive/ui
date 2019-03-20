@@ -24,17 +24,17 @@ export const Table = styled.table<TableProps>`
 
   thead tr,
   tbody tr:not(:last-child) {
-    border-bottom: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+    border-bottom: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   }
 
   tfoot tr {
-    border-top: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+    border-top: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   }
 
   caption {
     text-transform: uppercase;
     font-size: ${preciseEm(0.9)}em;
-    color: ${fromTheme(theme => theme.colours.gray)};
+    color: ${fromTheme(theme => theme.colors.gray)};
   }
 
   td,

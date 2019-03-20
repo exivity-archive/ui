@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { MdDashboard, MdInsertChart, MdLibraryBooks } from 'react-icons/md'
 import styled from 'styled-components'
-import { Block, Grid, Icon, Image, Link } from '../../src'
+import { Section, Grid, Icon, Image, Link } from '../../src'
 import { fromTheme } from '../../src/utils/styled'
 
 const headerHeight = 60
@@ -18,7 +18,7 @@ const Header = styled.header`
   white-space: nowrap;
 
   line-height: ${headerHeight}px;
-  padding-left: ${fromTheme(theme => theme.global.spacing)}em;
+  padding-left: ${fromTheme(theme => theme.global.baseSpacing)}em;
 `
 
 export const App: React.FC = ({ children }) => (

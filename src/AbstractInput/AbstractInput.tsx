@@ -65,8 +65,8 @@ export const inputStyles = css<StyledInputProps>`
   `}
 
   ${props => (!props.outlined && !props.flat) && css`
-    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
-    background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.lightGray)};
+    background-color: ${fromTheme(theme => theme.colors.lightGray)};
 
     &:hover {
       border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
@@ -82,11 +82,11 @@ export const inputStyles = css<StyledInputProps>`
     background-color: unset;
 
     &:hover {
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.gray)};
     }
 
     &:focus {
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.dark)};
     }
   `}
 

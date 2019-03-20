@@ -4,7 +4,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light'
 // @ts-ignore
 import solarizedlight from 'react-syntax-highlighter/dist/cjs/styles/prism/solarizedlight'
 import styled, { css } from 'styled-components'
-import { BlockProps, fromTheme } from '../utils/styled'
+import { SectionProps, fromTheme } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 interface CodeProps extends SyntaxHighlighterProps {
@@ -38,7 +38,7 @@ const useDynamicLanguage = (language: string) => {
 
 const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
   // Override globalBlockSpacing because we need !important
-  margin: ${(props: BlockProps) => props.noMargin ? 0 : preciseEm(1)}rem 0 !important;
+  margin: ${(props: SectionProps) => props.noMargin ? 0 : preciseEm(1)}rem 0 !important;
 
   &:first-child {
     margin-top: 0 !important;
@@ -49,18 +49,18 @@ const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
   }
 
   & {
-    background-color: ${fromTheme(theme => theme.colours.lightGray)} !important;
+    background-color: ${fromTheme(theme => theme.colors.lightGray)} !important;
     &, code, pre {
       font-family: ${fromTheme(theme => theme.global.fontFamilyMonospace)} !important;
     }
 
     padding: ${props => props.PreTag === 'span'
-      ? css`${fromTheme(theme => theme.global.spacing / 4)}`
-      : css`${fromTheme(theme => theme.global.spacing)}`}em !important;
+      ? css`${fromTheme(theme => theme.global.baseSpacing / 4)}`
+      : css`${fromTheme(theme => theme.global.baseSpacing)}`}em !important;
   }
 `
 
-export const Code = ({ children, block, showLineNumbers, language = 'text' }: CodeProps & BlockProps) => {
+export const Code = ({ children, block, showLineNumbers, language = 'text' }: CodeProps & SectionProps) => {
   const highlighterLanguage = useDynamicLanguage(language)
 
   return <StyledSyntaxHighlighter
