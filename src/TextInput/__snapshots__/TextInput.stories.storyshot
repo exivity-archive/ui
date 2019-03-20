@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Aliquam accusamus deserunt aut molestiae velit eum aut. Corrupti et natus beatae.
+      Voluptatem itaque quasi aut reiciendis commodi ut expedita. Qui sunt assumenda non aut quas laboriosam odit.
     </p>
   </div>
 </div>
@@ -360,7 +360,7 @@ exports[`Storyshots interact|TextInput flat 1`] = `
     <p
       className="c1"
     >
-      Dolor quo libero.
+      Ipsam qui distinctio suscipit.
     </p>
     <div
       className="c2"
@@ -369,13 +369,13 @@ exports[`Storyshots interact|TextInput flat 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="maxime est deserunt et"
+        value="dicta eius similique molestiae"
       />
     </div>
     <p
       className="c1"
     >
-      Nisi fuga consequatur quidem. Voluptas omnis et nostrum aut voluptatibus praesentium nihil voluptas.
+      Est veniam animi quam maxime quas ut. Cumque qui non impedit eos accusamus dolorem.
     </p>
   </div>
 </div>
@@ -459,16 +459,16 @@ exports[`Storyshots interact|TextInput inline 1`] = `
   <p
     className="c1"
   >
-    iure dolor quos consequatur
+    a magnam reprehenderit sit
      
     <input
       className="c2"
       onChange={[Function]}
       type="text"
-      value="aliquam aut rerum sint"
+      value="reprehenderit hic temporibus tenetur"
     />
      
-    eum in ullam velit porro qui consectetur fugit
+    facilis odit qui et est ut ea architecto
   </p>
 </div>
 `;
@@ -476,6 +476,12 @@ exports[`Storyshots interact|TextInput inline 1`] = `
 exports[`Storyshots interact|TextInput purposes 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
 }
 
 .c2 {
@@ -1102,12 +1108,6 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
 <div
   className="c0"
 >
@@ -1264,6 +1264,11 @@ exports[`Storyshots interact|TextInput required 1`] = `
 exports[`Storyshots interact|TextInput sizes 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 .c4 {
@@ -1524,11 +1529,6 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
 .c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 <div
