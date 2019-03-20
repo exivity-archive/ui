@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 import { StyledProps } from '../utils/styled'
 
-export interface GridProps extends StyledProps {
-  template?: string
-  gap?: string
+export interface GridItemProps extends StyledProps {
+  area?: string
 }
 
-export const Grid = styled.div<GridProps>`
-  grid-template: ${props => props.template};
-  grid-gap: ${props => props.gap};
+export const GridItem = styled.div<GridItemProps>`
+  grid-area: ${props => props.area};
 `
 
-Grid.displayName = 'Grid'
+GridItem.displayName = 'Grid.Item'

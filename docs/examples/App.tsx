@@ -1,7 +1,8 @@
+import * as React from 'react'
 import { MdDashboard, MdInsertChart, MdLibraryBooks } from 'react-icons/md'
-import { Block } from '../../src/Block'
-import { Icon } from '../../src/Icon'
-import { Link } from '../../src/Link'
+import styled from 'styled-components'
+import { Block, Grid, Icon, Image, Link } from '../../src'
+import { fromTheme } from '../../src/utils/styled'
 
 const headerHeight = 60
 const sidebarWidth = 250
@@ -11,7 +12,16 @@ const layout = `
   "nav main" 1fr / ${sidebarWidth}px 1fr
 `
 
-export const App = () => (
+const Header = styled.header`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  line-height: ${headerHeight}px;
+  padding-left: ${fromTheme(theme => theme.global.spacing)}em;
+`
+
+export const App: React.FC = ({ children }) => (
   <Grid template={layout} style={{
     position: 'fixed',
     left: '0',
@@ -19,67 +29,17 @@ export const App = () => (
     height: '100vh',
     width: '100vw'
   }}>
-    <Grid.Item as='header' area='logo' palette='primary' tone={2} opaque>
-      <Image src='http://acmelogos.com/images/logo-8.svg' width={sidebarWidth} height={headerHeight} padding={10} />
+    <Grid.Item as='header' area='logo'>
+      <Image src='http://acmelogos.com/images/logo-8.svg' width={sidebarWidth} height={headerHeight} />
     </Grid.Item>
-    <Grid.Item as={[Ellipsis, Header, 'header']} area='header' palette='primary' opaque>
+    <Grid.Item as={Header} area='header'>
       Header
     </Grid.Item>
-    <Grid.Item as='nav' area='nav' palette='grayscale' tone={1} opaque style={{ overflow: 'auto' }}>
-      <Navigation>
-        <Hidden.Container>
-          {hidden => (
-            <Block as={StyledItem}>
-              <StyledToggle {...hidden} palette='white'>
-                <Icon><MdDashboard /></Icon>
-                Dashboard
-              </StyledToggle>
-              <Navigation.Hidden {...hidden}>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Accounts</Link>
-                </StyledSubItem>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Services</Link>
-                </StyledSubItem>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Instances</Link>
-                </StyledSubItem>
-              </Navigation.Hidden>
-            </Block>
-          )}
-        </Hidden.Container>
-        <Hidden.Container>
-          {hidden => (
-            <Block as={StyledItem}>
-              <StyledToggle {...hidden} palette='white'>
-                <Icon><MdInsertChart /></Icon>
-                Reports
-              </StyledToggle>
-              <Navigation.Hidden {...hidden}>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Accounts</Link>
-                </StyledSubItem>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Services</Link>
-                </StyledSubItem>
-                <StyledSubItem>
-                  <Link palette='white' href='../docs'>Instances</Link>
-                </StyledSubItem>
-              </Navigation.Hidden>
-            </Block>
-          )}
-        </Hidden.Container>
-        <StyledItem>
-          <Link palette='white' href='../docs'>
-            <Icon><MdLibraryBooks /></Icon>
-            Catalogue
-          </Link>
-        </StyledItem>
-      </Navigation>
+    <Grid.Item as='nav' area='nav' style={{ overflow: 'auto' }}>
+      Navigation
     </Grid.Item>
     <Grid.Item as='main' area='main' style={{ overflow: 'auto' }}>
-      Main
-      <div style={{ height: '150vh' }} />
+      {children}
     </Grid.Item>
   </Grid>
 )
