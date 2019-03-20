@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
 import { Icon } from '../Icon'
@@ -95,13 +95,16 @@ interface BoxProps {
 export const Box: FC<BoxProps> & BoxSubComponents = ({ children, ...rest }) => {
   const defaultCollapsed = false
   const initialCollapsed = rest.initialCollapsed !== undefined ? rest.initialCollapsed : defaultCollapsed
+  const recievesStateProps = rest.collapsed !== undefined || rest.initialCollapsed !== undefined
+
   const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
+  const [collapsible, setCollapsible] = useState(recievesStateProps)
 
   const boxContext: BoxContextShape = {
     collapsed,
     setCollapsed,
-    // It looks for state from the outside before defaulting to false
-    collapsible: rest.collapsed !== undefined || rest.initialCollapsed !== undefined
+    collapsible,
+    setCollapsible
   }
 
   return (

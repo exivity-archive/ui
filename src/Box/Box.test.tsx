@@ -46,6 +46,46 @@ test('collapser should be visible when initialCollapsed is given', () => {
   expect(collapser).toBeDefined()
 })
 
+test('with collapsible initializing to true, the box collapser should disappear when it is set to false', () => {
+  let changedCollapsible = false
+  const box = mount(
+    <Box initialCollapsed={false}><Box.Bar />
+      <BoxContext.Consumer>
+        {(context) => {
+          if (!changedCollapsible) {
+            expect(context.collapsible).toBe(true)
+            context.setCollapsible(false)
+            changedCollapsible = true
+          }
+          return null
+        }}
+      </BoxContext.Consumer></Box>
+  )
+
+  const collapser = box.find({ 'data-test': 'box-collapser' }).get(0)
+  expect(collapser).not.toBeDefined()
+})
+
+test('with collapsible initializing to true, the box collapser should appear when it is set to true', () => {
+  let changedCollapsible = false
+  const box = mount(
+    <Box><Box.Bar />
+      <BoxContext.Consumer>
+        {(context) => {
+          if (!changedCollapsible) {
+            expect(context.collapsible).toBe(false)
+            context.setCollapsible(true)
+            changedCollapsible = true
+          }
+          return null
+        }}
+      </BoxContext.Consumer></Box>
+  )
+
+  const collapser = box.find({ 'data-test': 'box-collapser' }).get(0)
+  expect(collapser).toBeDefined()
+})
+
 test('When BoxCollapser gets clicked collapsed is toggled for uncontrolled component', () => {
   const initialCollapsed = false
   let clicked = false

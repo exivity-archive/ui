@@ -4,6 +4,11 @@ import Faker from 'faker'
 import { storiesOf } from '@storybook/react'
 
 import { Box } from '.'
+import { Markdown } from '../'
+import { ensureString } from '../utils'
+
+// @ts-ignore
+import * as useBoxContextDocs from './docs/useBoxContext.md'
 
 storiesOf('molecules|Box', module)
   .add('default', () => (
@@ -29,4 +34,7 @@ storiesOf('molecules|Box', module)
       <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
       <Box.Bar>Hi</Box.Bar>
     </Box>
+  ))
+  .add('useBoxContext', () => (
+    <Markdown>{ensureString(useBoxContextDocs)}</Markdown>
   ))

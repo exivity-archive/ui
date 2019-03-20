@@ -6132,12 +6132,6 @@ exports[`Storyshots forms|SelectInput default 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(1, fit-content(200px));
-}
-
 .c2 {
   position: relative;
 }
@@ -6241,6 +6235,12 @@ exports[`Storyshots forms|SelectInput default 1`] = `
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, fit-content(200px));
 }
 
 <div
@@ -6447,11 +6447,6 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -6592,6 +6587,11 @@ exports[`Storyshots forms|SelectInput disabled 1`] = `
 
 .c3[disabled] {
   cursor: not-allowed;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -6821,11 +6821,6 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -6915,6 +6910,11 @@ exports[`Storyshots forms|SelectInput outlined 1`] = `
 .c3[disabled] {
   cursor: pointer;
   box-shadow: none;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -7142,17 +7142,6 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
 
 .c43 .c7 {
   font-size: 1.5em;
-}
-
-.c2 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 .c6 {
@@ -7610,6 +7599,17 @@ exports[`Storyshots forms|SelectInput purposes 1`] = `
   box-shadow: none;
 }
 
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
 <div
   className="c0"
 >
@@ -8045,11 +8045,6 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -8265,6 +8260,11 @@ exports[`Storyshots forms|SelectInput sizes 1`] = `
   box-shadow: none;
 }
 
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
 <div
   className="c0"
 >
@@ -8451,12 +8451,6 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
   padding: 12px;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, fit-content(350px));
-}
-
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -8559,6 +8553,12 @@ exports[`Storyshots forms|TextArea disabled 1`] = `
 .c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, fit-content(350px));
 }
 
 <div
@@ -8760,12 +8760,6 @@ exports[`Storyshots forms|TextArea outlined 1`] = `
 exports[`Storyshots forms|TextArea purposes 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(350px));
 }
 
 .c2 {
@@ -9182,6 +9176,12 @@ exports[`Storyshots forms|TextArea purposes 1`] = `
 .c9[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(350px));
 }
 
 <div
@@ -9678,12 +9678,6 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   padding: 12px;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -10308,6 +10302,12 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
 <div
   className="c0"
 >
@@ -10393,11 +10393,6 @@ exports[`Storyshots forms|TextInput purposes 1`] = `
 exports[`Storyshots forms|TextInput sizes 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 .c4 {
@@ -10608,6 +10603,11 @@ exports[`Storyshots forms|TextInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+}
+
 <div
   className="c0"
 >
@@ -10791,11 +10791,6 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -10892,6 +10887,11 @@ exports[`Storyshots forms|TextInputWithIcon default 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -11119,11 +11119,6 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -11222,6 +11217,11 @@ exports[`Storyshots forms|TextInputWithIcon disabled 1`] = `
   font-size: NaNpx;
   cursor: not-allowed;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -11451,11 +11451,6 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -11552,6 +11547,11 @@ exports[`Storyshots forms|TextInputWithIcon outlined 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -11775,17 +11775,6 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
 
 .c44 .c6 {
   font-size: 1.5em;
-}
-
-.c2 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
-.c1 {
-  display: grid;
-  grid-gap: 20px;
 }
 
 .c5 {
@@ -12248,6 +12237,17 @@ exports[`Storyshots forms|TextInputWithIcon purposes 1`] = `
   position: absolute;
   font-size: NaNpx;
   left: 0.5em;
+}
+
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -12929,11 +12929,6 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-}
-
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -13170,6 +13165,11 @@ exports[`Storyshots forms|TextInputWithIcon sizes 1`] = `
   position: absolute;
   font-size: 23.75px;
   left: 0.5em;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
 }
 
 <div
@@ -13723,11 +13723,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 0 20px;
 }
 
-.c41 .c6 {
-  margin-left: 20px;
-}
-
-.c42 .c8 {
+.c41 .c8 {
   pointer-events: none;
 }
 
@@ -13792,6 +13788,10 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c42 .c6 {
+  margin-left: 20px;
 }
 
 .c10 {
@@ -15223,11 +15223,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 0 20px;
 }
 
-.c47 .c6 {
-  margin-left: 20px;
-}
-
-.c48 .c8 {
+.c47 .c8 {
   pointer-events: none;
 }
 
@@ -15368,6 +15364,10 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c48 .c6 {
+  margin-left: 20px;
 }
 
 .c10 {
@@ -16151,6 +16151,16 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 </div>
 `;
 
+exports[`Storyshots helpers|useIsControlled default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`Storyshots molecules/Select Custom item 1`] = `
 .c0 {
   padding: 12px;
@@ -16710,12 +16720,6 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   font-size: 1.5em;
 }
 
-.c1 {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, fit-content(200px));
-}
-
 .c2 {
   position: relative;
 }
@@ -16728,6 +16732,45 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c11:hover,
+.c11:focus {
+  background-color: #eee;
+}
+
+.c12 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c6 {
@@ -17146,45 +17189,6 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c11:hover,
-.c11:focus {
-  background-color: #eee;
-}
-
-.c12 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
 .c3 {
   position: relative;
   display: -webkit-box;
@@ -17232,6 +17236,12 @@ exports[`Storyshots molecules/Select custom valueComponent 1`] = `
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
 }
 
 <div
@@ -18815,6 +18825,45 @@ exports[`Storyshots molecules/Select default 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c10:hover,
+.c10:focus {
+  background-color: #eee;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -18865,45 +18914,6 @@ exports[`Storyshots molecules/Select default 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c10:hover,
-.c10:focus {
-  background-color: #eee;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {
@@ -19300,6 +19310,45 @@ exports[`Storyshots molecules/Select long 1`] = `
   visibility: hidden;
 }
 
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c10:hover,
+.c10:focus {
+  background-color: #eee;
+}
+
+.c11 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -19350,45 +19399,6 @@ exports[`Storyshots molecules/Select long 1`] = `
 .c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c10:hover,
-.c10:focus {
-  background-color: #eee;
-}
-
-.c11 {
-  width: 100%;
-  height: 100%;
-  padding: 0 20px;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
 }
 
 .c2 {
@@ -20146,6 +20156,16 @@ exports[`Storyshots molecules|Box flipped collapsible 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Storyshots molecules|Box useBoxContext 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
 `;
 
 exports[`Storyshots molecules|Dropdown default 1`] = `
