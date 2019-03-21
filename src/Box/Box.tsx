@@ -21,7 +21,7 @@ export const StyledBoxBar = styled.div<StyledBoxBarProps>`
   background-color: #F4F4F4;
   height: 60px;
   align-items: center;
-  padding: 0 ${fromTheme(theme => theme.global.spacing)}em 0 ${fromTheme(theme => theme.global.spacing)}em;
+  padding: 0 ${fromTheme(theme => theme.global.baseSpacing)}em 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 
   ${({ collapsible }) => collapsible && css`
     justify-content: space-between;
@@ -47,7 +47,7 @@ export const BoxBar: FC = ({ children }) => {
 }
 
 const StyledBoxContent = styled.div`
-  padding: 0 ${fromTheme(theme => theme.global.spacing)};
+  padding: 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 `
 
 export const BoxContent: FC = ({ children }) => {

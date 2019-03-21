@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { fromTheme, globalBlockSpacing, globalFont, resetBox, StyledProps } from '../utils/styled'
+import { fromTheme, globalSectionSpacing, globalFont, resetBox, StyledProps } from '../utils/styled'
 
 interface ListProps extends StyledProps {
   children?: React.ReactNode
@@ -11,7 +11,7 @@ interface ListProps extends StyledProps {
 export const AmbivalentList = styled.div<ListProps>`
   ${resetBox};
   ${globalFont};
-  ${globalBlockSpacing};
+  ${globalSectionSpacing};
 
   ${props => props.ordered && css`
     list-style: decimal;
@@ -22,7 +22,7 @@ export const AmbivalentList = styled.div<ListProps>`
   `}
 
   ${props => (props.ordered || props.unordered) && css`
-    padding-left: ${fromTheme(theme => theme.global.spacing * 2)}em;
+    padding-left: ${fromTheme(theme => theme.global.baseSpacing * 2)}em;
   `}
 
   ${props => (!props.ordered && !props.unordered) && css`
