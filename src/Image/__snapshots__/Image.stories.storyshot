@@ -5,11 +5,15 @@ exports[`Storyshots atoms|Image default 1`] = `
   padding: 12px;
 }
 
+.c1 {
+  box-sizing: border-box;
+}
+
 <div
   className="c0"
 >
   <img
-    className=""
+    className="c1"
   />
 </div>
 `;
