@@ -5,12 +5,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   padding: 12px;
 }
 
-.c7 .c3 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c4 {
+.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -23,7 +18,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   width: 0;
 }
 
-.c6 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
 }
 
@@ -46,8 +41,8 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   justify-content: space-between;
 }
 
-.c5 {
-  padding: 0 1.25;
+.c4 {
+  padding: 0 1.25em;
 }
 
 .c1 {
@@ -70,7 +65,7 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
     >
       Notifications
       <span
-        className="c3 c4"
+        className="c3"
         data-test="container-collapser"
         onClick={[Function]}
       >
@@ -95,10 +90,10 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
       </span>
     </div>
     <div
-      className="c5"
+      className="c4"
     >
       <div
-        className="c6"
+        className="c5"
       >
         Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
  
@@ -138,7 +133,7 @@ exports[`Storyshots molecules|Box default 1`] = `
 }
 
 .c3 {
-  padding: 0 1.25;
+  padding: 0 1.25em;
 }
 
 .c1 {

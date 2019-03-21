@@ -16,7 +16,7 @@ export const Button = styled.button<ButtonProps>`
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em / 16 * 14
   })}em;
-  color: ${fromTheme(theme => theme.colours.white)};
+  color: ${fromTheme(theme => theme.colors.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
   text-transform: uppercase;
@@ -77,7 +77,7 @@ export const Button = styled.button<ButtonProps>`
   }
 
   ${(props: ButtonProps) => props.outlined && css`
-    background-color: ${fromTheme(theme => theme.colours.white)};
+    background-color: ${fromTheme(theme => theme.colors.white)};
     color: ${matchThemeProp(theme => theme.global.purposes)};
     box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
 
@@ -104,7 +104,7 @@ export const Button = styled.button<ButtonProps>`
   ${Icon} {
     font-size: 1.5em;
     ${(props: ButtonProps) => props.round !== true && css`
-      margin-right: ${fromTheme(theme => theme.global.spacing / 2)}em;
+      margin-right: ${fromTheme(theme => theme.global.baseSpacing / 2)}em;
     `}
   }
 `

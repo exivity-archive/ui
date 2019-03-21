@@ -1,7 +1,7 @@
 import faker from 'faker'
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { Block } from '../Block'
+import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -30,9 +30,9 @@ storiesOf('interact|NumericInput', module)
   .add('outlined', () => <NumericInput outlined value='42' />)
   .add('flat', () => <div>
     <Paragraph>{faker.lorem.words(4)}</Paragraph>
-    <Block>
+    <Section>
       <NumericInput flat value={42} />
-    </Block>
+    </Section>
     <Paragraph>{faker.lorem.words(4)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4}>

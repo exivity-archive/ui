@@ -17,11 +17,11 @@ const StyledLi = styled.li<ListItemProps>`
 
   ${props => props.noDataPlaceholder
     ? css`
-      color: ${fromTheme(theme => theme.colours.gray)};
+      color: ${fromTheme(theme => theme.colors.gray)};
     `
     : css`
       &:hover, :focus {
-       background-color: ${fromTheme(theme => theme.colours.lightGray)};
+       background-color: ${fromTheme(theme => theme.colors.lightGray)};
       }
       cursor: pointer;
     `}

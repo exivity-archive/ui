@@ -149,6 +149,10 @@ input.c3 {
   font-size: 1.5em;
 }
 
+.c34 .c5 {
+  pointer-events: none;
+}
+
 .c7 {
   height: 1em;
   line-height: 1em;
@@ -164,10 +168,6 @@ input.c3 {
 
 .c8 {
   font-family: 'Fira Sans',sans-serif;
-}
-
-.c34 .c5 {
-  pointer-events: none;
 }
 
 .c6 {
@@ -423,12 +423,12 @@ input.c3 {
   font-size: 1.5em;
 }
 
-.c7 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
 .c33 .c5 {
   pointer-events: none;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 .c6 {
@@ -718,6 +718,10 @@ input.c7 {
   font-size: 1.5em;
 }
 
+.c34 .c2 {
+  pointer-events: none;
+}
+
 .c4 {
   height: 1em;
   line-height: 1em;
@@ -733,10 +737,6 @@ input.c7 {
 
 .c8 {
   font-family: 'Fira Sans',sans-serif;
-}
-
-.c34 .c2 {
-  pointer-events: none;
 }
 
 .c3 {
@@ -982,6 +982,10 @@ input.c4 {
   font-size: 1.5em;
 }
 
+.c34 .c6 {
+  pointer-events: none;
+}
+
 .c8 {
   height: 1em;
   line-height: 1em;
@@ -997,10 +1001,6 @@ input.c4 {
 
 .c1 {
   font-family: 'Fira Sans',sans-serif;
-}
-
-.c34 .c6 {
-  pointer-events: none;
 }
 
 .c7 {

@@ -17,7 +17,7 @@ export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
       position: relative;
       left: -20px;
       top: calc(-${(100 * distance)}% - 50%);
-      border: solid ${fromTheme(theme => theme.colours.lightGray)};
+      border: solid ${fromTheme(theme => theme.colors.lightGray)};
       border-width: 0px 0px 1px ${leftSpacerLine}px;
       content: ' ';
       display: block;

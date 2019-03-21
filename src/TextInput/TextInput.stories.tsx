@@ -2,7 +2,7 @@ import React from 'react'
 import faker from 'faker'
 
 import { storiesOf } from '@storybook/react'
-import { Block } from '../Block'
+import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -29,9 +29,9 @@ storiesOf('interact|TextInput', module)
   </Paragraph>)
   .add('flat', () => <div>
     <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
-    <Block>
+    <Section>
       <TextInput flat value={faker.lorem.words(4)} />
-    </Block>
+    </Section>
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4}>
