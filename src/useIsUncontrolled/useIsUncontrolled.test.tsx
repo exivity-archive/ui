@@ -27,7 +27,7 @@ test('If no parameters are given it can toggle between open and closed', () => {
 })
 
 test('If only the open parameter is given it throws an error', () => {
-  let message: string
+  let message: string = ''
   try {
     mount(<OptionallyUncontrolled open={false} />)
   } catch (error) {
@@ -40,7 +40,7 @@ test('If only the open parameter is given it throws an error', () => {
 })
 
 test('If only the setOpen parameter is given it throws an error', () => {
-  let message: string
+  let message: string = ''
   try {
     mount(<OptionallyUncontrolled setOpen={() => { return }} />)
   } catch (error) {

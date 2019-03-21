@@ -5,17 +5,6 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   padding: 12px;
 }
 
-.c10 .c7 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
 .c11 .c7 {
   margin-right: 1.25em;
   display: inline-block;
@@ -39,8 +28,14 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 }
 
 .c13 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c14 .c7 {
@@ -95,6 +90,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 
 .c24 .c7 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c25 .c7 {
@@ -149,12 +145,20 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   font-size: 1.5em;
 }
 
+.c38 .c7 {
+  font-size: 1.5em;
+}
+
+.c9 {
+  display: block;
+}
+
 .c2 {
   position: relative;
   width: 100%;
 }
 
-.c9 {
+.c10 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -304,9 +308,13 @@ exports[`Storyshots interact|SelectInput default 1`] = `
       </div>
       <div
         className="c9"
-        data-test="dropdown-content"
-        open={false}
-      />
+      >
+        <div
+          className="c10"
+          data-test="dropdown-content"
+          open={false}
+        />
+      </div>
     </div>
   </div>
 </div>
