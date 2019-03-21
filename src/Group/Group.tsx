@@ -38,10 +38,17 @@ const GroupSeparator = styled.hr`
   margin: 20px 20px;
 `
 
-const GroupTitle = styled(Heading)`
-  color: ${fromTheme(theme => theme.colors.gray)};
-  margin: 0;
+const StyledGroupTitle = styled.div`
+  h1 {
+    color: ${fromTheme(theme => theme.colors.gray)};
+  }
 `
+
+const GroupTitle: FC = ({ children }) => (
+  <StyledGroupTitle>
+    <Heading>{children}</Heading>
+  </StyledGroupTitle>
+)
 
 interface GroupSubComponents extends CollapsibleContainerSubComponents {
   Header: typeof GroupHeader
