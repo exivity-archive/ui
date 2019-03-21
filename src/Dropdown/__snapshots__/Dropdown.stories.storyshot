@@ -5,12 +5,16 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 12px;
 }
 
+.c2 {
+  display: block;
+}
+
 .c1 {
   position: relative;
   width: 100%;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -41,19 +45,23 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
       </div>
       <div
         className="c2"
-        data-test="dropdown-content"
-        open={false}
       >
         <div
-          style={
-            Object {
-              "width": 500,
-            }
-          }
+          className="c3"
+          data-test="dropdown-content"
+          open={false}
         >
-          Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
+          <div
+            style={
+              Object {
+                "width": 500,
+              }
+            }
+          >
+            Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
  
 Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 
+import { OutsideClickListener } from '../OutsideClickListener'
+
 import {
   getPosition,
   Vertical,
@@ -40,7 +42,7 @@ const Content = styled.div <ContentProps>`
   ${({ position }) => `${position}`}
 `
 
-interface DropdownProps {
+export interface DropdownProps {
   className?: string
   triggerComponent: React.ReactNode
   open: boolean
@@ -48,6 +50,7 @@ interface DropdownProps {
   horizontal?: Horizontal
   breakDistance?: number
   useTriggerComponentWidth?: boolean
+  onOutsideClick?: (...rest: any) => void
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -58,7 +61,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
   horizontal = 'auto',
   vertical = 'auto',
   breakDistance = 20,
-  useTriggerComponentWidth
+  useTriggerComponentWidth,
+  onOutsideClick
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
@@ -89,14 +93,16 @@ export const Dropdown: React.FC<DropdownProps> = ({
   return (
     <StyledDropdown className={className} data-test='dropdown' ref={dropdownRef}>
       {triggerComponent}
-      <Content useTriggerComponentWidth={useTriggerComponentWidth}
-        width={width}
-        data-test='dropdown-content'
-        ref={contentRef}
-        position={position}
-        open={open}>
-        {children}
-      </ Content>
+      <OutsideClickListener onOutsideClick={onOutsideClick}>
+        <Content useTriggerComponentWidth={useTriggerComponentWidth}
+          width={width}
+          data-test='dropdown-content'
+          ref={contentRef}
+          position={position}
+          open={open}>
+          {children}
+        </ Content>
+      </OutsideClickListener>
     </StyledDropdown>
   )
 }
