@@ -43,19 +43,7 @@ storiesOf('molecules|Group', module)
       </Group.Header>
     </Group>
   ))
-  .add('xy-inverted', () => (
-    <Group>
-      <Group.Content>
-        {Faker.lorem.paragraphs(4)}
-      </Group.Content>
-      <Group.Header>
-        <Group.Collapser />
-        <Group.Separator />
-        <Group.Title>Configuration</Group.Title>
-      </Group.Header>
-    </Group>
-  ))
-  .add('icons', () => (
+  .add('with icons', () => (
     <Group>
       <Group.Header>
         <Group.Title>Configuration</Group.Title>

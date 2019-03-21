@@ -100,13 +100,13 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
       <div
         className="c6"
       >
-        Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+        Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
  
-Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
  
-Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
  
-Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
       </div>
     </div>
   </div>
@@ -175,186 +175,6 @@ Dolorem expedita fuga aut qui id beatae id sit. Et qui praesentium sunt fugit ea
  
 Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
       </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots molecules|Box flipped 1`] = `
-.c0 {
-  padding: 12px;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  background-color: #F4F4F4;
-  height: 60px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2.5em 0 1.25em;
-}
-
-.c2 {
-  padding: 0 1.25;
-}
-
-.c1 {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 10px 0;
-  border: 2px solid #F4F4F4;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-      >
-        Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
- 
-Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
- 
-Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
- 
-Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
-      </div>
-    </div>
-    <div
-      className="c4"
-    >
-      Notifications
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots molecules|Box flipped collapsible 1`] = `
-.c0 {
-  padding: 12px;
-}
-
-.c7 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c6 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 22px;
-  width: 0;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-sizing: border-box;
-  background-color: #F4F4F4;
-  height: 60px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 2.5em 0 1.25em;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c2 {
-  padding: 0 1.25;
-}
-
-.c1 {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 10px 0;
-  border: 2px solid #F4F4F4;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-      >
-        Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
- 
-Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
- 
-Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
- 
-Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
-      </div>
-    </div>
-    <div
-      className="c4"
-    >
-      Notifications
-      <span
-        className="c5 c6"
-        data-test="container-collapser"
-        onClick={[Function]}
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-          />
-        </svg>
-      </span>
     </div>
   </div>
 </div>

@@ -17,22 +17,10 @@ storiesOf('molecules|Box', module)
       <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
     </Box>
   ))
-  .add('flipped', () => (
-    <Box>
-      <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
-      <Box.Bar>Notifications</Box.Bar>
-    </Box>
-  ))
   .add('collapsible', () => (
     <Box initialCollapsed={false}>
       <Box.Bar>Notifications</Box.Bar>
       <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
-    </Box>
-  ))
-  .add('flipped collapsible', () => (
-    <Box initialCollapsed={false}>
-      <Box.Content>{Faker.lorem.paragraphs(4)}</Box.Content>
-      <Box.Bar>Notifications</Box.Bar>
     </Box>
   ))
   .add('helpers', () => (

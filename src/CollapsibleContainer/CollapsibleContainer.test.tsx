@@ -56,7 +56,7 @@ test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for 
   collapser.first().props().onClick()
 })
 
-test('collapser shouldn\'t be visible when no props are given', () => {
+test('collapser should be visible when no props are given', () => {
   const box = mount(
     <CollapsibleContainer>
       <CollapsibleContainer.Collapser />
@@ -70,41 +70,22 @@ test('collapser shouldn\'t be visible when no props are given', () => {
   )
 
   const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
+  expect(collapser).toBeDefined()
+})
+
+test('collapser shouldn\'t be visible when collapsible is set to false', () => {
+  const box = mount(
+    <CollapsibleContainer collapsible={false}>
+      <CollapsibleContainer.Collapser />
+      <CollapsibleContext.Consumer>
+        {(context) => {
+          expect(context.collapsed).toBe(false)
+          return null
+        }}
+      </CollapsibleContext.Consumer>
+    </CollapsibleContainer>
+  )
+
+  const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
   expect(collapser).not.toBeDefined()
-})
-
-test('collapser should be visible when collapsed and onCollapsed are given', () => {
-  const collapsed = true
-  const box = mount(
-    <CollapsibleContainer collapsed={collapsed} onCollapse={jest.fn()}>
-      <CollapsibleContainer.Collapser />
-      <CollapsibleContext.Consumer>
-        {(context) => {
-          expect(context.collapsed).toBe(collapsed)
-          return null
-        }}
-      </CollapsibleContext.Consumer>
-    </CollapsibleContainer>
-  )
-
-  const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
-  expect(collapser).toBeDefined()
-})
-
-test('collapser should be visible when initialCollapsed is given', () => {
-  const initialCollapsed = false
-  const box = mount(
-    <CollapsibleContainer initialCollapsed={initialCollapsed}>
-      <CollapsibleContainer.Collapser />
-      <CollapsibleContext.Consumer>
-        {(context) => {
-          expect(context.collapsed).toBe(initialCollapsed)
-          return null
-        }}
-      </CollapsibleContext.Consumer>
-    </CollapsibleContainer>
-  )
-
-  const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
-  expect(collapser).toBeDefined()
 })

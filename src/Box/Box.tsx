@@ -81,11 +81,14 @@ const BoxWrapper: FC = ({ children }) => {
   )
 }
 
-export const Box: FC<BoxProps> & BoxSubComponents = ({ children, ...rest }) => (
-  <CollapsibleContainer {...rest}>
-    <BoxWrapper>{children}</BoxWrapper>
-  </CollapsibleContainer>
-)
+export const Box: FC<BoxProps> & BoxSubComponents = ({ children, ...rest }) => {
+  const recievesStateProps = rest.collapsed !== undefined || rest.initialCollapsed !== undefined
+  return (
+    <CollapsibleContainer {...rest} collapsible={recievesStateProps}>
+      <BoxWrapper>{children}</BoxWrapper>
+    </CollapsibleContainer>
+  )
+}
 
 Box.Bar = BoxBar
 Box.Content = BoxContent

@@ -54,7 +54,7 @@ interface GroupProps extends CollapsibleContainerProps {
   header?: string
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, initialCollapsed = false, ...rest }) => {
+export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, ...rest }) => {
   const Header = header ? (
     <Group.Header>
       <Group.Title>{header}</Group.Title>
@@ -63,7 +63,7 @@ export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, i
     </Group.Header>
   ) : null
 
-  return <CollapsibleContainer {...rest} initialCollapsed={initialCollapsed}>{Header}{children}</CollapsibleContainer>
+  return <CollapsibleContainer {...rest}>{Header}{children}</CollapsibleContainer>
 }
 
 Group.Header = GroupHeader
