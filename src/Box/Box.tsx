@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import React, { FC, useContext } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
 import {
   CollapsibleContainer,
-  useCollapsibleContext,
   CollapsibleContainerSubComponents,
-  CollapsibleContainerProps
+  CollapsibleContainerProps,
+  CollapsibleContext
 } from '../CollapsibleContainer'
 
 interface StyledBoxBarProps {
@@ -26,9 +26,9 @@ export const StyledBoxBar = styled.div<StyledBoxBarProps>`
 `
 
 export const BoxBar: FC = ({ children }) => {
-  const { collapsible } = useCollapsibleContext()
+  const context = useContext(CollapsibleContext)
   return (
-    <StyledBoxBar collapsible={collapsible}>
+    <StyledBoxBar collapsible={!!context}>
       {children}
       <CollapsibleContainer.Collapser />
     </StyledBoxBar >
@@ -72,10 +72,9 @@ interface BoxSubComponents extends CollapsibleContainerSubComponents {
 interface BoxProps extends CollapsibleContainerProps { }
 
 const BoxWrapper: FC = ({ children }) => {
-  const { collapsed } = useCollapsibleContext()
-
+  const context = useContext(CollapsibleContext)
   return (
-    <StyledBox collapsed={collapsed}>
+    <StyledBox collapsed={context ? context.collapsed : false}>
       {children}
     </StyledBox>
   )

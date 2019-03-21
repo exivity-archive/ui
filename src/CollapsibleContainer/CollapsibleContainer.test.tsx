@@ -4,32 +4,6 @@ import { mount } from 'enzyme'
 import { CollapsibleContainer } from './CollapsibleContainer'
 import { CollapsibleContext } from './helpers'
 
-test('CollapsibleContainer.Collapser should throw an error when rendered outside a box component', () => {
-  let message: string
-  try {
-    mount(<CollapsibleContainer.Collapser />)
-  } catch (error) {
-    message = error.message
-  }
-  expect(message).toBe(
-    'useCollapsibleContext should only be called within a child of a CollapsibleContainer component.'
-    + 'e.g. Group or Box'
-  )
-})
-
-test('CollapsibleContainer.Content should throw an error when rendered outside a box component', () => {
-  let message: string
-  try {
-    mount(<CollapsibleContainer.Content />)
-  } catch (error) {
-    message = error.message
-  }
-  expect(message).toBe(
-    'useCollapsibleContext should only be called within a child of a CollapsibleContainer component.'
-    + 'e.g. Group or Box'
-  )
-})
-
 test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for uncontrolled component', () => {
   const initialCollapsed = false
   let clicked = false
@@ -79,7 +53,7 @@ test('collapser shouldn\'t be visible when collapsible is set to false', () => {
       <CollapsibleContainer.Collapser />
       <CollapsibleContext.Consumer>
         {(context) => {
-          expect(context.collapsed).toBe(false)
+          expect(context).toBe(null)
           return null
         }}
       </CollapsibleContext.Consumer>

@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
+import React, { FC, useContext } from 'react'
 import styled from 'styled-components'
 import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { useCollapsibleContext, CollapsibleContextShape, CollapsibleContext } from './helpers'
+import { CollapsibleContextShape, CollapsibleContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
 
@@ -13,22 +13,26 @@ const StyledContainerCollapser = styled(Icon)`
   width: 0;
 `
 const ContainerCollapser: FC = ({ children }) => {
-  const { setCollapsed, collapsed, collapsible } = useCollapsibleContext()
+  const context = useContext(CollapsibleContext)
+  if (!context) return null
 
+  const { collapsed, setCollapsed } = context
   const toggleCollapse = () => setCollapsed(!collapsed)
-  return collapsible ? (
+
+  return (
     <StyledContainerCollapser onClick={toggleCollapse} data-test='container-collapser'>
       {children || collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
     </StyledContainerCollapser>
-  ) : null
+  )
 }
 
 const StyledContainerContent = styled.div`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
 `
 const ContainerContent: FC = ({ children }) => {
-  const { collapsed } = useCollapsibleContext()
-  return collapsed ? null : <StyledContainerContent>{children}</StyledContainerContent>
+  const context = useContext(CollapsibleContext)
+
+  return !context || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
 }
 
 export interface CollapsibleContainerSubComponents {
@@ -51,11 +55,14 @@ export const CollapsibleContainer: FC<CollapsibleContainerProps> & CollapsibleCo
 
   const collapsableContainerContext: CollapsibleContextShape = {
     collapsed,
-    setCollapsed,
-    collapsible
+    setCollapsed
   }
 
-  return <CollapsibleContext.Provider value={collapsableContainerContext}>{children}</CollapsibleContext.Provider>
+  return (
+    <CollapsibleContext.Provider value={collapsible ? collapsableContainerContext : null}>
+      {children}
+    </CollapsibleContext.Provider>
+  )
 }
 
 CollapsibleContainer.Content = ContainerContent

@@ -8,7 +8,7 @@ import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
 // @ts-ignore
-import * as useCollapsibleContextDocs from '../CollapsibleContainer/docs/useCollapsibleContext.md'
+import * as CollapsibleContextDocs from '../CollapsibleContainer/docs/CollapsibleContext.md'
 import { MdAccountBox, MdNotifications, MdMail } from 'react-icons/md'
 
 storiesOf('molecules|Group', module)
@@ -60,5 +60,5 @@ storiesOf('molecules|Group', module)
     </Group>
   ))
   .add('helpers', () => (
-    <Markdown>{ensureString(useCollapsibleContextDocs)}</Markdown>
+    <Markdown>{ensureString(CollapsibleContextDocs)}</Markdown>
   ))

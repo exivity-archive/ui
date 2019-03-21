@@ -8,7 +8,7 @@ import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
 // @ts-ignore
-import * as useCollapsibleContextDocs from './docs/useCollapsibleContext.md'
+import * as useCollapsibleContextDocs from './docs/CollapsibleContext.md'
 
 storiesOf('molecules|CollapsibleContainer', module)
   .add('default', () => (
