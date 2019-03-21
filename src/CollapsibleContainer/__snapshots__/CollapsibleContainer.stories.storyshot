@@ -16,6 +16,23 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
   transform-origin: left 25%;
 }
 
+.c2 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
 .c5 .c1 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -125,23 +142,6 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 
 .c29 .c1 {
   font-size: 1.5em;
-}
-
-.c2 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 22px;
-  width: 0;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
 }
 
 <div

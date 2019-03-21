@@ -38,6 +38,23 @@ input.c3 {
   transform-origin: left 25%;
 }
 
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
 .c9 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -149,27 +166,6 @@ input.c3 {
   font-size: 1.5em;
 }
 
-.c34 .c5 {
-  pointer-events: none;
-}
-
-.c7 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 22px;
-  width: 0;
-}
-
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
 .c6 {
   height: 1em;
   line-height: 1em;
@@ -201,9 +197,12 @@ input.c3 {
   margin: 20px 20px;
 }
 
-.c2 {
+.c2 h1 {
   color: #999;
-  margin: 0;
+}
+
+.c34 .c5 {
+  pointer-events: none;
 }
 
 <div
@@ -212,12 +211,16 @@ input.c3 {
   <div
     className="c1"
   >
-    <h1
-      className="c2 c3"
-      type="header"
+    <div
+      className="c2"
     >
-      Configuration
-    </h1>
+      <h1
+        className="c3"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
     <hr
       className="c4"
     />
@@ -310,6 +313,10 @@ input.c3 {
   -webkit-transform-origin: left 25%;
   -ms-transform-origin: left 25%;
   transform-origin: left 25%;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 .c8 .c5 {
@@ -423,14 +430,6 @@ input.c3 {
   font-size: 1.5em;
 }
 
-.c33 .c5 {
-  pointer-events: none;
-}
-
-.c7 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
 .c6 {
   height: 1em;
   line-height: 1em;
@@ -462,9 +461,12 @@ input.c3 {
   margin: 20px 20px;
 }
 
-.c2 {
+.c2 h1 {
   color: #999;
-  margin: 0;
+}
+
+.c33 .c5 {
+  pointer-events: none;
 }
 
 <div
@@ -473,12 +475,16 @@ input.c3 {
   <div
     className="c1"
   >
-    <h1
-      className="c2 c3"
-      type="header"
+    <div
+      className="c2"
     >
-      Configuration
-    </h1>
+      <h1
+        className="c3"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
     <hr
       className="c4"
     />
@@ -607,6 +613,23 @@ input.c7 {
   transform-origin: left 25%;
 }
 
+.c4 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
 .c9 .c2 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -718,27 +741,6 @@ input.c7 {
   font-size: 1.5em;
 }
 
-.c34 .c2 {
-  pointer-events: none;
-}
-
-.c4 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 22px;
-  width: 0;
-}
-
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
 .c3 {
   height: 1em;
   line-height: 1em;
@@ -770,9 +772,12 @@ input.c7 {
   margin: 20px 20px;
 }
 
-.c6 {
+.c6 h1 {
   color: #999;
-  margin: 0;
+}
+
+.c34 .c2 {
+  pointer-events: none;
 }
 
 <div
@@ -812,12 +817,16 @@ input.c7 {
     <hr
       className="c5"
     />
-    <h1
-      className="c6 c7"
-      type="header"
+    <div
+      className="c6"
     >
-      Configuration
-    </h1>
+      <h1
+        className="c7"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
   </div>
   <div
     className="c8"
@@ -869,6 +878,23 @@ input.c4 {
   -webkit-transform-origin: left 25%;
   -ms-transform-origin: left 25%;
   transform-origin: left 25%;
+}
+
+.c8 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
 }
 
 .c9 .c6 {
@@ -982,27 +1008,6 @@ input.c4 {
   font-size: 1.5em;
 }
 
-.c34 .c6 {
-  pointer-events: none;
-}
-
-.c8 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 22px;
-  width: 0;
-}
-
-.c1 {
-  font-family: 'Fira Sans',sans-serif;
-}
-
 .c7 {
   height: 1em;
   line-height: 1em;
@@ -1034,9 +1039,12 @@ input.c4 {
   margin: 20px 20px;
 }
 
-.c3 {
+.c3 h1 {
   color: #999;
-  margin: 0;
+}
+
+.c34 .c6 {
+  pointer-events: none;
 }
 
 <div
@@ -1056,12 +1064,16 @@ Ipsum cumque nihil est placeat aliquam aperiam eligendi. Tempora occaecati nihil
   <div
     className="c2"
   >
-    <h1
-      className="c3 c4"
-      type="header"
+    <div
+      className="c3"
     >
-      Configuration
-    </h1>
+      <h1
+        className="c4"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
     <hr
       className="c5"
     />
