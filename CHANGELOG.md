@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.11.0](https://github.com/exivity/ui/compare/v0.10.1...v0.11.0) (2019-03-20)
+
+
+### Features
+
+* Box and useIsUncontrolled ([#53](https://github.com/exivity/ui/issues/53)) ([5950aba](https://github.com/exivity/ui/commit/5950aba))
+
+
+
 ## [0.10.1](https://github.com/exivity/ui/compare/v0.10.0...v0.10.1) (2019-03-20)
 
 
