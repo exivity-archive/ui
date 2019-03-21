@@ -11,7 +11,7 @@ interface StyledWidgetProps {
 const StyledWidget = styled.div<StyledWidgetProps>`
   background: white;
   box-shadow: 1px 1px 0 rgba(${fromTheme(theme => hexToString(theme.global.purposes.primary))},0.4);
-  padding: ${({ noPadding }) => noPadding ? 0 : fromTheme(theme => theme.global.spacing * 1.5)}em;
+  padding: ${({ noPadding }) => noPadding ? 0 : fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
   position: relative;
   box-sizing: border-box;
   border-radius: 3px;
@@ -23,7 +23,7 @@ interface HeaderProps {
 }
 
 const Header = styled.div<HeaderProps>`
-  padding: ${({ padding }) => padding ? fromTheme(theme => theme.global.spacing * 1.5) : 0}em;
+  padding: ${({ padding }) => padding ? fromTheme(theme => theme.global.baseSpacing * 1.5) : 0}em;
 `
 
 interface WidgetProps extends StyledProps {

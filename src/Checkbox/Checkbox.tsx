@@ -60,7 +60,7 @@ export const StyledCheckbox = styled.input`
       border-radius: ${props => props.type === 'checkbox'
         ? css`${fromTheme(theme => theme.global.borderRadius)}px`
         : '50%'};
-      background-color: ${fromTheme(theme => theme.colours.lightGray)};
+      background-color: ${fromTheme(theme => theme.colors.lightGray)};
     }
 
     &::after {
@@ -70,7 +70,7 @@ export const StyledCheckbox = styled.input`
     ${props => props.type === 'checkbox' && css`
       &::after {
         content: "\\2714";
-        color: ${fromTheme(theme => theme.colours.white)};
+        color: ${fromTheme(theme => theme.colors.white)};
         line-height: 1.1em;
         text-align: center;
       }
@@ -79,8 +79,8 @@ export const StyledCheckbox = styled.input`
     ${props => props.type === 'radio' && css`
       &::after {
         content: " ";
-        background: ${fromTheme(theme => theme.colours.dark)};
-        border: .2em solid ${fromTheme(theme => theme.colours.lightGray)};
+        background: ${fromTheme(theme => theme.colors.dark)};
+        border: .2em solid ${fromTheme(theme => theme.colors.lightGray)};
         border-radius: 50%;
       }
     `}
@@ -88,14 +88,14 @@ export const StyledCheckbox = styled.input`
 
   &:focus + label::before,
   & + label:hover::before {
-    background-color: ${fromTheme(theme => theme.colours.gray)};
+    background-color: ${fromTheme(theme => theme.colors.gray)};
   }
 
   &:checked + label {
     color: ${fromTheme(theme => theme.global.textColor)};
 
     &::before {
-      background-color: ${fromTheme(theme => theme.colours.dark)};
+      background-color: ${fromTheme(theme => theme.colors.dark)};
     }
 
     &::after {

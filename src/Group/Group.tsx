@@ -9,13 +9,13 @@ import { fromTheme } from '../utils/styled'
 const GroupSeparator = styled.hr`
   width: 100%;
   height: 1px;
-  background-color: ${fromTheme(theme => theme.colours.lightGray)};
+  background-color: ${fromTheme(theme => theme.colors.lightGray)};
   border: 0;
   margin: 20px 20px;
 `
 
 const GroupTitle = styled.span`
-  color: ${fromTheme(theme => theme.colours.gray)};
+  color: ${fromTheme(theme => theme.colors.gray)};
   margin: 0;
 `
 

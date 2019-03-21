@@ -5,18 +5,6 @@ exports[`Storyshots interact|Checkbox default 1`] = `
   padding: 12px;
 }
 
-.c1 {
-  margin: 1.25rem 0;
-}
-
-.c1:first-child {
-  margin-top: 0;
-}
-
-.c1:last-child {
-  margin-bottom: 0;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -110,10 +98,22 @@ exports[`Storyshots interact|Checkbox default 1`] = `
   transform: scale(0.9);
 }
 
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
 <div
   className="c0"
 >
-  <div
+  <section
     className="c1"
   >
     <span>
@@ -131,8 +131,8 @@ exports[`Storyshots interact|Checkbox default 1`] = `
         
       </label>
     </span>
-  </div>
-  <div
+  </section>
+  <section
     className="c1"
   >
     <span>
@@ -150,7 +150,7 @@ exports[`Storyshots interact|Checkbox default 1`] = `
         
       </label>
     </span>
-  </div>
+  </section>
 </div>
 `;
 

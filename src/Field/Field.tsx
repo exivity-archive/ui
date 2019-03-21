@@ -29,12 +29,12 @@ export const Field = styled.div<StyledFieldProps>`
   white-space: ${props => props.nowrap ? 'nowrap' : 'unset'};
 
   &:not(:last-child) {
-    margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
+    margin-bottom: ${fromTheme(theme => theme.global.baseSpacing)}em;
   }
 
   > ${Label}:first-child {
-    padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.spacing / 2)}em`};
-    margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.spacing)}em` : 'unset'};
+    padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.baseSpacing / 2)}em`};
+    margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.baseSpacing)}em` : 'unset'};
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: ${props => (props.horizontal && props.align)
@@ -53,7 +53,7 @@ export const Field = styled.div<StyledFieldProps>`
     }
 
     > *:not(${Label}):not(:last-child) {
-      margin-bottom: ${fromTheme(theme => theme.global.spacing)}em;
+      margin-bottom: ${fromTheme(theme => theme.global.baseSpacing)}em;
     }
   `}
 ` as FieldType

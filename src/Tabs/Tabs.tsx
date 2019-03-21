@@ -18,7 +18,7 @@ interface TabProps {
 const Tab = styled.li<TabProps>`
   display: inline-block;
   font-weight: bold;
-  color: ${fromTheme(theme => theme.colours.gray)};
+  color: ${fromTheme(theme => theme.colors.gray)};
   list-style: none;
   padding: 0.5rem 0;
   margin: 0 10px -1px 10px;
