@@ -7,4 +7,4 @@ import { ensureString } from '../utils'
 import * as useOutsideClickListener from './docs/useOutsideClickListener.md'
 
 storiesOf('helpers|useOutsideClickListener', module)
-  .add('docs', () => <Markdown>{ensureString(useOutsideClickListener)}</Markdown>)
+  .add('documentation', () => <Markdown>{ensureString(useOutsideClickListener)}</Markdown>)

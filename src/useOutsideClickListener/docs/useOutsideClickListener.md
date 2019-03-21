@@ -1,4 +1,4 @@
-# useOutSideClickListener
+# useOutsideClickListener
 
 Use this hook to attach an outside click listener to a div node.
 
