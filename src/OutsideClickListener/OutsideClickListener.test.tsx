@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount } from 'enzyme'
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { OutsideClickListener } from './OutsideClickListener'
 
 test('onOutsideClick should be called when clicking outside of the container', () => {
@@ -10,7 +10,7 @@ test('onOutsideClick should be called when clicking outside of the container', (
 
   const onOutsideMock = jest.fn()
 
-  const wrapper = mount(
+  const wrapper = mountWithTheme(
     <div id='outside'>
       <OutsideClickListener onOutsideClick={onOutsideMock}>
         <div id='inside' />
@@ -30,7 +30,7 @@ test('onOutsideClick should not be called when clicking inside of the container'
 
   const onOutsideMock = jest.fn()
 
-  const wrapper = mount(
+  const wrapper = mountWithTheme(
     <div id='outside'>
       <OutsideClickListener onOutsideClick={onOutsideMock}>
         <div id='inside' />

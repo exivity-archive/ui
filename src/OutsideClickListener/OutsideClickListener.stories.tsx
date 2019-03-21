@@ -12,7 +12,7 @@ const StyledOutside = styled.div`
   justify-content: space-around;
   height: 140px;
   padding: 40px 40px 60px 40px;
-  background-color: ${fromTheme(theme => theme.colours.blue)};
+  background-color: ${fromTheme(theme => theme.colors.blue)};
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
 `
 
@@ -22,7 +22,7 @@ const StyledInside = styled.div`
   justify-content: center;
   height: 100px;
   width: 400px;
-  background-color: ${fromTheme(theme => theme.colours.lightGray)}
+  background-color: ${fromTheme(theme => theme.colors.lightGray)}
 `
 
 export default storiesOf('interact/OutsideClickListener', module)
