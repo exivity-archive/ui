@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { MdDashboard, MdInsertChart, MdLibraryBooks } from 'react-icons/md'
 import styled from 'styled-components'
-import { Section, Grid, Icon, Image, Link, Heading } from '../../src'
+import { Flex, Grid, Heading, Image } from '../../src'
 import { StyledHeading } from '../../src/Heading/Heading'
 import { fromTheme, globalScrollbar } from '../../src/utils/styled'
+import { PrimaryNav } from './PrimaryNav'
+import { SecondaryNav } from './SecondaryNav'
 
 const headerHeight = 60
 const sidebarWidth = 250
@@ -46,7 +47,7 @@ const Header = styled(Grid.Item).attrs({
   white-space: nowrap;
 
   line-height: ${headerHeight}px;
-  padding-left: ${fromTheme(theme => theme.global.baseSpacing)}em;
+  padding: 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 
   ${StyledHeading} {
     line-height: ${headerHeight}px;
@@ -75,11 +76,12 @@ export const App: React.FC = ({ children }) => (
     <LogoArea>
       <Logo />
     </LogoArea>
-    <Header>
-      <Heading>Dashboard</Heading>
-    </Header>
+    <Flex as={Header}>
+      <Flex.Item as={Heading} noMargin grow={1}>Dashboard</Flex.Item>
+      <SecondaryNav />
+    </Flex>
     <Sidebar>
-      Navigation
+      <PrimaryNav />
     </Sidebar>
     <Main>
       {children}

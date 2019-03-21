@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Block, BlockProps } from '../Block'
 
 export interface GridItemProps extends BlockProps {
@@ -6,7 +6,7 @@ export interface GridItemProps extends BlockProps {
 }
 
 export const GridItem = styled(Block)<GridItemProps>`
-  grid-area: ${props => props.area};
+  ${props => props.area && css`grid-area: ${props.area};`}
 `
 
 GridItem.displayName = 'Grid.Item'
