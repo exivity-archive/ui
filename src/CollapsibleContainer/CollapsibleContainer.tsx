@@ -16,8 +16,8 @@ const ContainerCollapser: FC = ({ children }) => {
   const context = useContext(CollapsibleContext)
   if (!context) return null
 
-  const { collapsed, setCollapsed } = context
-  const toggleCollapse = () => setCollapsed(!collapsed)
+  const { collapsed, onCollapse } = context
+  const toggleCollapse = () => onCollapse(!collapsed)
 
   return (
     <StyledContainerCollapser onClick={toggleCollapse} data-test='container-collapser'>
@@ -43,24 +43,22 @@ export interface CollapsibleContainerSubComponents {
 export interface CollapsibleContainerProps {
   initialCollapsed?: boolean
   collapsed?: boolean
-  setCollapsed?: (newValue: boolean) => void
   onCollapse?: (newValue: boolean) => void
   collapsible?: boolean
 }
 
-export const CollapsibleContainer: FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents = ({ children, collapsible = true, ...rest }) => {
-  const defaultCollapsed = false
-  const initialCollapsed = rest.initialCollapsed !== undefined ? rest.initialCollapsed : defaultCollapsed
+export type CollapsibleContainerComponent = FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents
 
-  const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.setCollapsed, rest.onCollapse)
-
-  const collapsableContainerContext: CollapsibleContextShape = {
-    collapsed,
-    setCollapsed
-  }
-
+export const CollapsibleContainer: CollapsibleContainerComponent = ({
+  children,
+  collapsible = true,
+  initialCollapsed = false,
+  ...rest
+}) => {
+  const [collapsed, onCollapse] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
+  const collapsableContext = { collapsed, onCollapse }
   return (
-    <CollapsibleContext.Provider value={collapsible ? collapsableContainerContext : null}>
+    <CollapsibleContext.Provider value={collapsible ? collapsableContext : null}>
       {children}
     </CollapsibleContext.Provider>
   )

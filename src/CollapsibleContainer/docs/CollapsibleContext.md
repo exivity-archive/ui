@@ -14,8 +14,8 @@ Some components make use of a `CollapsibleContainer` so the `CollapsibleContext`
       | name | type |  description |
       |-----------|------------|--------|
       | `collapsed` | `boolean` | Determines whether the content of the `CollapsibleContainer` is displayed or not. | 
-      | `setCollapsed` | `(newValue: boolean) => void` |  Sets the value of `collapsed`. |   
-
+      | `onCollapse` | `(newValue: boolean) => void` |  Gets run when collapser gets clicked. By default it flips the value of collapsed |  
+      
 
  - When used outside a `CollapsibleContainer` component or one that isn't collapsible: `null`
 
