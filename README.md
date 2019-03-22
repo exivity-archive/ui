@@ -12,17 +12,21 @@ A collection of components to build interfaces.
 Quickstart
 ----------
 
-Install with `yarn`
+Install with `yarn`:
 
 ```bash
 yarn add @exivity/ui
 ```
 
-Start using it
+Import using:
+
+```javascript
+import { Button } from '@exivity/ui'
+```
+
+And make a button:
 
 ```jsx
-import { Button } from '@exivity/ui'
-
 <Button>Click me!</Button>
 ```
 

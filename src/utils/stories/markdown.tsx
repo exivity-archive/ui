@@ -10,6 +10,7 @@ import { Heading } from '../../Heading'
 import { Markdown } from '../../Markdown'
 import { ensureString } from '../index'
 import { fromTheme } from '../styled'
+import { preciseEm } from '../styled/isolated'
 
 const globals = {
   styled,
@@ -27,6 +28,8 @@ const StyledEditorWrapper = styled.div`
   background-color: ${fromTheme(theme => theme.colors.lightGray)};
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
 
+  padding: calc(${fromTheme(theme => theme.global.baseSpacing)}em - 10px) !important;
+
   textarea:focus {
     outline: none;
   }
@@ -34,8 +37,8 @@ const StyledEditorWrapper = styled.div`
 
 const StyledPreview = styled(LivePreview)`
   position: relative;
-  padding: 0;
-  background: white;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><g fill='#f7f7f7'><rect width='5' height='5' y='0' x='0'/><rect width='5' height='5' y='5' x='5'/></g></svg>");
+  padding: ${preciseEm(1)}em;
   height: auto;
   overflow: hidden;
 `
