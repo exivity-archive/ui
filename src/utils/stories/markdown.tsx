@@ -19,12 +19,14 @@ const globals = {
 }
 
 const StyledEditorWrapper = styled.div`
-  font-family: ${fromTheme(theme => theme.global.fontFamilyMonospace)};
-  font-weight: normal;
-  font-size: ${fromTheme(theme => theme.global.baseSize)}px;
-  color: ${fromTheme(theme => theme.global.textColor)};
-  line-height: ${fromTheme(theme => theme.global.lineHeight)};
+  &, textarea, pre {
+    font-family: ${fromTheme(theme => theme.global.fontFamilyMonospace)} !important;
+    font-weight: normal !important;
+    font-size: ${fromTheme(theme => theme.global.baseSize)}px !important;
+    line-height: ${fromTheme(theme => theme.global.lineHeight)} !important;
+  }
 
+  color: ${fromTheme(theme => theme.global.textColor)};
   background-color: ${fromTheme(theme => theme.colors.lightGray)};
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
 

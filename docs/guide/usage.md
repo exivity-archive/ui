@@ -1,20 +1,36 @@
 Usage
-Theme provider
-Wrap your entire app in a Provider component from reakit to provide styling capabilities to all nested components and use the provided theme:
+=====
 
-import { Provider } from 'reakit'
-import { theme } from '@exivity/ui'
+Start using **exivity/ui** by importing any named export from the main package. Most components also export a TypeScript props type:
 
-<Provider theme={theme}>
+```javascript
+import { Block, BlockProps } from '@exivity/ui' 
+```
+
+Theming
+-------
+
+### ThemeProvider
+
+Wrap your entire app in a `ThemeProvider` from [styled-components](https://www.styled-components.com/docs/advanced#theming) to provide theming capabilities to all nested components. **@exivity/ui** ships with a default theme which all components use if no `ThemeProvider` is found in the render tree.
+
+```javascript
+import { ThemeProvider } from 'styled-components'
+import { lightTheme } from '@exivity/ui'
+
+const myTheme = {
+  ...lightTheme,
+  global: {
+    ...lightTheme.global,
+    fontFamily: 'serif'
+  }
+}
+
+<ThemeProvider theme={theme}>
   <App/>
 </Provider>
-Global styles
-This package ships with the well-known normalize.css reset and a @import statement for loading the fonts for the default theme. Including those global styles is recommended but optional:
+```
 
-import { Provider, theme } from '@exivity/ui'
+### Using local fonts
 
-<Provider theme={theme} normalize font>
-  <App/>
-</Provider>
-Using local fonts
-...
+_wip_

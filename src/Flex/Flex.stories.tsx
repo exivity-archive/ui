@@ -11,8 +11,8 @@ const Ear = () => <Flex.Item width={50} height={100} bg='blue' />
 const Head = () => <Flex.Item as={Image} src={eyesUrl} background='contain' margin={1} size={200} bg='red' />
 
 storiesOf('atoms|Flex', module)
-  .add('Introduction', markdown(require('./README.md')))
-  .add('Default', () => (
+  .add('readme', markdown(require('./README.md')))
+  .add('default', () => (
     <Flex alignItems='center'>
       <Ear />
       <Head />
