@@ -2,7 +2,7 @@ import React, { FC, useContext } from 'react'
 import styled from 'styled-components'
 import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { CollapsibleContextShape, CollapsibleContext } from './helpers'
+import { CollapsibleContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
 
@@ -31,7 +31,6 @@ const StyledContainerContent = styled.div`
 `
 const ContainerContent: FC = ({ children }) => {
   const context = useContext(CollapsibleContext)
-
   return !context || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
 }
 
