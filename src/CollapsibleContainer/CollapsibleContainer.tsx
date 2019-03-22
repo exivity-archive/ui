@@ -43,6 +43,7 @@ export interface CollapsibleContainerSubComponents {
 export interface CollapsibleContainerProps {
   initialCollapsed?: boolean
   collapsed?: boolean
+  setCollapsed?: (newValue: boolean) => void
   onCollapse?: (newValue: boolean) => void
   collapsible?: boolean
 }
@@ -51,7 +52,7 @@ export const CollapsibleContainer: FC<CollapsibleContainerProps> & CollapsibleCo
   const defaultCollapsed = false
   const initialCollapsed = rest.initialCollapsed !== undefined ? rest.initialCollapsed : defaultCollapsed
 
-  const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
+  const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.setCollapsed, rest.onCollapse)
 
   const collapsableContainerContext: CollapsibleContextShape = {
     collapsed,
