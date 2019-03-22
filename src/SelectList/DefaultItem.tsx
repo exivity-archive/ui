@@ -10,11 +10,6 @@ export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, st
 
   const handleOnClick = () => onChange && onChange(item)
 
-  // const newStyle = {
-  //   ...style,
-  //   top: typeof style.top === 'number' ? style.top + 20 : style.top
-  // }
-
   return (
     <ListItem style={style} tabIndex={index + 1} onClick={handleOnClick} noDataPlaceholder={item.key === NO_DATA_KEY}>
       <CenterText>
