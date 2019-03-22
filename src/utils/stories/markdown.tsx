@@ -40,6 +40,8 @@ const StyledEditorWrapper = styled.div`
   }
 `
 
+const StyledEditor = styled(LiveEditor)<{ theme: any }>``
+
 const StyledPreview = styled(LivePreview)`
   position: relative;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><g fill='#f7f7f7'><rect width='5' height='5' y='0' x='0'/><rect width='5' height='5' y='5' x='5'/></g></svg>");
@@ -50,17 +52,15 @@ const StyledPreview = styled(LivePreview)`
 
 const StyledError = styled(Alert).attrs({
   danger: true
-})`
+})<{ as: any }>`
   font-family: ${fromTheme(theme => theme.global.fontFamilyMonospace)};
 `
 
 const JsxRenderer = (props: any) => (
   <LiveProvider code={props.value} scope={globals}>
     <StyledEditorWrapper>
-      // @ts-ignore
-      <LiveEditor theme={theme} />
+      <StyledEditor theme={theme} />
     </StyledEditorWrapper>
-    // @ts-ignore
     <StyledError as={LiveError} />
     <Heading type='sub'>Preview</Heading>
     <StyledPreview />
