@@ -43,11 +43,11 @@ export const Searchbar = ({
 }: SearchbarProps) => {
   const myRef = useRef<HTMLDivElement>(null)
   const [isFocused, setFocus] = useState(false)
-  const [animation, set] = useSpring(INITIAL_SPRING)
+  const [animation, set] = useSpring<{ padding: number }>(INITIAL_SPRING)
 
   const style = useMemo(() => ({
     transform: animation.padding.interpolate(value => `translateX(${value}px)`),
-    width: animation.padding.interpolate(value => myRef.current && myRef.current.getBoundingClientRect().width - value)
+    width: animation.padding.interpolate((value) => myRef.current && myRef.current.getBoundingClientRect().width - Number(value))
   }), [animation.padding, myRef.current])
 
   return (
