@@ -110,7 +110,6 @@ exports[`Storyshots atoms|Block dimensions 1`] = `
 .c1 {
   width: 100px;
   height: 100px;
-  background-color: #00a8d8;
 }
 
 <div
@@ -144,7 +143,6 @@ exports[`Storyshots atoms|Block padding 1`] = `
   padding-left: 1.25em;
   padding-right: 1.25em;
   width: 75%;
-  background-color: #fff68c;
 }
 
 <div
