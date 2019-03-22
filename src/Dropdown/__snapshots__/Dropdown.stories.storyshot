@@ -52,15 +52,19 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
           open={false}
         >
           <div
-            style={
-              Object {
-                "width": 500,
-              }
-            }
+            className=""
           >
-            Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+            <div
+              style={
+                Object {
+                  "width": 500,
+                }
+              }
+            >
+              Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
  
 Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+            </div>
           </div>
         </div>
       </div>

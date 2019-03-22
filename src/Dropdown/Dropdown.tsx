@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
+import { Block, BlockProps } from '../Block'
 
 import {
   getPosition,
@@ -42,7 +43,7 @@ const Content = styled.div <ContentProps>`
   ${({ position }) => `${position}`}
 `
 
-export interface DropdownProps {
+export interface DropdownProps extends BlockProps {
   className?: string
   triggerComponent: React.ReactNode
   open: boolean
@@ -62,7 +63,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
   vertical = 'auto',
   breakDistance = 20,
   useTriggerComponentWidth,
-  onOutsideClick
+  onOutsideClick,
+  ...blockProps
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
@@ -100,8 +102,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ref={contentRef}
           position={position}
           open={open}>
-          {children}
-        </ Content>
+          <Block {...blockProps}>
+            {children}
+          </Block>
+        </Content>
       </OutsideClickListener>
     </StyledDropdown>
   )

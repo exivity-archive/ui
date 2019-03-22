@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import {
-  border,
-  BorderProps,
   color,
   ColorProps,
   height,
@@ -23,6 +21,9 @@ export type BlockProps =
   & MaxHeightProps
   & MinHeightProps
   & ColorProps
+& {
+  color?: any
+}
 
 export const Block = styled.div<BlockProps>`
   ${space}
