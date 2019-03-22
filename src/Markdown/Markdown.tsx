@@ -30,8 +30,11 @@ interface MarkdownProps {
   children?: string
 }
 
-export const Markdown = ({ children, renderers = defaultRenderers }: MarkdownProps) => (
+export const Markdown = ({ children, renderers = {} }: MarkdownProps) => (
   <ReactMarkdown
-    renderers={renderers}
+    renderers={{
+      ...defaultRenderers,
+      ...renderers
+    }}
     source={children} />
 )

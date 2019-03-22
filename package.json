@@ -141,7 +141,8 @@
     "standard-version": "^5.0.2",
     "tslint": "^5.14.0",
     "tslint-config-standard": "^8.0.1",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "prism-react-renderer": "latest"
   },
   "peerDependencies": {
     "react": "^16.8.2",
