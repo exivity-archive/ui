@@ -58,8 +58,10 @@ const StyledError = styled(Alert).attrs({
 const JsxRenderer = (props: any) => (
   <LiveProvider code={props.value} scope={globals}>
     <StyledEditorWrapper>
+      // @ts-ignore
       <LiveEditor theme={theme} />
     </StyledEditorWrapper>
+    // @ts-ignore
     <StyledError as={LiveError} />
     <Heading type='sub'>Preview</Heading>
     <StyledPreview />
