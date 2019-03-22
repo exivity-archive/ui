@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c2 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+.c5 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c6 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c7 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c1 {
+  font-size: 1.5em;
+}
+
+.c17 .c1 {
+  font-size: 1.5em;
+}
+
+.c18 .c1 {
+  font-size: 1.5em;
+}
+
+.c19 .c1 {
+  font-size: 1.5em;
+}
+
+.c20 .c1 {
+  font-size: 1.5em;
+}
+
+.c21 .c1 {
+  font-size: 1.5em;
+}
+
+.c22 .c1 {
+  font-size: 1.5em;
+}
+
+.c23 .c1 {
+  font-size: 1.5em;
+}
+
+.c24 .c1 {
+  font-size: 1.5em;
+}
+
+.c25 .c1 {
+  font-size: 1.5em;
+}
+
+.c26 .c1 {
+  font-size: 1.5em;
+}
+
+.c27 .c1 {
+  font-size: 1.5em;
+}
+
+.c28 .c1 {
+  font-size: 1.5em;
+}
+
+.c29 .c1 {
+  font-size: 1.5em;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1 c2"
+    data-test="container-collapser"
+    onClick={[Function]}
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+      />
+    </svg>
+  </span>
+  <div
+    className="c3"
+  >
+    Dolores omnis occaecati dolor. Qui sunt non repellat. Illum qui deserunt. Reiciendis corporis ut voluptas. Et aperiam quo explicabo adipisci et quasi.
+ 
+Autem voluptatem aut id dolorem tenetur aut esse assumenda adipisci. Dolorem harum fuga libero inventore voluptatum voluptas perferendis voluptatibus. Est quos non qui qui. Odio blanditiis laborum eos voluptatem aut.
+ 
+Enim voluptatem asperiores maiores dolorem eius laudantium laboriosam quidem. Eaque facere aliquam laudantium accusamus consequuntur eos. Sit quas est tempore accusamus.
+ 
+Magni qui voluptatem eos occaecati. Consequatur qui perferendis aut tempore optio est facere ducimus in. Dolores facilis consequatur consequatur odit atque suscipit vero error eum. Est praesentium tempore vel culpa dolore ad. Natus aut tempore unde aliquid dolore. Aut adipisci dolore placeat magnam nostrum et est voluptatem.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|CollapsibleContainer helpers 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;

@@ -1,45 +1,25 @@
-import React, { FC, useState } from 'react'
-import { Heading } from '../Heading'
+import React, { FC } from 'react'
 import styled from 'styled-components'
-import { Icon } from '../Icon'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { useGroupContext, GroupContextShape, GroupContext } from './helpers'
+
+import { Heading } from '../Heading'
 import { fromTheme } from '../utils/styled'
-
-const GroupSeparator = styled.hr`
-  width: 100%;
-  height: 1px;
-  background-color: ${fromTheme(theme => theme.colors.lightGray)};
-  border: 0;
-  margin: 20px 20px;
-`
-
-const GroupTitle = styled.span`
-  color: ${fromTheme(theme => theme.colors.gray)};
-  margin: 0;
-`
+import {
+  CollapsibleContainer,
+  CollapsibleContainerSubComponents,
+  CollapsibleContainerProps
+} from '../CollapsibleContainer'
+import { Icon } from '../Icon'
 
 const GroupIcon = styled(Icon)`
-  margin-top: 8px;
+  margin-top: 10px;
+  font-size: 30px;
 `
 
-const StyledGroupCollapser = styled(GroupIcon)`
-  cursor: pointer;
-  user-select: none;
-  font-size: 16px;
-  width: 0;
-`
+const GroupCollapser: FC = () => (
+  <Group.Icon><CollapsibleContainer.Collapser /></Group.Icon>
+)
 
-const GroupCollapser: FC = () => {
-  const { toggleCollapse, collapsed } = useGroupContext()
-  return (
-    <StyledGroupCollapser onClick={toggleCollapse} data-test='group-collapser'>
-      {collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
-    </StyledGroupCollapser>
-  )
-}
-
-const StyledGroupHeader = styled(Heading)`
+const StyledGroupHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,59 +30,52 @@ const GroupHeader: FC = ({ children }) => (
   <StyledGroupHeader>{children}</StyledGroupHeader>
 )
 
-const StyledGroupContent = styled.div`
-  font-family: ${fromTheme(theme => theme.global.fontFamily)};
+const GroupSeparator = styled.hr`
+  width: 100%;
+  height: 1px;
+  background-color: ${fromTheme(theme => theme.colors.lightGray)};
+  border: 0;
+  margin: 20px 20px;
 `
 
-const GroupContent: FC = ({ children }) => {
-  const { collapsed } = useGroupContext()
-  return collapsed ? null : <StyledGroupContent>{children}</StyledGroupContent>
-}
+const StyledGroupTitle = styled.div`
+  h1 {
+    color: ${fromTheme(theme => theme.colors.gray)};
+  }
+`
 
-interface GroupSubComponents {
+const GroupTitle: FC = ({ children }) => (
+  <StyledGroupTitle>
+    <Heading>{children}</Heading>
+  </StyledGroupTitle>
+)
+
+interface GroupSubComponents extends CollapsibleContainerSubComponents {
   Header: typeof GroupHeader
   Title: typeof GroupTitle
   Separator: typeof GroupSeparator
   Icon: typeof GroupIcon
-  Content: typeof GroupContent
-  Collapser: typeof GroupCollapser
 }
 
-interface GroupProps {
-  initialCollapsed?: boolean
-  collapsed?: boolean
-  toggleCollapse?: () => void
+interface GroupProps extends CollapsibleContainerProps {
   header?: string
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ initialCollapsed = false, collapsed, toggleCollapse, children, header }) => {
-  const [uncontrolledCollapsed, setUncontrolledCollapsed] = useState(initialCollapsed)
-
-  if (collapsed !== undefined && !toggleCollapse) {
-    throw new Error('The controlled version of this component should take in a toggleCollapse prop')
-  } else {
-    toggleCollapse = () => setUncontrolledCollapsed(!uncontrolledCollapsed)
-  }
-
-  const groupContext: GroupContextShape = {
-    collapsed: collapsed !== undefined ? collapsed : uncontrolledCollapsed,
-    toggleCollapse
-  }
-
+export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, ...rest }) => {
   const Header = header ? (
-    <GroupHeader>
-      <GroupTitle>{header}</GroupTitle>
-      <GroupSeparator />
-      <GroupCollapser />
-    </GroupHeader>
+    <Group.Header>
+      <Group.Title>{header}</Group.Title>
+      <Group.Separator />
+      <Group.Collapser />
+    </Group.Header>
   ) : null
 
-  return <GroupContext.Provider value={groupContext}>{Header}{children}</GroupContext.Provider>
+  return <CollapsibleContainer {...rest}>{Header}{children}</CollapsibleContainer>
 }
 
 Group.Header = GroupHeader
 Group.Title = GroupTitle
 Group.Separator = GroupSeparator
 Group.Icon = GroupIcon
-Group.Content = GroupContent
+Group.Content = CollapsibleContainer.Content
 Group.Collapser = GroupCollapser

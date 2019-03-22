@@ -358,10 +358,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   pointer-events: none;
 }
 
-.c2 {
-  padding: 20px 0;
-}
-
 .c2 ul {
   padding: 0;
   margin: 0;
@@ -1862,10 +1858,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 
 .c48 .c9 {
   pointer-events: none;
-}
-
-.c2 {
-  padding: 20px 0;
 }
 
 .c2 ul {

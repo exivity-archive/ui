@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Dropdown } from '../Dropdown'
 import { Horizontal, Vertical } from '../Dropdown/helpers'
+import { BlockProps } from '../Block'
 
 interface InjectValueAndHandler {
   name?: string
@@ -11,7 +12,7 @@ interface InjectValueAndHandler {
   onClick: () => void
 }
 
-export interface SelectProps {
+export interface SelectProps extends BlockProps {
   name?: string
   value?: string
   placeholder?: string
@@ -47,7 +48,9 @@ export const Select: React.FC<SelectProps> = ({
     onOutsideClick,
     vertical,
     horizontal,
-    children
+    children,
+    py = 2,
+    ...blockProps
   }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const close = () => setIsOpen(false)
@@ -63,7 +66,7 @@ export const Select: React.FC<SelectProps> = ({
   const triggerComponent = getTriggerComponent(valueComponentProps, valueComponent)
 
   return (
-    <Dropdown open={isOpen} vertical={vertical} horizontal={horizontal}
+    <Dropdown open={isOpen} vertical={vertical} horizontal={horizontal} {...blockProps} py={py}
               onOutsideClick={() => onOutsideClick ? onOutsideClick(isOpen, close) : setIsOpen(false)}
               triggerComponent={triggerComponent}
               useTriggerComponentWidth={useTriggerComponentWidth}>

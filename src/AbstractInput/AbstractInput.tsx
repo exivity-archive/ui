@@ -1,5 +1,7 @@
 import React, { ChangeEvent, InputHTMLAttributes, useState } from 'react'
 import styled, { css } from 'styled-components'
+import { animated } from 'react-spring'
+
 import {
   fromTheme,
   globalFont,
@@ -118,10 +120,12 @@ const StyledInput = styled.input`
   ${inputStyles};
 `
 
+const AnimatedStyledInput = animated(StyledInput)
+
 export const AbstractInput =
   ({ type, onChange, ...rest }: Props) => {
     const [valid, setValid] = useState(true)
-    return <StyledInput
+    return <AnimatedStyledInput
       type={type || 'text'}
       danger={!valid}
       onChange={(event) => {

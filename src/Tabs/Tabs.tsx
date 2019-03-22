@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import { useTabsContext, TabsContext } from './helpers'
 import { fromTheme } from '../utils/styled'
+import { useIsUncontrolled } from '../useIsUncontrolled'
 
 interface TabProps {
   isActive?: boolean
@@ -123,12 +124,14 @@ interface TabsSubComponents {
 
 interface TabsProps {
   children: React.ReactNodeArray
+  activeIndex?: number
+  onActiveIndexChange?: (activeIndex: number) => void
 }
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
-export const Tabs: TabsComponent = ({ children }) => {
-  const [activeIndex, setActiveIndex] = useState(0)
+export const Tabs: TabsComponent = ({ children, onActiveIndexChange, ...rest }) => {
+  const [activeIndex, setActiveIndex] = useIsUncontrolled(0, rest.activeIndex, onActiveIndexChange)
   const contextValue = { activeIndex, setActiveIndex }
 
   return (

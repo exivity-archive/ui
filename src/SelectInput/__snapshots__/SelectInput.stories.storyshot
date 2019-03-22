@@ -283,7 +283,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
           type="text"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -313,7 +313,11 @@ exports[`Storyshots interact|SelectInput default 1`] = `
           className="c10"
           data-test="dropdown-content"
           open={false}
-        />
+        >
+          <div
+            className=""
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -629,7 +633,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
         value="Disabled"
       />
       <span
-        className="c6 c3 c7"
+        className="c6 c7"
         disabled={true}
       >
         <svg
@@ -663,7 +667,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
         value="Disabled"
       />
       <span
-        className="c6 c3 c7"
+        className="c6 c7"
         disabled={true}
       >
         <svg
@@ -948,7 +952,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         value="Outlined"
       />
       <span
-        className="c6 c3 c7"
+        className="c6 c7"
         disabled={true}
       >
         <svg
@@ -982,7 +986,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         value="Outlined"
       />
       <span
-        className="c6 c3 c7"
+        className="c6 c7"
         disabled={true}
       >
         <svg
@@ -1640,7 +1644,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Primary"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1674,7 +1678,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Secondary"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1708,7 +1712,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Success"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1742,7 +1746,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Danger"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1776,7 +1780,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Primary"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1810,7 +1814,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Secondary"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1844,7 +1848,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Success"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -1878,7 +1882,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           value="Danger"
         />
         <span
-          className="c7 c4 c8"
+          className="c7 c8"
           disabled={true}
         >
           <svg
@@ -2288,7 +2292,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         value="Small"
       />
       <span
-        className="c6 c3 c7"
+        className="c6 c7"
         disabled={true}
       >
         <svg
@@ -2322,7 +2326,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         value="Default"
       />
       <span
-        className="c6 c3 c9"
+        className="c6 c9"
         disabled={true}
       >
         <svg
@@ -2356,7 +2360,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         value="Large"
       />
       <span
-        className="c6 c3 c11"
+        className="c6 c11"
         disabled={true}
       >
         <svg

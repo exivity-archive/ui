@@ -31,6 +31,9 @@ export type BlockProps =
   & MaxHeightProps
   & MinHeightProps
   & ColorProps
+& {
+  color?: any
+}
 
 export const Block = styled.div<BlockProps>`
   ${space}

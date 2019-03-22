@@ -40,7 +40,7 @@ const StyledSelectInput = styled(TextInput)<InputIconProps>`
   }
 `
 
-const InputIcon = styled(Icon)<InputIconProps>`
+export const InputIcon = styled(Icon)<InputIconProps>`
   position: absolute;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 20,
@@ -76,7 +76,7 @@ export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHT
   <StyledContainer onClick={onClick}>
     <StyledSelectInput iconPosition={iconPosition} value={value} onChange={onChange} large={large} small={small}
                        disabled={disabled} className={className} {...rest}/>
-    <InputIcon className={className} iconPosition={iconPosition} large={large} small={small} disabled={disabled}>
+    <InputIcon iconPosition={iconPosition} large={large} small={small} disabled={disabled}>
       {icon}
     </InputIcon>
   </StyledContainer>
