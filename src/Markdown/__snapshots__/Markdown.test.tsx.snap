@@ -1788,6 +1788,7 @@ input.c0 {
 }
 
 .c0 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -1897,6 +1898,7 @@ input.c0 {
 }
 
 .c0 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;

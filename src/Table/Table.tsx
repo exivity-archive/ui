@@ -32,6 +32,7 @@ export const Table = styled.table<TableProps>`
   }
 
   caption {
+    text-align: left;
     text-transform: uppercase;
     font-size: ${preciseEm(0.9)}em;
     color: ${fromTheme(theme => theme.colors.gray)};

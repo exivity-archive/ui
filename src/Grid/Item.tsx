@@ -9,4 +9,4 @@ export const GridItem = styled(Block)<GridItemProps>`
   ${props => props.area && css`grid-area: ${props.area};`}
 `
 
-GridItem.displayName = 'Grid.Item'
+GridItem.displayName = 'GridItem'

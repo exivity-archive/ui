@@ -8,9 +8,13 @@ import { Alert } from '../../Alert'
 import { Code } from '../../Code'
 import { Heading } from '../../Heading'
 import { Markdown } from '../../Markdown'
-import { ensureString } from '../index'
+import { Table } from '../../Table'
+import { ensureString, omit } from '../index'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
+import { ObjectOf } from '../types'
+import { blockProps } from './blockProps'
+import { commonProps } from './commonProps'
 
 const globals = {
   styled,
@@ -68,10 +72,87 @@ const CodeRenderer = (props: any) => (
     : <Code block {...props}>{props.value}</Code>
 )
 
+interface PropDefinition {
+  defaultValue: any
+  description: string
+  name: string
+  required: boolean
+  type: {
+    name: string
+  }
+}
+
+const PropsTable = ({ component, withStyledSystem }: { component: string, withStyledSystem: boolean }) => {
+  let props: ObjectOf<PropDefinition>
+  try {
+    const [main, sub] = component.split('.')
+    props = sub
+      // @ts-ignore
+      ? UI[main][sub].__docgenInfo.props
+      // @ts-ignore
+      : UI[main].__docgenInfo.props
+  } catch (err) {
+    return <Alert danger>Could not load props for {component}</Alert>
+  }
+
+  if (!withStyledSystem) {
+    props = omit(props, [
+      ...commonProps,
+      ...blockProps
+    ])
+  } else {
+    props = omit(props, commonProps)
+  }
+
+  return (
+    <>
+      <Heading type='sub'>{component}</Heading>
+      <Table>
+        <colgroup>
+          <col width='15%' />
+          <col width='40%' />
+          <col width='35%' />
+          <col width='10%' />
+        </colgroup>
+        <thead>
+        <tr>
+          <th>Prop name</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Default value</th>
+        </tr>
+        </thead>
+        <tbody>
+        {Object.keys(props).sort().map(key => (
+          <tr key={key}>
+            <td>{props[key].name}</td>
+            <td>{props[key].description}</td>
+            <td>{props[key].type.name}</td>
+            <td>{props[key].defaultValue}</td>
+          </tr>
+        ))}
+        </tbody>
+      </Table>
+    </>
+  )
+}
+
+const TextRenderer = ({ value }: any) => {
+  if (value.startsWith('<!--')) {
+    const match = value.match(/<!--\s*props\(\s*(.+)\s*\).*-->/)
+    if (match && match[1]) {
+      const withStyledSystem = value.includes('styled-system')
+      return <PropsTable component={match[1] as string} withStyledSystem={withStyledSystem} />
+    }
+  }
+  return value
+}
+
 export function markdown (content: string) {
   return () => (
     <Markdown renderers={{
-      code: CodeRenderer
+      code: CodeRenderer,
+      html: TextRenderer
     }}>
       {ensureString(content)}
     </Markdown>

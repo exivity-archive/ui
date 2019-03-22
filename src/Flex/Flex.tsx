@@ -1,9 +1,8 @@
 import styled, { css, StyledComponent } from 'styled-components'
-import { Block } from '../Block'
-import { StyledProps } from '../utils/styled'
+import { Block, BlockProps } from '../Block'
 import { FlexItem } from './Item'
 
-export interface FlexProps extends StyledProps {
+export interface FlexProps extends BlockProps {
   direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
   wrap?: 'nowrap' | 'wrap' | 'wrap-reverse'
   justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'

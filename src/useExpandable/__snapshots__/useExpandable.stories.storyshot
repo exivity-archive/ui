@@ -12,36 +12,18 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c14 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c15 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c17 .c9 {
@@ -86,17 +68,14 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 
 .c25 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c26 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c27 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c28 .c9 {
@@ -140,18 +119,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c38 .c9 {
-  font-size: 1.5em;
-}
-
-.c39 .c9 {
-  font-size: 1.5em;
-}
-
-.c40 .c9 {
-  font-size: 1.5em;
-}
-
-.c41 .c9 {
   font-size: 1.5em;
 }
 
@@ -320,6 +287,39 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 .c12 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c39 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c40 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c41 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c1 {
@@ -1339,36 +1339,18 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c20 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c21 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c22 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c23 .c9 {
@@ -1413,17 +1395,14 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 
 .c31 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c32 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c33 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c34 .c9 {
@@ -1467,18 +1446,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c44 .c9 {
-  font-size: 1.5em;
-}
-
-.c45 .c9 {
-  font-size: 1.5em;
-}
-
-.c46 .c9 {
-  font-size: 1.5em;
-}
-
-.c47 .c9 {
   font-size: 1.5em;
 }
 
@@ -1826,6 +1793,39 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 .c12 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
+}
+
+.c45 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c46 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c47 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c1 {

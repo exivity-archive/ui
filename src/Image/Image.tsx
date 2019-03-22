@@ -15,9 +15,9 @@ export type ImageProps =
   & WidthProps
   & HeightProps
 
-export const Image = styled.img.attrs({
-  as: (props: ImageProps) => props.background ? 'div' : 'img'
-})<ImageProps>`
+export const Image = styled.img.attrs((props: ImageProps) => ({
+  as: props.background ? 'div' : 'img'
+}))<ImageProps>`
   box-sizing: border-box;
   ${props => props.background && css`
     background-image: url('${props.src}');

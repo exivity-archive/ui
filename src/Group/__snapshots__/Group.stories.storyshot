@@ -5,39 +5,6 @@ exports[`Storyshots molecules|Group default 1`] = `
   padding: 12px;
 }
 
-.c2 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c2:first-child {
-  margin-top: 0;
-}
-
-.c2:last-child {
-  margin-bottom: 0;
-}
-
-.c2,
-input.c2 {
-  font-size: 1.5em;
-}
-
-.c2 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
 .c8 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -147,6 +114,39 @@ input.c2 {
 
 .c32 .c5 {
   font-size: 1.5em;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c33 .c5 {
@@ -268,39 +268,6 @@ exports[`Storyshots molecules|Group x-inverted 1`] = `
   padding: 12px;
 }
 
-.c2 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c2:first-child {
-  margin-top: 0;
-}
-
-.c2:last-child {
-  margin-bottom: 0;
-}
-
-.c2,
-input.c2 {
-  font-size: 1.5em;
-}
-
-.c2 .c3 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
 .c8 .c3 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -412,6 +379,39 @@ input.c2 {
   font-size: 1.5em;
 }
 
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c3 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
 .c33 .c3 {
   pointer-events: none;
 }
@@ -519,39 +519,6 @@ Ipsum cumque nihil est placeat aliquam aperiam eligendi. Tempora occaecati nihil
 exports[`Storyshots molecules|Group xy-inverted 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c3:first-child {
-  margin-top: 0;
-}
-
-.c3:last-child {
-  margin-bottom: 0;
-}
-
-.c3,
-input.c3 {
-  font-size: 1.5em;
-}
-
-.c3 .c4 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
 }
 
 .c8 .c4 {
@@ -665,6 +632,39 @@ input.c3 {
   font-size: 1.5em;
 }
 
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c3,
+input.c3 {
+  font-size: 1.5em;
+}
+
+.c3 .c4 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
 .c33 .c4 {
   pointer-events: none;
 }
@@ -772,39 +772,6 @@ Eius dolores tempore vero qui. Explicabo quae accusamus aspernatur ut tempora iu
 exports[`Storyshots molecules|Group y-inverted 1`] = `
 .c0 {
   padding: 12px;
-}
-
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c3:first-child {
-  margin-top: 0;
-}
-
-.c3:last-child {
-  margin-bottom: 0;
-}
-
-.c3,
-input.c3 {
-  font-size: 1.5em;
-}
-
-.c3 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
 }
 
 .c8 .c6 {
@@ -916,6 +883,39 @@ input.c3 {
 
 .c32 .c6 {
   font-size: 1.5em;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c3,
+input.c3 {
+  font-size: 1.5em;
+}
+
+.c3 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c33 .c6 {

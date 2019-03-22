@@ -6,36 +6,18 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
 }
 
 .c22 .c18 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c23 .c18 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c24 .c18 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c25 .c18 {
@@ -80,17 +62,14 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
 
 .c33 .c18 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c34 .c18 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c35 .c18 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c36 .c18 {
@@ -137,18 +116,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   font-size: 1.5em;
 }
 
-.c47 .c18 {
-  font-size: 1.5em;
-}
-
-.c48 .c18 {
-  font-size: 1.5em;
-}
-
-.c49 .c18 {
-  font-size: 1.5em;
-}
-
 .c4 {
   display: block;
 }
@@ -166,6 +133,39 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c47 .c18 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c48 .c18 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c49 .c18 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c6 {
@@ -1987,36 +1987,18 @@ exports[`Storyshots molecules/Select default 1`] = `
 }
 
 .c15 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c17 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c18 .c6 {
@@ -2061,17 +2043,14 @@ exports[`Storyshots molecules/Select default 1`] = `
 
 .c26 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c27 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c28 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c29 .c6 {
@@ -2118,18 +2097,6 @@ exports[`Storyshots molecules/Select default 1`] = `
   font-size: 1.5em;
 }
 
-.c40 .c6 {
-  font-size: 1.5em;
-}
-
-.c41 .c6 {
-  font-size: 1.5em;
-}
-
-.c42 .c6 {
-  font-size: 1.5em;
-}
-
 .c8 {
   display: block;
 }
@@ -2147,6 +2114,39 @@ exports[`Storyshots molecules/Select default 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c40 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c41 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c42 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c10 {
@@ -2483,36 +2483,18 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
 }
 
 .c15 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c17 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c18 .c6 {
@@ -2557,17 +2539,14 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
 
 .c26 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c27 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c28 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c29 .c6 {
@@ -2614,18 +2593,6 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   font-size: 1.5em;
 }
 
-.c40 .c6 {
-  font-size: 1.5em;
-}
-
-.c41 .c6 {
-  font-size: 1.5em;
-}
-
-.c42 .c6 {
-  font-size: 1.5em;
-}
-
 .c8 {
   display: block;
 }
@@ -2643,6 +2610,39 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c40 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c41 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c42 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c10 {
@@ -2905,36 +2905,18 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
 }
 
 .c15 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c17 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c18 .c6 {
@@ -2979,17 +2961,14 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
 
 .c26 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c27 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c28 .c6 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c29 .c6 {
@@ -3036,18 +3015,6 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   font-size: 1.5em;
 }
 
-.c40 .c6 {
-  font-size: 1.5em;
-}
-
-.c41 .c6 {
-  font-size: 1.5em;
-}
-
-.c42 .c6 {
-  font-size: 1.5em;
-}
-
 .c8 {
   display: block;
 }
@@ -3065,6 +3032,39 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
+}
+
+.c40 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c41 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c42 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c10 {

@@ -26,6 +26,7 @@ exports[`Storyshots atoms|Table compact 1`] = `
 }
 
 .c1 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -130,6 +131,7 @@ exports[`Storyshots atoms|Table default 1`] = `
 }
 
 .c1 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;

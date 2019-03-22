@@ -17,4 +17,4 @@ export const FlexItem = styled(Block)<FlexItemProps>`
   ${props => props.alignSelf && css`align-self: ${props.alignSelf};`}
 `
 
-FlexItem.displayName = 'Flex.Item'
+FlexItem.displayName = 'FlexItem'
