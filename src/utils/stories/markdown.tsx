@@ -3,13 +3,13 @@ import theme from 'prism-react-renderer/themes/duotoneLight'
 import React from 'react'
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live'
 import styled from 'styled-components'
+import { ensureString, omit } from '..'
 import * as UI from '../..'
 import { Alert } from '../../Alert'
 import { Code } from '../../Code'
 import { Heading } from '../../Heading'
 import { Markdown } from '../../Markdown'
 import { Table } from '../../Table'
-import { ensureString, omit } from '../index'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
 import { ObjectOf } from '../types'
@@ -18,7 +18,6 @@ import { commonProps } from './commonProps'
 
 const globals = {
   styled,
-  fromTheme,
   ...UI
 }
 
