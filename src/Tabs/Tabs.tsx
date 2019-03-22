@@ -125,13 +125,15 @@ interface TabsSubComponents {
 interface TabsProps {
   children: React.ReactNodeArray
   activeIndex?: number
-  onActiveIndexChange?: (newValue: number) => void
+  setActiveIndex?: (newValue: number) => void
+  onActiveIndexChange?: (activeIndex: number) => void
 }
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
-export const Tabs: TabsComponent = ({ children, ...rest }) => {
-  const [activeIndex, setActiveIndex] = useIsUncontrolled(0, rest.activeIndex, rest.onActiveIndexChange)
+export const Tabs: TabsComponent = ({ children, onActiveIndexChange, ...rest }) => {
+  const [activeIndex, setActiveIndex] =
+    useIsUncontrolled(0, rest.activeIndex, rest.setActiveIndex, onActiveIndexChange)
   const contextValue = { activeIndex, setActiveIndex }
 
   return (
