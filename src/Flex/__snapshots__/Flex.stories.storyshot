@@ -65,7 +65,7 @@ exports[`Storyshots atoms|Flex default 1`] = `
 </div>
 `;
 
-exports[`Storyshots atoms|Flex readme 1`] = `
+exports[`Storyshots atoms|Flex overview 1`] = `
 .c0 {
   padding: 12px;
 }
