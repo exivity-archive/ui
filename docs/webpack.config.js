@@ -11,9 +11,9 @@ module.exports = async ({ config }) => {
     enforce: 'pre'
   })
 
-  // Storysource
+  // TypeScript docgen
   config.module.rules.push({
-    test: /\.tsx?$/,
+    test: /\.tsx$/,
     include: path.resolve(__dirname, '../src'),
     use: [
       {

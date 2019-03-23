@@ -1,19 +1,12 @@
 import styled from 'styled-components'
-import { fromTheme, globalFont, matchThemeProp, StyledProps } from '../utils/styled'
+import { fromTheme, globalFont, matchThemeProp, PurposesProps, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
-export interface AlertProps extends StyledProps {
-  // Purposes
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  danger?: boolean
-}
+export type AlertProps =
+  & PurposesProps
+  & StyledProps
 
-export const Alert = styled.div.attrs({
-  as: 'div',
-  color: 'white'
-})<AlertProps>`
+export const Alert = styled.div<AlertProps>`
   ${globalFont};
 
   background-color: ${matchThemeProp(theme => theme.global.purposes)};

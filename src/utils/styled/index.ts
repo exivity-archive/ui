@@ -13,6 +13,20 @@ export interface StyledProps {
   theme?: Theme
 }
 
+export interface PurposesProps {
+  primary?: boolean
+  secondary?: boolean
+  success?: boolean
+  danger?: boolean
+}
+
+export interface SizesProps {
+  tiny?: boolean
+  small?: boolean
+  large?: boolean
+  huge?: boolean
+}
+
 export const defaultStyledProps = {
   theme: defaultTheme
 }
