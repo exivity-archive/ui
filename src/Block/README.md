@@ -12,6 +12,6 @@ A general purpose component to help make layouts easier.
 
 ## Props
 
-`Block` uses some props from [styled-system](https://styled-system.com/)
+`Block` uses some props from [styled-system](https://styled-system.com/).
 
 <!-- props(Block) with styled-system -->

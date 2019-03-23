@@ -1,23 +1,20 @@
 // @ts-ignore
 import theme from 'prism-react-renderer/themes/duotoneLight'
-import React from 'react'
+import React, { useState } from 'react'
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live'
 import styled from 'styled-components'
-import { ensureString, omit } from '..'
+import { ensureString } from '..'
 import * as UI from '../..'
 import { Alert } from '../../Alert'
 import { Code } from '../../Code'
-import { Heading } from '../../Heading'
 import { Markdown } from '../../Markdown'
-import { Table } from '../../Table'
 import { Section } from '../../Section'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
-import { ObjectOf } from '../types'
-import { blockProps } from './blockProps'
-import { commonProps } from './commonProps'
+import { PropsTable } from './propsTable.tsx'
 
 const globals = {
+  useState,
   styled,
   ...UI
 }
@@ -82,77 +79,14 @@ const CodeRenderer = (props: any) => (
     : <Code block {...props}>{props.value}</Code>
 )
 
-interface PropDefinition {
-  defaultValue: any
-  description: string
-  name: string
-  required: boolean
-  type: {
-    name: string
-  }
-}
-
-const PropsTable = ({ component, withStyledSystem }: { component: string, withStyledSystem: boolean }) => {
-  let props: ObjectOf<PropDefinition>
-  try {
-    const [main, sub] = component.split('.')
-    props = sub
-      // @ts-ignore
-      ? UI[main][sub].__docgenInfo.props
-      // @ts-ignore
-      : UI[main].__docgenInfo.props
-  } catch (err) {
-    return <Alert danger>Could not load props for {component}</Alert>
-  }
-
-  if (!withStyledSystem) {
-    props = omit(props, [
-      ...commonProps,
-      ...blockProps
-    ])
-  } else {
-    props = omit(props, commonProps)
-  }
-
-  return (
-    <>
-      <Heading type='sub'>{component}</Heading>
-      <Table>
-        <colgroup>
-          <col width='15%' />
-          <col width='40%' />
-          <col width='35%' />
-          <col width='10%' />
-        </colgroup>
-        <thead>
-        <tr>
-          <th>Prop name</th>
-          <th>Description</th>
-          <th>Type</th>
-          <th>Default value</th>
-        </tr>
-        </thead>
-        <tbody>
-        {Object.keys(props).sort().map(key => (
-          <tr key={key}>
-            <td>{props[key].name}</td>
-            <td>{props[key].description}</td>
-            <td>{props[key].type.name}</td>
-            <td>{props[key].defaultValue}</td>
-          </tr>
-        ))}
-        </tbody>
-      </Table>
-    </>
-  )
-}
-
 const TextRenderer = ({ value }: any) => {
   if (value.startsWith('<!--')) {
-    const match = value.match(/<!--\s*props\(\s*(.+)\s*\).*-->/)
+    // See https://regexr.com/4arda
+    const match = value.match(/<!--\s*props\(\s*(.+)\s*\)\s*(?:with\s*([\w\s-_,]+))?.*-->/)
     if (match && match[1]) {
-      const withStyledSystem = value.includes('styled-system')
-      return <PropsTable component={match[1] as string} withStyledSystem={withStyledSystem} />
+      const component = match[1] as string
+      const include = (match[2] || '').split(',').map((item: string) => item.trim()) as string[]
+      return <PropsTable component={component} include={include} />
     }
   }
   return value

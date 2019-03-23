@@ -1,4 +1,4 @@
-export const blockProps = [
+export const styledSystemProps = [
   'p',
   'color',
   'height',
