@@ -154,6 +154,42 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   font-size: 1.5em;
 }
 
+.c51 .c19 {
+  font-size: 1.5em;
+}
+
+.c52 .c19 {
+  font-size: 1.5em;
+}
+
+.c53 .c19 {
+  font-size: 1.5em;
+}
+
+.c54 .c19 {
+  font-size: 1.5em;
+}
+
+.c55 .c19 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c56 .c19 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c57 .c19 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c58 .c19 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c4 {
   display: block;
 }
@@ -626,6 +662,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -2168,6 +2208,42 @@ exports[`Storyshots molecules/Select default 1`] = `
   font-size: 1.5em;
 }
 
+.c44 .c6 {
+  font-size: 1.5em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+}
+
+.c48 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c51 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c8 {
   display: block;
 }
@@ -2669,6 +2745,42 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   font-size: 1.5em;
 }
 
+.c44 .c6 {
+  font-size: 1.5em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+}
+
+.c48 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c51 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c8 {
   display: block;
 }
@@ -3094,6 +3206,42 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
 
 .c43 .c6 {
   font-size: 1.5em;
+}
+
+.c44 .c6 {
+  font-size: 1.5em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+}
+
+.c48 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c51 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c8 {

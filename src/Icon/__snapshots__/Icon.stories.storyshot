@@ -156,6 +156,42 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c31 .c1 {
+  font-size: 1.5em;
+}
+
+.c32 .c1 {
+  font-size: 1.5em;
+}
+
+.c33 .c1 {
+  font-size: 1.5em;
+}
+
+.c34 .c1 {
+  font-size: 1.5em;
+}
+
+.c35 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c36 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c37 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c38 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c39 .c1 {
   pointer-events: none;
 }
 

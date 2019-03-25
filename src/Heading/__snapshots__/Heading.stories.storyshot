@@ -248,6 +248,42 @@ input.c1:after {
 }
 
 .c31 .c2 {
+  font-size: 1.5em;
+}
+
+.c32 .c2 {
+  font-size: 1.5em;
+}
+
+.c33 .c2 {
+  font-size: 1.5em;
+}
+
+.c34 .c2 {
+  font-size: 1.5em;
+}
+
+.c35 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c36 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c37 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c38 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c39 .c2 {
   pointer-events: none;
 }
 

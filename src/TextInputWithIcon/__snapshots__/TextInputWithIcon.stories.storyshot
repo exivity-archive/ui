@@ -149,6 +149,42 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   font-size: 1.5em;
 }
 
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c44 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -246,6 +282,10 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -473,6 +513,42 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   font-size: 1.5em;
 }
 
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c44 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -572,6 +648,10 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -801,6 +881,42 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   font-size: 1.5em;
 }
 
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c44 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -898,6 +1014,10 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1121,6 +1241,42 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
 
 .c44 .c6 {
   font-size: 1.5em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+}
+
+.c48 .c6 {
+  font-size: 1.5em;
+}
+
+.c49 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c51 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c52 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c5 {
@@ -1585,11 +1741,19 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -2271,6 +2435,42 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   font-size: 1.5em;
 }
 
+.c43 .c5 {
+  font-size: 1.5em;
+}
+
+.c44 .c5 {
+  font-size: 1.5em;
+}
+
+.c45 .c5 {
+  font-size: 1.5em;
+}
+
+.c46 .c5 {
+  font-size: 1.5em;
+}
+
+.c47 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c48 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -2508,6 +2708,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div

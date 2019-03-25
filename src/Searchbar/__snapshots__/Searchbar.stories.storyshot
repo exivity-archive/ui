@@ -154,6 +154,42 @@ exports[`Storyshots atoms|Searchbar Styled-system 1`] = `
   font-size: 1.5em;
 }
 
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c38 .c6 {
+  font-size: 1.5em;
+}
+
+.c39 .c6 {
+  font-size: 1.5em;
+}
+
+.c40 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -447,6 +483,42 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 
 .c34 .c5 {
   font-size: 1.5em;
+}
+
+.c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c4 {

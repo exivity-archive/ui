@@ -182,6 +182,10 @@ exports[`Storyshots interact|TextArea disabled 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(2, fit-content(350px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -805,6 +809,10 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(350px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div

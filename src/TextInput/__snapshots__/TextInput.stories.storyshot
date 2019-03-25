@@ -1106,6 +1106,10 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1529,6 +1533,10 @@ exports[`Storyshots interact|TextInput sizes 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div

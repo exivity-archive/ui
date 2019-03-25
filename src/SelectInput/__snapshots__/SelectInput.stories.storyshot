@@ -149,6 +149,42 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   font-size: 1.5em;
 }
 
+.c39 .c7 {
+  font-size: 1.5em;
+}
+
+.c40 .c7 {
+  font-size: 1.5em;
+}
+
+.c41 .c7 {
+  font-size: 1.5em;
+}
+
+.c42 .c7 {
+  font-size: 1.5em;
+}
+
+.c43 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c44 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c45 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c46 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c9 {
   display: block;
 }
@@ -259,6 +295,10 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(1, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -473,6 +513,42 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   font-size: 1.5em;
 }
 
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c38 .c6 {
+  font-size: 1.5em;
+}
+
+.c39 .c6 {
+  font-size: 1.5em;
+}
+
+.c40 .c6 {
+  font-size: 1.5em;
+}
+
+.c41 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c44 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -614,6 +690,10 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -843,6 +923,42 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   font-size: 1.5em;
 }
 
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c38 .c6 {
+  font-size: 1.5em;
+}
+
+.c39 .c6 {
+  font-size: 1.5em;
+}
+
+.c40 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c43 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -933,6 +1049,10 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1160,6 +1280,42 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 
 .c43 .c7 {
   font-size: 1.5em;
+}
+
+.c44 .c7 {
+  font-size: 1.5em;
+}
+
+.c45 .c7 {
+  font-size: 1.5em;
+}
+
+.c46 .c7 {
+  font-size: 1.5em;
+}
+
+.c47 .c7 {
+  font-size: 1.5em;
+}
+
+.c48 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c51 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c6 {
@@ -1617,11 +1773,19 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -2059,6 +2223,42 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   font-size: 1.5em;
 }
 
+.c40 .c6 {
+  font-size: 1.5em;
+}
+
+.c41 .c6 {
+  font-size: 1.5em;
+}
+
+.c42 .c6 {
+  font-size: 1.5em;
+}
+
+.c43 .c6 {
+  font-size: 1.5em;
+}
+
+.c44 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -2273,6 +2473,10 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div

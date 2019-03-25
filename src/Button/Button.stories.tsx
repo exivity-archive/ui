@@ -1,10 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { MdClear, MdCloud, MdFavorite, MdSave, MdWhatshot } from 'react-icons/md'
 
 import { Icon } from '../Icon'
 import { Button } from '.'
 import { Row } from '../utils/stories/components'
+import { fromTheme } from '../../lib/utils/styled'
+
+const Container = styled.div`
+  display: flex;
+  background-color: ${fromTheme(theme => theme.colors.lightGray)}
+  padding: 20px;
+`
 
 storiesOf('interact|Button', module)
   .add('default', () => <Button>Default</Button>)
@@ -63,3 +71,17 @@ storiesOf('interact|Button', module)
     <Button round outlined large><Icon><MdFavorite /></Icon>️</Button>
     <span/>
   </Row>)
+  .add('transparent', () => (
+    <Container>
+      <Row columns={8}>
+        <Button round outlined tiny transparent><Icon><MdFavorite /></Icon></Button>
+        <Button round small transparent><Icon><MdFavorite /></Icon></Button>
+        <Button round transparent><Icon><MdFavorite /></Icon></Button>
+        <Button round large transparent><Icon><MdFavorite /></Icon></Button>
+        <Button outlined primary transparent>Primary</Button>
+        <Button outlined secondary transparent>Secondary</Button>
+        <Button outlined success transparent>Success</Button>
+        <Button outlined danger transparent>Danger</Button>
+      </Row>
+    </Container>
+  ))
