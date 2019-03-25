@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.13.0](https://github.com/exivity/ui/compare/v0.12.5...v0.13.0) (2019-03-25)
+
+
+### Features
+
+* add Flex, Alert component and improve docs ([#61](https://github.com/exivity/ui/issues/61)) ([547d583](https://github.com/exivity/ui/commit/547d583))
+
+
+
 ## [0.12.5](https://github.com/exivity/ui/compare/v0.12.4...v0.12.5) (2019-03-22)
 
 

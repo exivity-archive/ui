@@ -6,7 +6,7 @@ import { fromTheme, hexToString, matchThemeProp } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends InputProps {
-  // Variants
+  // Variantsgit
   round?: boolean
   transparent?: boolean
 }
