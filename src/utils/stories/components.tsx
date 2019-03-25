@@ -8,4 +8,5 @@ export const Row = styled.div<{ columns?: number | false, columnWidth?: number }
     grid-template-columns: repeat(${(props: any) => props.columns || 10},
       fit-content(${(props: any) => props.columnWidth || 200}px));
   `}
+  align-items: center;
 `

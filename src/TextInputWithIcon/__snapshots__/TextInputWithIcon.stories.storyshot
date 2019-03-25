@@ -117,17 +117,42 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
 }
 
 .c34 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -138,7 +163,18 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   transform-origin: left 25%;
 }
 
-.c36 .c5 {
+.c43 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -246,6 +282,10 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -441,17 +481,42 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
 }
 
 .c34 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -462,7 +527,18 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   transform-origin: left 25%;
 }
 
-.c36 .c5 {
+.c43 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -572,6 +648,10 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -769,17 +849,42 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
 }
 
 .c34 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c38 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c39 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c40 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c41 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c42 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -790,7 +895,18 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   transform-origin: left 25%;
 }
 
-.c36 .c5 {
+.c43 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -898,6 +1014,10 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1091,17 +1211,42 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
 }
 
 .c42 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c43 .c6 {
+  font-size: 1.5em;
+}
+
+.c44 .c6 {
+  font-size: 1.5em;
+}
+
+.c45 .c6 {
+  font-size: 1.5em;
+}
+
+.c46 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c47 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c48 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c49 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c50 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1112,7 +1257,18 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   transform-origin: left 25%;
 }
 
-.c44 .c6 {
+.c51 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c52 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1585,11 +1741,19 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -2239,17 +2403,42 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
 }
 
 .c40 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c41 .c5 {
+  font-size: 1.5em;
+}
+
+.c42 .c5 {
+  font-size: 1.5em;
+}
+
+.c43 .c5 {
+  font-size: 1.5em;
+}
+
+.c44 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c45 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c46 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c47 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c48 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2260,7 +2449,18 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   transform-origin: left 25%;
 }
 
-.c42 .c5 {
+.c49 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c50 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2508,6 +2708,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
