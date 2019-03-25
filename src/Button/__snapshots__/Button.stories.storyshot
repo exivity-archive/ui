@@ -420,6 +420,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
 }
@@ -513,6 +514,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
 }
@@ -606,6 +608,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
+  background-color: transparent;
   color: #4caf50;
   box-shadow: 0 0 0 1px #4caf50;
 }
@@ -699,6 +702,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
+  background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
 }
@@ -1611,6 +1615,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -1707,6 +1712,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
   border-radius: 50%;
@@ -1803,6 +1809,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
+  background-color: transparent;
   color: #4caf50;
   box-shadow: 0 0 0 1px #4caf50;
   border-radius: 50%;
@@ -1899,6 +1906,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
+  background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
   border-radius: 50%;
@@ -2250,6 +2258,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -2346,6 +2355,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -2442,6 +2452,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -3560,6 +3571,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -3915,6 +3927,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   background-color: transparent;
@@ -4009,6 +4022,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
   background-color: transparent;
@@ -4103,6 +4117,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
+  background-color: transparent;
   color: #4caf50;
   box-shadow: 0 0 0 1px #4caf50;
   background-color: transparent;
@@ -4197,6 +4212,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
+  background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
   background-color: transparent;

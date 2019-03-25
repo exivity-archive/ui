@@ -1811,6 +1811,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
 }
