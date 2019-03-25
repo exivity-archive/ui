@@ -1,5 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms|Table bottom 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c1 thead tr,
+.c1 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c1 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c1 caption {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c1 td,
+.c1 th {
+  padding: 0.1875em 0;
+  vertical-align: bottom;
+}
+
+.c1 td:not(:first-child),
+.c1 th:not(:first-child) {
+  padding-left: 0.375em;
+}
+
+.c1 td:not(:last-child),
+.c1 th:not(:last-child) {
+  padding-right: 0.375em;
+}
+
+.c1 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<div
+  className="c0"
+>
+  <table
+    className="c1"
+  >
+    <caption
+      align="bottom"
+    >
+      Component dependencies
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Component
+        </th>
+        <th>
+          Dependency
+        </th>
+        <th>
+          Version
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Code
+        </td>
+        <td>
+          react-syntax-highlighter
+          <br />
+          refractor
+        </td>
+        <td>
+          ^9.0.0
+          <br />
+          latest
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Markdown
+        </td>
+        <td>
+          react-markdown
+        </td>
+        <td>
+          ^4.0.3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots atoms|Table compact 1`] = `
 .c0 {
   padding: 12px;
@@ -26,6 +135,7 @@ exports[`Storyshots atoms|Table compact 1`] = `
 }
 
 .c1 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -34,7 +144,7 @@ exports[`Storyshots atoms|Table compact 1`] = `
 .c1 td,
 .c1 th {
   padding: 0em 0;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .c1 td:not(:first-child),
@@ -61,7 +171,7 @@ exports[`Storyshots atoms|Table compact 1`] = `
     <caption
       align="bottom"
     >
-      Table caption
+      Component dependencies
     </caption>
     <thead>
       <tr>
@@ -79,13 +189,17 @@ exports[`Storyshots atoms|Table compact 1`] = `
     <tbody>
       <tr>
         <td>
-          CodeBlock
+          Code
         </td>
         <td>
           react-syntax-highlighter
+          <br />
+          refractor
         </td>
         <td>
           ^9.0.0
+          <br />
+          latest
         </td>
       </tr>
       <tr>
@@ -130,6 +244,116 @@ exports[`Storyshots atoms|Table default 1`] = `
 }
 
 .c1 caption {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999;
+}
+
+.c1 td,
+.c1 th {
+  padding: 0.1875em 0;
+  vertical-align: top;
+}
+
+.c1 td:not(:first-child),
+.c1 th:not(:first-child) {
+  padding-left: 0.375em;
+}
+
+.c1 td:not(:last-child),
+.c1 th:not(:last-child) {
+  padding-right: 0.375em;
+}
+
+.c1 th {
+  font-weight: bold;
+  text-align: left;
+}
+
+<div
+  className="c0"
+>
+  <table
+    className="c1"
+  >
+    <caption
+      align="bottom"
+    >
+      Component dependencies
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Component
+        </th>
+        <th>
+          Dependency
+        </th>
+        <th>
+          Version
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Code
+        </td>
+        <td>
+          react-syntax-highlighter
+          <br />
+          refractor
+        </td>
+        <td>
+          ^9.0.0
+          <br />
+          latest
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Markdown
+        </td>
+        <td>
+          react-markdown
+        </td>
+        <td>
+          ^4.0.3
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots atoms|Table middle 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  table-layout: fixed;
+  border-collapse: collapse;
+  line-height: 200%;
+}
+
+.c1 thead tr,
+.c1 tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.c1 tfoot tr {
+  border-top: 1px solid #eee;
+}
+
+.c1 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -165,7 +389,7 @@ exports[`Storyshots atoms|Table default 1`] = `
     <caption
       align="bottom"
     >
-      Table caption
+      Component dependencies
     </caption>
     <thead>
       <tr>
@@ -183,13 +407,17 @@ exports[`Storyshots atoms|Table default 1`] = `
     <tbody>
       <tr>
         <td>
-          CodeBlock
+          Code
         </td>
         <td>
           react-syntax-highlighter
+          <br />
+          refractor
         </td>
         <td>
           ^9.0.0
+          <br />
+          latest
         </td>
       </tr>
       <tr>

@@ -1,0 +1,17 @@
+# {Component}
+
+Description for {Component} goes here.
+
+## Usage
+
+```jsx
+<{Component}>
+  <Text>I'm a {Component} component</Text>
+</{Component}>
+```
+
+## Props
+
+`{Component}` inherit all props from `Block`.
+
+<!-- props({Component}) -->

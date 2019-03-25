@@ -1,15 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms|Image contain 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  box-sizing: border-box;
+  background-image: url('https://picsum.photos/200/300');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    size={150}
+    src="https://picsum.photos/200/300"
+  />
+</div>
+`;
+
 exports[`Storyshots atoms|Image default 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c1 {
+  box-sizing: border-box;
 }
 
 <div
   className="c0"
 >
   <img
-    className=""
+    className="c1"
+    src="https://picsum.photos/200/300"
   />
 </div>
 `;

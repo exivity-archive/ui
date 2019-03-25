@@ -5,12 +5,14 @@ import { storiesOf } from '@storybook/react'
 import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
+import { markdown } from '../utils/stories/markdown'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
 
 storiesOf('interact|TextInput', module)
+  .add('overview', markdown(require('./README.md')))
   .addDecorator(withState(''))
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput

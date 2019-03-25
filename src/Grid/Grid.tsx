@@ -1,4 +1,4 @@
-import styled, { StyledComponent } from 'styled-components'
+import styled, { css, StyledComponent } from 'styled-components'
 import { Block } from '../Block'
 import { StyledProps } from '../utils/styled'
 import { GridItem } from './Item'
@@ -14,8 +14,8 @@ type GridType = StyledComponent<typeof Block, any, GridProps, never> & {
 
 export const Grid = styled(Block)<GridProps>`
   display: grid;
-  grid-template: ${props => props.template};
-  grid-gap: ${props => props.gap};
+  ${props => props.template && css`grid-template: ${props.template};`}
+  ${props => props.gap && css`grid-gap: ${props.gap};`}
 ` as GridType
 
 Grid.Item = GridItem

@@ -1788,6 +1788,7 @@ input.c0 {
 }
 
 .c0 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -1796,7 +1797,7 @@ input.c0 {
 .c0 td,
 .c0 th {
   padding: 0.1875em 0;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .c0 td:not(:first-child),
@@ -1897,6 +1898,7 @@ input.c0 {
 }
 
 .c0 caption {
+  text-align: left;
   text-transform: uppercase;
   font-size: 0.875em;
   color: #999;
@@ -1905,7 +1907,7 @@ input.c0 {
 .c0 td,
 .c0 th {
   padding: 0.1875em 0;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .c0 td:not(:first-child),

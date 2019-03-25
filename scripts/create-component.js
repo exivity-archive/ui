@@ -15,7 +15,8 @@ const templateFiles = [
   'Component.tsx.stub',
   'Component.stories.tsx.stub',
   'Component.test.tsx.stub',
-  'index.ts.stub'
+  'index.ts.stub',
+  'README.md.stub',
 ]
 
 if (existsSync(targetDir)) {

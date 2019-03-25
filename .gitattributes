@@ -1,0 +1,3 @@
+*.storyshot linguist-generated
+*.snap linguist-generated
+yarn.lock linguist-generated

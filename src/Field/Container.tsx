@@ -23,4 +23,4 @@ export const Container: React.FC<ContainerProps> = ({ children, ...otherProps })
     : null
 }
 
-Container.displayName = 'Field.Container'
+Container.displayName = 'FieldContainer'

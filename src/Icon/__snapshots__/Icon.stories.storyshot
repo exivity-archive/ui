@@ -12,36 +12,18 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c3 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c4 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c5 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c6 .c1 {
@@ -86,17 +68,14 @@ exports[`Storyshots atoms|Icon default 1`] = `
 
 .c14 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c15 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c16 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c17 .c1 {
@@ -161,14 +140,17 @@ exports[`Storyshots atoms|Icon default 1`] = `
 
 .c32 .c1 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c33 .c1 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c34 .c1 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c35 .c1 {
@@ -177,18 +159,36 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c36 .c1 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c37 .c1 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c38 .c1 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c39 .c1 {

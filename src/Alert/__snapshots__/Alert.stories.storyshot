@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms|Alert danger 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  background-color: #ef5350;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    Things went south
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms|Alert default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  background-color: #00a8d8;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    Something is going on
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms|Alert overview 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    README.md
+  </p>
+</div>
+`;
+
+exports[`Storyshots atoms|Alert success 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    All is well
+  </div>
+</div>
+`;
