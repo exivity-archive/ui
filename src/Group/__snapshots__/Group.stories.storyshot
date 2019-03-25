@@ -149,26 +149,6 @@ exports[`Storyshots molecules|Group default 1`] = `
   font-size: 1.5em;
 }
 
-.c38 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c39 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c40 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -237,7 +217,7 @@ input.c3 {
   color: #999;
 }
 
-.c42 .c5 {
+.c38 .c5 {
   pointer-events: none;
 }
 
@@ -449,26 +429,6 @@ exports[`Storyshots molecules|Group with icons 1`] = `
   font-size: 1.5em;
 }
 
-.c37 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c38 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c39 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c40 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -537,7 +497,7 @@ input.c3 {
   color: #999;
 }
 
-.c41 .c5 {
+.c37 .c5 {
   pointer-events: none;
 }
 
@@ -796,26 +756,6 @@ exports[`Storyshots molecules|Group x-inverted 1`] = `
   font-size: 1.5em;
 }
 
-.c38 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c39 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c40 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -884,7 +824,7 @@ input.c7 {
   color: #999;
 }
 
-.c42 .c2 {
+.c38 .c2 {
   pointer-events: none;
 }
 
@@ -1099,26 +1039,6 @@ exports[`Storyshots molecules|Group y-inverted 1`] = `
   font-size: 1.5em;
 }
 
-.c38 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c39 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c40 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -1187,7 +1107,7 @@ input.c4 {
   color: #999;
 }
 
-.c42 .c6 {
+.c38 .c6 {
   pointer-events: none;
 }
 

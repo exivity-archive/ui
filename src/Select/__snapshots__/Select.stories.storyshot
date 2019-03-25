@@ -137,26 +137,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   font-size: 1.5em;
 }
 
-.c52 .c19 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c53 .c19 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c54 .c19 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c55 .c19 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c4 {
   display: block;
 }
@@ -176,7 +156,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   visibility: hidden;
 }
 
-.c56 .c19 {
+.c52 .c19 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -187,7 +167,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   transform-origin: left 25%;
 }
 
-.c57 .c19 {
+.c53 .c19 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -198,7 +178,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   transform-origin: left 25%;
 }
 
-.c58 .c19 {
+.c54 .c19 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2191,26 +2171,6 @@ exports[`Storyshots molecules/Select default 1`] = `
   font-size: 1.5em;
 }
 
-.c45 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c46 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c47 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c48 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c8 {
   display: block;
 }
@@ -2230,7 +2190,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   visibility: hidden;
 }
 
-.c49 .c6 {
+.c45 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2241,7 +2201,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   transform-origin: left 25%;
 }
 
-.c50 .c6 {
+.c46 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2252,7 +2212,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   transform-origin: left 25%;
 }
 
-.c51 .c6 {
+.c47 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2728,26 +2688,6 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   font-size: 1.5em;
 }
 
-.c45 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c46 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c47 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c48 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c8 {
   display: block;
 }
@@ -2767,7 +2707,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   visibility: hidden;
 }
 
-.c49 .c6 {
+.c45 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2778,7 +2718,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   transform-origin: left 25%;
 }
 
-.c50 .c6 {
+.c46 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2789,7 +2729,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   transform-origin: left 25%;
 }
 
-.c51 .c6 {
+.c47 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -3191,26 +3131,6 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   font-size: 1.5em;
 }
 
-.c45 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c46 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c47 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c48 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c8 {
   display: block;
 }
@@ -3230,7 +3150,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   visibility: hidden;
 }
 
-.c49 .c6 {
+.c45 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -3241,7 +3161,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   transform-origin: left 25%;
 }
 
-.c50 .c6 {
+.c46 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -3252,7 +3172,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   transform-origin: left 25%;
 }
 
-.c51 .c6 {
+.c47 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
