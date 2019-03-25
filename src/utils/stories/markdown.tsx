@@ -11,7 +11,7 @@ import { Markdown } from '../../Markdown'
 import { Section } from '../../Section'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
-import { PropsTable } from './propsTable.tsx'
+import { PropsTable } from './propsTable'
 
 const globals = {
   useState,
