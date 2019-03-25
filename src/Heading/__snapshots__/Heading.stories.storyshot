@@ -189,26 +189,6 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 }
 
 .c33 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c34 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c35 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c36 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c37 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -219,7 +199,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   transform-origin: left 25%;
 }
 
-.c38 .c2 {
+.c34 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -283,7 +263,7 @@ input.c1:after {
   transform-origin: left 25%;
 }
 
-.c39 .c2 {
+.c35 .c2 {
   pointer-events: none;
 }
 

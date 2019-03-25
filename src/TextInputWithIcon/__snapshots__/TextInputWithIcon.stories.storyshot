@@ -133,48 +133,28 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
 }
 
 .c38 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c39 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c40 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c42 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c43 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -497,48 +477,28 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
 }
 
 .c38 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c39 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c40 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c42 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c43 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -865,48 +825,28 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
 }
 
 .c38 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c39 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c40 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c41 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c42 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c43 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c44 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1227,48 +1167,28 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
 }
 
 .c46 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c47 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c48 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c49 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c50 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c51 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c52 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2419,48 +2339,28 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
 }
 
 .c44 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c45 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 .c46 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c47 .c5 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c48 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c49 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c50 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);

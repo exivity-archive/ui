@@ -625,26 +625,6 @@ exports[`Storyshots interact|Field multiple 1`] = `
   font-size: 1.5em;
 }
 
-.c51 .c11 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c52 .c11 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c53 .c11 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c54 .c11 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -810,7 +790,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding-bottom: unset;
 }
 
-.c55 > .c3:first-child {
+.c51 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-box-flex: 0;
@@ -825,15 +805,15 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: auto;
 }
 
-.c55 > .c3:first-child > .c3 {
+.c51 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c55 > *:not(.c3):not(:last-child) {
+.c51 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
-.c56 > .c3:first-child {
+.c52 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-box-flex: 0;
@@ -848,11 +828,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: 20em;
 }
 
-.c56 > .c3:first-child > .c3 {
+.c52 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c56 > *:not(.c3):not(:last-child) {
+.c52 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
@@ -908,7 +888,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c57 .c11 {
+.c53 .c11 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);

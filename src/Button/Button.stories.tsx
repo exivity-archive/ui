@@ -73,15 +73,11 @@ storiesOf('interact|Button', module)
   </Row>)
   .add('transparent', () => (
     <Container>
-      <Row columns={8}>
-        <Button round outlined tiny transparent><Icon><MdFavorite /></Icon></Button>
+      <Row columns={4}>
+        <Button round tiny transparent><Icon><MdFavorite /></Icon></Button>
         <Button round small transparent><Icon><MdFavorite /></Icon></Button>
         <Button round transparent><Icon><MdFavorite /></Icon></Button>
         <Button round large transparent><Icon><MdFavorite /></Icon></Button>
-        <Button outlined primary transparent>Primary</Button>
-        <Button outlined secondary transparent>Secondary</Button>
-        <Button outlined success transparent>Success</Button>
-        <Button outlined danger transparent>Danger</Button>
       </Row>
     </Container>
   ))
