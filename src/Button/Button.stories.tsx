@@ -6,7 +6,7 @@ import { MdClear, MdCloud, MdFavorite, MdSave, MdWhatshot } from 'react-icons/md
 import { Icon } from '../Icon'
 import { Button } from '.'
 import { Row } from '../utils/stories/components'
-import { fromTheme } from '../../lib/utils/styled'
+import { fromTheme } from '../utils/styled'
 
 const Container = styled.div`
   display: flex;
