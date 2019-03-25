@@ -4,8 +4,10 @@ import React from 'react'
 import { Block } from '.'
 import { Code } from '../Code'
 import { Text } from '../Text'
+import { markdown } from '../utils/stories/markdown'
 
 storiesOf('atoms|Block', module)
+  .add('overview', markdown(require('./README.md')))
   .add('default', () => (
     <Block>
       <Text>I'm Jenny from the <Code>&lt;Block/&gt;</Code></Text>

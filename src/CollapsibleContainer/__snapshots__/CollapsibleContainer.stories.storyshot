@@ -5,17 +5,6 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
   padding: 12px;
 }
 
-.c4 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
 .c2 {
   height: 1em;
   line-height: 1em;
@@ -31,6 +20,11 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 
 .c3 {
   font-family: 'Fira Sans',sans-serif;
+}
+
+.c4 .c1 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c5 .c1 {
@@ -85,7 +79,6 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 
 .c15 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c16 .c1 {
@@ -141,7 +134,14 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 }
 
 .c29 .c1 {
-  font-size: 1.5em;
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
 }
 
 <div

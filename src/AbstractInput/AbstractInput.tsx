@@ -6,7 +6,7 @@ import {
   fromTheme,
   globalFont,
   hexToString,
-  matchThemeProp,
+  matchThemeProp, PurposesProps, SizesProps,
   StyledProps
 } from '../utils/styled'
 import { Omit } from '../utils/types'
@@ -15,19 +15,7 @@ export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInput
 
 export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
 
-export interface StyledInputProps extends StyledProps {
-  // Purposes
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  danger?: boolean
-
-  // Sizes
-  tiny?: boolean
-  small?: boolean
-  large?: boolean
-  huge?: boolean
-
+export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps {
   // Variants
   outlined?: boolean
   flat?: boolean

@@ -3,7 +3,16 @@ import {
   color,
   ColorProps,
   height,
-  HeightProps, maxHeight, MaxHeightProps, maxWidth, MaxWidthProps, minHeight, MinHeightProps, minWidth, MinWidthProps,
+  HeightProps,
+  maxHeight,
+  MaxHeightProps,
+  maxWidth,
+  MaxWidthProps,
+  minHeight,
+  MinHeightProps,
+  minWidth,
+  MinWidthProps, size,
+  SizeProps,
   space,
   SpaceProps,
   width,
@@ -14,6 +23,7 @@ import { StyledProps } from '../utils/styled'
 export type BlockProps =
   & StyledProps
   & SpaceProps
+  & SizeProps
   & WidthProps
   & MaxWidthProps
   & MinWidthProps
@@ -27,6 +37,7 @@ export type BlockProps =
 
 export const Block = styled.div<BlockProps>`
   ${space}
+  ${size}
   ${width}
   ${maxWidth}
   ${minWidth}
