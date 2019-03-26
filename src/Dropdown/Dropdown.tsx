@@ -105,7 +105,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ref={contentRef}
           position={position}
           open={open}>
-          <Block {...blockProps}>
+          <Block {...blockProps} width={width}>
             {children}
           </Block>
         </Content>
