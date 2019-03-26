@@ -19,7 +19,7 @@ const items = [
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
-    <Select value={state && state.value}>
+    <Select value={state && state.value} placeholder='Choose option'>
       <SelectList value={state && state.key} onChange={storeState} data={items}/>
     </Select>
   ))
@@ -52,7 +52,7 @@ export default storiesOf('molecules/Select', module)
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
-    <Select value={state && state.value} useTriggerComponentWidth={false}>
+    <Select value={state && state.value} useTriggerComponentWidth={false} placeholder='Choose option'>
       <SelectList value={state && state.key} onChange={storeState} data={items}/>
     </Select>
   ))

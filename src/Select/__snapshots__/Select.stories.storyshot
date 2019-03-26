@@ -2375,6 +2375,7 @@ exports[`Storyshots molecules/Select default 1`] = `
         className="c3 c4 c5"
         disabled={true}
         onChange={[Function]}
+        placeholder="Choose option"
         type="text"
         value={null}
       />
@@ -3335,6 +3336,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
         className="c3 c4 c5"
         disabled={true}
         onChange={[Function]}
+        placeholder="Choose option"
         type="text"
         value={null}
       />

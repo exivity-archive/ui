@@ -61,7 +61,6 @@ export const Select: React.FC<SelectProps> = ({
     name,
     placeholder,
     value,
-    key: isOpen ? 'open' : 'closed',
     onClick: () => setIsOpen(!isOpen)
   }
 
