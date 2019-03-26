@@ -67,7 +67,7 @@ export const inputStyles = css<StyledInputProps>`
     }
   `}
 
-  ${props => props.outlined && css`
+  ${props => (props.outlined && !props.flat) && css`
     border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${matchThemeProp(theme => theme.global.purposes)};
     background-color: unset;
 
@@ -80,17 +80,20 @@ export const inputStyles = css<StyledInputProps>`
     }
   `}
 
-  ${props => props.flat && css`
+  ${props => props.flat && css<StyledInputProps>`
     padding: 0;
-    outline-offset: 9px;
 
-    &:hover {
-      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
-    }
+    ${props => props.outlined && css`
+      outline-offset: 9px;
 
-    &:focus {
-      outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
-    }
+      &:hover {
+        outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
+      }
+
+      &:focus {
+        outline: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 1);
+      }
+    `}
   `}
 
   &::placeholder {

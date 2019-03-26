@@ -15,7 +15,7 @@ addParameters({
       base: 'light',
       brandTitle: '@exivity/ui',
       brandUrl: 'https://exivity.github.io/ui/',
-      brandImage: 'http://res.cloudinary.com/exivity/image/upload/v1512214049/exivity-path_oarztd.svg',
+      brandImage: 'logo.svg',
     }),
     panelPosition: 'right',
     isFullscreen: false,

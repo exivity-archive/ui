@@ -62,22 +62,28 @@ export const InputIcon = styled(Icon)<InputIconProps>`
 `
 
 export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHTMLInputAttributes> = ({
-    icon,
-    iconPosition = 'right',
-    large,
-    small,
-    value,
-    onChange,
-    disabled,
-    className,
-    onClick,
-    ...rest
-}) => (
-  <StyledContainer onClick={onClick}>
-    <StyledSelectInput iconPosition={iconPosition} value={value} onChange={onChange} large={large} small={small}
-                       disabled={disabled} className={className} {...rest}/>
-    <InputIcon iconPosition={iconPosition} large={large} small={small} disabled={disabled}>
+  // Icon props
+  icon,
+  iconPosition = 'right',
+
+  // Props for both TextInput & Icon
+  tiny,
+  small,
+  large,
+  huge,
+  disabled,
+
+  // Container props
+  onClick,
+
+  // Rest goes to TextInput
+  ...rest
+}) => {
+  const shared = { tiny, small, large, huge, disabled }
+  return <StyledContainer onClick={onClick}>
+    <StyledSelectInput iconPosition={iconPosition} {...shared} {...rest} />
+    <InputIcon iconPosition={iconPosition} {...shared}>
       {icon}
     </InputIcon>
   </StyledContainer>
-)
+}

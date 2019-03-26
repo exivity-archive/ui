@@ -30,10 +30,12 @@ const StyledTextInputWithIcon = styled(TextInputWithIcon)`
     }
   `}
 
-  &:hover, :focus {
-    background-color: ${fromTheme(theme => theme.colors.lightGray)};
-    border-bottom: none;
-  }
+  ${(props: SearchbarProps) => !props.flat && css`
+    &:hover, :focus {
+      background-color: ${fromTheme(theme => theme.colors.lightGray)};
+      border-bottom-color: transparent;
+    }
+  `}
 `
 
 export const Searchbar = (props: SearchbarProps) => (
