@@ -52,6 +52,7 @@ export interface DropdownProps extends BlockProps {
   breakDistance?: number
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
+  test?: string
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -64,6 +65,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   breakDistance = 20,
   useTriggerComponentWidth,
   onOutsideClick,
+  test = 'dropdown',
   ...blockProps
 }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -93,7 +95,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test='dropdown' ref={dropdownRef}>
+    <StyledDropdown className={className} data-test={test} ref={dropdownRef}>
       {triggerComponent}
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
@@ -102,7 +104,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           ref={contentRef}
           position={position}
           open={open}>
-          <Block {...blockProps}>
+          <Block {...blockProps} width={width}>
             {children}
           </Block>
         </Content>
