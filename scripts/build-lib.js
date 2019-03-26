@@ -1,17 +1,7 @@
-const fs = require('fs')
 const childProcess = require('child_process')
+const { fix, restore } = require('./fix-tsconfig')
 
-const original = fs.readFileSync('tsconfig.json')
-const tsconfig = JSON.parse(original.toString())
-
-tsconfig.compilerOptions.allowJs = false
-tsconfig.compilerOptions.isolatedModules = false
-tsconfig.compilerOptions.noEmit = false
-tsconfig.compilerOptions.declaration = true
-tsconfig.compilerOptions.jsx = "react"
-
-fs.writeFileSync('tsconfig.json',
-  JSON.stringify(tsconfig, undefined, 2))
+fix()
 
 let status = 0
 try {
@@ -22,7 +12,7 @@ try {
   status = 1
 }
 
-fs.writeFileSync('tsconfig.json', original)
+restore()
 
 process.exit(status)
 

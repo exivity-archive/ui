@@ -37,7 +37,7 @@
     "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
     "lib:clean": "rimraf lib",
     "lib:build": "node scripts/build-lib.js",
-    "lib:watch": "yarn tsc --watch",
+    "lib:watch": "node scripts/watch-lib.js",
     "commit": "git-cz",
     "npm:publish": "bash scripts/publish-npm.sh",
     "version:bump": "yarn standard-version",
