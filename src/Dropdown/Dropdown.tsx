@@ -100,7 +100,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
       {triggerComponent}
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
-          width={triggerWidth}
+          width={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test='dropdown-content'
           ref={contentRef}
           position={position}
