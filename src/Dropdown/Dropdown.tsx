@@ -90,7 +90,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }, [])
 
   useLayoutEffect(handlePosition, [])
-  const width = dropdownRef.current
+
+  const triggerWidth = dropdownRef.current
     ? `${dropdownRef.current.clientWidth}px`
     : undefined
 
@@ -99,12 +100,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
       {triggerComponent}
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
-          width={width}
+          width={triggerWidth}
           data-test='dropdown-content'
           ref={contentRef}
           position={position}
           open={open}>
-          <Block {...blockProps} width={width}>
+          <Block {...blockProps}>
             {children}
           </Block>
         </Content>
