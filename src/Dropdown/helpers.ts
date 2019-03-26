@@ -53,8 +53,8 @@ export function getPosition (rects: Rects, layout: Layout, breakDistance: number
 export function makeCssPosition ({ top, right, bottom, left }: Position) {
   let position = ''
   if (top !== undefined) position += `bottom: ${top}px;\n` + 'margin-top: 5px;\n'
-  if (right !== undefined) position += `left: ${right}px;\n`
+  if (right !== undefined) position += `right: ${right}px;\n`
   if (bottom !== undefined) position += `top: ${bottom}px;\n` + 'margin-bottom: 5px;\n'
-  if (left !== undefined) position += `right: ${left}px;\n`
+  if (left !== undefined) position += `left: ${left}px;\n`
   return position
 }

@@ -68,8 +68,8 @@ test('getPosition should return correct objects for given inputs', () => {
 
 test('makeCssPosition should return correct css for given inputs', () => {
   const expected1 = 'bottom: 10px;\nmargin-top: 5px;\nleft: 0px;\n'
-  expect(makeCssPosition({ top: 10, right: 0 })).toBe(expected1)
+  const expected2 = 'right: 0px;\ntop: 10px;\nmargin-bottom: 5px;\n'
 
-  const expected2 = 'top: 10px;\nmargin-bottom: 5px;\nright: 0px;\n'
-  expect(makeCssPosition({ bottom: 10, left: 0 })).toBe(expected2)
+  expect(makeCssPosition({ top: 10, left: 0 })).toBe(expected1)
+  expect(makeCssPosition({ bottom: 10, right: 0 })).toBe(expected2)
 })
