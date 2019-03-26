@@ -16,7 +16,6 @@ storiesOf('molecules|Dropdown', module)
         <div>
             <Dropdown
             open={state.one}
-            horizontal='right'
             triggerComponent={
               <Button secondary onClick={() => storeState({ one: !state.one })}>Click me</Button>
             }>
