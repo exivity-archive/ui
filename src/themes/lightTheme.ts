@@ -49,6 +49,7 @@ export const lightTheme = {
     lineHeight: 1.5,
     borderRadius: 4, // px
     borderWidth: 1, // px
+    borderColor: PALETTE.lightGray,
     outlineWidth: 4, // px
     outlineAlpha: 0.15,
     shadowAlpha: 0.1,

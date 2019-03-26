@@ -1,13 +1,13 @@
-import * as React from 'react'
+import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Flex, Grid, Heading, Image } from '../../src'
-import { StyledHeading } from '../../src/Heading/Heading'
-import { fromTheme, globalScrollbar } from '../../src/utils/styled'
+import { Flex, Grid, Heading, Image } from '../../../src'
+import { HeadingProps, StyledHeading } from '../../../src/Heading/Heading'
+import { fromTheme, globalScrollbar } from '../../../src/utils/styled'
 import { PrimaryNav } from './PrimaryNav'
 import { SecondaryNav } from './SecondaryNav'
 
-const headerHeight = 60
-const sidebarWidth = 250
+export const headerHeight = 60
+export const sidebarWidth = 250
 
 const template = `
   "logo header" ${headerHeight}px
@@ -54,6 +54,10 @@ const Header = styled(Grid.Item).attrs({
   }
 `
 
+const Title = styled(Flex.Item).attrs(() => ({
+  as: Heading
+}))<HeadingProps>``
+
 const Sidebar = styled(Grid.Item).attrs({
   as: 'nav',
   area: 'nav',
@@ -71,13 +75,18 @@ const Main = styled(Grid.Item).attrs({
   overflow: auto;
 `
 
-export const App: React.FC = ({ children }) => (
+interface AppProps {
+  title: string
+  children: ReactNode
+}
+
+export const App = ({ title, children }: AppProps) => (
   <Canvas>
     <LogoArea>
       <Logo />
     </LogoArea>
     <Flex as={Header}>
-      <Flex.Item as={Heading} noMargin grow={1}>Dashboard</Flex.Item>
+      <Title noMargin grow={1}>{title}</Title>
       <SecondaryNav />
     </Flex>
     <Sidebar>
