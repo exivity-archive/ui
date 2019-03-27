@@ -3,10 +3,10 @@ interface Data {
 }
 
 export function distanceBetweenNextSibling (data: Data[], index: number) {
-  let distance = 0
+  if (data.length === 0) return 0
+  let distance = 1
   const initialLevel = data[index].level
-
-  if (data.length === 0) return distance
+  index--
 
   while (true) {
     if (index < 0 || data[index].level <= initialLevel) return distance
