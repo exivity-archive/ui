@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { useSpring, animated } from 'react-spring'
 import { useTabsContext, TabsContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
@@ -12,11 +11,13 @@ interface TabProps {
   onBlur?: () => void
   onKeyDown?: (e: KeyboardEvent) => void
   onClick?: () => void
-  'data-test'?: 'tab'
+  test?: string
   children: React.ReactNode
 }
 
-const Tab = styled.li<TabProps>`
+const Tab = styled.li.attrs<TabProps>((props) => ({
+  ['data-test']: props.test ? props.test : 'tabs-tab'
+}))<TabProps>`
   display: inline-block;
   font-weight: bold;
   color: ${fromTheme(theme => theme.colors.gray)};
@@ -47,7 +48,7 @@ const TabsList = styled.ol`
 `
 
 interface TabListProps {
-  children: JSX.Element[]
+  children: React.ReactElement<TabProps>[]
 }
 
 const TabList: FC<TabListProps> = ({ children }) => {
@@ -65,50 +66,61 @@ const TabList: FC<TabListProps> = ({ children }) => {
 
   return (
     <TabsList>
-      {React.Children.map(children, (child, index) => (
-        child && React.cloneElement(child as any, {
+      {React.Children.map(children, (child: React.ReactElement<TabProps>, index) => (
+        child && React.cloneElement(child, {
           isActive: activeIndex === index,
           tabIndex: activeIndex === index ? 0 : -1,
           onFocus,
           onBlur: () => { setFocused(false) },
           onKeyDown,
           onClick: () => { setActiveIndex(index) },
-          'data-test': 'tab'
+          ...child.props
         })
       ))}
     </TabsList>
   )
 }
 
-const TabPanel: FC = ({ children }) => {
-  const { activeIndex } = useTabsContext()
-  const [lastActiveIndex, setLastActiveIndex] = useState(activeIndex)
-  const [lastChildren, setLastChildren] = useState(children)
+const StyledPanel = styled.div<{ animated?: boolean }>`
+  ${props => props.animated && css`
+    will-change: transform, opacity;
 
-  const animation = useSpring({
-    to: { opacity: 1, transform: 'translateX(0px)' },
-    from: { opacity: 0, transform: 'translateX(-10px)' },
-    reset: activeIndex !== lastActiveIndex,
-    onStart: () => {
-      setLastActiveIndex(activeIndex)
-      setLastChildren(children)
+    @keyframes slidein {
+      from {
+        transform: translateX(-10px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0px);
+        opacity: 1;
+      }
     }
-  })
 
-  return (
-    <animated.div style={animation} data-test='tab-panel'>
-      {lastChildren}
-    </animated.div>
-  )
-}
-interface TabPanelsProps {
-  children: React.ReactNodeArray
-}
+    animation-duration: 0.3s;
+    animation-name: slidein;
+  `}
+`
 
-const TabPanels: FC<TabPanelsProps> = ({ children }) => {
+const TabPanel: FC<{ animated?: boolean, test?: string }> = ({ children, animated, test = 'tabs-panel' }) => {
   const { activeIndex } = useTabsContext()
 
-  return <TabPanel data-test='tab-panels'>{children[activeIndex]}</TabPanel>
+  return <StyledPanel key={activeIndex} animated={animated} data-test={test}>{children}</StyledPanel>
+}
+
+interface TabPanelsProps {
+  animated?: boolean
+  children: React.ReactElement[]
+}
+
+const TabPanels: FC<TabPanelsProps> = ({ children, animated }) => {
+  const { activeIndex } = useTabsContext()
+  const activeChild = children[activeIndex]
+
+  return React.cloneElement(activeChild, {
+    animated,
+    ...activeChild.props
+  })
 }
 
 const StyledTabs = styled.div`
