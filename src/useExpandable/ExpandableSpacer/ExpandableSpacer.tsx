@@ -2,25 +2,26 @@ import React, { useRef, useEffect, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../../utils/styled'
 import { ButtonProps } from '../../Button'
+import { TreeListItem, iterateAllChildren } from '../helpers'
+import { distanceBetweenNextSibling, makeBorderWidth } from './helpers'
 
 interface StyledExpandableSpacerProps {
-  leftSpacerLine: number
-  bottomSpacerLine: number
+  borderWidth: string
   level: number
   distance: number
   spacing: number
 }
 
 export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
-  margin-left: ${({ spacing, level }) => (spacing * 1.5) * level}px;
+  margin-left: ${({ spacing, level }) => spacing * level}px;
   height: 100%;
 
-  ${({ leftSpacerLine, bottomSpacerLine, distance, spacing }) => css`&:after {
+  ${({ borderWidth, distance, spacing }) => css`&:after {
       position: relative;
       top: calc(-${(100 * distance)}% - 50%);
-      right: ${spacing}px;
+      right: ${(spacing * 0.5)}px;
       border: solid ${fromTheme(theme => theme.colors.lightGray)};
-      border-width: 0px 0px 0 ${leftSpacerLine}px;
+      border-width: ${borderWidth}
       content: ' ';
       display: block;
       width: ${spacing}px;
@@ -40,32 +41,36 @@ const Content = styled.div`
 interface ExpandableSpacerProps {
   button?: React.ReactComponentElement<'button', ButtonProps> | null
   index: number
-  level: number
-  distance: number
-  hasChildren: boolean
-  isOnlyRootParent: boolean
+  data: TreeListItem<{}>[]
 }
 
-export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, level, distance, button, hasChildren }) => {
+export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, button, data }) => {
   const buttonRef = useRef<HTMLDivElement>(null)
   const [left, setLeft] = useState(0)
+  const item = data[index]
+  const distance = distanceBetweenNextSibling(data, index)
 
   useEffect(() => {
     if (buttonRef.current) {
       setLeft((buttonRef.current.getBoundingClientRect().width))
     }
-  }, [level])
+  }, [item.level])
 
-  const isOnlyRootParent = useMemo(() => level === 1 && index === 0 && distance === 0, [distance])
+  const childCount = useMemo(() => {
+    let n = 0
+    iterateAllChildren(item, () => { n++ })
+    return n
+  }, [data])
 
+  const isOnlyRootParent = index === 0 && (childCount === 0 || childCount > data.length - 2)
+  const borderWidth = makeBorderWidth(index, isOnlyRootParent)
   return (
     <StyledExpandableSpacer
-      leftSpacerLine={index > 0 ? 1 : 0}
-      bottomSpacerLine={isOnlyRootParent ? 0 : 1}
-      level={level}
+      borderWidth={borderWidth}
+      level={item.level}
       spacing={left}
       distance={distance}>
-      <Content >{!(!hasChildren && left !== 0) &&
+      <Content >{!(!item.children && left !== 0) &&
         <div ref={buttonRef}>{button}</div>
       }{children}</Content>
     </StyledExpandableSpacer>

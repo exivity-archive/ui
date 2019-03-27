@@ -216,7 +216,7 @@ test('enrichItems should return new items', () => {
     four
   ]
 
-  const items = enrichTreeItems<any>(list,[], expandMock)
+  const items = enrichTreeItems<any>(list, [], expandMock)
 
   expect(items[0]).not.toBe(list[0])
   expect(items[1]).not.toBe(list[1])
@@ -266,9 +266,9 @@ test('createParentChildrenMap creates a map with child references', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  expect(map['1'][CHILDREN]![0]).toBe(list[1])
-  expect(map['2'][CHILDREN]![0]).toBe(list[2])
-  expect(map['3'][CHILDREN]![0]).toBe(list[3])
+  expect(map['1'][CHILDREN][0]).toBe(list[1])
+  expect(map['2'][CHILDREN][0]).toBe(list[2])
+  expect(map['3'][CHILDREN][0]).toBe(list[3])
   expect(map['4'][CHILDREN]).toBe(undefined)
 })
 

@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import { useTabsContext, TabsContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
+import { usePrevious } from '../utils/hooks/usePrevious'
 
 interface TabProps {
   isActive?: boolean
@@ -82,7 +83,7 @@ const TabList: FC<TabListProps> = ({ children }) => {
 
 const TabPanel: FC = ({ children }) => {
   const { activeIndex } = useTabsContext()
-  const [lastActiveIndex, setLastActiveIndex] = useState(activeIndex)
+  const lastActiveIndex = usePrevious(activeIndex)
   const [lastChildren, setLastChildren] = useState(children)
 
   const animation = useSpring({
@@ -90,7 +91,6 @@ const TabPanel: FC = ({ children }) => {
     from: { opacity: 0, transform: 'translateX(-10px)' },
     reset: activeIndex !== lastActiveIndex,
     onStart: () => {
-      setLastActiveIndex(activeIndex)
       setLastChildren(children)
     }
   })

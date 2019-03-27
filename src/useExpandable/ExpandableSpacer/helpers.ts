@@ -1,24 +1,20 @@
 interface Data {
-  attributes: { level: number }
-  [key: string]: any
+  level: number
 }
 
-export function distanceBetweenEvenLevelItem (
-  data: Data[],
-  index: number
-) {
-  if (data.length === 0) {
-    return 0
-  }
+export function distanceBetweenNextSibling (data: Data[], index: number) {
+  let distance = 0
+  const initialLevel = data[index].level
 
-  const initialLevel = data[index].attributes.level
-  function getDistanceBetweenNextLevelItem (i: number, distance: number): number {
-    if (i < 0 || data[i].attributes.level <= initialLevel) {
-      return distance
-    } else {
-      return getDistanceBetweenNextLevelItem(i - 1, distance + 1)
-    }
-  }
+  if (data.length === 0) return distance
 
-  return getDistanceBetweenNextLevelItem(index - 1, 1)
+  while (true) {
+    if (index < 0 || data[index].level <= initialLevel) return distance
+    index--
+    distance++
+  }
+}
+
+export function makeBorderWidth (index: number, onlyRootParent: boolean) {
+  return `0px 0px ${onlyRootParent ? 0 : 1}px ${index > 0 ? 1 : 0}px;`
 }
