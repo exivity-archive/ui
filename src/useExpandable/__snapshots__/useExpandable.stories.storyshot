@@ -380,6 +380,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 .c5:after {
   position: relative;
   top: calc(-100% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 0px;
   content: ' ';
@@ -397,6 +398,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 .c13:after {
   position: relative;
   top: calc(-100% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
@@ -1917,6 +1919,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 .c5:after {
   position: relative;
   top: calc(-100% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 0px;
   content: ' ';
@@ -1934,6 +1937,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 .c13:after {
   position: relative;
   top: calc(-100% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
@@ -1951,6 +1955,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 .c15:after {
   position: relative;
   top: calc(-300% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
@@ -1968,6 +1973,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 .c16:after {
   position: relative;
   top: calc(-700% - 50%);
+  right: 0px;
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
