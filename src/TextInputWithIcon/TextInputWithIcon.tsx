@@ -43,8 +43,7 @@ const StyledSelectInput = styled(TextInput)<InputIconProps>`
 export const InputIcon = styled(Icon)<InputIconProps>`
   position: absolute;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 20,
-    defaultValue: 'base'
+    modifier: (em: number) => em * 20
   })}px;
 
   ${props => props.disabled && css`

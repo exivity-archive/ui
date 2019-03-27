@@ -13,11 +13,12 @@ import {
   Button,
   distanceBetweenEvenLevelItem,
   ExpandableSpacer,
-  Flex,
+  Flex, Heading,
   Helpers,
   Icon,
   ListFocus,
   ListItem,
+  Paragraph,
   Searchbar,
   TreeListItem,
   useExpandable
@@ -89,20 +90,19 @@ const StyledFixedSizeList = styled(FixedSizeList)`
   ${globalScrollbar};
 `
 
-const List: React.FC = (props) => {
-  const accounts = useMemo(() => createFakeAccounts(), [])
-  const [data, helpers] = useExpandable<Account>(accounts, (item: Account) => item.parent)
+const List: React.FC = ({ data, ...rest }: any) => {
+  const [expandableData, helpers] = useExpandable<Account>(data, (item: Account) => item.parent)
 
   return (
-    <ListFocus {...props}>
+    <ListFocus {...rest}>
       <AutoSizer>
         {({ height, width }: { height: number, width: number }) => (
           <StyledFixedSizeList
             height={height}
             width={width}
             itemSize={40}
-            itemData={[data, helpers]}
-            itemCount={data.length}
+            itemData={[expandableData, helpers]}
+            itemCount={expandableData.length}
           >
             {Item}
           </StyledFixedSizeList>
@@ -112,7 +112,7 @@ const List: React.FC = (props) => {
   )
 }
 
-const StyledList = styled(List)`
+const StyledList = styled(List)<any>`
   flex-grow: 1;
 `
 
@@ -159,18 +159,24 @@ const Detail = styled(Flex.Item).attrs(props => ({
   overflow-x: hidden;
 `
 
-export const MasterDetail = () => (
-  <App title='Master/Detail'>
-    <Container>
-      <Master>
-        <Search />
-        <StyledList />
-      </Master>
-      <Detail>
-        <div style={{ height: '150vh' }}>
-          detail
-        </div>
-      </Detail>
-    </Container>
-  </App>
-)
+export const MasterDetail = () => {
+  const accounts = useMemo(() => createFakeAccounts(), [])
+
+  return (
+    <App title='Master/Detail'>
+      <Container>
+        <Master>
+          <Search />
+          <StyledList data={accounts} />
+        </Master>
+        <Detail>
+          <div style={{ height: '150vh' }}>
+            <Heading type='section'>
+              Dibbert - Considine
+            </Heading>
+          </div>
+        </Detail>
+      </Container>
+    </App>
+  )
+}

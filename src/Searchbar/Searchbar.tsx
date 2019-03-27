@@ -19,7 +19,7 @@ const StyledTextInputWithIcon = styled(TextInputWithIcon)`
   ${blockStyles};
 
   background-color: #fff;
-  border: none;
+  border-color: transparent !important;
 
   ${(props: SearchbarProps) => props.animated && css`
     will-change: padding-left;
@@ -33,7 +33,6 @@ const StyledTextInputWithIcon = styled(TextInputWithIcon)`
   ${(props: SearchbarProps) => !props.flat && css`
     &:hover, :focus {
       background-color: ${fromTheme(theme => theme.colors.lightGray)};
-      border-bottom-color: transparent;
     }
   `}
 `
