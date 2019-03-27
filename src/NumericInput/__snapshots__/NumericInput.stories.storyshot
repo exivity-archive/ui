@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Rerum reiciendis laborum earum aut nihil nisi doloremque eveniet voluptate. Non ut dolorem earum distinctio nobis.
+      Nisi voluptatum voluptatem beatae. Necessitatibus pariatur illo qui quo et consequatur a.
     </p>
   </div>
 </div>
@@ -351,7 +351,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      quia ipsa consequatur corrupti
+      corrupti debitis pariatur consectetur
     </p>
     <section
       className="c2"
@@ -366,7 +366,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      ex labore ea tenetur
+      placeat pariatur molestiae libero
     </p>
   </div>
 </div>
@@ -1110,6 +1110,10 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1410,6 +1414,10 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
 .c1 {
   display: grid;
   grid-gap: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div

@@ -6,8 +6,9 @@ import { fromTheme, hexToString, matchThemeProp } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends InputProps {
-  // Variants
+  // Variantsgit
   round?: boolean
+  transparent?: boolean
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -77,7 +78,7 @@ export const Button = styled.button<ButtonProps>`
   }
 
   ${(props: ButtonProps) => props.outlined && css`
-    background-color: ${fromTheme(theme => theme.colors.white)};
+    background-color: transparent;
     color: ${matchThemeProp(theme => theme.global.purposes)};
     box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
 
@@ -107,4 +108,8 @@ export const Button = styled.button<ButtonProps>`
       margin-right: ${fromTheme(theme => theme.global.baseSpacing / 2)}em;
     `}
   }
+
+  ${(props: ButtonProps) => props.transparent && css`
+    background-color: transparent;
+  `}
 `

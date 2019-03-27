@@ -5,124 +5,140 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 12px;
 }
 
-.c9 {
+.c10 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
 }
 
-.c13 .c8 {
+.c14 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c14 .c8 {
+.c15 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c15 .c8 {
+.c16 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c16 .c8 {
+.c17 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c17 .c8 {
+.c18 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c8 {
+.c19 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c19 .c8 {
+.c20 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c8 {
+.c21 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c8 {
+.c22 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c8 {
+.c23 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c8 {
+.c24 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c8 {
+.c25 .c9 {
   font-size: 1.5em;
 }
 
-.c25 .c8 {
+.c26 .c9 {
   font-size: 1.5em;
 }
 
-.c26 .c8 {
+.c27 .c9 {
   font-size: 1.5em;
 }
 
-.c27 .c8 {
+.c28 .c9 {
   font-size: 1.5em;
 }
 
-.c28 .c8 {
+.c29 .c9 {
   font-size: 1.5em;
 }
 
-.c29 .c8 {
+.c30 .c9 {
   font-size: 1.5em;
 }
 
-.c30 .c8 {
+.c31 .c9 {
   font-size: 1.5em;
 }
 
-.c31 .c8 {
+.c32 .c9 {
   font-size: 1.5em;
 }
 
-.c32 .c8 {
+.c33 .c9 {
   font-size: 1.5em;
 }
 
-.c33 .c8 {
+.c34 .c9 {
   font-size: 1.5em;
 }
 
-.c34 .c8 {
+.c35 .c9 {
   font-size: 1.5em;
 }
 
-.c35 .c8 {
+.c36 .c9 {
   font-size: 1.5em;
 }
 
-.c36 .c8 {
+.c37 .c9 {
   font-size: 1.5em;
 }
 
-.c37 .c8 {
+.c38 .c9 {
   font-size: 1.5em;
 }
 
-.c7 {
+.c39 .c9 {
+  font-size: 1.5em;
+}
+
+.c40 .c9 {
+  font-size: 1.5em;
+}
+
+.c41 .c9 {
+  font-size: 1.5em;
+}
+
+.c42 .c9 {
+  font-size: 1.5em;
+}
+
+.c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -170,20 +186,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   width: 2.857142857142857em;
 }
 
-.c7:hover {
+.c8:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c7:focus {
+.c8:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:active,
-.c7.active {
+.c8:active,
+.c8.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:after {
+.c8:after {
   display: none;
   content: "";
   position: absolute;
@@ -195,19 +211,19 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   pointer-events: none;
 }
 
-.c7[disabled]:after {
+.c8[disabled]:after {
   display: block;
 }
 
-.c7 .c8 {
+.c8 .c9 {
   font-size: 1.5em;
 }
 
-.c11 {
+.c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -251,20 +267,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   --focus-color: 153,153,153;
 }
 
-.c11:hover {
+.c12:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c11:focus {
+.c12:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c11:active,
-.c11.active {
+.c12:active,
+.c12.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c11:after {
+.c12:after {
   display: none;
   content: "";
   position: absolute;
@@ -276,20 +292,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c11[disabled] {
+.c12[disabled] {
   pointer-events: none;
 }
 
-.c11[disabled]:after {
+.c12[disabled]:after {
   display: block;
 }
 
-.c11 .c8 {
+.c12 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c38 .c8 {
+.c43 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -300,7 +316,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   transform-origin: left 25%;
 }
 
-.c39 .c8 {
+.c44 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -311,7 +327,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   transform-origin: left 25%;
 }
 
-.c40 .c8 {
+.c45 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -322,7 +338,12 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   transform-origin: left 25%;
 }
 
-.c2 {
+.c1 {
+  height: 100%;
+  width: 100%;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -338,38 +359,34 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   cursor: pointer;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   background-color: #eee;
 }
 
-.c3 {
+.c4 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c41 .c8 {
+.c46 .c9 {
   pointer-events: none;
 }
 
-.c42 .c8 {
-  pointer-events: none;
-}
-
-.c1 ul {
+.c2 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.c4 {
+.c5 {
   margin-left: 40px;
   margin-right: 20px;
   height: 100%;
 }
 
-.c4:after {
+.c5:after {
   position: relative;
   left: -20px;
   top: calc(-100% - 50%);
@@ -382,13 +399,13 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   z-index: -1;
 }
 
-.c12 {
+.c13 {
   margin-left: 40px;
   margin-right: 20px;
   height: 100%;
 }
 
-.c12:after {
+.c13:after {
   position: relative;
   left: -20px;
   top: calc(-100% - 50%);
@@ -401,7 +418,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   z-index: -1;
 }
 
-.c5 {
+.c6 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -416,11 +433,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   align-items: center;
 }
 
-.c43 .c6 {
+.c47 .c7 {
   margin-left: 20px;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -444,10 +461,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   className="c0"
 >
   <div
+    className="c1"
     onKeyDown={[Function]}
   >
     <div
-      className="c1"
+      className="c2"
       onScroll={[Function]}
       style={
         Object {
@@ -471,7 +489,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         }
       >
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -485,20 +503,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c4"
+              className="c5"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -521,11 +539,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Ayden
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -536,7 +554,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -550,20 +568,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -586,11 +604,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Larue
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -601,7 +619,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -615,20 +633,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -651,11 +669,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Helena
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -666,7 +684,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -680,20 +698,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -716,11 +734,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Margaret
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -731,7 +749,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -745,20 +763,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -781,11 +799,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Vernie
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -796,7 +814,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -810,20 +828,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -846,11 +864,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Hannah
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -861,7 +879,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -875,20 +893,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -911,11 +929,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Kaci
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -926,7 +944,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -940,20 +958,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -976,11 +994,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Clinton
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -991,7 +1009,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1005,20 +1023,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -1041,11 +1059,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Mathew
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -1056,7 +1074,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1070,20 +1088,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -1106,11 +1124,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Edythe
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -1121,7 +1139,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1135,20 +1153,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -1171,11 +1189,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Emerson
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -1186,7 +1204,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1200,20 +1218,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -1236,11 +1254,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Bryce
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -1251,7 +1269,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1265,20 +1283,20 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -1301,11 +1319,11 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Marques
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -1326,205 +1344,136 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 12px;
 }
 
-.c9 {
+.c10 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
 }
 
-.c19 .c8 {
+.c20 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c8 {
+.c21 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c8 {
+.c22 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c8 {
+.c23 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c8 {
+.c24 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c8 {
+.c25 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c25 .c8 {
+.c26 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c26 .c8 {
+.c27 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c27 .c8 {
+.c28 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c28 .c8 {
+.c29 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c29 .c8 {
+.c30 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c30 .c8 {
+.c31 .c9 {
   font-size: 1.5em;
 }
 
-.c31 .c8 {
+.c32 .c9 {
   font-size: 1.5em;
 }
 
-.c32 .c8 {
+.c33 .c9 {
   font-size: 1.5em;
 }
 
-.c33 .c8 {
+.c34 .c9 {
   font-size: 1.5em;
 }
 
-.c34 .c8 {
+.c35 .c9 {
   font-size: 1.5em;
 }
 
-.c35 .c8 {
+.c36 .c9 {
   font-size: 1.5em;
 }
 
-.c36 .c8 {
+.c37 .c9 {
   font-size: 1.5em;
 }
 
-.c37 .c8 {
+.c38 .c9 {
   font-size: 1.5em;
 }
 
-.c38 .c8 {
+.c39 .c9 {
   font-size: 1.5em;
 }
 
-.c39 .c8 {
+.c40 .c9 {
   font-size: 1.5em;
 }
 
-.c40 .c8 {
+.c41 .c9 {
   font-size: 1.5em;
 }
 
-.c41 .c8 {
+.c42 .c9 {
   font-size: 1.5em;
 }
 
-.c42 .c8 {
+.c43 .c9 {
   font-size: 1.5em;
 }
 
-.c43 .c8 {
+.c44 .c9 {
   font-size: 1.5em;
 }
 
-.c16 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
+.c45 .c9 {
+  font-size: 1.5em;
 }
 
-.c16:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+.c46 .c9 {
+  font-size: 1.5em;
 }
 
-.c16:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+.c47 .c9 {
+  font-size: 1.5em;
 }
 
-.c16:active,
-.c16.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c16:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c16[disabled] {
-  pointer-events: none;
-}
-
-.c16[disabled]:after {
-  display: block;
-}
-
-.c16 .c8 {
+.c48 .c9 {
   font-size: 1.5em;
 }
 
@@ -1568,8 +1517,12 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
 .c17:hover {
@@ -1605,12 +1558,93 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   display: block;
 }
 
-.c17 .c8 {
+.c17 .c9 {
+  font-size: 1.5em;
+}
+
+.c18 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.7109375em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #999;
+  --focus-color: 153,153,153;
+}
+
+.c18:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c18:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c18:active,
+.c18.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c18:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c18[disabled] {
+  pointer-events: none;
+}
+
+.c18[disabled]:after {
+  display: block;
+}
+
+.c18 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c7 {
+.c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -1658,20 +1692,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   width: 2.857142857142857em;
 }
 
-.c7:hover {
+.c8:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c7:focus {
+.c8:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:active,
-.c7.active {
+.c8:active,
+.c8.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:after {
+.c8:after {
   display: none;
   content: "";
   position: absolute;
@@ -1683,19 +1717,19 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   pointer-events: none;
 }
 
-.c7[disabled]:after {
+.c8[disabled]:after {
   display: block;
 }
 
-.c7 .c8 {
+.c8 .c9 {
   font-size: 1.5em;
 }
 
-.c11 {
+.c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -1737,25 +1771,25 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
-  background-color: #fff;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
 }
 
-.c11:hover {
+.c12:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c11:focus {
+.c12:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c11:active,
-.c11.active {
+.c12:active,
+.c12.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c11:after {
+.c12:after {
   display: none;
   content: "";
   position: absolute;
@@ -1767,29 +1801,29 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c11[disabled] {
+.c12[disabled] {
   pointer-events: none;
 }
 
-.c11[disabled]:after {
+.c12[disabled]:after {
   display: block;
 }
 
-.c11:hover {
+.c12:hover {
   color: #222;
   box-shadow: 0 0 0 1px #222;
 }
 
-.c11:focus {
+.c12:focus {
   box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c11 .c8 {
+.c12 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c44 .c8 {
+.c49 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1800,7 +1834,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c45 .c8 {
+.c50 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1811,7 +1845,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c46 .c8 {
+.c51 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1822,7 +1856,12 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c2 {
+.c1 {
+  height: 100%;
+  width: 100%;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1838,38 +1877,34 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   cursor: pointer;
 }
 
-.c2:hover,
-.c2:focus {
+.c3:hover,
+.c3:focus {
   background-color: #eee;
 }
 
-.c3 {
+.c4 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c47 .c8 {
+.c52 .c9 {
   pointer-events: none;
 }
 
-.c48 .c8 {
-  pointer-events: none;
-}
-
-.c1 ul {
+.c2 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-.c4 {
+.c5 {
   margin-left: 40px;
   margin-right: 20px;
   height: 100%;
 }
 
-.c4:after {
+.c5:after {
   position: relative;
   left: -20px;
   top: calc(-100% - 50%);
@@ -1882,32 +1917,13 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   z-index: -1;
 }
 
-.c18 {
+.c19 {
   margin-left: 40px;
   margin-right: 20px;
   height: 100%;
 }
 
-.c18:after {
-  position: relative;
-  left: -20px;
-  top: calc(-100% - 50%);
-  border: solid #eee;
-  border-width: 0px 0px 1px 1px;
-  content: ' ';
-  display: block;
-  width: 20px;
-  height: 100%;
-  z-index: -1;
-}
-
-.c12 {
-  margin-left: 80px;
-  margin-right: 20px;
-  height: 100%;
-}
-
-.c12:after {
+.c19:after {
   position: relative;
   left: -20px;
   top: calc(-100% - 50%);
@@ -1921,7 +1937,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c13 {
-  margin-left: 120px;
+  margin-left: 80px;
   margin-right: 20px;
   height: 100%;
 }
@@ -1940,12 +1956,31 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c14 {
-  margin-left: 80px;
+  margin-left: 120px;
   margin-right: 20px;
   height: 100%;
 }
 
 .c14:after {
+  position: relative;
+  left: -20px;
+  top: calc(-100% - 50%);
+  border: solid #eee;
+  border-width: 0px 0px 1px 1px;
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 100%;
+  z-index: -1;
+}
+
+.c15 {
+  margin-left: 80px;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.c15:after {
   position: relative;
   left: -20px;
   top: calc(-300% - 50%);
@@ -1958,13 +1993,13 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   z-index: -1;
 }
 
-.c15 {
+.c16 {
   margin-left: 40px;
   margin-right: 20px;
   height: 100%;
 }
 
-.c15:after {
+.c16:after {
   position: relative;
   left: -20px;
   top: calc(-700% - 50%);
@@ -1977,7 +2012,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   z-index: -1;
 }
 
-.c5 {
+.c6 {
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1992,11 +2027,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   align-items: center;
 }
 
-.c49 .c6 {
+.c53 .c7 {
   margin-left: 20px;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2020,10 +2055,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   className="c0"
 >
   <div
+    className="c1"
     onKeyDown={[Function]}
   >
     <div
-      className="c1"
+      className="c2"
       onScroll={[Function]}
       style={
         Object {
@@ -2047,7 +2083,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         }
       >
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2061,20 +2097,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c4"
+              className="c5"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2097,11 +2133,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Ayden
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Collapse all children
@@ -2112,7 +2148,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2126,20 +2162,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c12"
+              className="c13"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2162,17 +2198,17 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Shaun
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Collapse all children
                   </button>
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Collapse all parents
@@ -2183,7 +2219,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2197,16 +2233,16 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c13"
+              className="c14"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Lola
                 </div>
@@ -2215,7 +2251,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2229,16 +2265,16 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c13"
+              className="c14"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Travis
                 </div>
@@ -2247,7 +2283,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2261,20 +2297,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c7"
+                  className="c7 c8"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2297,17 +2333,17 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Kyle
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Collapse all children
                   </button>
                   <button
-                    className="c6 c11"
+                    className="c7 c12"
                     onClick={[Function]}
                   >
                     Collapse all parents
@@ -2318,7 +2354,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2332,16 +2368,16 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c13"
+              className="c14"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Jaeden
                 </div>
@@ -2350,7 +2386,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2364,16 +2400,16 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c13"
+              className="c14"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Yadira
                 </div>
@@ -2382,7 +2418,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2396,20 +2432,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c15"
+              className="c16"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2432,11 +2468,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Larue
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2447,7 +2483,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2461,20 +2497,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2497,11 +2533,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Helena
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2512,7 +2548,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2526,20 +2562,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2562,11 +2598,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Margaret
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2577,7 +2613,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2591,20 +2627,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2627,11 +2663,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Vernie
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2642,7 +2678,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2656,20 +2692,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2692,11 +2728,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Hannah
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2707,7 +2743,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           </div>
         </li>
         <li
-          className="c2"
+          className="c3"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2721,20 +2757,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           tabIndex={-1}
         >
           <div
-            className="c3"
+            className="c4"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c5"
+                className="c6"
               >
                 <button
-                  className="c6 c16"
+                  className="c7 c17"
                   onClick={[Function]}
                 >
                   <span
-                    className="c8 c9"
+                    className="c9 c10"
                   >
                     <svg
                       fill="currentColor"
@@ -2757,11 +2793,11 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
                   </span>
                 </button>
                 <div
-                  className="c10"
+                  className="c11"
                 >
                   Kaci
                   <button
-                    className="c6 c17"
+                    className="c7 c18"
                     onClick={[Function]}
                   >
                     Expand all children

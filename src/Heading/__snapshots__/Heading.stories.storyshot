@@ -45,7 +45,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Ex omnis numquam dolores.
+    Repellendus voluptas in et.
   </h1>
 </div>
 `;
@@ -173,6 +173,22 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 }
 
 .c29 .c2 {
+  font-size: 1.5em;
+}
+
+.c30 .c2 {
+  font-size: 1.5em;
+}
+
+.c31 .c2 {
+  font-size: 1.5em;
+}
+
+.c32 .c2 {
+  font-size: 1.5em;
+}
+
+.c33 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -183,7 +199,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   transform-origin: left 25%;
 }
 
-.c30 .c2 {
+.c34 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -247,7 +263,7 @@ input.c1:after {
   transform-origin: left 25%;
 }
 
-.c31 .c2 {
+.c35 .c2 {
   pointer-events: none;
 }
 
@@ -281,7 +297,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Praesentium est quasi voluptatum.
+    Enim quam placeat et.
   </h3>
 </div>
 `;
@@ -332,7 +348,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Voluptatum non modi voluptatem.
+    Cumque provident quo dolore.
   </h2>
 </div>
 `;
@@ -402,7 +418,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Consequatur consequatur quod qui.
+    Non exercitationem hic officiis.
   </h3>
 </div>
 `;

@@ -49,8 +49,8 @@ interface ModalProps {
   buttons: JSX.Element[]
 }
 
-export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
-  <Overlay>
+export const Modal: FC<ModalProps> = ({ title, children, buttons = [], ...rest }) => (
+  <Overlay {...rest}>
     <ModalWrapper>
       <Header>
         <Heading>{title}</Heading>

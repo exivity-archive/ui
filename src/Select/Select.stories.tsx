@@ -19,7 +19,7 @@ const items = [
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
-    <Select value={state && state.value}>
+    <Select value={state && state.value} placeholder='Choose option'>
       <SelectList value={state && state.key} onChange={storeState} data={items}/>
     </Select>
   ))
@@ -52,13 +52,13 @@ export default storiesOf('molecules/Select', module)
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
-    <Select value={state && state.value} useTriggerComponentWidth={false}>
+    <Select value={state && state.value} useTriggerComponentWidth={false} placeholder='Choose option'>
       <SelectList value={state && state.key} onChange={storeState} data={items}/>
     </Select>
   ))
   .add('onOutsideClick (dropdown)', ({ state, storeState }: any) => (
-    <Select placeholder='Click on me' value={state && state.value} useTriggerComponentWidth={false} onOutsideClick={(isOpen) => {
-      window.alert(`Dropdown status: ${isOpen ? 'open' : 'closed'}!`)
+    <Select placeholder='Click on me or outside' value={state && state.value} useTriggerComponentWidth={false} onOutsideClick={(isOpen) => {
+      window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
     }}>
       <SelectList value={state && state.key} onChange={storeState} data={[{ key: '1 ', value: 'click outside' }]}/>
     </Select>

@@ -22,6 +22,7 @@ export interface SelectProps extends BlockProps {
   onChange?: (value: any) => void
   vertical?: Vertical
   horizontal?: Horizontal
+  test?: string
   children: any
 }
 
@@ -50,6 +51,7 @@ export const Select: React.FC<SelectProps> = ({
     horizontal,
     children,
     py = 2,
+    test,
     ...blockProps
   }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -59,7 +61,6 @@ export const Select: React.FC<SelectProps> = ({
     name,
     placeholder,
     value,
-    key: isOpen ? 'open' : 'closed',
     onClick: () => setIsOpen(!isOpen)
   }
 
@@ -69,7 +70,8 @@ export const Select: React.FC<SelectProps> = ({
     <Dropdown open={isOpen} vertical={vertical} horizontal={horizontal} {...blockProps} py={py}
               onOutsideClick={() => onOutsideClick ? onOutsideClick(isOpen, close) : setIsOpen(false)}
               triggerComponent={triggerComponent}
-              useTriggerComponentWidth={useTriggerComponentWidth}>
+              useTriggerComponentWidth={useTriggerComponentWidth}
+              test={test}>
       {React.cloneElement(children, {
         ...children.props,
         onChange: (value: any) => {
