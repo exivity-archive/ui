@@ -57,8 +57,8 @@ export default storiesOf('molecules/Select', module)
     </Select>
   ))
   .add('onOutsideClick (dropdown)', ({ state, storeState }: any) => (
-    <Select placeholder='Click on me' value={state && state.value} useTriggerComponentWidth={false} onOutsideClick={(isOpen) => {
-      window.alert(`Dropdown status: ${isOpen ? 'open' : 'closed'}!`)
+    <Select placeholder='Click on me or outside' value={state && state.value} useTriggerComponentWidth={false} onOutsideClick={(isOpen) => {
+      window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
     }}>
       <SelectList value={state && state.key} onChange={storeState} data={[{ key: '1 ', value: 'click outside' }]}/>
     </Select>

@@ -97,8 +97,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   return (
     <StyledDropdown className={className} data-test={test} ref={dropdownRef}>
-      {triggerComponent}
       <OutsideClickListener onOutsideClick={onOutsideClick}>
+        {triggerComponent}
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
           width={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test='dropdown-content'
