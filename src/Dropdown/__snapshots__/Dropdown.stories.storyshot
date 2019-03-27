@@ -5,183 +5,6 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 12px;
 }
 
-.c3 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
-}
-
-.c3:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c3:active,
-.c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c3:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c3[disabled] {
-  pointer-events: none;
-}
-
-.c3[disabled]:after {
-  display: block;
-}
-
-.c3 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c4 {
-  display: block;
-}
-
-.c2 {
-  position: relative;
-  width: 100%;
-}
-
-.c5 {
-  box-sizing: border-box;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  z-index: 1;
-  min-width: 160px;
-  visibility: hidden;
-}
-
-.c1 {
-  height: 500px;
-  background-color: lightgray;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    height={500}
-  >
-    <div>
-      <div
-        className="c2"
-        data-test="dropdown"
-      >
-        <button
-          className="c3"
-          onClick={[Function]}
-        >
-          Click me
-        </button>
-        <div
-          className="c4"
-        >
-          <div
-            className="c5"
-            data-test="dropdown-content"
-            open={false}
-          >
-            <div
-              className=""
-            >
-              <div
-                style={
-                  Object {
-                    "width": 300,
-                  }
-                }
-              >
-                Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
- 
-Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots molecules|Dropdown position 1`] = `
-.c0 {
-  padding: 12px;
-}
-
-.c7 {
-  padding: 0.625em;
-  width: 200px;
-}
-
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
@@ -259,12 +82,189 @@ exports[`Storyshots molecules|Dropdown position 1`] = `
   display: block;
 }
 
-.c4 .c8 {
+.c4 .c6 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
+.c3 {
+  display: block;
+}
+
+.c2 {
+  position: relative;
+  width: 100%;
+}
+
 .c5 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+.c1 {
+  height: 500px;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+  >
+    <div>
+      <div
+        className="c2"
+        data-test="dropdown"
+      >
+        <div
+          className="c3"
+        >
+          <button
+            className="c4"
+            onClick={[Function]}
+          >
+            Click me
+          </button>
+          <div
+            className="c5"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                style={
+                  Object {
+                    "width": 300,
+                  }
+                }
+              >
+                Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+ 
+Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Dropdown position 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c7 {
+  padding: 0.625em;
+  width: 200px;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #999;
+  --focus-color: 153,153,153;
+}
+
+.c5:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c5:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:active,
+.c5.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c5[disabled] {
+  pointer-events: none;
+}
+
+.c5[disabled]:after {
+  display: block;
+}
+
+.c5 .c8 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c4 {
   display: block;
 }
 
@@ -325,15 +325,15 @@ exports[`Storyshots molecules|Dropdown position 1`] = `
         className="c3"
         data-test="dropdown"
       >
-        <button
-          className="c4"
-          onClick={[Function]}
-        >
-          position right
-        </button>
         <div
-          className="c5"
+          className="c4"
         >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position right
+          </button>
           <div
             className="c6"
             data-test="dropdown-content"
@@ -358,15 +358,15 @@ Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetu
         className="c3"
         data-test="dropdown"
       >
-        <button
-          className="c4"
-          onClick={[Function]}
-        >
-          position left
-        </button>
         <div
-          className="c5"
+          className="c4"
         >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position left
+          </button>
           <div
             className="c6"
             data-test="dropdown-content"
@@ -391,15 +391,15 @@ Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit
         className="c3"
         data-test="dropdown"
       >
-        <button
-          className="c4"
-          onClick={[Function]}
-        >
-          position top
-        </button>
         <div
-          className="c5"
+          className="c4"
         >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position top
+          </button>
           <div
             className="c6"
             data-test="dropdown-content"
@@ -424,15 +424,15 @@ Aut dolor perspiciatis consectetur quis sed eos quia nostrum et. Hic quia eaque 
         className="c3"
         data-test="dropdown"
       >
-        <button
-          className="c4"
-          onClick={[Function]}
-        >
-          position bottom
-        </button>
         <div
-          className="c5"
+          className="c4"
         >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position bottom
+          </button>
           <div
             className="c6"
             data-test="dropdown-content"
