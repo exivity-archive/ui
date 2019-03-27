@@ -2,15 +2,17 @@ import React from 'react'
 import faker from 'faker'
 
 import { storiesOf } from '@storybook/react'
-import { Block } from '../Block'
+import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
+import { markdown } from '../utils/stories/markdown'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
 
 storiesOf('interact|TextInput', module)
+  .add('overview', markdown(require('./README.md')))
   .addDecorator(withState(''))
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput
@@ -29,9 +31,9 @@ storiesOf('interact|TextInput', module)
   </Paragraph>)
   .add('flat', () => <div>
     <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
-    <Block>
+    <Section>
       <TextInput flat value={faker.lorem.words(4)} />
-    </Block>
+    </Section>
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
   .add('purposes', () => <Row columns={4}>

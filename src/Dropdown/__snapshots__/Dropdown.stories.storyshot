@@ -5,12 +5,98 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 12px;
 }
 
-.c1 {
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #999;
+  --focus-color: 153,153,153;
+}
+
+.c4:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c4:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c4:active,
+.c4.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c4:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c4[disabled] {
+  pointer-events: none;
+}
+
+.c4[disabled]:after {
+  display: block;
+}
+
+.c4 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c3 {
+  display: block;
+}
+
+.c2 {
   position: relative;
   width: 100%;
 }
 
-.c2 {
+.c5 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -20,40 +106,351 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   visibility: hidden;
 }
 
+.c1 {
+  height: 500px;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div
   className="c0"
 >
   <div
-    style={
-      Object {
-        "padding": "300px 0",
-      }
-    }
+    className="c1"
+    height={500}
   >
-    <div
-      className="c1"
-      data-test="dropdown"
-    >
-      <div
-        onClick={[Function]}
-      >
-        Click me
-      </div>
+    <div>
       <div
         className="c2"
-        data-test="dropdown-content"
-        open={false}
+        data-test="dropdown"
       >
         <div
-          style={
-            Object {
-              "width": 500,
-            }
-          }
+          className="c3"
         >
-          Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
+          <button
+            className="c4"
+            onClick={[Function]}
+          >
+            Click me
+          </button>
+          <div
+            className="c5"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                style={
+                  Object {
+                    "width": 300,
+                  }
+                }
+              >
+                Consequatur vel ex aperiam numquam nulla assumenda. Nemo reiciendis minus inventore maxime neque. Sit numquam ut velit. Qui quos autem minus accusantium.
+ 
+Et tempore distinctio. Est vitae dolorem incidunt nobis quia animi sint expedita. Sint omnis quasi corporis rem fugiat atque iusto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Dropdown position 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c7 {
+  padding: 0.625em;
+  width: 200px;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #999;
+  --focus-color: 153,153,153;
+}
+
+.c5:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c5:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:active,
+.c5.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c5:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c5[disabled] {
+  pointer-events: none;
+}
+
+.c5[disabled]:after {
+  display: block;
+}
+
+.c5 .c8 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c4 {
+  display: block;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+}
+
+.c6 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+.c1 {
+  width: 1000px;
+  height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+    width={1000}
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        data-test="dropdown"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position right
+          </button>
+          <div
+            className="c6"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                className="c7"
+                width={200}
+              >
+                Aut nihil doloremque deleniti et consequuntur autem reiciendis est nesciunt. Sed recusandae et provident ea ducimus. Voluptas qui nisi amet. Facilis ducimus facere. Non aut animi vel placeat sapiente quidem nemo mollitia non.
+ 
+Minus ea rerum. Nihil molestiae dolor. Illo temporibus fugiat placeat consectetur. Qui vitae ullam velit beatae architecto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c3"
+        data-test="dropdown"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position left
+          </button>
+          <div
+            className="c6"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                className="c7"
+                width={200}
+              >
+                Quis quisquam provident ducimus dolores in magni sed quia quisquam. Nulla molestias similique. Est ex ut odit saepe. Animi odit repellendus maiores temporibus dolor voluptatibus sunt nobis. Et repellendus quasi. Provident non qui quod.
  
 Voluptatem omnis ducimus numquam. Omnis nulla est illum quia voluptatem eos. Sit non eos suscipit natus nihil ea est possimus quia. Maxime maiores reiciendis minima esse alias sunt recusandae.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c3"
+        data-test="dropdown"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position top
+          </button>
+          <div
+            className="c6"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                className="c7"
+                width={200}
+              >
+                Tempora qui fugiat sint non impedit aperiam dolor omnis. Nihil assumenda dolor placeat cumque. Mollitia ea ad optio veritatis alias nihil. Ea eveniet est labore non quia explicabo eius ex.
+ 
+Aut dolor perspiciatis consectetur quis sed eos quia nostrum et. Hic quia eaque blanditiis laudantium dignissimos quasi. Deserunt molestiae animi ut aliquid cum voluptatem modi ipsam. Et ipsam ea et nihil debitis.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c3"
+        data-test="dropdown"
+      >
+        <div
+          className="c4"
+        >
+          <button
+            className="c5"
+            onClick={[Function]}
+          >
+            position bottom
+          </button>
+          <div
+            className="c6"
+            data-test="dropdown-content"
+            open={false}
+          >
+            <div
+              className=""
+            >
+              <div
+                className="c7"
+                width={200}
+              >
+                Qui repellendus laudantium blanditiis aut expedita. Magni consequuntur et magni voluptates nesciunt id accusamus voluptas maiores. Itaque et eum voluptas atque et libero. Vel earum sint sint dicta adipisci consequuntur. Id magnam sapiente cumque similique ut rerum hic vero.
+ 
+Quo dolor consequatur dolorum doloribus iste beatae veritatis. Odio rerum eos aut aut. Dicta eos molestiae odio officia aliquam eos et et. Provident dolores quo non maxime eveniet. Quos et vero et quam.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

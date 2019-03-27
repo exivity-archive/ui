@@ -16,26 +16,26 @@ const Overlay = styled.div`
 const ModalWrapper = styled.div`
   position: absolute;
   width: 600px;
-  background-color: ${fromTheme(theme => theme.colours.white)};
+  background-color: ${fromTheme(theme => theme.colors.white)};
   left: calc((100vw - 600px) / 2);
   top: 50px;
 `
 
 const Header = styled.div`
-  padding: ${fromTheme(theme => theme.global.spacing)}em ${fromTheme(theme => theme.global.spacing * 1.5)}em;
+  padding: ${fromTheme(theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
 `
 
 const Body = styled.div`
-  padding: ${fromTheme(theme => theme.global.spacing * 1.5)}em;
+  padding: ${fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
   max-height: 400px;
-  border-top: solid 1px ${fromTheme(theme => theme.colours.gray)};
-  border-bottom: solid 1px ${fromTheme(theme => theme.colours.gray)};
+  border-top: solid 1px ${fromTheme(theme => theme.colors.gray)};
+  border-bottom: solid 1px ${fromTheme(theme => theme.colors.gray)};
   overflow-y: auto;
 `
 
 const Footer = styled.div`
-  padding: ${fromTheme(theme => theme.global.spacing)}em ${fromTheme(theme => theme.global.spacing * 2)}em;
-  color: ${fromTheme(theme => theme.colours.gray)};
+  padding: ${fromTheme(theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 2)}em;
+  color: ${fromTheme(theme => theme.colors.gray)};
   display: flex;
   flex-direction: row-reverse;
   ${Button} {
@@ -49,8 +49,8 @@ interface ModalProps {
   buttons: JSX.Element[]
 }
 
-export const Modal: FC<ModalProps> = ({ title, children, buttons = [] }) => (
-  <Overlay>
+export const Modal: FC<ModalProps> = ({ title, children, buttons = [], ...rest }) => (
+  <Overlay {...rest}>
     <ModalWrapper>
       <Header>
         <Heading>{title}</Heading>

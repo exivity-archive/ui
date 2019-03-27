@@ -30,12 +30,12 @@ test('getHorizontal should return initial vertical if vertical is not "auto"', (
 
 test('getHorizontal should return top if horizontal is "auto" and element passed the edge', () => {
   (window as any).innerWidth = 800
-  expect(getHorizontal('auto', { outer: { left: 500 } as any, inner: { width: 301 } as any }, 0)).toBe('left')
+  expect(getHorizontal('auto', { outer: { left: 500 } as any, inner: { width: 301 } as any }, 0)).toBe('right')
 })
 
 test('getHorizontal should return bottom if horizontal is "auto" and element has not passed the edge', () => {
   (window as any).innerWidth = 800
-  expect(getHorizontal('auto', { outer: { left: 500 } as any, inner: { width: 299 } as any }, 0)).toBe('right')
+  expect(getHorizontal('auto', { outer: { left: 500 } as any, inner: { width: 299 } as any }, 0)).toBe('left')
 })
 
 test('getPosition should return correct objects for given inputs', () => {
@@ -46,30 +46,30 @@ test('getPosition should return correct objects for given inputs', () => {
   const rects: any = { outer: { left: 500, bottom: 500, height: 10 }, inner: { width: 295, height: 295 } }
 
   const layout1: Layout = { vertical: 'auto', horizontal: 'auto' }
-  const expected1 = { top: 10, left: 0 }
+  const expected1 = { right: true, top: 10 }
 
   expect(getPosition(rects, layout1, 10)).toMatchObject(expected1)
 
   const layout2: Layout = { vertical: 'auto', horizontal: 'auto' }
-  const expected2 = { bottom: 10, right: 0 }
+  const expected2 = { left: true, bottom: 10 }
 
   expect(getPosition(rects, layout2, 0)).toMatchObject(expected2)
 
   const layout3: Layout = { vertical: 'auto', horizontal: 'left' }
-  const expected3 = { bottom: 10, left: 0 }
+  const expected3 = { bottom: 10, left: true }
 
   expect(getPosition(rects, layout3, 0)).toMatchObject(expected3)
 
   const layout4: Layout = { vertical: 'top', horizontal: 'auto' }
-  const expected4 = { top: 10, right: 0 }
+  const expected4 = { left: true, top: 10 }
 
   expect(getPosition(rects, layout4, 0)).toMatchObject(expected4)
 })
 
 test('makeCssPosition should return correct css for given inputs', () => {
   const expected1 = 'bottom: 10px;\nmargin-top: 5px;\nleft: 0px;\n'
-  expect(makeCssPosition({ top: 10, right: 0 })).toBe(expected1)
+  const expected2 = 'right: 0px;\ntop: 10px;\nmargin-bottom: 5px;\n'
 
-  const expected2 = 'top: 10px;\nmargin-bottom: 5px;\nright: 0px;\n'
-  expect(makeCssPosition({ bottom: 10, left: 0 })).toBe(expected2)
+  expect(makeCssPosition({ top: 10, left: true })).toBe(expected1)
+  expect(makeCssPosition({ bottom: 10, right: true })).toBe(expected2)
 })

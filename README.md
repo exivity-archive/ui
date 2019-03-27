@@ -5,24 +5,28 @@
 [![Travis](https://img.shields.io/travis/com/exivity/ui.svg?style=flat-square)](https://travis-ci.com/exivity/ui)
 [![Code Climate](https://img.shields.io/codeclimate/coverage/exivity/ui.svg?style=flat-square)](https://codecov.io/gh/exivity/ui)
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/exivity/ui.svg?style=flat-square)](https://codeclimate.com/github/exivity/ui)
-![Bunlephobia](https://img.shields.io/bundlephobia/min/@exivity/ui.svg?label=bundlesize&style=flat-square)
+[![Bunlephobia](https://img.shields.io/bundlephobia/minzip/@exivity/ui.svg?label=bundlesize&style=flat-square)](https://bundlephobia.com/result?p=@exivity/ui)
 
 A collection of components to build interfaces.
 
 Quickstart
 ----------
 
-Install with `yarn`
+Install with `yarn`:
 
 ```bash
 yarn add @exivity/ui
 ```
 
-Start using it
+Import using:
+
+```javascript
+import { Button } from '@exivity/ui'
+```
+
+And make a button:
 
 ```jsx
-import { Button } from '@exivity/ui'
-
 <Button>Click me!</Button>
 ```
 

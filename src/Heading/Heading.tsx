@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { BlockProps, fromTheme, globalBlockSpacing, globalFont, StyledProps } from '../utils/styled'
+import { SectionProps, fromTheme, globalSectionSpacing, globalFont, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 enum Levels {
@@ -12,14 +12,14 @@ enum Levels {
 
 export type HeadingType = 'header' | 'section' | 'sub'
 
-interface HeadingProps extends StyledProps {
+export interface HeadingProps extends StyledProps {
   type?: HeadingType
   children?: ReactNode
 }
 
-const StyledHeading = styled.div<HeadingProps & BlockProps>`
+export const StyledHeading = styled.div<HeadingProps & SectionProps>`
   ${globalFont};
-  ${globalBlockSpacing};
+  ${globalSectionSpacing};
 
   // Add extra specificity when rendered as input
   &, input& {
@@ -35,13 +35,13 @@ const StyledHeading = styled.div<HeadingProps & BlockProps>`
     ${(props: HeadingProps) => props.type === 'sub' && css`
       font-size: ${fromTheme(theme => theme.global.sizes.small)}em;
       text-transform: uppercase;
-      color: ${fromTheme(theme => theme.colours.gray)};
+      color: ${fromTheme(theme => theme.colors.gray)};
       display: table;
       overflow: hidden;
       white-space: nowrap;
 
       &:after {
-        border-top: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+        border-top: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
         content: '';
         display: table-cell;
         position: relative;
@@ -55,13 +55,13 @@ const StyledHeading = styled.div<HeadingProps & BlockProps>`
   }
 
   ${Icon} {
-    margin-right: ${fromTheme(theme => theme.global.spacing)}em;
+    margin-right: ${fromTheme(theme => theme.global.baseSpacing)}em;
     display: inline-block;
     transform: scale(1.5);
     transform-origin: left 25%; // 25% from trial and error
   }
 `
-export const Heading = ({ type = 'header', ...rest }: HeadingProps) => (
+export const Heading = ({ type = 'header', ...rest }: HeadingProps & SectionProps) => (
   <StyledHeading
     as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'}
     type={type}

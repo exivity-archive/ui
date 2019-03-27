@@ -4,6 +4,7 @@ import { CanvasDecorator } from '../src/utils/tests/decorators/CanvasDecorator'
 import { ThemeDecorator } from '../src/utils/tests/decorators/ThemeDecorator'
 import requireContext from 'require-context.macro'
 
+// Our own decorators
 addDecorator(CanvasDecorator)
 addDecorator(ThemeDecorator)
 

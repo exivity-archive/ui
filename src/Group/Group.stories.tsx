@@ -8,7 +8,8 @@ import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
 // @ts-ignore
-import * as useGroupContextDocs from './docs/useGroupContext.md'
+import * as CollapsibleContextDocs from '../CollapsibleContainer/docs/CollapsibleContext.md'
+import { MdAccountBox, MdNotifications, MdMail } from 'react-icons/md'
 
 storiesOf('molecules|Group', module)
   .add('default', () => (
@@ -42,18 +43,22 @@ storiesOf('molecules|Group', module)
       </Group.Header>
     </Group>
   ))
-  .add('xy-inverted', () => (
+  .add('with icons', () => (
     <Group>
+      <Group.Header>
+        <Group.Title>Configuration</Group.Title>
+        <Group.Separator />
+        <Group.Separator />
+        <Group.Icon><MdMail /></Group.Icon>
+        <Group.Icon><MdNotifications /></Group.Icon>
+        <Group.Icon><MdAccountBox /></Group.Icon>
+        <Group.Separator />
+      </Group.Header>
       <Group.Content>
         {Faker.lorem.paragraphs(4)}
       </Group.Content>
-      <Group.Header>
-        <Group.Collapser />
-        <Group.Separator />
-        <Group.Title>Configuration</Group.Title>
-      </Group.Header>
     </Group>
   ))
   .add('helpers', () => (
-    <Markdown>{ensureString(useGroupContextDocs)}</Markdown>
+    <Markdown>{ensureString(CollapsibleContextDocs)}</Markdown>
   ))

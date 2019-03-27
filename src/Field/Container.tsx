@@ -1,6 +1,6 @@
 import React, { FunctionComponentElement } from 'react'
 import styled from 'styled-components'
-import { globalBlockSpacing } from '../utils/styled'
+import { globalSectionSpacing } from '../utils/styled'
 import { FieldProps } from './Field'
 
 type FieldElement = FunctionComponentElement<any>
@@ -10,7 +10,7 @@ interface ContainerProps extends FieldProps {
 }
 
 const Wrapper = styled.div`
-  ${globalBlockSpacing};
+  ${globalSectionSpacing};
 `
 
 export const Container: React.FC<ContainerProps> = ({ children, ...otherProps }) => {
@@ -23,4 +23,4 @@ export const Container: React.FC<ContainerProps> = ({ children, ...otherProps })
     : null
 }
 
-Container.displayName = 'Field.Container'
+Container.displayName = 'FieldContainer'

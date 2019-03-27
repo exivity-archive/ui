@@ -420,7 +420,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
-  background-color: #fff;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
 }
@@ -514,7 +514,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
-  background-color: #fff;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
 }
@@ -608,7 +608,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
-  background-color: #fff;
+  background-color: transparent;
   color: #4caf50;
   box-shadow: 0 0 0 1px #4caf50;
 }
@@ -702,7 +702,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
-  background-color: #fff;
+  background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
 }
@@ -758,6 +758,10 @@ exports[`Storyshots interact|Button outlined 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(10, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1127,6 +1131,10 @@ exports[`Storyshots interact|Button purposes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(10, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -1607,7 +1615,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
-  background-color: #fff;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -1704,7 +1712,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #999;
   --focus-color: 153,153,153;
-  background-color: #fff;
+  background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
   border-radius: 50%;
@@ -1801,7 +1809,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
-  background-color: #fff;
+  background-color: transparent;
   color: #4caf50;
   box-shadow: 0 0 0 1px #4caf50;
   border-radius: 50%;
@@ -1898,7 +1906,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
-  background-color: #fff;
+  background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
   border-radius: 50%;
@@ -2250,7 +2258,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
-  background-color: #fff;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -2347,7 +2355,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
-  background-color: #fff;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -2444,7 +2452,7 @@ exports[`Storyshots interact|Button round 1`] = `
   outline: none;
   background-color: #00a8d8;
   --focus-color: 0,168,216;
-  background-color: #fff;
+  background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
@@ -2503,6 +2511,10 @@ exports[`Storyshots interact|Button round 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -3359,6 +3371,10 @@ exports[`Storyshots interact|Button sizes 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(10, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -3387,6 +3403,609 @@ exports[`Storyshots interact|Button sizes 1`] = `
     >
       Large
     </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Button transparent 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c5 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+}
+
+.c9 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c4 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c4 {
+  font-size: 1.5em;
+}
+
+.c21 .c4 {
+  font-size: 1.5em;
+}
+
+.c22 .c4 {
+  font-size: 1.5em;
+}
+
+.c23 .c4 {
+  font-size: 1.5em;
+}
+
+.c24 .c4 {
+  font-size: 1.5em;
+}
+
+.c25 .c4 {
+  font-size: 1.5em;
+}
+
+.c26 .c4 {
+  font-size: 1.5em;
+}
+
+.c27 .c4 {
+  font-size: 1.5em;
+}
+
+.c28 .c4 {
+  font-size: 1.5em;
+}
+
+.c29 .c4 {
+  font-size: 1.5em;
+}
+
+.c30 .c4 {
+  font-size: 1.5em;
+}
+
+.c31 .c4 {
+  font-size: 1.5em;
+}
+
+.c32 .c4 {
+  font-size: 1.5em;
+}
+
+.c33 .c4 {
+  font-size: 1.5em;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.6015625em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.5em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.5em;
+  background-color: transparent;
+}
+
+.c3:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c3:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c3:active,
+.c3.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c3:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c3[disabled] {
+  pointer-events: none;
+}
+
+.c3[disabled]:after {
+  display: block;
+}
+
+.c3 .c4 {
+  font-size: 1.5em;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.7109375em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+  background-color: transparent;
+}
+
+.c6:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c6:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c6:active,
+.c6.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c6:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c6[disabled] {
+  pointer-events: none;
+}
+
+.c6[disabled]:after {
+  display: block;
+}
+
+.c6 .c4 {
+  font-size: 1.5em;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+  background-color: transparent;
+}
+
+.c7:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c7:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c7:active,
+.c7.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c7:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c7[disabled] {
+  pointer-events: none;
+}
+
+.c7[disabled]:after {
+  display: block;
+}
+
+.c7 .c4 {
+  font-size: 1.5em;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 1.0390625em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #00a8d8;
+  --focus-color: 0,168,216;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+  background-color: transparent;
+}
+
+.c8:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c8:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:active,
+.c8.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c8[disabled] {
+  pointer-events: none;
+}
+
+.c8[disabled]:after {
+  display: block;
+}
+
+.c8 .c4 {
+  font-size: 1.5em;
+}
+
+.c2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #eee;
+  padding: 20px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <button
+        className="c3"
+      >
+        <span
+          className="c4 c5"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="c6"
+      >
+        <span
+          className="c4 c5"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="c7"
+      >
+        <span
+          className="c4 c5"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </span>
+      </button>
+      <button
+        className="c8"
+      >
+        <span
+          className="c4 c5"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 `;

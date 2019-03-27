@@ -1,15 +1,12 @@
-import React, { FC } from 'react'
+import React, { FC, useContext } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
-import { Icon } from '../Icon'
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { useBoxContext, BoxContext, BoxContextShape } from './helpers'
-import { useIsUncontrolled } from '../useIsUncontrolled'
-
-export const BoxCollapser = styled(Icon)`
-  cursor: pointer;
-  user-select: none;
-`
+import {
+  CollapsibleContainer,
+  CollapsibleContainerSubComponents,
+  CollapsibleContainerProps,
+  CollapsibleContext
+} from '../CollapsibleContainer'
 
 interface StyledBoxBarProps {
   collapsible: boolean
@@ -21,7 +18,7 @@ export const StyledBoxBar = styled.div<StyledBoxBarProps>`
   background-color: #F4F4F4;
   height: 60px;
   align-items: center;
-  padding: 0 ${fromTheme(theme => theme.global.spacing)}em 0 ${fromTheme(theme => theme.global.spacing)}em;
+  padding: 0 ${fromTheme(theme => theme.global.baseSpacing * 2)}em 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 
   ${({ collapsible }) => collapsible && css`
     justify-content: space-between;
@@ -29,37 +26,26 @@ export const StyledBoxBar = styled.div<StyledBoxBarProps>`
 `
 
 export const BoxBar: FC = ({ children }) => {
-  const { collapsed, setCollapsed, collapsible } = useBoxContext()
-  function toggleCollapsed () {
-    setCollapsed(!collapsed)
-  }
-
+  const context = useContext(CollapsibleContext)
   return (
-    <StyledBoxBar collapsible={collapsible}>
+    <StyledBoxBar collapsible={!!context}>
       {children}
-      {collapsible &&
-        <BoxCollapser onClick={toggleCollapsed} data-test='box-collapser'>
-          {collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
-        </BoxCollapser>
-      }
+      <CollapsibleContainer.Collapser />
     </StyledBoxBar >
   )
 }
 
 const StyledBoxContent = styled.div`
-  padding: 0 ${fromTheme(theme => theme.global.spacing)};
+  padding: 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 `
 
-export const BoxContent: FC = ({ children }) => {
-  const { collapsed } = useBoxContext()
-  if (collapsed) return null
-
-  return (
-    <StyledBoxContent>
+export const BoxContent: FC = ({ children }) => (
+  <StyledBoxContent>
+    <CollapsibleContainer.Content>
       {children}
-    </StyledBoxContent>
-  )
-}
+    </CollapsibleContainer.Content>
+  </StyledBoxContent>
+)
 
 interface StyledBoxProps {
   collapsed: boolean
@@ -79,38 +65,30 @@ export const StyledBox = styled.div<StyledBoxProps>`
   `}
 `
 
-interface BoxSubComponents {
+interface BoxSubComponents extends CollapsibleContainerSubComponents {
   Bar: typeof BoxBar
-  Content: typeof BoxContent
 }
 
-interface BoxProps {
-  initialCollapsed?: boolean
-  collapsed?: boolean
-  onCollapse?: (newValue: boolean) => void
+interface BoxProps extends CollapsibleContainerProps { }
+
+const BoxWrapper: FC = ({ children }) => {
+  const context = useContext(CollapsibleContext)
+  return (
+    <StyledBox collapsed={context ? context.collapsed : false}>
+      {children}
+    </StyledBox>
+  )
 }
 
 export const Box: FC<BoxProps> & BoxSubComponents = ({ children, ...rest }) => {
-  const defaultCollapsed = false
-  const initialCollapsed = rest.initialCollapsed !== undefined ? rest.initialCollapsed : defaultCollapsed
   const recievesStateProps = rest.collapsed !== undefined || rest.initialCollapsed !== undefined
-
-  const [collapsed, setCollapsed] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
-
-  const boxContext: BoxContextShape = {
-    collapsed,
-    setCollapsed,
-    collapsible: recievesStateProps
-  }
-
   return (
-    <BoxContext.Provider value={boxContext}>
-      <StyledBox collapsed={collapsed}>
-        {children}
-      </StyledBox>
-    </BoxContext.Provider >
+    <CollapsibleContainer {...rest} collapsible={recievesStateProps}>
+      <BoxWrapper>{children}</BoxWrapper>
+    </CollapsibleContainer>
   )
 }
 
 Box.Bar = BoxBar
 Box.Content = BoxContent
+Box.Collapser = CollapsibleContainer.Collapser

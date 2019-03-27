@@ -45,7 +45,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Deleniti necessitatibus vitae facere.
+    Repellendus voluptas in et.
   </h1>
 </div>
 `;
@@ -62,6 +62,133 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 }
 
 .c4 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c5 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c6 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c7 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c2 {
+  font-size: 1.5em;
+}
+
+.c16 .c2 {
+  font-size: 1.5em;
+}
+
+.c17 .c2 {
+  font-size: 1.5em;
+}
+
+.c18 .c2 {
+  font-size: 1.5em;
+}
+
+.c19 .c2 {
+  font-size: 1.5em;
+}
+
+.c20 .c2 {
+  font-size: 1.5em;
+}
+
+.c21 .c2 {
+  font-size: 1.5em;
+}
+
+.c22 .c2 {
+  font-size: 1.5em;
+}
+
+.c23 .c2 {
+  font-size: 1.5em;
+}
+
+.c24 .c2 {
+  font-size: 1.5em;
+}
+
+.c25 .c2 {
+  font-size: 1.5em;
+}
+
+.c26 .c2 {
+  font-size: 1.5em;
+}
+
+.c27 .c2 {
+  font-size: 1.5em;
+}
+
+.c28 .c2 {
+  font-size: 1.5em;
+}
+
+.c29 .c2 {
+  font-size: 1.5em;
+}
+
+.c30 .c2 {
+  font-size: 1.5em;
+}
+
+.c31 .c2 {
+  font-size: 1.5em;
+}
+
+.c32 .c2 {
+  font-size: 1.5em;
+}
+
+.c33 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -72,7 +199,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   transform-origin: left 25%;
 }
 
-.c5 .c2 {
+.c34 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -136,118 +263,7 @@ input.c1:after {
   transform-origin: left 25%;
 }
 
-.c6 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c7 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c8 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c9 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c10 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c11 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c12 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c2 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c2 {
-  font-size: 1.5em;
-}
-
-.c18 .c2 {
-  font-size: 1.5em;
-}
-
-.c19 .c2 {
-  font-size: 1.5em;
-}
-
-.c20 .c2 {
-  font-size: 1.5em;
-}
-
-.c21 .c2 {
-  font-size: 1.5em;
-}
-
-.c22 .c2 {
-  font-size: 1.5em;
-}
-
-.c23 .c2 {
-  font-size: 1.5em;
-}
-
-.c24 .c2 {
-  font-size: 1.5em;
-}
-
-.c25 .c2 {
-  font-size: 1.5em;
-}
-
-.c26 .c2 {
-  font-size: 1.5em;
-}
-
-.c27 .c2 {
-  font-size: 1.5em;
-}
-
-.c28 .c2 {
-  font-size: 1.5em;
-}
-
-.c29 .c2 {
-  font-size: 1.5em;
-}
-
-.c30 .c2 {
-  font-size: 1.5em;
-}
-
-.c31 .c2 {
+.c35 .c2 {
   pointer-events: none;
 }
 
@@ -281,7 +297,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Hic quia suscipit eaque.
+    Enim quam placeat et.
   </h3>
 </div>
 `;
@@ -332,7 +348,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Nihil omnis voluptatem totam.
+    Cumque provident quo dolore.
   </h2>
 </div>
 `;
@@ -402,7 +418,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Iste non nam ipsa.
+    Non exercitationem hic officiis.
   </h3>
 </div>
 `;

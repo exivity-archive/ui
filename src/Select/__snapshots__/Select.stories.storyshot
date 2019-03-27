@@ -5,148 +5,140 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   padding: 12px;
 }
 
-.c21 .c17 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+.c6 {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
-.c22 .c17 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c23 .c17 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c24 .c17 {
+.c23 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c25 .c17 {
+.c24 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c26 .c17 {
+.c25 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c27 .c17 {
+.c26 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c28 .c17 {
+.c27 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c29 .c17 {
+.c28 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c30 .c17 {
+.c29 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c31 .c17 {
+.c30 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c32 .c17 {
+.c31 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c33 .c17 {
+.c32 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c34 .c17 {
+.c33 .c19 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c35 .c17 {
+.c34 .c19 {
   font-size: 1.5em;
 }
 
-.c36 .c17 {
+.c35 .c19 {
   font-size: 1.5em;
 }
 
-.c37 .c17 {
+.c36 .c19 {
   font-size: 1.5em;
 }
 
-.c38 .c17 {
+.c37 .c19 {
   font-size: 1.5em;
 }
 
-.c39 .c17 {
+.c38 .c19 {
   font-size: 1.5em;
 }
 
-.c40 .c17 {
+.c39 .c19 {
   font-size: 1.5em;
 }
 
-.c41 .c17 {
+.c40 .c19 {
   font-size: 1.5em;
 }
 
-.c42 .c17 {
+.c41 .c19 {
   font-size: 1.5em;
 }
 
-.c43 .c17 {
+.c42 .c19 {
   font-size: 1.5em;
 }
 
-.c44 .c17 {
+.c43 .c19 {
   font-size: 1.5em;
 }
 
-.c45 .c17 {
+.c44 .c19 {
   font-size: 1.5em;
 }
 
-.c46 .c17 {
+.c45 .c19 {
   font-size: 1.5em;
 }
 
-.c47 .c17 {
+.c46 .c19 {
   font-size: 1.5em;
 }
 
-.c48 .c17 {
+.c47 .c19 {
   font-size: 1.5em;
+}
+
+.c48 .c19 {
+  font-size: 1.5em;
+}
+
+.c49 .c19 {
+  font-size: 1.5em;
+}
+
+.c50 .c19 {
+  font-size: 1.5em;
+}
+
+.c51 .c19 {
+  font-size: 1.5em;
+}
+
+.c3 {
+  display: block;
 }
 
 .c2 {
@@ -154,7 +146,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -164,12 +156,45 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   visibility: hidden;
 }
 
-.c5 {
+.c52 .c19 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c53 .c19 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c54 .c19 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 {
   height: 100%;
   width: 100%;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -185,18 +210,18 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   cursor: pointer;
 }
 
-.c7:hover,
-.c7:focus {
+.c9:hover,
+.c9:focus {
   background-color: #eee;
 }
 
-.c8 {
+.c10 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c9 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -208,7 +233,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   height: 100%;
 }
 
-.c16 {
+.c18 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -227,40 +252,40 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: #eee;
 }
 
-.c16:hover {
+.c18:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c16:focus {
+.c18:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c16::-webkit-input-placeholder {
+.c18::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16::-moz-placeholder {
+.c18::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16:-ms-input-placeholder {
+.c18:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16::placeholder {
+.c18::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c3 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -279,40 +304,40 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: unset;
 }
 
-.c3:hover {
+.c4:hover {
   border: 1px solid #999;
 }
 
-.c3:focus {
+.c4:focus {
   border: 1px solid #222;
 }
 
-.c3::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c3::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c3:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c3::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c20 {
+.c22 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -331,40 +356,40 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: #eee;
 }
 
-.c20:hover {
+.c22:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c20:focus {
+.c22:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c20::-webkit-input-placeholder {
+.c22::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c20::-moz-placeholder {
+.c22::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c20:-ms-input-placeholder {
+.c22:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c20::placeholder {
+.c22::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c20[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c19 {
+.c21 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -383,87 +408,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: #eee;
 }
 
-.c19:hover {
+.c21:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c19:focus {
+.c21:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c19::-webkit-input-placeholder {
+.c21::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c19::-moz-placeholder {
+.c21::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c19:-ms-input-placeholder {
+.c21:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c19::placeholder {
+.c21::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c19[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 153,153,153;
-  display: block;
-  width: 100%;
-  border: 1px solid #999;
-  background-color: unset;
-}
-
-.c10:hover {
-  border: 1px solid #999;
-}
-
-.c10:focus {
-  border: 1px solid #222;
-}
-
-.c10::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10[disabled] {
+.c21[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -480,10 +453,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 153,153,153;
   display: block;
   width: 100%;
-  border: 1px solid #4caf50;
+  border: 1px solid #999;
   background-color: unset;
 }
 
@@ -520,7 +493,59 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c11 {
+.c14 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 76,175,80;
+  display: block;
+  width: 100%;
+  border: 1px solid #4caf50;
+  background-color: unset;
+}
+
+.c14:hover {
+  border: 1px solid #999;
+}
+
+.c14:focus {
+  border: 1px solid #222;
+}
+
+.c14::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c14[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c13 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -539,40 +564,40 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: unset;
 }
 
-.c11:hover {
+.c13:hover {
   border: 1px solid #999;
 }
 
-.c11:focus {
+.c13:focus {
   border: 1px solid #222;
 }
 
-.c11::-webkit-input-placeholder {
+.c13::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c11::-moz-placeholder {
+.c13::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c11:-ms-input-placeholder {
+.c13:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c11::placeholder {
+.c13::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c11[disabled] {
+.c13[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c13 {
+.c15 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -584,15 +609,15 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   align-items: center;
 }
 
-.c13 .c17 {
+.c15 .c19 {
   pointer-events: none;
 }
 
-.c15 {
+.c17 {
   padding-right: 2.2em;
 }
 
-.c18 {
+.c20 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -602,16 +627,12 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   right: 0.5em;
 }
 
-.c14[disabled] {
+.c16[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c6 {
-  padding: 20px 0;
-}
-
-.c6 ul {
+.c8 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -621,6 +642,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, fit-content(200px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -633,776 +658,156 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       className="c2"
       data-test="dropdown"
     >
-      <input
+      <div
         className="c3"
-        onChange={[Function]}
-        onClick={[Function]}
-        placeholder="Choose option"
-        type="text"
-        value={null}
-      />
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
-        <div
-          className="c5"
-          onKeyDown={[Function]}
-        >
-          <div
-            className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
-          >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
-            >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c2"
-      data-test="dropdown"
-    >
-      <input
-        className="c10"
-        onChange={[Function]}
-        onClick={[Function]}
-        placeholder="Choose option"
-        type="text"
-        value={null}
-      />
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
-        <div
-          className="c5"
-          onKeyDown={[Function]}
-        >
-          <div
-            className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
-          >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
-            >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c2"
-      data-test="dropdown"
-    >
-      <input
-        className="c11"
-        onChange={[Function]}
-        onClick={[Function]}
-        placeholder="Choose option"
-        type="text"
-        value={null}
-      />
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
-        <div
-          className="c5"
-          onKeyDown={[Function]}
-        >
-          <div
-            className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
-          >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
-            >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c2"
-      data-test="dropdown"
-    >
-      <input
-        className="c12"
-        onChange={[Function]}
-        onClick={[Function]}
-        placeholder="Choose option"
-        type="text"
-        value={null}
-      />
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
-        <div
-          className="c5"
-          onKeyDown={[Function]}
-        >
-          <div
-            className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
-          >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
-            >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="c2"
-      data-test="dropdown"
-    >
-      <div
-        className="c13"
-        onClick={[Function]}
       >
         <input
-          className="c14 c15 c16"
-          disabled={true}
+          className="c4"
           onChange={[Function]}
+          onClick={[Function]}
           placeholder="Choose option"
           type="text"
           value={null}
         />
-        <span
-          className="c17 c14 c18"
-          disabled={true}
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
         <div
           className="c5"
-          onKeyDown={[Function]}
+          data-test="dropdown-content"
+          open={false}
         >
           <div
             className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
           >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
+            <div
+              className="c7"
+              onKeyDown={[Function]}
             >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
                   }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1412,175 +817,155 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       data-test="dropdown"
     >
       <div
-        className="c13"
-        onClick={[Function]}
+        className="c3"
       >
         <input
-          className="c14 c15 c16"
-          disabled={true}
+          className="c12"
           onChange={[Function]}
+          onClick={[Function]}
           placeholder="Choose option"
           type="text"
           value={null}
         />
-        <span
-          className="c17 c14 c18"
-          disabled={true}
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
         <div
           className="c5"
-          onKeyDown={[Function]}
+          data-test="dropdown-content"
+          open={false}
         >
           <div
             className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
           >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
+            <div
+              className="c7"
+              onKeyDown={[Function]}
             >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
                   }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1590,175 +975,155 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       data-test="dropdown"
     >
       <div
-        className="c13"
-        onClick={[Function]}
+        className="c3"
       >
         <input
-          className="c14 c15 c19"
-          disabled={true}
+          className="c13"
           onChange={[Function]}
+          onClick={[Function]}
           placeholder="Choose option"
           type="text"
           value={null}
         />
-        <span
-          className="c17 c14 c18"
-          disabled={true}
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
         <div
           className="c5"
-          onKeyDown={[Function]}
+          data-test="dropdown-content"
+          open={false}
         >
           <div
             className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
           >
-            <ul
-              style={
-                Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
-                }
-              }
+            <div
+              className="c7"
+              onKeyDown={[Function]}
             >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c9"
-                  >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
-                    "width": "100%",
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
                   }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
-                style={
-                  Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
-              >
-                <div
-                  className="c8"
-                >
-                  <div
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1768,175 +1133,899 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       data-test="dropdown"
     >
       <div
-        className="c13"
-        onClick={[Function]}
+        className="c3"
       >
         <input
-          className="c14 c15 c20"
-          disabled={true}
+          className="c14"
           onChange={[Function]}
+          onClick={[Function]}
           placeholder="Choose option"
           type="text"
           value={null}
         />
-        <span
-          className="c17 c14 c18"
-          disabled={true}
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </div>
-      <div
-        className="c4"
-        data-test="dropdown-content"
-        open={false}
-      >
         <div
           className="c5"
-          onKeyDown={[Function]}
+          data-test="dropdown-content"
+          open={false}
         >
           <div
             className="c6"
-            onScroll={[Function]}
-            style={
-              Object {
-                "WebkitOverflowScrolling": "touch",
-                "direction": "ltr",
-                "height": 120,
-                "overflow": "auto",
-                "position": "relative",
-                "width": "100%",
-                "willChange": "transform",
-              }
-            }
           >
-            <ul
+            <div
+              className="c7"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="c8"
+                onScroll={[Function]}
+                style={
+                  Object {
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
+                    "width": "100%",
+                    "willChange": "transform",
+                  }
+                }
+              >
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2"
+      data-test="dropdown"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c15"
+          onClick={[Function]}
+        >
+          <input
+            className="c16 c17 c18"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Choose option"
+            type="text"
+            value={null}
+          />
+          <span
+            className="c19 c20"
+            disabled={true}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
               style={
                 Object {
-                  "height": 120,
-                  "pointerEvents": "",
-                  "width": "100%",
+                  "color": undefined,
                 }
               }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c5"
+          data-test="dropdown-content"
+          open={false}
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 20,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
+                  }
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    one
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2"
+      data-test="dropdown"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c15"
+          onClick={[Function]}
+        >
+          <input
+            className="c16 c17 c18"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Choose option"
+            type="text"
+            value={null}
+          />
+          <span
+            className="c19 c20"
+            disabled={true}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c5"
+          data-test="dropdown-content"
+          open={false}
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 50,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
+                  }
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    two
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2"
+      data-test="dropdown"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c15"
+          onClick={[Function]}
+        >
+          <input
+            className="c16 c17 c21"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Choose option"
+            type="text"
+            value={null}
+          />
+          <span
+            className="c19 c20"
+            disabled={true}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c5"
+          data-test="dropdown-content"
+          open={false}
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 80,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
+                  }
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    three
-                  </div>
-                </div>
-              </li>
-              <li
-                className="c7"
-                onClick={[Function]}
-                onMouseOver={[Function]}
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c2"
+      data-test="dropdown"
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c15"
+          onClick={[Function]}
+        >
+          <input
+            className="c16 c17 c22"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Choose option"
+            type="text"
+            value={null}
+          />
+          <span
+            className="c19 c20"
+            disabled={true}
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c5"
+          data-test="dropdown-content"
+          open={false}
+        >
+          <div
+            className="c6"
+          >
+            <div
+              className="c7"
+              onKeyDown={[Function]}
+            >
+              <div
+                className="c8"
+                onScroll={[Function]}
                 style={
                   Object {
-                    "height": 30,
-                    "left": 0,
-                    "position": "absolute",
-                    "top": 110,
+                    "WebkitOverflowScrolling": "touch",
+                    "direction": "ltr",
+                    "height": 120,
+                    "overflow": "auto",
+                    "position": "relative",
                     "width": "100%",
+                    "willChange": "transform",
                   }
                 }
-                tabIndex={-1}
               >
-                <div
-                  className="c8"
+                <ul
+                  style={
+                    Object {
+                      "height": 120,
+                      "pointerEvents": "",
+                      "width": "100%",
+                    }
+                  }
                 >
-                  <div
+                  <li
                     className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
                   >
-                    four
-                  </div>
-                </div>
-              </li>
-            </ul>
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        one
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 30,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        two
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 60,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        three
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    className="c9"
+                    onClick={[Function]}
+                    onMouseOver={[Function]}
+                    style={
+                      Object {
+                        "height": 30,
+                        "left": 0,
+                        "position": "absolute",
+                        "top": 90,
+                        "width": "100%",
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <div
+                        className="c11"
+                      >
+                        four
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1950,148 +2039,140 @@ exports[`Storyshots molecules/Select default 1`] = `
   padding: 12px;
 }
 
-.c14 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+.c10 {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
-.c15 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c16 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c17 .c6 {
+.c16 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c6 {
+.c17 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c19 .c6 {
+.c18 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c6 {
+.c19 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c6 {
+.c20 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c6 {
+.c21 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c6 {
+.c22 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c6 {
+.c23 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c25 .c6 {
+.c24 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c26 .c6 {
+.c25 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c27 .c6 {
+.c26 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c28 .c6 {
+.c27 .c7 {
   font-size: 1.5em;
 }
 
-.c29 .c6 {
+.c28 .c7 {
   font-size: 1.5em;
 }
 
-.c30 .c6 {
+.c29 .c7 {
   font-size: 1.5em;
 }
 
-.c31 .c6 {
+.c30 .c7 {
   font-size: 1.5em;
 }
 
-.c32 .c6 {
+.c31 .c7 {
   font-size: 1.5em;
 }
 
-.c33 .c6 {
+.c32 .c7 {
   font-size: 1.5em;
 }
 
-.c34 .c6 {
+.c33 .c7 {
   font-size: 1.5em;
 }
 
-.c35 .c6 {
+.c34 .c7 {
   font-size: 1.5em;
 }
 
-.c36 .c6 {
+.c35 .c7 {
   font-size: 1.5em;
 }
 
-.c37 .c6 {
+.c36 .c7 {
   font-size: 1.5em;
 }
 
-.c38 .c6 {
+.c37 .c7 {
   font-size: 1.5em;
 }
 
-.c39 .c6 {
+.c38 .c7 {
   font-size: 1.5em;
 }
 
-.c40 .c6 {
+.c39 .c7 {
   font-size: 1.5em;
 }
 
-.c41 .c6 {
+.c40 .c7 {
   font-size: 1.5em;
+}
+
+.c41 .c7 {
+  font-size: 1.5em;
+}
+
+.c42 .c7 {
+  font-size: 1.5em;
+}
+
+.c43 .c7 {
+  font-size: 1.5em;
+}
+
+.c44 .c7 {
+  font-size: 1.5em;
+}
+
+.c2 {
+  display: block;
 }
 
 .c1 {
@@ -2099,7 +2180,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -2109,12 +2190,45 @@ exports[`Storyshots molecules/Select default 1`] = `
   visibility: hidden;
 }
 
-.c9 {
+.c45 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c46 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c47 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 {
   height: 100%;
   width: 100%;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2130,18 +2244,18 @@ exports[`Storyshots molecules/Select default 1`] = `
   cursor: pointer;
 }
 
-.c11:hover,
-.c11:focus {
+.c13:hover,
+.c13:focus {
   background-color: #eee;
 }
 
-.c12 {
+.c14 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2153,7 +2267,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2172,40 +2286,40 @@ exports[`Storyshots molecules/Select default 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c6:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c6:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2217,15 +2331,15 @@ exports[`Storyshots molecules/Select default 1`] = `
   align-items: center;
 }
 
-.c2 .c6 {
+.c3 .c7 {
   pointer-events: none;
 }
 
-.c4 {
+.c5 {
   padding-right: 2.2em;
 }
 
-.c7 {
+.c8 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -2235,16 +2349,12 @@ exports[`Storyshots molecules/Select default 1`] = `
   right: 0.5em;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c10 {
-  padding: 20px 0;
-}
-
-.c10 ul {
+.c12 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2259,173 +2369,625 @@ exports[`Storyshots molecules/Select default 1`] = `
   >
     <div
       className="c2"
-      onClick={[Function]}
-    >
-      <input
-        className="c3 c4 c5"
-        disabled={true}
-        onChange={[Function]}
-        type="text"
-        value={null}
-      />
-      <span
-        className="c6 c3 c7"
-        disabled={true}
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
-      </span>
-    </div>
-    <div
-      className="c8"
-      data-test="dropdown-content"
-      open={false}
     >
       <div
+        className="c3"
+        onClick={[Function]}
+      >
+        <input
+          className="c4 c5 c6"
+          disabled={true}
+          onChange={[Function]}
+          placeholder="Choose option"
+          type="text"
+          value={null}
+        />
+        <span
+          className="c7 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
         className="c9"
-        onKeyDown={[Function]}
+        data-test="dropdown-content"
+        open={false}
       >
         <div
           className="c10"
-          onScroll={[Function]}
-          style={
-            Object {
-              "WebkitOverflowScrolling": "touch",
-              "direction": "ltr",
-              "height": 120,
-              "overflow": "auto",
-              "position": "relative",
-              "width": "100%",
-              "willChange": "transform",
-            }
-          }
         >
-          <ul
+          <div
+            className="c11"
+            onKeyDown={[Function]}
+          >
+            <div
+              className="c12"
+              onScroll={[Function]}
+              style={
+                Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "direction": "ltr",
+                  "height": 120,
+                  "overflow": "auto",
+                  "position": "relative",
+                  "width": "100%",
+                  "willChange": "transform",
+                }
+              }
+            >
+              <ul
+                style={
+                  Object {
+                    "height": 120,
+                    "pointerEvents": "",
+                    "width": "100%",
+                  }
+                }
+              >
+                <li
+                  className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      one
+                    </div>
+                  </div>
+                </li>
+                <li
+                  className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 30,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      two
+                    </div>
+                  </div>
+                </li>
+                <li
+                  className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 60,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      three
+                    </div>
+                  </div>
+                </li>
+                <li
+                  className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 90,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      four
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c10 {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+}
+
+.c16 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c7 {
+  font-size: 1.5em;
+}
+
+.c28 .c7 {
+  font-size: 1.5em;
+}
+
+.c29 .c7 {
+  font-size: 1.5em;
+}
+
+.c30 .c7 {
+  font-size: 1.5em;
+}
+
+.c31 .c7 {
+  font-size: 1.5em;
+}
+
+.c32 .c7 {
+  font-size: 1.5em;
+}
+
+.c33 .c7 {
+  font-size: 1.5em;
+}
+
+.c34 .c7 {
+  font-size: 1.5em;
+}
+
+.c35 .c7 {
+  font-size: 1.5em;
+}
+
+.c36 .c7 {
+  font-size: 1.5em;
+}
+
+.c37 .c7 {
+  font-size: 1.5em;
+}
+
+.c38 .c7 {
+  font-size: 1.5em;
+}
+
+.c39 .c7 {
+  font-size: 1.5em;
+}
+
+.c40 .c7 {
+  font-size: 1.5em;
+}
+
+.c41 .c7 {
+  font-size: 1.5em;
+}
+
+.c42 .c7 {
+  font-size: 1.5em;
+}
+
+.c43 .c7 {
+  font-size: 1.5em;
+}
+
+.c44 .c7 {
+  font-size: 1.5em;
+}
+
+.c2 {
+  display: block;
+}
+
+.c1 {
+  position: relative;
+  width: 100%;
+}
+
+.c9 {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  z-index: 1;
+  min-width: 160px;
+  visibility: hidden;
+}
+
+.c45 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c46 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c47 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 {
+  height: 100%;
+  width: 100%;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c13:hover,
+.c13:focus {
+  background-color: #eee;
+}
+
+.c14 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  padding-right: 2.2em;
+}
+
+.c8 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  position: absolute;
+  font-size: NaNpx;
+  cursor: not-allowed;
+  right: 0.5em;
+}
+
+.c4[disabled] {
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.c12 ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    data-test="dropdown"
+  >
+    <div
+      className="c2"
+    >
+      <div
+        className="c3"
+        onClick={[Function]}
+      >
+        <input
+          className="c4 c5 c6"
+          disabled={true}
+          onChange={[Function]}
+          placeholder="Click on me or outside"
+          type="text"
+          value={null}
+        />
+        <span
+          className="c7 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
             style={
               Object {
-                "height": 120,
-                "pointerEvents": "",
-                "width": "100%",
+                "color": undefined,
               }
             }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
+        className="c9"
+        data-test="dropdown-content"
+        open={false}
+      >
+        <div
+          className="c10"
+        >
+          <div
+            className="c11"
+            onKeyDown={[Function]}
+          >
+            <div
+              className="c12"
+              onScroll={[Function]}
               style={
                 Object {
+                  "WebkitOverflowScrolling": "touch",
+                  "direction": "ltr",
                   "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 20,
+                  "overflow": "auto",
+                  "position": "relative",
                   "width": "100%",
+                  "willChange": "transform",
                 }
               }
-              tabIndex={-1}
             >
-              <div
-                className="c12"
-              >
-                <div
-                  className="c13"
-                >
-                  one
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 50,
-                  "width": "100%",
+              <ul
+                style={
+                  Object {
+                    "height": 30,
+                    "pointerEvents": "",
+                    "width": "100%",
+                  }
                 }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
               >
-                <div
+                <li
                   className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  two
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 80,
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
-              >
-                <div
-                  className="c13"
-                >
-                  three
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 110,
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
-              >
-                <div
-                  className="c13"
-                >
-                  four
-                </div>
-              </div>
-            </li>
-          </ul>
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      click outside
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2438,148 +3000,140 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   padding: 12px;
 }
 
-.c14 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+.c10 {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
-.c15 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c16 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c17 .c6 {
+.c16 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c6 {
+.c17 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c19 .c6 {
+.c18 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c6 {
+.c19 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c6 {
+.c20 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c6 {
+.c21 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c6 {
+.c22 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c6 {
+.c23 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c25 .c6 {
+.c24 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c26 .c6 {
+.c25 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c27 .c6 {
+.c26 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c28 .c6 {
+.c27 .c7 {
   font-size: 1.5em;
 }
 
-.c29 .c6 {
+.c28 .c7 {
   font-size: 1.5em;
 }
 
-.c30 .c6 {
+.c29 .c7 {
   font-size: 1.5em;
 }
 
-.c31 .c6 {
+.c30 .c7 {
   font-size: 1.5em;
 }
 
-.c32 .c6 {
+.c31 .c7 {
   font-size: 1.5em;
 }
 
-.c33 .c6 {
+.c32 .c7 {
   font-size: 1.5em;
 }
 
-.c34 .c6 {
+.c33 .c7 {
   font-size: 1.5em;
 }
 
-.c35 .c6 {
+.c34 .c7 {
   font-size: 1.5em;
 }
 
-.c36 .c6 {
+.c35 .c7 {
   font-size: 1.5em;
 }
 
-.c37 .c6 {
+.c36 .c7 {
   font-size: 1.5em;
 }
 
-.c38 .c6 {
+.c37 .c7 {
   font-size: 1.5em;
 }
 
-.c39 .c6 {
+.c38 .c7 {
   font-size: 1.5em;
 }
 
-.c40 .c6 {
+.c39 .c7 {
   font-size: 1.5em;
 }
 
-.c41 .c6 {
+.c40 .c7 {
   font-size: 1.5em;
+}
+
+.c41 .c7 {
+  font-size: 1.5em;
+}
+
+.c42 .c7 {
+  font-size: 1.5em;
+}
+
+.c43 .c7 {
+  font-size: 1.5em;
+}
+
+.c44 .c7 {
+  font-size: 1.5em;
+}
+
+.c2 {
+  display: block;
 }
 
 .c1 {
@@ -2587,7 +3141,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -2597,12 +3151,45 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   visibility: hidden;
 }
 
-.c9 {
+.c45 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c46 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c47 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c11 {
   height: 100%;
   width: 100%;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2618,18 +3205,18 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   cursor: pointer;
 }
 
-.c11:hover,
-.c11:focus {
+.c13:hover,
+.c13:focus {
   background-color: #eee;
 }
 
-.c12 {
+.c14 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c13 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2641,7 +3228,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   height: 100%;
 }
 
-.c5 {
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2660,40 +3247,40 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c6:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c6:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c2 {
+.c3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2705,15 +3292,15 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   align-items: center;
 }
 
-.c2 .c6 {
+.c3 .c7 {
   pointer-events: none;
 }
 
-.c4 {
+.c5 {
   padding-right: 2.2em;
 }
 
-.c7 {
+.c8 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
@@ -2723,16 +3310,12 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   right: 0.5em;
 }
 
-.c3[disabled] {
+.c4[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c10 {
-  padding: 20px 0;
-}
-
-.c10 ul {
+.c12 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2747,173 +3330,182 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   >
     <div
       className="c2"
-      onClick={[Function]}
-    >
-      <input
-        className="c3 c4 c5"
-        disabled={true}
-        onChange={[Function]}
-        type="text"
-        value={null}
-      />
-      <span
-        className="c6 c3 c7"
-        disabled={true}
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
-      </span>
-    </div>
-    <div
-      className="c8"
-      data-test="dropdown-content"
-      open={false}
     >
       <div
+        className="c3"
+        onClick={[Function]}
+      >
+        <input
+          className="c4 c5 c6"
+          disabled={true}
+          onChange={[Function]}
+          placeholder="Choose option"
+          type="text"
+          value={null}
+        />
+        <span
+          className="c7 c8"
+          disabled={true}
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
+      </div>
+      <div
         className="c9"
-        onKeyDown={[Function]}
+        data-test="dropdown-content"
+        open={false}
       >
         <div
           className="c10"
-          onScroll={[Function]}
-          style={
-            Object {
-              "WebkitOverflowScrolling": "touch",
-              "direction": "ltr",
-              "height": 120,
-              "overflow": "auto",
-              "position": "relative",
-              "width": "100%",
-              "willChange": "transform",
-            }
-          }
         >
-          <ul
-            style={
-              Object {
-                "height": 120,
-                "pointerEvents": "",
-                "width": "100%",
-              }
-            }
+          <div
+            className="c11"
+            onKeyDown={[Function]}
           >
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
+            <div
+              className="c12"
+              onScroll={[Function]}
               style={
                 Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 20,
+                  "WebkitOverflowScrolling": "touch",
+                  "direction": "ltr",
+                  "height": 120,
+                  "overflow": "auto",
+                  "position": "relative",
                   "width": "100%",
+                  "willChange": "transform",
                 }
               }
-              tabIndex={-1}
             >
-              <div
-                className="c12"
-              >
-                <div
-                  className="c13"
-                >
-                  one
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 50,
-                  "width": "100%",
+              <ul
+                style={
+                  Object {
+                    "height": 120,
+                    "pointerEvents": "",
+                    "width": "100%",
+                  }
                 }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
               >
-                <div
+                <li
                   className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  two
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 80,
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
-              >
-                <div
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      one
+                    </div>
+                  </div>
+                </li>
+                <li
                   className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 30,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  three
-                </div>
-              </div>
-            </li>
-            <li
-              className="c11"
-              onClick={[Function]}
-              onMouseOver={[Function]}
-              style={
-                Object {
-                  "height": 30,
-                  "left": 0,
-                  "position": "absolute",
-                  "top": 110,
-                  "width": "100%",
-                }
-              }
-              tabIndex={-1}
-            >
-              <div
-                className="c12"
-              >
-                <div
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      two
+                    </div>
+                  </div>
+                </li>
+                <li
                   className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 60,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
                 >
-                  four
-                </div>
-              </div>
-            </li>
-          </ul>
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      three
+                    </div>
+                  </div>
+                </li>
+                <li
+                  className="c13"
+                  onClick={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "height": 30,
+                      "left": 0,
+                      "position": "absolute",
+                      "top": 90,
+                      "width": "100%",
+                    }
+                  }
+                  tabIndex={-1}
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                    >
+                      four
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

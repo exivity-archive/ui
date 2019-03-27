@@ -18,7 +18,7 @@ test('it throws an error when a TabList component is not rendered within a Tabs 
   expect(message).toBe('useTabsContext should only be called within a child of a Tabs component')
 })
 
-test('it doesn\'t throws an error when a TabPanels component is rendered within a Tabs component', () => {
+test('it doesn\'t throw an error when a TabPanels component is rendered within a Tabs component', () => {
   let error: Error
   try {
     mount(

@@ -12,36 +12,18 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c3 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c4 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c5 .c1 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c6 .c1 {
@@ -86,17 +68,14 @@ exports[`Storyshots atoms|Icon default 1`] = `
 
 .c14 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c15 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c16 .c1 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c17 .c1 {
@@ -156,6 +135,43 @@ exports[`Storyshots atoms|Icon default 1`] = `
 }
 
 .c31 .c1 {
+  font-size: 1.5em;
+}
+
+.c32 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c33 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c34 .c1 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c35 .c1 {
   pointer-events: none;
 }
 

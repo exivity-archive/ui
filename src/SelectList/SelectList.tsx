@@ -4,6 +4,7 @@ import { FixedSizeList as List } from 'react-window'
 
 import { DefaultItem } from './DefaultItem'
 import { ListFocus } from '../ListFocus'
+import { ListItem } from '../ListItem'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
 
 export interface SelectListItem {
@@ -24,8 +25,6 @@ export interface SelectListProps {
 }
 
 export const StyledList = styled(List)`
-  padding: 20px 0;
-
   ul {
     padding: 0;
     margin: 0;
@@ -58,7 +57,7 @@ export const SelectList: React.FC<SelectListProps> = ({
   return (
     <ListFocus>
       <StyledList
-        height={height || calculatedHeight}
+        height={calculatedHeight}
         itemData={itemData}
         itemCount={componentData.length}
         itemSize={ITEM_HEIGHT}

@@ -17,8 +17,7 @@ export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
   ${({ leftSpacerLine, distance, spacing }) => css`&:after {
       position: relative;
       top: calc(-${(100 * distance)}% - 50%);
-      right: ${spacing}px;
-      border: solid ${fromTheme(theme => theme.colours.lightGray)};
+      border: solid ${fromTheme(theme => theme.colors.lightGray)};
       border-width: 0px 0px 1px ${leftSpacerLine}px;
       content: ' ';
       display: block;

@@ -4,6 +4,7 @@ import { preciseEm } from '../utils/styled/isolated'
 
 interface TableProps extends StyledProps {
   compact?: boolean
+  align?: 'top' | 'middle' | 'bottom'
 }
 
 export const Table = styled.table<TableProps>`
@@ -18,29 +19,28 @@ export const Table = styled.table<TableProps>`
   th,
   tfoot,
   thead,
-  tr {
-
-  }
+  tr {}
 
   thead tr,
   tbody tr:not(:last-child) {
-    border-bottom: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+    border-bottom: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   }
 
   tfoot tr {
-    border-top: 1px solid ${fromTheme(theme => theme.colours.lightGray)};
+    border-top: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   }
 
   caption {
+    text-align: left;
     text-transform: uppercase;
     font-size: ${preciseEm(0.9)}em;
-    color: ${fromTheme(theme => theme.colours.gray)};
+    color: ${fromTheme(theme => theme.colors.gray)};
   }
 
   td,
   th {
     padding: ${props => props.compact ? preciseEm(0) : preciseEm(0.2)}em 0;
-    vertical-align: middle;
+    vertical-align: ${props => props.align || 'top'};
 
     &:not(:first-child) {
       padding-left: ${props => props.compact ? preciseEm(0.1) : preciseEm(0.4)}em;

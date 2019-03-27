@@ -24,13 +24,3 @@ The following packages must be already installed in your project:
 |------------|---------|
 | react | ^16.8 |
 | react-dom | ^16.8 |
-
-### Optional dependencies
-
-The following packages may be installed in your project if you plan to use the following components:
-
-| component | dependency | version |
-|-----------|------------|---------|
-| `<Code />` | react-syntax-highlighter | ^10.2
-| `<Icon />` | react-icons | ^3.5
-| `<Markdown />` | react-markdown | ^4.0

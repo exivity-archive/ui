@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 import { Checkbox } from '.'
-import { Block } from '../Block'
+import { Section } from '../Section'
 import { Heading } from '../Heading'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
@@ -10,8 +10,8 @@ storiesOf('interact|Checkbox', module)
   .addDecorator(withState(true))
   .add('default', () => (
     <>
-      <Block><Checkbox checked={true} /></Block>
-      <Block><Checkbox checked={false} /></Block>
+      <Section><Checkbox checked={true} /></Section>
+      <Section><Checkbox checked={false} /></Section>
     </>
   ))
   .add('with label', ({ state, storeState }: any) => (

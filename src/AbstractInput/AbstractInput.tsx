@@ -1,10 +1,12 @@
 import React, { ChangeEvent, InputHTMLAttributes, useState } from 'react'
 import styled, { css } from 'styled-components'
+import { animated } from 'react-spring'
+
 import {
   fromTheme,
   globalFont,
   hexToString,
-  matchThemeProp,
+  matchThemeProp, PurposesProps, SizesProps,
   StyledProps
 } from '../utils/styled'
 import { Omit } from '../utils/types'
@@ -13,19 +15,7 @@ export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInput
 
 export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
 
-export interface StyledInputProps extends StyledProps {
-  // Purposes
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  danger?: boolean
-
-  // Sizes
-  tiny?: boolean
-  small?: boolean
-  large?: boolean
-  huge?: boolean
-
+export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps {
   // Variants
   outlined?: boolean
   flat?: boolean
@@ -65,8 +55,8 @@ export const inputStyles = css<StyledInputProps>`
   `}
 
   ${props => (!props.outlined && !props.flat) && css`
-    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.lightGray)};
-    background-color: ${fromTheme(theme => theme.colours.lightGray)};
+    border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.lightGray)};
+    background-color: ${fromTheme(theme => theme.colors.lightGray)};
 
     &:hover {
       border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid rgba(var(--focus-color), 0.5);
@@ -82,11 +72,11 @@ export const inputStyles = css<StyledInputProps>`
     background-color: unset;
 
     &:hover {
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.gray)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.gray)};
     }
 
     &:focus {
-      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colours.dark)};
+      border: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.colors.dark)};
     }
   `}
 
@@ -118,10 +108,12 @@ const StyledInput = styled.input`
   ${inputStyles};
 `
 
+const AnimatedStyledInput = animated(StyledInput)
+
 export const AbstractInput =
   ({ type, onChange, ...rest }: Props) => {
     const [valid, setValid] = useState(true)
-    return <StyledInput
+    return <AnimatedStyledInput
       type={type || 'text'}
       danger={!valid}
       onChange={(event) => {

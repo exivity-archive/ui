@@ -2,6 +2,86 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.8](https://github.com/exivity/ui/compare/v0.13.7...v0.13.8) (2019-03-27)
+
+
+### Bug Fixes
+
+* double close caused by outsideListener ([#73](https://github.com/exivity/ui/issues/73)) ([6090401](https://github.com/exivity/ui/commit/6090401))
+
+
+
+## [0.13.7](https://github.com/exivity/ui/compare/v0.13.6...v0.13.7) (2019-03-26)
+
+
+
+## [0.13.6](https://github.com/exivity/ui/compare/v0.13.5...v0.13.6) (2019-03-26)
+
+
+
+## [0.13.5](https://github.com/exivity/ui/compare/v0.13.4...v0.13.5) (2019-03-26)
+
+
+
+## [0.13.4](https://github.com/exivity/ui/compare/v0.13.3...v0.13.4) (2019-03-26)
+
+
+
+## [0.13.3](https://github.com/exivity/ui/compare/v0.13.2...v0.13.3) (2019-03-25)
+
+
+
+## [0.13.2](https://github.com/exivity/ui/compare/v0.13.1...v0.13.2) (2019-03-25)
+
+
+### Bug Fixes
+
+* pass rest of modal props to overlay ([#66](https://github.com/exivity/ui/issues/66)) ([5332262](https://github.com/exivity/ui/commit/5332262))
+
+
+
+## [0.13.1](https://github.com/exivity/ui/compare/v0.13.0...v0.13.1) (2019-03-25)
+
+
+
+# [0.13.0](https://github.com/exivity/ui/compare/v0.12.5...v0.13.0) (2019-03-25)
+
+
+### Features
+
+* add Flex, Alert component and improve docs ([#61](https://github.com/exivity/ui/issues/61)) ([547d583](https://github.com/exivity/ui/commit/547d583))
+
+
+
+## [0.12.5](https://github.com/exivity/ui/compare/v0.12.4...v0.12.5) (2019-03-22)
+
+
+
+## [0.12.4](https://github.com/exivity/ui/compare/v0.12.3...v0.12.4) (2019-03-22)
+
+
+
+## [0.12.3](https://github.com/exivity/ui/compare/v0.12.2...v0.12.3) (2019-03-22)
+
+
+
+## [0.12.2](https://github.com/exivity/ui/compare/v0.12.1...v0.12.2) (2019-03-22)
+
+
+
+## [0.12.1](https://github.com/exivity/ui/compare/v0.12.0...v0.12.1) (2019-03-21)
+
+
+
+# [0.12.0](https://github.com/exivity/ui/compare/v0.11.0...v0.12.0) (2019-03-21)
+
+
+### Features
+
+* styled-system ([#57](https://github.com/exivity/ui/issues/57)) ([a4e01bb](https://github.com/exivity/ui/commit/a4e01bb))
+
+
+
 # [0.11.0](https://github.com/exivity/ui/compare/v0.10.1...v0.11.0) (2019-03-20)
 
 

@@ -27,15 +27,15 @@ export function getVertical (vertical: Vertical, { outer, inner }: Rects, breakD
 export function getHorizontal (horizontal: Horizontal, { outer, inner }: Rects, breakDistance: number) {
   if (horizontal === 'auto') {
     return elementCrossedEdge(outer.left, inner.width, window.innerWidth - breakDistance)
-      ? 'left' : 'right'
+      ? 'right' : 'left'
   } else {
     return horizontal
   }
 }
 
 export interface Position {
-  left?: 0
-  right?: 0
+  left?: boolean
+  right?: boolean
   top?: number
   bottom?: number
 }
@@ -44,17 +44,18 @@ export function getPosition (rects: Rects, layout: Layout, breakDistance: number
   const vertical = getVertical(layout.vertical, rects, breakDistance)
   const horizontal = getHorizontal(layout.horizontal, rects, breakDistance)
 
+  // horizontal can be a boolean as the value is always 0 in makeCssPosition
   return {
     [vertical]: rects.outer.height,
-    [horizontal]: 0
+    [horizontal]: true
   }
 }
 
 export function makeCssPosition ({ top, right, bottom, left }: Position) {
-  let position = ''
-  if (top !== undefined) position += `bottom: ${top}px;\n` + 'margin-top: 5px;\n'
-  if (right !== undefined) position += `left: ${right}px;\n`
-  if (bottom !== undefined) position += `top: ${bottom}px;\n` + 'margin-bottom: 5px;\n'
-  if (left !== undefined) position += `right: ${left}px;\n`
-  return position
+  let css = ''
+  if (top) css += `bottom: ${top}px;\n` + 'margin-top: 5px;\n'
+  if (right) css += `right: 0px;\n`
+  if (bottom) css += `top: ${bottom}px;\n` + 'margin-bottom: 5px;\n'
+  if (left) css += `left: 0px;\n`
+  return css
 }
