@@ -233,7 +233,7 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   pointer-events: none;
 }
 
-.c37 .c5 {
+.c41 .c5 {
   pointer-events: none;
 }
 
@@ -581,7 +581,7 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   pointer-events: none;
 }
 
-.c37 .c5 {
+.c41 .c5 {
   pointer-events: none;
 }
 
@@ -933,7 +933,7 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   pointer-events: none;
 }
 
-.c37 .c5 {
+.c41 .c5 {
   pointer-events: none;
 }
 
@@ -1643,7 +1643,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   pointer-events: none;
 }
 
-.c45 .c6 {
+.c49 .c6 {
   pointer-events: none;
 }
 
@@ -2559,7 +2559,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   pointer-events: none;
 }
 
-.c43 .c5 {
+.c47 .c5 {
   pointer-events: none;
 }
 
