@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { IconType } from 'react-icons/src'
 import { InputProps, OmitOnChangeHTMLInputAttributes, StyledInputProps } from '../AbstractInput/AbstractInput'
+import { Block } from '../Block'
 
 import { TextInput } from '../TextInput'
 import { matchThemeProp } from '../utils/styled'
@@ -19,7 +20,7 @@ interface InputIconProps extends StyledInputProps {
   disabled?: boolean
 }
 
-const StyledContainer = styled.div `
+const StyledContainer = styled(Block)`
   position: relative;
   display: flex;
   align-items: center;
@@ -74,12 +75,14 @@ export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHT
 
   // Container props
   onClick,
+  width,
 
   // Rest goes to TextInput
   ...rest
 }) => {
+  const container = { onClick, width }
   const shared = { tiny, small, large, huge, disabled }
-  return <StyledContainer onClick={onClick}>
+  return <StyledContainer {...container}>
     <StyledSelectInput iconPosition={iconPosition} {...shared} {...rest} />
     <InputIcon iconPosition={iconPosition} {...shared}>
       {icon}

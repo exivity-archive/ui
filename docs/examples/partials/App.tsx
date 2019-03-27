@@ -40,8 +40,9 @@ const Logo = styled(Image).attrs({
 const Header = styled(Grid.Item).attrs({
   as: 'header',
   area: 'header',
-  bg: 'lightGray'
+  bg: 'blue'
 })`
+  display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -55,7 +56,8 @@ const Header = styled(Grid.Item).attrs({
 `
 
 const Title = styled(Flex.Item).attrs(() => ({
-  as: Heading
+  as: Heading,
+  color: 'white'
 }))<HeadingProps>``
 
 const Sidebar = styled(Grid.Item).attrs({
@@ -68,7 +70,8 @@ const Sidebar = styled(Grid.Item).attrs({
 
 const Main = styled(Grid.Item).attrs({
   as: 'main',
-  area: 'main'
+  area: 'main',
+  bg: 'lightGray'
 })`
   ${globalScrollbar}
 
@@ -85,10 +88,10 @@ export const App = ({ title, children }: AppProps) => (
     <LogoArea>
       <Logo />
     </LogoArea>
-    <Flex as={Header}>
+    <Header>
       <Title noMargin grow={1}>{title}</Title>
       <SecondaryNav />
-    </Flex>
+    </Header>
     <Sidebar>
       <PrimaryNav />
     </Sidebar>

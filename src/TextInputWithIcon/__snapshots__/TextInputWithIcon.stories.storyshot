@@ -217,6 +217,10 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   pointer-events: none;
 }
 
+.c37 .c5 {
+  pointer-events: none;
+}
+
 .c3 {
   padding-right: 2.2em;
 }
@@ -230,7 +234,7 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   right: 0.5em;
 }
 
@@ -239,7 +243,7 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   left: 0.5em;
 }
 
@@ -541,6 +545,10 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   pointer-events: none;
 }
 
+.c37 .c5 {
+  pointer-events: none;
+}
+
 .c3 {
   padding-right: 2.2em;
 }
@@ -554,7 +562,7 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -564,7 +572,7 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   left: 0.5em;
 }
@@ -869,6 +877,10 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   pointer-events: none;
 }
 
+.c37 .c5 {
+  pointer-events: none;
+}
+
 .c3 {
   padding-right: 2.2em;
 }
@@ -882,7 +894,7 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   right: 0.5em;
 }
 
@@ -891,7 +903,7 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   left: 0.5em;
 }
 
@@ -1555,6 +1567,10 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   pointer-events: none;
 }
 
+.c45 .c6 {
+  pointer-events: none;
+}
+
 .c4 {
   padding-right: 2.2em;
 }
@@ -1568,7 +1584,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   right: 0.5em;
 }
 
@@ -1577,7 +1593,7 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   left: 0.5em;
 }
 
@@ -2443,6 +2459,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   pointer-events: none;
 }
 
+.c43 .c5 {
+  pointer-events: none;
+}
+
 .c3 {
   padding-right: 2.2em;
 }
@@ -2456,7 +2476,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   right: 0.5em;
 }
 
@@ -2465,7 +2485,7 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   left: 0.5em;
 }
 

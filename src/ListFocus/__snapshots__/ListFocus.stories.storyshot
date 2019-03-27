@@ -6,11 +6,6 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
 }
 
 .c1 {
-  height: 100%;
-  width: 100%;
-}
-
-.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,12 +21,12 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
   cursor: pointer;
 }
 
-.c2:hover,
-.c2:focus {
+.c1:hover,
+.c1:focus {
   background-color: #eee;
 }
 
-.c3 {
+.c2 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
@@ -41,7 +36,6 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
   className="c0"
 >
   <div
-    className="c1"
     onKeyDown={[Function]}
   >
     <ul
@@ -53,7 +47,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
       }
     >
       <li
-        className="c2"
+        className="c1"
         onMouseOver={[Function]}
         style={
           Object {
@@ -63,7 +57,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         tabIndex={-1}
       >
         <div
-          className="c3"
+          className="c2"
         >
           <div
             style={
@@ -79,7 +73,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         </div>
       </li>
       <li
-        className="c2"
+        className="c1"
         onMouseOver={[Function]}
         style={
           Object {
@@ -89,7 +83,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         tabIndex={-1}
       >
         <div
-          className="c3"
+          className="c2"
         >
           <div
             style={
@@ -105,7 +99,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         </div>
       </li>
       <li
-        className="c2"
+        className="c1"
         onMouseOver={[Function]}
         style={
           Object {
@@ -115,7 +109,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         tabIndex={-1}
       >
         <div
-          className="c3"
+          className="c2"
         >
           <div
             style={
@@ -131,7 +125,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         </div>
       </li>
       <li
-        className="c2"
+        className="c1"
         onMouseOver={[Function]}
         style={
           Object {
@@ -141,7 +135,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
         tabIndex={-1}
       >
         <div
-          className="c3"
+          className="c2"
         >
           <div
             style={

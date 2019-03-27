@@ -13,25 +13,27 @@ import {
   Button,
   distanceBetweenEvenLevelItem,
   ExpandableSpacer,
-  Flex, Heading,
+  Flex,
+  Heading,
   Helpers,
   Icon,
   ListFocus,
   ListItem,
-  Paragraph,
   Searchbar,
   TreeListItem,
   useExpandable
 } from '../../src'
 
 const masterWidth = [200, 250, 250, 400]
+const detailWidth = ['100%', '100%', '100%', 800]
 
 const Container = styled(Flex)`
   height: calc(100vh - ${headerHeight}px);
 `
 
 const Master = styled(Flex.Item).attrs(props => ({
-  width: masterWidth
+  width: masterWidth,
+  bg: 'white'
 }))`
   display: flex;
   flex-direction: column;
@@ -45,7 +47,7 @@ const Search = styled(Block).attrs(props => ({
   flat: true
 }))`
   flex-shrink: 1;
-  border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.global.borderColor)};
+  border-bottom: ${fromTheme(theme => theme.global.borderWidth)}px solid ${fromTheme(theme => theme.global.borderColor)} !important;
 `
 
 interface Account {
@@ -152,7 +154,9 @@ const Item = ({ data, index, style }: ItemProps) => {
 const Detail = styled(Flex.Item).attrs(props => ({
   as: Block,
   padding: 2,
-  grow: 1
+  grow: 1,
+  maxWidth: detailWidth,
+  bg: 'white'
 }))`
   ${globalScrollbar};
   overflow-y: scroll;

@@ -236,6 +236,10 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   pointer-events: none;
 }
 
+.c39 .c7 {
+  pointer-events: none;
+}
+
 .c5 {
   padding-right: 2.2em;
 }
@@ -245,7 +249,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -593,6 +597,10 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   pointer-events: none;
 }
 
+.c37 .c6 {
+  pointer-events: none;
+}
+
 .c4 {
   padding-right: 2.2em;
 }
@@ -602,7 +610,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -911,6 +919,10 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   pointer-events: none;
 }
 
+.c36 .c6 {
+  pointer-events: none;
+}
+
 .c4 {
   padding-right: 2.2em;
 }
@@ -920,7 +932,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -1594,6 +1606,10 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   pointer-events: none;
 }
 
+.c44 .c7 {
+  pointer-events: none;
+}
+
 .c5 {
   padding-right: 2.2em;
 }
@@ -1603,7 +1619,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
@@ -2231,6 +2247,10 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   pointer-events: none;
 }
 
+.c40 .c6 {
+  pointer-events: none;
+}
+
 .c4 {
   padding-right: 2.2em;
 }
@@ -2240,7 +2260,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   line-height: 1em;
   text-transform: none;
   position: absolute;
-  font-size: NaNpx;
+  font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }

@@ -305,15 +305,6 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c3:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c3:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c3::-webkit-input-placeholder {
@@ -647,15 +638,6 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c10:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c10:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c10::-webkit-input-placeholder {
@@ -1011,15 +993,6 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c11:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c11:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c11::-webkit-input-placeholder {
@@ -1063,15 +1036,6 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c12:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c12:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c12::-webkit-input-placeholder {
@@ -1115,15 +1079,6 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c13:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c13:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c13::-webkit-input-placeholder {

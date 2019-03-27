@@ -19,7 +19,11 @@ const StyledTextInputWithIcon = styled(TextInputWithIcon)`
   ${blockStyles};
 
   background-color: #fff;
-  border-color: transparent !important;
+  border-color: transparent;
+
+  &:hover, &:focus {
+    border-color: transparent;
+  }
 
   ${(props: SearchbarProps) => props.animated && css`
     will-change: padding-left;

@@ -21,7 +21,7 @@ import {
 } from 'styled-system'
 import { StyledProps } from '../utils/styled'
 
-interface OverrideColorProps {
+export interface OverrideColorProps {
   color?: any
 }
 
