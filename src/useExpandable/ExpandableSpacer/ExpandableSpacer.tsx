@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useState, cloneElement } from 'react'
+import React, { useRef, useEffect, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../../utils/styled'
 import { ButtonProps } from '../../Button'
 
 interface StyledExpandableSpacerProps {
   leftSpacerLine: number
+  bottomSpacerLine: number
   level: number
   distance: number
   spacing: number
@@ -14,11 +15,11 @@ export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
   margin-left: ${({ spacing, level }) => (spacing * 1.5) * level}px;
   height: 100%;
 
-  ${({ leftSpacerLine, distance, spacing }) => css`&:after {
+  ${({ leftSpacerLine, bottomSpacerLine, distance, spacing }) => css`&:after {
       position: relative;
       top: calc(-${(100 * distance)}% - 50%);
       border: solid ${fromTheme(theme => theme.colors.lightGray)};
-      border-width: 0px 0px 1px ${leftSpacerLine}px;
+      border-width: 0px 0px 0 ${leftSpacerLine}px;
       content: ' ';
       display: block;
       width: ${spacing}px;
@@ -41,6 +42,7 @@ interface ExpandableSpacerProps {
   level: number
   distance: number
   hasChildren: boolean
+  isOnlyRootParent: boolean
 }
 
 export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, level, distance, button, hasChildren }) => {
@@ -53,9 +55,12 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
     }
   }, [level])
 
+  const isOnlyRootParent = useMemo(() => level === 1 && index === 0 && distance === 0, [distance])
+
   return (
     <StyledExpandableSpacer
       leftSpacerLine={index > 0 ? 1 : 0}
+      bottomSpacerLine={isOnlyRootParent ? 0 : 1}
       level={level}
       spacing={left}
       distance={distance}>

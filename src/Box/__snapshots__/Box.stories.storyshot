@@ -18,6 +18,10 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   width: 0;
 }
 
+.c3 svg {
+  vertical-align: middle;
+}
+
 .c5 {
   font-family: 'Fira Sans',sans-serif;
 }

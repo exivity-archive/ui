@@ -251,6 +251,10 @@ exports[`Storyshots atoms|Searchbar Styled-system 1`] = `
   right: 0.5em;
 }
 
+.c7 svg {
+  vertical-align: middle;
+}
+
 .c3 {
   background-color: #FFF;
   will-change: transform;
@@ -560,6 +564,10 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
   position: absolute;
   font-size: NaNpx;
   right: 0.5em;
+}
+
+.c6 svg {
+  vertical-align: middle;
 }
 
 .c2 {
