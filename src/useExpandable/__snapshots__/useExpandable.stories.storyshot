@@ -21,6 +21,88 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   margin-right: 0.625em;
 }
 
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+}
+
+.c8:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c8:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:active,
+.c8.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c8[disabled] {
+  pointer-events: none;
+}
+
+.c8[disabled]:after {
+  display: block;
+}
+
+.c8 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c16 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -63,7 +145,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 
 .c24 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c25 .c9 {
@@ -131,95 +212,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c41 .c9 {
-  font-size: 1.5em;
-}
-
-.c42 .c9 {
-  font-size: 1.5em;
-}
-
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c8:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:active,
-.c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c8[disabled] {
-  pointer-events: none;
-}
-
-.c8[disabled]:after {
-  display: block;
-}
-
-.c8 .c9 {
   font-size: 1.5em;
 }
 
@@ -305,6 +297,17 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   margin-right: 0.625em;
 }
 
+.c42 .c9 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
 .c43 .c9 {
   margin-right: 1.25em;
   display: inline-block;
@@ -317,17 +320,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c44 .c9 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c45 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -370,7 +362,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   padding: 0 20px;
 }
 
-.c46 .c9 {
+.c45 .c9 {
   pointer-events: none;
 }
 
@@ -381,39 +373,35 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c5 {
-  margin-left: 40px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c5:after {
   position: relative;
-  left: -20px;
   top: calc(-100% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 0px;
   content: ' ';
   display: block;
-  width: 20px;
+  width: 0px;
   height: 100%;
   z-index: -1;
 }
 
 .c13 {
-  margin-left: 40px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c13:after {
   position: relative;
-  left: -20px;
   top: calc(-100% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
   display: block;
-  width: 20px;
+  width: 0px;
   height: 100%;
   z-index: -1;
 }
@@ -433,7 +421,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   align-items: center;
 }
 
-.c47 .c7 {
+.c46 .c7 {
   margin-left: 20px;
 }
 
@@ -507,37 +495,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c5"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -572,37 +563,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -637,37 +631,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -702,37 +699,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -767,37 +767,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -832,37 +835,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -897,37 +903,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -962,37 +971,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1027,37 +1039,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1092,37 +1107,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1157,37 +1175,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1222,37 +1243,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1287,37 +1311,40 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -1348,6 +1375,180 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   height: 1em;
   line-height: 1em;
   text-transform: none;
+}
+
+.c18 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+}
+
+.c14:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c14:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c14:active,
+.c14.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c14:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c14[disabled] {
+  pointer-events: none;
+}
+
+.c14[disabled]:after {
+  display: block;
+}
+
+.c14 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #ef5350;
+  --focus-color: 239,83,80;
+}
+
+.c8:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c8:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:active,
+.c8.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c8[disabled] {
+  pointer-events: none;
+}
+
+.c8[disabled]:after {
+  display: block;
+}
+
+.c8 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c20 .c9 {
@@ -1387,22 +1588,18 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 
 .c27 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c28 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c29 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c30 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c31 .c9 {
@@ -1461,108 +1658,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   font-size: 1.5em;
 }
 
-.c45 .c9 {
-  font-size: 1.5em;
-}
-
-.c46 .c9 {
-  font-size: 1.5em;
-}
-
-.c47 .c9 {
-  font-size: 1.5em;
-}
-
-.c48 .c9 {
-  font-size: 1.5em;
-}
-
 .c17 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c17:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c17:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c17:active,
-.c17.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c17:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c17[disabled] {
-  pointer-events: none;
-}
-
-.c17[disabled]:after {
-  display: block;
-}
-
-.c17 .c9 {
-  font-size: 1.5em;
-}
-
-.c18 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -1606,20 +1702,20 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   --focus-color: 153,153,153;
 }
 
-.c18:hover {
+.c17:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c18:focus {
+.c17:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c18:active,
-.c18.active {
+.c17:active,
+.c17.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c18:after {
+.c17:after {
   display: none;
   content: "";
   position: absolute;
@@ -1631,102 +1727,17 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c18[disabled] {
+.c17[disabled] {
   pointer-events: none;
 }
 
-.c18[disabled]:after {
+.c17[disabled]:after {
   display: block;
 }
 
-.c18 .c9 {
+.c17 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
-}
-
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c8:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:active,
-.c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c8[disabled] {
-  pointer-events: none;
-}
-
-.c8[disabled]:after {
-  display: block;
-}
-
-.c8 .c9 {
-  font-size: 1.5em;
 }
 
 .c12 {
@@ -1823,7 +1834,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   margin-right: 0.625em;
 }
 
-.c49 .c9 {
+.c45 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1834,7 +1845,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c50 .c9 {
+.c46 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1845,7 +1856,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c51 .c9 {
+.c47 .c9 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1888,7 +1899,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   padding: 0 20px;
 }
 
-.c52 .c9 {
+.c48 .c9 {
   pointer-events: none;
 }
 
@@ -1899,115 +1910,69 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c5 {
-  margin-left: 40px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c5:after {
   position: relative;
-  left: -20px;
   top: calc(-100% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 0px;
   content: ' ';
   display: block;
-  width: 20px;
-  height: 100%;
-  z-index: -1;
-}
-
-.c19 {
-  margin-left: 40px;
-  margin-right: 20px;
-  height: 100%;
-}
-
-.c19:after {
-  position: relative;
-  left: -20px;
-  top: calc(-100% - 50%);
-  border: solid #eee;
-  border-width: 0px 0px 1px 1px;
-  content: ' ';
-  display: block;
-  width: 20px;
+  width: 0px;
   height: 100%;
   z-index: -1;
 }
 
 .c13 {
-  margin-left: 80px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c13:after {
   position: relative;
-  left: -20px;
   top: calc(-100% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
   display: block;
-  width: 20px;
-  height: 100%;
-  z-index: -1;
-}
-
-.c14 {
-  margin-left: 120px;
-  margin-right: 20px;
-  height: 100%;
-}
-
-.c14:after {
-  position: relative;
-  left: -20px;
-  top: calc(-100% - 50%);
-  border: solid #eee;
-  border-width: 0px 0px 1px 1px;
-  content: ' ';
-  display: block;
-  width: 20px;
+  width: 0px;
   height: 100%;
   z-index: -1;
 }
 
 .c15 {
-  margin-left: 80px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c15:after {
   position: relative;
-  left: -20px;
   top: calc(-300% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
   display: block;
-  width: 20px;
+  width: 0px;
   height: 300%;
   z-index: -1;
 }
 
 .c16 {
-  margin-left: 40px;
-  margin-right: 20px;
+  margin-left: 0px;
   height: 100%;
 }
 
 .c16:after {
   position: relative;
-  left: -20px;
   top: calc(-700% - 50%);
   border: solid #eee;
   border-width: 0px 0px 1px 1px;
   content: ' ';
   display: block;
-  width: 20px;
+  width: 0px;
   height: 700%;
   z-index: -1;
 }
@@ -2027,7 +1992,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   align-items: center;
 }
 
-.c53 .c7 {
+.c49 .c7 {
   margin-left: 20px;
 }
 
@@ -2101,37 +2066,40 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           >
             <div
               className="c5"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13H5v-2h14v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13H5v-2h14v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2166,37 +2134,40 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           >
             <div
               className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13H5v-2h14v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13H5v-2h14v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2236,11 +2207,41 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c14"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c9 c10"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2268,11 +2269,41 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c14"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c9 c10"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2301,37 +2332,40 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           >
             <div
               className="c15"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c8"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c8"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13H5v-2h14v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13H5v-2h14v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2371,11 +2405,41 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c14"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c9 c10"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2403,11 +2467,41 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c14"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="c9 c10"
+                    >
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
@@ -2436,43 +2530,46 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           >
             <div
               className="c16"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Larue
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2500,44 +2597,47 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c19"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Helena
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2565,44 +2665,47 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c19"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Margaret
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2630,44 +2733,47 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c19"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Vernie
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2695,44 +2801,47 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c19"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Hannah
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
@@ -2760,44 +2869,47 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
             className="c4"
           >
             <div
-              className="c19"
+              className="c13"
+              spacing={0}
             >
               <div
                 className="c6"
               >
-                <button
-                  className="c7 c17"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="c9 c10"
+                <div>
+                  <button
+                    className="c7 c14"
+                    onClick={[Function]}
                   >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      stroke="currentColor"
-                      strokeWidth="0"
-                      style={
-                        Object {
-                          "color": undefined,
-                        }
-                      }
-                      viewBox="0 0 24 24"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <span
+                      className="c9 c10"
                     >
-                      <path
-                        d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
-                      />
-                    </svg>
-                  </span>
-                </button>
+                      <svg
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        style={
+                          Object {
+                            "color": undefined,
+                          }
+                        }
+                        viewBox="0 0 24 24"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
                 <div
                   className="c11"
                 >
                   Kaci
                   <button
-                    className="c7 c18"
+                    className="c7 c17"
                     onClick={[Function]}
                   >
                     Expand all children
