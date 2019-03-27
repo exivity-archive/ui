@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.8](https://github.com/exivity/ui/compare/v0.13.7...v0.13.8) (2019-03-27)
+
+
+### Bug Fixes
+
+* double close caused by outsideListener ([#73](https://github.com/exivity/ui/issues/73)) ([6090401](https://github.com/exivity/ui/commit/6090401))
+
+
+
 ## [0.13.7](https://github.com/exivity/ui/compare/v0.13.6...v0.13.7) (2019-03-26)
 
 
