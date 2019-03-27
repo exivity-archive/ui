@@ -13,7 +13,7 @@ import { MdAccountBox, MdNotifications, MdMail } from 'react-icons/md'
 
 storiesOf('molecules|Group', module)
   .add('default', () => (
-    <Group header='Configuration'>
+    <Group header='Global options'>
       <Group.Content>
         {Faker.lorem.paragraphs(4)}
       </Group.Content>

@@ -11,7 +11,7 @@ import {
 import { Icon } from '../Icon'
 
 const GroupIcon = styled(Icon)`
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
 `
 
@@ -23,7 +23,7 @@ const StyledGroupHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 `
 
 const GroupHeader: FC = ({ children }) => (
@@ -40,13 +40,18 @@ const GroupSeparator = styled.hr`
 
 const StyledGroupTitle = styled.div`
   h1 {
+    white-space: nowrap;
     color: ${fromTheme(theme => theme.colors.gray)};
   }
 `
 
-const GroupTitle: FC = ({ children }) => (
+interface GroupTitleProps {
+  section?: boolean
+}
+
+const GroupTitle: FC<GroupTitleProps> = ({ children, section }) => (
   <StyledGroupTitle>
-    <Heading>{children}</Heading>
+    {typeof children === 'string' ? <Heading type={section ? 'section' : 'header'}>{children}</Heading> : children}
   </StyledGroupTitle>
 )
 
@@ -59,9 +64,11 @@ interface GroupSubComponents extends CollapsibleContainerSubComponents {
 
 interface GroupProps extends CollapsibleContainerProps {
   header?: string
+  section?: boolean
+  content?: JSX.Element
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, ...rest }) => {
+export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, content, ...rest }) => {
   const Header = header ? (
     <Group.Header>
       <Group.Title>{header}</Group.Title>
@@ -70,7 +77,13 @@ export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, .
     </Group.Header>
   ) : null
 
-  return <CollapsibleContainer {...rest}>{Header}{children}</CollapsibleContainer>
+  const Content = content ? (
+    <Group.Content>
+      {content}
+    </Group.Content>
+  ) : null
+
+  return <CollapsibleContainer {...rest}>{Header}{Content}{children}</CollapsibleContainer>
 }
 
 Group.Header = GroupHeader
