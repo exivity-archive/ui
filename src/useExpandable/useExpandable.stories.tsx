@@ -17,8 +17,8 @@ import { Icon } from '../Icon'
 const getParent = (item: FakeRecord) => item.parentId
 
 export default storiesOf('helpers|useExpandable', module)
-  .add('default', () => <ExpandableList expandedKeys={[]}/>)
-  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+  .add('default', () => <ExpandableList expandedKeys={[]} />)
+  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']} />)
 
 const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
@@ -52,11 +52,10 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const [items, helpers] = data
   const item = items[index]
 
-  const button = (item.children ?
-    <Button round small success={!item.expanded} danger={item.expanded} onClick={item.expand}>
-      <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
+  const button = (
+    <Button success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+      <Icon>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon>
     </Button>
-      : null
   )
 
   return useMemo(() => {
@@ -66,6 +65,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           level={item.attributes.level}
           button={button}
           index={index}
+          hasChildren={!!item.children}
           distance={distanceBetweenEvenLevelItem(items, index)}>
           <SpaceBetween>
             {item.value}
