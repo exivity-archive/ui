@@ -47,17 +47,17 @@ export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T
   return Object
     .values(map)
     .reduce((list: TreeItem<T>[], item: TreeItem<T>): TreeItem<T>[] => {
-
       if (!item[PARENT]) {
+        item.level = 1
         const addToList: TreeItem<T>[] = [item]
 
         iterateAllChildren(item, (child: TreeItem<T>) => {
+          child.level = child[PARENT]!.level! + 1
           addToList.push(child)
         })
 
         return list.concat(addToList)
       }
-
       return list
     }, [])
 }
@@ -69,7 +69,7 @@ export function createTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKey
 
 export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
   return list.map((item: TreeItem<T>): TreeListItem<T> => ({
-    ...item,
+    ...item as TreeItem<T> & { level: number },
     expanded: expanded.includes(item.key),
     expand: () => expandOrCollapseItem(item.key, expanded, setExpanded)
   }))
@@ -85,6 +85,7 @@ export function getVisibleItems<T> (list: TreeListItem<T>[], expanded: string[])
     if (item[CHILDREN]) disableEnumerable(item, CHILDREN)
     disableEnumerable(item, 'expand')
     disableEnumerable(item, 'expanded')
+    disableEnumerable(item, 'level')
 
     return item
   })

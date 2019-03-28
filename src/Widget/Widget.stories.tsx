@@ -16,3 +16,9 @@ storiesOf('molecules|Widget', module)
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
+  .add('editable header', () => (
+    <Widget>
+      <Widget.Header editable>Edit Me</Widget.Header>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))

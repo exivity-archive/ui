@@ -17,7 +17,7 @@ interface TabProps {
 
 const Tab = styled.li.attrs<TabProps>((props) => ({
   ['data-test']: props.test ? props.test : 'tabs-tab'
-}))<TabProps>`
+})) <TabProps>`
   display: inline-block;
   font-weight: bold;
   color: ${fromTheme(theme => theme.colors.gray)};

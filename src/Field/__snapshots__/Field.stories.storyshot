@@ -1020,6 +1020,10 @@ exports[`Storyshots interact|Field multiple 1`] = `
   right: 0.5em;
 }
 
+.c13 svg {
+  vertical-align: middle;
+}
+
 .c10[disabled] {
   cursor: pointer;
   box-shadow: none;

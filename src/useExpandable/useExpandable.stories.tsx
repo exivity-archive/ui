@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
-import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+import { ExpandableSpacer } from './ExpandableSpacer'
 
 import { StyledList } from '../SelectList/SelectList'
 import { ListFocus } from '../ListFocus'
@@ -29,7 +29,7 @@ const ExpandableList = ({ expandedKeys }: any) => {
         innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
-    </ListFocus>
+    </ListFocus >
   )
 }
 
@@ -62,11 +62,9 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
     return (
       <ListItem style={style}>
         <ExpandableSpacer
-          level={item.attributes.level}
+          data={items}
           button={button}
-          index={index}
-          hasChildren={!!item.children}
-          distance={distanceBetweenEvenLevelItem(items, index)}>
+          index={index}>
           <SpaceBetween>
             {item.value}
             {!item.expanded && item.children &&

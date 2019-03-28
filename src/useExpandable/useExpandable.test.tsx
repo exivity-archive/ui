@@ -216,7 +216,7 @@ test('enrichItems should return new items', () => {
     four
   ]
 
-  const items = enrichTreeItems<any>(list,[], expandMock)
+  const items = enrichTreeItems<any>(list, [], expandMock)
 
   expect(items[0]).not.toBe(list[0])
   expect(items[1]).not.toBe(list[1])
@@ -266,9 +266,9 @@ test('createParentChildrenMap creates a map with child references', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  expect(map['1'][CHILDREN]![0]).toBe(list[1])
-  expect(map['2'][CHILDREN]![0]).toBe(list[2])
-  expect(map['3'][CHILDREN]![0]).toBe(list[3])
+  expect(map['1'][CHILDREN][0]).toBe(list[1])
+  expect(map['2'][CHILDREN][0]).toBe(list[2])
+  expect(map['3'][CHILDREN][0]).toBe(list[3])
   expect(map['4'][CHILDREN]).toBe(undefined)
 })
 
@@ -301,4 +301,22 @@ test('orderChildrenUnderParents orders children directly under their parents', (
   expect(items[1].key).toBe('3')
   expect(items[2].key).toBe('2')
   expect(items[3].key).toBe('4')
+})
+
+test('orderChildrenUnderParents adds a level prop to all items', () => {
+  const list = [
+    { key: '1', parentId: null },
+    { key: '2', parentId: '3' },
+    { key: '3', parentId: '1' },
+    { key: '4', parentId: '3' }
+  ]
+
+  const map = createParentChildrenMap(list, (item) => item.parentId)
+
+  const items = orderChildrenUnderParents<any>(map)
+
+  expect(items[0].level).toBe(1)
+  expect(items[1].level).toBe(2)
+  expect(items[2].level).toBe(3)
+  expect(items[3].level).toBe(3)
 })

@@ -6,9 +6,11 @@ export const CHILDREN = 'children'
 export type TreeItem<T> = ListItem<T> & {
   [PARENT]?: TreeItem<T>
   [CHILDREN]?: TreeItem<T>[]
+  level?: number
 }
 
 export type TreeListItem<T> = TreeItem<T> & {
+  level: number
   expanded: boolean
   expand (): void
 }
@@ -107,9 +109,7 @@ export function expandOrCollapseItemTree<T> (
   return (
     fn,
     expand = false
-  ): ExpandOrCollapseTree<T> => (
-    item
-  ) => {
+  ): ExpandOrCollapseTree<T> => (item) => {
     const keys: string[] = [item.key]
 
     fn(item, (relatedItem: any) => {

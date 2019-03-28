@@ -266,6 +266,10 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   right: 0.5em;
 }
 
+.c9 svg {
+  vertical-align: middle;
+}
+
 .c5[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -643,6 +647,10 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   right: 0.5em;
 }
 
+.c7 svg {
+  vertical-align: middle;
+}
+
 .c3[disabled] {
   cursor: not-allowed;
 }
@@ -979,6 +987,10 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   font-size: NaNpx;
   cursor: not-allowed;
   right: 0.5em;
+}
+
+.c7 svg {
+  vertical-align: middle;
 }
 
 .c3[disabled] {
@@ -1684,6 +1696,10 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   right: 0.5em;
 }
 
+.c8 svg {
+  vertical-align: middle;
+}
+
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -2345,6 +2361,10 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   right: 0.5em;
 }
 
+.c9 svg {
+  vertical-align: middle;
+}
+
 .c7 {
   height: 1em;
   line-height: 1em;
@@ -2355,6 +2375,10 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   right: 0.5em;
 }
 
+.c7 svg {
+  vertical-align: middle;
+}
+
 .c11 {
   height: 1em;
   line-height: 1em;
@@ -2363,6 +2387,10 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   font-size: 23.75px;
   cursor: not-allowed;
   right: 0.5em;
+}
+
+.c11 svg {
+  vertical-align: middle;
 }
 
 .c3[disabled] {

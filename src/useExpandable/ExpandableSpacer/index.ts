@@ -1,2 +1,2 @@
 export { ExpandableSpacer } from './ExpandableSpacer'
-export { distanceBetweenEvenLevelItem } from './helpers'
+export { distanceBetweenNextSibling as distanceBetweenEvenLevelItem } from './helpers'
