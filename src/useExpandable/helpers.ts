@@ -10,9 +10,9 @@ export type TreeItem<T> = ListItem<T> & {
 }
 
 export type TreeListItem<T> = TreeItem<T> & {
+  level: number
   expanded: boolean
   expand (): void
-  level: number
 }
 
 export function iterateAllParents<T> (item: TreeItem<T>, callback: Function): void {
