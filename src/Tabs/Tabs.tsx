@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import { useTabsContext, TabsContext } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
-import { usePrevious } from '../utils/hooks/usePrevious'
 
 interface TabProps {
   isActive?: boolean
