@@ -103,18 +103,17 @@ export function useExpandable<T> (
 ): UseExpandableReturn<T> {
   const [expanded, setExpanded] = useState<string[]>(expandedKeys ? expandedKeys : [])
   const [list, setList] = useState<TreeItem<T>[]>(createTree<T>(data, parentKeyAccessor))
-  useEffect(() => {
 
+  useEffect(() => {
     expandedKeys && setExpanded(expandedKeys)
   }, [expandedKeys])
-  useEffect(() => {
 
+  useEffect(() => {
     const treeList: TreeItem<T>[] = createTree<T>(data, parentKeyAccessor)
     setList(treeList)
   }, [data])
 
   return useMemo(() => {
-
     const result = []
     const enriched: TreeListItem<T>[] = enrichTreeItems<T>(list, expanded, setExpanded)
 

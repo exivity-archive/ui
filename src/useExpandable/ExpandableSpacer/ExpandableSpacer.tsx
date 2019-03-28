@@ -64,6 +64,7 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
 
   const isOnlyRootParent = index === 0 && (childCount === 0 || childCount > data.length - 2)
   const borderWidth = makeBorderWidth(index, isOnlyRootParent)
+
   return (
     <StyledExpandableSpacer
       borderWidth={borderWidth}
