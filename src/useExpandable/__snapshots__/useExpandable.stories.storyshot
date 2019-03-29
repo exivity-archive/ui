@@ -376,10 +376,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   list-style-type: none;
 }
 
-.c46 .c9 {
-  font-size: 1.5em;
-}
-
 .c5 {
   margin-left: 0px;
   height: 100%;
@@ -431,7 +427,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   align-items: center;
 }
 
-.c47 .c7 {
+.c46 .c7 {
   margin-left: 20px;
 }
 
@@ -488,6 +484,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
       >
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -556,6 +553,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -624,6 +622,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -692,6 +691,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -760,6 +760,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -828,6 +829,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -896,6 +898,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -964,6 +967,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1032,6 +1036,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1100,6 +1105,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1168,6 +1174,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1236,6 +1243,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1304,6 +1312,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -1923,10 +1932,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   list-style-type: none;
 }
 
-.c49 .c9 {
-  font-size: 1.5em;
-}
-
 .c5 {
   margin-left: 0px;
   height: 100%;
@@ -2014,7 +2019,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   align-items: center;
 }
 
-.c50 .c7 {
+.c49 .c7 {
   margin-left: 20px;
 }
 
@@ -2071,6 +2076,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
       >
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2139,6 +2145,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2213,6 +2220,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2275,6 +2283,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2337,6 +2346,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2411,6 +2421,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2473,6 +2484,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2535,6 +2547,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2603,6 +2616,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2671,6 +2685,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2739,6 +2754,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2807,6 +2823,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {
@@ -2875,6 +2892,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
         </li>
         <li
           className="c3"
+          data-test="list-item"
           onMouseOver={[Function]}
           style={
             Object {

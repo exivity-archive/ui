@@ -711,6 +711,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -736,6 +737,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -761,6 +763,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -786,6 +789,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -869,6 +873,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -894,6 +899,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -919,6 +925,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -944,6 +951,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1027,6 +1035,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1052,6 +1061,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1077,6 +1087,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1102,6 +1113,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1185,6 +1197,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1210,6 +1223,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1235,6 +1249,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1260,6 +1275,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1371,6 +1387,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1396,6 +1413,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1421,6 +1439,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1446,6 +1465,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1557,6 +1577,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1582,6 +1603,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1607,6 +1629,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1632,6 +1655,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1743,6 +1767,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1768,6 +1793,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1793,6 +1819,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1818,6 +1845,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1929,6 +1957,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                 >
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1954,6 +1983,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -1979,6 +2009,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -2004,6 +2035,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   </li>
                   <li
                     className="c9"
+                    data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
                     style={
@@ -2452,6 +2484,7 @@ exports[`Storyshots molecules/Select default 1`] = `
               >
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -2477,6 +2510,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -2502,6 +2536,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -2527,6 +2562,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -2974,6 +3010,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
               >
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -3421,6 +3458,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
               >
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -3446,6 +3484,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -3471,6 +3510,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={
@@ -3496,6 +3536,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                 </li>
                 <li
                   className="c13"
+                  data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
                   style={

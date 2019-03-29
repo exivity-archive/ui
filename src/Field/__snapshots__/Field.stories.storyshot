@@ -1228,6 +1228,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
                   >
                     <li
                       className="c18"
+                      data-test="list-item"
                       onClick={[Function]}
                       onMouseOver={[Function]}
                       style={
