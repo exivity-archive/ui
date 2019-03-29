@@ -25,88 +25,6 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
   margin-right: 0.625em;
 }
 
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-}
-
-.c8:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:active,
-.c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c8:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c8[disabled] {
-  pointer-events: none;
-}
-
-.c8[disabled]:after {
-  display: block;
-}
-
-.c8 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
 .c16 .c9 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -149,6 +67,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 
 .c24 .c9 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c25 .c9 {
@@ -156,6 +75,91 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 }
 
 .c26 .c9 {
+  font-size: 1.5em;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: #fff;
+  line-height: 1.5;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  background-color: #4caf50;
+  --focus-color: 76,175,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
+}
+
+.c8:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c8:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:active,
+.c8.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+}
+
+.c8:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c8[disabled] {
+  pointer-events: none;
+}
+
+.c8[disabled]:after {
+  display: block;
+}
+
+.c8 .c9 {
   font-size: 1.5em;
 }
 
@@ -1401,6 +1405,59 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   margin-right: 0.625em;
 }
 
+.c20 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c21 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c22 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c23 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c24 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c25 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c26 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c27 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c28 .c9 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c29 .c9 {
+  font-size: 1.5em;
+}
+
+.c30 .c9 {
+  font-size: 1.5em;
+}
+
 .c14 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
@@ -1443,6 +1500,10 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   outline: none;
   background-color: #4caf50;
   --focus-color: 76,175,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
 .c14:hover {
@@ -1480,7 +1541,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 
 .c14 .c9 {
   font-size: 1.5em;
-  margin-right: 0.625em;
 }
 
 .c8 {
@@ -1525,6 +1585,10 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
   outline: none;
   background-color: #ef5350;
   --focus-color: 239,83,80;
+  border-radius: 50%;
+  min-width: auto;
+  padding: 0;
+  width: 2.857142857142857em;
 }
 
 .c8:hover {
@@ -1561,58 +1625,6 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
 }
 
 .c8 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c20 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c21 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c22 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c23 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c24 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c25 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c26 .c9 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c27 .c9 {
-  font-size: 1.5em;
-}
-
-.c28 .c9 {
-  font-size: 1.5em;
-}
-
-.c29 .c9 {
-  font-size: 1.5em;
-}
-
-.c30 .c9 {
   font-size: 1.5em;
 }
 

@@ -371,6 +371,25 @@ exports[`Storyshots molecules|Tabs disabled 1`] = `
   border-bottom-color: #6F6F6F;
 }
 
+.c5 {
+  display: inline-block;
+  font-weight: bold;
+  color: #999;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c5:first-child {
+  margin-left: 0;
+}
+
 .c4 {
   display: inline-block;
   font-weight: bold;
@@ -434,9 +453,8 @@ exports[`Storyshots molecules|Tabs disabled 1`] = `
         Tab two
       </li>
       <li
-        className="c4"
+        className="c5"
         data-test="tabs-tab"
-        disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
