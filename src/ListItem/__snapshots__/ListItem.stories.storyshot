@@ -37,6 +37,7 @@ exports[`Storyshots atoms/ListItem hover focus 1`] = `
 >
   <li
     className="c1"
+    data-test="list-item"
     onMouseOver={[Function]}
     tabIndex={-1}
   >

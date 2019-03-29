@@ -54,6 +54,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
     >
       <li
         className="c2"
+        data-test="list-item"
         onMouseOver={[Function]}
         style={
           Object {
@@ -80,6 +81,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
       </li>
       <li
         className="c2"
+        data-test="list-item"
         onMouseOver={[Function]}
         style={
           Object {
@@ -106,6 +108,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
       </li>
       <li
         className="c2"
+        data-test="list-item"
         onMouseOver={[Function]}
         style={
           Object {
@@ -132,6 +135,7 @@ exports[`Storyshots atoms/ListFocus list focus 1`] = `
       </li>
       <li
         className="c2"
+        data-test="list-item"
         onMouseOver={[Function]}
         style={
           Object {
