@@ -11,6 +11,7 @@ interface TabProps {
   onBlur?: () => void
   onKeyDown?: (e: KeyboardEvent) => void
   onClick?: () => void
+  disabled?: boolean
   test?: string
   children: React.ReactNode
 }
@@ -39,6 +40,11 @@ const Tab = styled.li.attrs<TabProps>((props) => ({
     &:focus {
       border-bottom-color: #6F6F6F;
     }
+  `}
+
+  ${({ disabled }) => disabled && css`
+    pointer-events: none;
+    opacity: 0.6;
   `}
 `
 
