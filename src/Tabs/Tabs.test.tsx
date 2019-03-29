@@ -149,8 +149,7 @@ test('you can navigate to a tab by clicking on it', () => {
   }
 
   const testClickNavigation = ({ tabIndex, panel }: ClickNavigationTest) => {
-    console.log(tabIndex)
-    tabs.find({ 'data-test': 'tabs-tab' }).get(tabIndex).props.onClick()
+    tabs.find({ 'data-test': 'tabs-tab' }).get((tabIndex * 3) + 2).props.onClick()
     tabs.update()
     expect(
       tabs.find({ 'data-test': 'tabs-panel' }).get(tabIndex).props.children === panel

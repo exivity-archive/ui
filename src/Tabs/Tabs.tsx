@@ -65,7 +65,6 @@ const Tab: FC<TabProps> = ({ test = 'tabs-tab', children, index, disabled, ...re
   } else if (disabled === false && !context.disabledTabs.includes(activeIndex)) {
     context.disabledTabs = context.disabledTabs.filter((i) => i === index)
   }
-
   return (
     <StyledTab
       isActive={activeIndex === index}
@@ -73,6 +72,7 @@ const Tab: FC<TabProps> = ({ test = 'tabs-tab', children, index, disabled, ...re
       disabled={disabled}
       data-test={test}
       onClick={() => {
+        console.log(index)
         setActiveIndex(index)
       }}
       {...rest}>
