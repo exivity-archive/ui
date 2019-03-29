@@ -1,6 +1,6 @@
 import React, { FC, useState, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
-import { useTabsContext, TabsContext } from './helpers'
+import { useTabsContext, TabsContext, getNextNonDisabledIndex, getPrevNonDisabledIndex } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
 
@@ -65,16 +65,15 @@ const Tab: FC<TabProps> = ({ test = 'tabs-tab', children, index, disabled, ...re
   } else if (disabled === false && !context.disabledTabs.includes(activeIndex)) {
     context.disabledTabs = context.disabledTabs.filter((i) => i === index)
   }
+
   return (
     <StyledTab
       isActive={activeIndex === index}
       tabIndex={activeIndex === index ? 0 : -1}
       disabled={disabled}
       data-test={test}
-      onClick={() => {
-        console.log(index)
-        setActiveIndex(index)
-      }}
+      // function gets replaced for testing purposes
+      onClick={disabled ? () => { return } : () => setActiveIndex(index)}
       {...rest}>
       {children}
     </StyledTab>)
@@ -90,30 +89,33 @@ interface TabListProps {
 }
 
 const TabList: FC<TabListProps> = ({ children }) => {
-  const { activeIndex, setActiveIndex } = useTabsContext()
+  const { activeIndex, setActiveIndex, disabledTabs } = useTabsContext()
   const [focused, setFocused] = useState(false)
+
+  let tabAmount = React.Children.count(children)
 
   const onFocus = () => setFocused(true)
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (focused) {
-      e.key === 'ArrowRight' && activeIndex < children.length - 1 && setActiveIndex(activeIndex + 1)
-      e.key === 'ArrowLeft' && activeIndex > 0 && setActiveIndex(activeIndex - 1)
+      if (e.key === 'ArrowRight') {
+        setActiveIndex(getNextNonDisabledIndex(activeIndex, tabAmount, disabledTabs))
+      } else if (e.key === 'ArrowLeft') {
+        setActiveIndex(getPrevNonDisabledIndex(activeIndex, tabAmount, disabledTabs))
+      }
     }
   }
 
   return (
-    <TabsList>
-      {React.Children.map(children, (child: React.ReactElement<TabProps>, index) => (
-        child && React.cloneElement(child, {
-          index,
-          onFocus,
-          onBlur: () => { setFocused(false) },
-          onKeyDown,
-          ...child.props
-        })
-      ))}
-    </TabsList>
+    <TabsList>{React.Children.map(children, (child: React.ReactElement<TabProps>, index) => (
+      child && React.cloneElement(child, {
+        index,
+        onFocus,
+        onBlur: () => { setFocused(false) },
+        onKeyDown,
+        ...child.props
+      })
+    ))}</TabsList>
   )
 }
 
