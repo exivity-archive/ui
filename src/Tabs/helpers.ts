@@ -3,6 +3,7 @@ import { createContext, useContext } from 'react'
 export interface TabsContextShape {
   activeIndex: number
   setActiveIndex: (index: number) => void
+  disabledTabs: number[]
 }
 
 export const TabsContext = createContext<TabsContextShape | null>(null)

@@ -52,7 +52,7 @@ test('when focussed on a tab you can use arrows to navigate', () => {
   }
 
   const testArrowNavigation = ({ key, panel }: KeyboardNavigationTest) => {
-    enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
+    tabs.find({ 'data-test': 'tabs-tab' }).first().props().onKeyDown({ key })
     tabs.update()
     expect(tabs.find({ 'data-test': 'tabs-panel' }).get(0).props.children === panel)
       .toBe(true)
@@ -68,7 +68,7 @@ test('when focussed on a tab you can use arrows to navigate', () => {
   ]
 
   // focus on tabs so navigation becomes possible
-  enzymeFind(tabs, Tabs.Tab).first().props().onFocus()
+  tabs.find({ 'data-test': 'tabs-tab' }).first().props().onFocus()
   tabs.update()
 
   tests.forEach(test => testArrowNavigation(test))
@@ -89,7 +89,7 @@ test('when blurred, arrow navigation should not work anymore', () => {
       </Tabs.TabPanels>
     </Tabs>
   )
-  const tab = enzymeFind(tabs, Tabs.Tab).first()
+  const tab = tabs.find({ 'data-test': 'tabs-tab' }).first()
 
   interface KeyboardNavigationTest {
     key: 'ArrowLeft' | 'ArrowRight'
@@ -97,7 +97,7 @@ test('when blurred, arrow navigation should not work anymore', () => {
   }
 
   const testArrowNavigation = ({ key, panel }: KeyboardNavigationTest) => {
-    enzymeFind(tabs, Tabs.Tab).first().props().onKeyDown({ key })
+    tabs.find({ 'data-test': 'tabs-tab' }).first().props().onKeyDown({ key })
     tabs.update()
     expect(
       tabs.find({ 'data-test': 'tabs-panel' }).get(0).props.children === panel
@@ -149,11 +149,11 @@ test('you can navigate to a tab by clicking on it', () => {
   }
 
   const testClickNavigation = ({ tabIndex, panel }: ClickNavigationTest) => {
-    enzymeFind(tabs, Tabs.Tab).get(tabIndex).props.onClick()
-    tabs.update()
+    console.log(tabIndex)
+    tabs.find({ 'data-test': 'tabs-tab' }).get(tabIndex).props.onClick()
     tabs.update()
     expect(
-      tabs.find({ 'data-test': 'tabs-panel' }).get(0).props.children === panel
+      tabs.find({ 'data-test': 'tabs-panel' }).get(tabIndex).props.children === panel
     ).toBe(true)
   }
 
@@ -162,10 +162,6 @@ test('you can navigate to a tab by clicking on it', () => {
     { tabIndex: 0, panel: 'Panel one' },
     { tabIndex: 1, panel: 'Panel two' }
   ]
-
-  // focus on tabs so navigation becomes possible
-  enzymeFind(tabs, Tabs.Tab).first().props().onFocus()
-  tabs.update()
 
   tests.forEach(test => testClickNavigation(test))
 })
