@@ -4,7 +4,6 @@ import { FixedSizeList as List } from 'react-window'
 
 import { DefaultItem } from './DefaultItem'
 import { ListFocus } from '../ListFocus'
-import { ListItem } from '../ListItem'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
 
 export interface SelectListItem {
