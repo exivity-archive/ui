@@ -25,7 +25,7 @@ const ExpandableList = ({ expandedKeys }: any) => {
 
   return (
     <ListFocus>
-      <StyledList height={800} width={800} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+      <StyledList height={800} width={850} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
         innerElementType='ul'>
         {ItemSpacer}
       </StyledList>

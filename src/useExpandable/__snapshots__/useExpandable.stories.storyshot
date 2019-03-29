@@ -468,7 +468,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
           "height": 800,
           "overflow": "auto",
           "position": "relative",
-          "width": 800,
+          "width": 850,
           "willChange": "transform",
         }
       }
@@ -2047,7 +2047,7 @@ exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
           "height": 800,
           "overflow": "auto",
           "position": "relative",
-          "width": 800,
+          "width": 850,
           "willChange": "transform",
         }
       }
