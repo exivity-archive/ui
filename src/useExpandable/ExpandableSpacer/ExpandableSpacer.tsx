@@ -54,7 +54,7 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
     if (buttonRef.current) {
       setLeft((buttonRef.current.getBoundingClientRect().width))
     }
-  }, [item.level])
+  }, [buttonRef.current])
 
   const childCount = useMemo(() => {
     let n = 0

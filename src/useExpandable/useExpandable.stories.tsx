@@ -53,7 +53,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const item = items[index]
 
   const button = (
-    <Button success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+    <Button round success={!item.expanded} danger={item.expanded} onClick={item.expand}>
       <Icon>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon>
     </Button>
   )
