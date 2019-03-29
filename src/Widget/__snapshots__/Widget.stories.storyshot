@@ -74,6 +74,7 @@ input.c3 {
 >
   <div
     className="c1"
+    data-test="widget"
   >
     <div
       className="c2"
@@ -278,6 +279,7 @@ input.c3 {
 >
   <div
     className="c1"
+    data-test="widget"
   >
     <div
       className="c2"
@@ -286,7 +288,7 @@ input.c3 {
         className="c3"
         type="header"
       >
-        Edit Me
+        Edit me
         <button
           className="c4 c5"
           onClick={[Function]}
@@ -402,6 +404,7 @@ input.c3 {
 >
   <div
     className="c1"
+    data-test="widget"
   >
     <div
       className="c2"
