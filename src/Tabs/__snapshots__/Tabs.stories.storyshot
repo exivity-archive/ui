@@ -341,6 +341,121 @@ exports[`Storyshots molecules|Tabs default 1`] = `
 </div>
 `;
 
+exports[`Storyshots molecules|Tabs disabled 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: bold;
+  color: #999;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  color: #6F6F6F;
+  border-bottom: 4px solid #ccc;
+}
+
+.c3:first-child {
+  margin-left: 0;
+}
+
+.c3:focus {
+  border-bottom-color: #6F6F6F;
+}
+
+.c4 {
+  display: inline-block;
+  font-weight: bold;
+  color: #999;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.c4:first-child {
+  margin-left: 0;
+}
+
+.c2 {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <ol
+      className="c2"
+    >
+      <li
+        className="c3"
+        data-test="tabs-tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}
+      >
+        Tab one
+      </li>
+      <li
+        className="c4"
+        data-test="tabs-tab"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab two
+      </li>
+      <li
+        className="c4"
+        data-test="tabs-tab"
+        disabled={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab three
+      </li>
+    </ol>
+    <div
+      className=""
+      data-test="tabs-panel"
+    >
+      Panel one
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots molecules|Tabs flipped 1`] = `
 .c0 {
   padding: 12px;
@@ -460,4 +575,115 @@ exports[`Storyshots molecules|Tabs helpers 1`] = `
 <div
   className="c0"
 />
+`;
+
+exports[`Storyshots molecules|Tabs initialActiveIndex 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 {
+  display: inline-block;
+  font-weight: bold;
+  color: #999;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  color: #6F6F6F;
+  border-bottom: 4px solid #ccc;
+}
+
+.c4:first-child {
+  margin-left: 0;
+}
+
+.c4:focus {
+  border-bottom-color: #6F6F6F;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: bold;
+  color: #999;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0 10px -1px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c3:first-child {
+  margin-left: 0;
+}
+
+.c2 {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <ol
+      className="c2"
+    >
+      <li
+        className="c3"
+        data-test="tabs-tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab one
+      </li>
+      <li
+        className="c3"
+        data-test="tabs-tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={-1}
+      >
+        Tab two
+      </li>
+      <li
+        className="c4"
+        data-test="tabs-tab"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}
+      >
+        Tab three
+      </li>
+    </ol>
+    <div
+      className=""
+      data-test="tabs-panel"
+    >
+      Panel three
+    </div>
+  </div>
+</div>
 `;

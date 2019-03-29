@@ -11,6 +11,7 @@ interface TabProps {
   onBlur?: () => void
   onKeyDown?: (e: KeyboardEvent) => void
   onClick?: () => void
+  disabled?: boolean
   test?: string
   children: React.ReactNode
 }
@@ -39,6 +40,11 @@ const Tab = styled.li.attrs<TabProps>((props) => ({
     &:focus {
       border-bottom-color: #6F6F6F;
     }
+  `}
+
+  ${({ disabled }) => disabled && css`
+    pointer-events: none;
+    opacity: 0.6;
   `}
 `
 
@@ -136,14 +142,15 @@ interface TabsSubComponents {
 
 interface TabsProps {
   children: React.ReactNodeArray
+  initialActiveIndex?: number
   activeIndex?: number
   onActiveIndexChange?: (activeIndex: number) => void
 }
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
-export const Tabs: TabsComponent = ({ children, onActiveIndexChange, ...rest }) => {
-  const [activeIndex, setActiveIndex] = useIsUncontrolled(0, rest.activeIndex, onActiveIndexChange)
+export const Tabs: TabsComponent = ({ children, onActiveIndexChange, initialActiveIndex = 0, ...rest }) => {
+  const [activeIndex, setActiveIndex] = useIsUncontrolled(initialActiveIndex, rest.activeIndex, onActiveIndexChange)
   const contextValue = { activeIndex, setActiveIndex }
 
   return (
