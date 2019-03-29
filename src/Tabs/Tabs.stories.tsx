@@ -42,7 +42,7 @@ storiesOf('molecules|Tabs', module)
       <Tabs.TabList>
         <Tabs.Tab>Tab one</Tabs.Tab>
         <Tabs.Tab disabled>Tab two</Tabs.Tab>
-        <Tabs.Tab disabled>Tab three</Tabs.Tab>
+        <Tabs.Tab>Tab three</Tabs.Tab>
       </Tabs.TabList>
       <Tabs.TabPanels>
         <Tabs.TabPanel>Panel one</Tabs.TabPanel>

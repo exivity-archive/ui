@@ -5,7 +5,7 @@ exports[`Storyshots molecules|Widget default 1`] = `
   padding: 12px;
 }
 
-.c2 {
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -14,20 +14,20 @@ exports[`Storyshots molecules|Widget default 1`] = `
   margin: 1.25rem 0;
 }
 
-.c2:first-child {
+.c3:first-child {
   margin-top: 0;
 }
 
-.c2:last-child {
+.c3:last-child {
   margin-bottom: 0;
 }
 
-.c2,
-input.c2 {
+.c3,
+input.c3 {
   font-size: 1.5em;
 }
 
-.c2 .c4 {
+.c3 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -36,6 +36,73 @@ input.c2 {
   -webkit-transform-origin: left 25%;
   -ms-transform-origin: left 25%;
   transform-origin: left 25%;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c4:first-child {
+  margin-top: 0;
+}
+
+.c4:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  background: white;
+  box-shadow: 1px 1px 0 rgba(0,168,216,0.4);
+  padding: 1.25em;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.c2 {
+  height: 40px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <h1
+        className="c3"
+        type="header"
+      >
+        Title
+      </h1>
+    </div>
+    <p
+      className="c4"
+    >
+      Officia sed corrupti laboriosam voluptatem iste. Sed harum reprehenderit tempore optio. Cum laudantium est sequi natus quae ea et. Distinctio recusandae quo mollitia est reiciendis sunt. Fuga quod non eaque sequi voluptas. Occaecati quia consequatur.
+ 
+Ut sed aut assumenda quo. Sed unde repellendus. Quam est est non odit architecto omnis ad quas. Ipsam voluptas repudiandae animi nihil fugiat omnis eveniet et aut. Repellat qui eos veniam quasi aut architecto et. Sed ut eius.
+ 
+Voluptas eum nobis recusandae. Nostrum ut quis ex quos aliquam. Voluptates mollitia est.
+ 
+Consequatur praesentium aperiam. Nobis doloremque optio rerum vero. Quam sit dolor quibusdam quo quia accusantium nemo aspernatur. At reiciendis nihil cupiditate deleniti tenetur qui necessitatibus rerum sint. Quis sit impedit in blanditiis ut. Quod doloribus perspiciatis est minus suscipit animi.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Widget editable header 1`] = `
+.c0 {
+  padding: 12px;
 }
 
 .c3 {
@@ -55,75 +122,12 @@ input.c2 {
   margin-bottom: 0;
 }
 
-.c1 {
-  background: white;
-  box-shadow: 1px 1px 0 rgba(0,168,216,0.4);
-  padding: 1.25em;
-  position: relative;
-  box-sizing: border-box;
-  border-radius: 3px;
-  width: 100%;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className=""
-    >
-      <h1
-        className="c2"
-        type="header"
-      >
-        Title
-      </h1>
-    </div>
-    <p
-      className="c3"
-    >
-      Officia sed corrupti laboriosam voluptatem iste. Sed harum reprehenderit tempore optio. Cum laudantium est sequi natus quae ea et. Distinctio recusandae quo mollitia est reiciendis sunt. Fuga quod non eaque sequi voluptas. Occaecati quia consequatur.
- 
-Ut sed aut assumenda quo. Sed unde repellendus. Quam est est non odit architecto omnis ad quas. Ipsam voluptas repudiandae animi nihil fugiat omnis eveniet et aut. Repellat qui eos veniam quasi aut architecto et. Sed ut eius.
- 
-Voluptas eum nobis recusandae. Nostrum ut quis ex quos aliquam. Voluptates mollitia est.
- 
-Consequatur praesentium aperiam. Nobis doloremque optio rerum vero. Quam sit dolor quibusdam quo quia accusantium nemo aspernatur. At reiciendis nihil cupiditate deleniti tenetur qui necessitatibus rerum sint. Quis sit impedit in blanditiis ut. Quod doloribus perspiciatis est minus suscipit animi.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Storyshots molecules|Widget editable header 1`] = `
-.c0 {
-  padding: 12px;
-}
-
-.c2 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c2:first-child {
-  margin-top: 0;
-}
-
-.c2:last-child {
-  margin-bottom: 0;
-}
-
-.c2,
-input.c2 {
+.c3,
+input.c3 {
   font-size: 1.5em;
 }
 
-.c2 .c7 {
+.c3 .c8 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -134,7 +138,7 @@ input.c2 {
   transform-origin: left 25%;
 }
 
-.c5 {
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -143,11 +147,11 @@ input.c2 {
   margin: 1.25rem 0;
 }
 
-.c5:first-child {
+.c6:first-child {
   margin-top: 0;
 }
 
-.c5:last-child {
+.c6:last-child {
   margin-bottom: 0;
 }
 
@@ -161,7 +165,7 @@ input.c2 {
   width: 100%;
 }
 
-.c4 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
@@ -212,23 +216,23 @@ input.c2 {
   width: 2.5em;
   position: absolute;
   right: 2.5em;
-  top: 1.25em;
+  top: 1.53125em;
 }
 
-.c4:hover {
+.c5:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c4:focus {
+.c5:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c4:active,
-.c4.active {
+.c5:active,
+.c5.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c4:after {
+.c5:after {
   display: none;
   content: "";
   position: absolute;
@@ -240,28 +244,32 @@ input.c2 {
   background-color: rgba(255,255,255,0.5);
 }
 
-.c4[disabled] {
+.c5[disabled] {
   pointer-events: none;
 }
 
-.c4[disabled]:after {
+.c5[disabled]:after {
   display: block;
 }
 
-.c4:hover {
+.c5:hover {
   color: #222;
   box-shadow: 0 0 0 1px #222;
 }
 
-.c4:focus {
+.c5:focus {
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c4 .c7 {
+.c5 .c8 {
   font-size: 1.5em;
 }
 
-.c6 .c3 {
+.c2 {
+  height: 40px;
+}
+
+.c7 .c4 {
   margin-left: 20px;
 }
 
@@ -272,20 +280,20 @@ input.c2 {
     className="c1"
   >
     <div
-      className=""
+      className="c2"
     >
       <h1
-        className="c2"
+        className="c3"
         type="header"
       >
         Edit Me
         <button
-          className="c3 c4"
+          className="c4 c5"
+          onClick={[Function]}
         >
           <svg
             fill="currentColor"
             height="1em"
-            onClick={[Function]}
             stroke="currentColor"
             strokeWidth="0"
             style={
@@ -305,7 +313,7 @@ input.c2 {
       </h1>
     </div>
     <p
-      className="c5"
+      className="c6"
     >
       Ad at omnis delectus amet qui. Et amet qui rerum enim quos. Delectus quisquam facilis reiciendis atque eligendi delectus. Qui quia harum quia distinctio.
  
@@ -386,6 +394,7 @@ input.c3 {
 
 .c2 {
   padding: 1.25em 0 0 1.25em;
+  height: 40px;
 }
 
 <div

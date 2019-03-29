@@ -25,7 +25,7 @@ const StyledWidget = styled.div<StyledWidgetProps>`
 const EditButton = styled(Button)`
  position: absolute;
  right: ${fromTheme(theme => theme.global.baseSpacing * 2)}em;
- top: ${fromTheme(theme => theme.global.baseSpacing * 1)}em;
+ top: ${fromTheme(theme => theme.global.baseSpacing * 1.225)}em;
 `
 
 interface StyledWidgetHeaderProps {
@@ -36,6 +36,11 @@ const StyledWidgetHeader = styled.div<StyledWidgetHeaderProps>`
   ${({ padding }) => padding && css`
     padding: ${fromTheme(theme => theme.global.baseSpacing * 1)}em 0 0 ${fromTheme(theme => theme.global.baseSpacing * 1)}em;
   `}
+  height: 40px;
+`
+
+const TitleInput = styled.div`
+  max-width: 90%;
 `
 
 interface WidgetHeaderProps extends StyledWidgetHeaderProps, HeadingProps {
@@ -49,8 +54,8 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({ padding = false, type, editable, 
   const [edit, setEdit] = useState(initialEdit)
   return (
     <StyledWidgetHeader padding={padding}>
-      <Heading type={type}>{!edit ? children : <TextInput value={children} onChange={onChange} />}
-      {editable && <EditButton round tiny outlined><MdEdit onClick={() => setEdit(!edit)} /></EditButton>}</Heading>
+      <Heading type={type}>{!edit ? children : <TitleInput><TextInput value={children} onChange={onChange} /></TitleInput>}
+        {editable && <EditButton round tiny outlined onClick={() => setEdit(!edit)}><MdEdit /></EditButton>}</Heading>
     </StyledWidgetHeader >
   )
 }

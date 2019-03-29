@@ -1,24 +1,20 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
-import { useTabsContext, TabsContext } from './helpers'
+import { useTabsContext, TabsContext, getNextNonDisabledIndex, getPrevNonDisabledIndex } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
 
-interface TabProps {
+interface StyledTabProps {
   isActive?: boolean
   tabIndex?: number
+  disabled?: boolean
   onFocus?: () => void
   onBlur?: () => void
-  onKeyDown?: (e: KeyboardEvent) => void
+  onKeyDown?: (event: KeyboardEvent<HTMLLIElement>) => void
   onClick?: () => void
-  disabled?: boolean
-  test?: string
-  children: React.ReactNode
 }
 
-const Tab = styled.li.attrs<TabProps>((props) => ({
-  ['data-test']: props.test ? props.test : 'tabs-tab'
-})) <TabProps>`
+const StyledTab = styled.li<StyledTabProps>`
   display: inline-block;
   font-weight: bold;
   color: ${fromTheme(theme => theme.colors.gray)};
@@ -48,6 +44,41 @@ const Tab = styled.li.attrs<TabProps>((props) => ({
   `}
 `
 
+interface TabProps {
+  disabled?: boolean
+  test?: string
+  children: React.ReactNode
+  index?: number
+  onFocus?: () => void
+  onBlur?: () => void
+  onKeyDown?: (event: KeyboardEvent<HTMLLIElement>) => void
+}
+
+const Tab: FC<TabProps> = ({ test = 'tabs-tab', children, index, disabled, ...rest }) => {
+  const { activeIndex, setActiveIndex, ...context } = useTabsContext()
+  if (index === undefined) return null
+
+  if (disabled === true && !context.disabledTabs.includes(activeIndex)) {
+    context.disabledTabs.push(index)
+  } else if (!disabled && context.disabledTabs.includes(activeIndex)) {
+    disabled = true
+  } else if (disabled === false && !context.disabledTabs.includes(activeIndex)) {
+    context.disabledTabs = context.disabledTabs.filter((i) => i === index)
+  }
+
+  return (
+    <StyledTab
+      isActive={activeIndex === index}
+      tabIndex={activeIndex === index ? 0 : -1}
+      disabled={disabled}
+      data-test={test}
+      // function gets replaced for testing purposes
+      onClick={disabled ? () => { return } : () => setActiveIndex(index)}
+      {...rest}>
+      {children}
+    </StyledTab>)
+}
+
 const TabsList = styled.ol`
   border-bottom: 1px solid #ccc;
   padding-left: 0;
@@ -58,32 +89,33 @@ interface TabListProps {
 }
 
 const TabList: FC<TabListProps> = ({ children }) => {
-  const { activeIndex, setActiveIndex } = useTabsContext()
+  const { activeIndex, setActiveIndex, disabledTabs } = useTabsContext()
   const [focused, setFocused] = useState(false)
+
+  let tabAmount = React.Children.count(children)
 
   const onFocus = () => setFocused(true)
 
   const onKeyDown = (e: KeyboardEvent) => {
     if (focused) {
-      e.key === 'ArrowRight' && activeIndex < children.length - 1 && setActiveIndex(activeIndex + 1)
-      e.key === 'ArrowLeft' && activeIndex > 0 && setActiveIndex(activeIndex - 1)
+      if (e.key === 'ArrowRight') {
+        setActiveIndex(getNextNonDisabledIndex(activeIndex, tabAmount, disabledTabs))
+      } else if (e.key === 'ArrowLeft') {
+        setActiveIndex(getPrevNonDisabledIndex(activeIndex, tabAmount, disabledTabs))
+      }
     }
   }
 
   return (
-    <TabsList>
-      {React.Children.map(children, (child: React.ReactElement<TabProps>, index) => (
-        child && React.cloneElement(child, {
-          isActive: activeIndex === index,
-          tabIndex: activeIndex === index ? 0 : -1,
-          onFocus,
-          onBlur: () => { setFocused(false) },
-          onKeyDown,
-          onClick: () => { setActiveIndex(index) },
-          ...child.props
-        })
-      ))}
-    </TabsList>
+    <TabsList>{React.Children.map(children, (child: React.ReactElement<TabProps>, index) => (
+      child && React.cloneElement(child, {
+        index,
+        onFocus,
+        onBlur: () => { setFocused(false) },
+        onKeyDown,
+        ...child.props
+      })
+    ))}</TabsList>
   )
 }
 
@@ -144,14 +176,15 @@ interface TabsProps {
   children: React.ReactNodeArray
   initialActiveIndex?: number
   activeIndex?: number
+  disabledTabs?: number[]
   onActiveIndexChange?: (activeIndex: number) => void
 }
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
-export const Tabs: TabsComponent = ({ children, onActiveIndexChange, initialActiveIndex = 0, ...rest }) => {
+export const Tabs: TabsComponent = ({ children, onActiveIndexChange, initialActiveIndex = 0, disabledTabs = [], ...rest }) => {
   const [activeIndex, setActiveIndex] = useIsUncontrolled(initialActiveIndex, rest.activeIndex, onActiveIndexChange)
-  const contextValue = { activeIndex, setActiveIndex }
+  const contextValue = { activeIndex, setActiveIndex, disabledTabs }
 
   return (
     <TabsContext.Provider value={contextValue} >

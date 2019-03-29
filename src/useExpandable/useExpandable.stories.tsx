@@ -26,7 +26,7 @@ const ExpandableList = ({ expandedKeys }: any) => {
   return (
     <ListFocus>
       <StyledList height={800} width={850} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
-                  innerElementType='ul'>
+        innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
     </ListFocus >
@@ -50,7 +50,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const [items, helpers] = data
   const item = items[index]
   const button = (
-    <Button success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+    <Button round success={!item.expanded} danger={item.expanded} onClick={item.expand}>
       <Icon>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon>
     </Button>
   )
@@ -64,11 +64,11 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           <SpaceBetween>
             {item.value}
             {!item.expanded && item.children &&
-            <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+              <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&
-            <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all children</Button>}
             {item.expanded && item.parent &&
-            <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
+              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all parents</Button>}
           </SpaceBetween>
         </ExpandableSpacer>
       </ListItem>
