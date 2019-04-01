@@ -1,0 +1,1206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots molecules|Group default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c7 svg {
+  vertical-align: middle;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+.c9 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
+}
+
+.c34 .c5 {
+  font-size: 1.5em;
+}
+
+.c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c37 .c5 {
+  font-size: 1.5em;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c3,
+input.c3 {
+  font-size: 1.5em;
+}
+
+.c3 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c6 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.c6 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+
+.c4 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
+  margin: 20px 20px;
+}
+
+.c2 h1 {
+  white-space: nowrap;
+  color: #999;
+}
+
+.c38 .c5 {
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <h1
+        className="c3"
+        type="header"
+      >
+        Global options
+      </h1>
+    </div>
+    <hr
+      className="c4"
+    />
+    <span
+      className="c5 c6"
+    >
+      <span
+        className="c5 c7"
+        data-test="container-collapser"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+          />
+        </svg>
+      </span>
+    </span>
+  </div>
+  <div
+    className="c8"
+  >
+    Et in iure quas sed consectetur saepe delectus. Exercitationem eius aut natus qui dolores perferendis impedit porro sequi. Alias autem perferendis molestias eius autem et. Veritatis omnis nostrum voluptate ratione est et dolor. Quia enim ipsum tenetur.
+ 
+Et pariatur voluptate cupiditate aut aspernatur voluptatem ratione voluptatibus esse. Cupiditate autem veniam vero voluptatem dolorum blanditiis magnam. Autem qui et consequatur ea laborum. Doloremque optio veritatis ut quaerat.
+ 
+Exercitationem dicta perspiciatis eos corrupti architecto at. Necessitatibus consequatur sit recusandae qui. Eveniet iste ducimus natus. Voluptatum minima qui est itaque soluta reprehenderit tempora quae perferendis. Esse et itaque exercitationem nisi. Dolor omnis quia et nisi est ratione.
+ 
+Ipsum cumque nihil est placeat aliquam aperiam eligendi. Tempora occaecati nihil sed quis neque. Quidem inventore ut harum nesciunt. Iure laborum quas est dolorem ipsum iste voluptatem. Sint dolores officiis omnis sit voluptatibus laudantium earum molestiae.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Group helpers 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Storyshots molecules|Group with icons 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+.c8 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c9 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c5 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c5 {
+  font-size: 1.5em;
+}
+
+.c20 .c5 {
+  font-size: 1.5em;
+}
+
+.c21 .c5 {
+  font-size: 1.5em;
+}
+
+.c22 .c5 {
+  font-size: 1.5em;
+}
+
+.c23 .c5 {
+  font-size: 1.5em;
+}
+
+.c24 .c5 {
+  font-size: 1.5em;
+}
+
+.c25 .c5 {
+  font-size: 1.5em;
+}
+
+.c26 .c5 {
+  font-size: 1.5em;
+}
+
+.c27 .c5 {
+  font-size: 1.5em;
+}
+
+.c28 .c5 {
+  font-size: 1.5em;
+}
+
+.c29 .c5 {
+  font-size: 1.5em;
+}
+
+.c30 .c5 {
+  font-size: 1.5em;
+}
+
+.c31 .c5 {
+  font-size: 1.5em;
+}
+
+.c32 .c5 {
+  font-size: 1.5em;
+}
+
+.c33 .c5 {
+  font-size: 1.5em;
+}
+
+.c34 .c5 {
+  font-size: 1.5em;
+}
+
+.c35 .c5 {
+  font-size: 1.5em;
+}
+
+.c36 .c5 {
+  font-size: 1.5em;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c3:first-child {
+  margin-top: 0;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c3,
+input.c3 {
+  font-size: 1.5em;
+}
+
+.c3 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c6 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.c6 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+
+.c4 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
+  margin: 20px 20px;
+}
+
+.c2 h1 {
+  white-space: nowrap;
+  color: #999;
+}
+
+.c37 .c5 {
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <h1
+        className="c3"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
+    <hr
+      className="c4"
+    />
+    <hr
+      className="c4"
+    />
+    <span
+      className="c5 c6"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="c5 c6"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="c5 c6"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"
+        />
+      </svg>
+    </span>
+    <hr
+      className="c4"
+    />
+  </div>
+  <div
+    className="c7"
+  >
+    Vitae facere nihil omnis voluptatem totam iste non nam ipsa. Quia suscipit eaque molestias eligendi officiis libero magnam et est. Dolorem sed aliquid eaque autem dolores ipsa adipisci harum. Voluptas illo illum id qui.
+ 
+Et neque et et pariatur accusamus blanditiis aut. Molestiae officiis ad. Pariatur qui magnam hic dicta ab dignissimos ut. Veritatis et quam blanditiis et nostrum vitae. Rem voluptate consequuntur delectus est non voluptas.
+ 
+Consequatur corrupti ex. Ea tenetur a rerum. Laborum earum aut nihil nisi doloremque eveniet voluptate iusto non.
+ 
+Earum distinctio nobis quaerat et quas accusamus cum cumque. Id dolores minus perferendis aliquam rem animi. Vel eligendi illo perspiciatis magni.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Group x-inverted 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c4 svg {
+  vertical-align: middle;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+.c9 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c2 {
+  font-size: 1.5em;
+}
+
+.c21 .c2 {
+  font-size: 1.5em;
+}
+
+.c22 .c2 {
+  font-size: 1.5em;
+}
+
+.c23 .c2 {
+  font-size: 1.5em;
+}
+
+.c24 .c2 {
+  font-size: 1.5em;
+}
+
+.c25 .c2 {
+  font-size: 1.5em;
+}
+
+.c26 .c2 {
+  font-size: 1.5em;
+}
+
+.c27 .c2 {
+  font-size: 1.5em;
+}
+
+.c28 .c2 {
+  font-size: 1.5em;
+}
+
+.c29 .c2 {
+  font-size: 1.5em;
+}
+
+.c30 .c2 {
+  font-size: 1.5em;
+}
+
+.c31 .c2 {
+  font-size: 1.5em;
+}
+
+.c32 .c2 {
+  font-size: 1.5em;
+}
+
+.c33 .c2 {
+  font-size: 1.5em;
+}
+
+.c34 .c2 {
+  font-size: 1.5em;
+}
+
+.c35 .c2 {
+  font-size: 1.5em;
+}
+
+.c36 .c2 {
+  font-size: 1.5em;
+}
+
+.c37 .c2 {
+  font-size: 1.5em;
+}
+
+.c7 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c7:first-child {
+  margin-top: 0;
+}
+
+.c7:last-child {
+  margin-bottom: 0;
+}
+
+.c7,
+input.c7 {
+  font-size: 1.5em;
+}
+
+.c7 .c2 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c3 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.c3 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+
+.c5 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
+  margin: 20px 20px;
+}
+
+.c6 h1 {
+  white-space: nowrap;
+  color: #999;
+}
+
+.c38 .c2 {
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <span
+      className="c2 c3"
+    >
+      <span
+        className="c2 c4"
+        data-test="container-collapser"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+          />
+        </svg>
+      </span>
+    </span>
+    <hr
+      className="c5"
+    />
+    <div
+      className="c6"
+    >
+      <h1
+        className="c7"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
+  </div>
+  <div
+    className="c8"
+  >
+    Eligendi neque distinctio nisi eum voluptatem. Nulla iste et tempore molestiae et est consequatur ratione. Molestias molestias exercitationem consectetur eos eos tempore vel. Quisquam consequuntur veritatis rem aut maiores voluptatibus hic.
+ 
+Alias voluptatem rem rerum ut error natus totam. Molestiae et animi veritatis pariatur corporis facere quos culpa velit. Voluptatem et corrupti doloribus veritatis illo fugit velit hic nihil. Odit aut fuga qui quae et veniam facilis veritatis. Nihil tempora libero vitae vel sunt amet alias.
+ 
+Laboriosam et quibusdam voluptas corrupti perspiciatis cupiditate et doloremque dicta. Perferendis aliquid et incidunt aut iusto aut eum. Totam animi reiciendis velit. Id est quidem omnis et. Tempore ex tempora dolore iusto voluptates excepturi ipsa ut hic.
+ 
+Et autem nulla asperiores rerum inventore voluptas. Et doloremque vel sunt alias dolor magnam. Sit voluptatibus aut officiis facilis qui dolorem impedit.
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules|Group y-inverted 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c8 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 22px;
+  width: 0;
+}
+
+.c8 svg {
+  vertical-align: middle;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+}
+
+.c9 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c10 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c11 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c12 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c13 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c14 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c15 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c16 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c17 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c18 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c19 .c6 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c20 .c6 {
+  font-size: 1.5em;
+}
+
+.c21 .c6 {
+  font-size: 1.5em;
+}
+
+.c22 .c6 {
+  font-size: 1.5em;
+}
+
+.c23 .c6 {
+  font-size: 1.5em;
+}
+
+.c24 .c6 {
+  font-size: 1.5em;
+}
+
+.c25 .c6 {
+  font-size: 1.5em;
+}
+
+.c26 .c6 {
+  font-size: 1.5em;
+}
+
+.c27 .c6 {
+  font-size: 1.5em;
+}
+
+.c28 .c6 {
+  font-size: 1.5em;
+}
+
+.c29 .c6 {
+  font-size: 1.5em;
+}
+
+.c30 .c6 {
+  font-size: 1.5em;
+}
+
+.c31 .c6 {
+  font-size: 1.5em;
+}
+
+.c32 .c6 {
+  font-size: 1.5em;
+}
+
+.c33 .c6 {
+  font-size: 1.5em;
+}
+
+.c34 .c6 {
+  font-size: 1.5em;
+}
+
+.c35 .c6 {
+  font-size: 1.5em;
+}
+
+.c36 .c6 {
+  font-size: 1.5em;
+}
+
+.c37 .c6 {
+  font-size: 1.5em;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c4:first-child {
+  margin-top: 0;
+}
+
+.c4:last-child {
+  margin-bottom: 0;
+}
+
+.c4,
+input.c4 {
+  font-size: 1.5em;
+}
+
+.c4 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c7 {
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.c7 svg {
+  vertical-align: middle;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+
+.c5 {
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+  border: 0;
+  margin: 20px 20px;
+}
+
+.c3 h1 {
+  white-space: nowrap;
+  color: #999;
+}
+
+.c38 .c6 {
+  pointer-events: none;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    Numquam dolores voluptatum non modi voluptatem consequatur consequatur quod. Praesentium est quasi voluptatum. Ducimus est rerum cumque non. Voluptate consequatur ut ullam quasi placeat quam eos accusantium.
+ 
+In quas odio delectus iure. Tempora tempore ratione. Alias omnis voluptas qui reiciendis vitae. In amet quibusdam omnis consectetur consectetur assumenda laboriosam nostrum. Eius est sit iure in enim vel. Distinctio corporis quasi qui voluptatem nihil sit nisi fugit esse.
+ 
+Ea eos voluptatem sint iste nostrum asperiores numquam fugiat. Cumque repellat sint unde eaque placeat quasi id voluptatum ullam. Vero itaque nisi corrupti autem. Voluptatum saepe aliquam ducimus explicabo debitis odit. Voluptatem ad qui voluptas quod.
+ 
+Eius dolores tempore vero qui. Explicabo quae accusamus aspernatur ut tempora iure ea sunt qui. Repellendus architecto quis officiis veritatis hic est. Aliquid veniam corrupti non impedit laboriosam perspiciatis iste magnam. Facere enim molestiae libero earum voluptas delectus est aperiam voluptas.
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="c3"
+    >
+      <h1
+        className="c4"
+        type="header"
+      >
+        Configuration
+      </h1>
+    </div>
+    <hr
+      className="c5"
+    />
+    <span
+      className="c6 c7"
+    >
+      <span
+        className="c6 c8"
+        data-test="container-collapser"
+        onClick={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+          />
+        </svg>
+      </span>
+    </span>
+  </div>
+</div>
+`;

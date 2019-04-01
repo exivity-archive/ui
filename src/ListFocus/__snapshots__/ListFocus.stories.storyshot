@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/ListFocus list focus 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
+}
+
+.c2:hover,
+.c2:focus {
+  background-color: #eee;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onKeyDown={[Function]}
+  >
+    <ul
+      style={
+        Object {
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      <li
+        className="c2"
+        data-test="list-item"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            onHover focus element
+          </div>
+        </div>
+      </li>
+      <li
+        className="c2"
+        data-test="list-item"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            Key down
+          </div>
+        </div>
+      </li>
+      <li
+        className="c2"
+        data-test="list-item"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            or up
+          </div>
+        </div>
+      </li>
+      <li
+        className="c2"
+        data-test="list-item"
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "height": 30,
+          }
+        }
+        tabIndex={-1}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "height": 30,
+              }
+            }
+          >
+            to shift
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

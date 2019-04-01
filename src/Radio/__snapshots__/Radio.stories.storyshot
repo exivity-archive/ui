@@ -1,0 +1,641 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|Radio default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c4 > .c3 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c5 > .c3 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.c2 + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+  line-height: 1em;
+  height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c2 + label:focus {
+  outline: 0;
+}
+
+.c2 + label:empty {
+  padding: 0 0 0 1em;
+}
+
+.c2 + label::before,
+.c2 + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.c2 + label::before {
+  content: " ";
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.c2 + label::after {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c2 + label::after {
+  content: " ";
+  background: #222;
+  border: .2em solid #eee;
+  border-radius: 50%;
+}
+
+.c2:focus + label::before,
+.c2 + label:hover::before {
+  background-color: #999;
+}
+
+.c2:checked + label {
+  color: #222;
+}
+
+.c2:checked + label::before {
+  background-color: #222;
+}
+
+.c2:checked + label::after {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.c6 > .c3:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c6 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c7 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c7 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c7 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c8 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c8 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c8 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c9 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
+}
+
+.c9 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c9 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <span>
+      <input
+        checked={true}
+        className="c2"
+        id="5"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="5"
+      >
+        
+      </label>
+    </span>
+  </section>
+  <section
+    className="c1"
+  >
+    <span>
+      <input
+        checked={false}
+        className="c2"
+        id="6"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="6"
+      >
+        
+      </label>
+    </span>
+  </section>
+</div>
+`;
+
+exports[`Storyshots interact|Radio with custom label 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.c1 + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+  line-height: 1em;
+  height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c1 + label:focus {
+  outline: 0;
+}
+
+.c1 + label:empty {
+  padding: 0 0 0 1em;
+}
+
+.c1 + label::before,
+.c1 + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.c1 + label::before {
+  content: " ";
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.c1 + label::after {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c1 + label::after {
+  content: " ";
+  background: #222;
+  border: .2em solid #eee;
+  border-radius: 50%;
+}
+
+.c1:focus + label::before,
+.c1 + label:hover::before {
+  background-color: #999;
+}
+
+.c1:checked + label {
+  color: #222;
+}
+
+.c1:checked + label::before {
+  background-color: #222;
+}
+
+.c1:checked + label::after {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+.c2,
+input.c2 {
+  font-size: 1.5em;
+}
+
+.c2 .c3 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+<div
+  className="c0"
+>
+  <span>
+    <input
+      checked={true}
+      className="c1"
+      id="9"
+      onChange={[Function]}
+      type="radio"
+    />
+    <label
+      className="c2"
+      htmlFor="9"
+      style={
+        Object {
+          "marginTop": 0,
+        }
+      }
+      type="header"
+    >
+      Check me out
+    </label>
+  </span>
+</div>
+`;
+
+exports[`Storyshots interact|Radio with label 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+
+.c4 > .c3 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c5 > .c3 {
+  display: block;
+  font-size: 0.8125em;
+  color: #999;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.c2 + label {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 2em;
+  cursor: pointer;
+  line-height: 1em;
+  height: 1em;
+  color: #999;
+  will-change: color;
+  -webkit-transition: 0.25s color ease;
+  transition: 0.25s color ease;
+}
+
+.c2 + label:focus {
+  outline: 0;
+}
+
+.c2 + label:empty {
+  padding: 0 0 0 1em;
+}
+
+.c2 + label::before,
+.c2 + label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-sizing: border-box;
+  will-change: transform,background-color,color;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.c2 + label::before {
+  content: " ";
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+.c2 + label::after {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.c2 + label::after {
+  content: " ";
+  background: #222;
+  border: .2em solid #eee;
+  border-radius: 50%;
+}
+
+.c2:focus + label::before,
+.c2 + label:hover::before {
+  background-color: #999;
+}
+
+.c2:checked + label {
+  color: #222;
+}
+
+.c2:checked + label::before {
+  background-color: #222;
+}
+
+.c2:checked + label::after {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.c6 > .c3:first-child {
+  padding-bottom: 0.625em;
+  margin-right: unset;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c6 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c7 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c7 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c7 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c8 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 20em;
+  -ms-flex-preferred-size: 20em;
+  flex-basis: 20em;
+}
+
+.c8 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c8 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c9 > .c3:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 30em;
+  -ms-flex-preferred-size: 30em;
+  flex-basis: 30em;
+}
+
+.c9 > .c3:first-child > .c3 {
+  padding-bottom: unset;
+}
+
+.c9 > *:not(.c3):not(:last-child) {
+  margin-bottom: 1.25em;
+}
+
+.c1 {
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <section
+    className="c1"
+  >
+    <span>
+      <input
+        checked={true}
+        className="c2"
+        id="7"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="7"
+      >
+        Choose option 1
+      </label>
+    </span>
+  </section>
+  <section
+    className="c1"
+  >
+    <span>
+      <input
+        checked={false}
+        className="c2"
+        id="8"
+        onChange={[Function]}
+        type="radio"
+      />
+      <label
+        className="c3 c4"
+        htmlFor="8"
+      >
+        Choose option 2
+      </label>
+    </span>
+  </section>
+</div>
+`;

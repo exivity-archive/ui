@@ -1,0 +1,8 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { markdown } from '../utils/stories/markdown'
+import { {Component} } from '.'
+
+storiesOf('atoms|{Component}', module)
+  .add('overview', markdown(require('./README.md')))
+  .add('default', () => <{Component} />)

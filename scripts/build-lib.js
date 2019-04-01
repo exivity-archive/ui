@@ -8,6 +8,7 @@ tsconfig.compilerOptions.allowJs = false
 tsconfig.compilerOptions.isolatedModules = false
 tsconfig.compilerOptions.noEmit = false
 tsconfig.compilerOptions.declaration = true
+tsconfig.compilerOptions.jsx = "react"
 
 fs.writeFileSync('tsconfig.json',
   JSON.stringify(tsconfig, undefined, 2))

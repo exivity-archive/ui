@@ -1,33 +1,23 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import defaultStyledProps from '../utils/testing/defaultStyledProps'
-import { fromTheme, hexToString, matchThemeProp, StyledProps } from '../utils/theme'
-import { preciseEm } from '../utils/theme/isolated'
-import Icon from '../Icon'
+import { InputProps } from '../AbstractInput/AbstractInput'
+import { Icon } from '../Icon'
+import { fromTheme, hexToString, matchThemeProp } from '../utils/styled'
+import { preciseEm } from '../utils/styled/isolated'
 
-export interface ButtonProps extends StyledProps {
-  // Purposes
-  primary?: boolean
-  secondary?: boolean
-  success?: boolean
-  danger?: boolean
-
-  // Sizes
-  small?: boolean
-  large?: boolean
-
-  // Variants
-  outlined?: boolean
+export interface ButtonProps extends InputProps {
+  // Variantsgit
+  round?: boolean
+  transparent?: boolean
 }
 
-export const Button = styled.button <ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 14,
-    defaultValue: 14
-  })}px;
-  color: ${fromTheme(theme => theme.colours.white)};
+    modifier: (em: number) => em / 16 * 14
+  })}em;
+  color: ${fromTheme(theme => theme.colors.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
   text-transform: uppercase;
@@ -38,10 +28,12 @@ export const Button = styled.button <ButtonProps>`
   justify-content: center;
   cursor: pointer;
   min-width: 2.5em;
-  height: ${preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+  height: ${props => props.tiny
+    ? `${preciseEm(2.5, 10)}em` // 25px
+    : `${preciseEm(2.85, 14)}em`}; // 40px = 2.5 * 16
   padding: 0 ${preciseEm(1.5)}em;
   border: none;
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)};
+  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   flex: none;
   user-select: none;
   white-space: nowrap;
@@ -52,28 +44,28 @@ export const Button = styled.button <ButtonProps>`
   --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
 
   &:hover {
-    box-shadow: inset 10px 10px 999em rgba(0,0,0,0.15);
+    box-shadow: inset 10px 10px 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)});
   }
 
   &:focus {
-    box-shadow: inset 0 0 999em rgba(0,0,0,0.15),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
+    box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)}),
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
   }
 
   &:active,
   &.active {
-    box-shadow: inset 0 0 999em rgba(0,0,0,0.3),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)} rgba(var(--focus-color), 0.3);
+    box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha * 2)}),
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
   }
 
   &:after {
     display: none;
     content: "";
     position: absolute;
-    top: -${fromTheme(theme => theme.global.borderWidth)};
-    right: -${fromTheme(theme => theme.global.borderWidth)};
-    bottom: -${fromTheme(theme => theme.global.borderWidth)};
-    left: -${fromTheme(theme => theme.global.borderWidth)};
+    top: -${fromTheme(theme => theme.global.borderWidth)}px;
+    right: -${fromTheme(theme => theme.global.borderWidth)}px;
+    bottom: -${fromTheme(theme => theme.global.borderWidth)}px;
+    left: -${fromTheme(theme => theme.global.borderWidth)}px;
     border-radius: inherit;
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -85,30 +77,39 @@ export const Button = styled.button <ButtonProps>`
     }
   }
 
-  ${props => props.outlined && css`
-    background-color: ${fromTheme(theme => theme.colours.white)};
+  ${(props: ButtonProps) => props.outlined && css`
+    background-color: transparent;
     color: ${matchThemeProp(theme => theme.global.purposes)};
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)};
+    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
 
     &:hover {
       color: ${fromTheme(theme => theme.global.textColor)};
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${fromTheme(theme => theme.global.textColor)};
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${fromTheme(theme => theme.global.textColor)};
     }
 
     &:focus {
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)} ${matchThemeProp(theme => theme.global.purposes)},
-       0 0 0 5px rgba(var(--focus-color), 0.3);
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)},
+       0 0 0 ${fromTheme(theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
     }
   `}
 
+  ${(props: ButtonProps) => props.round && css`
+    border-radius: 50%;
+    min-width: auto;
+    padding: 0;
+    width: ${props.tiny
+    ? preciseEm(2.5, 10) // 25px
+    : preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+  `}
+
   ${Icon} {
-    margin-right: ${fromTheme(theme => theme.global.spacing / 2)}em;
+    font-size: 1.5em;
+    ${(props: ButtonProps) => props.round !== true && css`
+      margin-right: ${fromTheme(theme => theme.global.baseSpacing / 2)}em;
+    `}
   }
+
+  ${(props: ButtonProps) => props.transparent && css`
+    background-color: transparent;
+  `}
 `
-
-Button.defaultProps = {
-  ...defaultStyledProps,
-  primary: true
-}
-
-export default Button
