@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useRef, useEffect, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
 
 import { fromTheme, hexToString, StyledProps } from '../utils/styled'
@@ -52,10 +52,40 @@ interface WidgetHeaderProps extends StyledWidgetHeaderProps, HeadingProps {
 
 const WidgetHeader: FC<WidgetHeaderProps> = ({ padding = false, type, editable, initialEdit = false, onChange, children }) => {
   const [edit, setEdit] = useState(initialEdit)
+  const [buttonTabIndex, setButtonTabIndex] = useState<0 | -1>(0)
+  const textInputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    textInputRef.current && textInputRef.current.focus()
+    setButtonTabIndex(-1)
+  }, [edit])
+
+  function onKeyDown (e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'Enter' || e.key === 'Tab') {
+      setEdit(false)
+      setTimeout(() => setButtonTabIndex(0), 500)
+    }
+  }
+
   return (
     <StyledWidgetHeader padding={padding}>
-      <Heading type={type}>{!edit ? children : <TitleInput><TextInput value={children} onChange={onChange} /></TitleInput>}
-        {editable && <EditButton round tiny outlined onClick={() => setEdit(!edit)}><MdEdit /></EditButton>}</Heading>
+      <Heading type={type}>
+        {edit ? (
+          <TitleInput>
+            <TextInput ref={textInputRef}
+              onKeyDown={onKeyDown}
+              value={children}
+              onChange={onChange} />
+          </TitleInput>
+        ) : children}
+        {editable && (
+          <EditButton tabIndex={buttonTabIndex}
+            round tiny outlined
+            onClick={() => setEdit(!edit)}>
+            <MdEdit />
+          </EditButton>
+        )}
+      </Heading>
     </StyledWidgetHeader >
   )
 }

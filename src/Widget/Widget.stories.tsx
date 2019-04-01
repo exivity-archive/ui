@@ -21,7 +21,21 @@ storiesOf('molecules|Widget', module)
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>
-      <Widget.Header editable onChange={(newHeader) => storeState({ ...state, header: newHeader })}>{state.header}</Widget.Header>
+      <Widget.Header editable
+        onChange={(newHeader) => storeState({ ...state, header: newHeader })}>
+        {state.header}
+      </Widget.Header>
+      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+    </Widget>
+  ))
+  // @ts-ignore
+  .add('initialEdit = true', ({ state, storeState }: any) => (
+    <Widget>
+      <Widget.Header editable
+        initialEdit={true}
+        onChange={(newHeader) => storeState({ ...state, header: newHeader })}>
+        {state.header}
+      </Widget.Header>
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))

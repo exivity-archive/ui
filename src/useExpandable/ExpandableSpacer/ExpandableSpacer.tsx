@@ -42,17 +42,19 @@ interface ExpandableSpacerProps {
   button?: React.ReactComponentElement<'button', ButtonProps> | null
   index: number
   data: TreeListItem<{}>[]
+  spacing?: number
+  useButtonSpacing?: boolean
 }
 
-export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, button, data }) => {
+export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, button, data, ...rest }) => {
   const buttonRef = useRef<HTMLDivElement>(null)
-  const [left, setLeft] = useState(0)
+  const [spacing, setSpacing] = useState(rest.spacing !== undefined ? rest.spacing : 0)
   const item = data[index]
   const distance = distanceBetweenNextSibling(data, index)
 
   useEffect(() => {
-    if (buttonRef.current) {
-      setLeft((buttonRef.current.getBoundingClientRect().width))
+    if (rest.spacing === undefined && buttonRef.current) {
+      setSpacing((buttonRef.current.getBoundingClientRect().width))
     }
   }, [buttonRef.current])
 
@@ -69,9 +71,9 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
     <StyledExpandableSpacer
       borderWidth={borderWidth}
       level={item.level}
-      spacing={left}
+      spacing={spacing}
       distance={distance}>
-      <Content >{!(!item.children && left !== 0) &&
+      <Content >{!(!item.children && spacing !== 0) &&
         <div ref={buttonRef}>{button}</div>
       }{children}</Content>
     </StyledExpandableSpacer>
