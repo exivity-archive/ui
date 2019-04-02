@@ -11,6 +11,10 @@ exports[`Storyshots atoms|Icon default 1`] = `
   text-transform: none;
 }
 
+.c2 svg {
+  vertical-align: middle;
+}
+
 .c3 .c1 {
   font-size: 1.5em;
   margin-right: 0.625em;

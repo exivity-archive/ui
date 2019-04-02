@@ -1,4 +1,4 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState } from 'react'
+import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref } from 'react'
 import styled, { css } from 'styled-components'
 import { animated } from 'react-spring'
 
@@ -28,6 +28,7 @@ export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttri
   value?: string | number
   onChange?: OnChange
   required?: boolean
+  ref?: React.RefObject<HTMLInputElement> | null
 }
 
 interface Props extends InputProps {
@@ -114,10 +115,11 @@ const StyledInput = styled.input`
 const AnimatedStyledInput = animated(StyledInput)
 
 export const AbstractInput =
-  ({ type, onChange, ...rest }: Props) => {
+  forwardRef(({ type, onChange, ...rest }: Props, ref: Ref<HTMLInputElement>) => {
     const [valid, setValid] = useState(true)
     return <AnimatedStyledInput
       type={type || 'text'}
+      ref={ref}
       danger={!valid}
       onChange={(event) => {
         onChange && onChange(event.target.value, event)
@@ -125,4 +127,4 @@ export const AbstractInput =
       }}
       {...rest}
     />
-  }
+  })

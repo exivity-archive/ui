@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { forwardRef, Ref } from 'react'
 import { AbstractInput, InputProps } from '../AbstractInput/AbstractInput'
 
-export const TextInput = (props: InputProps) => (
-  <AbstractInput type='text' {...props} />
-)
+export const TextInput = forwardRef((props: InputProps, ref: Ref<HTMLInputElement>) => (
+  <AbstractInput type='text' {...props} ref={ref} />
+))

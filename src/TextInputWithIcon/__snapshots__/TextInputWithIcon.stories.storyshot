@@ -254,6 +254,10 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c8 {
   height: 1em;
   line-height: 1em;
@@ -261,6 +265,10 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
   position: absolute;
   font-size: 20px;
   left: 0.5em;
+}
+
+.c8 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -603,6 +611,10 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c8 {
   height: 1em;
   line-height: 1em;
@@ -611,6 +623,10 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
   font-size: 20px;
   cursor: not-allowed;
   left: 0.5em;
+}
+
+.c8 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -954,6 +970,10 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c8 {
   height: 1em;
   line-height: 1em;
@@ -961,6 +981,10 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
   position: absolute;
   font-size: 20px;
   left: 0.5em;
+}
+
+.c8 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -1664,6 +1688,10 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   right: 0.5em;
 }
 
+.c7 svg {
+  vertical-align: middle;
+}
+
 .c16 {
   height: 1em;
   line-height: 1em;
@@ -1671,6 +1699,10 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
   position: absolute;
   font-size: 20px;
   left: 0.5em;
+}
+
+.c16 svg {
+  vertical-align: middle;
 }
 
 .c2 {
@@ -2580,6 +2612,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   right: 0.5em;
 }
 
+.c8 svg {
+  vertical-align: middle;
+}
+
 .c13 {
   height: 1em;
   line-height: 1em;
@@ -2587,6 +2623,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   position: absolute;
   font-size: 20px;
   left: 0.5em;
+}
+
+.c13 svg {
+  vertical-align: middle;
 }
 
 .c6 {
@@ -2598,6 +2638,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c10 {
   height: 1em;
   line-height: 1em;
@@ -2605,6 +2649,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   position: absolute;
   font-size: 23.75px;
   right: 0.5em;
+}
+
+.c10 svg {
+  vertical-align: middle;
 }
 
 .c12 {
@@ -2616,6 +2664,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   left: 0.5em;
 }
 
+.c12 svg {
+  vertical-align: middle;
+}
+
 .c14 {
   height: 1em;
   line-height: 1em;
@@ -2623,6 +2675,10 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
   position: absolute;
   font-size: 23.75px;
   left: 0.5em;
+}
+
+.c14 svg {
+  vertical-align: middle;
 }
 
 .c1 {

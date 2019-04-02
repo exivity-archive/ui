@@ -246,6 +246,10 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c2 {
   background-color: #fff;
   border-color: transparent;
@@ -553,6 +557,10 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
   right: 0.5em;
 }
 
+.c6 svg {
+  vertical-align: middle;
+}
+
 .c2 {
   background-color: #fff;
   border-color: transparent;
@@ -841,6 +849,10 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
   position: absolute;
   font-size: 20px;
   right: 0.5em;
+}
+
+.c6 svg {
+  vertical-align: middle;
 }
 
 .c2 {
@@ -1140,6 +1152,10 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
   position: absolute;
   font-size: 20px;
   right: 0.5em;
+}
+
+.c6 svg {
+  vertical-align: middle;
 }
 
 .c2 {

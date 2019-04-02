@@ -6,7 +6,7 @@ import { storiesOf } from '@storybook/react'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
-import { ExpandableSpacer, distanceBetweenEvenLevelItem } from './ExpandableSpacer'
+import { ExpandableSpacer } from './ExpandableSpacer'
 
 import { StyledList } from '../SelectList/SelectList'
 import { ListFocus } from '../ListFocus'
@@ -17,19 +17,19 @@ import { Icon } from '../Icon'
 const getParent = (item: FakeRecord) => item.parentId
 
 export default storiesOf('helpers|useExpandable', module)
-  .add('default', () => <ExpandableList expandedKeys={[]}/>)
-  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+  .add('default', () => <ExpandableList expandedKeys={[]} />)
+  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']} />)
 
 const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
 
   return (
     <ListFocus>
-      <StyledList height={800} width={800} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+      <StyledList height={800} width={850} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
         innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
-    </ListFocus>
+    </ListFocus >
   )
 }
 
@@ -41,32 +41,26 @@ const SpaceBetween = styled.div`
   margin-left: 20px;
   width: 100%;
 `
-
 interface ItemProps {
   data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>],
   index: number,
   style: object
 }
-
 const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const [items, helpers] = data
   const item = items[index]
-
-  const button = (item.children ?
-    <Button round small success={!item.expanded} danger={item.expanded} onClick={item.expand}>
-      <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
+  const button = (
+    <Button round success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+      <Icon>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon>
     </Button>
-      : null
   )
-
   return useMemo(() => {
     return (
       <ListItem style={style}>
         <ExpandableSpacer
-          level={item.attributes.level}
+          data={items}
           button={button}
-          index={index}
-          distance={distanceBetweenEvenLevelItem(items, index)}>
+          index={index}>
           <SpaceBetween>
             {item.value}
             {!item.expanded && item.children &&

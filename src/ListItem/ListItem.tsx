@@ -49,7 +49,7 @@ interface ListItemProps extends HtmlHTMLAttributes<HTMLLIElement> {
 }
 
 export const ListItem: React.FC<ListItemProps> = ({ children, focusable = true, ...rest }) => (
-  <StyledLi {...rest} onMouseOver={focusElement} tabIndex={focusable ? -1 : undefined}>
+  <StyledLi data-test='list-item' {...rest} onMouseOver={focusElement} tabIndex={focusable ? -1 : undefined}>
     <StyledInnerItem>
       {children}
     </StyledInnerItem>

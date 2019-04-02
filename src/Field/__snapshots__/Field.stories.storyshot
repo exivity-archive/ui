@@ -1015,6 +1015,10 @@ exports[`Storyshots interact|Field multiple 1`] = `
   right: 0.5em;
 }
 
+.c13 svg {
+  vertical-align: middle;
+}
+
 .c10[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -1218,6 +1222,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
                   >
                     <li
                       className="c17"
+                      data-test="list-item"
                       onClick={[Function]}
                       onMouseOver={[Function]}
                       style={

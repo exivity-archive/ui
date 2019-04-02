@@ -18,6 +18,10 @@ exports[`Storyshots molecules|Group default 1`] = `
   width: 0;
 }
 
+.c7 svg {
+  vertical-align: middle;
+}
+
 .c8 {
   font-family: 'Fira Sans',sans-serif;
 }
@@ -186,8 +190,12 @@ input.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
+}
+
+.c6 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -202,7 +210,7 @@ input.c3 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 }
 
 .c4 {
@@ -214,6 +222,7 @@ input.c3 {
 }
 
 .c2 h1 {
+  white-space: nowrap;
   color: #999;
 }
 
@@ -234,7 +243,7 @@ input.c3 {
         className="c3"
         type="header"
       >
-        Configuration
+        Global options
       </h1>
     </div>
     <hr
@@ -466,8 +475,12 @@ input.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
+}
+
+.c6 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -482,7 +495,7 @@ input.c3 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 }
 
 .c4 {
@@ -494,6 +507,7 @@ input.c3 {
 }
 
 .c2 h1 {
+  white-space: nowrap;
   color: #999;
 }
 
@@ -623,6 +637,10 @@ exports[`Storyshots molecules|Group x-inverted 1`] = `
   user-select: none;
   font-size: 22px;
   width: 0;
+}
+
+.c4 svg {
+  vertical-align: middle;
 }
 
 .c8 {
@@ -793,8 +811,12 @@ input.c7 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
+}
+
+.c3 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -809,7 +831,7 @@ input.c7 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 }
 
 .c5 {
@@ -821,6 +843,7 @@ input.c7 {
 }
 
 .c6 h1 {
+  white-space: nowrap;
   color: #999;
 }
 
@@ -906,6 +929,10 @@ exports[`Storyshots molecules|Group y-inverted 1`] = `
   user-select: none;
   font-size: 22px;
   width: 0;
+}
+
+.c8 svg {
+  vertical-align: middle;
 }
 
 .c1 {
@@ -1076,8 +1103,12 @@ input.c4 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 30px;
+}
+
+.c7 svg {
+  vertical-align: middle;
 }
 
 .c2 {
@@ -1092,7 +1123,7 @@ input.c4 {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
 }
 
 .c5 {
@@ -1104,6 +1135,7 @@ input.c4 {
 }
 
 .c3 h1 {
+  white-space: nowrap;
   color: #999;
 }
 
