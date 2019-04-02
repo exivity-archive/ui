@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, useRef, useEffect, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
 
 import { fromTheme, hexToString, StyledProps } from '../utils/styled'
@@ -47,15 +47,56 @@ interface WidgetHeaderProps extends StyledWidgetHeaderProps, HeadingProps {
   editable?: boolean
   initialEdit?: boolean
   onChange?: (newValue: string) => void
+  test?: string
   children: string
 }
 
-const WidgetHeader: FC<WidgetHeaderProps> = ({ padding = false, type, editable, initialEdit = false, onChange, children }) => {
+const WidgetHeader: FC<WidgetHeaderProps> = ({
+  padding = false,
+  type,
+  editable,
+  initialEdit = false,
+  onChange,
+  children,
+  test = 'widget-header'
+}) => {
   const [edit, setEdit] = useState(initialEdit)
+  const [buttonTabIndex, setButtonTabIndex] = useState<0 | -1>(0)
+  const textInputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    textInputRef.current && textInputRef.current.focus()
+    setButtonTabIndex(-1)
+  }, [edit])
+
+  function onKeyDown (e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === 'Enter' || e.key === 'Tab') {
+      setEdit(false)
+      setTimeout(() => setButtonTabIndex(0), 500)
+    }
+  }
+
   return (
-    <StyledWidgetHeader padding={padding}>
-      <Heading type={type}>{!edit ? children : <TitleInput><TextInput value={children} onChange={onChange} /></TitleInput>}
-        {editable && <EditButton round tiny outlined onClick={() => setEdit(!edit)}><MdEdit /></EditButton>}</Heading>
+    <StyledWidgetHeader padding={padding}
+      data-test={test}>
+      <Heading type={type}>
+        {edit ? (
+          <TitleInput>
+            <TextInput ref={textInputRef}
+              onKeyDown={onKeyDown}
+              value={children}
+              onChange={onChange} data-test={test + '-input'} />
+          </TitleInput>
+        ) : children}
+        {editable && (
+          <EditButton tabIndex={buttonTabIndex}
+            round tiny outlined
+            onClick={() => setEdit(!edit)}
+            data-test={test + '-button'}>
+            <MdEdit />
+          </EditButton>
+        )}
+      </Heading>
     </StyledWidgetHeader >
   )
 }
@@ -67,12 +108,13 @@ interface WidgetSubComponents {
 interface WidgetProps extends StyledProps {
   header?: string
   noPadding?: boolean
+  test?: string
 }
 
 type WidgetComponent = FC<WidgetProps> & WidgetSubComponents
 
-export const Widget: WidgetComponent = ({ children, header, noPadding }) => (
-  <StyledWidget noPadding={noPadding}>
+export const Widget: WidgetComponent = ({ children, header, noPadding, test = 'widget' }) => (
+  <StyledWidget noPadding={noPadding} data-test={test}>
     {header && (
       <Widget.Header padding={noPadding}>
         {header}

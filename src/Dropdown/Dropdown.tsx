@@ -101,7 +101,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
         {triggerComponent}
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
           width={useTriggerComponentWidth ? triggerWidth : undefined}
-          data-test='dropdown-content'
+          data-test={`${test}-content`}
           ref={contentRef}
           position={position}
           open={open}>
