@@ -47,10 +47,19 @@ interface WidgetHeaderProps extends StyledWidgetHeaderProps, HeadingProps {
   editable?: boolean
   initialEdit?: boolean
   onChange?: (newValue: string) => void
+  test?: string
   children: string
 }
 
-const WidgetHeader: FC<WidgetHeaderProps> = ({ padding = false, type, editable, initialEdit = false, onChange, children }) => {
+const WidgetHeader: FC<WidgetHeaderProps> = ({
+  padding = false,
+  type,
+  editable,
+  initialEdit = false,
+  onChange,
+  children,
+  test = 'widget-header'
+}) => {
   const [edit, setEdit] = useState(initialEdit)
   const [buttonTabIndex, setButtonTabIndex] = useState<0 | -1>(0)
   const textInputRef = useRef<HTMLInputElement>(null)
@@ -68,20 +77,22 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({ padding = false, type, editable, 
   }
 
   return (
-    <StyledWidgetHeader padding={padding}>
+    <StyledWidgetHeader padding={padding}
+      data-test={test}>
       <Heading type={type}>
         {edit ? (
           <TitleInput>
             <TextInput ref={textInputRef}
               onKeyDown={onKeyDown}
               value={children}
-              onChange={onChange} />
+              onChange={onChange} data-test={test + '-input'} />
           </TitleInput>
         ) : children}
         {editable && (
           <EditButton tabIndex={buttonTabIndex}
             round tiny outlined
-            onClick={() => setEdit(!edit)}>
+            onClick={() => setEdit(!edit)}
+            data-test={test + '-button'}>
             <MdEdit />
           </EditButton>
         )}
