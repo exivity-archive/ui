@@ -78,6 +78,7 @@ input.c3 {
   >
     <div
       className="c2"
+      data-test="widget-header"
     >
       <h1
         className="c3"
@@ -283,6 +284,7 @@ input.c3 {
   >
     <div
       className="c2"
+      data-test="widget-header"
     >
       <h1
         className="c3"
@@ -291,6 +293,7 @@ input.c3 {
         Edit me
         <button
           className="c4 c5"
+          data-test="widget-header-button"
           onClick={[Function]}
           tabIndex={-1}
         >
@@ -568,6 +571,7 @@ input.c3 {
   >
     <div
       className="c2"
+      data-test="widget-header"
     >
       <h1
         className="c3"
@@ -578,6 +582,7 @@ input.c3 {
         >
           <input
             className="c5"
+            data-test="widget-header-input"
             onChange={[Function]}
             onKeyDown={[Function]}
             type="text"
@@ -586,6 +591,7 @@ input.c3 {
         </div>
         <button
           className="c6 c7"
+          data-test="widget-header-button"
           onClick={[Function]}
           tabIndex={-1}
         >
@@ -704,6 +710,7 @@ input.c3 {
   >
     <div
       className="c2"
+      data-test="widget-header"
     >
       <h1
         className="c3"
