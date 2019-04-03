@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -14,6 +14,7 @@ import {
 } from './helpers'
 
 import { fromTheme } from '../utils/styled'
+import { useEdgeAvoidingLayout } from '../useEdgeAvoidingLayout'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -68,41 +69,36 @@ export const Dropdown: React.FC<DropdownProps> = ({
   test = 'dropdown',
   ...blockProps
 }) => {
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState<string>('')
-
-  const handlePosition = () => {
-    if (dropdownRef.current && contentRef.current) {
-      const layout: Layout = { horizontal, vertical }
-      const rects: Rects = {
-        inner: contentRef.current.getBoundingClientRect(),
-        outer: dropdownRef.current.getBoundingClientRect()
-      }
-      const position = getPosition(rects, layout, breakDistance)
-      setPosition(makeCssPosition(position))
-    }
-  }
+  const [refs, handleLayout, layout] = useEdgeAvoidingLayout<HTMLDivElement, HTMLDivElement>(
+    breakDistance, { horizontal, vertical }
+  )
 
   useEffect(() => {
-    window.addEventListener('resize', handlePosition)
-    return () => window.removeEventListener('resize', handlePosition)
+    window.addEventListener('resize', handleLayout)
+    return () => window.removeEventListener('resize', handleLayout)
   }, [])
 
-  useLayoutEffect(handlePosition, [])
+  useLayoutEffect(handleLayout, [])
 
-  const triggerWidth = dropdownRef.current
-    ? `${dropdownRef.current.clientWidth}px`
+  const triggerWidth = refs.parent.current
+    ? `${refs.parent.current.clientWidth}px`
     : undefined
 
+  const position = useMemo(() => {
+    if (refs.parent.current) {
+      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
+    }
+    return ''
+  }, [layout.vertical, layout.horizontal])
+
   return (
-    <StyledDropdown className={className} data-test={test} ref={dropdownRef}>
+    <StyledDropdown className={className} data-test={test} ref={refs.parent}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
           width={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test={`${test}-content`}
-          ref={contentRef}
+          ref={refs.target}
           position={position}
           open={open}>
           <Block {...blockProps}>

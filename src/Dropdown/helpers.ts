@@ -51,11 +51,7 @@ export function getPosition (rects: Rects, layout: Layout, breakDistance: number
   }
 }
 
-export function makeCssPosition ({ top, right, bottom, left }: Position) {
-  let css = ''
-  if (top) css += `bottom: ${top}px;\n` + 'margin-top: 5px;\n'
-  if (right) css += `right: 0px;\n`
-  if (bottom) css += `top: ${bottom}px;\n` + 'margin-bottom: 5px;\n'
-  if (left) css += `left: 0px;\n`
-  return css
-}
+export const makeCssPosition = ({ horizontal, vertical }: Layout, height: number) =>
+  `${vertical}: ${height}px;\n`
+  + `margin-${vertical}: 5px;\n`
+  + `${horizontal}: 0px;\n`
