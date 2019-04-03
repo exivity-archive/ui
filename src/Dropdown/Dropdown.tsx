@@ -5,16 +5,12 @@ import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
 import {
-  getPosition,
-  Vertical,
-  Horizontal,
-  Layout,
-  Rects,
   makeCssPosition
 } from './helpers'
 
 import { fromTheme } from '../utils/styled'
 import { useEdgeAvoidingLayout } from '../useEdgeAvoidingLayout'
+import { Vertical, Horizontal } from '../useEdgeAvoidingLayout/helpers'
 
 const StyledDropdown = styled.div`
   position: relative;
