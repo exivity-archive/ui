@@ -1,46 +1,26 @@
-import React, { useRef, useState, RefObject } from 'react'
-import { Layout, getLayout, AutoLayout, BreakDistances } from './helpers'
-
-interface Refs<
-  TargetElement extends HTMLElement,
-  ContainerElement extends HTMLElement
-  > {
-  target: RefObject<TargetElement>
-  parent: RefObject<ContainerElement>
-}
+import React, { useRef, useState, useMemo } from 'react'
+import { Layout, getLayout, AutoLayout, BreakDistance, Refs } from './helpers'
 
 export function useEdgeAvoidingLayout<
-  TargetElement extends HTMLElement = HTMLElement,
-  ContainerElement extends HTMLElement = HTMLElement
+  TargetElement extends HTMLElement = HTMLDivElement,
+  ParentElement extends HTMLElement = HTMLDivElement,
+  ContainerElement extends HTMLElement = HTMLDivElement
 > (
-  breakDistances: BreakDistances | number,
-  initialLayout: AutoLayout = { horizontal: 'auto', vertical: 'auto' }
-): [Refs<TargetElement, ContainerElement>, () => void, Layout] {
+  breakDistances: BreakDistance | number,
+  initialLayout: AutoLayout = { vertical: 'auto', horizontal: 'auto' }
+): [Refs<TargetElement, ParentElement, ContainerElement>, Layout, () => void] {
 
   const refs = {
     target: useRef<TargetElement>(null),
-    parent: useRef<ContainerElement>(null)
+    parent: useRef<ParentElement>(null),
+    container: useRef<ContainerElement>(null)
   }
 
   const [layout, setLayout] = useState<Layout>({ horizontal: 'left', vertical: 'top' })
 
-  const handleLayout = () => {
-    if (refs.target.current && refs.parent.current) {
+  return useMemo<[Refs<TargetElement, ParentElement, ContainerElement>, Layout, () => void]>(() => {
+    const handleLayout = () => setLayout(getLayout(refs, breakDistances, initialLayout))
 
-      const rects = {
-        inner: refs.target.current.getBoundingClientRect(),
-        outer: refs.parent.current.getBoundingClientRect()
-      }
-
-      breakDistances = typeof breakDistances === 'number' ? {
-        horizontal: breakDistances,
-        vertical: breakDistances
-      } : breakDistances
-
-      const newLayout = getLayout(rects, initialLayout, breakDistances)
-      setLayout(newLayout)
-    }
-  }
-
-  return [refs, handleLayout, layout]
+    return [refs, layout, handleLayout]
+  }, [layout.horizontal, layout.vertical])
 }

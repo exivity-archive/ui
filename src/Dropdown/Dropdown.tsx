@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState, useMemo } from 'react'
+import React, { useEffect, useLayoutEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -9,8 +9,7 @@ import {
 } from './helpers'
 
 import { fromTheme } from '../utils/styled'
-import { useEdgeAvoidingLayout } from '../useEdgeAvoidingLayout'
-import { Vertical, Horizontal } from '../useEdgeAvoidingLayout/helpers'
+import { useEdgeAvoidingLayout, Vertical, Horizontal, BreakDistance } from '../useEdgeAvoidingLayout'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -21,7 +20,7 @@ interface ContentProps {
   open: boolean
   useTriggerComponentWidth?: boolean
   width?: string
-  position: string
+  position?: string
 }
 
 const Content = styled.div <ContentProps>`
@@ -37,7 +36,7 @@ const Content = styled.div <ContentProps>`
   `}
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  ${({ position }) => `${position}`}
+  ${({ position }) => css`${position}`}
 `
 
 export interface DropdownProps extends BlockProps {
@@ -46,7 +45,7 @@ export interface DropdownProps extends BlockProps {
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
-  breakDistance?: number
+  breakDistance?: BreakDistance
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
   test?: string
@@ -65,9 +64,15 @@ export const Dropdown: React.FC<DropdownProps> = ({
   test = 'dropdown',
   ...blockProps
 }) => {
-  const [refs, handleLayout, layout] = useEdgeAvoidingLayout<HTMLDivElement, HTMLDivElement>(
+  const [refs, layout, handleLayout] = useEdgeAvoidingLayout<HTMLDivElement, HTMLDivElement>(
     breakDistance, { horizontal, vertical }
   )
+
+  const position = useMemo(() => {
+    if (refs.parent.current) {
+      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
+    }
+  }, [layout])
 
   useEffect(() => {
     window.addEventListener('resize', handleLayout)
@@ -79,13 +84,6 @@ export const Dropdown: React.FC<DropdownProps> = ({
   const triggerWidth = refs.parent.current
     ? `${refs.parent.current.clientWidth}px`
     : undefined
-
-  const position = useMemo(() => {
-    if (refs.parent.current) {
-      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
-    }
-    return ''
-  }, [layout.vertical, layout.horizontal])
 
   return (
     <StyledDropdown className={className} data-test={test} ref={refs.parent}>
