@@ -1,13 +1,13 @@
 import { RefObject } from 'react'
 
 export interface Refs<
-  TargetElement extends HTMLElement = HTMLElement,
-  ParentElement extends HTMLElement = HTMLElement,
-  ContainerElement extends HTMLElement = HTMLElement
+  Target extends HTMLElement = HTMLElement,
+  Parent extends HTMLElement = HTMLElement,
+  Container extends HTMLElement = HTMLElement
   > {
-  target: RefObject<TargetElement>
-  parent: RefObject<ParentElement>
-  container: RefObject<ContainerElement>
+  target: RefObject<Target>
+  parent: RefObject<Parent>
+  container: RefObject<Container>
 }
 
 export type Vertical = 'top' | 'bottom'
