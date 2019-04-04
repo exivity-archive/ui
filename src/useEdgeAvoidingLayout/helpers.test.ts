@@ -50,25 +50,11 @@ test('getMeasures throws an error if either or both parent or target is null', (
   const target = makeRect({ height: 40, width: 20 })
   const parent = makeRect({ top: 100, left: 200 })
 
-  let errorCount = 0
-  try {
-    // @ts-ignore
-    getMeasures(null, parent)
-  } catch {
-    errorCount++
-  }
-  try {
-    // @ts-ignore
-    getMeasures(target, null)
-  } catch {
-    errorCount++
-  }
-  try {
-    getMeasures(null, null)
-  } catch {
-    errorCount++
-  }
-  expect(errorCount).toBe(3)
+  // @ts-ignore
+  expect(getMeasures(null, parent)).toMatchObject({ width: 0, height: 0, left: 0, top: 0 })
+  // @ts-ignore
+  expect(getMeasures(target, null)).toMatchObject({ width: 0, height: 0, left: 0, top: 0 })
+  expect(getMeasures(null, null)).toMatchObject({ width: 0, height: 0, left: 0, top: 0 })
 })
 
 test('getLayout returns left and top if element hasn\'t crossed any edges', () => {

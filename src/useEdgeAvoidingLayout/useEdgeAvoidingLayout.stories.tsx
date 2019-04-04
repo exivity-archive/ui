@@ -1,10 +1,9 @@
 import React, { FC, useEffect, useLayoutEffect, useMemo } from 'react'
-import Faker from 'faker'
 
 import { storiesOf } from '@storybook/react'
 
 import { useEdgeAvoidingLayout } from '.'
-import { BreakDistances, AutoLayout } from './helpers'
+import { BreakDistance, AutoLayout } from './helpers'
 
 import { Flex } from '../Flex'
 
@@ -21,7 +20,7 @@ export default storiesOf('helpers|useEdgeAvoidingLayout', module)
   .add('documentation', () => <Markdown>{ensureString(useEdgeAvoidingLayoutDocs)}</Markdown>)
 
 interface DropdownProps {
-  breakDistances: number | BreakDistances,
+  breakDistances: number | BreakDistance,
   initialLayout?: AutoLayout,
   relativeToContainer?: boolean
 }

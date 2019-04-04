@@ -55,7 +55,7 @@ export function getMeasures (target: HTMLElement | null, parent: HTMLElement | n
 
     return { width, height, top, left }
   } else {
-    throw new Error('target and parent refs should always be given to elements')
+    return { width: 0, height: 0, top: 0, left: 0 }
   }
 }
 

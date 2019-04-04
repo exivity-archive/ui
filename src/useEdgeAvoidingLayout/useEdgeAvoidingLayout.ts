@@ -7,7 +7,7 @@ export function useEdgeAvoidingLayout<
   ContainerElement extends HTMLElement = HTMLDivElement
 > (
   breakDistances: BreakDistance | number,
-  initialLayout: AutoLayout = { vertical: 'auto', horizontal: 'auto' }
+  initialLayout?: AutoLayout
 ): [Refs<TargetElement, ParentElement, ContainerElement>, Layout, () => void] {
 
   const refs = {
