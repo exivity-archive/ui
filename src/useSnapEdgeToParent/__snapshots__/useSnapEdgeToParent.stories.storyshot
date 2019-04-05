@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots helpers|useSnapEdgeToParent default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  height: 500px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+  >
+    <div
+      style={
+        Object {
+          "background": "cyan",
+          "height": 20,
+          "position": "relative",
+          "width": 200,
+        }
+      }
+    >
+      Parent
+      <div
+        style={
+          Object {
+            "background": "green",
+            "height": 200,
+            "left": 0,
+            "position": "absolute",
+            "top": 20,
+            "width": 300,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots helpers|useSnapEdgeToParent different break distances 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  height: 500px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+  >
+    <div
+      style={
+        Object {
+          "background": "cyan",
+          "height": 20,
+          "position": "relative",
+          "width": 200,
+        }
+      }
+    >
+      Parent
+      <div
+        style={
+          Object {
+            "background": "green",
+            "height": 200,
+            "left": 0,
+            "position": "absolute",
+            "top": 20,
+            "width": 300,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots helpers|useSnapEdgeToParent documentation 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Storyshots helpers|useSnapEdgeToParent fixed orientation 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  height: 500px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+  >
+    <div
+      style={
+        Object {
+          "background": "cyan",
+          "height": 20,
+          "position": "relative",
+          "width": 200,
+        }
+      }
+    >
+      Parent
+      <div
+        style={
+          Object {
+            "background": "green",
+            "bottom": 20,
+            "height": 200,
+            "left": 0,
+            "position": "absolute",
+            "width": 300,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots helpers|useSnapEdgeToParent relative to container 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  height: 500px;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    height={500}
+  >
+    <div
+      style={
+        Object {
+          "background": "cyan",
+          "height": 20,
+          "position": "relative",
+          "width": 200,
+        }
+      }
+    >
+      Parent
+      <div
+        style={
+          Object {
+            "background": "green",
+            "height": 200,
+            "left": 0,
+            "position": "absolute",
+            "top": 20,
+            "width": 300,
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

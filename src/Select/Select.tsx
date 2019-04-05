@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { SelectInput } from '../SelectInput'
 import { Dropdown } from '../Dropdown'
 import { BlockProps } from '../Block'
-import { Vertical, Horizontal } from '../useEdgeAvoidingLayout'
+import { Vertical, Horizontal } from '../useSnapEdgeToParent'
 
 interface InjectValueAndHandler {
   name?: string

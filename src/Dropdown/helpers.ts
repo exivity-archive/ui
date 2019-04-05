@@ -1,4 +1,4 @@
-import { Layout } from '../useEdgeAvoidingLayout/helpers'
+import { Layout } from '../useSnapEdgeToParent'
 
 export const makeCssPosition = ({ horizontal, vertical }: Layout, height: number) =>
   `${vertical}: ${height}px;\n`
