@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo } from 'react'
+import { useRef, useState, useMemo, useLayoutEffect } from 'react'
 import { Layout, getLayout, AutoLayout, BreakDistance, Refs } from './helpers'
 
 export function useSnapEdgeToParent<
@@ -18,9 +18,11 @@ export function useSnapEdgeToParent<
 
   const [layout, setLayout] = useState<Layout>({ horizontal: 'left', vertical: 'top' })
 
-  return useMemo<[Refs<Target, Parent, Container>, Layout, () => void]>(() => {
-    const handleLayout = () => setLayout(getLayout(refs, breakDistances, initialLayout))
+  const handleLayout = () => setLayout(getLayout(refs, breakDistances, initialLayout))
 
+  useLayoutEffect(handleLayout, [])
+
+  return useMemo<[Refs<Target, Parent, Container>, Layout, () => void]>(() => {
     return [refs, layout, handleLayout]
   }, [layout.horizontal, layout.vertical])
 }

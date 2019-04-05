@@ -64,22 +64,18 @@ export const Dropdown: React.FC<DropdownProps> = ({
   test = 'dropdown',
   ...blockProps
 }) => {
-  const [refs, layout, handleLayout] = useSnapEdgeToParent<HTMLDivElement, HTMLDivElement>(
-    breakDistance, { horizontal, vertical }
-  )
-
-  const position = useMemo(() => {
-    if (refs.parent.current) {
-      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
-    }
-  }, [layout])
+  const [refs, layout, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
   useEffect(() => {
     window.addEventListener('resize', handleLayout)
     return () => window.removeEventListener('resize', handleLayout)
   }, [])
 
-  useLayoutEffect(handleLayout, [])
+  const position = useMemo(() => {
+    if (refs.parent.current) {
+      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
+    }
+  }, [layout])
 
   const triggerWidth = refs.parent.current
     ? `${refs.parent.current.clientWidth}px`
