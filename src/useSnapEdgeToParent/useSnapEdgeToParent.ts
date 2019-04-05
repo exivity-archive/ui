@@ -1,7 +1,7 @@
-import React, { useRef, useState, useMemo } from 'react'
+import { useRef, useState, useMemo } from 'react'
 import { Layout, getLayout, AutoLayout, BreakDistance, Refs } from './helpers'
 
-export function useEdgeAvoidingLayout<
+export function useSnapEdgeToParent<
   Target extends HTMLElement = HTMLDivElement,
   Parent extends HTMLElement = HTMLDivElement,
   Container extends HTMLElement = HTMLDivElement

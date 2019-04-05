@@ -1,10 +1,10 @@
-# useEdgeAvoidingLayout
+# useSnapEdgeToParent
 
-useEdgeAvoidingLayout is a hook that can be used to make a component avoid defined edges.
+useSnapEdgeToParent is a hook that can be used to make a component avoid defined edges.
 
 ## Example
 
- `const [refs, layout, handleLayout] = useEdgeAvoidingLayout<TargetElement, ParentElement, ContainerElement>(breakDistances, initialLayout)`
+ `const [refs, layout, handleLayout] = useSnapEdgeToParent<TargetElement, ParentElement, ContainerElement>(breakDistances, initialLayout)`
 
 ## Parameters
 

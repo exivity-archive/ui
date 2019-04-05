@@ -9,7 +9,7 @@ import {
 } from './helpers'
 
 import { fromTheme } from '../utils/styled'
-import { useEdgeAvoidingLayout, Vertical, Horizontal, BreakDistance } from '../useEdgeAvoidingLayout'
+import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -64,7 +64,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   test = 'dropdown',
   ...blockProps
 }) => {
-  const [refs, layout, handleLayout] = useEdgeAvoidingLayout<HTMLDivElement, HTMLDivElement>(
+  const [refs, layout, handleLayout] = useSnapEdgeToParent<HTMLDivElement, HTMLDivElement>(
     breakDistance, { horizontal, vertical }
   )
 
