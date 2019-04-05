@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useLayoutEffect, useMemo } from 'react'
+import React, { FC, useEffect, useMemo } from 'react'
 
 import { storiesOf } from '@storybook/react'
 
