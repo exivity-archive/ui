@@ -11,7 +11,7 @@ import {
 import { Icon } from '../Icon'
 
 const GroupIcon = styled(Icon)`
-  margin-top: 5px;
+  margin-top: -7px;
   font-size: 30px;
 `
 
@@ -35,13 +35,14 @@ const GroupSeparator = styled.hr`
   height: 1px;
   background-color: ${fromTheme(theme => theme.colors.lightGray)};
   border: 0;
-  margin: 20px 20px;
+  margin: 12px 10px;
 `
 
 const StyledGroupTitle = styled.div`
   h1 {
     white-space: nowrap;
     color: ${fromTheme(theme => theme.colors.gray)};
+    font-size: 1em;
   }
 `
 
