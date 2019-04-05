@@ -31,8 +31,6 @@ const Dropdown: FC<DropdownProps> = ({ breakDistances, initialLayout, relativeTo
     return { [layout.horizontal]: 0, [layout.vertical]: 20 }
   }, [layout])
 
-  useLayoutEffect(handleLayout, [])
-
   useEffect(() => {
     window.addEventListener('resize', handleLayout)
     return () => window.removeEventListener('resize', handleLayout)
@@ -40,10 +38,11 @@ const Dropdown: FC<DropdownProps> = ({ breakDistances, initialLayout, relativeTo
 
   return (
     <Flex
-      justifyContent={relativeToContainer ? 'flex-end' : 'center'}
-      alignItems={relativeToContainer ? 'flex-end' : 'center'}
+      justifyContent='center'
+      alignItems='center'
       bg={relativeToContainer ? 'lightgray' : 'white'}
       height={500}
+      width='80%'
       ref={relativeToContainer ? refs.container : undefined}>
       <div style={{ width: 200, height: 20, background: 'cyan', position: 'relative' }} ref={refs.parent}>
         Parent
