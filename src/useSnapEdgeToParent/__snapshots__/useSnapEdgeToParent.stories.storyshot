@@ -6,6 +6,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent default 1`] = `
 }
 
 .c1 {
+  width: 80%;
   height: 500px;
   background-color: #fff;
   display: -webkit-box;
@@ -28,6 +29,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent default 1`] = `
   <div
     className="c1"
     height={500}
+    width="80%"
   >
     <div
       style={
@@ -63,6 +65,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent different break distances 1`] = 
 }
 
 .c1 {
+  width: 80%;
   height: 500px;
   background-color: #fff;
   display: -webkit-box;
@@ -85,6 +88,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent different break distances 1`] = 
   <div
     className="c1"
     height={500}
+    width="80%"
   >
     <div
       style={
@@ -130,6 +134,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent fixed orientation 1`] = `
 }
 
 .c1 {
+  width: 80%;
   height: 500px;
   background-color: #fff;
   display: -webkit-box;
@@ -152,6 +157,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent fixed orientation 1`] = `
   <div
     className="c1"
     height={500}
+    width="80%"
   >
     <div
       style={
@@ -187,20 +193,21 @@ exports[`Storyshots helpers|useSnapEdgeToParent relative to container 1`] = `
 }
 
 .c1 {
+  width: 80%;
   height: 500px;
   background-color: lightgray;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 <div
@@ -209,6 +216,7 @@ exports[`Storyshots helpers|useSnapEdgeToParent relative to container 1`] = `
   <div
     className="c1"
     height={500}
+    width="80%"
   >
     <div
       style={
