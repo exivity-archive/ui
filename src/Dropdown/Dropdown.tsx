@@ -1,19 +1,15 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
 import {
-  getPosition,
-  Vertical,
-  Horizontal,
-  Layout,
-  Rects,
   makeCssPosition
 } from './helpers'
 
 import { fromTheme } from '../utils/styled'
+import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -24,7 +20,7 @@ interface ContentProps {
   open: boolean
   useTriggerComponentWidth?: boolean
   width?: string
-  position: string
+  position?: string
 }
 
 const Content = styled.div <ContentProps>`
@@ -40,7 +36,7 @@ const Content = styled.div <ContentProps>`
   `}
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
-  ${({ position }) => `${position}`}
+  ${({ position }) => css`${position}`}
 `
 
 export interface DropdownProps extends BlockProps {
@@ -49,7 +45,7 @@ export interface DropdownProps extends BlockProps {
   open: boolean
   vertical?: Vertical
   horizontal?: Horizontal
-  breakDistance?: number
+  breakDistance?: BreakDistance
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
   test?: string
@@ -68,41 +64,31 @@ export const Dropdown: React.FC<DropdownProps> = ({
   test = 'dropdown',
   ...blockProps
 }) => {
-  const dropdownRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [position, setPosition] = useState<string>('')
-
-  const handlePosition = () => {
-    if (dropdownRef.current && contentRef.current) {
-      const layout: Layout = { horizontal, vertical }
-      const rects: Rects = {
-        inner: contentRef.current.getBoundingClientRect(),
-        outer: dropdownRef.current.getBoundingClientRect()
-      }
-      const position = getPosition(rects, layout, breakDistance)
-      setPosition(makeCssPosition(position))
-    }
-  }
+  const [refs, layout, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
   useEffect(() => {
-    window.addEventListener('resize', handlePosition)
-    return () => window.removeEventListener('resize', handlePosition)
+    window.addEventListener('resize', handleLayout)
+    return () => window.removeEventListener('resize', handleLayout)
   }, [])
 
-  useLayoutEffect(handlePosition, [])
+  const position = useMemo(() => {
+    if (refs.parent.current) {
+      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
+    }
+  }, [layout])
 
-  const triggerWidth = dropdownRef.current
-    ? `${dropdownRef.current.clientWidth}px`
+  const triggerWidth = refs.parent.current
+    ? `${refs.parent.current.clientWidth}px`
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test={test} ref={dropdownRef}>
+    <StyledDropdown className={className} data-test={test} ref={refs.parent}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
           width={useTriggerComponentWidth ? triggerWidth : undefined}
-          data-test='dropdown-content'
-          ref={contentRef}
+          data-test={`${test}-content`}
+          ref={refs.target}
           position={position}
           open={open}>
           <Block {...blockProps}>
