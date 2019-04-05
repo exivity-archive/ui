@@ -9,11 +9,11 @@ import {
   createExpandOrCollapseTreeHelpers,
   expandOrCollapseItem,
   hasNoCollapsedParents,
-  disableEnumerable,
   Helpers
 } from './helpers'
 
 import { createMap, Map, ListItem } from '../utils'
+import { disableEnumerable } from '../utils/disableEnumerable'
 
 type ParentKeyAccessor<T> = (mapItem: TreeItem<T>) => string | null
 

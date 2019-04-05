@@ -10,8 +10,7 @@ import {
   collapseFn,
   createExpandOrCollapseTreeHelpers,
   ExpandOrCollapseChildrenOrParents,
-  ExpandOrCollapseTree,
-  disableEnumerable
+  ExpandOrCollapseTree
 } from './helpers'
 
 test(`iterateAllParents iterates recursively over all ${PARENT}`, () => {
@@ -191,7 +190,7 @@ test('expandOrCollapseItemTree expand all children', () => {
 
   const resultSetExpanded = setExpanded.mock.results[0].value
 
-  expect(resultSetExpanded).toEqual(['1','2','4','3'])
+  expect(resultSetExpanded).toEqual(['1', '2', '4', '3'])
 })
 
 test('expandOrCollapseItemTree collapse all parents', () => {
@@ -214,7 +213,7 @@ test('expandOrCollapseItemTree collapse all parents', () => {
 })
 
 test('expandOrCollapseItemTree collapse all children', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
 
   const four = { key: '4' }
   const three = { key: '3' }
@@ -233,7 +232,7 @@ test('expandOrCollapseItemTree collapse all children', () => {
 })
 
 test('createExpandOrCollapseTreeHelpers returns object with collapse.children helper', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
   const setExpanded = jest.fn(result => result)
 
   const four = { key: '4' }
@@ -263,11 +262,11 @@ test('createExpandOrCollapseTreeHelpers returns object with expand.children help
 
   const resultSetExpanded = setExpanded.mock.results[0].value
 
-  expect(resultSetExpanded).toEqual(['1','2','4','3'])
+  expect(resultSetExpanded).toEqual(['1', '2', '4', '3'])
 })
 
 test('createExpandOrCollapseTreeHelpers returns object with collapse.parents helper', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
   const setExpanded = jest.fn(result => result)
 
   const one = { key: '1', [PARENT]: null }
@@ -298,14 +297,4 @@ test('createExpandOrCollapseTreeHelpers returns object with expand.parents helpe
   const resultSetExpanded = setExpanded.mock.results[0].value
 
   expect(resultSetExpanded).toEqual(['4', '3', '2', '1'])
-})
-
-test('disableEnumerable sets property enumerable to false', () => {
-  const obj = { key: '1', test: 'test' }
-
-  disableEnumerable(obj, 'test')
-
-  const newObj = { ...obj }
-
-  expect(newObj.hasOwnProperty('test')).toBe(false)
 })

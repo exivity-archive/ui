@@ -121,10 +121,3 @@ export function expandOrCollapseItemTree<T> (
       : collapseFn(keys, expanded, setExpanded)
   }
 }
-
-export function disableEnumerable (item: object, property: string): void {
-  Object.defineProperty(item, property, {
-    enumerable: false,
-    configurable: true
-  })
-}
