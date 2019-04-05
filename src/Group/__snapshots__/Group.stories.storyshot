@@ -190,7 +190,7 @@ input.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 5px;
+  margin-top: -7px;
   font-size: 30px;
 }
 
@@ -218,12 +218,13 @@ input.c3 {
   height: 1px;
   background-color: #eee;
   border: 0;
-  margin: 20px 20px;
+  margin: 12px 10px;
 }
 
 .c2 h1 {
   white-space: nowrap;
   color: #999;
+  font-size: 1em;
 }
 
 .c38 .c5 {
@@ -475,7 +476,7 @@ input.c3 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 5px;
+  margin-top: -7px;
   font-size: 30px;
 }
 
@@ -503,12 +504,13 @@ input.c3 {
   height: 1px;
   background-color: #eee;
   border: 0;
-  margin: 20px 20px;
+  margin: 12px 10px;
 }
 
 .c2 h1 {
   white-space: nowrap;
   color: #999;
+  font-size: 1em;
 }
 
 .c37 .c5 {
@@ -811,7 +813,7 @@ input.c7 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 5px;
+  margin-top: -7px;
   font-size: 30px;
 }
 
@@ -839,12 +841,13 @@ input.c7 {
   height: 1px;
   background-color: #eee;
   border: 0;
-  margin: 20px 20px;
+  margin: 12px 10px;
 }
 
 .c6 h1 {
   white-space: nowrap;
   color: #999;
+  font-size: 1em;
 }
 
 .c38 .c2 {
@@ -1103,7 +1106,7 @@ input.c4 {
   height: 1em;
   line-height: 1em;
   text-transform: none;
-  margin-top: 5px;
+  margin-top: -7px;
   font-size: 30px;
 }
 
@@ -1131,12 +1134,13 @@ input.c4 {
   height: 1px;
   background-color: #eee;
   border: 0;
-  margin: 20px 20px;
+  margin: 12px 10px;
 }
 
 .c3 h1 {
   white-space: nowrap;
   color: #999;
+  font-size: 1em;
 }
 
 .c38 .c6 {
