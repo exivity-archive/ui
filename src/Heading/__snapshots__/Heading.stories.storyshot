@@ -45,7 +45,7 @@ input.c1 {
     className="c1"
     type="header"
   >
-    Consectetur placeat pariatur molestiae.
+    Voluptate sint et pariatur.
   </h1>
 </div>
 `;
@@ -301,7 +301,7 @@ input.c1:after {
       </svg>
     </span>
      
-    Pariatur illo qui quo.
+    Quidem cupiditate autem veniam.
   </h3>
 </div>
 `;
@@ -352,7 +352,7 @@ input.c1 {
     className="c1"
     type="section"
   >
-    Libero consequuntur nisi voluptatum.
+    Voluptate cupiditate aut aspernatur.
   </h2>
 </div>
 `;
@@ -422,7 +422,7 @@ input.c1:after {
     className="c1"
     type="sub"
   >
-    Voluptatem beatae quidem necessitatibus.
+    Voluptatem ratione voluptatibus esse.
   </h3>
 </div>
 `;

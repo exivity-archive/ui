@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Saepe aut delectus. Dicta quae aliquam minima ea rerum.
+      Ut dolorem earum distinctio nobis quaerat et quas accusamus cum. Est id dolores minus perferendis aliquam rem animi.
     </p>
   </div>
 </div>
@@ -360,7 +360,7 @@ exports[`Storyshots interact|TextInput flat 1`] = `
     <p
       className="c1"
     >
-      Nesciunt totam dignissimos dolores vitae ut dolorem amet velit deserunt.
+      Excepturi rem voluptate.
     </p>
     <section
       className="c2"
@@ -369,13 +369,13 @@ exports[`Storyshots interact|TextInput flat 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="eligendi assumenda sunt quam"
+        value="consequuntur delectus est non"
       />
     </section>
     <p
       className="c1"
     >
-      Eos et quos et deleniti aperiam sed sint facilis. Consequuntur maiores repellendus aut voluptatem magnam ut modi dolorem.
+      Quia ipsa consequatur corrupti ex labore ea tenetur a. Reiciendis laborum earum aut nihil nisi doloremque eveniet voluptate iusto.
     </p>
   </div>
 </div>
@@ -459,16 +459,16 @@ exports[`Storyshots interact|TextInput inline 1`] = `
   <p
     className="c1"
   >
-    ducimus et est necessitatibus
+    expedita pariatur qui magnam
      
     <input
       className="c2"
       onChange={[Function]}
       type="text"
-      value="perspiciatis et eligendi sequi"
+      value="hic dicta ab dignissimos"
     />
      
-    assumenda aut quis harum ea non natus nisi
+    ut sint veritatis et quam blanditiis et nostrum
   </p>
 </div>
 `;
