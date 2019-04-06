@@ -3,14 +3,16 @@ import { FixedSizeList } from 'react-window'
 
 import { storiesOf } from '@storybook/react'
 
-import useDynamicAttribute from '.'
+import { useDynamicAttribute } from '.'
+import { Checkbox } from '../'
 import { FLAT_LIST_TEST_DATA } from './stories/seed'
 
 export default storiesOf('helpers|useDynamicAttribute', module)
-  .add('default', () => <CheckableList />)
+  .add('default', () => <CheckableList initialVal={false} />)
+  .add('initialValueCallback', () => <CheckableList initialVal={item => item.checked} />)
 
-const CheckableList = () => {
-  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', true)
+const CheckableList = ({ initialVal }) => {
+  const data = useDynamicAttribute(FLAT_LIST_TEST_DATA, 'checked', 'setChecked', initialVal)
 
   return (
     <FixedSizeList height={600} width={400} itemSize={50} itemData={data} itemCount={data.length}>
@@ -21,9 +23,8 @@ const CheckableList = () => {
 
 const Item = ({ data, index, style }) => {
   const item = data[index]
-  return (
-    <div key={index} style={style}>
-      {item.value}
-    </div>
-  )
+  return <div key={index} style={style}>
+    {item.value}: <Checkbox checked={item.checked} onChange={item.setChecked}></Checkbox>
+  </div>
+
 }

@@ -1,1 +1,2 @@
-export { useDynamicAttribute as default } from './useDynamicAttribute'
+export { useDynamicAttribute } from './useDynamicAttribute'
+export * from './helpers'
