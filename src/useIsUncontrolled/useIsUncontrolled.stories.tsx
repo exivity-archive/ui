@@ -6,4 +6,4 @@ import { ensureString } from '../utils'
 // @ts-ignore
 import * as useIsUncontrolled from './docs/useIsUncontrolled.md'
 
-storiesOf('helpers|useIsControlled', module).add('default', () => <Markdown>{ensureString(useIsUncontrolled)}</Markdown>)
+storiesOf('helpers|useIsUncontrolled', module).add('documentation', () => <Markdown>{ensureString(useIsUncontrolled)}</Markdown>)
