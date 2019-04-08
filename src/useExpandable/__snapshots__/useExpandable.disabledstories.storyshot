@@ -242,6 +242,8 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
 }
 
 .c7 {
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1606,6 +1608,8 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
 }
 
 .c7 {
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

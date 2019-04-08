@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
 import { MdAdd, MdRemove } from 'react-icons/md'
 import { Flex } from '../Flex'
 
@@ -33,15 +32,6 @@ const ExpandableList = ({ expandedKeys }: any) => {
   )
 }
 
-const SpaceBetween = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 20px;
-  width: 100%;
-`
-
 interface ItemProps {
   data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>],
   index: number,
@@ -66,7 +56,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
             {item.children ? button : '|---'}
             {' ' + item.value}
           </Flex.Item>
-          <Flex direction='row' alignItems='center' justifyContent='space-between' ph={1}>
+          <Flex direction='row' alignItems='center' justifyContent='space-between' py={1}>
             {!item.expanded && item.children &&
             <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&

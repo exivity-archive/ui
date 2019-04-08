@@ -5,7 +5,6 @@ import { withState } from '../utils/tests/decorators/StateDecorator'
 
 import { Select } from '.'
 import { SelectList } from '../SelectList'
-import { TextInput } from '../TextInput'
 import { SelectInput } from '../SelectInput'
 import { Row } from '../utils/stories/components'
 
@@ -25,16 +24,16 @@ export default storiesOf('molecules/Select', module)
   ))
   .add('Custom valueComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select value={state && state.value} valueComponent={<TextInput placeholder='Choose option' outlined/>}>
+      <Select value={state && state.value} valueComponent={<SelectInput placeholder='Choose option' outlined/>}>
         <SelectList value={state && state.key} onChange={storeState} data={items}/>
       </Select>
-      <Select value={state && state.value} valueComponent={<TextInput secondary placeholder='Choose option' outlined/>}>
+      <Select value={state && state.value} valueComponent={<SelectInput secondary placeholder='Choose option' outlined/>}>
         <SelectList value={state && state.key} onChange={storeState} data={items}/>
       </Select>
-      <Select value={state && state.value} valueComponent={<TextInput danger placeholder='Choose option' outlined/>}>
+      <Select value={state && state.value} valueComponent={<SelectInput danger placeholder='Choose option' outlined/>}>
         <SelectList value={state && state.key} onChange={storeState} data={items}/>
       </Select>
-      <Select value={state && state.value} valueComponent={<TextInput success placeholder='Choose option' outlined/>}>
+      <Select value={state && state.value} valueComponent={<SelectInput success placeholder='Choose option' outlined/>}>
         <SelectList value={state && state.key} onChange={storeState} data={items}/>
       </Select>
       <Select value={state && state.value} valueComponent={<SelectInput placeholder='Choose option'/>}>
