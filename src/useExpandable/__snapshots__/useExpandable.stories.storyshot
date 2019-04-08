@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots helpers|useExpandable default 1`] = `
+exports[`Storyshots helpers|useExpandable as default 1`] = `
 .c0 {
   padding: 12px;
 }
@@ -1389,7 +1389,7 @@ exports[`Storyshots helpers|useExpandable default 1`] = `
 </div>
 `;
 
-exports[`Storyshots helpers|useExpandable expandedKeys 1`] = `
+exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
 .c0 {
   padding: 12px;
 }

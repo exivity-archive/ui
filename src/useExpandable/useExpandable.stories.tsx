@@ -17,8 +17,8 @@ import { Icon } from '../Icon'
 const getParent = (item: FakeRecord) => item.parentId
 
 export default storiesOf('helpers|useExpandable', module)
-  .add('default', () => <ExpandableList expandedKeys={[]}/>)
-  .add('expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+  .add('as default', () => <ExpandableList expandedKeys={[]}/>)
+  .add('with expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
 
 const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
