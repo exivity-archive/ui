@@ -60,11 +60,8 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   return useMemo(() => {
     return (
       <ListItem style={style}>
-        <ExpandableSpacer
-          data={items}
-          button={button}
-          index={index}>
           <SpaceBetween>
+            {button}
             {item.value}
             {!item.expanded && item.children &&
             <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
@@ -75,7 +72,6 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
             <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
               parents</Button>}
           </SpaceBetween>
-        </ExpandableSpacer>
       </ListItem>
     )
   }, [item])
