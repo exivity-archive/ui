@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
-import { InputProps } from '../AbstractInput/AbstractInput'
 import { Icon } from '../Icon'
-import { fromTheme, hexToString, matchThemeProp } from '../utils/styled'
+import { fromTheme, hexToString, matchThemeProp, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
-export interface ButtonProps extends InputProps {
+export interface StyledButtonProps extends PurposesProps, SizesProps, StyledProps {
+  // Variants
+  outlined?: boolean
+  flat?: boolean
+
+  // Layout
+  inline?: boolean
+}
+
+export interface ButtonProps extends StyledButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
   // Variantsgit
   round?: boolean
   transparent?: boolean
@@ -14,9 +22,11 @@ export interface ButtonProps extends InputProps {
 export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
+  font-size: ${matchThemeProp(
+  theme => theme.global.sizes, {
     modifier: (em: number) => em / 16 * 14
-  })}em;
+  })
+  }em;
   color: ${fromTheme(theme => theme.colors.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
@@ -98,8 +108,8 @@ export const Button = styled.button<ButtonProps>`
     min-width: auto;
     padding: 0;
     width: ${props.tiny
-    ? preciseEm(2.5, 10) // 25px
-    : preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+      ? preciseEm(2.5, 10) // 25px
+      : preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
   `}
 
   ${Icon} {
