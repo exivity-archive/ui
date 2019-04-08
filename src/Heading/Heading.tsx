@@ -12,12 +12,12 @@ enum Levels {
 
 export type HeadingType = 'header' | 'section' | 'sub'
 
-export interface HeadingProps extends StyledProps {
+export interface HeadingProps extends StyledProps, SectionProps {
   type?: HeadingType
   children?: ReactNode
 }
 
-export const StyledHeading = styled.div<HeadingProps & SectionProps>`
+export const StyledHeading = styled.div<HeadingProps>`
   ${globalFont};
   ${globalSectionSpacing};
 
@@ -61,7 +61,7 @@ export const StyledHeading = styled.div<HeadingProps & SectionProps>`
     transform-origin: left 25%; // 25% from trial and error
   }
 `
-export const Heading = ({ type = 'header', ...rest }: HeadingProps & SectionProps) => (
+export const Heading = ({ type = 'header', ...rest }: HeadingProps) => (
   <StyledHeading
     as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'}
     type={type}

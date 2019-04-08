@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
   color,
   ColorProps,
@@ -11,7 +11,8 @@ import {
   minHeight,
   MinHeightProps,
   minWidth,
-  MinWidthProps, size,
+  MinWidthProps,
+  size,
   SizeProps,
   space,
   SpaceProps,
@@ -19,6 +20,10 @@ import {
   WidthProps
 } from 'styled-system'
 import { StyledProps } from '../utils/styled'
+
+export interface OverrideColorProps {
+  color?: any
+}
 
 export type BlockProps =
   & StyledProps
@@ -31,11 +36,9 @@ export type BlockProps =
   & MaxHeightProps
   & MinHeightProps
   & ColorProps
-& {
-  color?: any
-}
+  & OverrideColorProps
 
-export const Block = styled.div<BlockProps>`
+export const blockStyles = css`
   ${space}
   ${size}
   ${width}
@@ -45,6 +48,10 @@ export const Block = styled.div<BlockProps>`
   ${maxHeight}
   ${minHeight}
   ${color}
+`
+
+export const Block = styled.div<BlockProps>`
+  ${blockStyles}
 `
 
 Block.displayName = 'Block'

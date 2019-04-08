@@ -12,13 +12,14 @@ import { TextInput } from '.'
 import { Row } from '../utils/stories/components'
 
 storiesOf('interact|TextInput', module)
-  .add('overview', markdown(require('./README.md')))
   .addDecorator(withState(''))
+  .add('overview', markdown(require('./README.md')))
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
     value={state}
     onChange={storeAndAction(storeState, 'onChange')} />)
+  .add('outlined', () => <TextInput outlined value='Outlined' />)
   .add('required', ({ state, storeState }: any) => <TextInput
     placeholder='Type something...'
     required
@@ -36,6 +37,13 @@ storiesOf('interact|TextInput', module)
     </Section>
     <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
   </div>)
+  .add('flat + outined', () => <div>
+    <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
+    <Section>
+      <TextInput flat outlined value={faker.lorem.words(4)} />
+    </Section>
+    <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
+  </div>)
   .add('purposes', () => <Row columns={4}>
       <TextInput primary value='Primary' />
       <TextInput secondary value='Secondary' />
@@ -45,10 +53,10 @@ storiesOf('interact|TextInput', module)
       <TextInput outlined secondary value='Secondary' />
       <TextInput outlined success value='Success' />
       <TextInput outlined danger value='Danger' />
-      <TextInput flat primary value='Primary' />
-      <TextInput flat secondary value='Secondary' />
-      <TextInput flat success value='Success' />
-      <TextInput flat danger value='Danger' />
+      <TextInput flat outlined primary value='Primary' />
+      <TextInput flat outlined secondary value='Secondary' />
+      <TextInput flat outlined success value='Success' />
+      <TextInput flat outlined danger value='Danger' />
     </Row>)
   .add('sizes', () => <Row columns={false}>
     <TextInput tiny value='Tiny' />
