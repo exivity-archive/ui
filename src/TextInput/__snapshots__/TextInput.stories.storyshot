@@ -72,15 +72,6 @@ input.c1 {
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c2:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c2:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c2::-webkit-input-placeholder {
@@ -121,7 +112,7 @@ input.c1 {
     <p
       className="c3"
     >
-      In amet quibusdam omnis consectetur consectetur assumenda laboriosam nostrum. Eius est sit iure in enim vel.
+      Nisi fugit esse. Omnis ea eos voluptatem sint iste nostrum asperiores.
     </p>
   </div>
 </div>
@@ -267,7 +258,7 @@ exports[`Storyshots interact|TextInput disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots interact|TextInput flat 1`] = `
+exports[`Storyshots interact|TextInput flat + outined 1`] = `
 .c0 {
   padding: 12px;
 }
@@ -314,6 +305,111 @@ exports[`Storyshots interact|TextInput flat 1`] = `
 
 .c3:focus {
   outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c3::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c3[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c2 {
+  margin: 1.25rem 0;
+}
+
+.c2:first-child {
+  margin-top: 0;
+}
+
+.c2:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <div>
+    <p
+      className="c1"
+    >
+      In amet quibusdam omnis consectetur consectetur assumenda laboriosam nostrum.
+    </p>
+    <section
+      className="c2"
+    >
+      <input
+        className="c3"
+        onChange={[Function]}
+        type="text"
+        value="est eius est sit"
+      />
+    </section>
+    <p
+      className="c1"
+    >
+      In enim vel rerum distinctio corporis. Qui voluptatem nihil.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|TextInput flat 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  padding: 0;
 }
 
 .c3::-webkit-input-placeholder {
@@ -473,6 +569,75 @@ exports[`Storyshots interact|TextInput inline 1`] = `
 </div>
 `;
 
+exports[`Storyshots interact|TextInput outlined 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #00a8d8;
+  background-color: unset;
+}
+
+.c1:hover {
+  border: 1px solid #999;
+}
+
+.c1:focus {
+  border: 1px solid #222;
+}
+
+.c1::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c1[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+    onChange={[Function]}
+    type="text"
+    value="Outlined"
+  />
+</div>
+`;
+
 exports[`Storyshots interact|TextInput overview 1`] = `
 .c0 {
   padding: 12px;
@@ -611,58 +776,6 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
 }
 
 .c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c10 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  padding: 0;
-  outline-offset: 9px;
-}
-
-.c10:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c10:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
-}
-
-.c10::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c10[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -975,6 +1088,58 @@ exports[`Storyshots interact|TextInput purposes 1`] = `
 }
 
 .c9[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  padding: 0;
+  outline-offset: 9px;
+}
+
+.c10:hover {
+  outline: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c10:focus {
+  outline: 1px solid rgba(var(--focus-color),1);
+}
+
+.c10::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c10[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }

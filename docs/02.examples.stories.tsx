@@ -1,14 +1,9 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 import { Heading } from '../src/Heading'
-import { App } from './examples/App'
+import { Dashboard, MasterDetail } from './examples'
 
 storiesOf('docs|Examples', module)
-  .add('dashboard', () => (
-    <App>
-      Dashboard
-      <div style={{ height: '150vh' }} />
-    </App>
-  ))
-  .add('master/detail', () => <Heading>Master/Detail</Heading>)
+  .add('dashboard', () => <Dashboard />)
+  .add('master/detail', () => <MasterDetail />)
   .add('settings', () => <Heading>Settings</Heading>)

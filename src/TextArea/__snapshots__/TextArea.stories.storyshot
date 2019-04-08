@@ -250,15 +250,6 @@ exports[`Storyshots interact|TextArea flat 1`] = `
   display: block;
   width: 100%;
   padding: 0;
-  outline-offset: 9px;
-}
-
-.c2:hover {
-  outline: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c2:focus {
-  outline: 1px solid rgba(var(--focus-color),1);
 }
 
 .c2::-webkit-input-placeholder {
