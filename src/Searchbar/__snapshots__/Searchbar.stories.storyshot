@@ -238,16 +238,14 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
-}
-
-.c6 svg {
-  vertical-align: middle;
 }
 
 .c2 {
@@ -549,16 +547,14 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
-}
-
-.c6 svg {
-  vertical-align: middle;
 }
 
 .c2 {
@@ -843,16 +839,14 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
-}
-
-.c6 svg {
-  vertical-align: middle;
 }
 
 .c2 {
@@ -1146,16 +1140,14 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
-}
-
-.c6 svg {
-  vertical-align: middle;
 }
 
 .c2 {

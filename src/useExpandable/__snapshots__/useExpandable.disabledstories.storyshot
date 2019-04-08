@@ -5,225 +5,142 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   padding: 12px;
 }
 
-.c8 {
+.c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 0px;
 }
 
-.c8 svg {
-  vertical-align: middle;
-}
-
-.c11 .c7 {
+.c10 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c12 .c7 {
+.c11 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c13 .c7 {
+.c12 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c14 .c7 {
+.c13 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c15 .c7 {
+.c14 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c16 .c7 {
+.c15 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c17 .c7 {
+.c16 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c7 {
+.c17 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c19 .c7 {
+.c18 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c7 {
+.c19 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c7 {
+.c20 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c7 {
+.c21 .c5 {
   font-size: 1.5em;
 }
 
-.c23 .c7 {
+.c22 .c5 {
   font-size: 1.5em;
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c6:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c6:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c6:active,
-.c6.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c6:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c6[disabled] {
-  pointer-events: none;
-}
-
-.c6[disabled]:after {
-  display: block;
-}
-
-.c6 .c7 {
+.c23 .c5 {
   font-size: 1.5em;
 }
 
-.c24 .c7 {
+.c24 .c5 {
   font-size: 1.5em;
 }
 
-.c25 .c7 {
+.c25 .c5 {
   font-size: 1.5em;
 }
 
-.c26 .c7 {
+.c26 .c5 {
   font-size: 1.5em;
 }
 
-.c27 .c7 {
+.c27 .c5 {
   font-size: 1.5em;
 }
 
-.c28 .c7 {
+.c28 .c5 {
   font-size: 1.5em;
 }
 
-.c29 .c7 {
+.c29 .c5 {
   font-size: 1.5em;
 }
 
-.c30 .c7 {
+.c30 .c5 {
   font-size: 1.5em;
 }
 
-.c31 .c7 {
+.c31 .c5 {
   font-size: 1.5em;
 }
 
-.c32 .c7 {
+.c32 .c5 {
   font-size: 1.5em;
 }
 
-.c33 .c7 {
+.c33 .c5 {
   font-size: 1.5em;
 }
 
-.c34 .c7 {
+.c34 .c5 {
   font-size: 1.5em;
 }
 
-.c35 .c7 {
+.c35 .c5 {
   font-size: 1.5em;
 }
 
-.c36 .c7 {
+.c36 .c5 {
   font-size: 1.5em;
 }
 
-.c37 .c7 {
+.c37 .c5 {
   font-size: 1.5em;
 }
 
-.c38 .c7 {
+.c38 .c5 {
   font-size: 1.5em;
 }
 
-.c10 {
+.c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -267,20 +184,20 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   --focus-color: 153,153,153;
 }
 
-.c10:hover {
+.c9:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c10:focus {
+.c9:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c10:active,
-.c10.active {
+.c9:active,
+.c9.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c10:after {
+.c9:after {
   display: none;
   content: "";
   position: absolute;
@@ -292,15 +209,15 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c10[disabled] {
+.c9[disabled] {
   pointer-events: none;
 }
 
-.c10[disabled]:after {
+.c9[disabled]:after {
   display: block;
 }
 
-.c10 .c7 {
+.c9 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -324,7 +241,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -342,7 +259,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   align-items: center;
 }
 
-.c39 .c7 {
+.c39 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -353,7 +270,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   transform-origin: left 25%;
 }
 
-.c40 .c7 {
+.c40 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -364,7 +281,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   transform-origin: left 25%;
 }
 
-.c41 .c7 {
+.c41 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -402,11 +319,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   padding: 0 20px;
 }
 
-.c42 .c7 {
+.c42 .c5 {
   pointer-events: none;
 }
 
-.c43 .c7 {
+.c43 .c5 {
   pointer-events: none;
 }
 
@@ -416,7 +333,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   list-style-type: none;
 }
 
-.c44 .c5 {
+.c44 .c8 {
   margin-left: 20px;
 }
 
@@ -478,11 +395,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -507,11 +423,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Ayden
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -548,11 +464,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -577,11 +492,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Larue
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -618,11 +533,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -647,11 +561,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Helena
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -688,11 +602,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -717,11 +630,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Margaret
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -758,11 +671,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -787,11 +699,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Vernie
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -828,11 +740,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -857,11 +768,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Hannah
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -898,11 +809,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -927,11 +837,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Kaci
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -968,11 +878,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -997,11 +906,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Clinton
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1038,11 +947,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -1067,11 +975,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Mathew
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1108,11 +1016,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -1137,11 +1044,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Edythe
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1178,11 +1085,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -1207,11 +1113,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Emerson
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1248,11 +1154,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -1277,11 +1182,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Bryce
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1318,11 +1223,10 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -1347,11 +1251,11 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
                  Marques
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -1371,306 +1275,142 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   padding: 12px;
 }
 
-.c8 {
+.c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 0px;
 }
 
-.c8 svg {
-  vertical-align: middle;
-}
-
-.c13 .c7 {
+.c11 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c14 .c7 {
+.c12 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c15 .c7 {
+.c13 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c16 .c7 {
+.c14 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c17 .c7 {
+.c15 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c18 .c7 {
+.c16 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c19 .c7 {
+.c17 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c20 .c7 {
+.c18 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c21 .c7 {
+.c19 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c22 .c7 {
+.c20 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c23 .c7 {
+.c21 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c24 .c7 {
+.c22 .c5 {
   font-size: 1.5em;
 }
 
-.c25 .c7 {
+.c23 .c5 {
   font-size: 1.5em;
 }
 
-.c11 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c11:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c11:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c11:active,
-.c11.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c11:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c11[disabled] {
-  pointer-events: none;
-}
-
-.c11[disabled]:after {
-  display: block;
-}
-
-.c11 .c7 {
+.c24 .c5 {
   font-size: 1.5em;
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  color: #fff;
-  line-height: 1.5;
-  text-transform: uppercase;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
-  border: none;
-  border-radius: 4px;
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
-  border-radius: 50%;
-  min-width: auto;
-  padding: 0;
-  width: 2.857142857142857em;
-}
-
-.c6:hover {
-  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
-}
-
-.c6:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c6:active,
-.c6.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
-}
-
-.c6:after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  left: -1px;
-  border-radius: inherit;
-  background-color: rgba(255,255,255,0.5);
-}
-
-.c6[disabled] {
-  pointer-events: none;
-}
-
-.c6[disabled]:after {
-  display: block;
-}
-
-.c6 .c7 {
+.c25 .c5 {
   font-size: 1.5em;
 }
 
-.c26 .c7 {
+.c26 .c5 {
   font-size: 1.5em;
 }
 
-.c27 .c7 {
+.c27 .c5 {
   font-size: 1.5em;
 }
 
-.c28 .c7 {
+.c28 .c5 {
   font-size: 1.5em;
 }
 
-.c29 .c7 {
+.c29 .c5 {
   font-size: 1.5em;
 }
 
-.c30 .c7 {
+.c30 .c5 {
   font-size: 1.5em;
 }
 
-.c31 .c7 {
+.c31 .c5 {
   font-size: 1.5em;
 }
 
-.c32 .c7 {
+.c32 .c5 {
   font-size: 1.5em;
 }
 
-.c33 .c7 {
+.c33 .c5 {
   font-size: 1.5em;
 }
 
-.c34 .c7 {
+.c34 .c5 {
   font-size: 1.5em;
 }
 
-.c35 .c7 {
+.c35 .c5 {
   font-size: 1.5em;
 }
 
-.c36 .c7 {
+.c36 .c5 {
   font-size: 1.5em;
 }
 
-.c37 .c7 {
+.c37 .c5 {
   font-size: 1.5em;
 }
 
-.c38 .c7 {
+.c38 .c5 {
   font-size: 1.5em;
 }
 
-.c39 .c7 {
+.c39 .c5 {
   font-size: 1.5em;
 }
 
-.c12 {
+.c10 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -1714,20 +1454,20 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   --focus-color: 153,153,153;
 }
 
-.c12:hover {
+.c10:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c12:focus {
+.c10:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c12:active,
-.c12.active {
+.c10:active,
+.c10.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c12:after {
+.c10:after {
   display: none;
   content: "";
   position: absolute;
@@ -1739,20 +1479,20 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c12[disabled] {
+.c10[disabled] {
   pointer-events: none;
 }
 
-.c12[disabled]:after {
+.c10[disabled]:after {
   display: block;
 }
 
-.c12 .c7 {
+.c10 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
 
-.c10 {
+.c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.7109375em;
@@ -1799,20 +1539,20 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   box-shadow: 0 0 0 1px #999;
 }
 
-.c10:hover {
+.c9:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c10:focus {
+.c9:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c10:active,
-.c10.active {
+.c9:active,
+.c9.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c10:after {
+.c9:after {
   display: none;
   content: "";
   position: absolute;
@@ -1824,24 +1564,24 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   background-color: rgba(255,255,255,0.5);
 }
 
-.c10[disabled] {
+.c9[disabled] {
   pointer-events: none;
 }
 
-.c10[disabled]:after {
+.c9[disabled]:after {
   display: block;
 }
 
-.c10:hover {
+.c9:hover {
   color: #222;
   box-shadow: 0 0 0 1px #222;
 }
 
-.c10:focus {
+.c9:focus {
   box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c10 .c7 {
+.c9 .c5 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -1865,7 +1605,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1883,7 +1623,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   align-items: center;
 }
 
-.c40 .c7 {
+.c40 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1894,7 +1634,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c41 .c7 {
+.c41 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1905,7 +1645,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   transform-origin: left 25%;
 }
 
-.c42 .c7 {
+.c42 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1943,11 +1683,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   padding: 0 20px;
 }
 
-.c43 .c7 {
+.c43 .c5 {
   pointer-events: none;
 }
 
-.c44 .c7 {
+.c44 .c5 {
   pointer-events: none;
 }
 
@@ -1957,7 +1697,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   list-style-type: none;
 }
 
-.c45 .c5 {
+.c45 .c8 {
   margin-left: 20px;
 }
 
@@ -2019,11 +1759,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2048,11 +1787,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Ayden
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Collapse all children
@@ -2089,11 +1828,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  |  ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2118,17 +1856,17 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Shaun
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Collapse all children
                 </button>
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Collapse all parents
@@ -2168,7 +1906,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Lola
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               />
             </div>
@@ -2205,7 +1943,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Travis
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               />
             </div>
@@ -2239,11 +1977,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  |  ---  
                 <button
-                  className="c5 c6"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2268,17 +2005,17 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Kyle
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Collapse all children
                 </button>
                 <button
-                  className="c5 c10"
+                  className="c8 c9"
                   onClick={[Function]}
                 >
                   Collapse all parents
@@ -2318,7 +2055,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Jaeden
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               />
             </div>
@@ -2355,7 +2092,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Yadira
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               />
             </div>
@@ -2389,11 +2126,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2418,11 +2154,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Larue
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -2459,11 +2195,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2488,11 +2223,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Helena
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -2529,11 +2264,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2558,11 +2292,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Margaret
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -2599,11 +2333,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2628,11 +2361,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Vernie
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -2669,11 +2402,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2698,11 +2430,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Hannah
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children
@@ -2739,11 +2471,10 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
               >
                   ---  
                 <button
-                  className="c5 c11"
                   onClick={[Function]}
                 >
                   <span
-                    className="c7 c8"
+                    className="c5 c6"
                   >
                     <svg
                       fill="currentColor"
@@ -2768,11 +2499,11 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
                  Kaci
               </div>
               <div
-                className="c9"
+                className="c7"
                 direction="row"
               >
                 <button
-                  className="c5 c12"
+                  className="c8 c10"
                   onClick={[Function]}
                 >
                   Expand all children

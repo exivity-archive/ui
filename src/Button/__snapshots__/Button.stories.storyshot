@@ -203,13 +203,11 @@ exports[`Storyshots interact|Button icon 1`] = `
 }
 
 .c3 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
-}
-
-.c3 svg {
-  vertical-align: middle;
+  top: 0px;
 }
 
 .c1 {
@@ -1177,13 +1175,11 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c17 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
-}
-
-.c17 svg {
-  vertical-align: middle;
+  top: 0px;
 }
 
 .c18 .c16 {
@@ -3421,13 +3417,11 @@ exports[`Storyshots interact|Button transparent 1`] = `
 }
 
 .c5 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
-}
-
-.c5 svg {
-  vertical-align: middle;
+  top: 0px;
 }
 
 .c9 .c4 {

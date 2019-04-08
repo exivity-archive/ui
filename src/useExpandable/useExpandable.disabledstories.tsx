@@ -52,9 +52,9 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const [items, helpers] = data
   const item = items[index]
   const button = (
-    <Button round success={!item.expanded} danger={item.expanded} onClick={item.expand}>
+    <button onClick={item.expand}>
       <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
-    </Button>
+    </button>
   )
 
   return useMemo(() => {
