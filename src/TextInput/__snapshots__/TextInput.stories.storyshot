@@ -112,7 +112,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Nisi fugit esse. Omnis ea eos voluptatem sint iste nostrum asperiores.
+      Tempore optio et cum laudantium est. Natus quae ea et.
     </p>
   </div>
 </div>
@@ -351,7 +351,7 @@ exports[`Storyshots interact|TextInput flat + outined 1`] = `
     <p
       className="c1"
     >
-      In amet quibusdam omnis consectetur consectetur assumenda laboriosam nostrum.
+      Voluptatem itaque quasi aut reiciendis commodi ut expedita.
     </p>
     <section
       className="c2"
@@ -360,13 +360,13 @@ exports[`Storyshots interact|TextInput flat + outined 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="est eius est sit"
+        value="distinctio qui sunt assumenda"
       />
     </section>
     <p
       className="c1"
     >
-      In enim vel rerum distinctio corporis. Qui voluptatem nihil.
+      Aut quas laboriosam odit. Iure officia sed corrupti laboriosam voluptatem iste sit sed harum.
     </p>
   </div>
 </div>
@@ -456,7 +456,7 @@ exports[`Storyshots interact|TextInput flat 1`] = `
     <p
       className="c1"
     >
-      Voluptate consequatur ut ullam quasi placeat quam eos accusantium.
+      Ipsam qui distinctio suscipit.
     </p>
     <section
       className="c2"
@@ -465,13 +465,13 @@ exports[`Storyshots interact|TextInput flat 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="eveniet nostrum in quas"
+        value="dicta eius similique molestiae"
       />
     </section>
     <p
       className="c1"
     >
-      Delectus iure aut tempora tempore ratione. Alias omnis voluptas qui reiciendis vitae.
+      Est veniam animi quam maxime quas ut. Cumque qui non impedit eos accusamus dolorem.
     </p>
   </div>
 </div>
@@ -555,16 +555,16 @@ exports[`Storyshots interact|TextInput inline 1`] = `
   <p
     className="c1"
   >
-    modi voluptatem consequatur consequatur
+    a magnam reprehenderit sit
      
     <input
       className="c2"
       onChange={[Function]}
       type="text"
-      value="quod qui praesentium est"
+      value="reprehenderit hic temporibus tenetur"
     />
      
-    quasi voluptatum suscipit ducimus est rerum cumque non
+    facilis odit qui et est ut ea architecto
   </p>
 </div>
 `;

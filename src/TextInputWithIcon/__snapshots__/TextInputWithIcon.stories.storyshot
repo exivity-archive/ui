@@ -246,29 +246,25 @@ exports[`Storyshots interact|TextInputWithIcon default 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
 }
 
-.c6 svg {
-  vertical-align: middle;
-}
-
 .c8 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   left: 0.5em;
-}
-
-.c8 svg {
-  vertical-align: middle;
 }
 
 .c1 {
@@ -602,31 +598,27 @@ exports[`Storyshots interact|TextInputWithIcon disabled 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   cursor: not-allowed;
   right: 0.5em;
 }
 
-.c6 svg {
-  vertical-align: middle;
-}
-
 .c8 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   cursor: not-allowed;
   left: 0.5em;
-}
-
-.c8 svg {
-  vertical-align: middle;
 }
 
 .c1 {
@@ -962,29 +954,25 @@ exports[`Storyshots interact|TextInputWithIcon outlined 1`] = `
 }
 
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
 }
 
-.c6 svg {
-  vertical-align: middle;
-}
-
 .c8 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   left: 0.5em;
-}
-
-.c8 svg {
-  vertical-align: middle;
 }
 
 .c1 {
@@ -1680,29 +1668,25 @@ exports[`Storyshots interact|TextInputWithIcon purposes 1`] = `
 }
 
 .c7 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
 }
 
-.c7 svg {
-  vertical-align: middle;
-}
-
 .c16 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   left: 0.5em;
-}
-
-.c16 svg {
-  vertical-align: middle;
 }
 
 .c2 {
@@ -2604,81 +2588,69 @@ exports[`Storyshots interact|TextInputWithIcon sizes 1`] = `
 }
 
 .c8 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   right: 0.5em;
-}
-
-.c8 svg {
-  vertical-align: middle;
 }
 
 .c13 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 20px;
   left: 0.5em;
 }
 
-.c13 svg {
-  vertical-align: middle;
-}
-
 .c6 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 16.25px;
   right: 0.5em;
-}
-
-.c6 svg {
-  vertical-align: middle;
 }
 
 .c10 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 23.75px;
   right: 0.5em;
 }
 
-.c10 svg {
-  vertical-align: middle;
-}
-
 .c12 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 16.25px;
   left: 0.5em;
 }
 
-.c12 svg {
-  vertical-align: middle;
-}
-
 .c14 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 10px;
   position: absolute;
   font-size: 23.75px;
   left: 0.5em;
-}
-
-.c14 svg {
-  vertical-align: middle;
 }
 
 .c1 {

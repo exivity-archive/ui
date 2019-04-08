@@ -6,9 +6,11 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
 }
 
 .c3 {
+  position: relative;
   height: 1em;
   line-height: 1em;
   text-transform: none;
+  top: 0px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -16,10 +18,6 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
   user-select: none;
   font-size: 22px;
   width: 0;
-}
-
-.c3 svg {
-  vertical-align: middle;
 }
 
 .c5 {
@@ -99,13 +97,13 @@ exports[`Storyshots molecules|Box collapsible 1`] = `
       <div
         className="c5"
       >
-        Aut rerum impedit ex rem voluptates voluptas. Totam perferendis ut non fugiat eligendi omnis. Quasi ipsum rem eos quod recusandae consectetur optio laudantium et. Possimus molestias facere quia. Ab quo occaecati quia ipsum sit qui accusantium odit doloremque.
+        Illum qui enim veniam voluptatibus doloribus ut et. Et ipsam est voluptates quia consequatur et. Quae excepturi tempora itaque voluptas doloremque. Porro atque necessitatibus est accusantium.
  
-Aut eos quis ut. Omnis delectus voluptas minima. Ut minima sunt. Similique ut quam natus consequatur sit vel. Nostrum ut porro aut laborum iure molestiae et facere.
+Nemo voluptas rerum eos rerum natus sint. Ut qui aut et dolores nostrum suscipit aut. In sed enim qui sint quo sint cupiditate molestiae neque.
  
-Iste molestiae dolores commodi inventore sequi. Itaque quae sint. Dolor tempora et. Aperiam natus et perferendis magni quasi exercitationem delectus. Similique ad sed architecto magnam.
+Quis inventore recusandae rerum itaque in nulla vel et rerum. Consequuntur dicta voluptate tempora. Ipsam voluptatem quia vero est.
  
-Neque adipisci itaque culpa quis ut ab nulla. Labore ullam quos sed dolorum voluptatibus eum saepe. Omnis sit et quasi.
+Tenetur illum dolorem amet odio cumque. Labore debitis sunt deleniti. In inventore ad tempora ab.
       </div>
     </div>
   </div>
@@ -166,13 +164,13 @@ exports[`Storyshots molecules|Box default 1`] = `
       <div
         className="c4"
       >
-        Quam tempore a velit provident velit eligendi. Ipsam qui nobis repellendus fugiat. Sit aperiam placeat fuga doloribus distinctio.
+        Culpa enim doloribus corrupti sed ad dolore. Voluptatem est placeat et. Velit inventore aut molestias laudantium non. Quibusdam corporis ullam corrupti accusantium sed deserunt sunt.
  
-Minima ducimus temporibus modi aut. Ducimus totam voluptates. Exercitationem ut quis. Magni cupiditate sit. Soluta sint non.
+Vel quas placeat temporibus. Ut ut eius a id aut quaerat. Error impedit magni. Quis rerum vitae modi quas ut. Vitae blanditiis molestiae ea aut illum harum quae. Iure optio praesentium voluptas id nisi voluptates nulla minima.
  
-Ullam quos qui illo error. Laborum ratione a officia quaerat cumque incidunt. Provident esse hic. Quos esse ut ab voluptas sed quae nam. Sint autem rerum doloremque. Aut ut ut eos ducimus eos saepe.
+Dolorem expedita fuga aut qui id beatae id sit. Et qui praesentium sunt fugit ea accusantium a. Maiores qui iure maxime quo qui voluptatibus qui qui. Tempore voluptatum dicta et doloribus ea.
  
-In ut dolorem et molestiae ea. Sunt placeat quidem est consequuntur. Est fuga est placeat ex ut voluptas enim ex eveniet. Molestiae aut delectus aut nam et dolorum architecto fugit. Hic veritatis qui ex culpa earum voluptate vel labore. Ut est sunt corporis alias est et sequi voluptas.
+Asperiores eaque et est eaque consequuntur quisquam dolorum est aut. Ut odit alias minima hic omnis et. Quibusdam excepturi repudiandae porro ratione beatae nesciunt et amet quo. Optio et iste doloribus eos quo maxime. Voluptatem voluptates repellat in sunt magnam rerum quia. Sed necessitatibus vel officiis ratione pariatur.
       </div>
     </div>
   </div>

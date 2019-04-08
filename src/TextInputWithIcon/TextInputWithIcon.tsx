@@ -84,7 +84,7 @@ export const TextInputWithIcon: React.FC<TextInputWithIconProps & OmitOnChangeHT
   const shared = { tiny, small, large, huge, disabled }
   return <StyledContainer {...container}>
     <StyledSelectInput iconPosition={iconPosition} {...shared} {...rest} />
-    <InputIcon iconPosition={iconPosition} {...shared}>
+    <InputIcon iconPosition={iconPosition} {...shared} offSet={10}>
       {icon}
     </InputIcon>
   </StyledContainer>
