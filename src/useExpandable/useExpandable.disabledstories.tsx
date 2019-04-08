@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { MdAdd, MdRemove } from 'react-icons/md'
 import { Flex } from '../Flex'
 
-import { storiesOf } from '@storybook/react'
+// import { storiesOf } from '@storybook/react'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
@@ -15,9 +15,9 @@ import { Icon } from '../Icon'
 
 const getParent = (item: FakeRecord) => item.parentId
 
-export default storiesOf('helpers|useExpandable', module)
-  .add('as default', () => <ExpandableList expandedKeys={[]}/>)
-  .add('with expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+// export default storiesOf('helpers|useExpandable', module)
+//   .add('as default', () => <ExpandableList expandedKeys={[]}/>)
+//   .add('with expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
 
 const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
