@@ -431,7 +431,7 @@ exports[`Storyshots helpers|useExpandable as default 1`] = `
   align-items: center;
 }
 
-.c46 .c7 {
+.c47 .c7 {
   margin-left: 20px;
 }
 
@@ -2031,7 +2031,7 @@ exports[`Storyshots helpers|useExpandable with expandedKeys 1`] = `
   align-items: center;
 }
 
-.c49 .c7 {
+.c50 .c7 {
   margin-left: 20px;
 }
 
