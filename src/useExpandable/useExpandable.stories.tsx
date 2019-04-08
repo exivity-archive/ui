@@ -1,12 +1,12 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { MdAdd, MdRemove } from 'react-icons/md'
+import { Flex } from '../Flex'
 
 import { storiesOf } from '@storybook/react'
 
 import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
-import { ExpandableSpacer } from './ExpandableSpacer'
 
 import { StyledList } from '../SelectList/SelectList'
 import { ListFocus } from '../ListFocus'
@@ -25,7 +25,7 @@ const ExpandableList = ({ expandedKeys }: any) => {
 
   return (
     <ListFocus>
-      <StyledList height={800} width={850} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+      <StyledList height={800} width={600} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
                   innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
@@ -60,9 +60,13 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   return useMemo(() => {
     return (
       <ListItem style={style}>
-          <SpaceBetween>
-            {button}
-            {item.value}
+        <Flex direction='row' justifyContent='space-between' alignItems='center' height='100%'>
+          <Flex.Item>
+            {new Array(item.attributes.level).fill('  ---  ').join('|')}
+            {item.children ? button : '|---'}
+            {' ' + item.value}
+          </Flex.Item>
+          <Flex direction='row' alignItems='center' justifyContent='space-between' ph={1}>
             {!item.expanded && item.children &&
             <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&
@@ -71,7 +75,8 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
             {item.expanded && item.parent &&
             <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
               parents</Button>}
-          </SpaceBetween>
+          </Flex>
+        </Flex>
       </ListItem>
     )
   }, [item])
