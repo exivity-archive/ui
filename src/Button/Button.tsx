@@ -19,10 +19,7 @@ export const Button = styled.button<ButtonProps>`
   font-family: ${fromTheme(theme => theme.global.fontFamily)};
   font-weight: 500;
   font-size: ${matchThemeProp(
-  theme => theme.global.sizes, {
-    modifier: (em: number) => em / 16 * 14
-  })
-  }em;
+  theme => theme.global.sizes, { modifier: (em: number) => em / 16 * 14 })}em;
   color: ${fromTheme(theme => theme.colors.white)};
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
 
