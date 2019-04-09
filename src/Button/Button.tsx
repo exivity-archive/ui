@@ -4,19 +4,15 @@ import { Icon } from '../Icon'
 import { fromTheme, hexToString, matchThemeProp, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
-export interface StyledButtonProps extends PurposesProps, SizesProps, StyledProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, PurposesProps, SizesProps, StyledProps {
   // Variants
+  round?: boolean
+  transparent?: boolean
   outlined?: boolean
   flat?: boolean
 
   // Layout
   inline?: boolean
-}
-
-export interface ButtonProps extends StyledButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
-  // Variants
-  round?: boolean
-  transparent?: boolean
 }
 
 export const Button = styled.button<ButtonProps>`
