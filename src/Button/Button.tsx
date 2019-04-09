@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
 import { fromTheme, hexToString, matchThemeProp, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
@@ -14,7 +14,7 @@ export interface StyledButtonProps extends PurposesProps, SizesProps, StyledProp
 }
 
 export interface ButtonProps extends StyledButtonProps, ButtonHTMLAttributes<HTMLButtonElement> {
-  // Variantsgit
+  // Variants
   round?: boolean
   transparent?: boolean
 }
