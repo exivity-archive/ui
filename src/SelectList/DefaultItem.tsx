@@ -4,7 +4,9 @@ import { ListChildComponentProps } from 'react-window'
 import { ListItem, CenterText } from '../ListItem'
 import { NO_DATA_KEY } from './helpers'
 
-export const DefaultItem: React.FC<ListChildComponentProps> = ({ data, index, style }) => {
+export type ListItemProps = ListChildComponentProps
+
+export const DefaultItem: React.FC<ListItemProps> = ({ data, index, style }) => {
   const { items, onChange } = data
   const item = items[index]
 
