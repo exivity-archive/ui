@@ -1,36 +1,8 @@
-import { ListItem } from '../utils'
-
-export const PARENT = 'parent'
-export const CHILDREN = 'children'
-
-export type TreeItem<T> = ListItem<T> & {
-  [PARENT]?: TreeItem<T>
-  [CHILDREN]?: TreeItem<T>[]
-  level?: number
-}
+import { TreeItem, iterateAllParents, iterateAllChildren } from '../utils/makeParentChildTree'
 
 export type TreeListItem<T> = TreeItem<T> & {
-  level: number
   expanded: boolean
   expand (): void
-}
-
-export function iterateAllParents<T> (item: TreeItem<T>, callback: Function): void {
-  const parent = item[PARENT]
-  if (parent) {
-    callback(parent)
-    iterateAllParents(parent, callback)
-  }
-}
-
-export function iterateAllChildren<T> (item: TreeItem<T>, callback: Function): void {
-  const children = item[CHILDREN]
-  if (children) {
-    children.forEach((child) => {
-      callback(child)
-      iterateAllChildren(child, callback)
-    })
-  }
 }
 
 export function hasNoCollapsedParents<T> (item: TreeItem<T>, expanded: string[]): boolean {

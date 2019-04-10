@@ -2,8 +2,9 @@ import React, { useRef, useEffect, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../../utils/styled'
 import { ButtonProps } from '../../Button'
-import { TreeListItem, iterateAllChildren } from '../helpers'
+import { TreeListItem } from '../helpers'
 import { distanceBetweenNextSibling, makeBorderWidth } from './helpers'
+import { iterateAllChildren } from '../../utils/makeParentChildTree'
 
 interface StyledExpandableSpacerProps {
   borderWidth: string
