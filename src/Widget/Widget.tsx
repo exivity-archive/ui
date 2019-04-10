@@ -113,8 +113,8 @@ interface WidgetProps extends StyledProps {
 
 type WidgetComponent = FC<WidgetProps> & WidgetSubComponents
 
-export const Widget: WidgetComponent = ({ children, header, noPadding, test = 'widget' }) => (
-  <StyledWidget noPadding={noPadding} data-test={test}>
+export const Widget: WidgetComponent = ({ children, header, noPadding, test = 'widget', ...rest }) => (
+  <StyledWidget noPadding={noPadding} data-test={test} {...rest}>
     {header && (
       <Widget.Header padding={noPadding}>
         {header}
