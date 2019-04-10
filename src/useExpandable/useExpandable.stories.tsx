@@ -16,8 +16,8 @@ import { Icon } from '../Icon'
 const getParent = (item: FakeRecord) => item.parentId
 
 // export default storiesOf('helpers|useExpandable', module)
-//   .add('as default', () => <ExpandableList expandedKeys={[]}/>)
-//   .add('with expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']}/>)
+//   .add('as default', () => <ExpandableList expandedKeys={[]} />)
+//   .add('with expandedKeys', () => <ExpandableList expandedKeys={['1', '101', '201']} />)
 
 const ExpandableList = ({ expandedKeys }: any) => {
   const [data, helpers] = useExpandable<FakeRecord>(FLAT_LIST_TEST_DATA, getParent, expandedKeys)
@@ -25,7 +25,7 @@ const ExpandableList = ({ expandedKeys }: any) => {
   return (
     <ListFocus>
       <StyledList height={800} width={600} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
-                  innerElementType='ul'>
+        innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
     </ListFocus>
@@ -43,7 +43,7 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
   const item = items[index]
   const button = (
     <button onClick={item.expand}>
-      <Icon>{item.expanded ? <MdRemove/> : <MdAdd/>}</Icon>
+      <Icon>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon>
     </button>
   )
 
@@ -58,12 +58,12 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           </Flex.Item>
           <Flex direction='row' alignItems='center' justifyContent='space-between' py={1}>
             {!item.expanded && item.children &&
-            <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+              <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
             {item.expanded && item.children &&
-            <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all
+              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all
               children</Button>}
             {item.expanded && item.parent &&
-            <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
+              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
               parents</Button>}
           </Flex>
         </Flex>

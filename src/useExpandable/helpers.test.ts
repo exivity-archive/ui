@@ -1,8 +1,4 @@
 import {
-  PARENT,
-  CHILDREN,
-  iterateAllChildren,
-  iterateAllParents,
   hasNoCollapsedParents,
   expandOrCollapseItemTree,
   expandOrCollapseItem,
@@ -13,46 +9,7 @@ import {
   ExpandOrCollapseTree,
   disableEnumerable
 } from './helpers'
-
-test(`iterateAllParents iterates recursively over all ${PARENT}`, () => {
-  const mock = jest.fn()
-
-  const tree = {
-    key: '1',
-    [PARENT]: {
-      key: '2',
-      [PARENT]: {
-        key: '3',
-        [PARENT]: {
-          key: '4'
-        }
-      }
-    }
-  }
-
-  iterateAllParents<any>(tree, mock)
-  expect(mock).toHaveBeenCalledTimes(3)
-})
-
-test(`iterateAllChildren iterates recursively over all ${CHILDREN}`, () => {
-  const mock = jest.fn()
-
-  const tree = {
-    key: '1',
-    [CHILDREN]: [
-      {
-        key: '2',
-        [CHILDREN]: [{ key: '3' }, { key: '4' }]
-      }, {
-        key: '5',
-        [CHILDREN]: [{ key: '6' }, { key: '7' }]
-      }
-    ]
-  }
-
-  iterateAllChildren<any>(tree, mock)
-  expect(mock).toHaveBeenCalledTimes(6)
-})
+import { PARENT, iterateAllParents, CHILDREN, iterateAllChildren } from '../utils/makeParentChildTree'
 
 test('hasNoCollapsedParents returns true', () => {
   const one = { key: '1', [PARENT]: null }
@@ -191,7 +148,7 @@ test('expandOrCollapseItemTree expand all children', () => {
 
   const resultSetExpanded = setExpanded.mock.results[0].value
 
-  expect(resultSetExpanded).toEqual(['1','2','4','3'])
+  expect(resultSetExpanded).toEqual(['1', '2', '4', '3'])
 })
 
 test('expandOrCollapseItemTree collapse all parents', () => {
@@ -214,7 +171,7 @@ test('expandOrCollapseItemTree collapse all parents', () => {
 })
 
 test('expandOrCollapseItemTree collapse all children', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
 
   const four = { key: '4' }
   const three = { key: '3' }
@@ -233,7 +190,7 @@ test('expandOrCollapseItemTree collapse all children', () => {
 })
 
 test('createExpandOrCollapseTreeHelpers returns object with collapse.children helper', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
   const setExpanded = jest.fn(result => result)
 
   const four = { key: '4' }
@@ -263,11 +220,11 @@ test('createExpandOrCollapseTreeHelpers returns object with expand.children help
 
   const resultSetExpanded = setExpanded.mock.results[0].value
 
-  expect(resultSetExpanded).toEqual(['1','2','4','3'])
+  expect(resultSetExpanded).toEqual(['1', '2', '4', '3'])
 })
 
 test('createExpandOrCollapseTreeHelpers returns object with collapse.parents helper', () => {
-  const expanded: string[] = ['1','2','4','3']
+  const expanded: string[] = ['1', '2', '4', '3']
   const setExpanded = jest.fn(result => result)
 
   const one = { key: '1', [PARENT]: null }

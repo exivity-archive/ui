@@ -1,11 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 
 import {
-  PARENT,
-  CHILDREN,
-  TreeItem,
   TreeListItem,
-  iterateAllChildren,
   createExpandOrCollapseTreeHelpers,
   expandOrCollapseItem,
   hasNoCollapsedParents,
@@ -13,59 +9,14 @@ import {
   Helpers
 } from './helpers'
 
-import { createMap, Map, ListItem } from '../utils'
-
-type ParentKeyAccessor<T> = (mapItem: TreeItem<T>) => string | null
-
-export function createParentChildrenMap<T> (
-  data: ListItem<T>[],
-  parentKeyAccessor: ParentKeyAccessor<T>
-): Map<TreeItem<T>> {
-  const map = createMap<T>(data)
-
-  data.forEach((item) => {
-    const mapItem = map[item.key] as TreeItem<T>
-    const parentKey = parentKeyAccessor(mapItem)
-    const parent = parentKey && map[parentKey] as TreeItem<T>
-
-    if (parent) {
-      mapItem[PARENT] = parent
-      const parentChildren = parent[CHILDREN]
-
-      if (!parentChildren) {
-        parent[CHILDREN] = [mapItem]
-      } else if (!parentChildren.includes(mapItem)) {
-        parentChildren.push(mapItem)
-      }
-    }
-  })
-
-  return map
-}
-
-export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T>[] {
-  return Object
-    .values(map)
-    .reduce((list: TreeItem<T>[], item: TreeItem<T>): TreeItem<T>[] => {
-      if (!item[PARENT]) {
-        item.level = 1
-        const addToList: TreeItem<T>[] = [item]
-
-        iterateAllChildren(item, (child: TreeItem<T>) => {
-          child.level = child[PARENT]!.level! + 1
-          addToList.push(child)
-        })
-
-        return list.concat(addToList)
-      }
-      return list
-    }, [])
-}
-
-export function createTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
-  const parentChildrenMap: Map<TreeItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
-  return orderChildrenUnderParents<T>(parentChildrenMap)
-}
+import {
+  makeParentChildTree,
+  ParentKeyAccessor,
+  TreeItem,
+  PARENT,
+  CHILDREN
+} from '../utils/makeParentChildTree'
+import { ListItem } from '../utils'
 
 export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
   return list.map((item: TreeItem<T>): TreeListItem<T> => ({
@@ -102,14 +53,14 @@ export function useExpandable<T> (
   expandedKeys?: string[]
 ): UseExpandableReturn<T> {
   const [expanded, setExpanded] = useState<string[]>(expandedKeys ? expandedKeys : [])
-  const [list, setList] = useState<TreeItem<T>[]>(createTree<T>(data, parentKeyAccessor))
+  const [list, setList] = useState<TreeItem<T>[]>(makeParentChildTree<T>(data, parentKeyAccessor))
 
   useEffect(() => {
     expandedKeys && setExpanded(expandedKeys)
   }, [expandedKeys])
 
   useEffect(() => {
-    const treeList: TreeItem<T>[] = createTree<T>(data, parentKeyAccessor)
+    const treeList: TreeItem<T>[] = makeParentChildTree<T>(data, parentKeyAccessor)
     setList(treeList)
   }, [data])
 
