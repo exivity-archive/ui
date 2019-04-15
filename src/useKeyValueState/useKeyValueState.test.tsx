@@ -5,12 +5,12 @@ import { mount } from 'enzyme'
 interface KeyValueStateUserProps {
   items: { key: string, value: any }[]
   initialState: string
-  children (state: any, update: (key: string, value: any) => void, set: Dispatch<any>)
+  children (value: any, set: Dispatch<any>, key: string)
 }
 
 const KeyValueStateUser: FC<KeyValueStateUserProps> = ({ children, initialState, items }) => {
-  const [key, value, setKey] = useKeyValueState(items, initialState)
-  return children(key, value, setKey)
+  const [value, setKey, key] = useKeyValueState(items, initialState)
+  return children(value, setKey, key)
 }
 
 test('setKey updates key and value', () => {
@@ -21,7 +21,7 @@ test('setKey updates key and value', () => {
   ]
   mount(
     < KeyValueStateUser items={items} initialState='one' >
-      {(key, value, setKey) => {
+      {(value, setKey, key) => {
         const [renders, setRenders] = useState(0)
         if (renders === 0) {
           expect(key).toBe('one')
@@ -46,7 +46,7 @@ test('value is undefined when keys don\'t match', () => {
   ]
   mount(
     < KeyValueStateUser items={items} initialState='one' >
-      {(key, value, setKey) => {
+      {(value, setKey, key) => {
         const [renders, setRenders] = useState(0)
         if (renders === 0) {
           expect(key).toBe('one')
