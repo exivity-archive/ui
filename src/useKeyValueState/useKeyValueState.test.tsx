@@ -38,3 +38,28 @@ test('setKey updates key and value', () => {
     </KeyValueStateUser>
   )
 })
+
+test('value is undefined when keys don\'t match', () => {
+  const items = [
+    { key: 'two', value: 'bye' },
+    { key: 'three', value: 'test' }
+  ]
+  mount(
+    < KeyValueStateUser items={items} initialState='one' >
+      {(key, value, setKey) => {
+        const [renders, setRenders] = useState(0)
+        if (renders === 0) {
+          expect(key).toBe('one')
+          expect(value).not.toBeDefined()
+          setKey('two')
+        } else {
+          expect(key).toBe('two')
+          expect(value).toBe('bye')
+        }
+
+        if (renders < 2) setRenders(renders + 1)
+        return null
+      }}
+    </KeyValueStateUser>
+  )
+})
