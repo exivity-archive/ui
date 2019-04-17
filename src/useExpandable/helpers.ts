@@ -84,7 +84,7 @@ export function expandOrCollapseItemTree<T> (
   ): ExpandOrCollapseTree<T> => (item) => {
     const keys: string[] = [item.key]
 
-    fn(item, (relatedItem: any) => {
+    fn(item, (relatedItem) => {
       keys.push(relatedItem.key)
     })
 

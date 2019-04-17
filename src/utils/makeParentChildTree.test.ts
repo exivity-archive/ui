@@ -1,4 +1,4 @@
-import { createParentChildrenMap, PARENT, CHILDREN, orderChildrenUnderParents, iterateAllParents, iterateAllChildren } from './makeParentChildTree'
+import { createParentChildrenMap, PARENT, CHILDREN, orderChildrenUnderParents, iterateAllParents, iterateAllChildren, recursiveSortChildren } from './makeParentChildTree'
 
 test('createParentChildrenMap creates a map by keys', () => {
   const list = [
@@ -135,4 +135,36 @@ test(`iterateAllChildren iterates recursively over all ${CHILDREN}`, () => {
 
   iterateAllChildren<any>(tree, mock)
   expect(mock).toHaveBeenCalledTimes(6)
+})
+
+test('recursiveSortChildren sorts all children of an item based on the compareFn given', () => {
+  const compareFn = (a: any, b: any) => {
+    if (a.value > b.value) return 1
+    if (b.value > a.value) return -1
+    return 0
+  }
+
+  const tree = {
+    key: '1',
+    [CHILDREN]: [
+      {
+        key: '2',
+        value: 2,
+        [CHILDREN]: [{ key: '3', value: 2 }, { key: '4', value: 1 }]
+      }, {
+        key: '5',
+        value: 1,
+        [CHILDREN]: [{ key: '6', value: 1 }, { key: '7', value: 2 }]
+      }
+    ]
+  }
+
+  recursiveSortChildren(tree, compareFn)
+
+  const expectedOrder = ['5', '6', '7', '2', '4', '3']
+  let i = 0
+  iterateAllChildren<any>(tree, (child) => {
+    expect(child.key).toBe(expectedOrder[i])
+    i++
+  })
 })
