@@ -80,10 +80,9 @@ export function iterateAllChildren<T> (item: TreeItem<T>, callback: (child: Tree
   }
 }
 
-export function recursiveSortChildren<T> (item: TreeItem<T>, sortCallback: (a: TreeItem<T>, b: TreeItem<T>) => number) {
+export function sortAllChildren<T> (item: TreeItem<T>, sortCallback: (a: TreeItem<T>, b: TreeItem<T>) => number) {
   const children = item[CHILDREN]
   if (children) {
-    item[CHILDREN] = children.sort(sortCallback)
-    children.forEach(child => recursiveSortChildren(child, sortCallback))
+    children.sort(sortCallback).forEach(child => sortAllChildren(child, sortCallback))
   }
 }

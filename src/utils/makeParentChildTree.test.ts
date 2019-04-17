@@ -1,4 +1,12 @@
-import { createParentChildrenMap, PARENT, CHILDREN, orderChildrenUnderParents, iterateAllParents, iterateAllChildren, recursiveSortChildren } from './makeParentChildTree'
+import {
+  createParentChildrenMap,
+  PARENT,
+  CHILDREN,
+  orderChildrenUnderParents,
+  iterateAllParents,
+  iterateAllChildren,
+  sortAllChildren
+} from './makeParentChildTree'
 
 test('createParentChildrenMap creates a map by keys', () => {
   const list = [
@@ -159,7 +167,7 @@ test('recursiveSortChildren sorts all children of an item based on the compareFn
     ]
   }
 
-  recursiveSortChildren(tree, compareFn)
+  sortAllChildren(tree, compareFn)
 
   const expectedOrder = ['5', '6', '7', '2', '4', '3']
   let i = 0
