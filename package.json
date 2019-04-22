@@ -135,7 +135,7 @@
     "react-docgen-typescript-loader": "^3.0.1",
     "react-dom": "^16.8.4",
     "react-live": "^2.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "3.0.0",
     "react-test-renderer": "^16.8.4",
     "react-virtualized-auto-sizer": "^1.0.2",
     "require-context.macro": "^1.0.4",
