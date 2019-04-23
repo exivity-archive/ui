@@ -9,7 +9,7 @@ interface KeyValueStateUserProps {
 }
 
 const KeyValueStateUser: FC<KeyValueStateUserProps> = ({ children, initialState, items }) => {
-  const [value, setKey, key] = useKeyValueState(items, initialState)
+  const [value, key, setKey] = useKeyValueState(items, initialState)
   return children(value, setKey, key)
 }
 

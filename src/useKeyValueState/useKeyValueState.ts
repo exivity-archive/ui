@@ -5,7 +5,7 @@ export interface KeyValuePair<Key, Value> {
   value: Value
 }
 
-type KeyValueState<Key, Value> = [Value | undefined, Dispatch<React.SetStateAction<Key | undefined>>, Key]
+type KeyValueState<Key, Value> = [Value | undefined, Key, Dispatch<React.SetStateAction<Key | undefined>>]
 
 export function useKeyValueState<Key extends string, Value> (
   data: KeyValuePair<Key, Value>[],
@@ -15,6 +15,6 @@ export function useKeyValueState<Key extends string, Value> (
 
   return useMemo(() => {
     const currentItem = data.find(item => item.key === key)
-    return [currentItem ? currentItem.value : undefined, setKey, key] as KeyValueState<Key, Value>
+    return [currentItem && currentItem.value, key, setKey] as KeyValueState<Key, Value>
   }, [key, data])
 }

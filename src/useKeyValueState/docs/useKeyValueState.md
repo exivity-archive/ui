@@ -1,10 +1,10 @@
 # useKeyValueState
 
-This hook allows for less verbose and more type safe object state management 
+This hook allows for less verbose and more type safe item management
 
 ## Example
 
- `const [value, setKey, key] = useKeyValueState<Key, Value>(data, initialKey)`
+ `const [state, setKey] = useKeyValueState<Key, Value>(data, initialKey)`
 
 ## Parameters
 
@@ -18,6 +18,5 @@ This hook allows for less verbose and more type safe object state management
 ## Return value
   | name | type  description |
   |-----------|------------|--------|--------|
-  | `value` | `Value | undefined` | Value of current state. Is undefined when no given item matches the key.  | 
+  | `state` | `{ key: Key, value: Value } | undefined` | Value of current state. Is undefined when no given item matches the key.  | 
   | `setKey` | `(newKey: Key) => void` | Updates the state to the item that matches the new key  | 
-  | `key` | `Key` | Key of current state.  | 
