@@ -17,7 +17,10 @@ import {
   space,
   SpaceProps,
   width,
-  WidthProps
+  WidthProps,
+  borders,
+  BordersProps,
+  BorderRadiusProps
 } from 'styled-system'
 import { StyledProps } from '../utils/styled'
 
@@ -37,6 +40,8 @@ export type BlockProps =
   & MinHeightProps
   & ColorProps
   & OverrideColorProps
+  & BordersProps
+  & BorderRadiusProps
 
 export const blockStyles = css`
   ${space}
@@ -48,6 +53,7 @@ export const blockStyles = css`
   ${maxHeight}
   ${minHeight}
   ${color}
+  ${borders}
 `
 
 export const Block = styled.div<BlockProps>`
