@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import { setDate, getDate, isDate, getDaysInMonth } from 'date-fns'
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
-import { Day } from './modes/Days'
+import { StyledDay } from './styled'
 
 import { Calendar } from '.'
 
@@ -34,7 +34,21 @@ test('renders all days of the month', () => {
   )
 
   const days = calendar
-    .find(Day)
+    .find(StyledDay)
 
   expect(days.length).toBe(getDaysInMonth(date))
+})
+
+test('value represents active day', () => {
+  const onChangeMock = jest.fn(x => x)
+
+  const calendar = mountWithTheme(
+    <Calendar value={new Date()} onChange={onChangeMock}/>
+  )
+
+  const days = calendar
+    .find({ active: true })
+
+  // Per active day you will have two components with active set to true
+  expect(days).toHaveLength(2)
 })
