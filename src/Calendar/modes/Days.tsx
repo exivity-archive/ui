@@ -1,10 +1,10 @@
 import React from 'react'
-import { getDaysInMonth, setDate, getDate } from 'date-fns'
+import { getDaysInMonth, setDate, isSameDay } from 'date-fns'
 
 import { StyledWeekDays, StyledDays, StyledDay } from '../styled'
 
 export const WeekDays = () => (
-  <StyledWeekDays id='weekdays'>
+  <StyledWeekDays>
     <li>Mo</li>
     <li>Tu</li>
     <li>We</li>
@@ -15,13 +15,15 @@ export const WeekDays = () => (
   </StyledWeekDays>
 )
 
-function getRenderDays (selectedDay: number, onChange: Function) {
+function getRenderDay (value: Date, browseDate: Date, onChange: Function) {
   return (_: undefined, index: number) => {
     const day = index + 1
+    const thisDay = setDate(browseDate, day)
+    const isActive = isSameDay(value, thisDay)
 
     return (
       <li key={index}>
-        <StyledDay active={selectedDay === day}
+        <StyledDay active={isActive}
              onClick={() => onChange(day)}>
           {String(day)}
         </StyledDay>
@@ -31,21 +33,22 @@ function getRenderDays (selectedDay: number, onChange: Function) {
 }
 
 export interface DaysProps {
-  date: Date
-  onChange: (date: Date) => Date
+  value: Date
+  browseDate: Date
+  onChange: (value: Date) => Date
 }
 
-export const Days = ({ date, onChange }: DaysProps) => {
-  const updateDay = (day: number) => onChange(setDate(date, day))
+export const Days = ({ value, browseDate, onChange }: DaysProps) => {
+  const updateDay = (day: number) => onChange(setDate(browseDate, day))
 
-  const renderDays = getRenderDays(getDate(date), updateDay)
-  const nbOfDays = getDaysInMonth(date)
+  const renderDay = getRenderDay(value, browseDate, updateDay)
+  const nbOfDays = getDaysInMonth(browseDate)
 
   return (
     <>
       <WeekDays/>
-      <StyledDays id='days'>
-        {new Array(nbOfDays).fill(null).map(renderDays)}
+      <StyledDays>
+        {new Array(nbOfDays).fill(null).map(renderDay)}
       </StyledDays>
     </>
   )

@@ -9,7 +9,7 @@ export const StyledWeekDays = styled.ul`
 
   li {
     display: inline-block;
-    width: 13.6%;
+    width: 14.28%;
     text-align: center;
   }
 `
@@ -23,7 +23,7 @@ export const StyledDays = styled.ul`
   li {
     list-style-type: none;
     display: inline-block;
-    width: calc(13.6% - 5px);
+    width: calc(14.28% - 5px);
     text-align: center;
     margin-right: 5px;
     margin-bottom: 5px;
