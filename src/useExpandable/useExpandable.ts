@@ -5,7 +5,6 @@ import {
   createExpandOrCollapseTreeHelpers,
   expandOrCollapseItem,
   hasNoCollapsedParents,
-  disableEnumerable,
   Helpers
 } from './helpers'
 
@@ -17,6 +16,7 @@ import {
   CHILDREN
 } from '../utils/makeParentChildTree'
 import { ListItem } from '../utils'
+import { disableEnumerable } from '../utils/disableEnumerable'
 
 export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
   return list.map((item: TreeItem<T>): TreeListItem<T> => ({

@@ -6,8 +6,7 @@ import {
   collapseFn,
   createExpandOrCollapseTreeHelpers,
   ExpandOrCollapseChildrenOrParents,
-  ExpandOrCollapseTree,
-  disableEnumerable
+  ExpandOrCollapseTree
 } from './helpers'
 import { PARENT, iterateAllParents, CHILDREN, iterateAllChildren } from '../utils/makeParentChildTree'
 
@@ -255,14 +254,4 @@ test('createExpandOrCollapseTreeHelpers returns object with expand.parents helpe
   const resultSetExpanded = setExpanded.mock.results[0].value
 
   expect(resultSetExpanded).toEqual(['4', '3', '2', '1'])
-})
-
-test('disableEnumerable sets property enumerable to false', () => {
-  const obj = { key: '1', test: 'test' }
-
-  disableEnumerable(obj, 'test')
-
-  const newObj = { ...obj }
-
-  expect(newObj.hasOwnProperty('test')).toBe(false)
 })
