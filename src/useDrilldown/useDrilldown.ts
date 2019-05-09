@@ -1,12 +1,16 @@
 import { useMemo, useState, useEffect, Dispatch } from 'react'
-import { drilldownFn, replaceFn, getHiddenSiblingsFn, getVisibleSiblingsFn, removeFn, disableEnumerables } from './helpers'
-import { TreeItem, CHILDREN, ParentKeyAccessor, makeParentChildTree } from '../utils/makeParentChildTree'
+import {
+  drilldownFn,
+  replaceFn,
+  getHiddenSiblingsFn,
+  getVisibleSiblingsFn,
+  removeFn,
+  disableEnumerables,
+  separateVisibleAndHiddenChildren,
+  Children
+} from './helpers'
+import { TreeItem, ParentKeyAccessor, makeParentChildTree, CHILDREN } from '../utils/makeParentChildTree'
 import { ListItem } from '../utils'
-
-export interface Children<T> {
-  visibleChildren: TreeItem<T>[]
-  hiddenChildren: TreeItem<T>[]
-}
 
 export type DrilldownItem<T> = T & TreeItem<T> & Children<T> & {
   drilldown: () => void
@@ -16,19 +20,14 @@ export type DrilldownItem<T> = T & TreeItem<T> & Children<T> & {
   remove: () => void
 }
 
-export function enrichTreeItems<T> (list: TreeItem<T>[], visible: string[], setVisible: Dispatch<string[]>): DrilldownItem<T>[] {
+export function getAndEnrichVisibleItems<T> (list: TreeItem<T>[], visible: string[], setVisible: Dispatch<string[]>): DrilldownItem<T>[] {
 
   return visible.map((key: string): DrilldownItem<T> => {
     const item = list.find(item => item.key === key)!
 
-    const children = (item[CHILDREN] || []).reduce((acc, child) => {
-      if (visible.includes(child.key)) acc.visibleChildren.push(child)
-      else acc.hiddenChildren.push(child)
+    const children = separateVisibleAndHiddenChildren(item[CHILDREN] || [], visible)
 
-      return acc
-    }, { visibleChildren: [], hiddenChildren: [] } as Children<T>)
-
-    const drilldownItem = {
+    const enrichedItem = {
       ...item,
       ...children,
       drilldown: () => drilldownFn(item, children.hiddenChildren[0], visible, setVisible),
@@ -38,9 +37,9 @@ export function enrichTreeItems<T> (list: TreeItem<T>[], visible: string[], setV
       remove: () => removeFn(item, visible, setVisible)
     }
 
-    disableEnumerables(drilldownItem)
+    disableEnumerables(enrichedItem)
 
-    return drilldownItem
+    return enrichedItem
   })
 }
 
@@ -57,6 +56,6 @@ export function useDrilldown<T> (
   }, [data])
 
   return useMemo(() => {
-    return enrichTreeItems<T>(list, visible, setVisible)
+    return getAndEnrichVisibleItems<T>(list, visible, setVisible)
   }, [list, visible])
 }

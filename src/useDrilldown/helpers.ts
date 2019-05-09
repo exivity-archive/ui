@@ -69,6 +69,20 @@ export function getVisibleSiblingsFn<T> (item: TreeItem<T>, visible: string[]) {
   } else return []
 }
 
+export interface Children<T> {
+  visibleChildren: TreeItem<T>[]
+  hiddenChildren: TreeItem<T>[]
+}
+
+export function separateVisibleAndHiddenChildren<T> (children: TreeItem<T>[], visible: string[]) {
+  return children.reduce((acc, child) => {
+    if (visible.includes(child.key)) acc.visibleChildren.push(child)
+    else acc.hiddenChildren.push(child)
+
+    return acc
+  }, { visibleChildren: [], hiddenChildren: [] } as Children<T>)
+}
+
 export function disableEnumerables<T> (item: DrilldownItem<T>) {
   if (item[PARENT]) disableEnumerable(item, PARENT)
   if (item[CHILDREN]) disableEnumerable(item, CHILDREN)

@@ -1,4 +1,4 @@
-import { drilldownFn, replaceFn, removeFn, removeChildren, getHiddenSiblingsFn, getVisibleSiblingsFn, disableEnumerables } from './helpers'
+import { drilldownFn, replaceFn, removeFn, removeChildren, getHiddenSiblingsFn, getVisibleSiblingsFn, disableEnumerables, separateVisibleAndHiddenChildren } from './helpers'
 import { PARENT, CHILDREN } from '../utils/makeParentChildTree'
 
 test('drilldownFn throws error when item is not parent of childToAdd', () => {
@@ -286,6 +286,15 @@ test('getVisibleSiblingsFn returns visible siblings', () => {
   expect(result).toMatchObject([childOne])
 })
 
+test('separateVisibleAndHiddenChildren', () => {
+  const children = [{ key: '1' }, { key: '2' }]
+  const visibleKeys = ['1']
+
+  const result = separateVisibleAndHiddenChildren<any>(children, visibleKeys)
+
+  expect(result).toMatchObject({ visibleChildren: [{ key: '1' }], hiddenChildren: [{ key: '2' }] })
+})
+
 test('disableEnumerables disables all enumerables', () => {
 
   const obj = {
@@ -316,5 +325,4 @@ test('disableEnumerables disables all enumerables', () => {
   expect(newObj).not.toHaveProperty('getHiddenSiblings')
   expect(newObj).not.toHaveProperty('getVisibleSiblings')
   expect(newObj).not.toHaveProperty('level')
-
 })
