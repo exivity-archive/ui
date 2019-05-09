@@ -75,12 +75,14 @@ export function getNextIndex (index: number, array: any[]): number {
 
 export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
   let index = 0
-  const modes = initialMode && mode
-    ? mode as Modes[]
-    : Object.values(Modes)
+  let modes = Object.values(Modes)
 
   if (initialMode && mode && !Array.isArray(mode)) {
     throw new Error('When using initialMode and mode together, mode should be an array with options.')
+  }
+
+  if (initialMode && mode) {
+    modes = mode as Modes[]
   }
 
   if (initialMode) {
