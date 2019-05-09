@@ -83,11 +83,7 @@ export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] |
     throw new Error('When using initialMode and mode together, mode should be an array with options.')
   }
 
-  if (initialMode && mode) {
-    index = modes.findIndex(modeName => modeName === initialMode)
-  }
-
-  if (initialMode && !mode) {
+  if (initialMode) {
     index = modes.findIndex(modeName => modeName === initialMode)
   }
 
