@@ -96,7 +96,9 @@ export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] |
   const [selectedIndex, setIndex] = useState(index)
   const nextIndex = getNextIndex(selectedIndex, modes)
 
-  return (initialMode && mode) || initialMode
-    ? [modes[selectedIndex], () => setIndex(nextIndex)] as [Modes, () => void | undefined]
-    : [mode, undefined] as [Modes, undefined]
+  if ((initialMode && mode) || initialMode) {
+    return [modes[selectedIndex], () => setIndex(nextIndex)] as [Modes, () => void | undefined]
+  }
+
+  return [mode, undefined] as [Modes, undefined]
 }
