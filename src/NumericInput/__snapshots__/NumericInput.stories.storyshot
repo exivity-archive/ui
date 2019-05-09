@@ -121,7 +121,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Nisi voluptatum voluptatem beatae. Necessitatibus pariatur illo qui quo et consequatur a.
+      Aliquam aut rerum. Eum in ullam velit porro qui consectetur.
     </p>
   </div>
 </div>
@@ -351,7 +351,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      corrupti debitis pariatur consectetur
+      modi ad veniam molestiae
     </p>
     <section
       className="c2"
@@ -366,7 +366,7 @@ exports[`Storyshots interact|NumericInput flat 1`] = `
     <p
       className="c1"
     >
-      placeat pariatur molestiae libero
+      voluptatibus iure dolor quos
     </p>
   </div>
 </div>

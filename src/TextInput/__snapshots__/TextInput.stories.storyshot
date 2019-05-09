@@ -112,7 +112,7 @@ input.c1 {
     <p
       className="c3"
     >
-      Tempore optio et cum laudantium est. Natus quae ea et.
+      Accusantium nemo aspernatur non at. Nihil cupiditate deleniti tenetur qui necessitatibus rerum sint ducimus quis.
     </p>
   </div>
 </div>
@@ -351,7 +351,7 @@ exports[`Storyshots interact|TextInput flat + outined 1`] = `
     <p
       className="c1"
     >
-      Voluptatem itaque quasi aut reiciendis commodi ut expedita.
+      Voluptates mollitia est.
     </p>
     <section
       className="c2"
@@ -360,13 +360,13 @@ exports[`Storyshots interact|TextInput flat + outined 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="distinctio qui sunt assumenda"
+        value="quibusdam accusantium consequatur praesentium"
       />
     </section>
     <p
       className="c1"
     >
-      Aut quas laboriosam odit. Iure officia sed corrupti laboriosam voluptatem iste sit sed harum.
+      Veniam nobis doloremque. Rerum vero assumenda quam sit dolor quibusdam quo.
     </p>
   </div>
 </div>
@@ -456,7 +456,7 @@ exports[`Storyshots interact|TextInput flat 1`] = `
     <p
       className="c1"
     >
-      Ipsam qui distinctio suscipit.
+      Aut architecto et.
     </p>
     <section
       className="c2"
@@ -465,13 +465,13 @@ exports[`Storyshots interact|TextInput flat 1`] = `
         className="c3"
         onChange={[Function]}
         type="text"
-        value="dicta eius similique molestiae"
+        value="perferendis sed ut eius"
       />
     </section>
     <p
       className="c1"
     >
-      Est veniam animi quam maxime quas ut. Cumque qui non impedit eos accusamus dolorem.
+      Numquam voluptas eum. Recusandae corrupti nostrum ut quis ex quos aliquam.
     </p>
   </div>
 </div>
@@ -555,16 +555,16 @@ exports[`Storyshots interact|TextInput inline 1`] = `
   <p
     className="c1"
   >
-    a magnam reprehenderit sit
+    sint ipsam voluptas repudiandae
      
     <input
       className="c2"
       onChange={[Function]}
       type="text"
-      value="reprehenderit hic temporibus tenetur"
+      value="animi nihil fugiat omnis"
     />
      
-    facilis odit qui et est ut ea architecto
+    eveniet et aut quod repellat qui eos veniam
   </p>
 </div>
 `;
