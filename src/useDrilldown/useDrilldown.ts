@@ -1,8 +1,7 @@
 import { useMemo, useState, useEffect, Dispatch } from 'react'
-import { TreeItem, CHILDREN, PARENT, ParentKeyAccessor, makeParentChildTree } from '../utils/makeParentChildTree'
-import { disableEnumerable } from '../utils/disableEnumerable'
+import { drilldownFn, replaceFn, getHiddenSiblingsFn, getVisibleSiblingsFn, removeFn, disableEnumerables } from './helpers'
+import { TreeItem, CHILDREN, ParentKeyAccessor, makeParentChildTree } from '../utils/makeParentChildTree'
 import { ListItem } from '../utils'
-import { drilldownFn, swapSiblingFn, getHiddenSiblingsFn, removeFn, getVisibleSiblingsFn } from './helpers'
 
 export interface Children<T> {
   visibleChildren: TreeItem<T>[]
@@ -11,14 +10,16 @@ export interface Children<T> {
 
 export type DrilldownItem<T> = T & TreeItem<T> & Children<T> & {
   drilldown: () => void
-  swapSibling: (newSibling: DrilldownItem<T>) => void
+  replace: (newSibling: DrilldownItem<T>) => void
   getHiddenSiblings: () => TreeItem<T>[]
   getVisibleSiblings: () => TreeItem<T>[]
   remove: () => void
 }
 
 export function enrichTreeItems<T> (list: TreeItem<T>[], visible: string[], setVisible: Dispatch<string[]>): DrilldownItem<T>[] {
-  return list.map((item: TreeItem<T>): DrilldownItem<T> => {
+
+  return visible.map((key: string): DrilldownItem<T> => {
+    const item = list.find(item => item.key === key)!
 
     const children = (item[CHILDREN] || []).reduce((acc, child) => {
       if (visible.includes(child.key)) acc.visibleChildren.push(child)
@@ -27,46 +28,28 @@ export function enrichTreeItems<T> (list: TreeItem<T>[], visible: string[], setV
       return acc
     }, { visibleChildren: [], hiddenChildren: [] } as Children<T>)
 
-    return {
-      ...item as TreeItem<T> & { level: number },
+    const drilldownItem = {
+      ...item,
       ...children,
-      drilldown: () => drilldownFn(item, children, visible, setVisible),
-      swapSibling: (newSibling: TreeItem<T>) => swapSiblingFn(item, newSibling, visible, setVisible),
+      drilldown: () => drilldownFn(item, children.hiddenChildren[0], visible, setVisible),
+      replace: (newSibling: TreeItem<T>) => replaceFn(item, newSibling, visible, setVisible),
       getHiddenSiblings: () => getHiddenSiblingsFn(item, visible),
       getVisibleSiblings: () => getVisibleSiblingsFn(item, visible),
       remove: () => removeFn(item, visible, setVisible)
     }
-  })
-}
 
-export function getVisibleItems<T> (list: DrilldownItem<T>[], visible: string[]): DrilldownItem<T>[] {
-  return list.filter((item) => visible.includes(item.key)).map((item) => {
-    if (item[PARENT]) disableEnumerable(item, PARENT)
-    if (item[CHILDREN]) disableEnumerable(item, CHILDREN)
-    disableEnumerable(item, 'visibleChildren')
-    disableEnumerable(item, 'hiddenChildren')
-    disableEnumerable(item, 'drilldown')
-    disableEnumerable(item, 'swapSibling')
-    disableEnumerable(item, 'getHiddenSiblings')
-    disableEnumerable(item, 'getVisibleSiblings')
-    disableEnumerable(item, 'remove')
-    disableEnumerable(item, 'level')
+    disableEnumerables(drilldownItem)
 
-    return item
+    return drilldownItem
   })
 }
 
 export function useDrilldown<T> (
   data: ListItem<T>[],
-  parentKeyAccessor: ParentKeyAccessor<T>,
-  visibleKeys: string[]
+  parentKeyAccessor: ParentKeyAccessor<T>
 ): DrilldownItem<T>[] {
   const [list, setList] = useState<TreeItem<T>[]>(makeParentChildTree<T>(data, parentKeyAccessor))
-  const [visible, setVisible] = useState<string[]>(visibleKeys)
-
-  useEffect(() => {
-    setVisible(visibleKeys)
-  }, [visibleKeys])
+  const [visible, setVisible] = useState<string[]>(list.filter(item => item.level === 1).map(item => item.key))
 
   useEffect(() => {
     const treeList: TreeItem<T>[] = makeParentChildTree<T>(data, parentKeyAccessor)
@@ -74,8 +57,6 @@ export function useDrilldown<T> (
   }, [data])
 
   return useMemo(() => {
-    const enriched = enrichTreeItems(list, visible, setVisible)
-
-    return getVisibleItems<T>(enriched, visible)
+    return enrichTreeItems<T>(list, visible, setVisible)
   }, [list, visible])
 }
