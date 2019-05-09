@@ -161,9 +161,9 @@ test('removeChildren removes all children from array', () => {
 
   const visibleKeys = ['1', '3', '4']
 
-  const result = removeChildren<any>(one, visibleKeys)
+  removeChildren<any>(one, visibleKeys)
 
-  expect(result).toMatchObject(['1'])
+  expect(visibleKeys).toMatchObject(['1'])
 })
 
 test('getHiddenSiblingsFn returns an empty array if parent is falsy', () => {
