@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { MdAdd, MdRemove, MdDelete } from 'react-icons/md'
+import { MdAdd, MdDelete } from 'react-icons/md'
 import { Flex } from '../Flex'
 
 import { storiesOf } from '@storybook/react'
@@ -7,7 +7,7 @@ import { storiesOf } from '@storybook/react'
 import { useDrilldown, DrilldownItem } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 
-import { StyledList, SelectList } from '../SelectList/SelectList'
+import { SelectList } from '../SelectList/SelectList'
 import { ListFocus } from '../ListFocus'
 import { ListItem } from '../ListItem'
 import { Icon } from '../Icon'

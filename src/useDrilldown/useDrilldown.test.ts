@@ -1,5 +1,4 @@
-import React from 'react'
-import { mount } from 'enzyme'
+import { renderHook } from 'react-hooks-testing-library'
 
 import {
   getAndEnrichVisibleItems,
@@ -14,29 +13,24 @@ interface Record {
   parentId: string | null
 }
 
-const DrilldownList = ({ children, data, accessor }: any) => {
-  return children(useDrilldown<Record>(data, accessor))
-}
+const parentKeyAccessor = ({ parentId }: any) => parentId
 
 test('useDrilldown initially returns all root items', () => {
-  let returnData: Record[] = []
+  const one = { key: '1', parentId: null }
+  const two = { key: '2', parentId: '1' }
+  const three = { key: '3', parentId: '2' }
+  const four = { key: '4', parentId: '3' }
 
   const list: Record[] = [
-    { key: '1', parentId: null },
-    { key: '2', parentId: '1' },
-    { key: '3', parentId: '2' },
-    { key: '4', parentId: '3' }
+    one,
+    two,
+    three,
+    four
   ]
 
-  mount(
-    <DrilldownList data={list} accessor={(item: any) => item.parentId}>
-      {(data: any) => {
-        returnData = data
-        return null
-      }}
-    </DrilldownList>)
+  const { result } = renderHook(() => useDrilldown(list, parentKeyAccessor))
 
-  expect(returnData.length).toBe(1)
+  expect(result.current.length).toBe(1)
 })
 
 test('getAndEnrichVisibleItems filters items that are visible', () => {
