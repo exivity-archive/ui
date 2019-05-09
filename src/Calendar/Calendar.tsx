@@ -1,37 +1,53 @@
 import React, { useReducer } from 'react'
 import { Block, BlockProps } from '../Block'
-import { format } from 'date-fns'
 
 import { Browser } from './Browser'
+import { Years } from './modes/Years'
+import { Quarters } from './modes/Quarters'
+import { Months } from './modes/Months'
 import { Days } from './modes/Days'
-import { browseReducer, createBrowsers } from './helpers'
+import { StyledHeader } from './styled'
+import { browseReducer, createBrowsers, formatDateHeader, useMode } from './helpers'
 
-export type onChangeDate = (selectDate: Date) => Date
+import { onChangeDate, Modes } from './types'
 
 export interface CalendarProps {
   value: Date
   onChange: onChangeDate
-  mode?: string
+  initialMode?: Modes
+  mode?: Modes | Modes[]
 }
 
-const renderMode = (mode: string | undefined, value: Date, browseDate: Date, onChange: onChangeDate) => {
+const renderMode = (mode: Modes, value: Date, browseDate: Date, onChange: onChangeDate) => {
   switch (mode) {
-    case 'days':
+    case Modes.YEARS:
+      return <Years value={value} browseDate={browseDate} onChange={onChange}/>
+
+    case Modes.QUARTERS:
+      return <Quarters value={value} browseDate={browseDate} onChange={onChange}/>
+
+    case Modes.MONTHS:
+      return <Months value={value} browseDate={browseDate} onChange={onChange}/>
+
+    case Modes.DAYS:
     default:
       return <Days value={value} browseDate={browseDate} onChange={onChange}/>
   }
 }
 
-export const Calendar = ({ value, onChange, mode, ...blockProps }: CalendarProps & BlockProps) => {
+export const Calendar = ({ value, onChange, initialMode, mode, ...blockProps }: CalendarProps & BlockProps) => {
+  const [selectedMode, selectNextMode] = useMode(initialMode, mode)
   const [browseDate, dispatch] = useReducer(browseReducer, value)
-  const [onPrev, onNext] = createBrowsers(dispatch, mode)
+  const [onPrev, onNext] = createBrowsers(dispatch, selectedMode)
 
   return (
     <Block {...blockProps}>
       <Browser onPrev={onPrev} onNext={onNext}>
-        {format(browseDate, 'MMMM YYYY')}
+        <StyledHeader onClick={selectNextMode}>
+          {formatDateHeader(browseDate, selectedMode)}
+        </StyledHeader>
       </Browser>
-      {renderMode(mode, value, browseDate, onChange)}
+      {renderMode(selectedMode, value, browseDate, onChange)}
     </Block>
   )
 }

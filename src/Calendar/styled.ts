@@ -1,6 +1,15 @@
 import styled, { css } from 'styled-components'
 import { fromTheme, globalFont } from '../utils/styled'
 
+export const StyledHeader = styled.div`
+  user-select: none;
+  width: 100%;
+
+  ${({ onClick }) => onClick && css`
+    cursor: pointer;
+  `}
+`
+
 export const StyledWeekDays = styled.ul`
   ${globalFont}
   opacity: 0.6;
@@ -30,7 +39,19 @@ export const StyledDays = styled.ul`
   }
 `
 
-export const StyledDay = styled.div<{ active: boolean }>`
+export const StyledMonths = styled(StyledDays)`
+  li {
+    width: calc(33.33% - 5px);
+  }
+`
+
+export const StyledQuarters = styled(StyledDays)`
+  li {
+    width: calc(100% - 5px);
+  }
+`
+
+export const StyledTimeUnit = styled.div<{ active: boolean }>`
   height: 100%;
   border-radius: 180px;
   padding: 5px;

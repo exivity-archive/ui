@@ -1,7 +1,7 @@
 import React from 'react'
 import { getDaysInMonth, setDate, isSameDay } from 'date-fns'
 
-import { StyledWeekDays, StyledDays, StyledDay } from '../styled'
+import { StyledWeekDays, StyledDays, StyledTimeUnit } from '../styled'
 
 export const WeekDays = () => (
   <StyledWeekDays>
@@ -23,22 +23,22 @@ function getRenderDay (value: Date, browseDate: Date, onChange: Function) {
 
     return (
       <li key={index}>
-        <StyledDay active={isActive}
+        <StyledTimeUnit active={isActive}
              onClick={() => onChange(day)}>
           {String(day)}
-        </StyledDay>
+        </StyledTimeUnit>
       </li>
     )
   }
 }
 
-export interface DaysProps {
+export interface CommonPeriodProps {
   value: Date
   browseDate: Date
   onChange: (value: Date) => Date
 }
 
-export const Days = ({ value, browseDate, onChange }: DaysProps) => {
+export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
   const updateDay = (day: number) => onChange(setDate(browseDate, day))
 
   const renderDay = getRenderDay(value, browseDate, updateDay)

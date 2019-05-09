@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { globalFont } from '../utils/styled'
@@ -40,7 +40,7 @@ const StyledBrowser = styled.div`
 interface BrowserProps {
   onNext: () => void
   onPrev: () => void
-  children: string | FunctionComponent
+  children: any
 }
 
 export const Browser = ({ children, onNext, onPrev, ...otherProps }: BrowserProps) => (

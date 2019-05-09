@@ -1,37 +1,104 @@
-import { addMonths, subMonths, addQuarters, subQuarters, addYears, subYears } from 'date-fns'
+import { useState } from 'react'
+import { addMonths, addQuarters, addYears, format, subMonths, subQuarters, subYears } from 'date-fns'
 
-export function browseReducer (date: Date, type: string) {
+import { BrowseTypes, Modes } from './types'
+
+export function browseReducer (date: Date, type: BrowseTypes) {
   switch (type) {
-    case 'addMonth':
+    case BrowseTypes.ADD_MONTH:
       return addMonths(date, 1)
-    case 'addQuarter':
-      return addQuarters(date, 1)
-    case 'addYear':
-      return addYears(date, 1)
-    case 'subMonth':
+
+    case BrowseTypes.SUB_MONTH:
       return subMonths(date, 1)
-    case 'subQuarter':
+
+    case BrowseTypes.ADD_QUARTER:
+      return addQuarters(date, 1)
+
+    case BrowseTypes.SUB_QUARTER:
       return subQuarters(date, 1)
-    case 'subYear':
+
+    case BrowseTypes.ADD_YEAR:
+      return addYears(date, 1)
+
+    case BrowseTypes.SUB_YEAR:
       return subYears(date, 1)
+
+    case BrowseTypes.ADD_YEARS:
+      return addYears(date, 12)
+
+    case BrowseTypes.SUB_YEARS:
+      return subYears(date, 12)
+
     default:
       throw new Error()
   }
 }
 
-export function createBrowsers (dispatch: Function, mode: string | undefined) {
+export function createBrowsers (dispatch: Function, mode: Modes) {
   const create = (prev: string, next: string) => [() => dispatch(prev), () => dispatch(next)]
 
   switch (mode) {
-    case 'quarters':
-      return create('subQuarter', 'addQuarter')
+    case Modes.YEARS:
+      return create(BrowseTypes.SUB_YEARS, BrowseTypes.ADD_YEARS)
 
-    case 'years':
-      return create('subYear', 'addYear')
+    case Modes.MONTHS:
+    case Modes.QUARTERS:
+      return create(BrowseTypes.SUB_YEAR, BrowseTypes.ADD_YEAR)
 
-    case 'days':
-    case 'months':
+    case Modes.DAYS:
     default:
-      return create('subMonth', 'addMonth')
+      return create(BrowseTypes.SUB_MONTH, BrowseTypes.ADD_MONTH)
   }
+}
+
+export function formatDateHeader (browseDate: Date, mode: Modes) {
+  switch (mode) {
+    case Modes.YEARS:
+      return format(subYears(browseDate, 6), 'YYYY') + ' - ' +
+        format(addYears(browseDate, 5), 'YYYY')
+
+    case Modes.MONTHS:
+    case Modes.QUARTERS:
+      return format(browseDate, 'YYYY')
+
+    case Modes.DAYS:
+    default:
+      return format(browseDate, 'MMMM YYYY')
+  }
+}
+
+export function getNextIndex (index: number, array: any[]): number {
+  return index === array.length - 1
+    ? 0
+    : index + 1
+}
+
+export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
+  let index = 0
+  const modes = initialMode && mode
+    ? mode as Modes[]
+    : Object.values(Modes)
+
+  if (initialMode && mode && !Array.isArray(mode)) {
+    throw new Error('When using initialMode and mode together, mode should be an array with options.')
+  }
+
+  if (initialMode && mode) {
+    index = modes.findIndex(modeName => modeName === initialMode)
+  }
+
+  if (initialMode && !mode) {
+    index = modes.findIndex(modeName => modeName === initialMode)
+  }
+
+  if (index === -1) {
+    throw new Error('initialMode does not exist.')
+  }
+
+  const [selectedIndex, setIndex] = useState(index)
+  const nextIndex = getNextIndex(selectedIndex, modes)
+
+  return (initialMode && mode) || initialMode
+    ? [modes[selectedIndex], () => setIndex(nextIndex)] as [Modes, () => void | undefined]
+    : [mode, undefined] as [Modes, undefined]
 }
