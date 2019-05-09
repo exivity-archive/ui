@@ -73,25 +73,37 @@ export function getNextIndex (index: number, array: any[]): number {
     : index + 1
 }
 
-export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
-  let index = 0
-  let modes = Object.values(Modes)
-
+function validateUseOfModes (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
   if (initialMode && mode && !Array.isArray(mode)) {
     throw new Error('When using initialMode and mode together, mode should be an array with options.')
   }
+}
 
-  if (initialMode && mode) {
-    modes = mode as Modes[]
+function validateSelectedMode (index: number) {
+  if (index === -1) {
+    throw new Error('initialMode does not exist.')
   }
+}
+
+function getAvailableModes (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
+  if (initialMode && mode) {
+    return mode as Modes[]
+  }
+
+  return Object.values(Modes)
+}
+
+export function useMode (initialMode: Modes | undefined, mode: Modes | Modes[] | undefined) {
+  validateUseOfModes(initialMode, mode)
+
+  let index = 0
+  let modes = getAvailableModes(initialMode, mode)
 
   if (initialMode) {
     index = modes.findIndex(modeName => modeName === initialMode)
   }
 
-  if (index === -1) {
-    throw new Error('initialMode does not exist.')
-  }
+  validateSelectedMode(index)
 
   const [selectedIndex, setIndex] = useState(index)
   const nextIndex = getNextIndex(selectedIndex, modes)
