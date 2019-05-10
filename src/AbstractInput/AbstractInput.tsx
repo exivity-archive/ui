@@ -11,11 +11,13 @@ import {
 } from '../utils/styled'
 import { Omit } from '../utils/types'
 
+import { textAlign, TextAlignProps } from 'styled-system'
+
 export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 
 export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
 
-export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps {
+export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps, TextAlignProps {
   // Variants
   outlined?: boolean
   flat?: boolean
@@ -38,6 +40,7 @@ interface Props extends InputProps {
 
 export const inputStyles = css<StyledInputProps>`
   ${globalFont};
+  ${textAlign};
 
   font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
