@@ -34,8 +34,16 @@ export const StyledInputPrefixOrSuffix = styled.span <StyledInputPrefixOrSuffixP
   `}
 `
 
-export const StyledContainer = styled(Block)`
+interface ContainerProps {
+  inline?: boolean
+}
+
+export const StyledContainer = styled(Block) <ContainerProps>`
   position: relative;
+
+  ${props => (props.inline) && css`
+    display: inline;
+  `}
 
   ${Icon} {
     pointer-events: none;
@@ -52,8 +60,8 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
 }
 
 interface PrefixAndSuffixPadding {
-  paddingRight: number
-  paddingLeft: number
+  paddingRight: number | null
+  paddingLeft: number | null
 }
 
 export const inputStyles = css<StyledInputProps>`
@@ -131,8 +139,10 @@ export const inputStyles = css<StyledInputProps>`
 
 export const StyledInput = styled.input<StyledInputProps & PrefixAndSuffixPadding>`
   ${inputStyles}
-  ${props => css`
+  ${props => props.paddingRight && css`
     padding-right: ${props.paddingRight}px;
+  `}
+  ${props => props.paddingLeft && css`
     padding-left: ${props.paddingLeft}px;
   `}
 `

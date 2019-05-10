@@ -6,18 +6,26 @@ import { StyledInputProps, StyledInputPrefixOrSuffixProps, StyledInputPrefixOrSu
 
 interface InputPrefixOrSuffixProps extends StyledInputPrefixOrSuffixProps {
   registerWidth: Dispatch<number>
+  containerRect: ClientRect
 }
 
-const InputPrefixOrSuffix: FC<InputPrefixOrSuffixProps> = ({ registerWidth, children, ...rest }) => {
+const InputPrefixOrSuffix: FC<InputPrefixOrSuffixProps> = ({ registerWidth, containerRect, children, type, ...rest }) => {
   const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     if (ref.current) {
-      registerWidth(ref.current.getBoundingClientRect().width)
-    }
-  }, [ref])
 
-  return <StyledInputPrefixOrSuffix ref={ref} {...rest}>{children}</StyledInputPrefixOrSuffix>
+      const rect = ref.current.getBoundingClientRect()
+
+      const offset = type === 'prefix'
+        ? rect.left - containerRect.left
+        : rect.right - containerRect.right
+
+      registerWidth(rect.width + offset)
+    }
+  }, [ref, containerRect])
+
+  return <StyledInputPrefixOrSuffix ref={ref} type={type} {...rest}>{children}</StyledInputPrefixOrSuffix>
 }
 
 export type OmitOnChangeAndPrefixHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'prefix'>
@@ -47,7 +55,7 @@ export const Input: FC<Props> =
     prefix,
     suffix,
 
-    // Props for both TextInput & Prefix and Suffix
+    // Props for both Input & Prefix and Suffix
     tiny,
     small,
     large,
@@ -58,20 +66,35 @@ export const Input: FC<Props> =
     onClick,
     width,
 
-    // Rest goes to TextInput
+    // Container and Input props
+    inline,
+
+    // Rest goes to Input
     ...rest
   }, ref: Ref<HTMLInputElement>) => {
     const [valid, setValid] = useState(true)
 
-    const [paddingLeft, setPaddingLeft] = useState(0)
-    const [paddingRight, setPaddingRight] = useState(0)
+    const containerRef = useRef<HTMLDivElement>(null)
+    const [containerRect, setContainerRect] = useState<null | ClientRect>(null)
 
-    const container = { onClick, width }
+    useEffect(() => {
+      if (containerRef.current) {
+        setContainerRect(containerRef.current.getBoundingClientRect())
+      }
+    }, [containerRef.current])
+
+    const [paddingLeft, setPaddingLeft] = useState<number | null>(null)
+    const [paddingRight, setPaddingRight] = useState<number | null>(null)
+
+    const container = { onClick, width, inline }
     const shared = { tiny, small, large, huge, disabled }
 
+    console.log(paddingLeft, paddingRight)
+
     return (
-      <StyledContainer {...container}>
+      <StyledContainer ref={containerRef} {...container}>
         <AnimatedStyledInput
+          inline={inline}
           paddingLeft={paddingLeft}
           paddingRight={paddingRight}
           type={type || 'text'}
@@ -84,16 +107,27 @@ export const Input: FC<Props> =
           {...shared}
           {...rest}
         />
-        {!!prefix && (
-          <InputPrefixOrSuffix registerWidth={setPaddingLeft} type='prefix' {...shared} >
-            {prefix}
-          </InputPrefixOrSuffix>
-        )}
-        {!!suffix && (
-          <InputPrefixOrSuffix registerWidth={setPaddingRight} type='suffix' {...shared}>
-            {suffix}
-          </InputPrefixOrSuffix>
-        )}
+        {containerRect && <>
+          {!!prefix && (
+            <InputPrefixOrSuffix
+              registerWidth={setPaddingLeft}
+              containerRect={containerRect}
+              type='prefix'
+              {...shared}>
+              {prefix}
+            </InputPrefixOrSuffix>
+          )}
+          {!!suffix && (
+            <InputPrefixOrSuffix
+              containerRect={containerRect}
+              registerWidth={setPaddingRight}
+              type='suffix'
+              {...shared}>
+              {suffix}
+            </InputPrefixOrSuffix>
+          )}
+        </>
+        }
       </StyledContainer>
     )
   })
