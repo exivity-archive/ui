@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders AbstractInput without props 1`] = `
+exports[`renders  without props 1`] = `
 .c0 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;

@@ -1,21 +1,46 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref } from 'react'
 import styled, { css } from 'styled-components'
-import { animated } from 'react-spring'
-
-import {
-  fromTheme,
-  globalFont,
-  hexToString,
-  matchThemeProp, PurposesProps, SizesProps,
-  StyledProps
-} from '../utils/styled'
-import { Omit } from '../utils/types'
-
 import { textAlign, TextAlignProps } from 'styled-system'
 
-export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+import { globalFont, matchThemeProp, fromTheme, hexToString, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
+import { Icon } from '../Icon'
+import { Block } from '../Block'
+import { animated } from 'react-spring/renderprops-universal'
 
-export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
+export type PrefixOrSuffix = 'prefix' | 'suffix'
+
+export interface StyledInputPrefixOrSuffixProps extends SizesProps {
+  type: PrefixOrSuffix
+}
+
+export const StyledInputPrefixOrSuffix = styled.span <StyledInputPrefixOrSuffixProps>`
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+
+  font-size: ${matchThemeProp(theme => theme.global.sizes, {
+    modifier: (em: number) => em * 20
+  })}px;
+
+  ${props => props.type === 'prefix'
+    ? css`
+    left: 0.5em;
+  `
+    : css`
+    right: 0.5em;
+  `}
+`
+
+export const StyledContainer = styled(Block)`
+  position: relative;
+
+  ${Icon} {
+    pointer-events: none;
+  }
+`
 
 export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps, TextAlignProps {
   // Variants
@@ -26,16 +51,9 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
   inline?: boolean
 }
 
-export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttributes {
-  value?: string | number
-  onChange?: OnChange
-  required?: boolean
-  ref?: React.RefObject<HTMLInputElement> | null
-}
-
-interface Props extends InputProps {
-  step?: number | string
-  type?: string
+interface PrefixAndSuffixPadding {
+  paddingRight: number
+  paddingLeft: number
 }
 
 export const inputStyles = css<StyledInputProps>`
@@ -111,23 +129,12 @@ export const inputStyles = css<StyledInputProps>`
   }
 `
 
-const StyledInput = styled.input`
-  ${inputStyles};
+export const StyledInput = styled.input<StyledInputProps & PrefixAndSuffixPadding>`
+  ${inputStyles}
+  ${props => css`
+    padding-right: ${props.paddingRight}px;
+    padding-left: ${props.paddingLeft}px;
+  `}
 `
 
-const AnimatedStyledInput = animated(StyledInput)
-
-export const AbstractInput =
-  forwardRef(({ type, onChange, ...rest }: Props, ref: Ref<HTMLInputElement>) => {
-    const [valid, setValid] = useState(true)
-    return <AnimatedStyledInput
-      type={type || 'text'}
-      ref={ref}
-      danger={!valid}
-      onChange={(event) => {
-        onChange && onChange(event.target.value, event)
-        event.target.checkValidity && setValid(event.target.checkValidity())
-      }}
-      {...rest}
-    />
-  })
+export const AnimatedStyledInput = animated(StyledInput)

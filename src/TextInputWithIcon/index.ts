@@ -1,1 +1,0 @@
-export { TextInputWithIcon } from './TextInputWithIcon'

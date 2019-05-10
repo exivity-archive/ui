@@ -33,7 +33,7 @@
     "docs:watch": "start-storybook -p 9009 -c docs -s docs/public",
     "docs:build": "build-storybook -c docs -s docs/public -o docs/static",
     "docs:publish": "bash scripts/publish-docs.sh",
-    "start": "run-p test:watch docs:watch",
+    "start": "run-p docs:watch",
     "build": "yarn lib:clean && yarn lib:build && yarn docs:build",
     "lib:clean": "rimraf lib",
     "lib:build": "node scripts/build-lib.js",

@@ -2,21 +2,21 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-import { TextInputWithIcon, TextInputWithIconProps } from '../TextInputWithIcon/TextInputWithIcon'
 import { Omit } from '../utils/types'
-import { OmitOnChangeHTMLInputAttributes } from '../AbstractInput/AbstractInput'
+import { OmitOnChangeAndPrefixHTMLInputAttributes, InputProps, Input } from '../Input/Input'
+import { Icon } from '../Icon'
 
-export type SelectInputProps = Omit<TextInputWithIconProps, 'icon'>
+export type SelectInputProps = Omit<InputProps, 'prefix'>
 
-export const SelectInput: React.FC<SelectInputProps & OmitOnChangeHTMLInputAttributes> = ({
+export const SelectInput: React.FC<SelectInputProps & OmitOnChangeAndPrefixHTMLInputAttributes> = ({
   disabled,
   onChange,
   ...rest
 }) => (
-  <StyledSelectInput icon={<MdKeyboardArrowDown/>} onChange={onChange} {...rest} disabled isDisabled={disabled}/>
-)
+    <StyledSelectInput prefix={<Icon offSet={10}><MdKeyboardArrowDown /></Icon>} onChange={onChange} {...rest} disabled isDisabled={disabled} />
+  )
 
-const StyledSelectInput = styled(TextInputWithIcon)<{ isDisabled?: boolean }>`
+const StyledSelectInput = styled(Input) <{ isDisabled?: boolean }>`
   ${props => props.isDisabled
     ? css`
        &[disabled] {

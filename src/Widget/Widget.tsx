@@ -5,7 +5,7 @@ import { fromTheme, hexToString, StyledProps } from '../utils/styled'
 import { Heading } from '../Heading'
 import { HeadingProps } from '../Heading/Heading'
 import { MdEdit } from 'react-icons/md'
-import { TextInput } from '../TextInput'
+import { Input } from '../Input'
 import { Button } from '../Button'
 
 interface StyledWidgetProps {
@@ -82,7 +82,7 @@ const WidgetHeader: FC<WidgetHeaderProps> = ({
       <Heading type={type}>
         {edit ? (
           <TitleInput>
-            <TextInput ref={textInputRef}
+            <Input ref={textInputRef}
               onKeyDown={onKeyDown}
               value={children}
               onChange={onChange} data-test={test + '-input'} />

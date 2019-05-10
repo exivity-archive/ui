@@ -1,12 +1,12 @@
 import React, { ReactElement, ReactNode, useMemo } from 'react'
 
 import styled, { css } from 'styled-components'
-import { OmitOnChangeHTMLInputAttributes, OnChange } from '../AbstractInput/AbstractInput'
+import { OmitOnChangeAndPrefixHTMLInputAttributes, OnChange } from '../Input/Input'
 import { Label } from '../Label'
 import { randomId } from '../utils/randomId'
 import { fromTheme, StyledProps } from '../utils/styled'
 
-export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttributes {
+export interface CheckboxProps extends StyledProps, OmitOnChangeAndPrefixHTMLInputAttributes {
   radio?: boolean
   checked?: boolean
   onChange?: OnChange<boolean>
@@ -58,8 +58,8 @@ export const StyledCheckbox = styled.input`
     &::before {
       content: " ";
       border-radius: ${props => props.type === 'checkbox'
-        ? css`${fromTheme(theme => theme.global.borderRadius)}px`
-        : '50%'};
+    ? css`${fromTheme(theme => theme.global.borderRadius)}px`
+    : '50%'};
       background-color: ${fromTheme(theme => theme.colors.lightGray)};
     }
 
