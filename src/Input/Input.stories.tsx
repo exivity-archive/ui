@@ -60,7 +60,7 @@ storiesOf('interact|Input', module)
     {faker.lorem.words(8)}
     <Heading type='sub'>Numeric</Heading>
     {faker.lorem.words(4)}{' '}
-    <Input inline value={Math.floor(Math.random() * 10000000)} />{' '}
+    <Input inline value={faker.random.number(1000000)} />{' '}
     {faker.lorem.words(8)}
   </Paragraph>)
   .add('flat', () => (
@@ -74,7 +74,7 @@ storiesOf('interact|Input', module)
       <Heading type='sub'>Numeric</Heading>
       <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
       <Section>
-        <Input type='number' flat value={Math.floor(Math.random() * 10000000)} />
+        <Input type='number' flat value={faker.random.number(1000000)} />
       </Section>
       <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
     </>

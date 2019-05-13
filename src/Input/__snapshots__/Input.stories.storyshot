@@ -807,7 +807,7 @@ input.c1:after {
   <p
     className="c2"
   >
-    Mollitia est labore saepe magni vel neque rem.
+    Est labore saepe magni vel neque rem.
   </p>
   <section
     className="c3"
@@ -849,14 +849,14 @@ input.c1:after {
         className="c5"
         onChange={[Function]}
         type="number"
-        value={9457844}
+        value={434488}
       />
     </div>
   </section>
   <p
     className="c2"
   >
-    Voluptas iusto sint dolor officia est. Repudiandae id ab qui minus debitis voluptas voluptatem et.
+    Iusto sint dolor officia est. Repudiandae id ab qui minus debitis voluptas voluptatem et.
   </p>
 </div>
 `;
@@ -1036,11 +1036,11 @@ input.c2:after {
         className="c4"
         onChange={[Function]}
         type="text"
-        value={5613531}
+        value={744074}
       />
     </div>
      
-    maxime rerum esse similique ipsam fugit facilis tempora
+    rerum esse similique ipsam fugit facilis tempora est
   </p>
 </div>
 `;
