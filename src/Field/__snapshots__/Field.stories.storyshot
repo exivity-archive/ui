@@ -19,28 +19,9 @@ exports[`Storyshots interact|Field align 1`] = `
   color: #999;
 }
 
-.c5 > .c2:first-child {
+.c6 > .c2:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c5 > .c2:first-child > .c2 {
-  padding-bottom: unset;
-}
-
-.c6 > .c2:first-child {
-  padding-bottom: unset;
-  margin-right: 1.25em;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -57,7 +38,26 @@ exports[`Storyshots interact|Field align 1`] = `
   padding-bottom: unset;
 }
 
-.c6 > *:not(.c2):not(:last-child) {
+.c7 > .c2:first-child {
+  padding-bottom: unset;
+  margin-right: 1.25em;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c7 > .c2:first-child > .c2 {
+  padding-bottom: unset;
+}
+
+.c7 > *:not(.c2):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
@@ -114,6 +114,14 @@ exports[`Storyshots interact|Field align 1`] = `
 }
 
 .c4 {
+  position: relative;
+}
+
+.c4 .c8 {
+  pointer-events: none;
+}
+
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -132,35 +140,35 @@ exports[`Storyshots interact|Field align 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -177,13 +185,17 @@ exports[`Storyshots interact|Field align 1`] = `
     >
       Username
     </label>
-    <input
+    <div
       className="c4"
-      id="username"
-      onChange={[Function]}
-      placeholder="Please type username"
-      type="text"
-    />
+    >
+      <input
+        className="c5"
+        id="username"
+        onChange={[Function]}
+        placeholder="Please type username"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -249,6 +261,14 @@ exports[`Storyshots interact|Field default 1`] = `
 }
 
 .c4 {
+  position: relative;
+}
+
+.c4 .c6 {
+  pointer-events: none;
+}
+
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -267,35 +287,35 @@ exports[`Storyshots interact|Field default 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -312,13 +332,17 @@ exports[`Storyshots interact|Field default 1`] = `
     >
       Username
     </label>
-    <input
+    <div
       className="c4"
-      id="username"
-      onChange={[Function]}
-      placeholder="Please type username"
-      type="text"
-    />
+    >
+      <input
+        className="c5"
+        id="username"
+        onChange={[Function]}
+        placeholder="Please type username"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -342,7 +366,7 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   color: #999;
 }
 
-.c5 > .c2:first-child {
+.c6 > .c2:first-child {
   padding-bottom: 0.625em;
   margin-right: unset;
   -webkit-box-flex: 0;
@@ -357,7 +381,7 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   flex-basis: auto;
 }
 
-.c5 > .c2:first-child > .c2 {
+.c6 > .c2:first-child > .c2 {
   padding-bottom: unset;
 }
 
@@ -414,6 +438,14 @@ exports[`Storyshots interact|Field horizontal 1`] = `
 }
 
 .c4 {
+  position: relative;
+}
+
+.c4 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -432,35 +464,35 @@ exports[`Storyshots interact|Field horizontal 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -477,13 +509,17 @@ exports[`Storyshots interact|Field horizontal 1`] = `
     >
       Username
     </label>
-    <input
+    <div
       className="c4"
-      id="username"
-      onChange={[Function]}
-      placeholder="Please type username"
-      type="text"
-    />
+    >
+      <input
+        className="c5"
+        id="username"
+        onChange={[Function]}
+        placeholder="Please type username"
+        type="text"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -496,6 +532,14 @@ exports[`Storyshots interact|Field multiple 1`] = `
 .c15 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
+}
+
+.c13 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c21 .c12 {
@@ -718,11 +762,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   transform: scale(0.9);
 }
 
-.c8 {
+.c9 {
   display: block;
 }
 
-.c7 {
+.c8 {
   position: relative;
   width: 100%;
 }
@@ -836,7 +880,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c6 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -854,11 +898,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   white-space: unset;
 }
 
-.c6:not(:last-child) {
+.c7:not(:last-child) {
   margin-bottom: 1.25em;
 }
 
-.c6 > .c3:first-child {
+.c7 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-box-flex: 0;
@@ -873,18 +917,18 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: 30em;
 }
 
-.c6 > .c3:first-child > .c3 {
+.c7 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c6 > * {
+.c7 > * {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.c6 > *:not(.c3):not(:last-child) {
+.c7 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
@@ -897,6 +941,82 @@ exports[`Storyshots interact|Field multiple 1`] = `
   -webkit-transform-origin: left 25%;
   -ms-transform-origin: left 25%;
   transform-origin: left 25%;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c5 {
+  position: relative;
+}
+
+.c5 .c12 {
+  pointer-events: none;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
 .c17 {
@@ -933,90 +1053,6 @@ exports[`Storyshots interact|Field multiple 1`] = `
   height: 100%;
 }
 
-.c5 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c5:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c5:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c5::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c9 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c9 .c12 {
-  pointer-events: none;
-}
-
-.c11 {
-  padding-right: 2.2em;
-}
-
-.c13 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c10[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -1043,13 +1079,17 @@ exports[`Storyshots interact|Field multiple 1`] = `
       >
         Username
       </label>
-      <input
+      <div
         className="c5"
-        id="username"
-        onChange={[Function]}
-        placeholder="Please type username"
-        type="text"
-      />
+      >
+        <input
+          className="c6"
+          id="username"
+          onChange={[Function]}
+          placeholder="Please type username"
+          type="text"
+        />
+      </div>
     </div>
     <div
       className="c2"
@@ -1065,13 +1105,17 @@ exports[`Storyshots interact|Field multiple 1`] = `
           We will never sell your email address and we will never spam you!
         </label>
       </label>
-      <input
+      <div
         className="c5"
-        id="email"
-        onChange={[Function]}
-        placeholder="Please type email address"
-        type="text"
-      />
+      >
+        <input
+          className="c6"
+          id="email"
+          onChange={[Function]}
+          placeholder="Please type email address"
+          type="text"
+        />
+      </div>
     </div>
     <div
       className="c2"
@@ -1082,20 +1126,24 @@ exports[`Storyshots interact|Field multiple 1`] = `
       >
         Receive newsletter
       </label>
-      <input
+      <div
         className="c5"
-        id="name"
-        onChange={[Function]}
-        placeholder="Please type full name"
-        type="text"
-      />
+      >
+        <input
+          className="c6"
+          id="name"
+          onChange={[Function]}
+          placeholder="Please type full name"
+          type="text"
+        />
+      </div>
     </div>
   </div>
   <div
     className="c1"
   >
     <div
-      className="c6"
+      className="c7"
     >
       <label
         className="c3 c4"
@@ -1103,16 +1151,20 @@ exports[`Storyshots interact|Field multiple 1`] = `
       >
         Username
       </label>
-      <input
+      <div
         className="c5"
-        id="username2"
-        onChange={[Function]}
-        placeholder="Please type username"
-        type="text"
-      />
+      >
+        <input
+          className="c6"
+          id="username2"
+          onChange={[Function]}
+          placeholder="Please type username"
+          type="text"
+        />
+      </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <label
         className="c3 c4"
@@ -1125,16 +1177,20 @@ exports[`Storyshots interact|Field multiple 1`] = `
           We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.
         </label>
       </label>
-      <input
+      <div
         className="c5"
-        id="email2"
-        onChange={[Function]}
-        placeholder="Please type email address"
-        type="text"
-      />
+      >
+        <input
+          className="c6"
+          id="email2"
+          onChange={[Function]}
+          placeholder="Please type email address"
+          type="text"
+        />
+      </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <label
         className="c3 c4"
@@ -1142,45 +1198,50 @@ exports[`Storyshots interact|Field multiple 1`] = `
         Select a value
       </label>
       <div
-        className="c7"
+        className="c8"
         data-test="dropdown"
       >
         <div
-          className="c8"
+          className="c9"
         >
           <div
-            className="c9"
+            className="c5"
             onClick={[Function]}
           >
             <input
-              className="c10 c11 c5"
+              className="c10 c6"
               disabled={true}
               onChange={[Function]}
               placeholder="Select with SelectList"
               type="text"
             />
             <span
-              className="c12 c13"
+              className="c11"
               disabled={true}
+              type="prefix"
             >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                strokeWidth="0"
-                style={
-                  Object {
-                    "color": undefined,
-                  }
-                }
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                className="c12 c13"
               >
-                <path
-                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-                />
-              </svg>
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  strokeWidth="0"
+                  style={
+                    Object {
+                      "color": undefined,
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                  />
+                </svg>
+              </span>
             </span>
           </div>
           <div
@@ -1253,7 +1314,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <label
         className="c3 c4"

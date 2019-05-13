@@ -5,6 +5,14 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   padding: 12px;
 }
 
+.c9 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
+}
+
 .c11 .c8 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -185,6 +193,38 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 }
 
 .c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c4 {
+  position: relative;
+}
+
+.c4 .c8 {
+  pointer-events: none;
+}
+
+.c43 .c8 {
+  pointer-events: none;
+}
+
+.c44 .c8 {
+  pointer-events: none;
+}
+
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -203,73 +243,37 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   background-color: #eee;
 }
 
-.c7:hover {
+.c6:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c7:focus {
+.c6:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c4 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 .c8 {
-  pointer-events: none;
-}
-
-.c43 .c8 {
-  pointer-events: none;
-}
-
-.c6 {
-  padding-right: 2.2em;
-}
-
-.c9 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
 }
 
 .c5[disabled] {
@@ -305,34 +309,39 @@ exports[`Storyshots interact|SelectInput default 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c7"
+            className="c5 c6"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
             type="text"
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -353,6 +362,14 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 exports[`Storyshots interact|SelectInput disabled 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c7 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c9 .c6 {
@@ -516,6 +533,38 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c41 .c6 {
+  pointer-events: none;
+}
+
+.c42 .c6 {
+  pointer-events: none;
+}
+
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -534,35 +583,35 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c4:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c4:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -619,42 +668,6 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 .c6 {
-  pointer-events: none;
-}
-
-.c41 .c6 {
-  pointer-events: none;
-}
-
-.c4 {
-  padding-right: 2.2em;
-}
-
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c3[disabled] {
   cursor: not-allowed;
 }
@@ -678,68 +691,78 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
       className="c2"
     >
       <input
-        className="c3 c4 c5"
+        className="c3 c4"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Disabled"
       />
       <span
-        className="c6 c7"
+        className="c5"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c4 c8"
+        className="c3 c8"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Disabled"
       />
       <span
-        className="c6 c7"
+        className="c5"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -749,6 +772,14 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 exports[`Storyshots interact|SelectInput outlined 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c7 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c8 .c6 {
@@ -912,6 +943,38 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 }
 
 .c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c40 .c6 {
+  pointer-events: none;
+}
+
+.c41 .c6 {
+  pointer-events: none;
+}
+
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -930,73 +993,37 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   background-color: unset;
 }
 
-.c5:hover {
+.c4:hover {
   border: 1px solid #999;
 }
 
-.c5:focus {
+.c4:focus {
   border: 1px solid #222;
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 .c6 {
-  pointer-events: none;
-}
-
-.c40 .c6 {
-  pointer-events: none;
-}
-
-.c4 {
-  padding-right: 2.2em;
-}
-
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
 }
 
 .c3[disabled] {
@@ -1023,68 +1050,78 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
       className="c2"
     >
       <input
-        className="c3 c4 c5"
+        className="c3 c4"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Outlined"
       />
       <span
-        className="c6 c7"
+        className="c5"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c4 c5"
+        className="c3 c4"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Outlined"
       />
       <span
-        className="c6 c7"
+        className="c5"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
   </div>
@@ -1094,6 +1131,14 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 exports[`Storyshots interact|SelectInput purposes 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c8 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c16 .c7 {
@@ -1257,6 +1302,38 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 }
 
 .c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c48 .c7 {
+  pointer-events: none;
+}
+
+.c49 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1275,35 +1352,35 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   background-color: #eee;
 }
 
-.c6:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c6:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c6::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -1672,42 +1749,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 .c7 {
-  pointer-events: none;
-}
-
-.c48 .c7 {
-  pointer-events: none;
-}
-
-.c5 {
-  padding-right: 2.2em;
-}
-
-.c8 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -1745,272 +1786,312 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
         className="c3"
       >
         <input
-          className="c4 c5 c6"
+          className="c4 c5"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Primary"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c9"
+          className="c4 c9"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Secondary"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c10"
+          className="c4 c10"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Success"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c11"
+          className="c4 c11"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Danger"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c12"
+          className="c4 c12"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Primary"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c13"
+          className="c4 c13"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Secondary"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c14"
+          className="c4 c14"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Success"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
         className="c3"
       >
         <input
-          className="c4 c5 c15"
+          className="c4 c15"
           disabled={true}
           onChange={[Function]}
           type="text"
           value="Danger"
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
     </div>
@@ -2021,6 +2102,14 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 exports[`Storyshots interact|SelectInput sizes 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c7 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c12 .c6 {
@@ -2183,6 +2272,70 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   transform-origin: left 25%;
 }
 
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 16.25px;
+  left: 0.5em;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 23.75px;
+  left: 0.5em;
+}
+
+.c2 {
+  position: relative;
+}
+
+.c2 .c6 {
+  pointer-events: none;
+}
+
+.c44 .c6 {
+  pointer-events: none;
+}
+
+.c45 .c6 {
+  pointer-events: none;
+}
+
 .c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
@@ -2235,7 +2388,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c5 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2254,35 +2407,35 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c4:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c4:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -2339,66 +2492,6 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 .c6 {
-  pointer-events: none;
-}
-
-.c44 .c6 {
-  pointer-events: none;
-}
-
-.c4 {
-  padding-right: 2.2em;
-}
-
-.c9 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 16.25px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
-.c11 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 23.75px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c3[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -2423,102 +2516,117 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
       className="c2"
     >
       <input
-        className="c3 c4 c5"
+        className="c3 c4"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Small"
       />
       <span
-        className="c6 c7"
+        className="c5"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c4 c8"
+        className="c3 c8"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Default"
       />
       <span
-        className="c6 c9"
+        className="c9"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c4 c10"
+        className="c3 c10"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Large"
       />
       <span
-        className="c6 c11"
+        className="c11"
         disabled={true}
+        type="prefix"
       >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
+        <span
+          className="c6 c7"
         >
-          <path
-            d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-          />
-        </svg>
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+            />
+          </svg>
+        </span>
       </span>
     </div>
   </div>

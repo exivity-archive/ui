@@ -52,16 +52,14 @@ export interface InputProps extends StyledInputProps, OmitOnChangeAndPrefixHTMLI
   disabled?: boolean
 }
 
-type InputType = 'text' | 'number'
-
 interface Props extends InputProps {
   step?: number | string
-  type?: InputType
+  type?: string
 }
 
 export const Input: FC<Props> =
   forwardRef(({
-    type = 'text' as InputType,
+    type = 'text',
     onChange,
 
     prefix,
@@ -111,7 +109,7 @@ export const Input: FC<Props> =
           paddingLeft={paddingLeft}
           paddingRight={paddingRight}
           ref={ref}
-          type={type || 'text'}
+          type={type}
           danger={!valid}
           onChange={makeHandleChange(onChange, setValid)}
           {...shared}

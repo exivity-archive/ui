@@ -10,6 +10,14 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   padding-bottom: 1.25em;
 }
 
+.c9 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
+}
+
 .c22 .c8 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -189,7 +197,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   transform-origin: left 25%;
 }
 
-.c13 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -198,34 +206,27 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: 500;
-  font-size: 0.875em;
-  outline: none;
-  cursor: pointer;
-}
-
-.c13:hover,
-.c13:focus {
-  background-color: #eee;
-}
-
-.c14 {
-  width: 100%;
+  position: absolute;
+  top: 0;
   height: 100%;
-  padding: 0 20px;
+  font-size: 20px;
+  left: 0.5em;
 }
 
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
+.c4 {
+  position: relative;
+}
+
+.c4 .c8 {
+  pointer-events: none;
+}
+
+.c54 .c8 {
+  pointer-events: none;
+}
+
+.c55 .c8 {
+  pointer-events: none;
 }
 
 .c19 {
@@ -280,7 +281,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c7 {
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -299,35 +300,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: unset;
 }
 
-.c7:hover {
+.c6:hover {
   border: 1px solid #999;
 }
 
-.c7:focus {
+.c6:focus {
   border: 1px solid #222;
 }
 
-.c7::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c7[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -592,8 +593,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c4 {
-  position: relative;
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -602,30 +602,34 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 0.875em;
+  outline: none;
+  cursor: pointer;
 }
 
-.c4 .c8 {
-  pointer-events: none;
+.c13:hover,
+.c13:focus {
+  background-color: #eee;
 }
 
-.c54 .c8 {
-  pointer-events: none;
+.c14 {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
 }
 
-.c6 {
-  padding-right: 2.2em;
-}
-
-.c9 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
 }
 
 .c5[disabled] {
@@ -667,7 +671,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c7"
+            className="c5 c6"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -675,27 +679,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -856,7 +865,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c16"
+            className="c5 c16"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -864,27 +873,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1045,7 +1059,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c17"
+            className="c5 c17"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1053,27 +1067,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1234,7 +1253,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c18"
+            className="c5 c18"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1242,27 +1261,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1423,7 +1447,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c19"
+            className="c5 c19"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1431,27 +1455,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1612,7 +1641,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c19"
+            className="c5 c19"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1620,27 +1649,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1801,7 +1835,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c20"
+            className="c5 c20"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1809,27 +1843,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -1990,7 +2029,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
           onClick={[Function]}
         >
           <input
-            className="c5 c6 c21"
+            className="c5 c21"
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
@@ -1998,27 +2037,32 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             value={null}
           />
           <span
-            className="c8 c9"
+            className="c7"
             disabled={true}
+            type="prefix"
           >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+            <span
+              className="c8 c9"
             >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+                />
+              </svg>
+            </span>
           </span>
         </div>
         <div
@@ -2181,6 +2225,14 @@ exports[`Storyshots molecules/Select default 1`] = `
   padding-bottom: 1.25em;
 }
 
+.c8 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
+}
+
 .c15 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -2360,6 +2412,90 @@ exports[`Storyshots molecules/Select default 1`] = `
   transform-origin: left 25%;
 }
 
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c47 .c7 {
+  pointer-events: none;
+}
+
+.c48 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2399,94 +2535,6 @@ exports[`Storyshots molecules/Select default 1`] = `
   height: 100%;
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c6:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c6:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c6::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 .c7 {
-  pointer-events: none;
-}
-
-.c47 .c7 {
-  pointer-events: none;
-}
-
-.c5 {
-  padding-right: 2.2em;
-}
-
-.c8 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -2513,7 +2561,7 @@ exports[`Storyshots molecules/Select default 1`] = `
         onClick={[Function]}
       >
         <input
-          className="c4 c5 c6"
+          className="c4 c5"
           disabled={true}
           onChange={[Function]}
           placeholder="Choose option"
@@ -2521,27 +2569,32 @@ exports[`Storyshots molecules/Select default 1`] = `
           value={null}
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
@@ -2703,6 +2756,14 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   padding-bottom: 1.25em;
 }
 
+.c8 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
+}
+
 .c15 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -2882,6 +2943,90 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   transform-origin: left 25%;
 }
 
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c47 .c7 {
+  pointer-events: none;
+}
+
+.c48 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2921,94 +3066,6 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   height: 100%;
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c6:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c6:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c6::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 .c7 {
-  pointer-events: none;
-}
-
-.c47 .c7 {
-  pointer-events: none;
-}
-
-.c5 {
-  padding-right: 2.2em;
-}
-
-.c8 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -3035,7 +3092,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
         onClick={[Function]}
       >
         <input
-          className="c4 c5 c6"
+          className="c4 c5"
           disabled={true}
           onChange={[Function]}
           placeholder="Click on me or outside"
@@ -3043,27 +3100,32 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
           value={null}
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div
@@ -3147,6 +3209,14 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   padding-bottom: 1.25em;
 }
 
+.c8 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
+}
+
 .c15 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
@@ -3326,6 +3396,90 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   transform-origin: left 25%;
 }
 
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c3 {
+  position: relative;
+}
+
+.c3 .c7 {
+  pointer-events: none;
+}
+
+.c47 .c7 {
+  pointer-events: none;
+}
+
+.c48 .c7 {
+  pointer-events: none;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 0,168,216;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c5:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c5:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c5::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c5[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3365,94 +3519,6 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   height: 100%;
 }
 
-.c6 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c6:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c6:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c6::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c3 .c7 {
-  pointer-events: none;
-}
-
-.c47 .c7 {
-  pointer-events: none;
-}
-
-.c5 {
-  padding-right: 2.2em;
-}
-
-.c8 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  cursor: not-allowed;
-  right: 0.5em;
-}
-
 .c4[disabled] {
   cursor: pointer;
   box-shadow: none;
@@ -3479,7 +3545,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
         onClick={[Function]}
       >
         <input
-          className="c4 c5 c6"
+          className="c4 c5"
           disabled={true}
           onChange={[Function]}
           placeholder="Choose option"
@@ -3487,27 +3553,32 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
           value={null}
         />
         <span
-          className="c7 c8"
+          className="c6"
           disabled={true}
+          type="prefix"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
+          <span
+            className="c7 c8"
           >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
+              />
+            </svg>
+          </span>
         </span>
       </div>
       <div

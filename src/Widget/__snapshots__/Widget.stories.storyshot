@@ -90,13 +90,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Recusandae quo mollitia est reiciendis sunt odio fuga. Non eaque sequi voluptas accusantium occaecati quia consequatur. Minima ut sed aut assumenda quo illo sed unde repellendus. Quam est est non odit architecto omnis ad quas. Ipsam voluptas repudiandae animi nihil fugiat omnis eveniet et aut.
- 
-Qui eos veniam quasi aut architecto et perferendis sed ut. Explicabo numquam voluptas eum. Recusandae corrupti nostrum ut quis ex quos aliquam. Voluptates mollitia est. Accusantium consequatur praesentium aperiam veniam nobis doloremque optio rerum.
+      Qui eos veniam quasi aut architecto et perferendis sed ut. Explicabo numquam voluptas eum. Recusandae corrupti nostrum ut quis ex quos aliquam. Voluptates mollitia est. Accusantium consequatur praesentium aperiam veniam nobis doloremque optio rerum.
  
 Quam sit dolor quibusdam quo quia accusantium nemo aspernatur. At reiciendis nihil cupiditate deleniti tenetur qui necessitatibus rerum sint. Quis sit impedit in blanditiis ut. Quod doloribus perspiciatis est minus suscipit animi. Asperiores amet modi. Est esse ut et numquam recusandae mollitia.
  
 Eos repudiandae a consequatur a. Eaque et inventore nostrum consequatur et enim consequatur illo voluptate. Qui ex rerum tenetur nam.
+ 
+Minima qui quas qui. Itaque aut nihil possimus odio at et nulla. Necessitatibus vel eum. Dignissimos in aut voluptates tempora explicabo ut perspiciatis veniam ducimus.
     </p>
   </div>
 </div>
@@ -321,13 +321,13 @@ input.c3 {
     <p
       className="c6"
     >
-      Molestiae quos veritatis. Fugit aut perferendis aliquam itaque reprehenderit. Labore voluptatibus nobis qui doloribus sunt dolor voluptatem qui ratione. Dolorum inventore hic eos. Recusandae et necessitatibus nisi nostrum quas rerum harum. Qui iusto molestiae totam nulla et provident nesciunt voluptas.
- 
-Ut quod perferendis. Tempore ea omnis quia. Voluptatem dolor quasi ratione aliquid.
+      Ut quod perferendis. Tempore ea omnis quia. Voluptatem dolor quasi ratione aliquid.
  
 Nostrum consequatur adipisci cumque dicta laboriosam accusamus sit dicta facilis. Rerum sed qui aut saepe iste qui et. Eos recusandae laboriosam vel accusantium consequatur.
  
 Aut esse accusamus. Libero velit consequatur fuga eveniet suscipit blanditiis at iste. Molestias sit eligendi voluptatum nobis non occaecati illo eum iste. Neque dolorem dolorem veniam vel dolor earum. Voluptate quod quam quaerat eum culpa architecto tenetur ipsam vitae. Vitae atque dolorum.
+ 
+Soluta voluptas quia similique. Nam necessitatibus odit vel vitae tempore. Excepturi velit sapiente dicta sint quis facilis tempore. Consectetur aut eveniet pariatur hic voluptatem sapiente.
     </p>
   </div>
 </div>
@@ -360,7 +360,7 @@ input.c3 {
   font-size: 1.5em;
 }
 
-.c3 .c10 {
+.c3 .c11 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -371,24 +371,15 @@ input.c3 {
   transform-origin: left 25%;
 }
 
-.c8 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  margin: 1.25rem 0;
-}
-
-.c8:first-child {
-  margin-top: 0;
-}
-
-.c8:last-child {
-  margin-bottom: 0;
-}
-
 .c5 {
+  position: relative;
+}
+
+.c5 .c11 {
+  pointer-events: none;
+}
+
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -407,37 +398,54 @@ input.c3 {
   background-color: #eee;
 }
 
-.c5:hover {
+.c6:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c6:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c9:first-child {
+  margin-top: 0;
+}
+
+.c9:last-child {
+  margin-bottom: 0;
 }
 
 .c1 {
@@ -450,7 +458,7 @@ input.c3 {
   width: 100%;
 }
 
-.c7 {
+.c8 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
@@ -504,20 +512,20 @@ input.c3 {
   top: 1.53125em;
 }
 
-.c7:hover {
+.c8:hover {
   box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
 }
 
-.c7:focus {
+.c8:focus {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:active,
-.c7.active {
+.c8:active,
+.c8.active {
   box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
 }
 
-.c7:after {
+.c8:after {
   display: none;
   content: "";
   position: absolute;
@@ -529,24 +537,24 @@ input.c3 {
   background-color: rgba(255,255,255,0.5);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   pointer-events: none;
 }
 
-.c7[disabled]:after {
+.c8[disabled]:after {
   display: block;
 }
 
-.c7:hover {
+.c8:hover {
   color: #222;
   box-shadow: 0 0 0 1px #222;
 }
 
-.c7:focus {
+.c8:focus {
   box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
 }
 
-.c7 .c10 {
+.c8 .c11 {
   font-size: 1.5em;
 }
 
@@ -558,7 +566,7 @@ input.c3 {
   max-width: 90%;
 }
 
-.c9 .c6 {
+.c10 .c7 {
   margin-left: 20px;
 }
 
@@ -580,17 +588,21 @@ input.c3 {
         <div
           className="c4"
         >
-          <input
+          <div
             className="c5"
-            data-test="widget-header-input"
-            onChange={[Function]}
-            onKeyDown={[Function]}
-            type="text"
-            value="Edit me"
-          />
+          >
+            <input
+              className="c6"
+              data-test="widget-header-input"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              type="text"
+              value="Edit me"
+            />
+          </div>
         </div>
         <button
-          className="c6 c7"
+          className="c7 c8"
           data-test="widget-header-button"
           onClick={[Function]}
           tabIndex={-1}
@@ -617,15 +629,15 @@ input.c3 {
       </h1>
     </div>
     <p
-      className="c8"
+      className="c9"
     >
-      Soluta voluptas quia similique. Nam necessitatibus odit vel vitae tempore. Excepturi velit sapiente dicta sint quis facilis tempore. Consectetur aut eveniet pariatur hic voluptatem sapiente.
- 
-Voluptatem voluptate cum maxime suscipit quis et ipsam. Id consequatur mollitia facere. Et aliquam ut voluptas mollitia earum est alias officiis voluptatum. Expedita dolorem voluptas quod sit voluptate vero qui. Accusamus saepe ut accusantium quibusdam. Totam voluptatibus hic.
+      Voluptatem voluptate cum maxime suscipit quis et ipsam. Id consequatur mollitia facere. Et aliquam ut voluptas mollitia earum est alias officiis voluptatum. Expedita dolorem voluptas quod sit voluptate vero qui. Accusamus saepe ut accusantium quibusdam. Totam voluptatibus hic.
  
 Esse qui ipsum esse est consectetur eaque libero. Voluptatum quia officiis est voluptas. Qui nulla architecto molestiae et distinctio rerum in. In eum delectus dolorum sequi autem saepe qui. Aliquid unde ducimus soluta omnis.
  
 Dolorem assumenda molestias sunt autem. Eligendi rerum sed consequatur ut. Deleniti quis rerum eaque omnis et dicta.
+ 
+Et at eveniet nihil. Saepe sunt voluptas ut non. Est quidem deserunt eos incidunt quia molestiae repellendus dolore. Nulla asperiores maiores recusandae et rerum quo ducimus sit qui. Corrupti quaerat illo et incidunt quis at exercitationem. Repudiandae est earum ut laborum culpa numquam.
     </p>
   </div>
 </div>
@@ -722,13 +734,13 @@ input.c3 {
     <p
       className="c4"
     >
-      Minima qui quas qui. Itaque aut nihil possimus odio at et nulla. Necessitatibus vel eum. Dignissimos in aut voluptates tempora explicabo ut perspiciatis veniam ducimus.
- 
-Necessitatibus perspiciatis et eligendi sequi assumenda aut. Harum ea non natus nisi. Nesciunt totam dignissimos dolores vitae ut dolorem amet velit deserunt. Assumenda sunt quam officiis eos et quos et. Aperiam sed sint facilis eos consequuntur. Repellendus aut voluptatem magnam ut modi dolorem quae saepe aut.
+      Necessitatibus perspiciatis et eligendi sequi assumenda aut. Harum ea non natus nisi. Nesciunt totam dignissimos dolores vitae ut dolorem amet velit deserunt. Assumenda sunt quam officiis eos et quos et. Aperiam sed sint facilis eos consequuntur. Repellendus aut voluptatem magnam ut modi dolorem quae saepe aut.
  
 Dicta quae aliquam minima ea rerum. Exercitationem minima enim suscipit deserunt quos vel enim. Corrupti dolores perspiciatis harum consequatur aliquid nisi quis. Dolores neque itaque sed aut. Itaque eos amet fugiat recusandae ex itaque quas. Ea ad at omnis delectus.
  
 Dignissimos et amet qui rerum enim quos natus. Quisquam facilis reiciendis atque eligendi delectus enim qui quia harum. Distinctio et iusto.
+ 
+Molestiae quos veritatis. Fugit aut perferendis aliquam itaque reprehenderit. Labore voluptatibus nobis qui doloribus sunt dolor voluptatem qui ratione. Dolorum inventore hic eos. Recusandae et necessitatibus nisi nostrum quas rerum harum. Qui iusto molestiae totam nulla et provident nesciunt voluptas.
     </p>
   </div>
 </div>

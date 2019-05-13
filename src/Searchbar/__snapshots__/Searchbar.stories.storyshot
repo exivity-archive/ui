@@ -1,328 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots atoms|Searchbar Styled-system 1`] = `
-.c0 {
-  padding: 12px;
-}
-
-.c1 {
-  margin: 1.25em;
-  width: 500px;
-}
-
-.c8 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c9 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c10 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c11 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c12 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c6 {
-  font-size: 1.5em;
-}
-
-.c20 .c6 {
-  font-size: 1.5em;
-}
-
-.c21 .c6 {
-  font-size: 1.5em;
-}
-
-.c22 .c6 {
-  font-size: 1.5em;
-}
-
-.c23 .c6 {
-  font-size: 1.5em;
-}
-
-.c24 .c6 {
-  font-size: 1.5em;
-}
-
-.c25 .c6 {
-  font-size: 1.5em;
-}
-
-.c26 .c6 {
-  font-size: 1.5em;
-}
-
-.c27 .c6 {
-  font-size: 1.5em;
-}
-
-.c28 .c6 {
-  font-size: 1.5em;
-}
-
-.c29 .c6 {
-  font-size: 1.5em;
-}
-
-.c30 .c6 {
-  font-size: 1.5em;
-}
-
-.c31 .c6 {
-  font-size: 1.5em;
-}
-
-.c32 .c6 {
-  font-size: 1.5em;
-}
-
-.c33 .c6 {
-  font-size: 1.5em;
-}
-
-.c34 .c6 {
-  font-size: 1.5em;
-}
-
-.c35 .c6 {
-  font-size: 1.5em;
-}
-
-.c36 .c6 {
-  font-size: 1.5em;
-}
-
-.c37 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c38 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c39 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c5 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 0,168,216;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c5:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c5:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c5::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c5[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c2 .c6 {
-  pointer-events: none;
-}
-
-.c4 {
-  padding-right: 2.2em;
-}
-
-.c7 {
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  position: absolute;
-  font-size: NaNpx;
-  right: 0.5em;
-}
-
-.c7 svg {
-  vertical-align: middle;
-}
-
-.c3 {
-  background-color: #FFF;
-  will-change: transform;
-  border: none;
-}
-
-.c3:hover,
-.c3:focus {
-  background-color: #eee;
-  border-bottom: none;
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-    width={500}
-  >
-    <div
-      className="c2"
-    >
-      <input
-        className="c3 c4 c5"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseOut={[Function]}
-        placeholder="Search..."
-        style={
-          Object {
-            "transform": "translateX(0px)",
-            "width": null,
-          }
-        }
-        type="text"
-      />
-      <span
-        className="c6 c7"
-      >
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-        </svg>
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots atoms|Searchbar animated 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c6 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c7 .c5 {
@@ -486,6 +174,34 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c5 {
+  pointer-events: none;
+}
+
+.c39 .c5 {
+  pointer-events: none;
+}
+
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -504,68 +220,37 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c3:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c3:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 .c5 {
-  pointer-events: none;
-}
-
-.c3 {
-  padding-right: 2.2em;
-}
-
-.c6 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  right: 0.5em;
 }
 
 .c2 {
@@ -598,32 +283,37 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
     className="c1"
   >
     <input
-      className="c2 c3 c4"
+      className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
       type="text"
     />
     <span
-      className="c5 c6"
+      className="c4"
+      type="prefix"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        className="c5 c6"
       >
-        <path
-          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </span>
     </span>
   </div>
 </div>
@@ -632,6 +322,14 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 exports[`Storyshots atoms|Searchbar default 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c6 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c7 .c5 {
@@ -795,6 +493,34 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c5 {
+  pointer-events: none;
+}
+
+.c39 .c5 {
+  pointer-events: none;
+}
+
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -813,68 +539,37 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c3:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c3:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 .c5 {
-  pointer-events: none;
-}
-
-.c3 {
-  padding-right: 2.2em;
-}
-
-.c6 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  right: 0.5em;
 }
 
 .c2 {
@@ -899,32 +594,37 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
     className="c1"
   >
     <input
-      className="c2 c3 c4"
+      className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
       type="text"
     />
     <span
-      className="c5 c6"
+      className="c4"
+      type="prefix"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        className="c5 c6"
       >
-        <path
-          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </span>
     </span>
   </div>
 </div>
@@ -933,6 +633,14 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 exports[`Storyshots atoms|Searchbar flat 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c6 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c7 .c5 {
@@ -1096,6 +804,34 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c1 .c5 {
+  pointer-events: none;
+}
+
+.c39 .c5 {
+  pointer-events: none;
+}
+
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1113,60 +849,29 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
   padding: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c1 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 .c5 {
-  pointer-events: none;
-}
-
-.c3 {
-  padding-right: 2.2em;
-}
-
-.c6 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  right: 0.5em;
 }
 
 .c2 {
@@ -1186,32 +891,37 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
     className="c1"
   >
     <input
-      className="c2 c3 c4"
+      className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
       type="text"
     />
     <span
-      className="c5 c6"
+      className="c4"
+      type="prefix"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        className="c5 c6"
       >
-        <path
-          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </span>
     </span>
   </div>
 </div>
@@ -1220,6 +930,14 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 exports[`Storyshots atoms|Searchbar with padding 1`] = `
 .c0 {
   padding: 12px;
+}
+
+.c6 {
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  text-transform: none;
+  top: 10px;
 }
 
 .c7 .c5 {
@@ -1383,6 +1101,39 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
 }
 
 .c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  font-size: 20px;
+  left: 0.5em;
+}
+
+.c39 .c5 {
+  pointer-events: none;
+}
+
+.c40 .c5 {
+  pointer-events: none;
+}
+
+.c1 {
+  width: 500px;
+  position: relative;
+}
+
+.c1 .c5 {
+  pointer-events: none;
+}
+
+.c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1401,73 +1152,37 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
   background-color: #eee;
 }
 
-.c4:hover {
+.c3:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c4:focus {
+.c3:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c4::-webkit-input-placeholder {
+.c3::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::-moz-placeholder {
+.c3::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4:-ms-input-placeholder {
+.c3:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4::placeholder {
+.c3::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c39 .c5 {
-  pointer-events: none;
-}
-
-.c1 {
-  width: 500px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 .c5 {
-  pointer-events: none;
-}
-
-.c3 {
-  padding-right: 2.2em;
-}
-
-.c6 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-  position: absolute;
-  font-size: 20px;
-  right: 0.5em;
 }
 
 .c2 {
@@ -1495,32 +1210,37 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
     width={500}
   >
     <input
-      className="c2 c3 c4"
+      className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
       type="text"
     />
     <span
-      className="c5 c6"
+      className="c4"
+      type="prefix"
     >
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 24 24"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
+      <span
+        className="c5 c6"
       >
-        <path
-          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-        />
-      </svg>
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+          />
+        </svg>
+      </span>
     </span>
   </div>
 </div>

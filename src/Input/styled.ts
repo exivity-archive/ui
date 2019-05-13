@@ -4,7 +4,7 @@ import { textAlign, TextAlignProps } from 'styled-system'
 import { globalFont, matchThemeProp, fromTheme, hexToString, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
 import { Icon } from '../Icon'
 import { Block } from '../Block'
-import { animated } from 'react-spring/renderprops-universal'
+import { animated } from 'react-spring'
 
 export type PreSuffix = 'prefix' | 'suffix'
 
