@@ -3,7 +3,6 @@ import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref, Rea
 import { Omit } from '../utils/types'
 
 import { StyledInputProps, StyledInputPreSuffixProps, StyledInputPreSuffix, StyledContainer, AnimatedStyledInput, PreSuffix } from './styled'
-import { formatNumber } from './helpers'
 
 interface InputPreSuffixProps extends StyledInputPreSuffixProps {
   registerPosition: Dispatch<number>
@@ -30,20 +29,11 @@ const InputPreSuffix: FC<InputPreSuffixProps> = ({ registerPosition, containerRe
   return <StyledInputPreSuffix ref={preSuffixRef} type={type} {...rest}>{children}</StyledInputPreSuffix>
 }
 
-const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boolean>, type: InputType) => {
+const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boolean>) => {
   return (event: ChangeEvent<HTMLInputElement>) => {
     if (onChange) {
-      const value = event.target.value
-      if (type === 'number') {
-        const match = value.match(/^[-+]?(?:[0-9 ]+,)*[0-9]+(?:\.[0-9]+)?$/)
-        const isValid = !!match && match[0] === value
-
-        isValid && onChange(formatNumber(value, ','), event)
-        setValid(isValid)
-      } else {
-        onChange(value, event)
-        event.target.checkValidity && setValid(event.target.checkValidity())
-      }
+      onChange(event.target.value, event)
+      event.target.checkValidity && setValid(event.target.checkValidity())
     }
   }
 }
@@ -121,8 +111,9 @@ export const Input: FC<Props> =
           paddingLeft={paddingLeft}
           paddingRight={paddingRight}
           ref={ref}
+          type={type || 'text'}
           danger={!valid}
-          onChange={makeHandleChange(onChange, setValid, type)}
+          onChange={makeHandleChange(onChange, setValid)}
           {...shared}
           {...rest} />
         {!!prefix && renderPreSuffix('prefix', prefix, setPaddingLeft)}
