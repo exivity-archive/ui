@@ -1,5 +1,22 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
 import { Input } from '.'
 
 // Modify or remove, stories are snapshotted automatically
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
+
+test('value gets changed after an on change event', () => {
+  const initialValue = 'initialValue'
+  const updatedValue = 'changed'
+
+  const onChangeMock = jest.fn(x => x)
+
+  const textInputWithIcon = mountWithTheme(
+    <Input value={initialValue} onChange={onChangeMock} />
+  )
+
+  textInputWithIcon
+    .find('input')
+    .simulate('change', { target: { value: updatedValue } })
+
+  expect(onChangeMock.mock.results[0].value).toBe(updatedValue)
+})

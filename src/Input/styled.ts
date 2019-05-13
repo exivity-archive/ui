@@ -6,13 +6,13 @@ import { Icon } from '../Icon'
 import { Block } from '../Block'
 import { animated } from 'react-spring/renderprops-universal'
 
-export type PrefixOrSuffix = 'prefix' | 'suffix'
+export type PreSuffix = 'prefix' | 'suffix'
 
-export interface StyledInputPrefixOrSuffixProps extends SizesProps {
-  type: PrefixOrSuffix
+export interface StyledInputPreSuffixProps extends SizesProps {
+  type: PreSuffix
 }
 
-export const StyledInputPrefixOrSuffix = styled.span <StyledInputPrefixOrSuffixProps>`
+export const StyledInputPreSuffix = styled.span <StyledInputPreSuffixProps>`
   display: flex;
   align-items: center;
 
