@@ -81,6 +81,7 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 
 .c15 .c1 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c1 {
@@ -152,6 +153,10 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
 }
 
 .c33 .c1 {
+  font-size: 1.5em;
+}
+
+.c34 .c1 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);

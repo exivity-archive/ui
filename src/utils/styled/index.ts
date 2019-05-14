@@ -50,7 +50,6 @@ export const toRgbArray = (input: Color): Rgb => {
 }
 
 export function toRgbString (input: Color) {
-  console.log({ input })
   // If input is a var(--name) input, treat it as a 'r, g, b' value
   if (typeof input === 'string' && input.startsWith('var(--')) {
     return input

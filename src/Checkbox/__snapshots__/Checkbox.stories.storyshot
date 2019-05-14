@@ -15,7 +15,7 @@ exports[`Storyshots interact|Checkbox default 1`] = `
 
 .c4 > .c3 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
@@ -313,7 +313,7 @@ exports[`Storyshots interact|Checkbox with label 1`] = `
 
 .c3 > .c2 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
