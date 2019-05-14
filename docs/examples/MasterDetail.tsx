@@ -11,8 +11,6 @@ import { App, headerHeight } from './partials/App'
 import {
   Block,
   Button,
-  distanceBetweenEvenLevelItem,
-  ExpandableSpacer,
   Flex,
   Heading,
   Helpers,
@@ -102,7 +100,7 @@ const List: React.FC = ({ data, ...rest }: any) => {
           <StyledFixedSizeList
             height={height}
             width={width}
-            itemSize={40}
+            itemSize={34}
             itemData={[expandableData, helpers]}
             itemCount={expandableData.length}
           >
@@ -137,15 +135,9 @@ const Item = ({ data, index, style }: ItemProps) => {
 
   return useMemo(() => (
       <ListItem style={style}>
-        <ExpandableSpacer
-          level={item.attributes.level}
-          button={button}
-          index={index}
-          distance={distanceBetweenEvenLevelItem(items, index)}>
-          <Block pl={1}>
-            {item.name}
-          </Block>
-        </ExpandableSpacer>
+        <Block p={1}>
+          {item.name}
+        </Block>
       </ListItem>
     ), [item]
   )
