@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { globalFont } from '../utils/styled'
 
-const StyledBrowser = styled.div`
+export const StyledBrowser = styled.div`
   ${globalFont}
 
   box-sizing: border-box;

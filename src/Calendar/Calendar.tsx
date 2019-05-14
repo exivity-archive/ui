@@ -1,12 +1,12 @@
 import React, { useReducer } from 'react'
 import { Block, BlockProps } from '../Block'
 
-import { Browser } from './Browser'
+import { Browser, StyledBrowser } from './Browser'
 import { Years } from './modes/Years'
 import { Quarters } from './modes/Quarters'
 import { Months } from './modes/Months'
 import { Days } from './modes/Days'
-import { StyledHeader } from './styled'
+import { StyledHeader, StyledDays, StyledMonths, StyledWeekDays, StyledQuarters } from './styled'
 import { browseReducer, createBrowsers, formatDateHeader, useMode } from './helpers'
 
 import { onChangeDate, Modes } from './types'
@@ -14,6 +14,7 @@ import { onChangeDate, Modes } from './types'
 export interface CalendarProps {
   value: Date
   onChange: onChangeDate
+  onHeaderClick?: () => void
   initialMode?: Modes
   mode?: Modes | Modes[]
 }
@@ -35,7 +36,7 @@ const renderMode = (mode: Modes, value: Date, browseDate: Date, onChange: onChan
   }
 }
 
-export const Calendar = ({ value, onChange, initialMode, mode, ...blockProps }: CalendarProps & BlockProps) => {
+export const Calendar = ({ value, onChange, onHeaderClick, initialMode, mode, ...blockProps }: CalendarProps & BlockProps) => {
   const [selectedMode, selectNextMode] = useMode(initialMode, mode)
   const [browseDate, dispatch] = useReducer(browseReducer, value)
   const [onPrev, onNext] = createBrowsers(dispatch, selectedMode)
@@ -43,7 +44,7 @@ export const Calendar = ({ value, onChange, initialMode, mode, ...blockProps }: 
   return (
     <Block {...blockProps}>
       <Browser onPrev={onPrev} onNext={onNext}>
-        <StyledHeader onClick={selectNextMode}>
+        <StyledHeader onClick={onHeaderClick || selectNextMode}>
           {formatDateHeader(browseDate, selectedMode)}
         </StyledHeader>
       </Browser>
@@ -51,3 +52,12 @@ export const Calendar = ({ value, onChange, initialMode, mode, ...blockProps }: 
     </Block>
   )
 }
+
+// CSS selectors for styled-components
+Calendar.Browser = StyledBrowser
+Calendar.Header = StyledHeader
+Calendar.Years = StyledMonths
+Calendar.Quarters = StyledQuarters
+Calendar.Months = StyledMonths
+Calendar.Days = StyledDays
+Calendar.Weekdays = StyledWeekDays

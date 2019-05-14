@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDaysInMonth, setDate, isSameDay } from 'date-fns'
+import { getDaysInMonth, setDate, isSameDay, getDay, startOfMonth } from 'date-fns'
 
 import { StyledWeekDays, StyledDays, StyledTimeUnit } from '../styled'
 
@@ -15,11 +15,13 @@ export const WeekDays = () => (
   </StyledWeekDays>
 )
 
-function getRenderDay (value: Date, browseDate: Date, onChange: Function) {
+function getRenderDay (value: Date, browseDate: Date, onChange: Function, offSet: number) {
   return (_: undefined, index: number) => {
-    const day = index + 1
+    const day = index + 1 - offSet
     const thisDay = setDate(browseDate, day)
     const isActive = isSameDay(value, thisDay)
+
+    if (index < offSet) return <li key={index} />
 
     return (
       <li key={index}>
@@ -40,9 +42,10 @@ export interface CommonPeriodProps {
 
 export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
   const updateDay = (day: number) => onChange(setDate(browseDate, day))
+  const weekDayOffSet = getDay(startOfMonth(browseDate)) - 1
+  const nbOfDays = getDaysInMonth(browseDate) + weekDayOffSet
 
-  const renderDay = getRenderDay(value, browseDate, updateDay)
-  const nbOfDays = getDaysInMonth(browseDate)
+  const renderDay = getRenderDay(value, browseDate, updateDay, weekDayOffSet)
 
   return (
     <>

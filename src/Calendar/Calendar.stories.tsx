@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Calendar } from './Calendar'
 import { Row } from '../utils/stories/components'
@@ -20,6 +21,9 @@ storiesOf('interact|Calendar', module)
       <Calendar value={state} onChange={storeState} mode={Modes.QUARTERS}/>
       <Calendar value={state} onChange={storeState} mode={Modes.YEARS}/>
     </Row>
+  ))
+  .add('controlled with headerClick', ({ state, storeState }: any) => (
+    <Calendar value={state} onChange={storeState} onHeaderClick={action('clicked header')}/>
   ))
   .add('uncontrolled with initialMode and mode', ({ state, storeState }: any) => (
     <Row columns={2} columnWidth={400}>
