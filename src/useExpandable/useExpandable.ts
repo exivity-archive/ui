@@ -16,7 +16,7 @@ import {
   PARENT,
   CHILDREN
 } from '../utils/makeParentChildTree'
-import { ListItem } from '../utils'
+import { KeyedItem } from '../utils'
 
 export function enrichTreeItems<T> (list: TreeItem<T>[], expanded: string[], setExpanded: any): TreeListItem<T>[] {
   return list.map((item: TreeItem<T>): TreeListItem<T> => ({
@@ -48,7 +48,7 @@ type UseExpandableReturn<T> = [
 ]
 
 export function useExpandable<T> (
-  data: ListItem<T>[],
+  data: KeyedItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>,
   expandedKeys?: string[]
 ): UseExpandableReturn<T> {

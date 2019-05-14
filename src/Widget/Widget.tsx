@@ -1,7 +1,7 @@
 import React, { FC, useState, useRef, useEffect, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
 
-import { fromTheme, hexToString, StyledProps } from '../utils/styled'
+import { fromTheme, toRgbString, StyledProps } from '../utils/styled'
 import { Heading } from '../Heading'
 import { HeadingProps } from '../Heading/Heading'
 import { MdEdit } from 'react-icons/md'
@@ -14,7 +14,7 @@ interface StyledWidgetProps {
 
 const StyledWidget = styled.div<StyledWidgetProps>`
   background: white;
-  box-shadow: 1px 1px 0 rgba(${fromTheme(theme => hexToString(theme.global.purposes.primary))},0.4);
+  box-shadow: 1px 1px 0 rgba(${fromTheme(theme => toRgbString(theme.global.purposes.primary))}, 0.4);
   padding: ${({ noPadding }) => noPadding ? 0 : fromTheme(theme => theme.global.baseSpacing * 1)}em;
   position: relative;
   box-sizing: border-box;

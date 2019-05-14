@@ -17,14 +17,5 @@ if [[ "$BRANCH" != "master" ]]; then
     exit 1
 fi
 
-header "Copy some root files"
-cp .npmrc lib
-cp package.json lib
-cp README.md lib
-cp CHANGELOG.md lib
-
-header "Change to lib folder"
-pushd lib
-
 header "Run npm publish"
 npm publish

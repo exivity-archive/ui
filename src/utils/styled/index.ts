@@ -4,6 +4,8 @@ import { defaultTheme, Theme } from '../../themes'
 
 type ThemeResolver<T = any> = (theme: Theme) => T
 
+type PurposeResolver<T = any> = (purposes: Theme['global']['purposes']) => T
+
 interface ThemeHelperOptions {
   defaultValue?: any
   modifier?: Function
@@ -35,10 +37,48 @@ export interface SectionProps {
   noMargin?: boolean
 }
 
+export type Rgb = [number, number, number]
+
+type Color = string | Rgb
+
+export const toRgbArray = (input: Color): Rgb => {
+  try {
+    return color(input).rgb().array() as Rgb
+  } catch (err) {
+    return [0, 0, 0]
+  }
+}
+
+export function toRgbString (input: Color) {
+  console.log({ input })
+  // If input is a var(--name) input, treat it as a 'r, g, b' value
+  if (typeof input === 'string' && input.startsWith('var(--')) {
+    return input
+  }
+
+  // If input is a 'r, g, b' value, treat it literally
+  if (typeof input === 'string' && input.split(',').length === 3) {
+    return input
+  }
+
+  return toRgbArray(input).join(', ')
+}
+
+export function toRgbCss (input: Color) {
+  // Process arrays and hex values ([r, g, b] | #rrggbb) with toRgbString to get 'r, g, b' back
+  return `rgb(${toRgbString(input)})`
+}
+
 const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length === 0
 
-export const fromTheme = <T>(themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
+export const fromTheme = <T> (themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
   return themeResolver(isEmptyTheme(props.theme) ? defaultTheme as Theme : props.theme!)
+}
+
+export const purpose = (purpose: keyof Theme['global']['purposes']) => (props: StyledProps) => {
+  return isEmptyTheme(props.theme)
+    ? defaultTheme.global.purposes[purpose]
+    : props.theme!.global.purposes[purpose]
 }
 
 export const matchThemeProp = (
@@ -48,7 +88,10 @@ export const matchThemeProp = (
   const themeObject = themeResolver(isEmptyTheme(props.theme)
     ? defaultTheme as Theme
     : props.theme!)
-  const optionallyModify = options.modifier || ((val: any) => val)
+  const optionallyModify = options.modifier ||
+    (
+      (val: any) => val
+    )
   let match = Object.keys(props)
     .find((propKey: string) => {
       return props[propKey] && themeObject[propKey]
@@ -69,17 +112,9 @@ export const matchThemeProp = (
   return optionallyModify(themeObject[match])
 }
 
-export const hexToString = (hex: string) => {
-  try {
-    return color(hex).rgb().array().join(', ')
-  } catch (err) {
-    return '0, 0, 0'
-  }
-}
-
 export const globalSectionSpacing = css`
   margin: ${(props: SectionProps & StyledProps) => props.noMargin
-    ? 0 : fromTheme(theme => theme.global.baseSpacing)(props)}rem 0;
+  ? 0 : fromTheme(theme => theme.global.baseSpacing)(props)}rem 0;
 
   &:first-child {
     margin-top: 0;
