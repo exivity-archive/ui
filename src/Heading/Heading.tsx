@@ -7,7 +7,6 @@ import {
   globalSectionSpacing,
   globalFont,
   StyledProps,
-  purpose,
   toRgbCss
 } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'

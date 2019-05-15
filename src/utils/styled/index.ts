@@ -4,8 +4,6 @@ import { defaultTheme, Theme } from '../../themes'
 
 type ThemeResolver<T = any> = (theme: Theme) => T
 
-type PurposeResolver<T = any> = (purposes: Theme['global']['purposes']) => T
-
 interface ThemeHelperOptions {
   defaultValue?: any
   modifier?: Function
@@ -72,12 +70,6 @@ const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length ===
 
 export const fromTheme = <T> (themeResolver: ThemeResolver<T>) => (props: StyledProps) => {
   return themeResolver(isEmptyTheme(props.theme) ? defaultTheme as Theme : props.theme!)
-}
-
-export const purpose = (purpose: keyof Theme['global']['purposes']) => (props: StyledProps) => {
-  return isEmptyTheme(props.theme)
-    ? defaultTheme.global.purposes[purpose]
-    : props.theme!.global.purposes[purpose]
 }
 
 export const matchThemeProp = (

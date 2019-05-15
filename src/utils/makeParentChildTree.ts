@@ -1,4 +1,4 @@
-import { KeyedItem, Map, createMap } from '../utils'
+import { KeyedItem, Map, createMap } from '.'
 
 export const PARENT = 'parent'
 export const CHILDREN = 'children'
