@@ -15,7 +15,7 @@ exports[`Storyshots atoms|Label default 1`] = `
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
@@ -133,13 +133,13 @@ exports[`Storyshots atoms|Label nested 1`] = `
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
 .c3 > .c1 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
@@ -254,7 +254,7 @@ exports[`Storyshots atoms|Label secondary 1`] = `
 
 .c3 > .c1 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
@@ -265,13 +265,13 @@ exports[`Storyshots atoms|Label secondary 1`] = `
   color: #222;
   line-height: 1.5;
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 
 .c2 > .c1 {
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   color: #999;
 }
 

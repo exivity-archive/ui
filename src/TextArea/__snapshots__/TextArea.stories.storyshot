@@ -548,7 +548,7 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
   border: 1px solid #eee;
@@ -704,10 +704,10 @@ exports[`Storyshots interact|TextArea purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
-  border: 1px solid #4caf50;
+  border: 1px solid #379e4b;
   background-color: unset;
 }
 

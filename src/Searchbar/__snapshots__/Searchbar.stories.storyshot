@@ -62,6 +62,7 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 
 .c18 .c5 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c5 {
@@ -133,14 +134,7 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 }
 
 .c36 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c37 .c5 {
@@ -155,6 +149,17 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
 }
 
 .c38 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c39 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -371,6 +376,7 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 
 .c18 .c5 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c5 {
@@ -442,14 +448,7 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 }
 
 .c36 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c37 .c5 {
@@ -464,6 +463,17 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
 }
 
 .c38 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c39 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -672,6 +682,7 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 
 .c18 .c5 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c5 {
@@ -743,14 +754,7 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 }
 
 .c36 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c37 .c5 {
@@ -765,6 +769,17 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
 }
 
 .c38 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c39 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -959,6 +974,7 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
 
 .c18 .c5 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c19 .c5 {
@@ -1030,14 +1046,7 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
 }
 
 .c36 .c5 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c37 .c5 {
@@ -1052,6 +1061,17 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
 }
 
 .c38 .c5 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c39 .c5 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1114,7 +1134,7 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c39 .c5 {
+.c40 .c5 {
   pointer-events: none;
 }
 

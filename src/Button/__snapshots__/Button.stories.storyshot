@@ -9,8 +9,10 @@ exports[`Storyshots interact|Button default 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -29,9 +31,6 @@ exports[`Storyshots interact|Button default 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -45,8 +44,9 @@ exports[`Storyshots interact|Button default 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c1:hover {
@@ -54,12 +54,12 @@ exports[`Storyshots interact|Button default 1`] = `
 }
 
 .c1:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:active,
 .c1.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:after {
@@ -107,8 +107,10 @@ exports[`Storyshots interact|Button disabled 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -127,9 +129,6 @@ exports[`Storyshots interact|Button disabled 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -143,8 +142,9 @@ exports[`Storyshots interact|Button disabled 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c1:hover {
@@ -152,12 +152,12 @@ exports[`Storyshots interact|Button disabled 1`] = `
 }
 
 .c1:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:active,
 .c1.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:after {
@@ -214,8 +214,10 @@ exports[`Storyshots interact|Button icon 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -234,9 +236,6 @@ exports[`Storyshots interact|Button icon 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -250,8 +249,9 @@ exports[`Storyshots interact|Button icon 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c1:hover {
@@ -259,12 +259,12 @@ exports[`Storyshots interact|Button icon 1`] = `
 }
 
 .c1:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:active,
 .c1.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c1:after {
@@ -342,6 +342,11 @@ exports[`Storyshots interact|Button icon 1`] = `
   margin-right: 0.625em;
 }
 
+.c14 .c2 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 <div
   className="c0"
 >
@@ -384,8 +389,10 @@ exports[`Storyshots interact|Button outlined 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -404,9 +411,6 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -420,8 +424,9 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
@@ -432,12 +437,12 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c2:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:active,
 .c2.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:after {
@@ -466,7 +471,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c2:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2 .c6 {
@@ -478,8 +483,10 @@ exports[`Storyshots interact|Button outlined 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -498,9 +505,6 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -514,8 +518,9 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
+  color: #fff;
+  background-color: rgb(153,153,153);
+  --focus-color-rgb: 153,153,153;
   background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
@@ -526,12 +531,12 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:active,
 .c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:after {
@@ -560,7 +565,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c3:focus {
-  box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3 .c6 {
@@ -572,8 +577,10 @@ exports[`Storyshots interact|Button outlined 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -592,9 +599,6 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -608,11 +612,12 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
+  color: #fff;
+  background-color: rgb(55,158,75);
+  --focus-color-rgb: 55,158,75;
   background-color: transparent;
-  color: #4caf50;
-  box-shadow: 0 0 0 1px #4caf50;
+  color: #379e4b;
+  box-shadow: 0 0 0 1px #379e4b;
 }
 
 .c4:hover {
@@ -620,12 +625,12 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c4:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:active,
 .c4.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:after {
@@ -654,7 +659,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c4:focus {
-  box-shadow: 0 0 0 1px #4caf50, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #379e4b, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4 .c6 {
@@ -666,8 +671,10 @@ exports[`Storyshots interact|Button outlined 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -686,9 +693,6 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -702,8 +706,9 @@ exports[`Storyshots interact|Button outlined 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
+  color: #fff;
+  background-color: rgb(239,83,80);
+  --focus-color-rgb: 239,83,80;
   background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
@@ -714,12 +719,12 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c5:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:active,
 .c5.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:after {
@@ -748,7 +753,7 @@ exports[`Storyshots interact|Button outlined 1`] = `
 }
 
 .c5:focus {
-  box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5 .c6 {
@@ -805,8 +810,10 @@ exports[`Storyshots interact|Button purposes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -825,9 +832,6 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -841,8 +845,9 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c2:hover {
@@ -850,12 +855,12 @@ exports[`Storyshots interact|Button purposes 1`] = `
 }
 
 .c2:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:active,
 .c2.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:after {
@@ -887,8 +892,10 @@ exports[`Storyshots interact|Button purposes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -907,9 +914,6 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -923,8 +927,9 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
+  color: #fff;
+  background-color: rgb(153,153,153);
+  --focus-color-rgb: 153,153,153;
 }
 
 .c3:hover {
@@ -932,12 +937,12 @@ exports[`Storyshots interact|Button purposes 1`] = `
 }
 
 .c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:active,
 .c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:after {
@@ -969,8 +974,10 @@ exports[`Storyshots interact|Button purposes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -989,9 +996,6 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1005,8 +1009,9 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
+  color: #fff;
+  background-color: rgb(55,158,75);
+  --focus-color-rgb: 55,158,75;
 }
 
 .c4:hover {
@@ -1014,12 +1019,12 @@ exports[`Storyshots interact|Button purposes 1`] = `
 }
 
 .c4:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:active,
 .c4.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:after {
@@ -1051,8 +1056,10 @@ exports[`Storyshots interact|Button purposes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1071,9 +1078,6 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1087,8 +1091,9 @@ exports[`Storyshots interact|Button purposes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
+  color: #fff;
+  background-color: rgb(239,83,80);
+  --focus-color-rgb: 239,83,80;
 }
 
 .c5:hover {
@@ -1096,12 +1101,12 @@ exports[`Storyshots interact|Button purposes 1`] = `
 }
 
 .c5:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:active,
 .c5.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:after {
@@ -1237,12 +1242,19 @@ exports[`Storyshots interact|Button round 1`] = `
   margin-right: 0.625em;
 }
 
+.c29 .c16 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
 .c2 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1261,9 +1273,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1277,8 +1286,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -1290,12 +1300,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c2:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:active,
 .c2.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:after {
@@ -1326,8 +1336,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1346,9 +1358,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1362,8 +1371,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
+  color: #fff;
+  background-color: rgb(153,153,153);
+  --focus-color-rgb: 153,153,153;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -1375,12 +1385,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:active,
 .c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:after {
@@ -1411,8 +1421,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1431,9 +1443,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1447,8 +1456,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
+  color: #fff;
+  background-color: rgb(55,158,75);
+  --focus-color-rgb: 55,158,75;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -1460,12 +1470,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c4:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:active,
 .c4.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:after {
@@ -1496,8 +1506,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1516,9 +1528,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1532,8 +1541,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
+  color: #fff;
+  background-color: rgb(239,83,80);
+  --focus-color-rgb: 239,83,80;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -1545,12 +1555,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c5:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:active,
 .c5.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:after {
@@ -1581,8 +1591,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1601,9 +1613,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1617,8 +1626,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
@@ -1633,12 +1643,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c6:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c6:active,
 .c6.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c6:after {
@@ -1667,7 +1677,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c6:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c6 .c16 {
@@ -1678,8 +1688,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1698,9 +1710,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1714,8 +1723,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #999;
-  --focus-color: 153,153,153;
+  color: #fff;
+  background-color: rgb(153,153,153);
+  --focus-color-rgb: 153,153,153;
   background-color: transparent;
   color: #999;
   box-shadow: 0 0 0 1px #999;
@@ -1730,12 +1740,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c7:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c7:active,
 .c7.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c7:after {
@@ -1764,7 +1774,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c7:focus {
-  box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #999, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c7 .c16 {
@@ -1775,8 +1785,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1795,9 +1807,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1811,11 +1820,12 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #4caf50;
-  --focus-color: 76,175,80;
+  color: #fff;
+  background-color: rgb(55,158,75);
+  --focus-color-rgb: 55,158,75;
   background-color: transparent;
-  color: #4caf50;
-  box-shadow: 0 0 0 1px #4caf50;
+  color: #379e4b;
+  box-shadow: 0 0 0 1px #379e4b;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -1827,12 +1837,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:active,
 .c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:after {
@@ -1861,7 +1871,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c8:focus {
-  box-shadow: 0 0 0 1px #4caf50, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #379e4b, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8 .c16 {
@@ -1872,8 +1882,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1892,9 +1904,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -1908,8 +1917,9 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
+  color: #fff;
+  background-color: rgb(239,83,80);
+  --focus-color-rgb: 239,83,80;
   background-color: transparent;
   color: #ef5350;
   box-shadow: 0 0 0 1px #ef5350;
@@ -1924,12 +1934,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c9:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c9:active,
 .c9.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c9:after {
@@ -1958,7 +1968,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c9:focus {
-  box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #ef5350, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c9 .c16 {
@@ -1969,8 +1979,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4935064935064934em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1989,9 +2001,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2005,12 +2014,13 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.5em;
+  width: 2.4935064935064934em;
 }
 
 .c10:hover {
@@ -2018,12 +2028,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c10:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c10:active,
 .c10.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c10:after {
@@ -2053,9 +2063,11 @@ exports[`Storyshots interact|Button round 1`] = `
 .c11 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
+  font-size: 0.765625em;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4489795918367347em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2074,9 +2086,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2090,12 +2099,13 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.4489795918367347em;
 }
 
 .c11:hover {
@@ -2103,12 +2113,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c11:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c11:active,
 .c11.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c11:after {
@@ -2139,8 +2149,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 1.0390625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.706766917293233em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2159,9 +2171,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2175,12 +2184,13 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.706766917293233em;
 }
 
 .c12:hover {
@@ -2188,12 +2198,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c12:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c12:active,
 .c12.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c12:after {
@@ -2224,8 +2234,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4935064935064934em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2244,9 +2256,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2260,15 +2269,16 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.5em;
+  width: 2.4935064935064934em;
 }
 
 .c13:hover {
@@ -2276,12 +2286,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c13:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c13:active,
 .c13.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c13:after {
@@ -2310,7 +2320,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c13:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c13 .c16 {
@@ -2320,9 +2330,11 @@ exports[`Storyshots interact|Button round 1`] = `
 .c14 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
+  font-size: 0.765625em;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4489795918367347em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2341,9 +2353,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2357,15 +2366,16 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.4489795918367347em;
 }
 
 .c14:hover {
@@ -2373,12 +2383,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c14:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c14:active,
 .c14.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c14:after {
@@ -2407,7 +2417,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c14:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c14 .c16 {
@@ -2418,8 +2428,10 @@ exports[`Storyshots interact|Button round 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 1.0390625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.706766917293233em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2438,9 +2450,6 @@ exports[`Storyshots interact|Button round 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -2454,15 +2463,16 @@ exports[`Storyshots interact|Button round 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   background-color: transparent;
   color: #00a8d8;
   box-shadow: 0 0 0 1px #00a8d8;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.706766917293233em;
 }
 
 .c15:hover {
@@ -2470,12 +2480,12 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c15:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c15:active,
 .c15.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c15:after {
@@ -2504,7 +2514,7 @@ exports[`Storyshots interact|Button round 1`] = `
 }
 
 .c15:focus {
-  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color),0.15);
+  box-shadow: 0 0 0 1px #00a8d8, 0 0 0 5px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c15 .c16 {
@@ -3047,8 +3057,10 @@ exports[`Storyshots interact|Button sizes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3067,9 +3079,6 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3083,8 +3092,9 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c4:hover {
@@ -3092,12 +3102,12 @@ exports[`Storyshots interact|Button sizes 1`] = `
 }
 
 .c4:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:active,
 .c4.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c4:after {
@@ -3120,7 +3130,7 @@ exports[`Storyshots interact|Button sizes 1`] = `
   display: block;
 }
 
-.c4 .c6 {
+.c4 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -3129,8 +3139,10 @@ exports[`Storyshots interact|Button sizes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4935064935064934em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3149,9 +3161,6 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3165,8 +3174,9 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c2:hover {
@@ -3174,12 +3184,12 @@ exports[`Storyshots interact|Button sizes 1`] = `
 }
 
 .c2:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:active,
 .c2.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c2:after {
@@ -3202,7 +3212,7 @@ exports[`Storyshots interact|Button sizes 1`] = `
   display: block;
 }
 
-.c2 .c6 {
+.c2 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -3210,9 +3220,11 @@ exports[`Storyshots interact|Button sizes 1`] = `
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
+  font-size: 0.765625em;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4489795918367347em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3231,9 +3243,6 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3247,8 +3256,9 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c3:hover {
@@ -3256,12 +3266,12 @@ exports[`Storyshots interact|Button sizes 1`] = `
 }
 
 .c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:active,
 .c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:after {
@@ -3284,7 +3294,7 @@ exports[`Storyshots interact|Button sizes 1`] = `
   display: block;
 }
 
-.c3 .c6 {
+.c3 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -3293,8 +3303,10 @@ exports[`Storyshots interact|Button sizes 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 1.0390625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.706766917293233em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3313,9 +3325,6 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3329,8 +3338,9 @@ exports[`Storyshots interact|Button sizes 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c5:hover {
@@ -3338,12 +3348,12 @@ exports[`Storyshots interact|Button sizes 1`] = `
 }
 
 .c5:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:active,
 .c5.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c5:after {
@@ -3366,7 +3376,89 @@ exports[`Storyshots interact|Button sizes 1`] = `
   display: block;
 }
 
-.c5 .c6 {
+.c5 .c7 {
+  font-size: 1.5em;
+  margin-right: 0.625em;
+}
+
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 500;
+  font-size: 1.3125em;
+  line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.380952380952381em;
+  padding: 0 1.5em;
+  text-transform: uppercase;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
+}
+
+.c6:hover {
+  box-shadow: inset 10px 10px 999em rgba(0,0,0,0.1);
+}
+
+.c6:focus {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
+}
+
+.c6:active,
+.c6.active {
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
+}
+
+.c6:after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  border-radius: inherit;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.c6[disabled] {
+  pointer-events: none;
+}
+
+.c6[disabled]:after {
+  display: block;
+}
+
+.c6 .c7 {
   font-size: 1.5em;
   margin-right: 0.625em;
 }
@@ -3406,6 +3498,11 @@ exports[`Storyshots interact|Button sizes 1`] = `
       className="c5"
     >
       Large
+    </button>
+    <button
+      className="c6"
+    >
+      Huge
     </button>
   </div>
 </div>
@@ -3481,6 +3578,7 @@ exports[`Storyshots interact|Button transparent 1`] = `
 
 .c20 .c4 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c21 .c4 {
@@ -3535,12 +3633,18 @@ exports[`Storyshots interact|Button transparent 1`] = `
   font-size: 1.5em;
 }
 
+.c34 .c4 {
+  font-size: 1.5em;
+}
+
 .c3 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.6015625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4935064935064934em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3559,9 +3663,6 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3575,12 +3676,13 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.5em;
+  width: 2.4935064935064934em;
   background-color: transparent;
 }
 
@@ -3589,12 +3691,12 @@ exports[`Storyshots interact|Button transparent 1`] = `
 }
 
 .c3:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:active,
 .c3.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c3:after {
@@ -3624,9 +3726,11 @@ exports[`Storyshots interact|Button transparent 1`] = `
 .c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
-  font-size: 0.7109375em;
-  color: #fff;
+  font-size: 0.765625em;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.4489795918367347em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3645,9 +3749,6 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3661,12 +3762,13 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.4489795918367347em;
   background-color: transparent;
 }
 
@@ -3675,12 +3777,12 @@ exports[`Storyshots interact|Button transparent 1`] = `
 }
 
 .c6:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c6:active,
 .c6.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c6:after {
@@ -3711,8 +3813,10 @@ exports[`Storyshots interact|Button transparent 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3731,9 +3835,6 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3747,8 +3848,9 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
@@ -3761,12 +3863,12 @@ exports[`Storyshots interact|Button transparent 1`] = `
 }
 
 .c7:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c7:active,
 .c7.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c7:after {
@@ -3797,8 +3899,10 @@ exports[`Storyshots interact|Button transparent 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 1.0390625em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.706766917293233em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3817,9 +3921,6 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -3833,12 +3934,13 @@ exports[`Storyshots interact|Button transparent 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
   border-radius: 50%;
   min-width: auto;
   padding: 0;
-  width: 2.857142857142857em;
+  width: 2.706766917293233em;
   background-color: transparent;
 }
 
@@ -3847,12 +3949,12 @@ exports[`Storyshots interact|Button transparent 1`] = `
 }
 
 .c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:active,
 .c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:after {

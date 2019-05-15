@@ -62,6 +62,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 
 .c22 .c8 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c23 .c8 {
@@ -132,6 +133,10 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   font-size: 1.5em;
 }
 
+.c40 .c8 {
+  font-size: 1.5em;
+}
+
 .c3 {
   display: block;
 }
@@ -151,17 +156,6 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   visibility: hidden;
 }
 
-.c40 .c8 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
 .c41 .c8 {
   margin-right: 1.25em;
   display: inline-block;
@@ -174,6 +168,17 @@ exports[`Storyshots interact|SelectInput default 1`] = `
 }
 
 .c42 .c8 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c43 .c8 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -252,7 +257,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   pointer-events: none;
 }
 
-.c43 .c8 {
+.c44 .c8 {
   pointer-events: none;
 }
 
@@ -412,6 +417,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 
 .c20 .c6 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c21 .c6 {
@@ -483,14 +489,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 }
 
 .c38 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c39 .c6 {
@@ -505,6 +504,17 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
 }
 
 .c40 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c41 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -635,7 +645,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   pointer-events: none;
 }
 
-.c41 .c6 {
+.c42 .c6 {
   pointer-events: none;
 }
 
@@ -808,6 +818,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 
 .c19 .c6 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c20 .c6 {
@@ -879,14 +890,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 }
 
 .c37 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c38 .c6 {
@@ -901,6 +905,17 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
 }
 
 .c39 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c40 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -979,7 +994,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   pointer-events: none;
 }
 
-.c40 .c6 {
+.c41 .c6 {
   pointer-events: none;
 }
 
@@ -1153,6 +1168,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 
 .c27 .c7 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c28 .c7 {
@@ -1224,14 +1240,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 }
 
 .c45 .c7 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c46 .c7 {
@@ -1246,6 +1255,17 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
 }
 
 .c47 .c7 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c48 .c7 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -1424,7 +1444,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
   border: 1px solid #eee;
@@ -1580,10 +1600,10 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
-  border: 1px solid #4caf50;
+  border: 1px solid #379e4b;
   background-color: unset;
 }
 
@@ -1688,7 +1708,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   pointer-events: none;
 }
 
-.c48 .c7 {
+.c49 .c7 {
   pointer-events: none;
 }
 
@@ -2080,6 +2100,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
 
 .c23 .c6 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c24 .c6 {
@@ -2151,14 +2172,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
 }
 
 .c41 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
+  font-size: 1.5em;
 }
 
 .c42 .c6 {
@@ -2173,6 +2187,17 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
 }
 
 .c43 .c6 {
+  margin-right: 1.25em;
+  display: inline-block;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transform-origin: left 25%;
+  -ms-transform-origin: left 25%;
+  transform-origin: left 25%;
+}
+
+.c44 .c6 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -2241,7 +2266,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   box-sizing: border-box;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;
@@ -2355,7 +2380,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   pointer-events: none;
 }
 
-.c44 .c6 {
+.c45 .c6 {
   pointer-events: none;
 }
 
@@ -2382,7 +2407,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   text-transform: none;
   top: 10px;
   position: absolute;
-  font-size: 16.25px;
+  font-size: 17.5px;
   cursor: not-allowed;
   right: 0.5em;
 }

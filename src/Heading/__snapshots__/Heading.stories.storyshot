@@ -120,6 +120,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 
 .c15 .c2 {
   font-size: 1.5em;
+  margin-right: 0.625em;
 }
 
 .c16 .c2 {
@@ -191,6 +192,10 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 }
 
 .c33 .c2 {
+  font-size: 1.5em;
+}
+
+.c34 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -201,7 +206,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
   transform-origin: left 25%;
 }
 
-.c34 .c2 {
+.c35 .c2 {
   margin-right: 1.25em;
   display: inline-block;
   -webkit-transform: scale(1.5);
@@ -231,7 +236,7 @@ exports[`Storyshots atoms|Heading icon 1`] = `
 
 .c1,
 input.c1 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -265,7 +270,7 @@ input.c1:after {
   transform-origin: left 25%;
 }
 
-.c35 .c2 {
+.c36 .c2 {
   pointer-events: none;
 }
 
@@ -329,7 +334,7 @@ exports[`Storyshots atoms|Heading section 1`] = `
 .c1,
 input.c1 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c1 .c2 {
@@ -379,7 +384,7 @@ exports[`Storyshots atoms|Heading sub 1`] = `
 
 .c1,
 input.c1 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;

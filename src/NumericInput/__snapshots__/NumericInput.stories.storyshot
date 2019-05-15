@@ -25,7 +25,7 @@ exports[`Storyshots interact|NumericInput as heading 1`] = `
 .c1,
 input.c1 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c1 .c4 {
@@ -729,7 +729,7 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
   border: 1px solid #eee;
@@ -885,10 +885,10 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
-  border: 1px solid #4caf50;
+  border: 1px solid #379e4b;
   background-color: unset;
 }
 
@@ -1032,7 +1032,7 @@ exports[`Storyshots interact|NumericInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 76,175,80;
+  --focus-color: 55,158,75;
   display: block;
   width: 100%;
   padding: 0;
@@ -1313,7 +1313,7 @@ exports[`Storyshots interact|NumericInput sizes 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   box-sizing: border-box;
   padding: calc(0.5em - 1px) 0.5em;
   border-radius: 4px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fromTheme, globalFont, hexToString } from '../utils/styled'
+import { fromTheme, globalFont, toRgbString } from '../utils/styled'
 
 export const Link = styled.a`
   ${globalFont};
@@ -11,7 +11,7 @@ export const Link = styled.a`
   text-decoration: none;
 
   color: ${fromTheme(theme => theme.global.purposes.primary)};
-  --focus-color: ${fromTheme(theme => hexToString(theme.global.purposes.primary))};
+  --focus-color: ${fromTheme(theme => toRgbString(theme.global.purposes.primary))};
 
   &:focus {
     outline: none;
