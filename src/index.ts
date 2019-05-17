@@ -1,4 +1,5 @@
 export * from './Alert'
+export * from './AutoLayout'
 export * from './Block'
 export * from './Box'
 export * from './Button'

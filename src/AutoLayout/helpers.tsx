@@ -11,7 +11,7 @@ export function makeRows (children: any) {
     }
 
     if (child && child.props.newRow) {
-      rowCount = +1
+      rowCount += 1
       const newRow = [child]
       rows.push(newRow)
     } else if (child && index) {

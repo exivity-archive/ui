@@ -5,11 +5,19 @@ import { makeRows } from './helpers'
 import { getWidget } from './Column'
 import { useBreakpoints } from '../useBreakpoints'
 import { useStyledTheme } from '../utils/styled'
+import { BlockProps } from '../Block'
 
-export const AutoLayout = ({ children, wrapInWidgets, height, spacing, ...blockProps }: any) => {
+export interface AutoLayoutProps {
+  height?: string | number
+  spacing?: number | number[]
+  wrapInWidgets?: boolean
+  children: any
+}
+
+export const AutoLayout = ({ children, wrapInWidgets, height, spacing, ...blockProps }: AutoLayoutProps & BlockProps) => {
   const activeSpacing = useSpacing(spacing)
   const { space } = useStyledTheme()
-  const heightOffset = space[activeSpacing]
+  const heightOffset = activeSpacing ? space[activeSpacing] : 0
 
   const rows = applySpacing(wrapInWidget(makeRows(children), wrapInWidgets), heightOffset, activeSpacing)
 
@@ -26,7 +34,7 @@ export const AutoLayout = ({ children, wrapInWidgets, height, spacing, ...blockP
   )
 }
 
-function wrapInWidget (rows: any, wrapInWidgets: boolean) {
+function wrapInWidget (rows: any, wrapInWidgets?: boolean) {
   return rows.map((row: any) => {
     return row.map((column: any, index: number) => {
       const props = {
@@ -73,7 +81,7 @@ function getHeight (height: string | number | undefined, heightOffset: string, s
   return height
 }
 
-function useSpacing (spacing: number | number[]) {
+function useSpacing (spacing?: number | number[]) {
   const breakPoint = useBreakpoints()
 
   if (Array.isArray(spacing) && breakPoint <= (spacing.length - 1)) {

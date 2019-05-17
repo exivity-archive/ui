@@ -13,12 +13,12 @@ export interface Refs<
 export type Vertical = 'top' | 'bottom'
 export type Horizontal = 'left' | 'right'
 
-export interface AutoLayout {
+export interface IAutoLayout {
   vertical?: Vertical | 'auto'
   horizontal?: Horizontal | 'auto'
 }
 
-export interface Layout extends AutoLayout {
+export interface Layout extends IAutoLayout {
   horizontal: Horizontal
   vertical: Vertical
 }
@@ -28,12 +28,12 @@ export type BreakDistance = {
   vertical: number
 } | number
 
-const defaultLayout: AutoLayout = { vertical: 'auto', horizontal: 'auto' }
+const defaultLayout: IAutoLayout = { vertical: 'auto', horizontal: 'auto' }
 
 export function getLayout (
   { target, parent, container }: Refs,
   breakDistance: BreakDistance,
-  layout: AutoLayout = {}
+  layout: IAutoLayout = {}
 ): Layout {
   const { vertical, horizontal } = { ...defaultLayout, ...layout }
   const { top, left, height, width } = getMeasures(target.current, parent.current)

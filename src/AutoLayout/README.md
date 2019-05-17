@@ -6,7 +6,7 @@ A general purpose component to help make layouts easier.
 ## Usage
 
 ```jsx
-    <Block height={1000} width={1600} bg='lightgray'>
+    <Block height={280} width={800} bg='lightgray'>
       <AutoLayout height='100%' spacing={[1,1,2]} wrapInWidgets>
         <Column width={300}>
           <Heading>
@@ -18,6 +18,8 @@ A general purpose component to help make layouts easier.
             Details
           </Heading>
         </Column>
+        <Column width={300} newRow/>
+        <Column/>
       </AutoLayout>
     </Block>
 ```
@@ -26,5 +28,5 @@ A general purpose component to help make layouts easier.
 
 `AutoLayout and Column` use some props from [styled-system](https://styled-system.com/).
 
-<!-- props(AutoLayout) with styled-system -->
-<!-- props(Column) with styled-system -->
+<!-- props(AutoLayout) -->
+<!-- props(Column) -->
