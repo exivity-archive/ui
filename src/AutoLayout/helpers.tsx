@@ -1,11 +1,23 @@
 import React from 'react'
 
-export function getHighestHeight (children: any) {
-  let highest = 0
-  React.Children.forEach(children, (child) => {
-    if (child.props.height > highest || child.props.minHeight > highest) {
-      highest = child.props.height || child.props.minHeight
+export function makeRows (children: any) {
+  const rows: any[] = []
+  let rowCount = 0
+
+  React.Children.forEach(children, (child, index) => {
+    if (!index && child) {
+      const newRow = [child]
+      rows.push(newRow)
+    }
+
+    if (child && child.props.newRow) {
+      rowCount = +1
+      const newRow = [child]
+      rows.push(newRow)
+    } else if (child && index) {
+      rows[rowCount].push(child)
     }
   })
-  return highest
+
+  return rows
 }

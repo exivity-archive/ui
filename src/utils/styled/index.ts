@@ -1,5 +1,6 @@
+import { useContext } from 'react'
 import color from 'color'
-import { css } from 'styled-components'
+import { css, ThemeContext } from 'styled-components'
 import { defaultTheme, Theme } from '../../themes'
 
 type ThemeResolver<T = any> = (theme: Theme) => T
@@ -33,6 +34,11 @@ export const defaultStyledProps = {
 
 export interface SectionProps {
   noMargin?: boolean
+}
+
+export function useStyledTheme (cb?: ThemeResolver) {
+  const theme = useContext(ThemeContext)
+  return (theme && cb && cb(theme)) || theme || {}
 }
 
 const isEmptyTheme = (theme?: object) => !theme || Object.keys(theme).length === 0
