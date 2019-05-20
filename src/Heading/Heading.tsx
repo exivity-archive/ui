@@ -1,7 +1,14 @@
 import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { SectionProps, fromTheme, globalSectionSpacing, globalFont, StyledProps } from '../utils/styled'
+import {
+  SectionProps,
+  fromTheme,
+  globalSectionSpacing,
+  globalFont,
+  StyledProps,
+  toRgbCss
+} from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 enum Levels {
@@ -29,7 +36,7 @@ export const StyledHeading = styled.div<HeadingProps>`
 
     ${(props: HeadingProps) => props.type === 'section' && css`
       font-size: ${fromTheme(theme => theme.global.sizes.huge)}em;
-      color: ${fromTheme(theme => theme.global.purposes.primary)};
+      color: ${fromTheme(theme => toRgbCss(theme.global.purposes.primary))};
     `}
 
     ${(props: HeadingProps) => props.type === 'sub' && css`

@@ -1,8 +1,6 @@
 import { Omit } from './types'
 
-export type Item<T> = T
-
-export type ListItem<T> = Item<T> & {
+export type KeyedItem<T> = T & {
   key: string
 }
 
@@ -10,8 +8,8 @@ export interface Map<T> {
   [index: string]: T
 }
 
-export function createMap<T> (data: ListItem<T>[]): Map<ListItem<T>> {
-  const map: Map<ListItem<T>> = {}
+export function createMap<T> (data: KeyedItem<T>[]): Map<KeyedItem<T>> {
+  const map: Map<KeyedItem<T>> = {}
 
   data.forEach((item) => {
     map[item.key] = item
@@ -31,3 +29,6 @@ export const tuple = <T extends string[]> (...args: T) => args
 export function ensureString (test: any) {
   return typeof test === 'string' ? test : ''
 }
+
+export * from './styled'
+export * from './types'

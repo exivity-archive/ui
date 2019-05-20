@@ -1,0 +1,2102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots interact|Calendar controlled with headerClick 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.c1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+.c1 .prev,
+.c1 .next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c1 .prev {
+  float: left;
+}
+
+.c1 .next {
+  float: right;
+}
+
+.c2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.c3 li {
+  display: inline-block;
+  width: 14.28%;
+  text-align: center;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c4 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c5 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c6 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c6:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className=""
+  >
+    <div
+      className="c1"
+    >
+      <ul>
+        <li
+          className="prev"
+          onClick={[Function]}
+        >
+          ❮
+        </li>
+        <li
+          className="next"
+          onClick={[Function]}
+        >
+          ❯
+        </li>
+        <li>
+          <div
+            className="c2"
+            onClick={[Function]}
+          >
+            May 2019
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul
+      className="c3"
+    >
+      <li>
+        Mo
+      </li>
+      <li>
+        Tu
+      </li>
+      <li>
+        We
+      </li>
+      <li>
+        Th
+      </li>
+      <li>
+        Fr
+      </li>
+      <li>
+        Sa
+      </li>
+      <li>
+        Su
+      </li>
+    </ul>
+    <ul
+      className="c4"
+    >
+      <li />
+      <li />
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          1
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          2
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          3
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          4
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          5
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          6
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          7
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          8
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          9
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          10
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          11
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          12
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          13
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          14
+        </div>
+      </li>
+      <li>
+        <div
+          className="c6"
+          onClick={[Function]}
+        >
+          15
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          16
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          17
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          18
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          19
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          20
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          21
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          22
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          23
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          24
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          25
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          26
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          27
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          28
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          29
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          30
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          31
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Calendar controlled with mode 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.c2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c2 ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+.c2 .prev,
+.c2 .next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c2 .prev {
+  float: left;
+}
+
+.c2 .next {
+  float: right;
+}
+
+.c3 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.c4 li {
+  display: inline-block;
+  width: 14.28%;
+  text-align: center;
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c5 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c8 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c8 li {
+  width: calc(33.33% - 5px);
+}
+
+.c9 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c9 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c9 li {
+  width: calc(100% - 5px);
+}
+
+.c6 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c7 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c7:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, fit-content(400px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className=""
+    >
+      <div
+        className="c2"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c3"
+            >
+              May 2019
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c4"
+      >
+        <li>
+          Mo
+        </li>
+        <li>
+          Tu
+        </li>
+        <li>
+          We
+        </li>
+        <li>
+          Th
+        </li>
+        <li>
+          Fr
+        </li>
+        <li>
+          Sa
+        </li>
+        <li>
+          Su
+        </li>
+      </ul>
+      <ul
+        className="c5"
+      >
+        <li />
+        <li />
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            1
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            3
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            4
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            5
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            6
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            7
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            8
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            9
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            10
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            11
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            12
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            13
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            14
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            15
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            16
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            17
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            18
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            19
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            20
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            21
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            22
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            23
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            24
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            25
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            26
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            27
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            28
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            29
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            30
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            31
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      className=""
+    >
+      <div
+        className="c2"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c3"
+            >
+              2019
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c8"
+      >
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Jan
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Feb
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Mar
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Apr
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            May
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Jun
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Jul
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Aug
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Sep
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Oct
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Nov
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            Dec
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      className=""
+    >
+      <div
+        className="c2"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c3"
+            >
+              2019
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c9"
+      >
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            1st
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            2nd
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            3rd
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            4th
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      className=""
+    >
+      <div
+        className="c2"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c3"
+            >
+              2013 - 2024
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c8"
+      >
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2013
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2014
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2015
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2016
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2017
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2018
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            2019
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2020
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2021
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2022
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2023
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2024
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Calendar default 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.c1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+.c1 .prev,
+.c1 .next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c1 .prev {
+  float: left;
+}
+
+.c1 .next {
+  float: right;
+}
+
+.c2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0.6;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.c3 li {
+  display: inline-block;
+  width: 14.28%;
+  text-align: center;
+}
+
+.c4 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c4 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c5 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c5:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c6 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c6:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className=""
+  >
+    <div
+      className="c1"
+    >
+      <ul>
+        <li
+          className="prev"
+          onClick={[Function]}
+        >
+          ❮
+        </li>
+        <li
+          className="next"
+          onClick={[Function]}
+        >
+          ❯
+        </li>
+        <li>
+          <div
+            className="c2"
+          >
+            May 2019
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul
+      className="c3"
+    >
+      <li>
+        Mo
+      </li>
+      <li>
+        Tu
+      </li>
+      <li>
+        We
+      </li>
+      <li>
+        Th
+      </li>
+      <li>
+        Fr
+      </li>
+      <li>
+        Sa
+      </li>
+      <li>
+        Su
+      </li>
+    </ul>
+    <ul
+      className="c4"
+    >
+      <li />
+      <li />
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          1
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          2
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          3
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          4
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          5
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          6
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          7
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          8
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          9
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          10
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          11
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          12
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          13
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          14
+        </div>
+      </li>
+      <li>
+        <div
+          className="c6"
+          onClick={[Function]}
+        >
+          15
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          16
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          17
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          18
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          19
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          20
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          21
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          22
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          23
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          24
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          25
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          26
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          27
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          28
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          29
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          30
+        </div>
+      </li>
+      <li>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          31
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots interact|Calendar overview 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c1 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  margin: 1.25rem 0;
+}
+
+.c1:first-child {
+  margin-top: 0;
+}
+
+.c1:last-child {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    README.md
+  </p>
+</div>
+`;
+
+exports[`Storyshots interact|Calendar uncontrolled with initialMode and mode 1`] = `
+.c0 {
+  padding: 12px;
+}
+
+.c2 {
+  width: 300px;
+}
+
+.c3 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 10px 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.c3 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c3 ul li {
+  font-size: 20px;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 3px;
+  -moz-letter-spacing: 3px;
+  -ms-letter-spacing: 3px;
+  letter-spacing: 3px;
+}
+
+.c3 .prev,
+.c3 .next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c3 .prev {
+  float: left;
+}
+
+.c3 .next {
+  float: right;
+}
+
+.c4 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c8 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c8 li {
+  width: calc(33.33% - 5px);
+}
+
+.c5 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.c5 li {
+  list-style-type: none;
+  display: inline-block;
+  width: calc(14.28% - 5px);
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.c5 li {
+  width: calc(100% - 5px);
+}
+
+.c6 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c6:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c7 {
+  height: 100%;
+  border-radius: 180px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c7:hover {
+  color: white;
+  background-color: #00a8d8;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, fit-content(400px));
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+      width={300}
+    >
+      <div
+        className="c3"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c4"
+              onClick={[Function]}
+            >
+              2019
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c5"
+      >
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            1st
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            2nd
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            3rd
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            4th
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="c2"
+      width={300}
+    >
+      <div
+        className="c3"
+      >
+        <ul>
+          <li
+            className="prev"
+            onClick={[Function]}
+          >
+            ❮
+          </li>
+          <li
+            className="next"
+            onClick={[Function]}
+          >
+            ❯
+          </li>
+          <li>
+            <div
+              className="c4"
+              onClick={[Function]}
+            >
+              2013 - 2024
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul
+        className="c8"
+      >
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2013
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2014
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2015
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2016
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2017
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2018
+          </div>
+        </li>
+        <li>
+          <div
+            className="c7"
+            onClick={[Function]}
+          >
+            2019
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2020
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2021
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2022
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2023
+          </div>
+        </li>
+        <li>
+          <div
+            className="c6"
+            onClick={[Function]}
+          >
+            2024
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

@@ -5,7 +5,7 @@ import { animated } from 'react-spring'
 import {
   fromTheme,
   globalFont,
-  hexToString,
+  toRgbString,
   matchThemeProp, PurposesProps, SizesProps,
   StyledProps
 } from '../utils/styled'
@@ -48,7 +48,7 @@ export const inputStyles = css<StyledInputProps>`
   outline: 0;
   border: 0;
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: toRgbString })};
 
   ${props => (!props.inline) && css`
     display: block;

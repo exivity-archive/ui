@@ -1,5 +1,5 @@
 import React, { FC, useState, Dispatch } from 'react'
-import { useStateObject } from './useStateObject'
+import { useObjectState } from './useObjectState'
 import { mount } from 'enzyme'
 
 interface StateObjectUserProps {
@@ -7,8 +7,8 @@ interface StateObjectUserProps {
   children (state: any, update: (key: string, value: any) => void, set: Dispatch<any>)
 }
 
-const StateObjectUser: FC<StateObjectUserProps> = ({ children, initialState }) => {
-  const [state, update, set] = useStateObject(initialState)
+const ObjectStateUser: FC<StateObjectUserProps> = ({ children, initialState }) => {
+  const [state, update, set] = useObjectState(initialState)
   return children(state, update, set)
 }
 
@@ -17,7 +17,7 @@ test('updateObjectState takes in a string and a new value', () => {
     count: 0,
     startCount: 5
   }
-  mount(<StateObjectUser initialState={initialState}>
+  mount(<ObjectStateUser initialState={initialState}>
     {(objectState, updateObjectState) => {
       const [renders, setRenders] = useState(0)
       if (renders === 0) {
@@ -32,7 +32,7 @@ test('updateObjectState takes in a string and a new value', () => {
       if (renders < 2) setRenders(renders + 1)
       return null
     }}
-  </StateObjectUser>)
+  </ObjectStateUser>)
 })
 
 test('setObjectState takes in an object and replaces the old one', () => {
@@ -40,7 +40,7 @@ test('setObjectState takes in an object and replaces the old one', () => {
     count: 0,
     startCount: 5
   }
-  mount(<StateObjectUser initialState={initialState}>
+  mount(<ObjectStateUser initialState={initialState}>
     {(objectState, updateObjectState, setObjectState) => {
       const [renders, setRenders] = useState(0)
       if (renders === 0) {
@@ -55,5 +55,5 @@ test('setObjectState takes in an object and replaces the old one', () => {
       if (renders < 2) setRenders(renders + 1)
       return null
     }}
-  </StateObjectUser>)
+  </ObjectStateUser>)
 })

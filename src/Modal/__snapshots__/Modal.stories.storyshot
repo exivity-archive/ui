@@ -9,8 +9,10 @@ exports[`Storyshots molecules|Modal default 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -29,9 +31,6 @@ exports[`Storyshots molecules|Modal default 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -45,8 +44,9 @@ exports[`Storyshots molecules|Modal default 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #00a8d8;
-  --focus-color: 0,168,216;
+  color: #fff;
+  background-color: rgb(0,168,216);
+  --focus-color-rgb: 0,168,216;
 }
 
 .c8:hover {
@@ -54,12 +54,12 @@ exports[`Storyshots molecules|Modal default 1`] = `
 }
 
 .c8:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:active,
 .c8.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c8:after {
@@ -91,8 +91,10 @@ exports[`Storyshots molecules|Modal default 1`] = `
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 0.875em;
-  color: #fff;
   line-height: 1.5;
+  min-width: 2.5em;
+  height: 2.857142857142857em;
+  padding: 0 1.5em;
   text-transform: uppercase;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -111,9 +113,6 @@ exports[`Storyshots molecules|Modal default 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: 2.857142857142857em;
-  padding: 0 1.5em;
   border: none;
   border-radius: 4px;
   -webkit-flex: none;
@@ -127,8 +126,9 @@ exports[`Storyshots molecules|Modal default 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   outline: none;
-  background-color: #ef5350;
-  --focus-color: 239,83,80;
+  color: #fff;
+  background-color: rgb(239,83,80);
+  --focus-color-rgb: 239,83,80;
 }
 
 .c9:hover {
@@ -136,12 +136,12 @@ exports[`Storyshots molecules|Modal default 1`] = `
 }
 
 .c9:focus {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.1), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c9:active,
 .c9.active {
-  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color),0.15);
+  box-shadow: inset 0 0 999em rgba(0,0,0,0.2), 0 0 0 4px rgba(var(--focus-color-rgb),0.15);
 }
 
 .c9:after {

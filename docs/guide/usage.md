@@ -17,18 +17,26 @@ Wrap your entire app in a `ThemeProvider` from [styled-components](https://www.s
 ```javascript
 import { ThemeProvider } from 'styled-components'
 import { lightTheme } from '@exivity/ui'
+```
 
-const myTheme = {
-  ...lightTheme,
-  global: {
-    ...lightTheme.global,
-    fontFamily: 'serif'
+```jsx
+function render () {
+  const myTheme = {
+    ...lightTheme,
+    global: {
+      ...lightTheme.global,
+      fontFamily: 'monospace',
+      purposes: {
+        ...lightTheme.global.purposes,
+        primary: 'hotpink'
+      }
+    }
   }
+  
+  return <ThemeProvider theme={myTheme}>
+    <Button>Pink and monospaced</Button>
+  </ThemeProvider>
 }
-
-<ThemeProvider theme={theme}>
-  <App/>
-</Provider>
 ```
 
 ### Using local fonts

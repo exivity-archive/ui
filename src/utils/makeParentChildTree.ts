@@ -1,9 +1,9 @@
-import { ListItem, Map, createMap } from '../utils'
+import { KeyedItem, Map, createMap } from '.'
 
 export const PARENT = 'parent'
 export const CHILDREN = 'children'
 
-export type TreeItem<T> = ListItem<T> & {
+export type TreeItem<T> = KeyedItem<T> & {
   [PARENT]?: TreeItem<T>
   [CHILDREN]?: TreeItem<T>[]
   level: number
@@ -12,7 +12,7 @@ export type TreeItem<T> = ListItem<T> & {
 export type ParentKeyAccessor<T> = (mapItem: TreeItem<T>) => string | null
 
 export function createParentChildrenMap<T> (
-  data: ListItem<T>[],
+  data: KeyedItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>
 ): Map<TreeItem<T>> {
   const map = createMap<T>(data)
@@ -46,7 +46,7 @@ export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T
         item.level = 1
         const addToList: TreeItem<T>[] = [item]
 
-        iterateAllChildren(item, (child: TreeItem<T>) => {
+        iterateAllChildren(item, (child) => {
           child.level = child[PARENT]!.level + 1
           addToList.push(child)
         })
@@ -57,12 +57,12 @@ export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T
     }, [])
 }
 
-export function makeParentChildTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
+export function makeParentChildTree<T> (data: KeyedItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
   const parentChildrenMap: Map<TreeItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
   return orderChildrenUnderParents<T>(parentChildrenMap)
 }
 
-export function iterateAllParents<T> (item: TreeItem<T>, callback: Function): void {
+export function iterateAllParents<T> (item: TreeItem<T>, callback: (child: TreeItem<T>) => void): void {
   const parent = item[PARENT]
   if (parent) {
     callback(parent)
@@ -70,12 +70,19 @@ export function iterateAllParents<T> (item: TreeItem<T>, callback: Function): vo
   }
 }
 
-export function iterateAllChildren<T> (item: TreeItem<T>, callback: Function): void {
+export function iterateAllChildren<T> (item: TreeItem<T>, callback: (child: TreeItem<T>) => void): void {
   const children = item[CHILDREN]
   if (children) {
     children.forEach((child) => {
       callback(child)
       iterateAllChildren(child, callback)
     })
+  }
+}
+
+export function sortAllChildren<T> (item: TreeItem<T>, sortCallback: (a: TreeItem<T>, b: TreeItem<T>) => number) {
+  const children = item[CHILDREN]
+  if (children) {
+    children.sort(sortCallback).forEach(child => sortAllChildren(child, sortCallback))
   }
 }

@@ -102,7 +102,7 @@ exports[`Storyshots atoms|Alert success 1`] = `
   font-size: 16px;
   color: #222;
   line-height: 1.5;
-  background-color: #4caf50;
+  background-color: #379e4b;
   color: #fff;
   padding: 0.5em 1em;
   border: none;

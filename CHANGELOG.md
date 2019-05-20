@@ -1,6 +1,44 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.14.15](https://github.com/exivity/ui/compare/v0.14.14...v0.14.15) (2019-05-15)
+
+
+### Bug Fixes
+
+* theme colors ([#110](https://github.com/exivity/ui/issues/110)) ([4584717](https://github.com/exivity/ui/commit/4584717))
+
+
+
+### [0.14.14](https://github.com/exivity/ui/compare/v0.14.13...v0.14.14) (2019-05-14)
+
+
+
+### [0.14.13](https://github.com/exivity/ui/compare/v0.14.12...v0.14.13) (2019-05-14)
+
+
+
+## [0.14.12](https://github.com/exivity/ui/compare/v0.14.11...v0.14.12) (2019-05-14)
+
+
+### Bug Fixes
+
+* examples ([#103](https://github.com/exivity/ui/issues/103)) ([d006f26](https://github.com/exivity/ui/commit/d006f26))
+
+
+
+## [0.14.11](https://github.com/exivity/ui/compare/v0.14.10...v0.14.11) (2019-04-24)
+
+
+
+## [0.14.10](https://github.com/exivity/ui/compare/v0.14.9...v0.14.10) (2019-04-24)
+
+
+
+## [0.14.9](https://github.com/exivity/ui/compare/v0.14.8...v0.14.9) (2019-04-17)
+
+
 
 ## [0.14.8](https://github.com/exivity/ui/compare/v0.14.7...v0.14.8) (2019-04-11)
 

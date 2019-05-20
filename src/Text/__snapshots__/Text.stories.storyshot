@@ -106,7 +106,7 @@ exports[`Storyshots atoms|Text responsive 1`] = `
 
 @media screen and (min-width:52em) {
   .c1 {
-    color: #4caf50;
+    color: #379e4b;
   }
 }
 
