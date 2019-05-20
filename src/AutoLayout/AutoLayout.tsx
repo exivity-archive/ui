@@ -15,7 +15,7 @@ export interface AutoLayoutProps {
 export const AutoLayout = ({ children, wrapInWidgets, height, spacing, ...blockProps }: AutoLayoutProps & BlockProps) => {
   const activeSpacing = useSpacing(spacing)
   const { space } = useStyledTheme()
-  const heightOffset = activeSpacing ? space[activeSpacing] : 0
+  const heightOffset = activeSpacing ? space[activeSpacing] : '0px'
 
   const rows = applySpacing(wrapInWidget(makeRows(children), wrapInWidgets), heightOffset, activeSpacing)
 
