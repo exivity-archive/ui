@@ -304,7 +304,7 @@ exports[`Storyshots interact|Calendar controlled with headerClick 1`] = `
       </li>
       <li>
         <div
-          className="c6"
+          className="c5"
           onClick={[Function]}
         >
           15
@@ -344,7 +344,7 @@ exports[`Storyshots interact|Calendar controlled with headerClick 1`] = `
       </li>
       <li>
         <div
-          className="c5"
+          className="c6"
           onClick={[Function]}
         >
           20
@@ -804,7 +804,7 @@ exports[`Storyshots interact|Calendar controlled with mode 1`] = `
         </li>
         <li>
           <div
-            className="c7"
+            className="c6"
             onClick={[Function]}
           >
             15
@@ -844,7 +844,7 @@ exports[`Storyshots interact|Calendar controlled with mode 1`] = `
         </li>
         <li>
           <div
-            className="c6"
+            className="c7"
             onClick={[Function]}
           >
             20
@@ -1569,7 +1569,7 @@ exports[`Storyshots interact|Calendar default 1`] = `
       </li>
       <li>
         <div
-          className="c6"
+          className="c5"
           onClick={[Function]}
         >
           15
@@ -1609,7 +1609,7 @@ exports[`Storyshots interact|Calendar default 1`] = `
       </li>
       <li>
         <div
-          className="c5"
+          className="c6"
           onClick={[Function]}
         >
           20

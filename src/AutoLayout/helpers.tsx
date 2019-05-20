@@ -71,7 +71,7 @@ export function getHeight (height: string | number | undefined, heightOffset: st
   if (height && spacing) {
     const formattedHeight = formatHeight(height)
 
-    return `calc(${formattedHeight}px - ${heightOffset})`
+    return `calc(${formattedHeight} - ${heightOffset})`
   }
 
   return height

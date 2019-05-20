@@ -5,6 +5,23 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   padding: 12px;
 }
 
+.c1 {
+  height: 500px;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
@@ -106,23 +123,6 @@ exports[`Storyshots molecules|Dropdown default 1`] = `
   visibility: hidden;
 }
 
-.c1 {
-  height: 500px;
-  background-color: lightgray;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 <div
   className="c0"
 >
@@ -180,6 +180,23 @@ exports[`Storyshots molecules|Dropdown position 1`] = `
 .c7 {
   padding: 0.625em;
   width: 200px;
+}
+
+.c1 {
+  width: 1000px;
+  height: 500px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c5 {
@@ -281,23 +298,6 @@ exports[`Storyshots molecules|Dropdown position 1`] = `
   z-index: 1;
   min-width: 160px;
   visibility: hidden;
-}
-
-.c1 {
-  width: 1000px;
-  height: 500px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c2 {
