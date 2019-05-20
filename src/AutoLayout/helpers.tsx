@@ -57,15 +57,21 @@ export function applySpacing (rows: any, heightOffSet: string, spacing: number |
   })
 }
 
+function formatHeight (height: number | string) {
+  return typeof height === 'string'
+    ? height
+    : `${height}px`
+}
+
 export function getHeight (height: string | number | undefined, heightOffset: string, spacing?: number | undefined) {
   if (!height && !spacing) return '100%'
 
   if (!height && spacing) return `calc(100% - ${heightOffset})`
 
   if (height && spacing) {
-    return typeof height === 'string'
-      ? `calc(${height} - ${heightOffset})`
-      : `calc(${height}px - ${heightOffset})`
+    const formattedHeight = formatHeight(height)
+
+    return `calc(${formattedHeight}px - ${heightOffset})`
   }
 
   return height

@@ -1,5 +1,5 @@
 import { useRef, useState, useMemo, useLayoutEffect, useEffect } from 'react'
-import { Layout, getLayout, AutoLayout, BreakDistance, Refs } from './helpers'
+import { Layout, getLayout, IAutoLayout, BreakDistance, Refs } from './helpers'
 
 export function useSnapEdgeToParent<
   Target extends HTMLElement = HTMLDivElement,
@@ -7,7 +7,7 @@ export function useSnapEdgeToParent<
   Container extends HTMLElement = HTMLDivElement
 > (
   breakDistances: BreakDistance | number,
-  initialLayout?: AutoLayout
+  initialLayout?: IAutoLayout
 ): [Refs<Target, Parent, Container>, Layout, () => void] {
 
   const refs = {
