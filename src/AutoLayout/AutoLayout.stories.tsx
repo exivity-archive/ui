@@ -9,7 +9,7 @@ import { markdown } from '../utils/stories/markdown'
 
 storiesOf('molecules|AutoLayout', module)
   .add('overview', markdown(require('./README.md')))
-  .add('Sticky master/detail', () => (
+  .add('master/detail', () => (
     <Block height={1000} width={1600} bg='lightgray'>
       <AutoLayout height='100%' spacing={[1,1,2]} wrapInWidgets>
         <Column width={300}>
@@ -25,7 +25,7 @@ storiesOf('molecules|AutoLayout', module)
       </AutoLayout>
     </Block>
   ))
-  .add('2-master/detail', () => (
+  .add(' Sticky  2-master/detail', () => (
     <Block height={1000} width={1600} bg='lightgray'>
       <AutoLayout height='100%' spacing={[1,1,2]} wrapInWidgets>
         <Column height={400} width={300} sticky>
