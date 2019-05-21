@@ -1,4 +1,4 @@
-import { useRef, useState, useMemo, useLayoutEffect, useEffect } from 'react'
+import { useRef, useState, useMemo, useLayoutEffect } from 'react'
 import { Layout, getLayout, IAutoLayout, BreakDistance, Refs } from './helpers'
 
 export function useSnapEdgeToParent<
