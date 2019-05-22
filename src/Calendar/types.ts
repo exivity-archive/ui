@@ -1,4 +1,4 @@
-export type onChangeDate = (selectDate: Date) => Date
+export type onChangeDate = (selectDate: Date) => void
 
 export enum Modes {
   DAYS = 'days',
