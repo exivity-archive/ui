@@ -37,7 +37,7 @@ function getRenderDay (value: Date, browseDate: Date, onChange: Function, offSet
 export interface CommonPeriodProps {
   value: Date
   browseDate: Date
-  onChange: (value: Date) => Date
+  onChange: (value: Date) => void
 }
 
 export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
