@@ -58,8 +58,8 @@ export const StyledCheckbox = styled.input`
     &::before {
       content: " ";
       border-radius: ${props => props.type === 'checkbox'
-    ? css`${fromTheme(theme => theme.global.borderRadius)}px`
-    : '50%'};
+        ? css`${fromTheme(theme => theme.global.borderRadius)}px`
+        : '50%'};
       background-color: ${fromTheme(theme => theme.colors.lightGray)};
     }
 
