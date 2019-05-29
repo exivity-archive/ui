@@ -74,9 +74,14 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
       level={item.level}
       spacing={spacing}
       distance={distance}>
-      <Content >{!(!item.children && spacing !== 0) &&
-        <div ref={buttonRef}>{button}</div>
-      }{children}</Content>
+      <Content >{
+        <div
+          ref={buttonRef}
+          style={{ visibility: item.children ? 'visible' : 'hidden' }}>
+          {button}
+        </div>}
+        {children}
+      </Content>
     </StyledExpandableSpacer>
   )
 }
