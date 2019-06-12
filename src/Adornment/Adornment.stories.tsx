@@ -4,8 +4,7 @@ import { Adornment } from '.'
 import { Section } from '../Section'
 
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { Input } from '../Input/Input';
-
+import { Input } from '../Input/Input'
 
 storiesOf('interact|Checkbox', module)
   .add('default', () => (
@@ -13,4 +12,3 @@ storiesOf('interact|Checkbox', module)
       <Adornment component={<MdKeyboardArrowDown />} ><Input type='text'></Input></Adornment>
     </>
   ))
-

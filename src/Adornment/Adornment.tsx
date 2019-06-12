@@ -1,5 +1,5 @@
 import React, { ReactNode, CSSProperties } from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 enum Position {
   LEFT = 'left',
