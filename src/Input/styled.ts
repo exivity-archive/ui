@@ -6,34 +6,6 @@ import { Icon } from '../Icon'
 import { Block } from '../Block'
 import { animated } from 'react-spring'
 
-export type PreSuffix = 'prefix' | 'suffix'
-
-export interface StyledInputPreSuffixProps extends SizesProps {
-  type: PreSuffix
-}
-
-export const StyledInputPreSuffix = styled.span <StyledInputPreSuffixProps>`
-  display: flex;
-  align-items: center;
-
-  position: absolute;
-  top: 0;
-
-  height: 100%;
-
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 20
-  })}px;
-
-  ${props => props.type === 'prefix'
-    ? css`
-    left: 0.5em;
-  `
-    : css`
-    right: 0.5em;
-  `}
-`
-
 interface ContainerProps {
   inline?: boolean
 }
@@ -57,11 +29,6 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
 
   // Layout
   inline?: boolean
-}
-
-interface PrefixAndSuffixPadding {
-  paddingRight: number | null
-  paddingLeft: number | null
 }
 
 export const inputStyles = css<StyledInputProps>`
@@ -137,14 +104,8 @@ export const inputStyles = css<StyledInputProps>`
   }
 `
 
-export const StyledInput = styled.input<StyledInputProps & PrefixAndSuffixPadding>`
+export const StyledInput = styled.input<StyledInputProps>`
   ${inputStyles}
-  ${props => props.paddingRight && css`
-    padding-right: ${props.paddingRight}px;
-  `}
-  ${props => props.paddingLeft && css`
-    padding-left: ${props.paddingLeft}px;
-  `}
 `
 
 export const AnimatedStyledInput = animated(StyledInput)

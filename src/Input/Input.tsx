@@ -1,7 +1,7 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref, ReactNode, useRef, Dispatch, FC, useEffect, RefObject } from 'react'
+import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref, useRef, Dispatch } from 'react'
 
 import { Omit } from '../utils/types'
-import { StyledInputProps, StyledInputPreSuffixProps, StyledInputPreSuffix, StyledContainer, AnimatedStyledInput, PreSuffix } from './styled'
+import { StyledInputProps, StyledContainer, AnimatedStyledInput } from './styled'
 
 const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boolean>) => {
   return (event: ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +29,7 @@ interface Props extends InputProps {
   type?: string
 }
 
-export const Input: FC<Props> =
+export const Input =
   forwardRef(({
     type = 'text',
     onChange,
@@ -43,7 +43,7 @@ export const Input: FC<Props> =
 
     // Rest goes to Input
     ...rest
-  }, ref: Ref<HTMLInputElement>) => {
+  }: Props, ref: Ref<HTMLInputElement>) => {
     const [valid, setValid] = useState(true)
 
     const containerRef = useRef<HTMLDivElement>(null)
