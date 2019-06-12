@@ -5,7 +5,7 @@ interface Breaks {
   [key: string]: any
 }
 
-export function useBreakpoints () {
+export function useBreakpointIndex () {
   const { breakpoints } = useStyledTheme()
   const [activeBreakPointIndex, setIndex] = useState(getInitialValue(breakpoints))
 

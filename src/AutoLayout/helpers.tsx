@@ -1,13 +1,13 @@
 import React from 'react'
 import { getWidget } from './Column'
-import { useBreakpoints } from '../useBreakpoints'
+import { useBreakpointIndex } from '../useBreakpoints'
 
 export function makeRows (children: any) {
   const rows: any[] = []
   let rowCount = 0
 
   React.Children.forEach(children, (child, index) => {
-    if (!index && child) {
+    if (index === 0 && child) {
       const newRow = [child]
       rows.push(newRow)
     }
@@ -78,10 +78,10 @@ export function getHeight (height: string | number | undefined, heightOffset: st
 }
 
 export function useSpacing (spacing?: number | number[]) {
-  const breakPoint = useBreakpoints()
+  const breakPointIndex = useBreakpointIndex()
 
-  if (Array.isArray(spacing) && breakPoint <= (spacing.length - 1)) {
-    return spacing[breakPoint]
+  if (Array.isArray(spacing) && breakPointIndex <= (spacing.length - 1)) {
+    return spacing[breakPointIndex]
   }
 
   if (Array.isArray(spacing)) {
