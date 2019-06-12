@@ -529,144 +529,9 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding: 12px;
 }
 
-.c15 {
+.c12 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
-}
-
-.c13 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c21 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c22 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c23 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c24 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c25 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c26 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c27 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c28 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c29 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c30 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c31 .c12 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c32 .c12 {
-  font-size: 1.5em;
-}
-
-.c33 .c12 {
-  font-size: 1.5em;
-}
-
-.c34 .c12 {
-  font-size: 1.5em;
-}
-
-.c35 .c12 {
-  font-size: 1.5em;
-}
-
-.c36 .c12 {
-  font-size: 1.5em;
-}
-
-.c37 .c12 {
-  font-size: 1.5em;
-}
-
-.c38 .c12 {
-  font-size: 1.5em;
-}
-
-.c39 .c12 {
-  font-size: 1.5em;
-}
-
-.c40 .c12 {
-  font-size: 1.5em;
-}
-
-.c41 .c12 {
-  font-size: 1.5em;
-}
-
-.c42 .c12 {
-  font-size: 1.5em;
-}
-
-.c43 .c12 {
-  font-size: 1.5em;
-}
-
-.c44 .c12 {
-  font-size: 1.5em;
-}
-
-.c45 .c12 {
-  font-size: 1.5em;
-}
-
-.c46 .c12 {
-  font-size: 1.5em;
-}
-
-.c47 .c12 {
-  font-size: 1.5em;
-}
-
-.c48 .c12 {
-  font-size: 1.5em;
-}
-
-.c49 .c12 {
-  font-size: 1.5em;
 }
 
 .c4 {
@@ -683,13 +548,13 @@ exports[`Storyshots interact|Field multiple 1`] = `
   color: #999;
 }
 
-.c20 {
+.c17 {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-.c20 + label {
+.c17 + label {
   position: relative;
   display: inline-block;
   padding: 0 0 0 2em;
@@ -702,16 +567,16 @@ exports[`Storyshots interact|Field multiple 1`] = `
   transition: 0.25s color ease;
 }
 
-.c20 + label:focus {
+.c17 + label:focus {
   outline: 0;
 }
 
-.c20 + label:empty {
+.c17 + label:empty {
   padding: 0 0 0 1em;
 }
 
-.c20 + label::before,
-.c20 + label::after {
+.c17 + label::before,
+.c17 + label::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -724,39 +589,39 @@ exports[`Storyshots interact|Field multiple 1`] = `
   transition: 0.25s all ease;
 }
 
-.c20 + label::before {
+.c17 + label::before {
   content: " ";
   border-radius: 4px;
   background-color: #eee;
 }
 
-.c20 + label::after {
+.c17 + label::after {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c20 + label::after {
+.c17 + label::after {
   content: "\\2714";
   color: #fff;
   line-height: 1.1em;
   text-align: center;
 }
 
-.c20:focus + label::before,
-.c20 + label:hover::before {
+.c17:focus + label::before,
+.c17 + label:hover::before {
   background-color: #999;
 }
 
-.c20:checked + label {
+.c17:checked + label {
   color: #222;
 }
 
-.c20:checked + label::before {
+.c17:checked + label::before {
   background-color: #222;
 }
 
-.c20:checked + label::after {
+.c17:checked + label::after {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -771,7 +636,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   width: 100%;
 }
 
-.c14 {
+.c11 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -834,7 +699,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   padding-bottom: unset;
 }
 
-.c50 > .c3:first-child {
+.c18 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-box-flex: 0;
@@ -849,15 +714,15 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: auto;
 }
 
-.c50 > .c3:first-child > .c3 {
+.c18 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c50 > *:not(.c3):not(:last-child) {
+.c18 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
-.c51 > .c3:first-child {
+.c19 > .c3:first-child {
   padding-bottom: unset;
   margin-right: 1.25em;
   -webkit-box-flex: 0;
@@ -872,11 +737,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   flex-basis: 20em;
 }
 
-.c51 > .c3:first-child > .c3 {
+.c19 > .c3:first-child > .c3 {
   padding-bottom: unset;
 }
 
-.c51 > *:not(.c3):not(:last-child) {
+.c19 > *:not(.c3):not(:last-child) {
   margin-bottom: 1.25em;
 }
 
@@ -932,38 +797,11 @@ exports[`Storyshots interact|Field multiple 1`] = `
   margin-bottom: 1.25em;
 }
 
-.c52 .c12 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
 .c5 {
   position: relative;
 }
 
-.c5 .c12 {
+.c5 .c20 {
   pointer-events: none;
 }
 
@@ -1019,7 +857,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c17 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1035,13 +873,13 @@ exports[`Storyshots interact|Field multiple 1`] = `
   color: #999;
 }
 
-.c18 {
+.c15 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c19 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1058,7 +896,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
   box-shadow: none;
 }
 
-.c16 ul {
+.c13 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -1213,50 +1051,29 @@ exports[`Storyshots interact|Field multiple 1`] = `
               disabled={true}
               onChange={[Function]}
               placeholder="Select with SelectList"
+              prefix={
+                <ForwardRef
+                  offSet={10}
+                >
+                  <MdKeyboardArrowDown />
+                </ForwardRef>
+              }
               type="text"
             />
-            <span
-              className="c11"
-              disabled={true}
-              type="prefix"
-            >
-              <span
-                className="c12 c13"
-              >
-                <svg
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  strokeWidth="0"
-                  style={
-                    Object {
-                      "color": undefined,
-                    }
-                  }
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-                  />
-                </svg>
-              </span>
-            </span>
           </div>
           <div
-            className="c14"
+            className="c11"
             data-test="dropdown-content"
             open={false}
           >
             <div
-              className="c15"
+              className="c12"
             >
               <div
                 onKeyDown={[Function]}
               >
                 <div
-                  className="c16"
+                  className="c13"
                   onScroll={[Function]}
                   style={
                     Object {
@@ -1280,7 +1097,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
                     }
                   >
                     <li
-                      className="c17"
+                      className="c14"
                       data-test="list-item"
                       onClick={[Function]}
                       onMouseOver={[Function]}
@@ -1296,10 +1113,10 @@ exports[`Storyshots interact|Field multiple 1`] = `
                       tabIndex={-1}
                     >
                       <div
-                        className="c18"
+                        className="c15"
                       >
                         <div
-                          className="c19"
+                          className="c16"
                         >
                           No items in this list...
                         </div>
@@ -1324,7 +1141,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
       <span>
         <input
           checked={true}
-          className="c20"
+          className="c17"
           id="4"
           onChange={[Function]}
           type="checkbox"
