@@ -1,12 +1,12 @@
 import React, { ReactElement, ReactNode, useMemo } from 'react'
 
 import styled, { css } from 'styled-components'
-import { OmitOnChangeAndPrefixHTMLInputAttributes, OnChange } from '../Input/Input'
+import { OmitOnChangeHTMLInputAttributes, OnChange } from '../Input/Input'
 import { Label } from '../Label'
 import { randomId } from '../utils/randomId'
 import { fromTheme, StyledProps } from '../utils/styled'
 
-export interface CheckboxProps extends StyledProps, OmitOnChangeAndPrefixHTMLInputAttributes {
+export interface CheckboxProps extends StyledProps, OmitOnChangeHTMLInputAttributes {
   radio?: boolean
   checked?: boolean
   onChange?: OnChange<boolean>

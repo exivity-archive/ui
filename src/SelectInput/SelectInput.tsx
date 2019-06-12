@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { Omit } from '../utils/types'
-import { OmitOnChangeAndPrefixHTMLInputAttributes, InputProps, Input } from '../Input/Input'
+import { OmitOnChangeHTMLInputAttributes, InputProps, Input } from '../Input/Input'
 import { Icon } from '../Icon'
 
 export type SelectInputProps = Omit<InputProps, 'prefix'>
 
-export const SelectInput: React.FC<SelectInputProps & OmitOnChangeAndPrefixHTMLInputAttributes> = ({
+export const SelectInput: React.FC<SelectInputProps & OmitOnChangeHTMLInputAttributes> = ({
   disabled,
   onChange,
   ...rest
