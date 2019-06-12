@@ -3,7 +3,7 @@ import React, { FC, useEffect, useMemo } from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { useSnapEdgeToParent } from '.'
-import { BreakDistance, IAutoLayout } from './helpers'
+import { BreakDistance, AutoPosition } from './helpers'
 
 import { Flex } from '../Flex'
 
@@ -21,7 +21,7 @@ export default storiesOf('helpers|useSnapEdgeToParent', module)
 
 interface DropdownProps {
   breakDistances: number | BreakDistance,
-  initialLayout?: IAutoLayout,
+  initialLayout?: AutoPosition,
   relativeToContainer?: boolean
 }
 

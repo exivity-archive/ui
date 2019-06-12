@@ -1,9 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Widget } from '../Widget'
-import { Flex } from '../Flex'
+import { Flex, FlexProps } from '../Flex'
 
-interface ColumnProps {
+export interface ColumnProps extends FlexProps {
+  height?: string | number
   newRow?: boolean
   sticky?: boolean
   stickyOffset?: number

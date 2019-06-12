@@ -1,9 +1,13 @@
 import React from 'react'
-import { getWidget } from './Column'
+import { getWidget, ColumnProps } from './Column'
 import { useBreakpointIndex } from '../useBreakpoints'
 
-export function makeRows (children: any) {
-  const rows: any[] = []
+type Rows = Array<Row>
+type Row = Column[]
+type Column = React.ReactElement<ColumnProps>
+
+export function makeRows (children: Row) {
+  const rows: Rows = []
   let rowCount = 0
 
   React.Children.forEach(children, (child, index) => {
@@ -24,9 +28,9 @@ export function makeRows (children: any) {
   return rows
 }
 
-export function wrapInWidget (rows: any, wrapInWidgets?: boolean) {
-  return rows.map((row: any) => {
-    return row.map((column: any, index: number) => {
+export function wrapInWidget (rows: Rows, wrapInWidgets?: boolean) {
+  return rows.map((row: Row) => {
+    return row.map((column: Column, index: number) => {
       const props = {
         key: index,
         grow: column.props.width ? undefined : 1,
@@ -41,11 +45,11 @@ export function wrapInWidget (rows: any, wrapInWidgets?: boolean) {
   })
 }
 
-export function applySpacing (rows: any, heightOffSet: string, spacing: number | undefined) {
+export function applySpacing (rows: Rows, heightOffSet: string, spacing: number | undefined) {
   if (!spacing) return rows
 
-  return rows.map((row: any) => {
-    return row.map((column: any, columnsIndex: number) => {
+  return rows.map((row: Row) => {
+    return row.map((column: Column, columnsIndex: number) => {
       return React.cloneElement(column, {
         ml: columnsIndex === 0 ? spacing : undefined,
         mt: spacing,

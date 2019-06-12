@@ -19,7 +19,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, Pu
   outlined?: boolean
   flat?: boolean
 
-  // Layout
+  // Positioning
   inline?: boolean
 }
 
