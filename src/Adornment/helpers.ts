@@ -1,6 +1,6 @@
-import { PaddingForChild, Position } from './Adornment'
+import { ExtraPadding, Position } from './Adornment'
 
-export function mergePaddingForChild (...paddingForChilds: PaddingForChild[]): PaddingForChild {
+export function mergeExtraPadding (...paddingForChilds: ExtraPadding[]): ExtraPadding {
   return {
     [Position.LEFT]: makeCssCalcString(...paddingForChilds.filter(paddingForChild => paddingForChild).map(paddingForChild => paddingForChild[Position.LEFT])),
     [Position.RIGHT]: makeCssCalcString(...paddingForChilds.filter(paddingForChild => paddingForChild).map(paddingForChild => paddingForChild[Position.RIGHT]))

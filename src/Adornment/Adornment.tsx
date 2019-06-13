@@ -1,8 +1,8 @@
-import React, { ReactNode, useRef } from 'react'
+import React, { ReactNode } from 'react'
 
 import { AdornmentWrapper } from './styled'
 import { AdornmentContainer } from './AdornmentContainer'
-import { useOverwriteChildrenPadding } from './useOverwriteChildrenPadding'
+import { useAddWidthToPadding, useCloneElementsWithPadding } from './hooks'
 
 export enum Position {
   LEFT = 'Left',
@@ -10,9 +10,9 @@ export enum Position {
 }
 
 export const ADORNMENT_DISPLAY_NAME = 'Adornment'
-export const PADDING_FOR_CHILD = 'paddingForChild'
+export const EXTRA_PADDING = 'extraPadding'
 
-export interface PaddingForChild {
+export interface ExtraPadding {
   [Position.LEFT]: string
   [Position.RIGHT]: string
 }
@@ -20,7 +20,7 @@ export interface PaddingForChild {
 type AdornmentProps = {
   component: ReactNode
   position?: Position
-  [PADDING_FOR_CHILD]?: PaddingForChild
+  [EXTRA_PADDING]?: ExtraPadding
   children: ReactNode
   hasParentAdornment?: boolean
 }
@@ -30,20 +30,18 @@ export const Adornment = ({
   position = Position.LEFT,
   children,
   hasParentAdornment,
-  [PADDING_FOR_CHILD]: paddingForChild = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
+  [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
 }: AdornmentProps) => {
 
-  const wrapperRef = useRef<HTMLDivElement>(null)
-
-  const [newChildren, setAdornmentWidth] = useOverwriteChildrenPadding(children, position, paddingForChild)
+  const [extraPaddingWithWidth, setWidth] = useAddWidthToPadding(extraPadding, position)
+  const newChildren = useCloneElementsWithPadding(children, extraPaddingWithWidth)
 
   return (
-    <AdornmentWrapper ref={wrapperRef} hasParentAdornment={hasParentAdornment}>
+    <AdornmentWrapper id='adornmentWrapper' hasParentAdornment={hasParentAdornment}>
       {newChildren}
       <AdornmentContainer
         position={position}
-        registerPosition={setAdornmentWidth}
-        wrapperRef={wrapperRef}>
+        registerWidth={setWidth}>
         {component}
       </AdornmentContainer>
     </AdornmentWrapper>

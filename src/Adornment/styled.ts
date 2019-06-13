@@ -14,18 +14,19 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
   position: absolute;
   height: 100%;
   top: 0;
-  font-size: ${matchThemeProp(theme => theme.global.sizes, {
-    modifier: (em: number) => em * 20
-  })}px;
-   ${props => props.position === Position.LEFT
-    ? css`
-    left: 0.5em;
-  `
-    : css`
-    right: 0.5em;
-  `}
+  font-size: ${
+  matchThemeProp(
+    theme => theme.global.sizes,
+    { modifier: (em: number) => em * 20 }
+  )}px;
+
+  ${props => props.position === Position.LEFT
+    ? css`left: 0.5em;`
+    : css`right: 0.5em;`
+  }
 `
 
 export const AdornmentWrapper = styled(Block) <{ hasParentAdornment?: boolean }>`
-  ${props => !props.hasParentAdornment && `position: relative;`}
+  position: relative;
+  display: inline-block;
 `
