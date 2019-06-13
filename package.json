@@ -1,6 +1,6 @@
 {
   "name": "@exivity/ui",
-  "version": "0.14.15",
+  "version": "0.14.16",
   "description": "A collection of components to build interfaces",
   "keywords": [
     "exivity",
@@ -107,7 +107,6 @@
     "@babel/core": "^7.3.4",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
-    "@storybook/addon-storyshots": "^5.0.11",
     "@storybook/addon-storysource": "^5.0.11",
     "@storybook/addon-viewport": "^5.0.11",
     "@storybook/addons": "^5.0.11",
