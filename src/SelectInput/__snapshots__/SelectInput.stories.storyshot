@@ -121,13 +121,6 @@ exports[`Storyshots interact|SelectInput default 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
           />
         </div>
@@ -289,13 +282,6 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
         className="c3 c4"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Disabled"
       />
@@ -307,13 +293,6 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
         className="c3 c5"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Disabled"
       />
@@ -414,13 +393,6 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         className="c3 c4"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Outlined"
       />
@@ -432,13 +404,6 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         className="c3 c4"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Outlined"
       />
@@ -916,13 +881,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c5"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Primary"
         />
@@ -934,13 +892,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c6"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Secondary"
         />
@@ -952,13 +903,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c7"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Success"
         />
@@ -970,13 +914,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c8"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Danger"
         />
@@ -988,13 +925,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c9"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Primary"
         />
@@ -1006,13 +936,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c10"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Secondary"
         />
@@ -1024,13 +947,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c11"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Success"
         />
@@ -1042,13 +958,6 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           className="c4 c12"
           disabled={true}
           onChange={[Function]}
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value="Danger"
         />
@@ -1254,13 +1163,6 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         className="c3 c4"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Small"
       />
@@ -1272,13 +1174,6 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         className="c3 c5"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Default"
       />
@@ -1290,13 +1185,6 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         className="c3 c6"
         disabled={true}
         onChange={[Function]}
-        prefix={
-          <ForwardRef
-            offSet={10}
-          >
-            <MdKeyboardArrowDown />
-          </ForwardRef>
-        }
         type="text"
         value="Large"
       />

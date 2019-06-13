@@ -98,13 +98,6 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
       className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
-      prefix={
-        <ForwardRef
-          offSet={10}
-        >
-          <MdSearch />
-        </ForwardRef>
-      }
       type="text"
     />
   </div>
@@ -201,13 +194,6 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
       className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
-      prefix={
-        <ForwardRef
-          offSet={10}
-        >
-          <MdSearch />
-        </ForwardRef>
-      }
       type="text"
     />
   </div>
@@ -290,13 +276,6 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
       className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
-      prefix={
-        <ForwardRef
-          offSet={10}
-        >
-          <MdSearch />
-        </ForwardRef>
-      }
       type="text"
     />
   </div>
@@ -397,13 +376,6 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
       className="c2 c3"
       onChange={[Function]}
       placeholder="Search..."
-      prefix={
-        <ForwardRef
-          offSet={10}
-        >
-          <MdSearch />
-        </ForwardRef>
-      }
       type="text"
     />
   </div>

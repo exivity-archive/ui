@@ -1051,13 +1051,6 @@ exports[`Storyshots interact|Field multiple 1`] = `
               disabled={true}
               onChange={[Function]}
               placeholder="Select with SelectList"
-              prefix={
-                <ForwardRef
-                  offSet={10}
-                >
-                  <MdKeyboardArrowDown />
-                </ForwardRef>
-              }
               type="text"
             />
           </div>

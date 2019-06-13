@@ -1,10 +1,8 @@
 import React from 'react'
-import { MdSearch } from 'react-icons/md'
 import styled, { css } from 'styled-components'
 import { BlockProps, blockStyles } from '../Block'
 import { Input, InputProps } from '../Input/Input'
 import { fromTheme } from '../utils/styled'
-import { Icon } from '../Icon'
 
 interface SearchbarOwnProps {
   animated?: boolean
@@ -42,8 +40,5 @@ const StyledTextInputWithIcon = styled(Input)`
 `
 
 export const Searchbar = (props: SearchbarProps) => (
-  <StyledTextInputWithIcon
-    prefix={<Icon offSet={10}><MdSearch /></Icon>}
-    {...props}
-  />
+  <StyledTextInputWithIcon {...props} />
 )

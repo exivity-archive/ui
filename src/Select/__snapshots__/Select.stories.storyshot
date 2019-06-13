@@ -483,13 +483,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -656,13 +649,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -829,13 +815,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -1002,13 +981,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -1175,13 +1147,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -1348,13 +1313,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -1521,13 +1479,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -1694,13 +1645,6 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
             disabled={true}
             onChange={[Function]}
             placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
             type="text"
             value={null}
           />
@@ -2013,13 +1957,6 @@ exports[`Storyshots molecules/Select default 1`] = `
           disabled={true}
           onChange={[Function]}
           placeholder="Choose option"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value={null}
         />
@@ -2331,13 +2268,6 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
           disabled={true}
           onChange={[Function]}
           placeholder="Click on me or outside"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value={null}
         />
@@ -2571,13 +2501,6 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
           disabled={true}
           onChange={[Function]}
           placeholder="Choose option"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
           type="text"
           value={null}
         />
