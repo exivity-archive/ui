@@ -1,6 +1,6 @@
 import React from 'react'
 import { getWidget, ColumnProps } from './Column'
-import { useBreakpointIndex } from '../useBreakpoints'
+import { useBreakpoint } from '../useBreakpoints'
 
 type Rows = Array<Row>
 type Row = Column[]
@@ -81,8 +81,10 @@ export function getHeight (height: string | number | undefined, heightOffset: st
   return height
 }
 
-export function useSpacing (spacing?: number | number[]) {
-  const breakPointIndex = useBreakpointIndex()
+type BreakPointResolver = (theme: object) => [string, string, string]
+
+export function useSpacing (spacing?: number | number[], breakPointResolver?: BreakPointResolver) {
+  const breakPointIndex = useBreakpoint(breakPointResolver)
 
   if (Array.isArray(spacing) && breakPointIndex <= (spacing.length - 1)) {
     return spacing[breakPointIndex]

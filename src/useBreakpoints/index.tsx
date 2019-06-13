@@ -1,12 +1,18 @@
-import { useStyledTheme } from '../utils/styled'
+import { useStyledTheme, ThemeResolver } from '../utils/styled'
 import { useEffect, useState } from 'react'
+import { Theme } from '../themes'
 
 interface Breaks {
   [key: string]: any
 }
 
-export function useBreakpointIndex () {
-  const { breakpoints } = useStyledTheme()
+type BreakPointIndex = number
+
+const DEFAULT_BREAKS = ['40em', '52em', '64em']
+const DEFAULT_RESOLVER = ({ breakpoints }: Theme) => breakpoints || DEFAULT_BREAKS
+
+export function useBreakpoint (themeResolver: ThemeResolver = DEFAULT_RESOLVER): BreakPointIndex {
+  const breakpoints = useStyledTheme(themeResolver)
   const [activeBreakPointIndex, setIndex] = useState(getInitialValue(breakpoints))
 
   useEffect(() => {

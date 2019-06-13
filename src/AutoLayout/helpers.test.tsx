@@ -1,6 +1,7 @@
 import React from 'react'
-import { makeRows, getHeight } from './helpers'
+import { makeRows, getHeight, wrapInWidget, applySpacing, useSpacing } from './helpers'
 import { Column } from './Column'
+import { renderHook, act } from 'react-hooks-testing-library'
 
 test('makeRows', () => {
   const children = [
@@ -16,6 +17,105 @@ test('makeRows', () => {
   expect(rows).toHaveLength(3)
   rows.forEach((row) => {
     expect(row).toHaveLength(2)
+  })
+})
+
+test('wrapInWidget', () => {
+  const children = [
+    <Column />,
+    <Column />,
+    <Column newRow/>,
+    <Column />,
+    <Column newRow/>,
+    <Column />
+  ]
+
+  const rows = makeRows(children)
+  const wrapped = wrapInWidget(rows, true)
+  const notWrapped = wrapInWidget(rows, false)
+
+  wrapped.forEach(row => {
+    row.forEach((element) => {
+      expect(element.type.displayName).toBe('Widget')
+    })
+  })
+
+  notWrapped.forEach(row => {
+    row.forEach((element) => {
+      expect(element.type.displayName).toBe('Styled(FlexItem)')
+    })
+  })
+})
+
+test('applySpacing', () => {
+  const heightOffset = '0px'
+
+  const children = [
+    <Column />,
+    <Column />,
+    <Column newRow/>,
+    <Column />,
+    <Column newRow/>,
+    <Column />
+  ]
+
+  const rows = makeRows(children)
+
+  const spacingApplied = applySpacing(rows, heightOffset, 1)
+
+  spacingApplied.forEach(row => {
+    row.forEach((element, index) => {
+      if (index === 0) {
+        expect(element.props.ml).toBe(1)
+      }
+      expect(element.props.mt).toBe(1)
+      expect(element.props.mr).toBe(1)
+    })
+  })
+})
+
+describe('useSpacing', () => {
+  let map: any = []
+
+  // @ts-ignore
+  window.matchMedia = jest.fn(() => {
+    return {
+      addListener (cb: any) {
+        map.push(cb)
+      }
+    }
+  })
+
+  test('first breakpoint', () => {
+    map = []
+    const { result } = renderHook(() => useSpacing([1,2,3]))
+
+    act(() => {
+      map[0]({ matches: true })
+    })
+    expect(result.current).toBe(1)
+  })
+
+  test('second breakpoint', () => {
+    map = []
+    const { result } = renderHook(() => useSpacing([1,2,3]))
+
+    act(() => {
+      map[1]({ matches: true })
+    })
+
+    expect(result.current).toBe(2)
+  })
+
+  test('thirth breakpoint', () => {
+    map = []
+    const { result } = renderHook(() => useSpacing([1,2,3]))
+
+    act(() => {
+      map[2]({ matches: true })
+    })
+
+    expect(result.current).toBe(3)
   })
 })
 

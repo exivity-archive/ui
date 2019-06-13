@@ -17,4 +17,7 @@ ${({ sticky, stickyOffset = 0 }) => sticky && css`
   `}
 `
 
-export const getWidget = (props: any) => <Column as={Widget} {...props}/>
+const WidgetColumn = (props: ColumnProps) => <Column as={Widget} {...props}/>
+WidgetColumn.displayName = 'Widget'
+
+export const getWidget = (props: ColumnProps) => <WidgetColumn {...props}/>

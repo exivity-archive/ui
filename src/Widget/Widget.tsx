@@ -12,3 +12,5 @@ const StyledWidget = styled(Block)`
 export const Widget = (props: BlockProps & { children: any }) => (
   <StyledWidget borderRadius={3} p={2} {...props}/>
 )
+
+Widget.displayName = 'Widget'

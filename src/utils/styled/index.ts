@@ -3,7 +3,7 @@ import color from 'color'
 import { css, ThemeContext } from 'styled-components'
 import { defaultTheme, Theme } from '../../themes'
 
-type ThemeResolver<T = any> = (theme: Theme) => T
+export type ThemeResolver<T = any> = (theme: Theme) => T
 
 interface ThemeHelperOptions {
   defaultValue?: any
@@ -38,7 +38,7 @@ export interface SectionProps {
 
 export function useStyledTheme (cb?: ThemeResolver) {
   const theme = useContext(ThemeContext)
-  return (theme && cb && cb(theme)) || theme || {}
+  return (theme && cb && cb(theme)) || theme || (cb && cb(defaultTheme)) || {}
 }
 
 export type Rgb = [number, number, number]
