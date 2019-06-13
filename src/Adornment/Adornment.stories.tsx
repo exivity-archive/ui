@@ -1,14 +1,29 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 import { Adornment } from '.'
-import { Section } from '../Section'
 
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { Input } from '../Input/Input'
+import { Icon } from '../Icon'
+import { Position } from './Adornment'
 
-storiesOf('interact|Checkbox', module)
+storiesOf('atoms|Adornment', module)
   .add('default', () => (
     <>
-      <Adornment component={<MdKeyboardArrowDown />} ><Input type='text'></Input></Adornment>
+      <Adornment component={<Icon><MdKeyboardArrowDown /></Icon>} ><Input type='text'></Input></Adornment>
+    </>
+  ))
+  .add('right side', () => (
+    <>
+      <Adornment position={Position.RIGHT} component={<Icon><MdKeyboardArrowDown /></Icon>} ><Input type='text' ></Input></Adornment>
+    </>
+  ))
+  .add('both sides', () => (
+    <>
+      <Adornment position={Position.LEFT} component={<Icon><MdKeyboardArrowDown /></Icon>} >
+        <Adornment position={Position.RIGHT} component={<Icon><MdKeyboardArrowDown /></Icon>} >
+          <Input type='text' />
+        </Adornment>
+      </Adornment>
     </>
   ))

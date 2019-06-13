@@ -1,32 +1,53 @@
-import React, { ReactNode, CSSProperties } from 'react'
-import styled from 'styled-components'
+import React, { ReactNode, useRef } from 'react'
 
-enum Position {
-  LEFT = 'left',
-  RIGHT = 'right'
+import { AdornmentWrapper } from './styled'
+import { AdornmentContainer } from './AdornmentContainer'
+import { useOverwriteChildrenPadding } from './useOverwriteChildrenPadding'
+
+export enum Position {
+  LEFT = 'Left',
+  RIGHT = 'Right'
 }
 
-interface AdornmentProps {
+export const ADORNMENT_DISPLAY_NAME = 'Adornment'
+export const PADDING_FOR_CHILD = 'paddingForChild'
+
+export interface PaddingForChild {
+  [Position.LEFT]: string
+  [Position.RIGHT]: string
+}
+
+type AdornmentProps = {
   component: ReactNode
   position?: Position
-  style?: CSSProperties
+  [PADDING_FOR_CHILD]?: PaddingForChild
   children: ReactNode
 }
 
-export const Adornment = ({ component, position = Position.LEFT, style, children }: AdornmentProps) => {
+export const Adornment = ({
+  component,
+  position = Position.LEFT,
+  children,
+  [PADDING_FOR_CHILD]: paddingForChild = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
+}: AdornmentProps) => {
+
+  const wrapperRef = useRef<HTMLDivElement>(null)
+
+  const [newChildren, setAdornmentWidth] = useOverwriteChildrenPadding(children, position, paddingForChild)
+
+  console.log(newChildren)
+
   return (
-    <AdornmentContainer>
-      <StyledAdornment position={position}>{component}</StyledAdornment>
-      {children}
-    </AdornmentContainer>
+    <AdornmentWrapper ref={wrapperRef}>
+      {newChildren}
+      <AdornmentContainer
+        position={position}
+        registerPosition={setAdornmentWidth}
+        wrapperRef={wrapperRef}>
+        {component}
+      </AdornmentContainer>
+    </AdornmentWrapper>
   )
 }
 
-const StyledAdornment = styled.div<{ position: Position }>`
-  position: absolute;
-  ${props => `${props.position}: 0;`}
-`
-
-const AdornmentContainer = styled.div`
-  position: relative;
-`
+Adornment.displayName = ADORNMENT_DISPLAY_NAME

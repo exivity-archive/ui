@@ -33,32 +33,17 @@ export const Input =
   forwardRef(({
     type = 'text',
     onChange,
-
-    // Container props
-    onClick,
-    width,
-
-    // Container and Input props
-    inline,
-
     // Rest goes to Input
     ...rest
   }: Props, ref: Ref<HTMLInputElement>) => {
     const [valid, setValid] = useState(true)
 
-    const containerRef = useRef<HTMLDivElement>(null)
-
-    const container = { onClick, width, inline }
-
     return (
-      <StyledContainer ref={containerRef} {...container}>
-        <AnimatedStyledInput
-          inline={inline}
-          ref={ref}
-          type={type}
-          danger={!valid}
-          onChange={makeHandleChange(onChange, setValid)}
-          {...rest} />
-      </StyledContainer>
+      <AnimatedStyledInput
+        ref={ref}
+        type={type}
+        danger={!valid}
+        onChange={makeHandleChange(onChange, setValid)}
+        {...rest} />
     )
   })
