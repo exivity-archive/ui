@@ -22,12 +22,14 @@ type AdornmentProps = {
   position?: Position
   [PADDING_FOR_CHILD]?: PaddingForChild
   children: ReactNode
+  hasParentAdornment?: boolean
 }
 
 export const Adornment = ({
   component,
   position = Position.LEFT,
   children,
+  hasParentAdornment,
   [PADDING_FOR_CHILD]: paddingForChild = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
 }: AdornmentProps) => {
 
@@ -35,10 +37,8 @@ export const Adornment = ({
 
   const [newChildren, setAdornmentWidth] = useOverwriteChildrenPadding(children, position, paddingForChild)
 
-  console.log(newChildren)
-
   return (
-    <AdornmentWrapper ref={wrapperRef}>
+    <AdornmentWrapper ref={wrapperRef} hasParentAdornment={hasParentAdornment}>
       {newChildren}
       <AdornmentContainer
         position={position}

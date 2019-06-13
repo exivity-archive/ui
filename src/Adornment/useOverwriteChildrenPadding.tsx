@@ -15,7 +15,10 @@ export function useOverwriteChildrenPadding (children: ReactNode, position: Posi
       paddingForChild[position] = makeCssCalcString(adornmentPadding, paddingForChild[position])
 
       if (child.type.displayName === ADORNMENT_DISPLAY_NAME) {
-        return cloneElement(child, { [PADDING_FOR_CHILD]: mergePaddingForChild(paddingForChild, child.props[PADDING_FOR_CHILD]) })
+        return cloneElement(child, {
+          [PADDING_FOR_CHILD]: mergePaddingForChild(paddingForChild, child.props[PADDING_FOR_CHILD]),
+          hasParentAdornment: true
+        })
       }
 
       return cloneElement(child, {

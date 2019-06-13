@@ -12,8 +12,8 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
   display: flex;
   align-items: center;
   position: absolute;
-  top: 0;
   height: 100%;
+  top: 0;
   font-size: ${matchThemeProp(theme => theme.global.sizes, {
     modifier: (em: number) => em * 20
   })}px;
@@ -26,6 +26,6 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
   `}
 `
 
-export const AdornmentWrapper = styled(Block)`
-  position: relative;
+export const AdornmentWrapper = styled(Block) <{ hasParentAdornment?: boolean }>`
+  ${props => !props.hasParentAdornment && `position: relative;`}
 `
