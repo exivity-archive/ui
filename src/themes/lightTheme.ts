@@ -27,11 +27,16 @@ export const lightTheme = {
       ]
     }
   },
+  breakpoints: [
+    '40em',
+    '52em',
+    '64em'
+  ],
   space: [
     0,
-    `${BASE_SPACING / 2}em`,
-    `${BASE_SPACING}em`,
-    `${BASE_SPACING * 2}em`
+    `${BASE_SPACING / 2}em`, // 1
+    `${BASE_SPACING}em`, // 2 - Exivity standard
+    `${BASE_SPACING * 2}em` // 3
   ],
   fontSizes: [
     `${SIZES.tiny}em`,

@@ -20,7 +20,7 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
   outlined?: boolean
   flat?: boolean
 
-  // Layout
+  // Positioning
   inline?: boolean
 }
 
