@@ -7,7 +7,7 @@ import { Link } from '../Link'
 import { List } from '../List'
 import { Paragraph } from '../Paragraph'
 import { Table } from '../Table'
-import { ObjectOf } from '../utils/types'
+import { ObjectOf } from '../utils'
 
 type Renderer = (props: any) => ReactElement
 

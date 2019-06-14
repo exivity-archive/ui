@@ -22,12 +22,12 @@ export enum Horizontal {
    AUTO = 'auto'
 }
 
-export interface AutoLayout {
+export interface AutoPosition {
   vertical?: Vertical
   horizontal?: Horizontal
 }
 
-export interface Layout extends AutoLayout {
+export interface Positioning extends AutoPosition {
   horizontal: Exclude<Horizontal, Horizontal.AUTO>
   vertical: Exclude<Vertical, Vertical.AUTO>
 }
@@ -37,14 +37,14 @@ export type BreakDistance = {
   vertical: number
 } | number
 
-const defaultLayout: AutoLayout = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
+const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
-export function getLayout (
+export function getPosition (
   { target, parent, container }: Refs,
   breakDistance: BreakDistance,
-  layout: AutoLayout = {}
-): Layout {
-  const { vertical, horizontal } = { ...defaultLayout, ...layout }
+  position: AutoPosition = {}
+): Positioning {
+  const { vertical, horizontal } = { ...defaultPosition, ...position }
   const { top, left, height, width } = getMeasures(target.current, parent.current)
   const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
 

@@ -1,7 +1,15 @@
 import { ButtonHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 import { Icon } from '../Icon'
-import { fromTheme, hexToString, matchThemeProp, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
+import {
+  fromTheme,
+  matchThemeProp,
+  PurposesProps,
+  SizesProps,
+  StyledProps,
+  toRgbCss,
+  toRgbString
+} from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, PurposesProps, SizesProps, StyledProps {
@@ -11,7 +19,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, Pu
   outlined?: boolean
   flat?: boolean
 
-  // Layout
+  // Positioning
   inline?: boolean
 }
 
@@ -20,8 +28,11 @@ export const Button = styled.button<ButtonProps>`
   font-weight: 500;
   font-size: ${matchThemeProp(
   theme => theme.global.sizes, { modifier: (em: number) => em / 16 * 14 })}em;
-  color: ${fromTheme(theme => theme.colors.white)};
+
   line-height: ${fromTheme(theme => theme.global.lineHeight)};
+  min-width: 2.5em;
+  height: ${matchThemeProp(theme => theme.button.heights)}em;
+  padding: 0 ${preciseEm(1.5)}em;
 
   text-transform: uppercase;
   display: inline-flex;
@@ -30,11 +41,6 @@ export const Button = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  min-width: 2.5em;
-  height: ${props => props.tiny
-    ? `${preciseEm(2.5, 10)}em` // 25px
-    : `${preciseEm(2.85, 14)}em`}; // 40px = 2.5 * 16
-  padding: 0 ${preciseEm(1.5)}em;
   border: none;
   border-radius: ${fromTheme(theme => theme.global.borderRadius)}px;
   flex: none;
@@ -43,8 +49,9 @@ export const Button = styled.button<ButtonProps>`
   text-decoration: none;
   outline: none;
 
-  background-color: ${matchThemeProp(theme => theme.global.purposes)};
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+  color: ${fromTheme(theme => theme.colors.white)};
+  background-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: toRgbCss })};
+  --focus-color-rgb: ${matchThemeProp(theme => theme.global.purposes, { modifier: toRgbString })};
 
   &:hover {
     box-shadow: inset 10px 10px 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)});
@@ -52,13 +59,15 @@ export const Button = styled.button<ButtonProps>`
 
   &:focus {
     box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)}),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color-rgb), ${fromTheme(
+  theme => theme.global.outlineAlpha)});
   }
 
   &:active,
   &.active {
     box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha * 2)}),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
+      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color-rgb), ${fromTheme(
+  theme => theme.global.outlineAlpha)});
   }
 
   &:after {
@@ -83,7 +92,8 @@ export const Button = styled.button<ButtonProps>`
   ${(props: ButtonProps) => props.outlined && css`
     background-color: transparent;
     color: ${matchThemeProp(theme => theme.global.purposes)};
-    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)};
+    box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(
+  theme => theme.global.purposes)};
 
     &:hover {
       color: ${fromTheme(theme => theme.global.textColor)};
@@ -91,8 +101,10 @@ export const Button = styled.button<ButtonProps>`
     }
 
     &:focus {
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(theme => theme.global.purposes)},
-       0 0 0 ${fromTheme(theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color), ${fromTheme(theme => theme.global.outlineAlpha)});
+      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(
+  theme => theme.global.purposes)},
+       0 0 0 ${fromTheme(theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color-rgb), ${fromTheme(
+  theme => theme.global.outlineAlpha)});
     }
   `}
 
@@ -100,9 +112,7 @@ export const Button = styled.button<ButtonProps>`
     border-radius: 50%;
     min-width: auto;
     padding: 0;
-    width: ${props.tiny
-      ? preciseEm(2.5, 10) // 25px
-      : preciseEm(2.85, 14)}em; // 40px = 2.5 * 16
+    width: ${matchThemeProp(theme => theme.button.heights)}em;
   `}
 
   ${Icon} {

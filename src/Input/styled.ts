@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { textAlign, TextAlignProps } from 'styled-system'
 
-import { globalFont, matchThemeProp, fromTheme, hexToString, PurposesProps, SizesProps, StyledProps } from '../utils/styled'
+import { globalFont, matchThemeProp, fromTheme, PurposesProps, SizesProps, StyledProps, toRgbString } from '../utils/styled'
 import { Icon } from '../Icon'
 import { Block } from '../Block'
 import { animated } from 'react-spring'
@@ -27,7 +27,7 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
   outlined?: boolean
   flat?: boolean
 
-  // Layout
+  // Positioning
   inline?: boolean
 }
 
@@ -44,7 +44,7 @@ export const inputStyles = css<StyledInputProps>`
   outline: 0;
   border: 0;
 
-  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: hexToString })};
+  --focus-color: ${matchThemeProp(theme => theme.global.purposes, { modifier: toRgbString })};
 
   ${props => (!props.inline) && css`
     display: block;

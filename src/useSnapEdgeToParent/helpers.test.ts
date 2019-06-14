@@ -1,4 +1,4 @@
-import { buildOrUseBreakDistance, getEdges, getMeasures, getLayout } from './helpers'
+import { buildOrUseBreakDistance, getEdges, getMeasures, getPosition } from './helpers'
 
 test('buildOrUseBreakDistance returns the input if its an object', () => {
   const breakDistance = {
@@ -57,7 +57,7 @@ test('getMeasures throws an error if either or both parent or target is null', (
   expect(getMeasures(null, null)).toMatchObject({ width: 0, height: 0, left: 0, top: 0 })
 })
 
-test('getLayout returns left and top if element hasn\'t crossed any edges', () => {
+test('getPosition returns left and top if element hasn\'t crossed any edges', () => {
   const target = { current: makeRect({ width: 300, height: 200 }) }
   const parent = { current: makeRect({ left: 300, top: 200 }) }
 
@@ -71,11 +71,11 @@ test('getLayout returns left and top if element hasn\'t crossed any edges', () =
   const breakDistance = 50
 
   // @ts-ignore
-  const layout1 = getLayout({ target, parent, container: { current: null } }, breakDistance)
+  const layout1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
   expect(layout1).toMatchObject({ horizontal: 'left', vertical: 'top' })
 
   // @ts-ignore
-  const layout2 = getLayout({ target, parent, container }, breakDistance)
+  const layout2 = getPosition({ target, parent, container }, breakDistance)
   expect(layout2).toMatchObject({ horizontal: 'left', vertical: 'top' })
 })
 
@@ -93,11 +93,11 @@ test('Get layout returns right and bottom if element has crossed both edges', ()
   const breakDistance = 50
 
   // @ts-ignore
-  const layout1 = getLayout({ target, parent, container: { current: null } }, breakDistance)
+  const layout1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
   expect(layout1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 
   // @ts-ignore
-  const layout2 = getLayout({ target, parent, container }, breakDistance)
+  const layout2 = getPosition({ target, parent, container }, breakDistance)
   expect(layout2).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 })
 
@@ -109,12 +109,12 @@ test('Get layout returns initial layout if one is provided', () => {
   const breakDistance1 = 50
   const initialLayout1 = { horizontal: 'right', vertical: 'bottom' }
   // @ts-ignore
-  const layout1 = getLayout({ target, parent, container }, breakDistance1, initialLayout1)
+  const layout1 = getPosition({ target, parent, container }, breakDistance1, initialLayout1)
   expect(layout1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 
   const breakDistance2 = 150
   const initialLayout2 = { horizontal: 'left', vertical: 'top' }
   // @ts-ignore
-  const layout2 = getLayout({ target, parent, container }, breakDistance2, initialLayout2)
+  const layout2 = getPosition({ target, parent, container }, breakDistance2, initialLayout2)
   expect(layout2).toMatchObject({ horizontal: 'left', vertical: 'top' })
 })

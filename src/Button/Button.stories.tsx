@@ -27,6 +27,7 @@ storiesOf('interact|Button', module)
     <Button small>Small</Button>
     <Button>Default</Button>
     <Button large>Large</Button>
+    <Button huge>Huge</Button>
   </Row>)
   .add('outlined', () => <Row>
     <Button outlined primary>Primary</Button>

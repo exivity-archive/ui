@@ -2,9 +2,10 @@ import { BASE_SIZE, preciseEm } from '../utils/styled/isolated'
 import { PALETTE } from './palette'
 
 export const BASE_SPACING = preciseEm(1.25) // 20px
+
 export const SIZES = {
   tiny: preciseEm(0.7), // 11px
-  small: preciseEm(0.8), // 13px
+  small: preciseEm(0.85), // 14px
   base: preciseEm(1), // 16px
   large: preciseEm(1.2), // 18px
   huge: preciseEm(1.5) // 24px
@@ -26,11 +27,16 @@ export const lightTheme = {
       ]
     }
   },
+  breakpoints: [
+    '40em',
+    '52em',
+    '64em'
+  ],
   space: [
     0,
-    `${BASE_SPACING / 2}em`,
-    `${BASE_SPACING}em`,
-    `${BASE_SPACING * 2}em`
+    `${BASE_SPACING / 2}em`, // 1
+    `${BASE_SPACING}em`, // 2 - Exivity standard
+    `${BASE_SPACING * 2}em` // 3
   ],
   fontSizes: [
     `${SIZES.tiny}em`,
@@ -65,9 +71,19 @@ export const lightTheme = {
       ...SIZES
     },
     zPriority: {
-      one: 1,
-      two: 2,
-      three: 3
+      background: 1,
+      default: 2,
+      foreground: 3
+    }
+  },
+  button: {
+    heights: {
+      _default: 'base',
+      tiny: preciseEm(2.45, 9.625), // 24px
+      small: preciseEm(2.45, 12.25), // 30px
+      base: preciseEm(2.85, 14), // 40px
+      large: preciseEm(2.7, 16.625), // 45px
+      huge: preciseEm(2.4, 21) // 50px
     }
   },
   colors: {
