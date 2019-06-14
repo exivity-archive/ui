@@ -1,6 +1,6 @@
-import { ReactNode, useMemo, cloneElement, Children, useState } from 'react'
+import { ReactNode, useMemo, cloneElement, Children, useState, CSSProperties, ReactElement, FC } from 'react'
 
-import { makeCssCalcStatement, mergeExtraPadding } from './helpers'
+import { makeCssCalcExpression, mergeExtraPadding } from './helpers'
 import { ExtraPadding, Position, ADORNMENT_DISPLAY_NAME, EXTRA_PADDING } from './Adornment'
 import { isReactElement } from '../utils/isReactElement'
 
@@ -11,26 +11,30 @@ export function useAddWidthToPadding (extraPadding: ExtraPadding, position: Posi
     const widthPadding = width + 'px'
 
     const newExtraPadding = width
-      ? { ...extraPadding, [position]: makeCssCalcStatement(extraPadding[position], widthPadding) }
+      ? { ...extraPadding, [position]: makeCssCalcExpression(extraPadding[position], widthPadding) }
       : extraPadding
 
     return [newExtraPadding, setWidth] as [ExtraPadding, typeof setWidth]
   }, [extraPadding[Position.LEFT], Position.RIGHT, width])
 }
 
-function cloneAndAddPadding (child: React.ReactElement<any, React.FunctionComponent<{}>>, extraPadding: ExtraPadding) {
+function cloneAndAddPadding (child: ReactElement<any, FC>, extraPadding: ExtraPadding) {
   const style = child.props['style'] || {}
 
+  const paddingRight = style.paddingRight
+    ? makeCssCalcExpression(style.paddingRight, extraPadding[Position.RIGHT])
+    : extraPadding[Position.RIGHT]
+
+  const paddingLeft = style.paddingLeft
+    ? makeCssCalcExpression(style.paddingLeft, extraPadding[Position.LEFT])
+    : extraPadding[Position.LEFT]
+
   return cloneElement(child, {
-    style: {
-      ...style,
-      paddingLeft: extraPadding[Position.LEFT],
-      paddingRight: extraPadding[Position.RIGHT]
-    }
+    style: { ...style, paddingLeft, paddingRight }
   })
 }
 
-function cloneAndMergeExtraPadding (child: React.ReactElement<any, React.FunctionComponent<{}>>, extraPadding: ExtraPadding) {
+function cloneAndMergeExtraPadding (child: ReactElement<any, FC>, extraPadding: ExtraPadding) {
   const mergedExtraPadding = child.props[EXTRA_PADDING]
     ? mergeExtraPadding(extraPadding, child.props[EXTRA_PADDING])
     : extraPadding
@@ -43,7 +47,7 @@ function cloneAndMergeExtraPadding (child: React.ReactElement<any, React.Functio
 function cloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
   const child = Children.only(children)
 
-  if (!isReactElement(child)) return child
+  if (!isReactElement(child)) throw new Error(`Child of ${ADORNMENT_DISPLAY_NAME} is not a ReactElement`)
 
   if (child.type.displayName === ADORNMENT_DISPLAY_NAME) {
     return cloneAndMergeExtraPadding(child, extraPadding)

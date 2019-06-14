@@ -13,8 +13,8 @@ export const ADORNMENT_DISPLAY_NAME = 'Adornment'
 export const EXTRA_PADDING = 'extraPadding'
 
 export interface ExtraPadding {
-  [Position.LEFT]: string
-  [Position.RIGHT]: string
+  [Position.LEFT]: string | number
+  [Position.RIGHT]: string | number
 }
 
 type AdornmentProps = {
