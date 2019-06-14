@@ -90,7 +90,7 @@ storiesOf('interact|Input', module)
       <Heading type='sub'>Numeric</Heading>
       <Paragraph>{faker.lorem.sentences(1)}</Paragraph>
       <Section>
-        <Input type='number' flat outlined value={faker.lorem.words(4)} />
+        <Input type='number' flat outlined value={faker.random.number(1000000)} />
       </Section>
       <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
     </>
@@ -161,25 +161,6 @@ storiesOf('interact|Input', module)
       <Paragraph>{faker.lorem.sentences(2)}</Paragraph>
     </>
   ))
-  .add('prefix/suffix', ({ state, storeState }: any) => <Row columns={false}>
-    <Input
-      suffix={<Icon><MdVerifiedUser /></Icon>}
-      placeholder='Type something...'
-      value={state}
-      onChange={storeAndAction(storeState, 'onChange')} />
-    <Input
-      prefix={<Icon><MdVerifiedUser /></Icon>}
-      placeholder='Type something...'
-      value={state}
-      onChange={storeAndAction(storeState, 'onChange')} />
-    <Input
-      prefix={<Icon><MdVerifiedUser /></Icon>}
-      suffix={<Icon><MdVerifiedUser /></Icon>}
-      placeholder='Type something...'
-      value={state}
-      onChange={storeAndAction(storeState, 'onChange')} />
-  </Row>
-  )
   .add('step (numeric)', ({ state, storeState }: any) => (
     <>
       <Input

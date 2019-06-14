@@ -5,141 +5,6 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   padding: 12px;
 }
 
-.c9 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c11 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c12 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c20 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c21 .c8 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c22 .c8 {
-  font-size: 1.5em;
-}
-
-.c23 .c8 {
-  font-size: 1.5em;
-}
-
-.c24 .c8 {
-  font-size: 1.5em;
-}
-
-.c25 .c8 {
-  font-size: 1.5em;
-}
-
-.c26 .c8 {
-  font-size: 1.5em;
-}
-
-.c27 .c8 {
-  font-size: 1.5em;
-}
-
-.c28 .c8 {
-  font-size: 1.5em;
-}
-
-.c29 .c8 {
-  font-size: 1.5em;
-}
-
-.c30 .c8 {
-  font-size: 1.5em;
-}
-
-.c31 .c8 {
-  font-size: 1.5em;
-}
-
-.c32 .c8 {
-  font-size: 1.5em;
-}
-
-.c33 .c8 {
-  font-size: 1.5em;
-}
-
-.c34 .c8 {
-  font-size: 1.5em;
-}
-
-.c35 .c8 {
-  font-size: 1.5em;
-}
-
-.c36 .c8 {
-  font-size: 1.5em;
-}
-
-.c37 .c8 {
-  font-size: 1.5em;
-}
-
-.c38 .c8 {
-  font-size: 1.5em;
-}
-
-.c39 .c8 {
-  font-size: 1.5em;
-}
-
 .c3 {
   display: block;
 }
@@ -149,7 +14,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c7 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -159,68 +24,11 @@ exports[`Storyshots interact|SelectInput default 1`] = `
   visibility: hidden;
 }
 
-.c40 .c8 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c41 .c8 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c42 .c8 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
 .c4 {
   position: relative;
 }
 
 .c4 .c8 {
-  pointer-events: none;
-}
-
-.c43 .c8 {
-  pointer-events: none;
-}
-
-.c44 .c8 {
   pointer-events: none;
 }
 
@@ -315,37 +123,9 @@ exports[`Storyshots interact|SelectInput default 1`] = `
             placeholder="Choose option"
             type="text"
           />
-          <span
-            className="c7"
-            disabled={true}
-            type="prefix"
-          >
-            <span
-              className="c8 c9"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                stroke="currentColor"
-                strokeWidth="0"
-                style={
-                  Object {
-                    "color": undefined,
-                  }
-                }
-                viewBox="0 0 24 24"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-                />
-              </svg>
-            </span>
-          </span>
         </div>
         <div
-          className="c10"
+          className="c7"
           data-test="dropdown-content"
           open={false}
         >
@@ -364,203 +144,11 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   padding: 12px;
 }
 
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c9 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c10 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c11 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c12 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c20 .c6 {
-  font-size: 1.5em;
-}
-
-.c21 .c6 {
-  font-size: 1.5em;
-}
-
-.c22 .c6 {
-  font-size: 1.5em;
-}
-
-.c23 .c6 {
-  font-size: 1.5em;
-}
-
-.c24 .c6 {
-  font-size: 1.5em;
-}
-
-.c25 .c6 {
-  font-size: 1.5em;
-}
-
-.c26 .c6 {
-  font-size: 1.5em;
-}
-
-.c27 .c6 {
-  font-size: 1.5em;
-}
-
-.c28 .c6 {
-  font-size: 1.5em;
-}
-
-.c29 .c6 {
-  font-size: 1.5em;
-}
-
-.c30 .c6 {
-  font-size: 1.5em;
-}
-
-.c31 .c6 {
-  font-size: 1.5em;
-}
-
-.c32 .c6 {
-  font-size: 1.5em;
-}
-
-.c33 .c6 {
-  font-size: 1.5em;
-}
-
-.c34 .c6 {
-  font-size: 1.5em;
-}
-
-.c35 .c6 {
-  font-size: 1.5em;
-}
-
-.c36 .c6 {
-  font-size: 1.5em;
-}
-
-.c37 .c6 {
-  font-size: 1.5em;
-}
-
-.c38 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c39 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c40 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
 .c2 {
   position: relative;
 }
 
 .c2 .c6 {
-  pointer-events: none;
-}
-
-.c41 .c6 {
-  pointer-events: none;
-}
-
-.c42 .c6 {
   pointer-events: none;
 }
 
@@ -616,7 +204,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c8 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -635,35 +223,35 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
   background-color: unset;
 }
 
-.c8:hover {
+.c5:hover {
   border: 1px solid #999;
 }
 
-.c8:focus {
+.c5:focus {
   border: 1px solid #222;
 }
 
-.c8::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -697,73 +285,17 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
         type="text"
         value="Disabled"
       />
-      <span
-        className="c5"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c8"
+        className="c3 c5"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Disabled"
       />
-      <span
-        className="c5"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
   </div>
 </div>
@@ -774,203 +306,11 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
   padding: 12px;
 }
 
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c8 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c9 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c10 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c11 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c12 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c6 {
-  font-size: 1.5em;
-}
-
-.c20 .c6 {
-  font-size: 1.5em;
-}
-
-.c21 .c6 {
-  font-size: 1.5em;
-}
-
-.c22 .c6 {
-  font-size: 1.5em;
-}
-
-.c23 .c6 {
-  font-size: 1.5em;
-}
-
-.c24 .c6 {
-  font-size: 1.5em;
-}
-
-.c25 .c6 {
-  font-size: 1.5em;
-}
-
-.c26 .c6 {
-  font-size: 1.5em;
-}
-
-.c27 .c6 {
-  font-size: 1.5em;
-}
-
-.c28 .c6 {
-  font-size: 1.5em;
-}
-
-.c29 .c6 {
-  font-size: 1.5em;
-}
-
-.c30 .c6 {
-  font-size: 1.5em;
-}
-
-.c31 .c6 {
-  font-size: 1.5em;
-}
-
-.c32 .c6 {
-  font-size: 1.5em;
-}
-
-.c33 .c6 {
-  font-size: 1.5em;
-}
-
-.c34 .c6 {
-  font-size: 1.5em;
-}
-
-.c35 .c6 {
-  font-size: 1.5em;
-}
-
-.c36 .c6 {
-  font-size: 1.5em;
-}
-
-.c37 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c38 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c39 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
 .c2 {
   position: relative;
 }
 
-.c2 .c6 {
-  pointer-events: none;
-}
-
-.c40 .c6 {
-  pointer-events: none;
-}
-
-.c41 .c6 {
+.c2 .c5 {
   pointer-events: none;
 }
 
@@ -1056,34 +396,6 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         type="text"
         value="Outlined"
       />
-      <span
-        className="c5"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
     <div
       className="c2"
@@ -1095,34 +407,6 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
         type="text"
         value="Outlined"
       />
-      <span
-        className="c5"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
   </div>
 </div>
@@ -1133,203 +417,11 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   padding: 12px;
 }
 
-.c8 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c16 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c20 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c21 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c22 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c23 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c24 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c25 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c26 .c7 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c27 .c7 {
-  font-size: 1.5em;
-}
-
-.c28 .c7 {
-  font-size: 1.5em;
-}
-
-.c29 .c7 {
-  font-size: 1.5em;
-}
-
-.c30 .c7 {
-  font-size: 1.5em;
-}
-
-.c31 .c7 {
-  font-size: 1.5em;
-}
-
-.c32 .c7 {
-  font-size: 1.5em;
-}
-
-.c33 .c7 {
-  font-size: 1.5em;
-}
-
-.c34 .c7 {
-  font-size: 1.5em;
-}
-
-.c35 .c7 {
-  font-size: 1.5em;
-}
-
-.c36 .c7 {
-  font-size: 1.5em;
-}
-
-.c37 .c7 {
-  font-size: 1.5em;
-}
-
-.c38 .c7 {
-  font-size: 1.5em;
-}
-
-.c39 .c7 {
-  font-size: 1.5em;
-}
-
-.c40 .c7 {
-  font-size: 1.5em;
-}
-
-.c41 .c7 {
-  font-size: 1.5em;
-}
-
-.c42 .c7 {
-  font-size: 1.5em;
-}
-
-.c43 .c7 {
-  font-size: 1.5em;
-}
-
-.c44 .c7 {
-  font-size: 1.5em;
-}
-
-.c45 .c7 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c46 .c7 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c47 .c7 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
 .c3 {
   position: relative;
 }
 
-.c3 .c7 {
-  pointer-events: none;
-}
-
-.c48 .c7 {
-  pointer-events: none;
-}
-
-.c49 .c7 {
+.c3 .c13 {
   pointer-events: none;
 }
 
@@ -1385,7 +477,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c12 {
+.c9 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1404,64 +496,12 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   background-color: unset;
 }
 
-.c12:hover {
+.c9:hover {
   border: 1px solid #999;
 }
 
-.c12:focus {
-  border: 1px solid #222;
-}
-
-.c12::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c12[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c9 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 153,153,153;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c9:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
 .c9:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
+  border: 1px solid #222;
 }
 
 .c9::-webkit-input-placeholder {
@@ -1489,7 +529,59 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c10 {
+.c6 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c6:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c6:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c6::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c6[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c7 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1508,12 +600,116 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   background-color: #eee;
 }
 
-.c10:hover {
+.c7:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c10:focus {
+.c7:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c7::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c7[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c8 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c8:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c8:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c8::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c8[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c10 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 153,153,153;
+  display: block;
+  width: 100%;
+  border: 1px solid #999;
+  background-color: unset;
+}
+
+.c10:hover {
+  border: 1px solid #999;
+}
+
+.c10:focus {
+  border: 1px solid #222;
 }
 
 .c10::-webkit-input-placeholder {
@@ -1553,19 +749,19 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 239,83,80;
+  --focus-color: 76,175,80;
   display: block;
   width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
+  border: 1px solid #4caf50;
+  background-color: unset;
 }
 
 .c11:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+  border: 1px solid #999;
 }
 
 .c11:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
+  border: 1px solid #222;
 }
 
 .c11::-webkit-input-placeholder {
@@ -1593,111 +789,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c13 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 153,153,153;
-  display: block;
-  width: 100%;
-  border: 1px solid #999;
-  background-color: unset;
-}
-
-.c13:hover {
-  border: 1px solid #999;
-}
-
-.c13:focus {
-  border: 1px solid #222;
-}
-
-.c13::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c13::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c13:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c13::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c13[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c14 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 76,175,80;
-  display: block;
-  width: 100%;
-  border: 1px solid #4caf50;
-  background-color: unset;
-}
-
-.c14:hover {
-  border: 1px solid #999;
-}
-
-.c14:focus {
-  border: 1px solid #222;
-}
-
-.c14::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c14::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c14:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c14::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c14[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c15 {
+.c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1716,35 +808,35 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
   background-color: unset;
 }
 
-.c15:hover {
+.c12:hover {
   border: 1px solid #999;
 }
 
-.c15:focus {
+.c12:focus {
   border: 1px solid #222;
 }
 
-.c15::-webkit-input-placeholder {
+.c12::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c15::-moz-placeholder {
+.c12::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c15:-ms-input-placeholder {
+.c12:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c15::placeholder {
+.c12::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c15[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -1792,34 +884,39 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           type="text"
           value="Primary"
         />
-        <span
-          className="c6"
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c6"
           disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
+          onChange={[Function]}
+          type="text"
+          value="Secondary"
+        />
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c7"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Success"
+        />
+      </div>
+      <div
+        className="c3"
+      >
+        <input
+          className="c4 c8"
+          disabled={true}
+          onChange={[Function]}
+          type="text"
+          value="Danger"
+        />
       </div>
       <div
         className="c3"
@@ -1829,36 +926,8 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           disabled={true}
           onChange={[Function]}
           type="text"
-          value="Secondary"
+          value="Primary"
         />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
       </div>
       <div
         className="c3"
@@ -1868,36 +937,8 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           disabled={true}
           onChange={[Function]}
           type="text"
-          value="Success"
+          value="Secondary"
         />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
       </div>
       <div
         className="c3"
@@ -1907,36 +948,8 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           disabled={true}
           onChange={[Function]}
           type="text"
-          value="Danger"
+          value="Success"
         />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
       </div>
       <div
         className="c3"
@@ -1946,153 +959,8 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
           disabled={true}
           onChange={[Function]}
           type="text"
-          value="Primary"
-        />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
-      </div>
-      <div
-        className="c3"
-      >
-        <input
-          className="c4 c13"
-          disabled={true}
-          onChange={[Function]}
-          type="text"
-          value="Secondary"
-        />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
-      </div>
-      <div
-        className="c3"
-      >
-        <input
-          className="c4 c14"
-          disabled={true}
-          onChange={[Function]}
-          type="text"
-          value="Success"
-        />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
-      </div>
-      <div
-        className="c3"
-      >
-        <input
-          className="c4 c15"
-          disabled={true}
-          onChange={[Function]}
-          type="text"
           value="Danger"
         />
-        <span
-          className="c6"
-          disabled={true}
-          type="prefix"
-        >
-          <span
-            className="c7 c8"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              style={
-                Object {
-                  "color": undefined,
-                }
-              }
-              viewBox="0 0 24 24"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-              />
-            </svg>
-          </span>
-        </span>
       </div>
     </div>
   </div>
@@ -2104,239 +972,15 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   padding: 12px;
 }
 
-.c7 {
-  position: relative;
-  height: 1em;
-  line-height: 1em;
-  text-transform: none;
-  top: 10px;
-}
-
-.c12 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c13 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c14 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c15 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c16 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c17 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c18 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c19 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c20 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c21 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c22 .c6 {
-  font-size: 1.5em;
-  margin-right: 0.625em;
-}
-
-.c23 .c6 {
-  font-size: 1.5em;
-}
-
-.c24 .c6 {
-  font-size: 1.5em;
-}
-
-.c25 .c6 {
-  font-size: 1.5em;
-}
-
-.c26 .c6 {
-  font-size: 1.5em;
-}
-
-.c27 .c6 {
-  font-size: 1.5em;
-}
-
-.c28 .c6 {
-  font-size: 1.5em;
-}
-
-.c29 .c6 {
-  font-size: 1.5em;
-}
-
-.c30 .c6 {
-  font-size: 1.5em;
-}
-
-.c31 .c6 {
-  font-size: 1.5em;
-}
-
-.c32 .c6 {
-  font-size: 1.5em;
-}
-
-.c33 .c6 {
-  font-size: 1.5em;
-}
-
-.c34 .c6 {
-  font-size: 1.5em;
-}
-
-.c35 .c6 {
-  font-size: 1.5em;
-}
-
-.c36 .c6 {
-  font-size: 1.5em;
-}
-
-.c37 .c6 {
-  font-size: 1.5em;
-}
-
-.c38 .c6 {
-  font-size: 1.5em;
-}
-
-.c39 .c6 {
-  font-size: 1.5em;
-}
-
-.c40 .c6 {
-  font-size: 1.5em;
-}
-
-.c41 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c42 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c43 .c6 {
-  margin-right: 1.25em;
-  display: inline-block;
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  -webkit-transform-origin: left 25%;
-  -ms-transform-origin: left 25%;
-  transform-origin: left 25%;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 20px;
-  left: 0.5em;
-}
-
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 16.25px;
-  left: 0.5em;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  font-size: 23.75px;
-  left: 0.5em;
-}
-
 .c2 {
   position: relative;
 }
 
-.c2 .c6 {
+.c2 .c7 {
   pointer-events: none;
 }
 
-.c44 .c6 {
-  pointer-events: none;
-}
-
-.c45 .c6 {
-  pointer-events: none;
-}
-
-.c8 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2355,35 +999,35 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   background-color: #eee;
 }
 
-.c8:hover {
+.c5:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c8:focus {
+.c5:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c8::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c8[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -2440,7 +1084,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c10 {
+.c6 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2459,35 +1103,35 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
   background-color: #eee;
 }
 
-.c10:hover {
+.c6:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c10:focus {
+.c6:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c10::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c10::-moz-placeholder {
+.c6::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c10:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c10::placeholder {
+.c6::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c10[disabled] {
+.c6[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -2522,112 +1166,28 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
         type="text"
         value="Small"
       />
-      <span
-        className="c5"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c8"
+        className="c3 c5"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Default"
       />
-      <span
-        className="c9"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
     <div
       className="c2"
     >
       <input
-        className="c3 c10"
+        className="c3 c6"
         disabled={true}
         onChange={[Function]}
         type="text"
         value="Large"
       />
-      <span
-        className="c11"
-        disabled={true}
-        type="prefix"
-      >
-        <span
-          className="c6 c7"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            stroke="currentColor"
-            strokeWidth="0"
-            style={
-              Object {
-                "color": undefined,
-              }
-            }
-            viewBox="0 0 24 24"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-            />
-          </svg>
-        </span>
-      </span>
     </div>
   </div>
 </div>
