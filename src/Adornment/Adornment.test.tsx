@@ -65,6 +65,6 @@ describe('<Adornment/>', () => {
 
     render(adornment)
 
-    expect(recievedExtraPadding[Position.LEFT]).toBe('calc(10px + 10px)')
+    expect(recievedExtraPadding[Position.LEFT]).toBe(10)
   })
 })

@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, useRef, useMemo } from 'react'
 
-import { AdornmentWrapper } from './styled'
-import { AdornmentContainer } from './AdornmentContainer'
-import { useAddWidthToPadding, useCloneChildWithPadding } from './hooks'
+import { AdornmentWrapper, StyledAdornment } from './styled'
+import { useCloneChildWithPadding } from './hooks'
+import { makeCssCalcExpression } from './helpers'
 
 export enum Position {
   LEFT = 'Left',
@@ -32,17 +32,29 @@ export const Adornment = ({
   [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: 0, [Position.LEFT]: 0 }
 }: AdornmentProps) => {
 
-  const [extraPaddingWithWidth, setWidth] = useAddWidthToPadding(extraPadding, position)
+  const ref = useRef<HTMLElement>(null)
+
+  const extraPaddingWithWidth = useMemo(() => {
+    const width = ref.current
+      ? ref.current.getBoundingClientRect().width
+      : 0
+
+    return width
+      ? { ...extraPadding, [position]: makeCssCalcExpression(extraPadding[position], width) }
+      : extraPadding
+  }, [extraPadding[Position.LEFT], extraPadding[Position.RIGHT]])
+
   const child = useCloneChildWithPadding(children, extraPaddingWithWidth)
 
   return (
     <AdornmentWrapper>
       {child}
-      <AdornmentContainer
-        position={position}
-        registerWidth={setWidth}>
+      <StyledAdornment
+        id='styledAdornment'
+        ref={ref}
+        position={position}>
         {component}
-      </AdornmentContainer>
+      </StyledAdornment>
     </AdornmentWrapper>
   )
 }
