@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 import { AdornmentWrapper } from './styled'
 import { AdornmentContainer } from './AdornmentContainer'
-import { useAddWidthToPadding, useCloneElementsWithPadding } from './hooks'
+import { useAddWidthToPadding, useCloneChildWithPadding } from './hooks'
 
 export enum Position {
   LEFT = 'Left',
@@ -18,27 +18,26 @@ export interface ExtraPadding {
 }
 
 type AdornmentProps = {
+  children: ReactNode
   component: ReactNode
+
   position?: Position
   [EXTRA_PADDING]?: ExtraPadding
-  children: ReactNode
-  hasParentAdornment?: boolean
 }
 
 export const Adornment = ({
   component,
   position = Position.LEFT,
   children,
-  hasParentAdornment,
   [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
 }: AdornmentProps) => {
 
   const [extraPaddingWithWidth, setWidth] = useAddWidthToPadding(extraPadding, position)
-  const newChildren = useCloneElementsWithPadding(children, extraPaddingWithWidth)
+  const child = useCloneChildWithPadding(children, extraPaddingWithWidth)
 
   return (
-    <AdornmentWrapper id='adornmentWrapper' hasParentAdornment={hasParentAdornment}>
-      {newChildren}
+    <AdornmentWrapper>
+      {child}
       <AdornmentContainer
         position={position}
         registerWidth={setWidth}>

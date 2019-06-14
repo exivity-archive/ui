@@ -1,16 +1,16 @@
 import { ExtraPadding, Position } from './Adornment'
 
-export function mergeExtraPadding (...paddingForChilds: ExtraPadding[]): ExtraPadding {
-  return {
-    [Position.LEFT]: makeCssCalcString(...paddingForChilds.filter(paddingForChild => paddingForChild).map(paddingForChild => paddingForChild[Position.LEFT])),
-    [Position.RIGHT]: makeCssCalcString(...paddingForChilds.filter(paddingForChild => paddingForChild).map(paddingForChild => paddingForChild[Position.RIGHT]))
-  }
+export function makeCssCalcStatement (...args: string[]) {
+  return `calc(${args.reduce((acc, curr) => acc + ' + ' + curr)})`
 }
 
-export function makeCssCalcString (...args: (string | undefined)[]) {
-  return `calc(${args.reduce((acc, curr) =>
-    curr
-      ? acc + ' + ' + curr
-      : acc
-  )})`
+function mapProp<T extends {}> (args: T[], prop: keyof T) {
+  return args.map(item => item[prop])
+}
+
+export function mergeExtraPadding (...args: ExtraPadding[]): ExtraPadding {
+  return {
+    [Position.LEFT]: makeCssCalcStatement(...mapProp(args, Position.LEFT)),
+    [Position.RIGHT]: makeCssCalcStatement(...mapProp(args, Position.RIGHT))
+  }
 }

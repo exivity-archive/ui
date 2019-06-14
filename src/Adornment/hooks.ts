@@ -1,6 +1,6 @@
 import { ReactNode, useMemo, cloneElement, Children, useState } from 'react'
 
-import { makeCssCalcString, mergeExtraPadding } from './helpers'
+import { makeCssCalcStatement, mergeExtraPadding } from './helpers'
 import { ExtraPadding, Position, ADORNMENT_DISPLAY_NAME, EXTRA_PADDING } from './Adornment'
 import { isElement } from '../utils/isReactElement'
 
@@ -12,7 +12,7 @@ export function useAddWidthToPadding (extraPadding: ExtraPadding, position: Posi
 
     const newExtraPadding = {
       ...extraPadding,
-      [position]: makeCssCalcString(widthPadding, extraPadding[position])
+      [position]: makeCssCalcStatement(widthPadding, extraPadding[position])
     }
 
     return [newExtraPadding, setWidth] as [ExtraPadding, typeof setWidth]
@@ -32,23 +32,27 @@ function cloneAndAddPadding (child: React.ReactElement<any, React.FunctionCompon
 }
 
 function cloneAndMergeExtraPadding (child: React.ReactElement<any, React.FunctionComponent<{}>>, extraPadding: ExtraPadding) {
+  const mergedExtraPadding = child.props[EXTRA_PADDING]
+    ? mergeExtraPadding(extraPadding, child.props[EXTRA_PADDING])
+    : extraPadding
+
   return cloneElement(child, {
-    [EXTRA_PADDING]: mergeExtraPadding(extraPadding, child.props[EXTRA_PADDING])
+    [EXTRA_PADDING]: mergedExtraPadding
   })
 }
 
-function cloneElementsWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
-  return Children.map(children, (child) => {
-    if (!isElement(child)) return child
+function cloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
+  const child = Children.only(children)
 
-    if (child.type.displayName === ADORNMENT_DISPLAY_NAME) {
-      return cloneAndMergeExtraPadding(child, extraPadding)
-    }
+  if (!isElement(child)) return child
 
-    return cloneAndAddPadding(child, extraPadding)
-  })
+  if (child.type.displayName === ADORNMENT_DISPLAY_NAME) {
+    return cloneAndMergeExtraPadding(child, extraPadding)
+  }
+
+  return cloneAndAddPadding(child, extraPadding)
 }
 
-export function useCloneElementsWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
-  return useMemo(() => cloneElementsWithPadding(children, extraPadding), [children, extraPadding])
+export function useCloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
+  return useMemo(() => cloneChildWithPadding(children, extraPadding), [children, extraPadding])
 }
