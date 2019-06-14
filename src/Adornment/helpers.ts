@@ -1,11 +1,13 @@
 import { ExtraPadding, Position } from './Adornment'
 
-function makeExpression (expression: string, curr: string | number, i: number) {
+function makeExpression (expression: string, curr: string | number) {
+  if (curr === 0 || curr === '0px') return expression
+
   const element = typeof curr === 'number'
     ? curr + 'px'
     : curr
 
-  if (i === 0) return element
+  if (expression.length === 0) return element
   return expression + ' + ' + element
 }
 

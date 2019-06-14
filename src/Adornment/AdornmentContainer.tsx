@@ -11,10 +11,8 @@ export const AdornmentContainer: FC<AdornmentContainer> = ({ registerWidth, chil
 
   useEffect(() => {
     if (adornmentRef.current) {
-
       const rect = adornmentRef.current.getBoundingClientRect()
-
-      registerWidth(rect.width * 1.5)
+      registerWidth(rect.width + 10)
     }
   }, [adornmentRef.current])
 

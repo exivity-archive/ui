@@ -29,7 +29,7 @@ export const Adornment = ({
   component,
   position = Position.LEFT,
   children,
-  [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: '0px', [Position.LEFT]: '0px' }
+  [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: 0, [Position.LEFT]: 0 }
 }: AdornmentProps) => {
 
   const [extraPaddingWithWidth, setWidth] = useAddWidthToPadding(extraPadding, position)

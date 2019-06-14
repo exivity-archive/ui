@@ -85,6 +85,7 @@
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
+    "@testing-library/react": "^8.0.1",
     "@types/color": "^3.0.0",
     "@types/react-syntax-highlighter": "^10.1.0",
     "@types/react-window": "^1.7.0",
