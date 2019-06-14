@@ -10,17 +10,22 @@ export interface Refs<
   container: RefObject<Container>
 }
 
-export type Vertical = 'top' | 'bottom'
+export enum Vertical {
+  BOTTOM = 'top',
+  TOP = 'bottom',
+  AUTO = 'auto'
+}
+
 export type Horizontal = 'left' | 'right'
 
 export interface AutoLayout {
-  vertical?: Vertical | 'auto'
+  vertical?: Vertical
   horizontal?: Horizontal | 'auto'
 }
 
 export interface Layout extends AutoLayout {
   horizontal: Horizontal
-  vertical: Vertical
+  vertical: Exclude<Vertical, Vertical.AUTO>
 }
 
 export type BreakDistance = {
@@ -28,7 +33,7 @@ export type BreakDistance = {
   vertical: number
 } | number
 
-const defaultLayout: AutoLayout = { vertical: 'auto', horizontal: 'auto' }
+const defaultLayout: AutoLayout = { vertical: Vertical.AUTO, horizontal: 'auto' }
 
 export function getLayout (
   { target, parent, container }: Refs,
@@ -39,11 +44,11 @@ export function getLayout (
   const { top, left, height, width } = getMeasures(target.current, parent.current)
   const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
 
-  const newVertical = top + height > bottomEdge ? 'top' : 'bottom'
+  const newVertical = top + height > bottomEdge ? Vertical.TOP : Vertical.BOTTOM
   const newHorizontal = left + width > rightEdge ? 'left' : 'right'
 
   return {
-    vertical: vertical !== 'auto' ? vertical! : newVertical,
+    vertical: vertical !== Vertical.AUTO ? vertical! : newVertical,
     horizontal: horizontal !== 'auto' ? horizontal! : newHorizontal
   }
 }

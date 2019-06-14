@@ -1,13 +1,9 @@
-import { Layout } from '../useSnapEdgeToParent'
+import { Layout, Vertical } from '../useSnapEdgeToParent'
 
 export const makeCssPosition = ({ horizontal, vertical }: Layout, height: number) => {
   horizontal = (horizontal === 'right')
     ? 'left'
     : 'right'
-
-  vertical = (vertical === 'top')
-    ? 'bottom'
-    : 'top'
 
   return(
     `${vertical}: ${height}px;\n`

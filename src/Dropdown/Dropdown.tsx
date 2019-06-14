@@ -57,7 +57,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   children,
   open,
   horizontal = 'auto',
-  vertical = 'auto',
+  vertical = Vertical.AUTO,
   breakDistance = 20,
   useTriggerComponentWidth,
   onOutsideClick,

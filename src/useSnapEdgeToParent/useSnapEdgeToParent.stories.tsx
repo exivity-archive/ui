@@ -2,7 +2,7 @@ import React, { FC, useEffect, useMemo } from 'react'
 
 import { storiesOf } from '@storybook/react'
 
-import { useSnapEdgeToParent } from '.'
+import { useSnapEdgeToParent, Vertical } from '.'
 import { BreakDistance, AutoLayout } from './helpers'
 
 import { Flex } from '../Flex'
@@ -15,7 +15,7 @@ import { ensureString } from '../utils'
 export default storiesOf('helpers|useSnapEdgeToParent', module)
   .add('default', () => <Dropdown breakDistances={20} />)
   .add('relative to container', () => <Dropdown breakDistances={50} relativeToContainer />)
-  .add('fixed orientation', () => <Dropdown breakDistances={20} initialLayout={{ horizontal: 'left', vertical: 'bottom' }} />)
+  .add('fixed orientation', () => <Dropdown breakDistances={20} initialLayout={{ horizontal: 'left', vertical: Vertical.BOTTOM1 }} />)
   .add('different break distances', () => <Dropdown breakDistances={{ horizontal: 200, vertical: 400 }} />)
   .add('documentation', () => <Markdown>{ensureString(useSnapEdgeToParentDocs)}</Markdown>)
 
