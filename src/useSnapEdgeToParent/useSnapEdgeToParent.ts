@@ -1,11 +1,5 @@
 import { useRef, useState, useMemo, useLayoutEffect } from 'react'
-import { Layout, getLayout, AutoLayout, BreakDistance, Refs, Vertical } from './helpers'
-
-// export enum Horizontal {
-//   LEFT = 'left',
-//   RIGHT = 'right',
-//   AUTO = 'auto',
-// }
+import { Layout, getLayout, AutoLayout, BreakDistance, Refs, Vertical, Horizontal } from './helpers'
 
 export function useSnapEdgeToParent<
   Target extends HTMLElement = HTMLDivElement,
@@ -22,7 +16,7 @@ export function useSnapEdgeToParent<
     container: useRef<Container>(null)
   }
 
-  const [layout, setLayout] = useState<Layout>({ horizontal: 'left', vertical: Vertical.TOP })
+  const [layout, setLayout] = useState<Layout>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
   const handleLayout = () => setLayout(getLayout(refs, breakDistances, initialLayout))
 

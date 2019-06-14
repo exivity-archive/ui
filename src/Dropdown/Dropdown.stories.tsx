@@ -7,7 +7,7 @@ import { Row } from '../utils/stories/components'
 import { Flex } from '../Flex'
 import { Button } from '../Button'
 import { Block } from '../Block'
-import { Vertical } from '../useSnapEdgeToParent'
+import { Vertical, Horizontal } from '../useSnapEdgeToParent'
 
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
@@ -32,7 +32,7 @@ storiesOf('molecules|Dropdown', module)
       <Row columns={4}>
         <Dropdown
           open={state.one}
-          horizontal='right'
+          horizontal={Horizontal.RIGHT}
           triggerComponent={
             <Button secondary onClick={() => storeState({ one: !state.one })}>position right</Button>
           }>
@@ -42,7 +42,7 @@ storiesOf('molecules|Dropdown', module)
         </Dropdown>
         <Dropdown
           open={state.two}
-          horizontal='left'
+          horizontal={Horizontal.LEFT}
           triggerComponent={
             <Button secondary onClick={() => storeState({ two: !state.two })}>position left</Button>
           }>

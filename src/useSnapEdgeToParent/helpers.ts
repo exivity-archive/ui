@@ -16,15 +16,19 @@ export enum Vertical {
   AUTO = 'auto'
 }
 
-export type Horizontal = 'left' | 'right'
+export enum Horizontal {
+   LEFT = 'right',
+   RIGHT = 'left',
+   AUTO = 'auto'
+}
 
 export interface AutoLayout {
   vertical?: Vertical
-  horizontal?: Horizontal | 'auto'
+  horizontal?: Horizontal
 }
 
 export interface Layout extends AutoLayout {
-  horizontal: Horizontal
+  horizontal: Exclude<Horizontal, Horizontal.AUTO>
   vertical: Exclude<Vertical, Vertical.AUTO>
 }
 
@@ -33,7 +37,7 @@ export type BreakDistance = {
   vertical: number
 } | number
 
-const defaultLayout: AutoLayout = { vertical: Vertical.AUTO, horizontal: 'auto' }
+const defaultLayout: AutoLayout = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
 export function getLayout (
   { target, parent, container }: Refs,
@@ -45,11 +49,11 @@ export function getLayout (
   const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
 
   const newVertical = top + height > bottomEdge ? Vertical.TOP : Vertical.BOTTOM
-  const newHorizontal = left + width > rightEdge ? 'left' : 'right'
+  const newHorizontal = left + width > rightEdge ? Horizontal.LEFT : Horizontal.RIGHT
 
   return {
     vertical: vertical !== Vertical.AUTO ? vertical! : newVertical,
-    horizontal: horizontal !== 'auto' ? horizontal! : newHorizontal
+    horizontal: horizontal !== Horizontal.AUTO ? horizontal! : newHorizontal
   }
 }
 
