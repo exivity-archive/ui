@@ -39,8 +39,8 @@ export function getLayout (
   const { top, left, height, width } = getMeasures(target.current, parent.current)
   const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
 
-  const newVertical = top + height > bottomEdge ? 'bottom' : 'top'
-  const newHorizontal = left + width > rightEdge ? 'right' : 'left'
+  const newVertical = top + height > bottomEdge ? 'top' : 'bottom'
+  const newHorizontal = left + width > rightEdge ? 'left' : 'right'
 
   return {
     vertical: vertical !== 'auto' ? vertical! : newVertical,

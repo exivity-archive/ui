@@ -73,6 +73,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const position = useMemo(() => {
     if (refs.parent.current) {
+
       return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
     }
   }, [layout])
