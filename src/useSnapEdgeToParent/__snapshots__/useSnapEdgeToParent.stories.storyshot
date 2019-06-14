@@ -174,10 +174,10 @@ exports[`Storyshots helpers|useSnapEdgeToParent fixed orientation 1`] = `
         style={
           Object {
             "background": "green",
-            "bottom": 20,
             "height": 200,
-            "left": 0,
             "position": "absolute",
+            "right": 0,
+            "top": 20,
             "width": 300,
           }
         }
