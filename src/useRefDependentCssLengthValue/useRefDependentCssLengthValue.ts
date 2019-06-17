@@ -1,5 +1,5 @@
 import { useRef, useState, useLayoutEffect, RefObject } from 'react'
-import { makeCssCalcExpression } from '../utils/makeCssCalcExpression'
+import { makeCssLengthExpression } from '../utils/makeCssLengthExpression'
 
 export function useRefDependentCssLengthValue<
   RefElement extends HTMLElement = HTMLElement
@@ -10,7 +10,7 @@ export function useRefDependentCssLengthValue<
   const refValue = refAccessor(dependencyRef)
 
   useLayoutEffect(() => {
-    setValue(makeCssCalcExpression(baseValue, refValue))
+    setValue(makeCssLengthExpression(baseValue, refValue))
   }, [refValue, baseValue])
 
   return [value, dependencyRef] as [string, RefObject<RefElement>]

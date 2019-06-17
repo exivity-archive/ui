@@ -9,10 +9,10 @@ function makeExpression (expression: string, curr: string | number | undefined |
   return expression + ' + ' + element
 }
 
-export function makeCssCalcExpression (...args: (string | number | undefined | null)[]) {
+export function makeCssLengthExpression (...args: (string | number | undefined | null)[]) {
   const statement = args.reduce(makeExpression, '')
 
   if (statement.length === 0) return undefined
-  if (statement.length === 1) return statement
-  return `calc(${statement})`
+  if (statement.includes('+')) return `calc(${statement})`
+  return statement
 }

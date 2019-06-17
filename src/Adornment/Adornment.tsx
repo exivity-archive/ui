@@ -1,7 +1,7 @@
 import React, { ReactNode, cloneElement, RefObject } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useRefDependentCssLengthValue } from '../useDynamicCssLengthValue'
+import { useRefDependentCssLengthValue } from '../useRefDependentCssLengthValue'
 import { isReactElement } from '../utils/isReactElement'
 
 export enum Position {
