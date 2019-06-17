@@ -1,8 +1,8 @@
-import React, { ReactNode, useRef, useMemo } from 'react'
+import React, { ReactNode, useRef, RefObject, useEffect, useMemo, useState } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
 import { useCloneChildWithPadding } from './hooks'
-import { makeCssCalcExpression } from './helpers'
+import { getPadding } from './helpers'
 
 export enum Position {
   LEFT = 'Left',
@@ -13,47 +13,44 @@ export const ADORNMENT_DISPLAY_NAME = 'Adornment'
 export const EXTRA_PADDING = 'extraPadding'
 
 export interface ExtraPadding {
-  [Position.LEFT]: string | number
-  [Position.RIGHT]: string | number
+  [Position.LEFT]?: string | number
+  [Position.RIGHT]?: string | number
 }
 
 type AdornmentProps = {
   children: ReactNode
-  component: ReactNode
 
-  position?: Position
-  [EXTRA_PADDING]?: ExtraPadding
+  leftComponent?: ReactNode
+  rightComponent?: ReactNode
+  inset?: number
 }
 
 export const Adornment = ({
-  component,
-  position = Position.LEFT,
+  leftComponent,
+  rightComponent,
   children,
-  [EXTRA_PADDING]: extraPadding = { [Position.RIGHT]: 0, [Position.LEFT]: 0 }
+  inset = 10
 }: AdornmentProps) => {
 
-  const ref = useRef<HTMLElement>(null)
+  const leftRef = useRef<HTMLElement>(null)
+  const rightRef = useRef<HTMLElement>(null)
 
-  const extraPaddingWithWidth = useMemo(() => {
-    const width = ref.current
-      ? ref.current.getBoundingClientRect().width
-      : 0
+  const [leftPadding, setLeftPadding] = useState<string>()
+  const [rightPadding, setRightPadding] = useState<string>()
 
-    return width
-      ? { ...extraPadding, [position]: makeCssCalcExpression(extraPadding[position], width) }
-      : extraPadding
-  }, [extraPadding[Position.LEFT], extraPadding[Position.RIGHT]])
+  useEffect(() => setLeftPadding(getPadding(leftRef, inset)), [leftRef.current, inset])
+  useEffect(() => setRightPadding(getPadding(rightRef, inset)), [rightRef.current, inset])
 
-  const child = useCloneChildWithPadding(children, extraPaddingWithWidth)
+  const child = useCloneChildWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
 
   return (
     <AdornmentWrapper>
       {child}
-      <StyledAdornment
-        id='styledAdornment'
-        ref={ref}
-        position={position}>
-        {component}
+      <StyledAdornment ref={leftRef} inset={inset} position={Position.LEFT}>
+        {leftComponent}
+      </StyledAdornment>
+      <StyledAdornment ref={rightRef} inset={inset} position={Position.RIGHT}>
+        {rightComponent}
       </StyledAdornment>
     </AdornmentWrapper>
   )

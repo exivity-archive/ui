@@ -1,4 +1,4 @@
-import { makeCssCalcExpression, mergeExtraPadding } from './helpers'
+import { makeCssCalcExpression } from './helpers'
 import { Position } from './Adornment'
 
 describe('makeCssCalcStatement(...)', () => {
@@ -24,26 +24,5 @@ describe('makeCssCalcStatement(...)', () => {
     const result = makeCssCalcExpression(...args)
 
     expect(result).toBe(`calc(5em + 20px)`)
-  })
-})
-
-describe('mergeExtraPadding(...)', () => {
-  test('merges the values of all extra paddings into calc statements', () => {
-    const extraPaddingA = {
-      [Position.LEFT]: '20px',
-      [Position.RIGHT]: '4em'
-    }
-
-    const extraPaddingB = {
-      [Position.LEFT]: '10%',
-      [Position.RIGHT]: '4em'
-    }
-
-    const args = [extraPaddingA, extraPaddingB]
-
-    const result = mergeExtraPadding(...args)
-
-    expect(result[Position.LEFT]).toBe('calc(20px + 10%)')
-    expect(result[Position.RIGHT]).toBe('calc(4em + 4em)')
   })
 })

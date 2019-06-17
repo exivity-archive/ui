@@ -1,7 +1,7 @@
-import { ExtraPadding, Position } from './Adornment'
+import { RefObject } from 'react'
 
-function makeExpression (expression: string, curr: string | number) {
-  if (curr === 0 || curr === '0px') return expression
+function makeExpression (expression: string, curr: string | number | undefined | null) {
+  if (!curr || curr === '0px') return expression
 
   const element = typeof curr === 'number'
     ? curr + 'px'
@@ -11,19 +11,21 @@ function makeExpression (expression: string, curr: string | number) {
   return expression + ' + ' + element
 }
 
-export function makeCssCalcExpression (...args: (string | number)[]) {
+export function makeCssCalcExpression (...args: (string | number | undefined | null)[]) {
   const statement = args.reduce(makeExpression, '')
 
+  if (statement.length === 0) return undefined
+  if (statement.length === 1) return statement
   return `calc(${statement})`
 }
 
-function mapProp<T extends {}> (args: T[], prop: keyof T) {
-  return args.map(item => item[prop])
+function tryGetWidth (ref: RefObject<HTMLElement>) {
+  if (ref.current) {
+    return ref.current.getBoundingClientRect().width
+  }
 }
 
-export function mergeExtraPadding (...args: ExtraPadding[]): ExtraPadding {
-  return {
-    [Position.LEFT]: makeCssCalcExpression(...mapProp(args, Position.LEFT)),
-    [Position.RIGHT]: makeCssCalcExpression(...mapProp(args, Position.RIGHT))
-  }
+export function getPadding (rightComponentRef: React.RefObject<HTMLElement>, baseInset: string | number): string {
+  const rightWidth = tryGetWidth(rightComponentRef)
+  return makeCssCalcExpression(baseInset, rightWidth)!
 }

@@ -58,13 +58,13 @@ describe('<Adornment/>', () => {
     const AdornmentComponent = styled.div`width: 100px;`
 
     const adornment = (
-      <Adornment component={<AdornmentComponent />} extraPadding={{ [Position.LEFT]: 10, [Position.RIGHT]: 10 }} position={Position.LEFT}>
+      <Adornment leftComponent={<AdornmentComponent />} rightComponent={<AdornmentComponent />}>
         <Component />
       </Adornment>
     )
 
     render(adornment)
 
-    expect(recievedExtraPadding[Position.LEFT]).toBe(10)
+    expect(recievedExtraPadding[Position.LEFT]).toBe('calc(10px)')
   })
 })

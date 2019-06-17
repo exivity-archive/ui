@@ -4,8 +4,9 @@ import { SizesProps, matchThemeProp } from '../utils/styled'
 import { Position } from './Adornment'
 import { Block } from '../Block'
 
-export interface StyledAdornmentProps extends SizesProps {
+export interface StyledAdornmentProps {
   position: Position
+  inset: number | string
 }
 
 export const StyledAdornment = styled.span <StyledAdornmentProps>`
@@ -21,8 +22,8 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
   )}px;
 
   ${props => props.position === Position.LEFT
-    ? css`left: 0.5em;`
-    : css`right: 0.5em;`
+    ? css`left: ${props.inset}px;`
+    : css`right: ${props.inset}px;`
   }
 `
 
