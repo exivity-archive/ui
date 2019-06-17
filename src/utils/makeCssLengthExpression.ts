@@ -12,7 +12,7 @@ function makeExpression (expression: string, curr: string | number | undefined |
 export function makeCssLengthExpression (...args: (string | number | undefined | null)[]) {
   const statement = args.reduce(makeExpression, '')
 
-  if (statement.length === 0) return undefined
+  if (statement.length === 0) return '0'
   if (statement.includes('+')) return `calc(${statement})`
   return statement
 }

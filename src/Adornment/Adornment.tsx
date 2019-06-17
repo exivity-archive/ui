@@ -30,8 +30,8 @@ export const Adornment = ({
   inset = 10
 }: AdornmentProps) => {
 
-  const [paddingLeft, leftRef] = useRefDependentCssLengthValue(inset, tryGetRectWidth)
-  const [paddingRight, rightRef] = useRefDependentCssLengthValue(inset, tryGetRectWidth)
+  const [paddingLeft, leftRef] = useRefDependentCssLengthValue({ baseValue: inset, refAccessor: tryGetRectWidth })
+  const [paddingRight, rightRef] = useRefDependentCssLengthValue({ baseValue: inset, refAccessor: tryGetRectWidth })
 
   const clonedChild = isReactElement(children)
     && cloneElement(children, {

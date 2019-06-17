@@ -38,6 +38,6 @@ describe('makeCssCalcExpression(...)', () => {
 
     const result = makeCssLengthExpression(...args)
 
-    expect(result).toBeUndefined()
+    expect(result).toBe('0')
   })
 })
