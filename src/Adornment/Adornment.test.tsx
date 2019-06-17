@@ -2,8 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 
 import { Adornment } from './Adornment'
-import { Text } from '../'
-import { Input } from '../Input'
+import { Text, Input } from '../'
 
 describe('<Adornment/>', () => {
   test('Doesn\'t throw when used correctly', () => {

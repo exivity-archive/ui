@@ -1,4 +1,3 @@
-
 function makeExpression (expression: string, curr: string | number | undefined | null) {
   if (!curr || curr === '0px') return expression
 

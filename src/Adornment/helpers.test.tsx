@@ -1,8 +1,7 @@
 import React from 'react'
 import { renderHook } from 'react-hooks-testing-library'
 
-import { Position } from './helpers'
-import { useCloneChildWithPadding } from './helpers'
+import { Position, useCloneChildWithPadding } from './helpers'
 
 test('Throws an error if more than one child is given', () => {
   const children = [<div />, <div />]
