@@ -1,16 +1,8 @@
 import React, { ReactNode } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useCloneChildWithPadding } from './useCloneChildWithPadding'
+import { useCloneChildWithPadding, Position } from './helpers'
 import { useDynamicCssLengthValue } from '../useDynamicCssLengthValue'
-
-export enum Position {
-  LEFT = 'Left',
-  RIGHT = 'Right'
-}
-
-export const ADORNMENT_DISPLAY_NAME = 'Adornment'
-export const EXTRA_PADDING = 'extraPadding'
 
 type AdornmentProps = {
   children: ReactNode

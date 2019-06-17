@@ -1,8 +1,12 @@
 import { ReactNode, useMemo, cloneElement, Children, ReactElement, FC } from 'react'
 
 import { makeCssCalcExpression } from '../utils/makeCssCalcExpression'
-import { Position, ADORNMENT_DISPLAY_NAME } from './Adornment'
 import { isReactElement } from '../utils/isReactElement'
+
+export enum Position {
+  LEFT = 'Left',
+  RIGHT = 'Right'
+}
 
 export interface ExtraPadding {
   [Position.LEFT]?: string | number
@@ -23,7 +27,7 @@ function cloneAndAddPadding (child: ReactElement<any, FC>, extraPadding: ExtraPa
 function cloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
   const child = Children.only(children)
 
-  if (!isReactElement(child)) throw new Error(`Child of ${ADORNMENT_DISPLAY_NAME} is not a ReactElement`)
+  if (!isReactElement(child)) throw new Error(`Child of Adornment is not a ReactElement`)
 
   return cloneAndAddPadding(child, extraPadding)
 }

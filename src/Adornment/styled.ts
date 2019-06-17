@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
-import { SizesProps, matchThemeProp } from '../utils/styled'
-import { Position } from './Adornment'
+import { matchThemeProp } from '../utils/styled'
+import { Position } from './helpers'
 import { Block } from '../Block'
 
 export interface StyledAdornmentProps {
