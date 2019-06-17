@@ -1,11 +1,11 @@
 import { renderHook } from 'react-hooks-testing-library'
-import { useRefDependentCssLengthValue } from '.'
+import { useRefDependentSpacing } from '.'
 
 test('Returns the baseValue if refAccessor returns undefined', () => {
   const baseValue = 20
   const refAccessor = (ref) => undefined
 
-  const { result } = renderHook(() => useRefDependentCssLengthValue({ baseValue, refAccessor }))
+  const { result } = renderHook(() => useRefDependentSpacing({ baseValue, refAccessor }))
   const [value, ref] = result.current
 
   expect(value).toBe('20px')
@@ -14,7 +14,7 @@ test('Returns the baseValue if refAccessor returns undefined', () => {
 test('Returns the ref accessor return value if baseValue is undefined', () => {
   const refAccessor = (ref) => 100
 
-  const { result } = renderHook(() => useRefDependentCssLengthValue({ refAccessor }))
+  const { result } = renderHook(() => useRefDependentSpacing({ refAccessor }))
   const [value, ref] = result.current
 
   expect(value).toBe('100px')
@@ -23,7 +23,7 @@ test('Returns the ref accessor return value if baseValue is undefined', () => {
 test('Returns opx if both the ref accessor return type and the baseValue are undefined', () => {
   const refAccessor = (ref) => undefined
 
-  const { result } = renderHook(() => useRefDependentCssLengthValue({ refAccessor }))
+  const { result } = renderHook(() => useRefDependentSpacing({ refAccessor }))
   const [value, ref] = result.current
 
   expect(value).toBe('0')
@@ -33,7 +33,7 @@ test('Returns the baseValue and the refAccessor return value if refAccessor retu
   const baseValue = 20
   const refAccessor = (ref) => 100
 
-  const { result } = renderHook(() => useRefDependentCssLengthValue({ baseValue, refAccessor }))
+  const { result } = renderHook(() => useRefDependentSpacing({ baseValue, refAccessor }))
   const [value, ref] = result.current
   expect(value).toBe('calc(20px + 100px)')
 })
@@ -44,7 +44,7 @@ test('Value changes if baseValue changes', () => {
   const initialProps = { baseValue: 10, refAccessor }
 
   const { result, rerender } = renderHook(
-    (props) => useRefDependentCssLengthValue(props),
+    (props) => useRefDependentSpacing(props),
     { initialProps }
   )
 
@@ -65,7 +65,7 @@ test('Value changes if ref accessor return value changes', () => {
   const initialProps = { baseValue, refAccessor: () => 100 }
 
   const { result, rerender } = renderHook(
-    (props) => useRefDependentCssLengthValue(props),
+    (props) => useRefDependentSpacing(props),
     { initialProps }
   )
 

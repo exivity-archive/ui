@@ -9,7 +9,7 @@ function makeExpression (expression: string, curr: string | number | undefined |
   return expression + ' + ' + element
 }
 
-export function makeCssLengthExpression (...args: (string | number | undefined | null)[]) {
+export function makeSpacingExpression (...args: (string | number | undefined | null)[]) {
   const statement = args.reduce(makeExpression, '')
 
   if (statement.length === 0) return '0'

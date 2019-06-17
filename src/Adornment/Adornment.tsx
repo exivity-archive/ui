@@ -1,8 +1,8 @@
-import React, { ReactNode, cloneElement, RefObject } from 'react'
+import React, { ReactNode, cloneElement } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useRefDependentCssLengthValue } from '../useRefDependentCssLengthValue'
 import { isReactElement } from '../utils/isReactElement'
+import { useClientRect } from '../useClientRect'
 
 export enum Position {
   LEFT = 'Left',
@@ -17,12 +17,6 @@ type AdornmentProps = {
   inset?: number
 }
 
-function tryGetRectWidth (ref: RefObject<HTMLElement>) {
-  if (ref.current) {
-    return ref.current.getBoundingClientRect().width
-  }
-}
-
 export const Adornment = ({
   leftComponent,
   rightComponent,
@@ -30,8 +24,11 @@ export const Adornment = ({
   inset = 10
 }: AdornmentProps) => {
 
-  const [paddingLeft, leftRef] = useRefDependentCssLengthValue({ baseValue: inset, refAccessor: tryGetRectWidth })
-  const [paddingRight, rightRef] = useRefDependentCssLengthValue({ baseValue: inset, refAccessor: tryGetRectWidth })
+  const [leftRect, leftRef] = useClientRect()
+  const [rightRect, rightRef] = useClientRect()
+
+  const paddingLeft = leftRect ? (leftRect.width + inset) : 0
+  const paddingRight = rightRect ? (rightRect.width + inset) : 0
 
   const clonedChild = isReactElement(children)
     && cloneElement(children, {
