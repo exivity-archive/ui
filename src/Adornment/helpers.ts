@@ -19,13 +19,8 @@ export function makeCssCalcExpression (...args: (string | number | undefined | n
   return `calc(${statement})`
 }
 
-function tryGetWidth (ref: RefObject<HTMLElement>) {
+export function tryGetRectProp (ref: RefObject<HTMLElement>, rectPropKey: keyof (DOMRect | ClientRect)) {
   if (ref.current) {
-    return ref.current.getBoundingClientRect().width
+    return ref.current.getBoundingClientRect()[rectPropKey]
   }
-}
-
-export function getPadding (rightComponentRef: React.RefObject<HTMLElement>, baseInset: string | number): string {
-  const rightWidth = tryGetWidth(rightComponentRef)
-  return makeCssCalcExpression(baseInset, rightWidth)!
 }

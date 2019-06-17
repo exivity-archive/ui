@@ -2,7 +2,7 @@ import React, { ReactNode, useRef, RefObject, useEffect, useMemo, useState } fro
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
 import { useCloneChildWithPadding } from './hooks'
-import { getPadding } from './helpers'
+import { getCssLengthValue } from './helpers'
 
 export enum Position {
   LEFT = 'Left',
@@ -32,14 +32,11 @@ export const Adornment = ({
   inset = 10
 }: AdornmentProps) => {
 
-  const leftRef = useRef<HTMLElement>(null)
   const rightRef = useRef<HTMLElement>(null)
 
-  const [leftPadding, setLeftPadding] = useState<string>()
   const [rightPadding, setRightPadding] = useState<string>()
 
-  useEffect(() => setLeftPadding(getPadding(leftRef, inset)), [leftRef.current, inset])
-  useEffect(() => setRightPadding(getPadding(rightRef, inset)), [rightRef.current, inset])
+  useEffect(() => setRightPadding(getCssLengthValue(rightRef, inset)), [rightRef.current, inset])
 
   const child = useCloneChildWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
 

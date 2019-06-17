@@ -1,6 +1,6 @@
-import { ReactNode, useMemo, cloneElement, Children, ReactElement, FC } from 'react'
+import { ReactNode, useMemo, cloneElement, Children, ReactElement, FC, useRef, useLayoutEffect, useState, RefObject } from 'react'
 
-import { makeCssCalcExpression } from './helpers'
+import { makeCssCalcExpression, tryGetRectProp } from './helpers'
 import { ExtraPadding, Position, ADORNMENT_DISPLAY_NAME, EXTRA_PADDING } from './Adornment'
 import { isReactElement } from '../utils/isReactElement'
 
@@ -29,4 +29,19 @@ function cloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding)
 
 export function useCloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
   return useMemo(() => cloneChildWithPadding(children, extraPadding), [children, extraPadding])
+}
+
+export function useDynamicCssLengthValue<
+  RefElement extends HTMLElement = HTMLElement
+> (baseValue: string | number, rectPropKey: keyof (ClientRect | DOMRect)) {
+  const dependencyRef = useRef<RefElement>(null)
+  const [value, setValue] = useState<string>()
+
+  const rectValue = tryGetRectProp(dependencyRef, rectPropKey)
+
+  useLayoutEffect(() => {
+    setValue(makeCssCalcExpression(baseValue, rectValue))
+  }, [rectValue, baseValue])
+
+  return [value, dependencyRef] as [string, RefObject<RefElement>]
 }
