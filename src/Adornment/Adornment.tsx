@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useCloneChildWithPadding, Position } from './helpers'
+import { useCloneChildrenWithPadding, Position } from './helpers'
 import { useDynamicCssLengthValue } from '../useDynamicCssLengthValue'
 
 type AdornmentProps = {
@@ -22,7 +22,7 @@ export const Adornment = ({
   const [leftPadding, leftRef] = useDynamicCssLengthValue(inset, 'width')
   const [rightPadding, rightRef] = useDynamicCssLengthValue(inset, 'width')
 
-  const child = useCloneChildWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
+  const child = useCloneChildrenWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
 
   return (
     <AdornmentWrapper>

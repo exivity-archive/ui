@@ -24,14 +24,25 @@ function cloneAndAddPadding (child: ReactElement<any, FC>, extraPadding: ExtraPa
   })
 }
 
-function cloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
-  const child = Children.only(children)
-
+function cloneChildWithPadding (child: ReactNode, extraPadding: ExtraPadding) {
   if (!isReactElement(child)) throw new Error(`Child of Adornment is not a ReactElement`)
 
   return cloneAndAddPadding(child, extraPadding)
 }
 
-export function useCloneChildWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
-  return useMemo(() => cloneChildWithPadding(children, extraPadding), [children, extraPadding])
+function cloneChildrenWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
+  const isArray = Array.isArray(children)
+  if (isArray) {
+    return Children.map(children, (child) => cloneChildWithPadding(child, extraPadding))
+  }
+
+  if (!isArray) {
+    return cloneChildWithPadding(children, extraPadding)
+  }
+}
+
+export function useCloneChildrenWithPadding (children: ReactNode, extraPadding: ExtraPadding) {
+  return useMemo(() => cloneChildrenWithPadding(children, extraPadding),
+    [children, extraPadding[Position.LEFT], extraPadding[Position.RIGHT]]
+  )
 }
