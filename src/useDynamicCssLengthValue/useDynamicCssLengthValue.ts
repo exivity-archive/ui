@@ -1,18 +1,17 @@
 import { useRef, useState, useLayoutEffect, RefObject } from 'react'
 import { makeCssCalcExpression } from '../utils/makeCssCalcExpression'
-import { tryGetRectProp } from '../utils/tryGetRectProp'
 
-export function useDynamicCssLengthValue<
+export function useRefDependentCssLengthValue<
   RefElement extends HTMLElement = HTMLElement
-> (baseValue: string | number, rectPropKey: keyof (ClientRect | DOMRect)) {
+> (baseValue: string | number, refAccessor: (ref: RefObject<RefElement>) => string | number | undefined) {
   const dependencyRef = useRef<RefElement>(null)
   const [value, setValue] = useState<string>()
 
-  const rectValue = tryGetRectProp(dependencyRef, rectPropKey)
+  const refValue = refAccessor(dependencyRef)
 
   useLayoutEffect(() => {
-    setValue(makeCssCalcExpression(baseValue, rectValue))
-  }, [rectValue, baseValue])
+    setValue(makeCssCalcExpression(baseValue, refValue))
+  }, [refValue, baseValue])
 
   return [value, dependencyRef] as [string, RefObject<RefElement>]
 }

@@ -5,7 +5,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   padding: 12px;
 }
 
-.c8 {
+.c7 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
@@ -19,7 +19,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   width: 100%;
 }
 
-.c7 {
+.c6 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -29,15 +29,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   visibility: hidden;
 }
 
-.c4 {
-  position: relative;
-}
-
-.c4 .c19 {
-  pointer-events: none;
-}
-
-.c16 {
+.c15 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -56,40 +48,40 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: #eee;
 }
 
-.c16:hover {
+.c15:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c16:focus {
+.c15:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c16::-webkit-input-placeholder {
+.c15::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16::-moz-placeholder {
+.c15::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16:-ms-input-placeholder {
+.c15:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16::placeholder {
+.c15::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c16[disabled] {
+.c15[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c6 {
+.c5 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -108,87 +100,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: unset;
 }
 
-.c6:hover {
+.c5:hover {
   border: 1px solid #999;
 }
 
-.c6:focus {
+.c5:focus {
   border: 1px solid #222;
 }
 
-.c6::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::-moz-placeholder {
+.c5::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6::placeholder {
+.c5::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c6[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c18 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 76,175,80;
-  display: block;
-  width: 100%;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-.c18:hover {
-  border-bottom: 1px solid rgba(var(--focus-color),0.5);
-}
-
-.c18:focus {
-  border-bottom: 1px solid rgba(var(--focus-color),1);
-}
-
-.c18::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c18::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c18:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c18::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c18[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -205,7 +145,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 239,83,80;
+  --focus-color: 76,175,80;
   display: block;
   width: 100%;
   border: 1px solid #eee;
@@ -245,7 +185,59 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c13 {
+.c16 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
+  border: 1px solid #eee;
+  background-color: #eee;
+}
+
+.c16:hover {
+  border-bottom: 1px solid rgba(var(--focus-color),0.5);
+}
+
+.c16:focus {
+  border-bottom: 1px solid rgba(var(--focus-color),1);
+}
+
+.c16::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c16::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c16:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c16::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c16[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c12 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -264,87 +256,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   background-color: unset;
 }
 
-.c13:hover {
+.c12:hover {
   border: 1px solid #999;
 }
 
-.c13:focus {
+.c12:focus {
   border: 1px solid #222;
 }
 
-.c13::-webkit-input-placeholder {
+.c12::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c13::-moz-placeholder {
+.c12::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c13:-ms-input-placeholder {
+.c12:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c13::placeholder {
+.c12::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c13[disabled] {
-  cursor: not-allowed;
-  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
-}
-
-.c15 {
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  color: #222;
-  line-height: 1.5;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: calc(0.5em - 1px) 0.5em;
-  border-radius: 4px;
-  outline: 0;
-  border: 0;
-  --focus-color: 76,175,80;
-  display: block;
-  width: 100%;
-  border: 1px solid #4caf50;
-  background-color: unset;
-}
-
-.c15:hover {
-  border: 1px solid #999;
-}
-
-.c15:focus {
-  border: 1px solid #222;
-}
-
-.c15::-webkit-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c15::-moz-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c15:-ms-input-placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c15::placeholder {
-  color: currentcolor;
-  opacity: 0.5;
-}
-
-.c15[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
@@ -361,10 +301,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   border-radius: 4px;
   outline: 0;
   border: 0;
-  --focus-color: 239,83,80;
+  --focus-color: 76,175,80;
   display: block;
   width: 100%;
-  border: 1px solid #ef5350;
+  border: 1px solid #4caf50;
   background-color: unset;
 }
 
@@ -401,7 +341,59 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c10 {
+.c13 {
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: calc(0.5em - 1px) 0.5em;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  --focus-color: 239,83,80;
+  display: block;
+  width: 100%;
+  border: 1px solid #ef5350;
+  background-color: unset;
+}
+
+.c13:hover {
+  border: 1px solid #999;
+}
+
+.c13:focus {
+  border: 1px solid #222;
+}
+
+.c13::-webkit-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::-moz-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13:-ms-input-placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13::placeholder {
+  color: currentcolor;
+  opacity: 0.5;
+}
+
+.c13[disabled] {
+  cursor: not-allowed;
+  box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
+}
+
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -417,18 +409,18 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   cursor: pointer;
 }
 
-.c10:hover,
-.c10:focus {
+.c9:hover,
+.c9:focus {
   background-color: #eee;
 }
 
-.c11 {
+.c10 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c12 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -440,12 +432,12 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
   height: 100%;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c9 ul {
+.c8 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -474,39 +466,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c5"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c6"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -530,7 +518,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -546,17 +534,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -572,17 +560,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -598,17 +586,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -624,10 +612,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -647,39 +635,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c12"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c13"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -703,7 +687,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -719,17 +703,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -745,17 +729,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -771,17 +755,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -797,10 +781,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -820,39 +804,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c13"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c14"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -876,7 +856,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -892,17 +872,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -918,17 +898,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -944,17 +924,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -970,10 +950,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -993,39 +973,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c14"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c15"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -1049,7 +1025,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1065,17 +1041,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1091,17 +1067,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1117,17 +1093,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1143,10 +1119,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -1166,39 +1142,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c15"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c16"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -1222,7 +1194,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1238,17 +1210,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1264,17 +1236,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1290,17 +1262,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1316,10 +1288,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -1339,39 +1311,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c15"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c16"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -1395,7 +1363,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1411,17 +1379,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1437,17 +1405,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1463,17 +1431,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1489,10 +1457,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -1512,39 +1480,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c16"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c17"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -1568,7 +1532,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1584,17 +1548,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1610,17 +1574,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1636,17 +1600,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1662,10 +1626,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -1685,39 +1649,35 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
       <div
         className="c3"
       >
-        <div
-          className="c4"
+        <input
+          className="c4 c17"
+          disabled={true}
+          onChange={[Function]}
           onClick={[Function]}
-        >
-          <input
-            className="c5 c18"
-            disabled={true}
-            onChange={[Function]}
-            placeholder="Choose option"
-            prefix={
-              <ForwardRef
-                offSet={10}
-              >
-                <MdKeyboardArrowDown />
-              </ForwardRef>
-            }
-            type="text"
-            value={null}
-          />
-        </div>
+          placeholder="Choose option"
+          prefix={
+            <ForwardRef
+              offSet={10}
+            >
+              <MdKeyboardArrowDown />
+            </ForwardRef>
+          }
+          type="text"
+          value={null}
+        />
         <div
-          className="c7"
+          className="c6"
           data-test="dropdown-content"
           open={false}
         >
           <div
-            className="c8"
+            className="c7"
           >
             <div
               onKeyDown={[Function]}
             >
               <div
-                className="c9"
+                className="c8"
                 onScroll={[Function]}
                 style={
                   Object {
@@ -1741,7 +1701,7 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                   }
                 >
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1757,17 +1717,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         one
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1783,17 +1743,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         two
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1809,17 +1769,17 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         three
                       </div>
                     </div>
                   </li>
                   <li
-                    className="c10"
+                    className="c9"
                     data-test="list-item"
                     onClick={[Function]}
                     onMouseOver={[Function]}
@@ -1835,10 +1795,10 @@ exports[`Storyshots molecules/Select Custom valueComponent 1`] = `
                     tabIndex={-1}
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       <div
-                        className="c12"
+                        className="c11"
                       >
                         four
                       </div>
@@ -1860,7 +1820,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   padding: 12px;
 }
 
-.c7 {
+.c6 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
@@ -1874,7 +1834,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c5 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -1884,15 +1844,7 @@ exports[`Storyshots molecules/Select default 1`] = `
   visibility: hidden;
 }
 
-.c3 {
-  position: relative;
-}
-
-.c3 .c12 {
-  pointer-events: none;
-}
-
-.c5 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1911,40 +1863,40 @@ exports[`Storyshots molecules/Select default 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c4:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c4:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1960,18 +1912,18 @@ exports[`Storyshots molecules/Select default 1`] = `
   cursor: pointer;
 }
 
-.c9:hover,
-.c9:focus {
+.c8:hover,
+.c8:focus {
   background-color: #eee;
 }
 
-.c10 {
+.c9 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1983,12 +1935,12 @@ exports[`Storyshots molecules/Select default 1`] = `
   height: 100%;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c8 ul {
+.c7 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2004,39 +1956,35 @@ exports[`Storyshots molecules/Select default 1`] = `
     <div
       className="c2"
     >
-      <div
-        className="c3"
+      <input
+        className="c3 c4"
+        disabled={true}
+        onChange={[Function]}
         onClick={[Function]}
-      >
-        <input
-          className="c4 c5"
-          disabled={true}
-          onChange={[Function]}
-          placeholder="Choose option"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
-          type="text"
-          value={null}
-        />
-      </div>
+        placeholder="Choose option"
+        prefix={
+          <ForwardRef
+            offSet={10}
+          >
+            <MdKeyboardArrowDown />
+          </ForwardRef>
+        }
+        type="text"
+        value={null}
+      />
       <div
-        className="c6"
+        className="c5"
         data-test="dropdown-content"
         open={false}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <div
             onKeyDown={[Function]}
           >
             <div
-              className="c8"
+              className="c7"
               onScroll={[Function]}
               style={
                 Object {
@@ -2060,7 +2008,7 @@ exports[`Storyshots molecules/Select default 1`] = `
                 }
               >
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2076,17 +2024,17 @@ exports[`Storyshots molecules/Select default 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       one
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2102,17 +2050,17 @@ exports[`Storyshots molecules/Select default 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       two
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2128,17 +2076,17 @@ exports[`Storyshots molecules/Select default 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       three
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2154,10 +2102,10 @@ exports[`Storyshots molecules/Select default 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       four
                     </div>
@@ -2178,7 +2126,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   padding: 12px;
 }
 
-.c7 {
+.c6 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
@@ -2192,7 +2140,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c5 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -2202,15 +2150,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   visibility: hidden;
 }
 
-.c3 {
-  position: relative;
-}
-
-.c3 .c12 {
-  pointer-events: none;
-}
-
-.c5 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2229,40 +2169,40 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c4:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c4:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2278,18 +2218,18 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   cursor: pointer;
 }
 
-.c9:hover,
-.c9:focus {
+.c8:hover,
+.c8:focus {
   background-color: #eee;
 }
 
-.c10 {
+.c9 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2301,12 +2241,12 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
   height: 100%;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c8 ul {
+.c7 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2322,39 +2262,35 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
     <div
       className="c2"
     >
-      <div
-        className="c3"
+      <input
+        className="c3 c4"
+        disabled={true}
+        onChange={[Function]}
         onClick={[Function]}
-      >
-        <input
-          className="c4 c5"
-          disabled={true}
-          onChange={[Function]}
-          placeholder="Click on me or outside"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
-          type="text"
-          value={null}
-        />
-      </div>
+        placeholder="Click on me or outside"
+        prefix={
+          <ForwardRef
+            offSet={10}
+          >
+            <MdKeyboardArrowDown />
+          </ForwardRef>
+        }
+        type="text"
+        value={null}
+      />
       <div
-        className="c6"
+        className="c5"
         data-test="dropdown-content"
         open={false}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <div
             onKeyDown={[Function]}
           >
             <div
-              className="c8"
+              className="c7"
               onScroll={[Function]}
               style={
                 Object {
@@ -2378,7 +2314,7 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
                 }
               >
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2394,10 +2330,10 @@ exports[`Storyshots molecules/Select onOutsideClick (dropdown) 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       click outside
                     </div>
@@ -2418,7 +2354,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   padding: 12px;
 }
 
-.c7 {
+.c6 {
   padding-top: 1.25em;
   padding-bottom: 1.25em;
 }
@@ -2432,7 +2368,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   width: 100%;
 }
 
-.c6 {
+.c5 {
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -2442,15 +2378,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   visibility: hidden;
 }
 
-.c3 {
-  position: relative;
-}
-
-.c3 .c12 {
-  pointer-events: none;
-}
-
-.c5 {
+.c4 {
   font-family: 'Fira Sans',sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -2469,40 +2397,40 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   background-color: #eee;
 }
 
-.c5:hover {
+.c4:hover {
   border-bottom: 1px solid rgba(var(--focus-color),0.5);
 }
 
-.c5:focus {
+.c4:focus {
   border-bottom: 1px solid rgba(var(--focus-color),1);
 }
 
-.c5::-webkit-input-placeholder {
+.c4::-webkit-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::-moz-placeholder {
+.c4::-moz-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5:-ms-input-placeholder {
+.c4:-ms-input-placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5::placeholder {
+.c4::placeholder {
   color: currentcolor;
   opacity: 0.5;
 }
 
-.c5[disabled] {
+.c4[disabled] {
   cursor: not-allowed;
   box-shadow: inset 0 0 999em rgba(128,128,128,0.2);
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2518,18 +2446,18 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   cursor: pointer;
 }
 
-.c9:hover,
-.c9:focus {
+.c8:hover,
+.c8:focus {
   background-color: #eee;
 }
 
-.c10 {
+.c9 {
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-.c11 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2541,12 +2469,12 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
   height: 100%;
 }
 
-.c4[disabled] {
+.c3[disabled] {
   cursor: pointer;
   box-shadow: none;
 }
 
-.c8 ul {
+.c7 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -2562,39 +2490,35 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
     <div
       className="c2"
     >
-      <div
-        className="c3"
+      <input
+        className="c3 c4"
+        disabled={true}
+        onChange={[Function]}
         onClick={[Function]}
-      >
-        <input
-          className="c4 c5"
-          disabled={true}
-          onChange={[Function]}
-          placeholder="Choose option"
-          prefix={
-            <ForwardRef
-              offSet={10}
-            >
-              <MdKeyboardArrowDown />
-            </ForwardRef>
-          }
-          type="text"
-          value={null}
-        />
-      </div>
+        placeholder="Choose option"
+        prefix={
+          <ForwardRef
+            offSet={10}
+          >
+            <MdKeyboardArrowDown />
+          </ForwardRef>
+        }
+        type="text"
+        value={null}
+      />
       <div
-        className="c6"
+        className="c5"
         data-test="dropdown-content"
         open={false}
       >
         <div
-          className="c7"
+          className="c6"
         >
           <div
             onKeyDown={[Function]}
           >
             <div
-              className="c8"
+              className="c7"
               onScroll={[Function]}
               style={
                 Object {
@@ -2618,7 +2542,7 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                 }
               >
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2634,17 +2558,17 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       one
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2660,17 +2584,17 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       two
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2686,17 +2610,17 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       three
                     </div>
                   </div>
                 </li>
                 <li
-                  className="c9"
+                  className="c8"
                   data-test="list-item"
                   onClick={[Function]}
                   onMouseOver={[Function]}
@@ -2712,10 +2636,10 @@ exports[`Storyshots molecules/Select useTriggerComponentWidth = false 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="c10"
+                    className="c9"
                   >
                     <div
-                      className="c11"
+                      className="c10"
                     >
                       four
                     </div>

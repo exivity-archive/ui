@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 
 import { matchThemeProp } from '../utils/styled'
-import { Position } from './helpers'
 import { Block } from '../Block'
+import { Position } from './Adornment'
 
 export interface StyledAdornmentProps {
   position: Position

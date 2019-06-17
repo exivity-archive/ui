@@ -1,8 +1,13 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, cloneElement, RefObject } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useCloneChildrenWithPadding, Position } from './helpers'
-import { useDynamicCssLengthValue } from '../useDynamicCssLengthValue'
+import { useRefDependentCssLengthValue } from '../useDynamicCssLengthValue'
+import { isReactElement } from '../utils/isReactElement'
+
+export enum Position {
+  LEFT = 'Left',
+  RIGHT = 'Right'
+}
 
 type AdornmentProps = {
   children: ReactNode
@@ -12,6 +17,12 @@ type AdornmentProps = {
   inset?: number
 }
 
+function tryGetRectWidth (ref: RefObject<HTMLElement>) {
+  if (ref.current) {
+    return ref.current.getBoundingClientRect().width
+  }
+}
+
 export const Adornment = ({
   leftComponent,
   rightComponent,
@@ -19,18 +30,26 @@ export const Adornment = ({
   inset = 10
 }: AdornmentProps) => {
 
-  const [leftPadding, leftRef] = useDynamicCssLengthValue(inset, 'width')
-  const [rightPadding, rightRef] = useDynamicCssLengthValue(inset, 'width')
+  const [paddingLeft, leftRef] = useRefDependentCssLengthValue(inset, tryGetRectWidth)
+  const [paddingRight, rightRef] = useRefDependentCssLengthValue(inset, tryGetRectWidth)
 
-  const child = useCloneChildrenWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
+  const clonedChild = isReactElement(children)
+    && cloneElement(children, {
+      ...children.props,
+      style: {
+        paddingRight,
+        paddingLeft,
+        ...(children.props.style || {})
+      }
+    })
 
   return (
-    <AdornmentWrapper>
-      {child}
-      <StyledAdornment ref={leftRef} inset={inset} position={Position.LEFT}>
+    <AdornmentWrapper data-test='adornment-wrapper'>
+      {clonedChild}
+      <StyledAdornment ref={leftRef} inset={inset} position={Position.LEFT} data-test='left-adornment'>
         {leftComponent}
       </StyledAdornment>
-      <StyledAdornment ref={rightRef} inset={inset} position={Position.RIGHT}>
+      <StyledAdornment ref={rightRef} inset={inset} position={Position.RIGHT} data-test='right-adornment'>
         {rightComponent}
       </StyledAdornment>
     </AdornmentWrapper>

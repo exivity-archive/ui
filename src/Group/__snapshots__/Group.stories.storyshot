@@ -223,10 +223,6 @@ input.c3 {
   font-size: 1em;
 }
 
-.c38 .c5 {
-  pointer-events: none;
-}
-
 <div
   className="c0"
 >
@@ -505,10 +501,6 @@ input.c3 {
   white-space: nowrap;
   color: #999;
   font-size: 1em;
-}
-
-.c37 .c5 {
-  pointer-events: none;
 }
 
 <div
@@ -840,10 +832,6 @@ input.c7 {
   font-size: 1em;
 }
 
-.c38 .c2 {
-  pointer-events: none;
-}
-
 <div
   className="c0"
 >
@@ -1127,10 +1115,6 @@ input.c4 {
   white-space: nowrap;
   color: #999;
   font-size: 1em;
-}
-
-.c38 .c6 {
-  pointer-events: none;
 }
 
 <div

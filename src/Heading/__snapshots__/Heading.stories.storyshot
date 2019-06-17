@@ -265,10 +265,6 @@ input.c1:after {
   transform-origin: left 25%;
 }
 
-.c35 .c2 {
-  pointer-events: none;
-}
-
 <div
   className="c0"
 >

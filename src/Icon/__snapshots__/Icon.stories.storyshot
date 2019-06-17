@@ -173,10 +173,6 @@ exports[`Storyshots atoms|Icon default 1`] = `
   transform-origin: left 25%;
 }
 
-.c35 .c1 {
-  pointer-events: none;
-}
-
 <div
   className="c0"
 >
