@@ -107,20 +107,22 @@ exports[`Storyshots atoms|Adornment both sides 1`] = `
 >
   <div
     className="c1"
+    data-test="adornment-wrapper"
   >
     <input
       className="c2"
       onChange={[Function]}
       style={
         Object {
-          "paddingLeft": "calc(10px)",
-          "paddingRight": "calc(10px)",
+          "paddingLeft": 0,
+          "paddingRight": 0,
         }
       }
       type="text"
     />
     <span
       className="c3"
+      data-test="left-adornment"
     >
       <span
         className="c4"
@@ -147,6 +149,7 @@ exports[`Storyshots atoms|Adornment both sides 1`] = `
     </span>
     <span
       className="c5"
+      data-test="right-adornment"
     >
       <span
         className="c4"
@@ -282,20 +285,22 @@ exports[`Storyshots atoms|Adornment default 1`] = `
 >
   <div
     className="c1"
+    data-test="adornment-wrapper"
   >
     <input
       className="c2"
       onChange={[Function]}
       style={
         Object {
-          "paddingLeft": "calc(10px)",
-          "paddingRight": "calc(10px)",
+          "paddingLeft": 0,
+          "paddingRight": 0,
         }
       }
       type="text"
     />
     <span
       className="c3"
+      data-test="left-adornment"
     >
       <span
         className="c4"
@@ -322,6 +327,7 @@ exports[`Storyshots atoms|Adornment default 1`] = `
     </span>
     <span
       className="c5"
+      data-test="right-adornment"
     />
   </div>
 </div>
@@ -434,23 +440,26 @@ exports[`Storyshots atoms|Adornment right side 1`] = `
 >
   <div
     className="c1"
+    data-test="adornment-wrapper"
   >
     <input
       className="c2"
       onChange={[Function]}
       style={
         Object {
-          "paddingLeft": "calc(10px)",
-          "paddingRight": "calc(10px)",
+          "paddingLeft": 0,
+          "paddingRight": 0,
         }
       }
       type="text"
     />
     <span
       className="c3"
+      data-test="left-adornment"
     />
     <span
       className="c4"
+      data-test="right-adornment"
     >
       <span
         className="c5"
