@@ -1,4 +1,3 @@
-import { RefObject } from 'react'
 
 function makeExpression (expression: string, curr: string | number | undefined | null) {
   if (!curr || curr === '0px') return expression
@@ -17,10 +16,4 @@ export function makeCssCalcExpression (...args: (string | number | undefined | n
   if (statement.length === 0) return undefined
   if (statement.length === 1) return statement
   return `calc(${statement})`
-}
-
-export function tryGetRectProp (ref: RefObject<HTMLElement>, rectPropKey: keyof (DOMRect | ClientRect)) {
-  if (ref.current) {
-    return ref.current.getBoundingClientRect()[rectPropKey]
-  }
 }

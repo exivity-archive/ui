@@ -1,7 +1,6 @@
-import { makeCssCalcExpression } from './helpers'
-import { Position } from './Adornment'
+import { makeCssCalcExpression } from './makeCssCalcExpression'
 
-describe('makeCssCalcStatement(...)', () => {
+describe('makeCssCalcExpression(...)', () => {
   test('it returns a calc statement containing all arguments', () => {
     const args = ['1px', '5em', '100%']
 

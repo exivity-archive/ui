@@ -1,8 +1,8 @@
-import React, { ReactNode, useRef, RefObject, useEffect, useMemo, useState } from 'react'
+import React, { ReactNode } from 'react'
 
 import { AdornmentWrapper, StyledAdornment } from './styled'
-import { useCloneChildWithPadding } from './hooks'
-import { getCssLengthValue } from './helpers'
+import { useCloneChildWithPadding } from './useCloneChildWithPadding'
+import { useDynamicCssLengthValue } from '../useDynamicCssLengthValue'
 
 export enum Position {
   LEFT = 'Left',
@@ -11,11 +11,6 @@ export enum Position {
 
 export const ADORNMENT_DISPLAY_NAME = 'Adornment'
 export const EXTRA_PADDING = 'extraPadding'
-
-export interface ExtraPadding {
-  [Position.LEFT]?: string | number
-  [Position.RIGHT]?: string | number
-}
 
 type AdornmentProps = {
   children: ReactNode
@@ -32,11 +27,8 @@ export const Adornment = ({
   inset = 10
 }: AdornmentProps) => {
 
-  const rightRef = useRef<HTMLElement>(null)
-
-  const [rightPadding, setRightPadding] = useState<string>()
-
-  useEffect(() => setRightPadding(getCssLengthValue(rightRef, inset)), [rightRef.current, inset])
+  const [leftPadding, leftRef] = useDynamicCssLengthValue(inset, 'width')
+  const [rightPadding, rightRef] = useDynamicCssLengthValue(inset, 'width')
 
   const child = useCloneChildWithPadding(children, { [Position.LEFT]: leftPadding, [Position.RIGHT]: rightPadding })
 
@@ -52,5 +44,3 @@ export const Adornment = ({
     </AdornmentWrapper>
   )
 }
-
-Adornment.displayName = ADORNMENT_DISPLAY_NAME
