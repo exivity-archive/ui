@@ -1,9 +1,36 @@
-import React, { ReactNode, cloneElement } from 'react'
+import React, { ReactNode, cloneElement, isValidElement } from 'react'
+import styled, { css } from 'styled-components'
 
-import { AdornmentWrapper, StyledAdornment } from './styled'
-import { isReactElement } from '../utils/isReactElement'
 import { useClientRect } from '../useClientRect'
-import { BlockProps } from '../Block'
+import { BlockProps, Block } from '../Block'
+import { matchThemeProp } from '../utils/styled'
+
+interface StyledAdornmentProps {
+  position: 'left' | 'right'
+  inset: number | string
+}
+
+const StyledAdornment = styled.span <StyledAdornmentProps>`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  font-size: ${
+  matchThemeProp(
+    theme => theme.global.sizes,
+    { modifier: (em: number) => em * 20 }
+  )}px;
+
+  ${props => props.position === 'left'
+    ? css`left: ${props.inset}px;`
+    : css`right: ${props.inset}px;`
+  }
+`
+
+export const AdornmentWrapper = styled(Block)`
+  position: relative;
+`
 
 type AdornmentProps = {
   children: ReactNode
@@ -27,7 +54,7 @@ export const Adornment = ({
   const paddingLeft = leftRect ? (leftRect.width + inset) : 0
   const paddingRight = rightRect ? (rightRect.width + inset) : 0
 
-  const clonedChild = isReactElement(children)
+  const clonedChild = isValidElement(children)
     && cloneElement(children, {
       ...children.props,
       style: {
