@@ -10,7 +10,7 @@ interface ContainerProps {
   inline?: boolean
 }
 
-export const StyledContainer = styled(Block) <ContainerProps>`
+export const StyledContainer = styled.div<ContainerProps>`
   position: relative;
 
   ${props => (props.inline) && css`

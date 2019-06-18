@@ -24,11 +24,11 @@ storiesOf('atoms|Adornment', module)
   ))
   .add('both sides', () => (
     <>
-      {/* <Adornment
+      <Adornment
         leftComponent={<Icon><MdKeyboardArrowDown /></Icon>}
-        rightComponent={<Icon><MdKeyboardArrowDown /></Icon>}> */}
-      <Input type='text' width={500} />
-      {/* </Adornment> */}
+        rightComponent={<Icon><MdKeyboardArrowDown /></Icon>}>
+        <Input type='text' width={500} />
+      </Adornment>
     </>
   ))
   .add('button', () => (
