@@ -1,9 +1,10 @@
-import React, { ReactNode, cloneElement, isValidElement } from 'react'
+import React, { ReactNode, cloneElement, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { useClientRect } from '../useClientRect'
 import { BlockProps, Block } from '../Block'
 import { matchThemeProp } from '../utils/styled'
+import { merge } from '../utils/merge'
 
 interface StyledAdornmentProps {
   position: 'left' | 'right'
@@ -33,7 +34,7 @@ export const AdornmentWrapper = styled(Block)`
 `
 
 type AdornmentProps = {
-  children: ReactNode
+  children: ReactElement<any>
 
   leftComponent?: ReactNode
   rightComponent?: ReactNode
@@ -54,15 +55,10 @@ export const Adornment = ({
   const paddingLeft = leftRect ? (leftRect.width + inset) : 0
   const paddingRight = rightRect ? (rightRect.width + inset) : 0
 
-  const clonedChild = isValidElement(children)
-    && cloneElement(children, {
-      ...children.props,
-      style: {
-        paddingRight,
-        paddingLeft,
-        ...(children.props.style || {})
-      }
-    })
+  const newStyle = merge({ paddingRight, paddingLeft }, children.props.style || {})
+  const newProps = merge(children.props, { style: newStyle })
+
+  const clonedChild = cloneElement(children, newProps)
 
   return (
     <AdornmentWrapper {...blockProps} data-test='adornment-wrapper'>
