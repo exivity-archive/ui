@@ -28,5 +28,4 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
 
 export const AdornmentWrapper = styled(Block)`
   position: relative;
-  display: inline-block;
 `
