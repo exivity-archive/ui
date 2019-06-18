@@ -3,7 +3,7 @@ import { makeCssCalcExpression } from '../utils/makeCssCalcExpression'
 
 interface Parameters<RefElement> {
   baseValue?: string | number
-  refAccessor: (ref: RefObject<RefElement>) => string | number | undefined
+  refAccessor: (node: RefElement | null) => string | number | undefined
 }
 
 export function useRefDependentSpacing<
@@ -12,7 +12,7 @@ export function useRefDependentSpacing<
   const dependencyRef = useRef<RefElement>(null)
   const [value, setValue] = useState<string>()
 
-  const refValue = refAccessor(dependencyRef)
+  const refValue = refAccessor(dependencyRef.current)
 
   useLayoutEffect(() => {
     setValue(makeCssCalcExpression(baseValue, refValue))

@@ -4,11 +4,6 @@ import { AdornmentWrapper, StyledAdornment } from './styled'
 import { isReactElement } from '../utils/isReactElement'
 import { useClientRect } from '../useClientRect'
 
-export enum Position {
-  LEFT = 'Left',
-  RIGHT = 'Right'
-}
-
 type AdornmentProps = {
   children: ReactNode
 
@@ -43,10 +38,10 @@ export const Adornment = ({
   return (
     <AdornmentWrapper data-test='adornment-wrapper'>
       {clonedChild}
-      <StyledAdornment ref={leftRef} inset={inset} position={Position.LEFT} data-test='left-adornment'>
+      <StyledAdornment ref={leftRef} inset={inset} position='left' data-test='left-adornment'>
         {leftComponent}
       </StyledAdornment>
-      <StyledAdornment ref={rightRef} inset={inset} position={Position.RIGHT} data-test='right-adornment'>
+      <StyledAdornment ref={rightRef} inset={inset} position='right' data-test='right-adornment'>
         {rightComponent}
       </StyledAdornment>
     </AdornmentWrapper>

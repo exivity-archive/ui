@@ -3,7 +3,7 @@ import { useRefDependentSpacing } from '.'
 
 test('Returns the baseValue if refAccessor returns undefined', () => {
   const baseValue = 20
-  const refAccessor = (ref) => undefined
+  const refAccessor = () => undefined
 
   const { result } = renderHook(() => useRefDependentSpacing({ baseValue, refAccessor }))
   const [value, ref] = result.current
@@ -12,7 +12,7 @@ test('Returns the baseValue if refAccessor returns undefined', () => {
 })
 
 test('Returns the ref accessor return value if baseValue is undefined', () => {
-  const refAccessor = (ref) => 100
+  const refAccessor = () => 100
 
   const { result } = renderHook(() => useRefDependentSpacing({ refAccessor }))
   const [value, ref] = result.current
@@ -21,7 +21,7 @@ test('Returns the ref accessor return value if baseValue is undefined', () => {
 })
 
 test('Returns opx if both the ref accessor return type and the baseValue are undefined', () => {
-  const refAccessor = (ref) => undefined
+  const refAccessor = () => undefined
 
   const { result } = renderHook(() => useRefDependentSpacing({ refAccessor }))
   const [value, ref] = result.current
@@ -31,7 +31,7 @@ test('Returns opx if both the ref accessor return type and the baseValue are und
 
 test('Returns the baseValue and the refAccessor return value if refAccessor returns something', () => {
   const baseValue = 20
-  const refAccessor = (ref) => 100
+  const refAccessor = () => 100
 
   const { result } = renderHook(() => useRefDependentSpacing({ baseValue, refAccessor }))
   const [value, ref] = result.current

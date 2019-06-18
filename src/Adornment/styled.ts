@@ -2,10 +2,9 @@ import styled, { css } from 'styled-components'
 
 import { matchThemeProp } from '../utils/styled'
 import { Block } from '../Block'
-import { Position } from './Adornment'
 
 export interface StyledAdornmentProps {
-  position: Position
+  position: 'left' | 'right'
   inset: number | string
 }
 
@@ -21,7 +20,7 @@ export const StyledAdornment = styled.span <StyledAdornmentProps>`
     { modifier: (em: number) => em * 20 }
   )}px;
 
-  ${props => props.position === Position.LEFT
+  ${props => props.position === 'left'
     ? css`left: ${props.inset}px;`
     : css`right: ${props.inset}px;`
   }
