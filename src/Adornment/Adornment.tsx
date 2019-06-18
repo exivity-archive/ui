@@ -3,6 +3,7 @@ import React, { ReactNode, cloneElement } from 'react'
 import { AdornmentWrapper, StyledAdornment } from './styled'
 import { isReactElement } from '../utils/isReactElement'
 import { useClientRect } from '../useClientRect'
+import { BlockProps } from '../Block'
 
 type AdornmentProps = {
   children: ReactNode
@@ -16,8 +17,9 @@ export const Adornment = ({
   leftComponent,
   rightComponent,
   children,
-  inset = 10
-}: AdornmentProps) => {
+  inset = 10,
+  ...blockProps
+}: AdornmentProps & BlockProps) => {
 
   const [leftRect, leftRef] = useClientRect()
   const [rightRect, rightRef] = useClientRect()
@@ -36,7 +38,7 @@ export const Adornment = ({
     })
 
   return (
-    <AdornmentWrapper data-test='adornment-wrapper'>
+    <AdornmentWrapper {...blockProps} data-test='adornment-wrapper'>
       {clonedChild}
       <StyledAdornment ref={leftRef} inset={inset} position='left' data-test='left-adornment'>
         {leftComponent}
