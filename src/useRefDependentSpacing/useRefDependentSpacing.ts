@@ -1,5 +1,5 @@
 import { useRef, useState, useLayoutEffect, RefObject } from 'react'
-import { makeCssCalcExpression } from '../utils/makeCssCalcExpression'
+import { makeCSSCalcExpression } from '../utils/makeCSSCalcExpression'
 
 interface Parameters<RefElement> {
   baseValue?: string | number
@@ -15,7 +15,7 @@ export function useRefDependentSpacing<
   const refValue = refAccessor(dependencyRef.current)
 
   useLayoutEffect(() => {
-    setValue(makeCssCalcExpression(baseValue, refValue))
+    setValue(makeCSSCalcExpression(baseValue, refValue))
   }, [refValue, baseValue])
 
   return [value, dependencyRef] as [string, RefObject<RefElement>]
