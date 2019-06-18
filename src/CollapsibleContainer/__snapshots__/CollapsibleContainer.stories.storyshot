@@ -162,6 +162,10 @@ exports[`Storyshots molecules|CollapsibleContainer default 1`] = `
   transform-origin: left 25%;
 }
 
+.c34 .c1 {
+  pointer-events: none;
+}
+
 <div
   className="c0"
 >
