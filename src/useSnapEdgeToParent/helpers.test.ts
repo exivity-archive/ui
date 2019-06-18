@@ -71,15 +71,15 @@ test('getPosition returns left and top if element hasn\'t crossed any edges', ()
   const breakDistance = 50
 
   // @ts-ignore
-  const layout1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
-  expect(layout1).toMatchObject({ horizontal: 'left', vertical: 'top' })
+  const Positioning1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
+  expect(Positioning1).toMatchObject({ horizontal: 'left', vertical: 'top' })
 
   // @ts-ignore
-  const layout2 = getPosition({ target, parent, container }, breakDistance)
-  expect(layout2).toMatchObject({ horizontal: 'left', vertical: 'top' })
+  const Positioning2 = getPosition({ target, parent, container }, breakDistance)
+  expect(Positioning2).toMatchObject({ horizontal: 'left', vertical: 'top' })
 })
 
-test('Get layout returns right and bottom if element has crossed both edges', () => {
+test('Get Positioning returns right and bottom if element has crossed both edges', () => {
   const target = { current: makeRect({ width: 401, height: 301 }) }
   const parent = { current: makeRect({ left: 401, top: 301 }) }
 
@@ -93,28 +93,28 @@ test('Get layout returns right and bottom if element has crossed both edges', ()
   const breakDistance = 50
 
   // @ts-ignore
-  const layout1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
-  expect(layout1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
+  const Positioning1 = getPosition({ target, parent, container: { current: null } }, breakDistance)
+  expect(Positioning1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 
   // @ts-ignore
-  const layout2 = getPosition({ target, parent, container }, breakDistance)
-  expect(layout2).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
+  const Positioning2 = getPosition({ target, parent, container }, breakDistance)
+  expect(Positioning2).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 })
 
-test('Get layout returns initial layout if one is provided', () => {
+test('Get Positioning returns initial Positioning if one is provided', () => {
   const target = { current: makeRect({ width: 400, height: 300 }) }
   const parent = { current: makeRect({ left: 400, top: 300 }) }
   const container = { current: makeRect({ right: 700, bottom: 500 }) }
 
   const breakDistance1 = 50
-  const initialLayout1 = { horizontal: 'right', vertical: 'bottom' }
+  const initialPositioning1 = { horizontal: 'right', vertical: 'bottom' }
   // @ts-ignore
-  const layout1 = getPosition({ target, parent, container }, breakDistance1, initialLayout1)
-  expect(layout1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
+  const Positioning1 = getPosition({ target, parent, container }, breakDistance1, initialPositioning1)
+  expect(Positioning1).toMatchObject({ horizontal: 'right', vertical: 'bottom' })
 
   const breakDistance2 = 150
-  const initialLayout2 = { horizontal: 'left', vertical: 'top' }
+  const initialPositioning2 = { horizontal: 'left', vertical: 'top' }
   // @ts-ignore
-  const layout2 = getPosition({ target, parent, container }, breakDistance2, initialLayout2)
-  expect(layout2).toMatchObject({ horizontal: 'left', vertical: 'top' })
+  const Positioning2 = getPosition({ target, parent, container }, breakDistance2, initialPositioning2)
+  expect(Positioning2).toMatchObject({ horizontal: 'left', vertical: 'top' })
 })

@@ -7,7 +7,7 @@ export function useSnapEdgeToParent<
   Container extends HTMLElement = HTMLDivElement
 > (
   breakDistances: BreakDistance | number,
-  initialLayout?: AutoPosition
+  initialPositioning?: AutoPosition
 ): [Refs<Target, Parent, Container>, Positioning, () => void] {
 
   const refs = {
@@ -16,13 +16,13 @@ export function useSnapEdgeToParent<
     container: useRef<Container>(null)
   }
 
-  const [layout, setLayout] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
+  const [positioning, setPositioning] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  const handleLayout = () => setLayout(getPosition(refs, breakDistances, initialLayout))
+  const handlePositioning = () => setPositioning(getPosition(refs, breakDistances, initialPositioning))
 
-  useLayoutEffect(handleLayout, [])
+  useLayoutEffect(handlePositioning, [])
 
   return useMemo<[Refs<Target, Parent, Container>, Positioning, () => void]>(() => {
-    return [refs, layout, handleLayout]
-  }, [layout.horizontal, layout.vertical])
+    return [refs, positioning, handlePositioning]
+  }, [positioning.horizontal, positioning.vertical])
 }

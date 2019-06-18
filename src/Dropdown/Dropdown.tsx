@@ -4,12 +4,10 @@ import styled, { css } from 'styled-components'
 import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
-import {
-  makeCssPosition
-} from './helpers'
+import { makeDefaultCSS, Dimensions } from './helpers'
 
 import { fromTheme } from '../utils/styled'
-import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
+import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance, Positioning } from '../useSnapEdgeToParent'
 
 const StyledDropdown = styled.div`
   position: relative;
@@ -49,6 +47,7 @@ export interface DropdownProps extends BlockProps {
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
   test?: string
+  makeCSS?: (position: Positioning, dimensions: Dimensions) => string
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -62,9 +61,10 @@ export const Dropdown: React.FC<DropdownProps> = ({
   useTriggerComponentWidth,
   onOutsideClick,
   test = 'dropdown',
+  makeCSS = makeDefaultCSS,
   ...blockProps
 }) => {
-  const [refs, layout, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
+  const [refs, Positioning, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
   useEffect(() => {
     window.addEventListener('resize', handleLayout)
@@ -73,10 +73,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const position = useMemo(() => {
     if (refs.parent.current) {
-
-      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
+      return makeCSS(Positioning, { height: refs.parent.current.getBoundingClientRect().height, width: refs.parent.current.getBoundingClientRect().width })
     }
-  }, [layout])
+  }, [Positioning])
 
   const triggerWidth = refs.parent.current
     ? `${refs.parent.current.clientWidth}px`

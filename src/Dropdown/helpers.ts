@@ -1,5 +1,10 @@
 import { Positioning } from '../useSnapEdgeToParent'
 
-export const makeCssPosition = ({ horizontal, vertical }: Positioning, height: number) =>
+export interface Dimensions {
+  height: number
+  width: number
+}
+
+export const makeDefaultCSS = ({ horizontal, vertical }: Positioning, { height }: Dimensions) =>
   `${vertical}: ${height}px;\n`
   + `${horizontal}: 0px;\n`

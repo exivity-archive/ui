@@ -15,25 +15,25 @@ import { ensureString } from '../utils'
 export default storiesOf('helpers|useSnapEdgeToParent', module)
   .add('default', () => <Dropdown breakDistances={20} />)
   .add('relative to container', () => <Dropdown breakDistances={50} relativeToContainer />)
-  .add('fixed orientation', () => <Dropdown breakDistances={20} initialLayout={{ horizontal: Horizontal.LEFT, vertical: Vertical.BOTTOM }} />)
+  .add('fixed orientation', () => <Dropdown breakDistances={20} initialPositioning={{ horizontal: Horizontal.LEFT, vertical: Vertical.BOTTOM }} />)
   .add('different break distances', () => <Dropdown breakDistances={{ horizontal: 200, vertical: 400 }} />)
   .add('documentation', () => <Markdown>{ensureString(useSnapEdgeToParentDocs)}</Markdown>)
 
 interface DropdownProps {
   breakDistances: number | BreakDistance,
-  initialLayout?: AutoPosition,
+  initialPositioning?: AutoPosition,
   relativeToContainer?: boolean
 }
 
-const Dropdown: FC<DropdownProps> = ({ breakDistances, initialLayout, relativeToContainer }) => {
-  const [refs, layout, handleLayout] = useSnapEdgeToParent(breakDistances, initialLayout)
+const Dropdown: FC<DropdownProps> = ({ breakDistances, initialPositioning, relativeToContainer }) => {
+  const [refs, Positioning, handlePositioning] = useSnapEdgeToParent(breakDistances, initialPositioning)
   const position = useMemo(() => {
-    return { [layout.horizontal]: 0, [layout.vertical]: 20 }
-  }, [layout])
+    return { [Positioning.horizontal]: 0, [Positioning.vertical]: 20 }
+  }, [Positioning])
 
   useEffect(() => {
-    window.addEventListener('resize', handleLayout)
-    return () => window.removeEventListener('resize', handleLayout)
+    window.addEventListener('resize', handlePositioning)
+    return () => window.removeEventListener('resize', handlePositioning)
   })
 
   return (
