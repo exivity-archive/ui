@@ -1,14 +1,12 @@
 import React, { CSSProperties, useMemo } from 'react'
 import styled from 'styled-components'
 
-import { TreeListItem } from '../useExpandable'
+import { TreeListItem, ExpandableSpacer } from '../useExpandable'
 import { SelectListItem } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
-import { Block } from '../Block'
+import { Flex } from '../Flex'
 
-const K = styled(Block)`
-  display: flex;
-  align-items: center;
+const K = styled(Flex)`
   line-height: 22px;
   padding-top: 4px;
 `
@@ -44,11 +42,13 @@ export function DefaultItem<
 
   return useMemo(() => {
     return (
+
       <ListItem style={style} onClick={handleChange}>
-        <K>
-          {button}{' ' + item.value}
-        </K>
+        <ExpandableSpacer index={index} data={items} button={button} useButtonSpacing={false}>
+          {item.value}
+        </ExpandableSpacer>
       </ListItem>
+
     )
-  }, [item])
+  }, [item, index, items])
 }
