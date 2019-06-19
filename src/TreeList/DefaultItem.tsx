@@ -1,8 +1,25 @@
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, useMemo } from 'react'
+import styled from 'styled-components'
 
-import { DefaultItem as DefaultSelectListItem } from '../SelectList/DefaultItem'
 import { TreeListItem } from '../useExpandable'
 import { SelectListItem } from '../SelectList/SelectList'
+import { ListItem } from '../ListItem'
+import { Block } from '../Block'
+
+const K = styled(Block)`
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  padding-top: 4px;
+`
+
+const ToggleExpandedButton = styled.button`
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  border: none;
+  margin-right: 20px;
+`
 
 interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
   data: { items: Data[], onChange: (item: Data) => void }
@@ -17,7 +34,21 @@ export function DefaultItem<
   const { items, onChange } = data
   const item = items[index]
 
-  return (
-    <DefaultSelectListItem index={index} style={style} data={data} />
+  const handleChange = () => onChange && onChange(item)
+
+  const button = (
+    <ToggleExpandedButton onClick={item.expand}>
+      {/* <Icon style={{ position: 'absolute', left: 0 }}>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon> */}
+    </ToggleExpandedButton>
   )
+
+  return useMemo(() => {
+    return (
+      <ListItem style={style} onClick={handleChange}>
+        <K>
+          {button}{' ' + item.value}
+        </K>
+      </ListItem>
+    )
+  }, [item])
 }

@@ -9,7 +9,7 @@ export interface FakeRecord {
   parentId: string | null
 }
 
-const lvl1 = new Array(100).fill(null)
+const lvl1 = new Array(4).fill(null)
   .map((item, index): FakeRecord => ({
     key: String(index + 1),
     value: faker.name.firstName(),
@@ -19,16 +19,16 @@ const lvl1 = new Array(100).fill(null)
     parentId: null
   }))
 
-const lvl2 = new Array(200).fill(null)
+const lvl2 = new Array(8).fill(null)
   .map((item, index): FakeRecord => {
-    if (index > 99) {
+    if (index > 3) {
       return {
         key: String(index + 101),
         value: faker.name.firstName(),
         attributes: {
           level: 2
         },
-        parentId: String(index - 99)
+        parentId: String(index - 3)
       }
     } else {
       return {
@@ -42,27 +42,28 @@ const lvl2 = new Array(200).fill(null)
     }
   })
 
-const lvl3 = new Array(400).fill(null)
-  .map((item, index): FakeRecord => {
-    if (index > 199) {
-      return {
-        key: String(index + 301),
-        value: faker.name.firstName(),
-        attributes: {
-          level: 3
-        },
-        parentId: String(index - 100)
-      }
-    } else {
-      return {
-        key: String(index + 301),
-        value: faker.name.firstName(),
-        attributes: {
-          level: 3
-        },
-        parentId: String(index + 101)
-      }
-    }
-  })
+// const lvl3 = new Array(400).fill(null)
+//   .map((item, index): FakeRecord => {
+//     if (index > 199) {
+//       return {
+//         key: String(index + 301),
+//         value: faker.name.firstName(),
+//         attributes: {
+//           level: 3
+//         },
+//         parentId: String(index - 100)
+//       }
+//     } else {
+//       return {
+//         key: String(index + 301),
+//         value: faker.name.firstName(),
+//         attributes: {
+//           level: 3
+//         },
+//         parentId: String(index + 101)
+//       }
+//     }
+//   })
 
-export const FLAT_LIST_TEST_DATA = lvl1.concat(lvl2).concat(lvl3)
+export const FLAT_LIST_TEST_DATA = lvl1.concat(lvl2)
+// .concat(lvl3)
