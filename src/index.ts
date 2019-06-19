@@ -1,3 +1,4 @@
+export * from './Adornment'
 export * from './Alert'
 export * from './Block'
 export * from './Box'
