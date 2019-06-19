@@ -39,6 +39,7 @@ type AdornmentProps = {
   leftComponent?: ReactNode
   rightComponent?: ReactNode
   inset?: number
+  test?: string
 }
 
 export const Adornment = ({
@@ -46,6 +47,7 @@ export const Adornment = ({
   rightComponent,
   children,
   inset = 10,
+  test = 'adornment',
   ...blockProps
 }: AdornmentProps & BlockProps) => {
 
@@ -61,12 +63,12 @@ export const Adornment = ({
   const clonedChild = cloneElement(children, newProps)
 
   return (
-    <AdornmentWrapper {...blockProps} data-test='adornment-wrapper'>
+    <AdornmentWrapper {...blockProps} data-test={`${test}-wrapper`}>
       {clonedChild}
-      <StyledAdornment ref={leftRef} inset={inset} position='left' data-test='left-adornment'>
+      <StyledAdornment ref={leftRef} inset={inset} position='left' data-test={`left-${test}`}>
         {leftComponent}
       </StyledAdornment>
-      <StyledAdornment ref={rightRef} inset={inset} position='right' data-test='right-adornment'>
+      <StyledAdornment ref={rightRef} inset={inset} position='right' data-test={`right-${test}`}>
         {rightComponent}
       </StyledAdornment>
     </AdornmentWrapper>
