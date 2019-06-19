@@ -1,9 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { OmitOnChangeHTMLInputAttributes, InputProps, Input } from '../Input/Input'
 import { Adornment, Icon } from '../'
-import { MdKeyboardArrowDown } from 'react-icons/md'
 
 export const SelectInput: React.FC<InputProps & OmitOnChangeHTMLInputAttributes> = ({
   disabled,

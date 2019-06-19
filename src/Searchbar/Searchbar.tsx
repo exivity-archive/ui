@@ -1,10 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { MdSearch } from 'react-icons/md'
+
 import { BlockProps, blockStyles } from '../Block'
 import { Input, InputProps } from '../Input/Input'
 import { fromTheme } from '../utils/styled'
 import { Adornment } from '../Adornment'
-import { MdSearch } from 'react-icons/md'
 
 interface SearchbarOwnProps {
   animated?: boolean

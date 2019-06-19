@@ -1,6 +1,6 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
+
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Dropdown } from '../Dropdown'
 import { Row } from '../utils/stories/components'
@@ -32,7 +32,7 @@ storiesOf('interact|SelectInput', module)
         <SelectInput secondary value='Secondary' />
         <SelectInput success value='Success' />
         <SelectInput danger value='Danger' />
-        <SelectInput outlined primary value='Primary'/>
+        <SelectInput outlined primary value='Primary' />
         <SelectInput outlined secondary value='Secondary' />
         <SelectInput outlined success value='Success' />
         <SelectInput outlined danger value='Danger' />

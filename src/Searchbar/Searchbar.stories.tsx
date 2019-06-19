@@ -7,6 +7,4 @@ storiesOf('atoms|Searchbar', module)
   .add('default', () => <Searchbar placeholder='Search...' />)
   .add('animated', () => <Searchbar animated placeholder='Search...' />)
   .add('flat', () => <Searchbar flat placeholder='Search...' />)
-  .add('with padding', () => (
-    <Searchbar placeholder='Search...' padding={2} />
-  ))
+  .add('with padding', () => <Searchbar placeholder='Search...' padding={2} />)
