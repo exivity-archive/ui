@@ -4,7 +4,6 @@ import { Adornment } from '.'
 
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { Input, Icon } from '..'
-import { Block } from '../Block'
 
 storiesOf('atoms|Adornment', module)
   .add('default', () => (
