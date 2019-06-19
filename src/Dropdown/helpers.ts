@@ -5,6 +5,6 @@ export interface Dimensions {
   width: number
 }
 
-export const makeDefaultCSS = ({ horizontal, vertical }: Positioning, { height }: Dimensions) =>
+export const makeDefaultCSS = ({ horizontal, vertical }: Positioning, _: Dimensions, { height }: Dimensions) =>
   `${vertical}: ${height}px;\n`
   + `${horizontal}: 0px;\n`

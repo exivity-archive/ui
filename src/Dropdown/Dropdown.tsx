@@ -47,7 +47,7 @@ export interface DropdownProps extends BlockProps {
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
   test?: string
-  makeCSS?: (position: Positioning, dimensions: Dimensions) => string
+  makeCSS?: (position: Positioning, targetDimensions: Dimensions, parentDimensions: Dimensions) => string
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -72,8 +72,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }, [])
 
   const position = useMemo(() => {
-    if (refs.parent.current) {
-      return makeCSS(positioning, { height: refs.parent.current.getBoundingClientRect().height, width: refs.parent.current.getBoundingClientRect().width })
+    if (refs.parent.current && refs.target.current) {
+      return makeCSS(
+        positioning,
+        { height: refs.target.current.getBoundingClientRect().height, width: refs.target.current.getBoundingClientRect().width },
+        { height: refs.parent.current.getBoundingClientRect().height, width: refs.parent.current.getBoundingClientRect().width }
+      )
     }
   }, [positioning])
 
