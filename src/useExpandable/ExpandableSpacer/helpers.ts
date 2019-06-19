@@ -2,16 +2,15 @@ interface Data {
   level: number
 }
 
-export function distanceBetweenNextSibling (data: Data[], index: number) {
+export function getAmountVisibleChildren (data: Data[], index: number) {
   if (data.length === 0) return 0
-  let distance = 1
-  const initialLevel = data[index].level
-  index--
 
+  const initialLevel = data[index].level
+
+  let distance = 0
   while (true) {
-    if (index < 0 || data[index].level <= initialLevel) return distance
-    index--
     distance++
+    if (--index < 0 || data[index].level <= initialLevel) return distance
   }
 }
 

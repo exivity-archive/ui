@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { fromTheme } from '../../utils/styled'
 import { ButtonProps } from '../../Button'
 import { TreeListItem } from '../helpers'
-import { distanceBetweenNextSibling, makeBorderWidth } from './helpers'
+import { getAmountVisibleChildren, makeBorderWidth } from './helpers'
 import { iterateAllChildren } from '../../utils/makeParentChildTree'
 
 interface StyledExpandableSpacerProps {
@@ -51,11 +51,11 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
   const buttonRef = useRef<HTMLDivElement>(null)
   const [spacing, setSpacing] = useState(rest.spacing !== undefined ? rest.spacing : 0)
   const item = data[index]
-  const distance = distanceBetweenNextSibling(data, index)
+  const distance = getAmountVisibleChildren(data, index)
 
   useEffect(() => {
     if (rest.spacing === undefined && buttonRef.current) {
-      setSpacing((buttonRef.current.getBoundingClientRect().width))
+      setSpacing(buttonRef.current.getBoundingClientRect().width)
     }
   }, [buttonRef.current])
 
