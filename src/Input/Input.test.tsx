@@ -10,11 +10,11 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textInputWithIcon = mountWithTheme(
+  const wrapper = mountWithTheme(
     <Input value={initialValue} onChange={onChangeMock} />
   )
 
-  textInputWithIcon
+  wrapper
     .find('input')
     .simulate('change', { target: { value: updatedValue } })
 

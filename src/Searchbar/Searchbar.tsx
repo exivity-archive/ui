@@ -16,7 +16,7 @@ export type SearchbarProps =
   & BlockProps
   & SearchbarOwnProps
 
-const StyledTextInput = styled(Input)`
+const StyledInput = styled(Input)`
   ${blockStyles};
 
   background-color: #fff;
@@ -44,6 +44,6 @@ const StyledTextInput = styled(Input)`
 
 export const Searchbar = (props: SearchbarProps) => (
   <Adornment right={<MdSearch />} >
-    <StyledTextInput {...props} />
+    <StyledInput {...props} />
   </Adornment>
 )
