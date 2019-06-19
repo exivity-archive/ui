@@ -3,12 +3,8 @@ import faker from 'faker'
 import React from 'react'
 
 import { Widget } from '.'
-import { Paragraph } from '../Paragraph'
-import { TextInput } from '../TextInput'
 import { withState } from '../utils/tests/decorators/StateDecorator'
-import { Heading } from '../Heading'
-import { Flex } from '..'
-import { Block } from '../Block'
+import { Flex, Heading, Block, TextInput, Paragraph } from '..'
 
 storiesOf('molecules|Widget', module)
   .addDecorator(withState('edit me'))
