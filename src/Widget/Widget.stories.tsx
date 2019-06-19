@@ -3,39 +3,30 @@ import faker from 'faker'
 import React from 'react'
 
 import { Widget } from '.'
-import { Paragraph } from '../Paragraph'
 import { withState } from '../utils/tests/decorators/StateDecorator'
+import { Flex, Heading, Block, TextInput, Paragraph } from '..'
 
 storiesOf('molecules|Widget', module)
-  .addDecorator(withState({ header: 'Edit me' }))
+  .addDecorator(withState('edit me'))
   .add('default', () => (
-    <Widget header='Title'>
-      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
-    </Widget>
-  ))
-  .add('no padding', () => (
-    <Widget header='Title' noPadding>
+    <Widget>
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>
-      <Widget.Header editable
-        onChange={(newHeader) => storeState({ ...state, header: newHeader })}>
-        {state.header}
-      </Widget.Header>
+      <Heading as={TextInput} placeholder='placeholder' outlined flat
+        value={state} onChange={(text) => storeState(text)} />
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
-  // @ts-ignore
-  .add('initialEdit = true', ({ state, storeState }: any) => (
-    <Widget>
-      <Widget.Header editable
-        initialEdit={true}
-        onChange={(newHeader) => storeState({ ...state, header: newHeader })}>
-        {state.header}
-      </Widget.Header>
-      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
-    </Widget>
+  .add('sticky', () => (
+    <div style={{ height: 400, overflowY: 'scroll' }}>
+      <Block height={100} />
+      <Widget sticky stickyOffset={10}>
+        <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+      </Widget>
+      <Flex height={1500} justifyContent='flex-end' direction='column'>hi</Flex>
+    </div>
   ))

@@ -7,5 +7,5 @@ export const PALETTE = {
   blue: '#00a8d8',
   red: '#ef5350',
   yellow: '#fff68c',
-  green: '#4caf50'
+  green: '#379e4b'
 }

@@ -1,5 +1,5 @@
-import { useRef, useState, useMemo, useLayoutEffect, useEffect } from 'react'
-import { Layout, getLayout, AutoLayout, BreakDistance, Refs } from './helpers'
+import { useRef, useState, useMemo, useLayoutEffect } from 'react'
+import { Positioning, getPosition, AutoPosition, BreakDistance, Refs } from './helpers'
 
 export function useSnapEdgeToParent<
   Target extends HTMLElement = HTMLDivElement,
@@ -7,8 +7,8 @@ export function useSnapEdgeToParent<
   Container extends HTMLElement = HTMLDivElement
 > (
   breakDistances: BreakDistance | number,
-  initialLayout?: AutoLayout
-): [Refs<Target, Parent, Container>, Layout, () => void] {
+  initialLayout?: AutoPosition
+): [Refs<Target, Parent, Container>, Positioning, () => void] {
 
   const refs = {
     target: useRef<Target>(null),
@@ -16,13 +16,13 @@ export function useSnapEdgeToParent<
     container: useRef<Container>(null)
   }
 
-  const [layout, setLayout] = useState<Layout>({ horizontal: 'left', vertical: 'top' })
+  const [layout, setLayout] = useState<Positioning>({ horizontal: 'left', vertical: 'top' })
 
-  const handleLayout = () => setLayout(getLayout(refs, breakDistances, initialLayout))
+  const handleLayout = () => setLayout(getPosition(refs, breakDistances, initialLayout))
 
   useLayoutEffect(handleLayout, [])
 
-  return useMemo<[Refs<Target, Parent, Container>, Layout, () => void]>(() => {
+  return useMemo<[Refs<Target, Parent, Container>, Positioning, () => void]>(() => {
     return [refs, layout, handleLayout]
   }, [layout.horizontal, layout.vertical])
 }

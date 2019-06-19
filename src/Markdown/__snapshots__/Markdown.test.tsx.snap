@@ -61,7 +61,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -100,7 +100,7 @@ input.c0 {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -159,7 +159,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -218,7 +218,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -277,7 +277,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -337,7 +337,7 @@ input.c0:after {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -380,7 +380,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -530,7 +530,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -690,7 +690,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -768,7 +768,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -1316,7 +1316,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -1747,7 +1747,7 @@ console.log(foo(5));
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -2033,7 +2033,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -2250,7 +2250,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -2392,7 +2392,7 @@ input.c0 {
 .c0,
 input.c0 {
   font-size: 1.5em;
-  color: #00a8d8;
+  color: rgb(0,168,216);
 }
 
 .c0 .c1 {
@@ -2567,7 +2567,7 @@ input.c0 {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -2751,7 +2751,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -2891,7 +2891,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -3009,7 +3009,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -3127,7 +3127,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -3465,7 +3465,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -3799,7 +3799,7 @@ Third paragraph of definition 2.
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;
@@ -3966,7 +3966,7 @@ input.c0:after {
 
 .c0,
 input.c0 {
-  font-size: 0.8125em;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: #999;
   display: table;

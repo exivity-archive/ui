@@ -1,9 +1,9 @@
-import { ListItem, Map, createMap } from '../utils'
+import { KeyedItem, Map, createMap } from '.'
 
 export const PARENT = 'parent'
 export const CHILDREN = 'children'
 
-export type TreeItem<T> = ListItem<T> & {
+export type TreeItem<T> = KeyedItem<T> & {
   [PARENT]?: TreeItem<T>
   [CHILDREN]?: TreeItem<T>[]
   level: number
@@ -12,7 +12,7 @@ export type TreeItem<T> = ListItem<T> & {
 export type ParentKeyAccessor<T> = (mapItem: TreeItem<T>) => string | null
 
 export function createParentChildrenMap<T> (
-  data: ListItem<T>[],
+  data: KeyedItem<T>[],
   parentKeyAccessor: ParentKeyAccessor<T>
 ): Map<TreeItem<T>> {
   const map = createMap<T>(data)
@@ -57,7 +57,7 @@ export function orderChildrenUnderParents<T> (map: Map<TreeItem<T>>): TreeItem<T
     }, [])
 }
 
-export function makeParentChildTree<T> (data: ListItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
+export function makeParentChildTree<T> (data: KeyedItem<T>[], parentKeyAccessor: ParentKeyAccessor<T>): TreeItem<T>[] {
   const parentChildrenMap: Map<TreeItem<T>> = createParentChildrenMap<T>(data, parentKeyAccessor)
   return orderChildrenUnderParents<T>(parentChildrenMap)
 }
