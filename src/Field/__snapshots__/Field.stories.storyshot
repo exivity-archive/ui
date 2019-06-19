@@ -1241,6 +1241,7 @@ exports[`Storyshots interact|Field multiple 1`] = `
                   Object {
                     "paddingLeft": 0,
                     "paddingRight": 0,
+                    "width": "100%",
                   }
                 }
                 type="text"

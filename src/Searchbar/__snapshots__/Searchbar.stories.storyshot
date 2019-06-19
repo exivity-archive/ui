@@ -142,6 +142,7 @@ exports[`Storyshots atoms|Searchbar animated 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"
@@ -312,6 +313,7 @@ exports[`Storyshots atoms|Searchbar default 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"
@@ -468,6 +470,7 @@ exports[`Storyshots atoms|Searchbar flat 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"
@@ -639,6 +642,7 @@ exports[`Storyshots atoms|Searchbar with padding 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"

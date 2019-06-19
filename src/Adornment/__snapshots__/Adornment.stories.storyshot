@@ -128,6 +128,7 @@ exports[`Storyshots atoms|Adornment both sides 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"
@@ -319,6 +320,7 @@ exports[`Storyshots atoms|Adornment default 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"
@@ -487,6 +489,7 @@ exports[`Storyshots atoms|Adornment right side 1`] = `
           Object {
             "paddingLeft": 0,
             "paddingRight": 0,
+            "width": "100%",
           }
         }
         type="text"

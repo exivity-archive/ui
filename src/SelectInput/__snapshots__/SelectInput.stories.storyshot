@@ -337,6 +337,7 @@ exports[`Storyshots interact|SelectInput default 1`] = `
                 Object {
                   "paddingLeft": 0,
                   "paddingRight": 0,
+                  "width": "100%",
                 }
               }
               type="text"
@@ -748,6 +749,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -801,6 +803,7 @@ exports[`Storyshots interact|SelectInput disabled 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -1151,6 +1154,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -1204,6 +1208,7 @@ exports[`Storyshots interact|SelectInput outlined 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -1931,6 +1936,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -1984,6 +1990,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2037,6 +2044,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2090,6 +2098,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2143,6 +2152,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2196,6 +2206,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2249,6 +2260,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2302,6 +2314,7 @@ exports[`Storyshots interact|SelectInput purposes 1`] = `
               Object {
                 "paddingLeft": 0,
                 "paddingRight": 0,
+                "width": "100%",
               }
             }
             type="text"
@@ -2757,6 +2770,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -2810,6 +2824,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
@@ -2863,6 +2878,7 @@ exports[`Storyshots interact|SelectInput sizes 1`] = `
             Object {
               "paddingLeft": 0,
               "paddingRight": 0,
+              "width": "100%",
             }
           }
           type="text"
