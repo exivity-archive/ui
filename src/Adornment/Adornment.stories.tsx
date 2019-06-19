@@ -9,22 +9,22 @@ storiesOf('atoms|Adornment', module)
   .add('default', () => (
     <Adornment
       width='60%'
-      leftComponent={<Icon><MdKeyboardArrowDown /></Icon>} >
+      left={<Icon><MdKeyboardArrowDown /></Icon>} >
       <Input type='text' />
     </Adornment>
   ))
   .add('right side', () => (
     <Adornment
       width='60%'
-      rightComponent={<Icon><MdKeyboardArrowDown /></Icon>} >
+      right={<Icon><MdKeyboardArrowDown /></Icon>} >
       <Input type='text' />
     </Adornment>
   ))
   .add('both sides', () => (
     <Adornment
       width='60%'
-      leftComponent={<Icon><MdKeyboardArrowDown /></Icon>}
-      rightComponent={<Icon><MdKeyboardArrowDown /></Icon>}>
+      left={<Icon><MdKeyboardArrowDown /></Icon>}
+      right={<Icon><MdKeyboardArrowDown /></Icon>}>
       <Input type='text' />
     </Adornment>
   ))

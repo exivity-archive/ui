@@ -35,15 +35,15 @@ export const AdornmentWrapper = styled(Block)`
 type AdornmentProps = {
   children: ReactElement<any>
 
-  leftComponent?: ReactNode
-  rightComponent?: ReactNode
+  left?: ReactNode
+  right?: ReactNode
   inset?: number
   test?: string
 }
 
 export const Adornment = ({
-  leftComponent,
-  rightComponent,
+  left,
+  right,
   children,
   inset = 10,
   test = 'adornment',
@@ -72,10 +72,10 @@ export const Adornment = ({
     <AdornmentWrapper {...blockProps} data-test={`${test}-wrapper`}>
       {clonedChild}
       <StyledAdornment ref={leftRef} inset={inset} position='left' data-test={`left-${test}`}>
-        {leftComponent}
+        {left}
       </StyledAdornment>
       <StyledAdornment ref={rightRef} inset={inset} position='right' data-test={`right-${test}`}>
-        {rightComponent}
+        {right}
       </StyledAdornment>
     </AdornmentWrapper>
   )
