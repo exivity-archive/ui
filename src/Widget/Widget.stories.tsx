@@ -15,16 +15,11 @@ storiesOf('molecules|Widget', module)
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
-  .add('no padding', () => (
-    <Widget>
-      <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
-    </Widget>
-  ))
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>
       <Heading as={TextInput} placeholder='placeholder' outlined flat
-        value={state} onChange={(text) => storeState(text)}/>
+        value={state} onChange={(text) => storeState(text)} />
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
