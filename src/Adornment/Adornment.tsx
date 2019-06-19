@@ -55,7 +55,7 @@ export const Adornment = ({
   const paddingLeft = leftRect ? (leftRect.width + inset) : 0
   const paddingRight = rightRect ? (rightRect.width + inset) : 0
 
-  const newStyle = merge({ paddingRight, paddingLeft }, children.props.style || {})
+  const newStyle = merge({ paddingRight, paddingLeft, width: '100%' }, children.props.style || {})
   const newProps = merge(children.props, { style: newStyle })
 
   const clonedChild = cloneElement(children, newProps)
