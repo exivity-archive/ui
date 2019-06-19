@@ -66,11 +66,9 @@ export const Adornment = ({
     }
   }
 
-  const clonedChild = cloneElement(children, newProps)
-
   return (
     <AdornmentWrapper {...blockProps} data-test={`${test}-wrapper`}>
-      {clonedChild}
+      {cloneElement(children, newProps)}
       <StyledAdornment ref={leftRef} inset={inset} position='left' data-test={`left-${test}`}>
         {left}
       </StyledAdornment>

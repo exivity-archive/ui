@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components'
 import { textAlign, TextAlignProps } from 'styled-system'
 
 import { globalFont, matchThemeProp, fromTheme, PurposesProps, SizesProps, StyledProps, toRgbString } from '../utils/styled'
-import { Icon } from '../Icon'
 import { Block } from '../Block'
 import { animated } from 'react-spring'
 
@@ -16,10 +15,6 @@ export const StyledContainer = styled(Block) <ContainerProps>`
   ${props => (props.inline) && css`
     display: inline;
   `}
-
-  ${Icon} {
-    pointer-events: none;
-  }
 `
 
 export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps, TextAlignProps {
