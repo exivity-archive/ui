@@ -43,7 +43,7 @@ const StyledTextInput = styled(Input)`
 `
 
 export const Searchbar = (props: SearchbarProps) => (
-  <Adornment rightComponent={<MdSearch />} >
+  <Adornment right={<MdSearch />} >
     <StyledTextInput {...props} />
   </Adornment>
 )

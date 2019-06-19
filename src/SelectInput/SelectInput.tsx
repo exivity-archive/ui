@@ -10,7 +10,7 @@ export const SelectInput: React.FC<InputProps & OmitOnChangeHTMLInputAttributes>
   onChange,
   ...rest
 }) => (
-    <Adornment rightComponent={<Icon><MdKeyboardArrowDown /></Icon>}>
+    <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
       <StyledSelectInput onChange={onChange} {...rest} disabled isDisabled={disabled} />
     </Adornment>
   )
