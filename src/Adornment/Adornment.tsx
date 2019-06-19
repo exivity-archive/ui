@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import { useClientRect } from '../useClientRect'
 import { BlockProps, Block } from '../Block'
 import { matchThemeProp } from '../utils/styled'
-import { merge } from '../utils/merge'
 
 interface StyledAdornmentProps {
   position: 'left' | 'right'
@@ -57,8 +56,15 @@ export const Adornment = ({
   const paddingLeft = leftRect ? (leftRect.width + inset) : 0
   const paddingRight = rightRect ? (rightRect.width + inset) : 0
 
-  const newStyle = merge({ paddingRight, paddingLeft, width: '100%' }, children.props.style || {})
-  const newProps = merge(children.props, { style: newStyle })
+  const newProps = {
+    ...children.props,
+    style: {
+      paddingRight,
+      paddingLeft,
+      width: '100%',
+      ...children.props.style || {}
+    }
+  }
 
   const clonedChild = cloneElement(children, newProps)
 
