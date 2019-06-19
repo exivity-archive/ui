@@ -9,6 +9,10 @@ describe('<Widget/>', () => {
     render(<Widget><div /></Widget>)
   })
 
+  test('displayName is Widget', () => {
+    expect(Widget.displayName).toBe('Widget')
+  })
+
   test('sticky prop should set position to sticky', () => {
     const { getByText } = render(<Widget sticky>Test</Widget>)
     const widget = getByText('Test')
