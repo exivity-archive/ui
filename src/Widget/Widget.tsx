@@ -5,6 +5,7 @@ import { Block, BlockProps } from '../Block'
 
 interface WidgetProps {
   sticky?: boolean
+  children: any
 }
 
 const StyledWidget = styled(Block) <WidgetProps>`
@@ -13,11 +14,12 @@ const StyledWidget = styled(Block) <WidgetProps>`
   box-sizing: border-box;
 
   ${props => props.sticky && css`
+    top: 0;
     position: sticky;
   `}
 `
 
-export const Widget = (props: BlockProps & { children: any }) => (
+export const Widget = (props: BlockProps & WidgetProps) => (
   <StyledWidget borderRadius={3} p={2} {...props} />
 )
 

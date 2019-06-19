@@ -7,6 +7,8 @@ import { Paragraph } from '../Paragraph'
 import { TextInput } from '../TextInput'
 import { withState } from '../utils/tests/decorators/StateDecorator'
 import { Heading } from '../Heading'
+import { Flex } from '..'
+import { Block } from '../Block'
 
 storiesOf('molecules|Widget', module)
   .addDecorator(withState('edit me'))
@@ -22,4 +24,13 @@ storiesOf('molecules|Widget', module)
         value={state} onChange={(text) => storeState(text)} />
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
+  ))
+  .add('sticky', () => (
+    <div style={{ height: 400, overflowY: 'scroll' }}>
+      <Block height={100} />
+      <Widget sticky>
+        <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
+      </Widget>
+      <Flex height={1500} justifyContent='flex-end' direction='column'>hi</Flex>
+    </div>
   ))
