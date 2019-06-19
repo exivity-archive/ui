@@ -28,7 +28,7 @@ storiesOf('molecules|Widget', module)
   .add('sticky', () => (
     <div style={{ height: 400, overflowY: 'scroll' }}>
       <Block height={100} />
-      <Widget sticky>
+      <Widget sticky stickyOffset={10}>
         <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
       </Widget>
       <Flex height={1500} justifyContent='flex-end' direction='column'>hi</Flex>

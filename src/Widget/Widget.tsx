@@ -5,6 +5,7 @@ import { Block, BlockProps } from '../Block'
 
 interface WidgetProps {
   sticky?: boolean
+  stickyOffset?: number
   children: any
 }
 
@@ -13,8 +14,8 @@ const StyledWidget = styled(Block) <WidgetProps>`
   box-shadow: 1px 1px 0 rgba(${fromTheme(theme => toRgbString(theme.global.purposes.primary))},0.4);
   box-sizing: border-box;
 
-  ${props => props.sticky && css`
-    top: 0;
+  ${({ sticky, stickyOffset = 0 }) => sticky && css`
+    top: ${stickyOffset}px;
     position: sticky;
   `}
 `
