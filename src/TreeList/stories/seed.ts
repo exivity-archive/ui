@@ -19,51 +19,28 @@ const lvl1 = new Array(4).fill(null)
     parentId: null
   }))
 
-const lvl2 = new Array(8).fill(null)
+const lvl2 = new Array(12).fill(null)
   .map((item, index): FakeRecord => {
-    if (index > 3) {
-      return {
-        key: String(index + 101),
-        value: faker.name.firstName(),
-        attributes: {
-          level: 2
-        },
-        parentId: String(index - 3)
-      }
-    } else {
-      return {
-        key: String(index + 101),
-        value: faker.name.firstName(),
-        attributes: {
-          level: 2
-        },
-        parentId: String(index + 1)
-      }
+    return {
+      key: String(index + 5),
+      value: faker.name.firstName(),
+      attributes: {
+        level: 2
+      },
+      parentId: String(index % 4 + 1)
     }
   })
 
-// const lvl3 = new Array(400).fill(null)
-//   .map((item, index): FakeRecord => {
-//     if (index > 199) {
-//       return {
-//         key: String(index + 301),
-//         value: faker.name.firstName(),
-//         attributes: {
-//           level: 3
-//         },
-//         parentId: String(index - 100)
-//       }
-//     } else {
-//       return {
-//         key: String(index + 301),
-//         value: faker.name.firstName(),
-//         attributes: {
-//           level: 3
-//         },
-//         parentId: String(index + 101)
-//       }
-//     }
-//   })
+const lvl3 = new Array(24).fill(null)
+  .map((item, index): FakeRecord => {
+    return {
+      key: String(index + 17),
+      value: faker.name.firstName(),
+      attributes: {
+        level: 3
+      },
+      parentId: String(index % 12 + 5)
+    }
+  })
 
-export const FLAT_LIST_TEST_DATA = lvl1.concat(lvl2)
-// .concat(lvl3)
+export const FLAT_LIST_TEST_DATA = lvl1.concat(lvl2).concat(lvl3)

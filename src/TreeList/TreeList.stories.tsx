@@ -7,5 +7,6 @@ import { FakeRecord } from '../useExpandable/stories/seed'
 
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 
+console.log(FLAT_LIST_TEST_DATA)
 storiesOf('organisms|TreeList', module)
   .add('default', () => <TreeList data={FLAT_LIST_TEST_DATA} parentKeyAccessor={parentKeyAccessor} />)
