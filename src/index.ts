@@ -22,10 +22,7 @@ export * from './List'
 export * from './ListFocus'
 export * from './ListItem'
 export * from './Markdown'
-<<<<<<< HEAD
-=======
 export * from './Modal'
->>>>>>> master
 export * from './Paragraph'
 export * from './Radio'
 export * from './Searchbar'
