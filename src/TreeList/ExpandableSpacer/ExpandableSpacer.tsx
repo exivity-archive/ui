@@ -66,7 +66,7 @@ export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, b
       spacing={spacing || buttonWidth}
       distance={distance}>
       <Content >
-        {cloneElement(button, { ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}
+        {cloneElement(button, { ...button.props, ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}
         {children}
       </Content>
     </StyledExpandableSpacer>
