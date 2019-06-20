@@ -1,4 +1,4 @@
-import React, { CSSProperties, useMemo, useRef } from 'react'
+import React, { CSSProperties, useMemo } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
@@ -36,16 +36,14 @@ const ButtonIcon = styled(Icon)`
   }
 `
 
-interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
-  data: { items: Data[], onChange: (item: Data) => void }
+export interface TreeListItemProps {
+  data: { items: TreeListItem<SelectListItem>[], onChange: (item: TreeListItem<SelectListItem>) => void }
   style: CSSProperties
   index: number
   isScrolling: boolean
 }
 
-export function DefaultItem<
-  Data extends TreeListItem<SelectListItem>
-> ({ data, style, index }: TreeListItemProps<Data>) {
+export function DefaultItem ({ data, style, index }: TreeListItemProps) {
   const { items, onChange } = data
   const item = items[index]
 
