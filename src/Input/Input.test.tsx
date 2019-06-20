@@ -1,7 +1,8 @@
-import * as React from 'react'
-import { mountWithTheme } from '../utils/tests/mountWithTheme'
+import React from 'react'
+import { Input } from '.'
 
-import { TextInput } from '.'
+// Modify or remove, stories are snapshotted automatically
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
 test('value gets changed after an on change event', () => {
   const initialValue = 'initialValue'
@@ -9,9 +10,11 @@ test('value gets changed after an on change event', () => {
 
   const onChangeMock = jest.fn(x => x)
 
-  const textInput = mountWithTheme(<TextInput value={initialValue} onChange={onChangeMock}/>)
+  const wrapper = mountWithTheme(
+    <Input value={initialValue} onChange={onChangeMock} />
+  )
 
-  textInput
+  wrapper
     .find('input')
     .simulate('change', { target: { value: updatedValue } })
 

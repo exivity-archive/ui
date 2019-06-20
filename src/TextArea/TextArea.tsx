@@ -1,7 +1,7 @@
 import React, { ChangeEvent, TextareaHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
-import { inputStyles, StyledInputProps } from '../AbstractInput/AbstractInput'
 import { Omit } from '../utils/types'
+import { inputStyles, StyledInputProps } from '../Input/styled'
 
 type OmitOnChange = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange'>
 
@@ -14,7 +14,7 @@ export const StyledTextArea = styled.textarea<{ width?: string }>`
   ${inputStyles};
 
   ${props => props.width && css`
-    width: ${props.width}
+    width: ${props.width};
   `}
 `
 

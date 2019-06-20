@@ -23,6 +23,7 @@ type FieldType = StyledComponent<'fieldset', any, StyledFieldProps, never> & {
 // https://github.com/w3c/csswg-drafts/issues/321
 export const Field = styled.div<StyledFieldProps>`
   display: flex;
+  flex-flow: row wrap;
   flex-direction: ${props => props.horizontal ? 'row' : 'column'};
   align-items: ${props => props.horizontal ? 'center' : 'unset'};
   flex: 1;
