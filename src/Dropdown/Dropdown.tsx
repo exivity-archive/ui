@@ -63,7 +63,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   makeCSS = makeDefaultCSS,
   ...blockProps
 }) => {
-  const [refs, positioning, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
+  const [{ target , parent }, positioning, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
   useEffect(() => {
     window.addEventListener('resize', handleLayout)
@@ -71,27 +71,27 @@ export const Dropdown: React.FC<DropdownProps> = ({
   }, [])
 
   const position = useMemo(() => {
-    if (refs.parent.current && refs.target.current) {
+    if (parent.rect && target.rect) {
       return makeCSS(
         positioning,
-        { height: refs.target.current.getBoundingClientRect().height, width: refs.target.current.getBoundingClientRect().width },
-        { height: refs.parent.current.getBoundingClientRect().height, width: refs.parent.current.getBoundingClientRect().width }
+        { height: target.rect.height, width: target.rect.width },
+        { height: parent.rect.height, width: parent.rect.width }
       )
     }
   }, [positioning])
 
-  const triggerWidth = refs.parent.current
-    ? `${refs.parent.current.clientWidth}px`
+  const triggerWidth = parent.rect
+    ? `${parent.rect.width}px`
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test={test} ref={refs.parent}>
+    <StyledDropdown className={className} data-test={test} ref={parent.ref}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
         <Content useTriggerComponentWidth={useTriggerComponentWidth}
           width={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test={`${test}-content`}
-          ref={refs.target}
+          ref={target.ref}
           position={position}
           open={open}>
           <Block {...blockProps}>

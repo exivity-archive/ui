@@ -26,7 +26,7 @@ interface DropdownProps {
 }
 
 const Dropdown: FC<DropdownProps> = ({ breakDistances, initialPositioning, relativeToContainer }) => {
-  const [refs, positioning, handlePositioning] = useSnapEdgeToParent(breakDistances, initialPositioning)
+  const [{ parent, target, container }, positioning, handlePositioning] = useSnapEdgeToParent(breakDistances, initialPositioning)
   const position = useMemo(() => {
     return { [positioning.horizontal]: 0, [positioning.vertical]: 20 }
   }, [positioning])
@@ -43,10 +43,10 @@ const Dropdown: FC<DropdownProps> = ({ breakDistances, initialPositioning, relat
       bg={relativeToContainer ? 'lightgray' : 'white'}
       height={500}
       width='80%'
-      ref={relativeToContainer ? refs.container : undefined}>
-      <div style={{ width: 200, height: 20, background: 'cyan', position: 'relative' }} ref={refs.parent}>
+      ref={relativeToContainer ? container.ref : undefined}>
+      <div style={{ width: 200, height: 20, background: 'cyan', position: 'relative' }} ref={parent.ref}>
         Parent
-      <div style={{ width: 300, height: 200, background: 'green', position: 'absolute', ...position }} ref={refs.target}></div>
+      <div style={{ width: 300, height: 200, background: 'green', position: 'absolute', ...position }} ref={target.ref}></div>
       </div>
     </Flex>
   )

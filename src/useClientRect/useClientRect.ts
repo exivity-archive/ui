@@ -3,7 +3,7 @@ import { useState, useCallback } from 'react'
 export function useClientRect () {
   const [rect, setRect] = useState<null | ClientRect | DOMRect>(null)
 
-  const ref = useCallback((node: HTMLElement) => {
+  const ref = useCallback((node: HTMLElement | null) => {
     if (node !== null) {
       setRect(node.getBoundingClientRect())
     }

@@ -1,13 +1,12 @@
-import { RefObject } from 'react'
+export interface RefAndRectMap {
+  target: RefAndRect
+  parent: RefAndRect
+  container: RefAndRect
+}
 
-export interface Refs<
-  Target extends HTMLElement = HTMLElement,
-  Parent extends HTMLElement = HTMLElement,
-  Container extends HTMLElement = HTMLElement
-  > {
-  target: RefObject<Target>
-  parent: RefObject<Parent>
-  container: RefObject<Container>
+interface RefAndRect {
+  ref: (node: HTMLElement | null) => void
+  rect: ClientRect | DOMRect | null
 }
 
 export enum Vertical {
@@ -40,13 +39,13 @@ export type BreakDistance = {
 const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
 export function getPosition (
-  { target, parent, container }: Refs,
+  { target, parent, container }: RefAndRectMap,
   breakDistance: BreakDistance,
   position: AutoPosition = {}
 ): Positioning {
   const { vertical, horizontal } = { ...defaultPosition, ...position }
-  const { top, left, height, width } = getMeasures(target.current, parent.current)
-  const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
+  const { top, left, height, width } = getMeasures(target.rect, parent.rect)
+  const { bottomEdge, rightEdge } = getEdges(container.rect, breakDistance)
 
   const newVertical = top + height > bottomEdge ? Vertical.TOP : Vertical.BOTTOM
   const newHorizontal = left + width > rightEdge ? Horizontal.LEFT : Horizontal.RIGHT
@@ -57,10 +56,10 @@ export function getPosition (
   }
 }
 
-export function getMeasures (target: HTMLElement | null, parent: HTMLElement | null) {
-  if (target && parent) {
-    const { width, height } = target.getBoundingClientRect()
-    const { top, left } = parent.getBoundingClientRect()
+export function getMeasures (targetRect: ClientRect | DOMRect | null, parentRect: ClientRect | DOMRect | null) {
+  if (targetRect && parentRect) {
+    const { width, height } = targetRect
+    const { top, left } = parentRect
 
     return { width, height, top, left }
   } else {
@@ -68,11 +67,11 @@ export function getMeasures (target: HTMLElement | null, parent: HTMLElement | n
   }
 }
 
-export function getEdges (container: HTMLElement | null, breakDistance: BreakDistance) {
+export function getEdges (containerRect: ClientRect | DOMRect | null, breakDistance: BreakDistance) {
   const { vertical, horizontal } = buildOrUseBreakDistance(breakDistance)
 
-  if (container) {
-    let { right, bottom } = container.getBoundingClientRect()
+  if (containerRect) {
+    let { right, bottom } = containerRect
     return { rightEdge: right - horizontal, bottomEdge: bottom - vertical }
   } else {
     return { rightEdge: window.innerWidth - horizontal, bottomEdge: window.innerHeight - vertical }
