@@ -10,8 +10,6 @@ import { withState } from '../utils/tests/decorators/StateDecorator'
 import { storeAndAction } from '../utils/tests/storeAndAction'
 import { Input } from '.'
 import { Row } from '../utils/stories/components'
-import { MdVerifiedUser } from 'react-icons/md'
-import { Icon } from '../Icon'
 
 storiesOf('interact|Input', module)
   .addDecorator(withState(''))

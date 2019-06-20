@@ -9,9 +9,8 @@ import { makeDefaultCSS, Dimensions } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance, Positioning } from '../useSnapEdgeToParent'
 
-const StyledDropdown = styled.div`
+const StyledDropdown = styled(Block)`
   position: relative;
-  width: 100%;
 `
 
 interface ContentProps {
@@ -21,7 +20,7 @@ interface ContentProps {
   position?: string
 }
 
-const Content = styled.div <ContentProps>`
+const Content = styled(Block) <ContentProps>`
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
