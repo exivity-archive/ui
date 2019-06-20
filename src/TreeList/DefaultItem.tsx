@@ -1,4 +1,4 @@
-import React, { CSSProperties, useMemo } from 'react'
+import React, { CSSProperties, useMemo, useRef } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
@@ -6,6 +6,8 @@ import { SelectListItem } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
 import { ExpandableSpacer } from '../ExpandableSpacer'
 import { fromTheme } from '../utils'
+import { Icon } from '../Icon'
+import { MdRemove, MdAdd } from 'react-icons/md'
 
 const StyledItem = styled.div`
   li:focus, :hover {
@@ -21,8 +23,17 @@ const ToggleExpandedButton = styled.button`
   border-radius: 0;
   outline: 5px solid white;
   border: none;
-
   margin-right: 20px;
+
+  padding: 0;
+`
+
+const ButtonIcon = styled(Icon)`
+  svg {
+    width: 100%;
+    height: 100%;
+    color: ${fromTheme(theme => theme.colors.gray)}
+  }
 `
 
 interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
@@ -42,7 +53,7 @@ export function DefaultItem<
 
   const button = (
     <ToggleExpandedButton onClick={item.expand}>
-      {/* <Icon style={{ position: 'absolute', left: 0 }}>{item.expanded ? <MdRemove /> : <MdAdd />}</Icon> */}
+      <ButtonIcon >{item.expanded ? <MdRemove /> : <MdAdd />}</ButtonIcon>
     </ToggleExpandedButton>
   )
 

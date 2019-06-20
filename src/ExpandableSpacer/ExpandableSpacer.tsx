@@ -1,9 +1,9 @@
 import React, { useMemo, cloneElement, FC, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
+
 import { fromTheme } from '../utils/styled'
-import { TreeListItem } from '../useExpandable/helpers'
 import { getDistanceFromSibling } from './helpers'
-import { iterateAllChildren } from '../utils/makeParentChildTree'
+import { iterateAllChildren, TreeItem } from '../utils/makeParentChildTree'
 import { useClientRect } from '../useClientRect'
 
 interface StyledExpandableSpacerProps {
@@ -41,7 +41,7 @@ const Content = styled.div`
 interface ExpandableSpacerProps {
   button: ReactElement<any>
   index: number
-  data: TreeListItem<{}>[]
+  data: TreeItem<{}>[]
   spacing?: number
 }
 
