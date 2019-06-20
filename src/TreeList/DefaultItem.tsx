@@ -1,21 +1,27 @@
 import React, { CSSProperties, useMemo } from 'react'
 import styled from 'styled-components'
 
-import { TreeListItem, ExpandableSpacer } from '../useExpandable'
+import { TreeListItem } from '../useExpandable'
 import { SelectListItem } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
-import { Flex } from '../Flex'
+import { ExpandableSpacer } from '../ExpandableSpacer'
+import { fromTheme } from '../utils'
 
-const K = styled(Flex)`
-  line-height: 22px;
-  padding-top: 4px;
+const StyledItem = styled.div`
+  li:focus, :hover {
+    button {
+      outline: 5px solid ${fromTheme(theme => theme.colors.lightGray)};
+    }
+  }
 `
 
 const ToggleExpandedButton = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 0;
+  outline: 5px solid white;
   border: none;
+
   margin-right: 20px;
 `
 
@@ -42,13 +48,13 @@ export function DefaultItem<
 
   return useMemo(() => {
     return (
-
-      <ListItem style={style} onClick={handleChange}>
-        <ExpandableSpacer index={index} data={items} button={button} useButtonSpacing={false}>
-          {item.value}
-        </ExpandableSpacer>
-      </ListItem>
-
+      <StyledItem>
+        <ListItem style={style} onClick={handleChange}>
+          <ExpandableSpacer index={index} data={items} button={button} useButtonSpacing>
+            {item.value}
+          </ExpandableSpacer>
+        </ListItem>
+      </StyledItem>
     )
   }, [item, index, items])
 }

@@ -1,10 +1,10 @@
-import React, { useRef, useEffect, useState, useMemo } from 'react'
+import React, { useRef, useEffect, useState, useMemo, cloneElement, ReactComponentElement, FC, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
-import { fromTheme } from '../../utils/styled'
-import { ButtonProps } from '../../Button'
-import { TreeListItem } from '../helpers'
+import { fromTheme } from '../utils/styled'
+import { ButtonProps } from '../Button'
+import { TreeListItem } from '../useExpandable/helpers'
 import { getAmountVisibleChildren, makeBorderWidth } from './helpers'
-import { iterateAllChildren } from '../../utils/makeParentChildTree'
+import { iterateAllChildren } from '../utils/makeParentChildTree'
 
 interface StyledExpandableSpacerProps {
   borderWidth: string
@@ -13,14 +13,14 @@ interface StyledExpandableSpacerProps {
   spacing: number
 }
 
-export const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
+const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
   margin-left: ${({ spacing, level }) => spacing * level}px;
   height: 100%;
 
   ${({ borderWidth, distance, spacing }) => css`&:after {
       position: relative;
       top: calc(-${(100 * distance)}% - 50%);
-      right: ${(spacing * 0.5)}px;
+      right: ${(spacing)}px;
       border: solid ${fromTheme(theme => theme.colors.lightGray)};
       border-width: ${borderWidth}
       content: ' ';
@@ -40,15 +40,15 @@ const Content = styled.div`
 `
 
 interface ExpandableSpacerProps {
-  button?: React.ReactComponentElement<'button', ButtonProps> | null
+  button: ReactElement<any>
   index: number
   data: TreeListItem<{}>[]
   spacing?: number
   useButtonSpacing?: boolean
 }
 
-export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, index, button, data, ...rest }) => {
-  const buttonRef = useRef<HTMLDivElement>(null)
+export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, ...rest }) => {
+  const buttonRef = useRef<HTMLButtonElement>(null)
   const [spacing, setSpacing] = useState(rest.spacing !== undefined ? rest.spacing : 0)
   const item = data[index]
   const distance = getAmountVisibleChildren(data, index)
@@ -74,12 +74,8 @@ export const ExpandableSpacer: React.FC<ExpandableSpacerProps> = ({ children, in
       level={item.level}
       spacing={spacing}
       distance={distance}>
-      <Content >{
-        <div
-          ref={buttonRef}
-          style={{ visibility: item.children ? 'visible' : 'hidden' }}>
-          {button}
-        </div>}
+      <Content >
+        {cloneElement(button, { ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}
         {children}
       </Content>
     </StyledExpandableSpacer>

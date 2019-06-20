@@ -15,5 +15,5 @@ export function getAmountVisibleChildren (data: Data[], index: number) {
 }
 
 export function makeBorderWidth (index: number, onlyRootParent: boolean) {
-  return `0px 0px ${onlyRootParent ? 0 : 1}px ${index > 0 ? 1 : 0}px;`
+  return `0px 0px ${onlyRootParent ? 0 : 2}px ${index > 0 ? 2 : 0}px;`
 }
