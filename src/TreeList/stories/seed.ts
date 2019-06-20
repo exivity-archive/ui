@@ -19,7 +19,7 @@ const lvl1 = new Array(4).fill(null)
     parentId: null
   }))
 
-const lvl2 = new Array(12).fill(null)
+const lvl2 = new Array(8).fill(null)
   .map((item, index): FakeRecord => {
     return {
       key: String(index + 5),
@@ -34,12 +34,12 @@ const lvl2 = new Array(12).fill(null)
 const lvl3 = new Array(24).fill(null)
   .map((item, index): FakeRecord => {
     return {
-      key: String(index + 17),
+      key: String(index + 13),
       value: faker.name.firstName(),
       attributes: {
         level: 3
       },
-      parentId: String(index % 12 + 5)
+      parentId: String(index % 8 + 5)
     }
   })
 
