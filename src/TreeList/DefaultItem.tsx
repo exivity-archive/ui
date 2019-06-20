@@ -36,14 +36,16 @@ const ButtonIcon = styled(Icon)`
   }
 `
 
-export interface TreeListItemProps {
-  data: { items: TreeListItem<SelectListItem>[], onChange: (item: TreeListItem<SelectListItem>) => void }
+export interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
+  data: { items: Data[], onChange: (item: Data) => void }
   style: CSSProperties
   index: number
   isScrolling: boolean
 }
 
-export function DefaultItem ({ data, style, index }: TreeListItemProps) {
+export function DefaultItem<
+  Data extends TreeListItem<SelectListItem>
+> ({ data, style, index }: TreeListItemProps<Data>) {
   const { items, onChange } = data
   const item = items[index]
 

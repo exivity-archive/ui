@@ -12,11 +12,8 @@ export interface SelectListItem {
 }
 
 export interface SelectListProps {
-  value?: string
   data: SelectListItem[]
-  height?: string | number
   width?: string | number
-  useTriggerComponentWidth?: boolean
   innerElementType?: string
   onChange?: (item: SelectListItem) => void
   noDataText?: string

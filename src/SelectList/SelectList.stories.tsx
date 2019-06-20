@@ -27,27 +27,23 @@ const CustomItem: FC = ({ data, style, index }: any) => {
 const customNoData = 'Custom noData item'
 
 export default storiesOf('molecules/SelectList', module)
-  .addDecorator(withState())
-  .add('default', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={items} />
+  .add('default', () => (
+    <SelectList data={items} />
   ))
-  .add('Custom item', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={items}>
+  .add('Custom item', () => (
+    <SelectList data={items}>
       {CustomItem}
     </SelectList>
   ))
-  .add('long', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={LONG_LIST} />
+  .add('long', () => (
+    <SelectList data={LONG_LIST} />
   ))
-  .add('no data', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={[]} />
+  .add('no data', () => (
+    <SelectList data={[]} />
   ))
-  .add('custom noDataText', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={[]} noDataText={customNoData} />
+  .add('custom noDataText', () => (
+    <SelectList data={[]} noDataText={customNoData} />
   ))
-  .add('custom height', ({ state, storeState }: any) => (
-    <SelectList height={800} value={state && state.key} onChange={storeState} data={LONG_LIST} />
-  ))
-  .add('custom width', ({ state, storeState }: any) => (
-    <SelectList width='30%' value={state && state.key} onChange={storeState} data={LONG_LIST} />
+  .add('custom width', () => (
+    <SelectList width='30%' data={LONG_LIST} />
   ))
