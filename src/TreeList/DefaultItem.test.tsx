@@ -2,6 +2,8 @@ import React from 'react'
 
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { TreeList } from './TreeList'
+import { MdAdd, MdDelete, MdRemove } from 'react-icons/md'
+import { CHILDREN } from '../utils/makeParentChildTree'
 
 const parentKeyAccessor = (item: any) => item.parentId
 
@@ -55,10 +57,24 @@ describe('<DefaultItem/>', () => {
   })
 
   test('button shows a plus sign when item is not expanded', () => {
+    const item1 = { key: '1', value: 'one', parentId: null }
+    const item2 = { key: '2', value: 'two', parentId: '1' }
 
+    const wrapper = mountWithTheme(<TreeList data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
+
+    expect(wrapper.find(MdAdd).length).toBe(1)
   })
 
   test('button shows a minus sign when item is expanded', () => {
+    const item1 = { key: '1', value: 'one', parentId: null }
+    const item2 = { key: '2', value: 'two', parentId: '1' }
 
+    const wrapper = mountWithTheme(<TreeList data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
+
+    wrapper.find('button')
+      .first()
+      .simulate('click')
+
+    expect(wrapper.find(MdRemove).length).toBe(1)
   })
 })
