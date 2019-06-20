@@ -1,4 +1,4 @@
-import React, { useMemo, FC } from 'react'
+import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { FixedSizeList as List } from 'react-window'
 
@@ -31,14 +31,14 @@ export const StyledList = styled(List)`
   }
 `
 
-export function SelectList ({
+export const SelectList = ({
   data,
   width,
   onChange,
   innerElementType = 'ul',
   noDataText,
   children
-}: SelectListProps) {
+}: SelectListProps) => {
   const componentData = getNoDataPlaceholder(data, noDataText)
   const calculatedHeight = calculateHeight(componentData)
 

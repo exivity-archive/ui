@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -13,7 +13,7 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
-const CustomItem: React.FC = ({ data, style, index }: any) => {
+const CustomItem: FC = ({ data, style, index }: any) => {
   const { items, onChange } = data
   const item = items[index]
 
