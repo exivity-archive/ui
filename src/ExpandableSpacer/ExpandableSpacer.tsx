@@ -1,13 +1,12 @@
-import React, { useRef, useEffect, useState, useMemo, cloneElement, ReactComponentElement, FC, ReactElement } from 'react'
+import React, { useMemo, cloneElement, FC, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
-import { ButtonProps } from '../Button'
 import { TreeListItem } from '../useExpandable/helpers'
-import { getDistanceFromSibling, makeBorderWidth } from './helpers'
+import { getDistanceFromSibling } from './helpers'
 import { iterateAllChildren } from '../utils/makeParentChildTree'
+import { useClientRect } from '../useClientRect'
 
 interface StyledExpandableSpacerProps {
-  borderWidth: string
   level: number
   distance: number
   spacing: number
@@ -17,12 +16,12 @@ const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
   margin-left: ${({ spacing, level }) => spacing * level}px;
   height: 100%;
 
-  ${({ borderWidth, distance, spacing }) => css`&:after {
+  ${({ distance, spacing }) => css`&:after {
       position: relative;
-      top: calc(-${(100 * distance)}% - 50%);
-      right: ${(spacing)}px;
+      top: calc(-${100 * distance}% - 50%);
+      right: ${spacing}px;
       border: solid ${fromTheme(theme => theme.colors.lightGray)};
-      border-width: ${borderWidth}
+      border-width: 0px 0px 2px 2px;
       content: ' ';
       display: block;
       width: ${spacing}px;
@@ -44,20 +43,16 @@ interface ExpandableSpacerProps {
   index: number
   data: TreeListItem<{}>[]
   spacing?: number
-  useButtonSpacing?: boolean
 }
 
-export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, useButtonSpacing, ...rest }) => {
-  const buttonRef = useRef<HTMLButtonElement>(null)
-  const [spacing, setSpacing] = useState(rest.spacing !== undefined ? rest.spacing : 0)
+export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, spacing }) => {
   const item = data[index]
   const distance = getDistanceFromSibling(data, index)
+  const [buttonRect, buttonRef] = useClientRect()
 
-  useEffect(() => {
-    if (useButtonSpacing && buttonRef.current) {
-      setSpacing(buttonRef.current.getBoundingClientRect().width)
-    }
-  }, [buttonRef.current, useButtonSpacing])
+  const buttonWidth = buttonRect
+    ? buttonRect.width
+    : 0
 
   const childCount = useMemo(() => {
     let n = 0
@@ -65,14 +60,10 @@ export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, b
     return n
   }, [data])
 
-  const isOnlyRootParent = index === 0 && (childCount === 0 || childCount > data.length - 2)
-  const borderWidth = makeBorderWidth(index, isOnlyRootParent)
-
   return (
     <StyledExpandableSpacer
-      borderWidth={borderWidth}
       level={item.level}
-      spacing={spacing}
+      spacing={spacing || buttonWidth}
       distance={distance}>
       <Content >
         {cloneElement(button, { ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}

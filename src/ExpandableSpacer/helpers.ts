@@ -13,7 +13,3 @@ export function getDistanceFromSibling (data: Data[], index: number) {
     if (--index < 0 || data[index].level <= initialLevel) return distance
   }
 }
-
-export function makeBorderWidth (index: number, onlyRootParent: boolean) {
-  return `0px 0px ${onlyRootParent ? 0 : 2}px ${index > 0 ? 2 : 0}px;`
-}

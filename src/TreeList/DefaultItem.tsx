@@ -53,8 +53,7 @@ export function DefaultItem<
           <ExpandableSpacer
             index={index}
             data={items}
-            button={button}
-            useButtonSpacing>
+            button={button}>
             {item.value}
           </ExpandableSpacer>
         </ListItem>
