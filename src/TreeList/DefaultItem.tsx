@@ -50,7 +50,11 @@ export function DefaultItem<
     return (
       <StyledItem>
         <ListItem style={style} onClick={handleChange}>
-          <ExpandableSpacer index={index} data={items} button={button} useButtonSpacing>
+          <ExpandableSpacer
+            index={index}
+            data={items}
+            button={button}
+            useButtonSpacing>
             {item.value}
           </ExpandableSpacer>
         </ListItem>

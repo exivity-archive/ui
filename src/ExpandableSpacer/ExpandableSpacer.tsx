@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
 import { ButtonProps } from '../Button'
 import { TreeListItem } from '../useExpandable/helpers'
-import { getAmountVisibleChildren, makeBorderWidth } from './helpers'
+import { getDistanceFromSibling, makeBorderWidth } from './helpers'
 import { iterateAllChildren } from '../utils/makeParentChildTree'
 
 interface StyledExpandableSpacerProps {
@@ -47,17 +47,17 @@ interface ExpandableSpacerProps {
   useButtonSpacing?: boolean
 }
 
-export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, ...rest }) => {
+export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, useButtonSpacing, ...rest }) => {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const [spacing, setSpacing] = useState(rest.spacing !== undefined ? rest.spacing : 0)
   const item = data[index]
-  const distance = getAmountVisibleChildren(data, index)
+  const distance = getDistanceFromSibling(data, index)
 
   useEffect(() => {
-    if (rest.spacing === undefined && buttonRef.current) {
+    if (useButtonSpacing && buttonRef.current) {
       setSpacing(buttonRef.current.getBoundingClientRect().width)
     }
-  }, [buttonRef.current])
+  }, [buttonRef.current, useButtonSpacing])
 
   const childCount = useMemo(() => {
     let n = 0

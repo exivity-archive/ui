@@ -1,2 +1,2 @@
 export { ExpandableSpacer } from './ExpandableSpacer'
-export { getAmountVisibleChildren } from './helpers'
+export { getDistanceFromSibling as getAmountVisibleChildren } from './helpers'

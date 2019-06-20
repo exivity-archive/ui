@@ -2,7 +2,7 @@ interface Data {
   level: number
 }
 
-export function getAmountVisibleChildren (data: Data[], index: number) {
+export function getDistanceFromSibling (data: Data[], index: number) {
   if (data.length === 0) return 0
 
   const initialLevel = data[index].level
