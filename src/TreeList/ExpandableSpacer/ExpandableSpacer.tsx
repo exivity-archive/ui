@@ -1,10 +1,10 @@
 import React, { useMemo, cloneElement, FC, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
-import { fromTheme } from '../utils/styled'
+import { fromTheme } from '../../utils/styled'
 import { getDistanceFromSibling } from './helpers'
-import { iterateAllChildren, TreeItem } from '../utils/makeParentChildTree'
-import { useClientRect } from '../useClientRect'
+import { iterateAllChildren, TreeItem } from '../../utils/makeParentChildTree'
+import { useClientRect } from '../../useClientRect'
 
 interface StyledExpandableSpacerProps {
   level: number
