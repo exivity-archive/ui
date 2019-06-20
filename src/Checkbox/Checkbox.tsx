@@ -1,7 +1,7 @@
 import React, { ReactElement, ReactNode, useMemo } from 'react'
 
 import styled, { css } from 'styled-components'
-import { OmitOnChangeHTMLInputAttributes, OnChange } from '../AbstractInput/AbstractInput'
+import { OmitOnChangeHTMLInputAttributes, OnChange } from '../Input/Input'
 import { Label } from '../Label'
 import { randomId } from '../utils/randomId'
 import { fromTheme, StyledProps } from '../utils/styled'

@@ -4,7 +4,7 @@ import React from 'react'
 
 import { Widget } from '.'
 import { withState } from '../utils/tests/decorators/StateDecorator'
-import { Flex, Heading, Block, TextInput, Paragraph } from '..'
+import { Flex, Heading, Block, Input, Paragraph } from '..'
 
 storiesOf('molecules|Widget', module)
   .addDecorator(withState('edit me'))
@@ -16,7 +16,7 @@ storiesOf('molecules|Widget', module)
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>
-      <Heading as={TextInput} placeholder='placeholder' outlined flat
+      <Heading as={Input} placeholder='placeholder' outlined flat
         value={state} onChange={(text) => storeState(text)} />
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>

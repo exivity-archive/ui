@@ -1,21 +1,23 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref } from 'react'
 import styled, { css } from 'styled-components'
+import { textAlign, TextAlignProps } from 'styled-system'
+
+import { globalFont, matchThemeProp, fromTheme, PurposesProps, SizesProps, StyledProps, toRgbString } from '../utils/styled'
+import { Block } from '../Block'
 import { animated } from 'react-spring'
 
-import {
-  fromTheme,
-  globalFont,
-  toRgbString,
-  matchThemeProp, PurposesProps, SizesProps,
-  StyledProps
-} from '../utils/styled'
-import { Omit } from '../utils/types'
+interface ContainerProps {
+  inline?: boolean
+}
 
-export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+export const StyledContainer = styled(Block) <ContainerProps>`
+  position: relative;
 
-export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
+  ${props => (props.inline) && css`
+    display: inline;
+  `}
+`
 
-export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps {
+export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps, TextAlignProps {
   // Variants
   outlined?: boolean
   flat?: boolean
@@ -24,20 +26,9 @@ export interface StyledInputProps extends PurposesProps, SizesProps, StyledProps
   inline?: boolean
 }
 
-export interface InputProps extends StyledInputProps, OmitOnChangeHTMLInputAttributes {
-  value?: string | number
-  onChange?: OnChange
-  required?: boolean
-  ref?: React.RefObject<HTMLInputElement> | null
-}
-
-interface Props extends InputProps {
-  step?: number | string
-  type?: string
-}
-
 export const inputStyles = css<StyledInputProps>`
   ${globalFont};
+  ${textAlign};
 
   font-size: ${matchThemeProp(theme => theme.global.sizes)}rem;
 
@@ -108,23 +99,8 @@ export const inputStyles = css<StyledInputProps>`
   }
 `
 
-const StyledInput = styled.input`
-  ${inputStyles};
+export const StyledInput = styled.input<StyledInputProps>`
+  ${inputStyles}
 `
 
-const AnimatedStyledInput = animated(StyledInput)
-
-export const AbstractInput =
-  forwardRef(({ type, onChange, ...rest }: Props, ref: Ref<HTMLInputElement>) => {
-    const [valid, setValid] = useState(true)
-    return <AnimatedStyledInput
-      type={type || 'text'}
-      ref={ref}
-      danger={!valid}
-      onChange={(event) => {
-        onChange && onChange(event.target.value, event)
-        event.target.checkValidity && setValid(event.target.checkValidity())
-      }}
-      {...rest}
-    />
-  })
+export const AnimatedStyledInput = animated(StyledInput)
