@@ -9,6 +9,9 @@ import { fromTheme } from '../utils'
 import { Icon } from '../Icon'
 import { MdRemove, MdAdd } from 'react-icons/md'
 
+export const EXPAND_ICON = MdAdd
+export const COLLAPSE_ICON = MdRemove
+
 const StyledItem = styled.div`
   li:focus, :hover {
     button {
@@ -53,7 +56,7 @@ export function DefaultItem<
 
   const button = (
     <ToggleExpandedButton onClick={item.expand}>
-      <ButtonIcon >{item.expanded ? <MdRemove /> : <MdAdd />}</ButtonIcon>
+      <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
     </ToggleExpandedButton>
   )
 

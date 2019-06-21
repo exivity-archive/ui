@@ -2,8 +2,7 @@ import React from 'react'
 
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { TreeList } from './TreeList'
-import { MdAdd, MdDelete, MdRemove } from 'react-icons/md'
-import { CHILDREN } from '../utils/makeParentChildTree'
+import { COLLAPSE_ICON, EXPAND_ICON } from './DefaultItem'
 
 const parentKeyAccessor = (item: any) => item.parentId
 
@@ -62,7 +61,7 @@ describe('<DefaultItem/>', () => {
 
     const wrapper = mountWithTheme(<TreeList data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
 
-    expect(wrapper.find(MdAdd).length).toBe(1)
+    expect(wrapper.find(EXPAND_ICON).length).toBe(1)
   })
 
   test('button shows a minus sign when item is expanded', () => {
@@ -75,6 +74,6 @@ describe('<DefaultItem/>', () => {
       .first()
       .simulate('click')
 
-    expect(wrapper.find(MdRemove).length).toBe(1)
+    expect(wrapper.find(COLLAPSE_ICON).length).toBe(1)
   })
 })
