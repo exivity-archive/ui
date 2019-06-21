@@ -7,6 +7,19 @@ import { PARENT, CHILDREN } from '../utils/makeParentChildTree'
 afterEach(cleanup)
 
 describe('<ExpandableSpacer/>', () => {
+  test('button is rendered when given', () => {
+    const buttonText = 'test button'
+    const button = <button>{buttonText}</button>
+
+    const item = { key: '1', value: 'one', level: 1 }
+
+    const { queryByText } = render(<BranchSpacer button={button} index={0} data={[item]}>Test</BranchSpacer>)
+
+    const foundButton = queryByText(buttonText)
+
+    expect(foundButton).not.toBe(null)
+  })
+
   test('button is visible if item has children', () => {
     const buttonText = 'test button'
     const button = <button>{buttonText}</button>
@@ -36,4 +49,5 @@ describe('<ExpandableSpacer/>', () => {
 
     expect(foundButton.getAttribute('style')).toBe('visibility: hidden;')
   })
+
 })

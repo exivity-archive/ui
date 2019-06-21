@@ -6,6 +6,8 @@ import { getDistanceFromSibling } from './helpers'
 import { iterateAllChildren, TreeItem } from '../utils/makeParentChildTree'
 import { useClientRect } from '../useClientRect'
 
+const DEFAULT_SPACING = 40
+
 interface StyledBranchSpacerProps {
   level: number
   distance: number
@@ -39,20 +41,18 @@ const Content = styled.div`
 `
 
 interface BranchSpacerProps {
-  button: ReactElement<any>
   index: number
   data: TreeItem<{}>[]
+
+  button?: ReactElement<any>
+  useButtonWidth?: boolean
   spacing?: number
 }
 
-export const BranchSpacer: FC<BranchSpacerProps> = ({ children, index, button, data, spacing }) => {
+export const BranchSpacer: FC<BranchSpacerProps> = ({ children, index, button, data, ...props }) => {
   const item = data[index]
   const distance = getDistanceFromSibling(data, index)
   const [buttonRect, buttonRef] = useClientRect()
-
-  const buttonWidth = buttonRect
-    ? buttonRect.width
-    : 0
 
   const childCount = useMemo(() => {
     let n = 0
@@ -60,13 +60,24 @@ export const BranchSpacer: FC<BranchSpacerProps> = ({ children, index, button, d
     return n
   }, [data])
 
+  const buttonWidth = buttonRect && buttonRect.width
+
+  const spacing = props.spacing
+    || buttonWidth
+    || DEFAULT_SPACING
+
   return (
     <StyledBranchSpacer
       level={item.level}
-      spacing={spacing || buttonWidth}
+      spacing={spacing}
       distance={distance}>
       <Content >
-        {cloneElement(button, { ...button.props, ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}
+        {!!button && cloneElement(button, {
+          ...button.props,
+          ref: buttonRef,
+          style: { visibility: childCount > 0 ? 'visible' : 'hidden' }
+        })
+        }
         {children}
       </Content>
     </StyledBranchSpacer>

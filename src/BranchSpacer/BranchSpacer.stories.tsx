@@ -9,13 +9,14 @@ import { TreeItem, makeParentChildTree } from '../utils/makeParentChildTree'
 
 storiesOf('molecules|BranchSpacer', module)
   .add('default', () => <List />)
-  .add('with button', () => <List button={<Button />} />)
+  .add('with button', () => <List button={<Button small secondary />} />)
+  .add('custom spacing', () => <List spacing={60} />)
 
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 
 interface ListProps {
-  button?: ReactElement
-  spacing?: number
+  button?: ReactElement,
+  spacing?: number,
 }
 
 const List = ({ button, spacing }: ListProps) => {
@@ -23,7 +24,7 @@ const List = ({ button, spacing }: ListProps) => {
 
   return (
     <ListFocus>
-      <StyledList height={800} width={600} itemSize={80} itemData={parentChildData} itemCount={parentChildData.length}
+      <StyledList height={800} width={600} itemSize={40} itemData={parentChildData} itemCount={parentChildData.length}
         innerElementType='ul'>
         {makeItemSpacer(button, spacing)}
       </StyledList>
@@ -32,8 +33,8 @@ const List = ({ button, spacing }: ListProps) => {
 }
 
 interface ItemProps {
-  data: TreeItem<FakeRecord>[]
-  index: number
+  data: TreeItem<FakeRecord>[],
+  index: number,
   style: object
 }
 
@@ -45,8 +46,7 @@ const makeItemSpacer = (button?: ReactElement, spacing?: number) => {
       return (
         <ListItem style={style}>
           <BranchSpacer data={data} index={index} button={button} spacing={spacing} >
-            <Flex direction='row' justifyContent='space-between' alignItems='center' height='100%'>
-            </Flex>
+            {'X'}
           </BranchSpacer>
         </ListItem>
       )
