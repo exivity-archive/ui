@@ -1,8 +1,8 @@
 import React from 'react'
 import { render, cleanup } from '@testing-library/react'
 
-import { ExpandableSpacer } from './ExpandableSpacer'
-import { PARENT, CHILDREN } from '../../utils/makeParentChildTree'
+import { BranchSpacer } from './BranchSpacer'
+import { PARENT, CHILDREN } from '../utils/makeParentChildTree'
 
 afterEach(cleanup)
 
@@ -11,13 +11,13 @@ describe('<ExpandableSpacer/>', () => {
     const buttonText = 'test button'
     const button = <button>{buttonText}</button>
 
-    const item1 = { key: '1', value: 'one', level: 1 }
-    const item2 = { key: '2', value: 'two', level: 2 }
+    const item1 = { key: '1', value: 'one', level: 1 } as any
+    const item2 = { key: '2', value: 'two', level: 2 } as any
 
     item1[CHILDREN] = [item2]
     item2[PARENT] = item1
 
-    const { getByText } = render(<ExpandableSpacer button={button} index={0} data={[item1]}>Test</ExpandableSpacer>)
+    const { getByText } = render(<BranchSpacer button={button} index={0} data={[item1]}>Test</BranchSpacer>)
 
     const foundButton = getByText(buttonText)
 
@@ -30,7 +30,7 @@ describe('<ExpandableSpacer/>', () => {
 
     const item = { key: '1', value: 'one', level: 1 }
 
-    const { getByText } = render(<ExpandableSpacer button={button} index={0} data={[item]}>Test</ExpandableSpacer>)
+    const { getByText } = render(<BranchSpacer button={button} index={0} data={[item]}>Test</BranchSpacer>)
 
     const foundButton = getByText(buttonText)
 

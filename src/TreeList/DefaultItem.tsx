@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { TreeListItem } from '../useExpandable'
 import { SelectListItem } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
-import { ExpandableSpacer } from './ExpandableSpacer'
+import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'
 import { Icon } from '../Icon'
 import { MdRemove, MdAdd } from 'react-icons/md'
@@ -64,12 +64,12 @@ export function DefaultItem<
     return (
       <StyledItem>
         <ListItem style={style} onClick={handleChange}>
-          <ExpandableSpacer
+          <BranchSpacer
             index={index}
             data={items}
             button={button}>
             {item.value}
-          </ExpandableSpacer>
+          </BranchSpacer>
         </ListItem>
       </StyledItem>
     )

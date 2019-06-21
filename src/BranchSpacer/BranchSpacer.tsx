@@ -1,18 +1,18 @@
 import React, { useMemo, cloneElement, FC, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
-import { fromTheme } from '../../utils/styled'
+import { fromTheme } from '../utils/styled'
 import { getDistanceFromSibling } from './helpers'
-import { iterateAllChildren, TreeItem } from '../../utils/makeParentChildTree'
-import { useClientRect } from '../../useClientRect'
+import { iterateAllChildren, TreeItem } from '../utils/makeParentChildTree'
+import { useClientRect } from '../useClientRect'
 
-interface StyledExpandableSpacerProps {
+interface StyledBranchSpacerProps {
   level: number
   distance: number
   spacing: number
 }
 
-const StyledExpandableSpacer = styled.div<StyledExpandableSpacerProps>`
+const StyledBranchSpacer = styled.div<StyledBranchSpacerProps>`
   margin-left: ${({ spacing, level }) => spacing * level}px;
   height: 100%;
 
@@ -38,14 +38,14 @@ const Content = styled.div`
   align-items: center;
 `
 
-interface ExpandableSpacerProps {
+interface BranchSpacerProps {
   button: ReactElement<any>
   index: number
   data: TreeItem<{}>[]
   spacing?: number
 }
 
-export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, button, data, spacing }) => {
+export const BranchSpacer: FC<BranchSpacerProps> = ({ children, index, button, data, spacing }) => {
   const item = data[index]
   const distance = getDistanceFromSibling(data, index)
   const [buttonRect, buttonRef] = useClientRect()
@@ -61,7 +61,7 @@ export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, b
   }, [data])
 
   return (
-    <StyledExpandableSpacer
+    <StyledBranchSpacer
       level={item.level}
       spacing={spacing || buttonWidth}
       distance={distance}>
@@ -69,6 +69,6 @@ export const ExpandableSpacer: FC<ExpandableSpacerProps> = ({ children, index, b
         {cloneElement(button, { ...button.props, ref: buttonRef, style: { visibility: childCount > 0 ? 'visible' : 'hidden' } })}
         {children}
       </Content>
-    </StyledExpandableSpacer>
+    </StyledBranchSpacer>
   )
 }
