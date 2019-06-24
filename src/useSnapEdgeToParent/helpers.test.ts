@@ -25,12 +25,8 @@ test('getEdges gets edges derived from break distance and window dimensions if c
   expect(edges).toMatchObject({ bottomEdge: 780, rightEdge: 950 })
 })
 
-const makeRect = (obj: any) => ({
-  getBoundingClientRect: () => obj
-})
-
 test('getEdges gets edges derived from break distance and container edges if container is provided', () => {
-  const element = makeRect({ bottom: 500, right: 600 })
+  const element = { bottom: 500, right: 600 }
 
   const edges = getEdges(element as any, { vertical: 20, horizontal: 50 })
 
@@ -38,8 +34,8 @@ test('getEdges gets edges derived from break distance and container edges if con
 })
 
 test('getMeasures returns target width and -height and parent top and -left positions if parent and target are defined', () => {
-  const target = makeRect({ height: 40, width: 20 })
-  const parent = makeRect({ top: 100, left: 200 })
+  const target = { height: 40, width: 20 }
+  const parent = { top: 100, left: 200 }
 
   // @ts-ignore
   expect(getMeasures(target, parent))
@@ -47,8 +43,8 @@ test('getMeasures returns target width and -height and parent top and -left posi
 })
 
 test('getMeasures throws an error if either or both parent or target is null', () => {
-  const target = makeRect({ height: 40, width: 20 })
-  const parent = makeRect({ top: 100, left: 200 })
+  const target = { height: 40, width: 20 }
+  const parent = { top: 100, left: 200 }
 
   // @ts-ignore
   expect(getMeasures(null, parent)).toMatchObject({ width: 0, height: 0, left: 0, top: 0 })
@@ -58,10 +54,10 @@ test('getMeasures throws an error if either or both parent or target is null', (
 })
 
 test('getPositioning returns left and top if element hasn\'t crossed any edges', () => {
-  const target = { current: makeRect({ width: 300, height: 200 }) }
-  const parent = { current: makeRect({ left: 300, top: 200 }) }
+  const target = { rect: { width: 300, height: 200 } }
+  const parent = { rect: { left: 300, top: 200 } }
 
-  const container = { current: makeRect({ right: 800, bottom: 600 }) }
+  const container = { rect: { right: 800, bottom: 600 } }
 
   // @ts-ignore
   window.innerWidth = 800
@@ -80,10 +76,10 @@ test('getPositioning returns left and top if element hasn\'t crossed any edges',
 })
 
 test('Get positioning returns right and bottom if element has crossed both edges', () => {
-  const target = { current: makeRect({ width: 401, height: 301 }) }
-  const parent = { current: makeRect({ left: 401, top: 301 }) }
+  const target = { rect: { width: 401, height: 301 } }
+  const parent = { rect: { left: 401, top: 301 } }
 
-  const container = { current: makeRect({ right: 800, bottom: 600 }) }
+  const container = { rect: { right: 800, bottom: 600 } }
 
   // @ts-ignore
   window.innerWidth = 800
@@ -102,9 +98,9 @@ test('Get positioning returns right and bottom if element has crossed both edges
 })
 
 test('Get positioning returns initial positioning if one is provided', () => {
-  const target = { current: makeRect({ width: 400, height: 300 }) }
-  const parent = { current: makeRect({ left: 400, top: 300 }) }
-  const container = { current: makeRect({ right: 700, bottom: 500 }) }
+  const target = { rect: { width: 400, height: 300 } }
+  const parent = { rect: { left: 400, top: 300 } }
+  const container = { rect: { right: 700, bottom: 500 } }
 
   const breakDistance1 = 50
   const initialPositioning1 = { horizontal: 'right', vertical: 'bottom' }
