@@ -24,8 +24,8 @@ export enum Horizontal {
 }
 
 export interface AutoPosition {
-  vertical?: Vertical
-  horizontal?: Horizontal
+  vertical: Vertical
+  horizontal: Horizontal
 }
 
 export interface Positioning extends AutoPosition {
@@ -43,7 +43,7 @@ const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Hor
 export function getPositioning (
   { target, parent, container }: RefAndRectMap,
   breakDistance: BreakDistance,
-  position: AutoPosition = {}
+  position: Partial<AutoPosition> = {}
 ): Positioning {
   const { vertical, horizontal } = { ...defaultPosition, ...position }
   const { top, left, height, width } = getMeasures(target.rect, parent.rect)
@@ -53,8 +53,8 @@ export function getPositioning (
   const newHorizontal = left + width > rightEdge ? Horizontal.LEFT : Horizontal.RIGHT
 
   return {
-    vertical: vertical !== Vertical.AUTO ? vertical! : newVertical,
-    horizontal: horizontal !== Horizontal.AUTO ? horizontal! : newHorizontal
+    vertical: vertical !== Vertical.AUTO ? vertical : newVertical,
+    horizontal: horizontal !== Horizontal.AUTO ? horizontal : newHorizontal
   }
 }
 
