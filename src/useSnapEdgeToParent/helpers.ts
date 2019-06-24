@@ -8,7 +8,7 @@ export interface RefAndRectMap {
 
 interface RefAndRect {
   ref: (node: HTMLElement | null) => void
-  rect: Rect
+  rect: Rect | null
 }
 
 export enum Vertical {
@@ -58,7 +58,7 @@ export function getPositioning (
   }
 }
 
-export function getMeasures (targetRect: Rect, parentRect: Rect) {
+export function getMeasures (targetRect: Rect | null, parentRect: Rect | null) {
   if (targetRect && parentRect) {
     const { width, height } = targetRect
     const { top, left } = parentRect
@@ -69,7 +69,7 @@ export function getMeasures (targetRect: Rect, parentRect: Rect) {
   }
 }
 
-export function getEdges (containerRect: Rect, breakDistance: BreakDistance) {
+export function getEdges (containerRect: Rect | null, breakDistance: BreakDistance) {
   const { vertical, horizontal } = buildOrUseBreakDistance(breakDistance)
 
   if (containerRect) {

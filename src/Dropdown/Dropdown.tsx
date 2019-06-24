@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
-import { makeDefaultCSS, Dimensions } from './helpers'
+import { makeDefaultCSS, DropdownRects } from './helpers'
 
 import { fromTheme } from '../utils/styled'
 import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance, Positioning } from '../useSnapEdgeToParent'
@@ -46,7 +46,7 @@ export interface DropdownProps extends BlockProps {
   useTriggerComponentWidth?: boolean
   onOutsideClick?: (...rest: any) => void
   test?: string
-  makeCSS?: (position: Positioning, targetDimensions: Dimensions, parentDimensions: Dimensions) => string
+  makeCSS?: (position: Positioning, rects: DropdownRects) => string
 }
 
 export const Dropdown: React.FC<DropdownProps> = ({
@@ -74,8 +74,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
     if (parent.rect && target.rect) {
       return makeCSS(
         positioning,
-        { height: target.rect.height, width: target.rect.width },
-        { height: parent.rect.height, width: parent.rect.width }
+        { content: target.rect, trigger: parent.rect }
       )
     }
   }, [positioning])

@@ -1,9 +1,9 @@
 import { useState, useCallback } from 'react'
 
-export type Rect = ClientRect | DOMRect | null
+export type Rect = ClientRect | DOMRect
 
 export function useClientRect () {
-  const [rect, setRect] = useState<Rect>(null)
+  const [rect, setRect] = useState<Rect | null>(null)
 
   const ref = useCallback((node: HTMLElement | null) => {
     if (node !== null) {
@@ -11,5 +11,5 @@ export function useClientRect () {
     }
   }, [])
 
-  return [rect, ref] as [Rect, typeof ref]
+  return [rect, ref] as [Rect | null , typeof ref]
 }

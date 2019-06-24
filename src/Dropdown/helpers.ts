@@ -1,10 +1,11 @@
 import { Positioning } from '../useSnapEdgeToParent'
+import { Rect } from '../useClientRect'
 
-export interface Dimensions {
-  height: number
-  width: number
+export interface DropdownRects {
+  trigger: Rect
+  content: Rect
 }
 
-export const makeDefaultCSS = ({ horizontal, vertical }: Positioning, _: Dimensions, { height }: Dimensions) =>
-  `${vertical}: ${height}px;\n`
+export const makeDefaultCSS = ({ horizontal, vertical }: Positioning, { trigger }: DropdownRects) =>
+  `${vertical}: ${trigger.height}px;\n`
   + `${horizontal}: 0px;\n`
