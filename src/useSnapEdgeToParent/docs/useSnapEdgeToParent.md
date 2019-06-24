@@ -4,7 +4,7 @@ useSnapEdgeToParent is a hook that can be used to make a component avoid defined
 
 ## Example
 
- `const [refs, positioning, handleLayout] = useSnapEdgeToParent<TargetElement, ParentElement, ContainerElement>(breakDistances, initialLayout)`
+ `const [refs, positioning] = useSnapEdgeToParent<TargetElement, ParentElement, ContainerElement>(breakDistances, initialLayout)`
 
 ## Parameters
 
@@ -23,7 +23,6 @@ useSnapEdgeToParent is a hook that can be used to make a component avoid defined
   |-----------|------------|--------|
   | `refs` | `{ target: RefObject<TargetElement>, parent: RefObject<ParentElement>, container: RefObject<ContainerElement> }` | An object containing the refs that should be given to the components you want to give this functionality. | 
   | `positioning` | `{ horizontal: 'left' | 'right', vertical: 'top' | 'bottom' }` | The resulting positioning after calculation.  |
-  | `handleLayout` | `() => void` | Function that recalculates the positioning on call.  |
 
 
 ## Refs
