@@ -1,3 +1,5 @@
+import { Rect } from '../useClientRect'
+
 export interface RefAndRectMap {
   target: RefAndRect
   parent: RefAndRect
@@ -6,7 +8,7 @@ export interface RefAndRectMap {
 
 interface RefAndRect {
   ref: (node: HTMLElement | null) => void
-  rect: ClientRect | DOMRect | null
+  rect: Rect
 }
 
 export enum Vertical {
@@ -38,7 +40,7 @@ export type BreakDistance = {
 
 const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
-export function getPosition (
+export function getPositioning (
   { target, parent, container }: RefAndRectMap,
   breakDistance: BreakDistance,
   position: AutoPosition = {}
@@ -56,7 +58,7 @@ export function getPosition (
   }
 }
 
-export function getMeasures (targetRect: ClientRect | DOMRect | null, parentRect: ClientRect | DOMRect | null) {
+export function getMeasures (targetRect: Rect, parentRect: Rect) {
   if (targetRect && parentRect) {
     const { width, height } = targetRect
     const { top, left } = parentRect
@@ -67,7 +69,7 @@ export function getMeasures (targetRect: ClientRect | DOMRect | null, parentRect
   }
 }
 
-export function getEdges (containerRect: ClientRect | DOMRect | null, breakDistance: BreakDistance) {
+export function getEdges (containerRect: Rect, breakDistance: BreakDistance) {
   const { vertical, horizontal } = buildOrUseBreakDistance(breakDistance)
 
   if (containerRect) {

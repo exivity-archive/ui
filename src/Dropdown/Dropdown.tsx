@@ -63,7 +63,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   makeCSS = makeDefaultCSS,
   ...blockProps
 }) => {
-  const [{ target , parent }, positioning, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
+  const [{ target, parent }, positioning, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
   useEffect(() => {
     window.addEventListener('resize', handleLayout)

@@ -1,7 +1,9 @@
 import { useState, useCallback } from 'react'
 
+export type Rect = ClientRect | DOMRect | null
+
 export function useClientRect () {
-  const [rect, setRect] = useState<null | ClientRect | DOMRect>(null)
+  const [rect, setRect] = useState<Rect>(null)
 
   const ref = useCallback((node: HTMLElement | null) => {
     if (node !== null) {
@@ -9,5 +11,5 @@ export function useClientRect () {
     }
   }, [])
 
-  return [rect, ref] as [typeof rect, typeof ref]
+  return [rect, ref] as [Rect, typeof ref]
 }
