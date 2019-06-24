@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useMemo, cloneElement, isValidElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -7,7 +7,7 @@ import { Block, BlockProps } from '../Block'
 import { makeDefaultCSS } from './helpers'
 
 import { fromTheme } from '../utils/styled'
-import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance, Positioning } from '../useSnapEdgeToParent'
+import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
 const StyledDropdown = styled(Block)`
   position: relative;
@@ -87,7 +87,9 @@ export const Dropdown: React.FC<DropdownProps> = ({
           position={position}
           open={open}>
           <Block {...blockProps}>
-            {children}
+            {isValidElement(children)
+              ? cloneElement(children, { ...children.props, positioning })
+              : children }
           </Block>
         </Content>
       </OutsideClickListener>
