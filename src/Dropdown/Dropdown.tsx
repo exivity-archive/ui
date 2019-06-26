@@ -8,6 +8,7 @@ import { makeDefaultCSS } from './helpers'
 
 import { fromTheme } from '../utils/styled'
 import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
+import { height } from 'styled-system'
 
 const StyledDropdown = styled(Block)`
   position: relative;
@@ -65,10 +66,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const position = useMemo(() => {
     if (parent.rect && target.rect) {
-      return makeDefaultCSS(
-        positioning,
-        { content: target.rect, trigger: parent.rect }
-      )
+      return makeDefaultCSS(positioning, parent.rect.height)
+
     }
   }, [positioning])
 
