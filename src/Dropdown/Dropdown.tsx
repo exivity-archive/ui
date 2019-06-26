@@ -18,7 +18,7 @@ interface ContentProps {
   open: boolean
   useTriggerComponentWidth?: boolean
   width?: string
-  position?: string
+  position?: string | null
 }
 
 const Content = styled(Block) <ContentProps>`
@@ -64,12 +64,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
 }) => {
   const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
-  const position = useMemo(() => {
-    if (parent.rect && target.rect) {
-      return makeDefaultCSS(positioning, parent.rect.height)
-
-    }
-  }, [positioning])
+  const position = useMemo(() => parent.rect && makeDefaultCSS(positioning, parent.rect.height), [positioning])
 
   const triggerWidth = parent.rect
     ? `${parent.rect.width}px`
