@@ -15,13 +15,13 @@ export function useSnapEdgeToParent (breakDistances: BreakDistance | number, ini
 
   const [positioning, setPositioning] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  const reculculatePositioning = () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning))
+  const calculatePositioning = () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning))
 
-  useLayoutEffect(reculculatePositioning, [])
+  useLayoutEffect(calculatePositioning, [])
 
   useEffect(() => {
-    window.addEventListener('resize', reculculatePositioning)
-    return () => window.removeEventListener('resize', reculculatePositioning)
+    window.addEventListener('resize', calculatePositioning)
+    return () => window.removeEventListener('resize', calculatePositioning)
   }, [])
 
   return useMemo(() => {
