@@ -1,26 +1,36 @@
-import { RefObject } from 'react'
+import { Rect } from '../useClientRect'
 
-export interface Refs<
-  Target extends HTMLElement = HTMLElement,
-  Parent extends HTMLElement = HTMLElement,
-  Container extends HTMLElement = HTMLElement
-  > {
-  target: RefObject<Target>
-  parent: RefObject<Parent>
-  container: RefObject<Container>
+export interface RefAndRectMap {
+  target: RefAndRect
+  parent: RefAndRect
+  container: RefAndRect
 }
 
-export type Vertical = 'top' | 'bottom'
-export type Horizontal = 'left' | 'right'
+interface RefAndRect {
+  ref: (node: HTMLElement | null) => void
+  rect: Rect | null
+}
+
+export enum Vertical {
+  BOTTOM = 'top',
+  TOP = 'bottom',
+  AUTO = 'auto'
+}
+
+export enum Horizontal {
+   LEFT = 'right',
+   RIGHT = 'left',
+   AUTO = 'auto'
+}
 
 export interface AutoPosition {
-  vertical?: Vertical | 'auto'
-  horizontal?: Horizontal | 'auto'
+  vertical: Vertical
+  horizontal: Horizontal
 }
 
 export interface Positioning extends AutoPosition {
-  horizontal: Horizontal
-  vertical: Vertical
+  horizontal: Exclude<Horizontal, Horizontal.AUTO>
+  vertical: Exclude<Vertical, Vertical.AUTO>
 }
 
 export type BreakDistance = {
@@ -28,30 +38,30 @@ export type BreakDistance = {
   vertical: number
 } | number
 
-const defaultPosition: AutoPosition = { vertical: 'auto', horizontal: 'auto' }
+const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
-export function getPosition (
-  { target, parent, container }: Refs,
+export function getPositioning (
+  { target, parent, container }: RefAndRectMap,
   breakDistance: BreakDistance,
-  position: AutoPosition = {}
+  position: Partial<AutoPosition> = {}
 ): Positioning {
   const { vertical, horizontal } = { ...defaultPosition, ...position }
-  const { top, left, height, width } = getMeasures(target.current, parent.current)
-  const { bottomEdge, rightEdge } = getEdges(container.current, breakDistance)
+  const { top, left, height, width } = getMeasures(target.rect, parent.rect)
+  const { bottomEdge, rightEdge } = getEdges(container.rect, breakDistance)
 
-  const newVertical = top + height > bottomEdge ? 'bottom' : 'top'
-  const newHorizontal = left + width > rightEdge ? 'right' : 'left'
+  const newVertical = top + height > bottomEdge ? Vertical.TOP : Vertical.BOTTOM
+  const newHorizontal = left + width > rightEdge ? Horizontal.LEFT : Horizontal.RIGHT
 
   return {
-    vertical: vertical !== 'auto' ? vertical! : newVertical,
-    horizontal: horizontal !== 'auto' ? horizontal! : newHorizontal
+    vertical: vertical !== Vertical.AUTO ? vertical : newVertical,
+    horizontal: horizontal !== Horizontal.AUTO ? horizontal : newHorizontal
   }
 }
 
-export function getMeasures (target: HTMLElement | null, parent: HTMLElement | null) {
-  if (target && parent) {
-    const { width, height } = target.getBoundingClientRect()
-    const { top, left } = parent.getBoundingClientRect()
+export function getMeasures (targetRect: Rect | null, parentRect: Rect | null) {
+  if (targetRect && parentRect) {
+    const { width, height } = targetRect
+    const { top, left } = parentRect
 
     return { width, height, top, left }
   } else {
@@ -59,11 +69,11 @@ export function getMeasures (target: HTMLElement | null, parent: HTMLElement | n
   }
 }
 
-export function getEdges (container: HTMLElement | null, breakDistance: BreakDistance) {
+export function getEdges (containerRect: Rect | null, breakDistance: BreakDistance) {
   const { vertical, horizontal } = buildOrUseBreakDistance(breakDistance)
 
-  if (container) {
-    let { right, bottom } = container.getBoundingClientRect()
+  if (containerRect) {
+    let { right, bottom } = containerRect
     return { rightEdge: right - horizontal, bottomEdge: bottom - vertical }
   } else {
     return { rightEdge: window.innerWidth - horizontal, bottomEdge: window.innerHeight - vertical }

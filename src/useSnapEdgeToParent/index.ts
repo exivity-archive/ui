@@ -1,2 +1,2 @@
-export { useSnapEdgeToParent } from './useSnapEdgeToParent'
+export * from './useSnapEdgeToParent'
 export * from './helpers'
