@@ -51,7 +51,7 @@ export const SelectList: React.FC<SelectListProps> = ({
     }
 
     return { items: componentData, onChange }
-  }, [data])
+  }, [data, onChange])
 
   return (
     <ListFocus>
