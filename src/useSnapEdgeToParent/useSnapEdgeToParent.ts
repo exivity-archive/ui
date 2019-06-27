@@ -1,4 +1,4 @@
-import { useState, useMemo, useLayoutEffect, useEffect } from 'react'
+import { useState, useMemo, useLayoutEffect, useEffect, useCallback } from 'react'
 import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap, Vertical, Horizontal } from './helpers'
 import { useClientRect }from '../useClientRect'
 
@@ -15,16 +15,18 @@ export function useSnapEdgeToParent (breakDistances: BreakDistance | number, ini
 
   const [positioning, setPositioning] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  const calculatePositioning = () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning))
+  const calculatePositioning = useCallback(
+    () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning)),
+    [targetRect, parentRect, containerRect, breakDistances])
 
   useLayoutEffect(calculatePositioning, [])
 
   useEffect(() => {
     window.addEventListener('resize', calculatePositioning)
     return () => window.removeEventListener('resize', calculatePositioning)
-  }, [])
+  }, [calculatePositioning])
 
   return useMemo(() => {
     return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
-  }, [positioning.horizontal, positioning.vertical])
+  }, [positioning, targetRect, parentRect, containerRect])
 }
