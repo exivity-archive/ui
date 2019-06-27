@@ -45,7 +45,6 @@ export function getPositioning (
   breakDistance: BreakDistance,
   position: Partial<AutoPosition> = {}
 ): Positioning {
-  console.log(target.rect, parent.rect)
   const { vertical, horizontal } = { ...defaultPosition, ...position }
   const { top, left, height, width } = getMeasures(target.rect, parent.rect)
   const { bottomEdge, rightEdge } = getEdges(container.rect, breakDistance)
