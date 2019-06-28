@@ -15,7 +15,7 @@ const StyledDropdown = styled(Block)`
 
 interface ContentProps {
   open: boolean
-  width?: string
+  triggerWidth?: string
   position?: string | null
 }
 
@@ -27,8 +27,8 @@ const Content = styled(Block) <ContentProps>`
   z-index: ${fromTheme(theme => theme.global.zPriority.background)};
 
   min-width: 160px;
-  ${props => props.width && css`
-    width: ${props.width};
+  ${props => props.triggerWidth && css`
+    width: ${props.triggerWidth};
   `}
 
   visibility: ${({ open }) => open ? 'visible' : 'hidden'};
@@ -72,16 +72,15 @@ export const Dropdown: React.FC<DropdownProps> = ({
     <StyledDropdown className={className} data-test={test} ref={parent.ref}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
-        <Content width={useTriggerComponentWidth ? triggerWidth : undefined}
+        <Content triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test={`${test}-content`}
           ref={target.ref}
           position={position}
-          open={open}>
-          <Block {...blockProps}>
-            {isValidElement(children)
-              ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
-              : children}
-          </Block>
+          open={open}
+          {...blockProps}>
+          {isValidElement(children)
+            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
+            : children}
         </Content>
       </OutsideClickListener>
     </StyledDropdown>
