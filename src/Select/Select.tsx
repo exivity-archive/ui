@@ -60,7 +60,7 @@ export const Select = ({
   const close = () => setIsOpen(false)
 
   const valueComponentProps = {
-    // ...rest,
+    ...rest,
     name,
     placeholder,
     value,
