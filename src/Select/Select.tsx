@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, cloneElement, ReactElement } from 'react'
 
-import { SelectInput } from '../SelectInput'
-import { Dropdown } from '../Dropdown'
 import { BlockProps } from '../Block'
+import { Dropdown } from '../Dropdown'
+import { InputProps } from '../Input/Input'
+import { SelectInput } from '../SelectInput'
+
 import { Vertical, Horizontal } from '../useSnapEdgeToParent'
 
 interface InjectValueAndHandler {
@@ -12,11 +14,11 @@ interface InjectValueAndHandler {
   onClick: () => void
 }
 
-export interface SelectProps extends BlockProps {
+export interface SelectProps {
   name?: string
   value?: string
   placeholder?: string
-  valueComponent?: React.ReactElement<any>
+  valueComponent?: ReactElement<any>
   onOutsideClick?: (isOpen: boolean, close: Function) => void
   useTriggerComponentWidth?: boolean
   onChange?: (value: any) => void
@@ -26,20 +28,20 @@ export interface SelectProps extends BlockProps {
   children: any
 }
 
-export const injectComponent = (component: React.ReactElement<any>, props: InjectValueAndHandler) => {
-  return React.cloneElement(component, {
+export const injectComponent = (component: ReactElement<any>, props: InjectValueAndHandler) => {
+  return cloneElement(component, {
     ...props,
     ...component.props
   })
 }
 
-const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: React.ReactElement<any>) => {
+const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: ReactElement<any>) => {
   if (valueComponent) return injectComponent(valueComponent, props)
   // Does not need onChange because SelectInput only display data
   return <SelectInput {...props} />
 }
 
-export const Select: React.FC<SelectProps> = ({
+export const Select = ({
   name,
   value,
   placeholder,
@@ -52,12 +54,13 @@ export const Select: React.FC<SelectProps> = ({
   children,
   py = 2,
   test,
-  ...blockProps
-}) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  ...rest
+}: SelectProps & BlockProps & InputProps) => {
+  const [isOpen, setIsOpen] = useState(false)
   const close = () => setIsOpen(false)
 
   const valueComponentProps = {
+    // ...rest,
     name,
     placeholder,
     value,
@@ -67,12 +70,19 @@ export const Select: React.FC<SelectProps> = ({
   const triggerComponent = getTriggerComponent(valueComponentProps, valueComponent)
 
   return (
-    <Dropdown open={isOpen} vertical={vertical} horizontal={horizontal} {...blockProps} py={py}
-      onOutsideClick={() => onOutsideClick ? onOutsideClick(isOpen, close) : setIsOpen(false)}
+    <Dropdown {...rest} py={py}
+      open={isOpen}
+      data-test={test}
+      vertical={vertical}
+      horizontal={horizontal}
       triggerComponent={triggerComponent}
       useTriggerComponentWidth={useTriggerComponentWidth}
-      test={test}>
-      {React.cloneElement(children, {
+      onOutsideClick={
+        () => onOutsideClick
+          ? onOutsideClick(isOpen, close)
+          : setIsOpen(false)
+      }>
+      {cloneElement(children, {
         ...children.props,
         onChange: (value: any) => {
           children.props.onChange && children.props.onChange(value)
