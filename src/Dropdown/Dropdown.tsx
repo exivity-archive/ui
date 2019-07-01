@@ -1,9 +1,4 @@
-import React, {
-  useMemo,
-  cloneElement,
-  isValidElement,
-  ReactElement
-} from 'react'
+import React, { useMemo, cloneElement, isValidElement, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -12,12 +7,7 @@ import { Block, BlockProps } from '../Block'
 import { makeDefaultCSS } from './helpers'
 
 import { fromTheme } from '../utils/styled'
-import {
-  useSnapEdgeToParent,
-  Vertical,
-  Horizontal,
-  BreakDistance
-} from '../useSnapEdgeToParent'
+import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
 const StyledDropdown = styled(Block)`
   position: relative;
@@ -37,17 +27,12 @@ const Content = styled(Block)<ContentProps>`
   z-index: ${fromTheme(theme => theme.global.zPriority.background)};
 
   min-width: 160px;
-  ${props =>
-    props.triggerWidth &&
-    css`
-      width: ${props.triggerWidth};
-    `}
+  ${props => props.triggerWidth && css`
+    width: ${props.triggerWidth};
+  `}
 
   visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
-  ${({ position }) =>
-    css`
-      ${position}
-    `}
+  ${({ position }) => css`${position}`}
 `
 
 export interface DropdownProps extends BlockProps {
@@ -75,34 +60,26 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
   test = 'dropdown',
   ...blockProps
 }) => {
-  const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, {
-    horizontal,
-    vertical
-  })
+  const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
-  const position = useMemo(
-    () => parent.rect && makeDefaultCSS(positioning, parent.rect.height),
-    [positioning]
-  )
+  const position = useMemo(() => parent.rect && makeDefaultCSS(positioning, parent.rect.height), [positioning])
 
-  const triggerWidth = parent.rect ? `${parent.rect.width}px` : undefined
+  const triggerWidth = parent.rect
+    ? `${parent.rect.width}px`
+    : undefined
 
   return (
     <StyledDropdown className={className} data-test={test} ref={parent.ref}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
-        <Content
-          triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
+        <Content triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test={`${test}-content`}
           ref={target.ref}
           position={position}
           open={open}
           {...blockProps}>
           {isValidElement(children)
-            ? cloneElement(children as ReactElement<any>, {
-              ...children.props,
-              positioning
-            })
+            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning ß })
             : children}
         </Content>
       </OutsideClickListener>
