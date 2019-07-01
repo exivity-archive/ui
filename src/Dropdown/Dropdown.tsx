@@ -19,7 +19,7 @@ interface ContentProps {
   position?: string | null
 }
 
-const Content = styled(Block)<ContentProps>`
+const Content = styled(Block) <ContentProps>`
   box-sizing: border-box;
   position: absolute;
   background-color: #f9f9f9;
@@ -31,7 +31,7 @@ const Content = styled(Block)<ContentProps>`
     width: ${props.triggerWidth};
   `}
 
-  visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
   ${({ position }) => css`${position}`}
 `
 
@@ -79,7 +79,7 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
           open={open}
           {...blockProps}>
           {isValidElement(children)
-            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning ß })
+            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
             : children}
         </Content>
       </OutsideClickListener>
