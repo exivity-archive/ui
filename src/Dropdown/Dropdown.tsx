@@ -47,7 +47,7 @@ export interface DropdownProps extends BlockProps {
   test?: string
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({
+export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = ({
   className,
   triggerComponent,
   children,
@@ -86,3 +86,5 @@ export const Dropdown: React.FC<DropdownProps> = ({
     </StyledDropdown>
   )
 }
+
+Dropdown.Content = Content
