@@ -31,7 +31,7 @@ const Content = styled(Block) <ContentProps>`
     width: ${props.triggerWidth};
   `}
 
-  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
+  ${({ open }) => !open && 'display: none;'}
   ${({ position }) => css`${position}`}
 `
 
