@@ -6,7 +6,7 @@ import { PARENT, CHILDREN } from '../utils/makeParentChildTree'
 
 afterEach(cleanup)
 
-describe('<ExpandableSpacer/>', () => {
+describe('<BranchSpacer/>', () => {
   test('button is rendered when given', () => {
     const buttonText = 'test button'
     const button = <button>{buttonText}</button>
@@ -34,7 +34,7 @@ describe('<ExpandableSpacer/>', () => {
 
     const foundButton = getByText(buttonText)
 
-    expect(foundButton.getAttribute('style')).toBe('visibility: visible;')
+    expect(foundButton.getAttribute('style')).toBe('display: block;')
   })
 
   test('button is hidden if item has no children', () => {
@@ -47,7 +47,7 @@ describe('<ExpandableSpacer/>', () => {
 
     const foundButton = getByText(buttonText)
 
-    expect(foundButton.getAttribute('style')).toBe('visibility: hidden;')
+    expect(foundButton.getAttribute('style')).toBe('display: none;')
   })
 
 })

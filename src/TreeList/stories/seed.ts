@@ -9,9 +9,9 @@ export interface FakeRecord {
   parentId: string | null
 }
 
-const lvl1 = new Array(4).fill(null)
+const lvl1 = new Array(1).fill(null)
   .map((item, index): FakeRecord => ({
-    key: String(index + 1),
+    key: '1',
     value: faker.name.firstName(),
     attributes: {
       level: 1
@@ -19,27 +19,27 @@ const lvl1 = new Array(4).fill(null)
     parentId: null
   }))
 
-const lvl2 = new Array(8).fill(null)
+const lvl2 = new Array(4).fill(null)
   .map((item, index): FakeRecord => {
     return {
-      key: String(index + 5),
+      key: String(index + 2),
       value: faker.name.firstName(),
       attributes: {
         level: 2
       },
-      parentId: String(index % 4 + 1)
+      parentId: '1'
     }
   })
 
-const lvl3 = new Array(24).fill(null)
+const lvl3 = new Array(16).fill(null)
   .map((item, index): FakeRecord => {
     return {
-      key: String(index + 13),
+      key: String(index + 6),
       value: faker.name.firstName(),
       attributes: {
         level: 3
       },
-      parentId: String(index % 8 + 5)
+      parentId: String(index % 4 + 2)
     }
   })
 

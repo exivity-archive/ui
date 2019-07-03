@@ -75,7 +75,7 @@ export const BranchSpacer: FC<BranchSpacerProps> = ({ children, index, button, d
         {!!button && cloneElement(button, {
           ...button.props,
           ref: buttonRef,
-          style: { visibility: childCount > 0 ? 'visible' : 'hidden' }
+          style: { display: childCount > 0 ? 'block' : 'none' }
         })
         }
         {children}

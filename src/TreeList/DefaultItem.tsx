@@ -26,7 +26,6 @@ const ToggleExpandedButton = styled.button`
   border-radius: 0;
   outline: 5px solid white;
   border: none;
-  margin-right: 20px;
 
   padding: 0;
 `
