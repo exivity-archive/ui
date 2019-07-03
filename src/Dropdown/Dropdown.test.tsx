@@ -4,20 +4,11 @@ import 'jest-styled-components'
 
 import { Dropdown } from '.'
 
-test('passing checked prop as true should show dropdown content', () => {
-  const dropdown = mount(<Dropdown open triggerComponent={<div>test</div>}>test</Dropdown>)
-
-  const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
-
-  expect(dropdownContent).toHaveStyleRule('visibility', 'visible')
-  dropdown.unmount()
-})
-
-test('passing checked prop as false should hide dropdown content', () => {
+test('passing open prop as false should hide dropdown content', () => {
   const dropdown = mount(<Dropdown open={false} triggerComponent={<div>test</div>}>test</Dropdown>)
 
   const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
 
-  expect(dropdownContent).toHaveStyleRule('visibility', 'hidden')
+  expect(dropdownContent).toHaveStyleRule('display', 'none')
   dropdown.unmount()
 })
