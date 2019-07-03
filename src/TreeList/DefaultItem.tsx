@@ -59,12 +59,14 @@ export function DefaultItem<
       <StyledItem>
         <ListItem style={style} onClick={handleChange}>
           <BranchSpacer
+            spacing={20}
             index={index}
             data={items}>
-            {item[CHILDREN] && <ToggleExpandedButton onClick={item.expand}>
-              <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
-            </ToggleExpandedButton>
-            }
+            {item[CHILDREN] && (
+              <ToggleExpandedButton onClick={item.expand}>
+                <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
+              </ToggleExpandedButton>
+            )}
             {item.value}
           </BranchSpacer>
         </ListItem>
