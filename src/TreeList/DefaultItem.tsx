@@ -8,6 +8,7 @@ import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'
 import { Icon } from '../Icon'
 import { MdRemove, MdAdd } from 'react-icons/md'
+import { CHILDREN } from '../utils/makeParentChildTree'
 
 export const EXPAND_ICON = MdAdd
 export const COLLAPSE_ICON = MdRemove
@@ -53,20 +54,17 @@ export function DefaultItem<
 
   const handleChange = () => onChange && onChange(item)
 
-  const button = (
-    <ToggleExpandedButton onClick={item.expand}>
-      <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
-    </ToggleExpandedButton>
-  )
-
   return useMemo(() => {
     return (
       <StyledItem>
         <ListItem style={style} onClick={handleChange}>
           <BranchSpacer
             index={index}
-            data={items}
-            button={button}>
+            data={items}>
+            {item[CHILDREN] && <ToggleExpandedButton onClick={item.expand}>
+              <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
+            </ToggleExpandedButton>
+            }
             {item.value}
           </BranchSpacer>
         </ListItem>
