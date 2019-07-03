@@ -6,16 +6,18 @@ import { DefaultItem } from './DefaultItem'
 import { ListFocus } from '../ListFocus'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
 
-export interface SelectListItem {
+export interface SelectListData {
   key: string
   value: string
 }
 
 export interface SelectListProps {
-  data: SelectListItem[]
+  data: SelectListData[]
+
+  value?: SelectListData
   width?: string | number
   innerElementType?: string
-  onChange?: (item: SelectListItem) => void
+  onChange?: (item: SelectListData) => void
   noDataText?: string
   children?: any
 }
@@ -31,6 +33,7 @@ export const StyledList = styled(List)`
 export const SelectList = ({
   data,
   width,
+  value,
   onChange,
   innerElementType = 'ul',
   noDataText,
@@ -44,8 +47,8 @@ export const SelectList = ({
       return { items: componentData }
     }
 
-    return { items: componentData, onChange }
-  }, [data])
+    return { items: componentData, onChange, selectedItem: value }
+  }, [data, value])
 
   return (
     <ListFocus>

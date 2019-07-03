@@ -15,7 +15,8 @@ const StyledBranchSpacer = styled.div<StyledBranchSpacerProps>`
   margin-left: ${({ spacing, level }) => spacing * (level - 1)}px;
   height: 100%;
 
-  ${({ distance, spacing, level }) => level > 1 && css`&:after {
+  ${({ distance, spacing, level }) => level > 1 && css`
+    &:after {
       position: relative;
       top: calc(-${100 * distance}% - 50%);
       right: ${spacing}px;

@@ -1,4 +1,4 @@
-import { SelectListItem } from './SelectList'
+import { SelectListData } from './SelectList'
 
 import {
   calculateHeight,
@@ -25,7 +25,7 @@ test(`calculate height should not exceed ${MAX_HEIGHT}`, () => {
 })
 
 test(`getNoDataPlaceholder should return a data placeholder when data doesnt have length`, () => {
-  const items: SelectListItem[] = []
+  const items: SelectListData[] = []
 
   const placeholder = getNoDataPlaceholder(items)
 
@@ -33,7 +33,7 @@ test(`getNoDataPlaceholder should return a data placeholder when data doesnt hav
 })
 
 test(`getNoDataPlaceholder should return a custom text`, () => {
-  const items: SelectListItem[] = []
+  const items: SelectListData[] = []
   const customText = 'this is a custom text'
 
   const placeholder = getNoDataPlaceholder(items, customText)
@@ -42,7 +42,7 @@ test(`getNoDataPlaceholder should return a custom text`, () => {
 })
 
 test(`getNoDataPlaceholder should input data if it has length`, () => {
-  const items: SelectListItem[] = [
+  const items: SelectListData[] = [
     { key: '1', value: 'one' },
     { key: '2', value: 'two' },
     { key: '3', value: 'three' },

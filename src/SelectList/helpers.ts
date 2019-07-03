@@ -1,4 +1,4 @@
-import { SelectListItem } from './SelectList'
+import { SelectListData } from './SelectList'
 
 export const NB_OF_ITEMS = 10
 export const ITEM_HEIGHT = 30
@@ -12,7 +12,7 @@ export const calculateHeight = (data: any[]) => {
   return totalHeight < MAX_HEIGHT ? totalHeight : MAX_HEIGHT
 }
 
-export const getNoDataPlaceholder = (data: SelectListItem[], noDataText?: string): SelectListItem[] => {
+export const getNoDataPlaceholder = (data: SelectListData[], noDataText?: string): SelectListData[] => {
   if (!data.length) {
     return [{ key: NO_DATA_KEY, value: noDataText ? noDataText : NO_DATA_TEXT }]
   }

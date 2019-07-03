@@ -2,7 +2,7 @@ import React, { CSSProperties, useMemo } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
-import { SelectListItem } from '../SelectList/SelectList'
+import { SelectListData } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
 import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'
@@ -39,7 +39,7 @@ const ButtonIcon = styled(Icon)`
   }
 `
 
-export interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
+export interface TreeListItemProps<Data extends TreeListItem<SelectListData>> {
   data: { items: Data[], onChange: (item: Data) => void }
   style: CSSProperties
   index: number
@@ -47,7 +47,7 @@ export interface TreeListItemProps<Data extends TreeListItem<SelectListItem>> {
 }
 
 export function DefaultItem<
-  Data extends TreeListItem<SelectListItem>
+  Data extends TreeListItem<SelectListData>
 > ({ data, style, index }: TreeListItemProps<Data>) {
   const { items, onChange } = data
   const item = items[index]

@@ -1,18 +1,18 @@
 import React, { ReactElement } from 'react'
 
 import { SelectList } from '../SelectList'
-import { SelectListProps, SelectListItem } from '../SelectList/SelectList'
+import { SelectListProps, SelectListData } from '../SelectList/SelectList'
 import { useExpandable, TreeListItem } from '../useExpandable'
 import { DefaultItem, TreeListItemProps } from './DefaultItem'
 
-interface TreeListProps<Data extends SelectListItem> {
+interface TreeListProps<Data extends SelectListData> {
   parentKeyAccessor: (item: Data) => string
   data: Data[]
   expandedKeys?: string[]
   children?: ReactElement<TreeListItemProps<TreeListItem<Data>>>
 }
 
-export function TreeList<Data extends SelectListItem> ({
+export function TreeList<Data extends SelectListData> ({
   data,
   parentKeyAccessor,
   expandedKeys,
