@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.27](https://github.com/exivity/ui/compare/v0.14.26...v0.14.27) (2019-07-10)
+
+
+
 ### [0.14.26](https://github.com/exivity/ui/compare/v0.14.25...v0.14.26) (2019-07-03)
 
 
