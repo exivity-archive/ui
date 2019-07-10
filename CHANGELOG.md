@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.26](https://github.com/exivity/ui/compare/v0.14.25...v0.14.26) (2019-07-03)
+
+
+### Bug Fixes
+
+* replaced visibility for display ([#162](https://github.com/exivity/ui/issues/162)) ([1220cc2](https://github.com/exivity/ui/commit/1220cc2))
+
+
+
+### [0.14.25](https://github.com/exivity/ui/compare/v0.14.24...v0.14.25) (2019-07-01)
+
+
+
+### [0.14.24](https://github.com/exivity/ui/compare/v0.14.23...v0.14.24) (2019-06-28)
+
+
+
+### [0.14.23](https://github.com/exivity/ui/compare/v0.14.22...v0.14.23) (2019-06-27)
+
+
+
+### [0.14.22](https://github.com/exivity/ui/compare/v0.14.21...v0.14.22) (2019-06-27)
+
+
+
+### [0.14.21](https://github.com/exivity/ui/compare/v0.14.20...v0.14.21) (2019-06-27)
+
+
+
+### [0.14.20](https://github.com/exivity/ui/compare/v0.14.19...v0.14.20) (2019-06-26)
+
+
+
+### [0.14.19](https://github.com/exivity/ui/compare/v0.14.18...v0.14.19) (2019-06-20)
+
+
+
 ### [0.14.18](https://github.com/exivity/ui/compare/v0.14.17...v0.14.18) (2019-06-19)
 
 

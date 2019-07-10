@@ -1,12 +1,10 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { useMemo, cloneElement, isValidElement, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
-import {
-  makeCssPosition
-} from './helpers'
+import { makeDefaultCSS } from './helpers'
 
 import { fromTheme } from '../utils/styled'
 import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
@@ -17,9 +15,8 @@ const StyledDropdown = styled(Block)`
 
 interface ContentProps {
   open: boolean
-  useTriggerComponentWidth?: boolean
-  width?: string
-  position?: string
+  triggerWidth?: string
+  position?: string | null
 }
 
 const Content = styled(Block) <ContentProps>`
@@ -30,11 +27,11 @@ const Content = styled(Block) <ContentProps>`
   z-index: ${fromTheme(theme => theme.global.zPriority.background)};
 
   min-width: 160px;
-  ${props => (props.useTriggerComponentWidth && props.width) && css`
-    width: ${props.width};
+  ${props => props.triggerWidth && css`
+    width: ${props.triggerWidth};
   `}
 
-  visibility: ${({ open }) => open ? 'visible' : 'hidden'};
+  ${({ open }) => !open && 'display: none;'}
   ${({ position }) => css`${position}`}
 `
 
@@ -50,51 +47,44 @@ export interface DropdownProps extends BlockProps {
   test?: string
 }
 
-export const Dropdown: React.FC<DropdownProps> = ({
+export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = ({
   className,
   triggerComponent,
   children,
   open,
-  horizontal = 'auto',
-  vertical = 'auto',
+  horizontal = Horizontal.AUTO,
+  vertical = Vertical.AUTO,
   breakDistance = 20,
   useTriggerComponentWidth,
   onOutsideClick,
   test = 'dropdown',
   ...blockProps
 }) => {
-  const [refs, layout, handleLayout] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
+  const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
-  useEffect(() => {
-    window.addEventListener('resize', handleLayout)
-    return () => window.removeEventListener('resize', handleLayout)
-  }, [])
+  const position = useMemo(() => parent.rect && makeDefaultCSS(positioning, parent.rect.height), [positioning])
 
-  const position = useMemo(() => {
-    if (refs.parent.current) {
-      return makeCssPosition(layout, refs.parent.current.getBoundingClientRect().height)
-    }
-  }, [layout])
-
-  const triggerWidth = refs.parent.current
-    ? `${refs.parent.current.clientWidth}px`
+  const triggerWidth = parent.rect
+    ? `${parent.rect.width}px`
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test={test} ref={refs.parent}>
+    <StyledDropdown className={className} data-test={test} ref={parent.ref}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
-        <Content useTriggerComponentWidth={useTriggerComponentWidth}
-          width={useTriggerComponentWidth ? triggerWidth : undefined}
+        <Content triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
           data-test={`${test}-content`}
-          ref={refs.target}
+          ref={target.ref}
           position={position}
-          open={open}>
-          <Block {...blockProps}>
-            {children}
-          </Block>
+          open={open}
+          {...blockProps}>
+          {isValidElement(children)
+            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
+            : children}
         </Content>
       </OutsideClickListener>
     </StyledDropdown>
   )
 }
+
+Dropdown.Content = Content
