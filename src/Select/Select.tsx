@@ -18,7 +18,7 @@ export interface SelectProps {
   name?: string
   value?: string
   placeholder?: string
-  valueComponent?: ReactElement<any>
+  triggerComponent?: ReactElement<any>
   onOutsideClick?: (isOpen: boolean, close: Function) => void
   useTriggerComponentWidth?: boolean
   onChange?: (value: any) => void
@@ -35,8 +35,8 @@ export const injectComponent = (component: ReactElement<any>, props: InjectValue
   })
 }
 
-const getTriggerComponent = (props: InjectValueAndHandler, valueComponent?: ReactElement<any>) => {
-  if (valueComponent) return injectComponent(valueComponent, props)
+const getTriggerComponent = (props: InjectValueAndHandler, triggerComponent?: ReactElement<any>) => {
+  if (triggerComponent) return injectComponent(triggerComponent, props)
   // Does not need onChange because SelectInput only display data
   return <SelectInput {...props} />
 }
@@ -46,7 +46,7 @@ export const Select = ({
   value,
   placeholder,
   onChange,
-  valueComponent,
+  triggerComponent,
   useTriggerComponentWidth = true,
   onOutsideClick,
   vertical,
@@ -59,7 +59,7 @@ export const Select = ({
   const [isOpen, setIsOpen] = useState(false)
   const close = () => setIsOpen(false)
 
-  const valueComponentProps = {
+  const triggerComponentProps = {
     ...rest,
     name,
     placeholder,
@@ -67,15 +67,13 @@ export const Select = ({
     onClick: () => setIsOpen(!isOpen)
   }
 
-  const triggerComponent = getTriggerComponent(valueComponentProps, valueComponent)
-
   return (
     <Dropdown {...rest} py={py}
       open={isOpen}
       data-test={test}
       vertical={vertical}
       horizontal={horizontal}
-      triggerComponent={triggerComponent}
+      triggerComponent={getTriggerComponent(triggerComponentProps, triggerComponent)}
       useTriggerComponentWidth={useTriggerComponentWidth}
       onOutsideClick={
         () => onOutsideClick
