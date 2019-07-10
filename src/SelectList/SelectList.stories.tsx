@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -13,14 +13,14 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
-const CustomItem: React.FC = ({ data, style, index }: any) => {
-  const { items, onChange } = data
+const CustomItem: FC = ({ data, style, index }: any) => {
+  const { items, onChange, selectedItem } = data
   const item = items[index]
 
   const handleOnClick = () => onChange(item)
 
   return <div style={{ ...style, backgroundColor: 'purple', color: 'white' }} onClick={handleOnClick}>
-    {item.value}
+    {item.value} {selectedItem && item.key === selectedItem.key && 'selected'}
   </div>
 }
 
@@ -29,25 +29,22 @@ const customNoData = 'Custom noData item'
 export default storiesOf('molecules/SelectList', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={items}/>
+    <SelectList data={items} value={state} onChange={storeState} />
   ))
   .add('Custom item', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={items}>
+    <SelectList data={items} value={state} onChange={storeState}>
       {CustomItem}
     </SelectList>
   ))
   .add('long', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={LONG_LIST}/>
+    <SelectList data={LONG_LIST} value={state} onChange={storeState} />
   ))
   .add('no data', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={[]}/>
+    <SelectList data={[]} value={state} onChange={storeState} />
   ))
   .add('custom noDataText', ({ state, storeState }: any) => (
-    <SelectList value={state && state.key} onChange={storeState} data={[]} noDataText={customNoData}/>
-  ))
-  .add('custom height', ({ state, storeState }: any) => (
-    <SelectList height={800} value={state && state.key} onChange={storeState} data={LONG_LIST}/>
+    <SelectList data={[]} noDataText={customNoData} value={state} onChange={storeState} />
   ))
   .add('custom width', ({ state, storeState }: any) => (
-    <SelectList width='30%' value={state && state.key} onChange={storeState} data={LONG_LIST}/>
+    <SelectList width='30%' data={LONG_LIST} value={state} onChange={storeState} />
   ))

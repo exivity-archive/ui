@@ -1,8 +1,7 @@
 import React from 'react'
-import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
+import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { SelectList } from '.'
-import { SelectInput } from '../SelectInput'
 
 test('SelectList renders a list of items', () => {
   const items = [
@@ -12,7 +11,7 @@ test('SelectList renders a list of items', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<SelectList value='1' data={items}/>)
+  const wrapper = mountWithTheme(<SelectList data={items} />)
 
   expect(wrapper.find('li').length).toBe(4)
 })
@@ -29,7 +28,7 @@ test('SelectList returns an item onChange', () => {
 
   const onChange = jest.fn(item => item)
 
-  const wrapper = mountWithTheme(<SelectList value='1' onChange={onChange} data={items}/>)
+  const wrapper = mountWithTheme(<SelectList onChange={onChange} data={items} />)
 
   wrapper.find('li')
     .first()
@@ -48,7 +47,7 @@ test('SelectList uses a default item component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const wrapper = mountWithTheme(<SelectList value='1' data={items}/>)
+  const wrapper = mountWithTheme(<SelectList data={items} />)
 
   expect(wrapper.find('li').length).toBe(4)
 })
@@ -61,9 +60,9 @@ test('SelectList uses a custom item component', () => {
     { key: '4', value: 'four' }
   ]
 
-  const Custom = ({ style }: any) => <div style={style} className='test-id'/>
+  const Custom = () => <div className='test-id' />
 
-  const wrapper = mountWithTheme(<SelectList value='1' data={items}>{Custom}</SelectList>)
+  const wrapper = mountWithTheme(<SelectList data={items}>{Custom}</SelectList>)
 
   expect(wrapper.find('.test-id').length).toBe(4)
   expect(wrapper.find('li').length).toBe(0)

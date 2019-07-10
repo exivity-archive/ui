@@ -6,19 +6,18 @@ import { DefaultItem } from './DefaultItem'
 import { ListFocus } from '../ListFocus'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
 
-export interface SelectListItem {
+export interface SelectListData {
   key: string
   value: string
 }
 
 export interface SelectListProps {
-  value?: string
-  data: SelectListItem[]
-  height?: string | number
+  data: SelectListData[]
+
+  value?: SelectListData
   width?: string | number
-  useTriggerComponentWidth?: boolean
   innerElementType?: string
-  onChange?: (item: SelectListItem) => void
+  onChange?: (item: SelectListData) => void
   noDataText?: string
   children?: any
 }
@@ -31,17 +30,15 @@ export const StyledList = styled(List)`
   }
 `
 
-export const SelectList: React.FC<SelectListProps> = ({
-  value,
+export const SelectList = ({
   data,
-  height,
   width,
+  value,
   onChange,
-  useTriggerComponentWidth = true,
   innerElementType = 'ul',
   noDataText,
   children
-}) => {
+}: SelectListProps) => {
   const componentData = getNoDataPlaceholder(data, noDataText)
   const calculatedHeight = calculateHeight(componentData)
 
@@ -50,8 +47,8 @@ export const SelectList: React.FC<SelectListProps> = ({
       return { items: componentData }
     }
 
-    return { items: componentData, onChange }
-  }, [data, onChange])
+    return { items: componentData, onChange, selectedItem: value }
+  }, [data, value])
 
   return (
     <ListFocus>
