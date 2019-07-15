@@ -18,24 +18,24 @@ test('SelectT uses a default value component', () => {
 })
 
 test('SelectT uses a custom value component', () => {
-  const ValueComp = <input id='test-id' onChange={jest.fn}/>
+  const ValueComp = <input id='test-id' onChange={jest.fn} />
 
-  const wrapper = mountWithTheme(<Select value='one' valueComponent={ValueComp}><div>placeholder</div></Select>)
+  const wrapper = mountWithTheme(<Select value='one' triggerComponent={ValueComp}><div>placeholder</div></Select>)
 
   expect(wrapper.find('#test-id')).toBeDefined()
 })
 
 test('SelectT inject value component with selected value', () => {
-  const ValueComp = <input id='test-id' onChange={jest.fn}/>
+  const ValueComp = <input id='test-id' onChange={jest.fn} />
 
-  const wrapper = mountWithTheme(<Select value='one' valueComponent={ValueComp}><div>placeholder</div></Select>)
+  const wrapper = mountWithTheme(<Select value='one' triggerComponent={ValueComp}><div>placeholder</div></Select>)
 
   expect(wrapper.find('#test-id').props().value).toBe('one')
 })
 
 test('injectComponents', () => {
   const injectedValue = 'injected'
-  const wrapper = mountWithTheme(<SelectInput value='test'/>)
+  const wrapper = mountWithTheme(<SelectInput value='test' />)
   const input = wrapper.find('input')
 
   // @ts-ignore
