@@ -48,7 +48,7 @@ export const SelectList = ({
     }
 
     return { items: componentData, onChange, selectedItem: value }
-  }, [data, value])
+  }, [data, value, onChange])
 
   return (
     <ListFocus>
