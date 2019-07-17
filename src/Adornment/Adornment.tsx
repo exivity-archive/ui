@@ -28,7 +28,7 @@ const StyledAdornment = styled.span <StyledAdornmentProps>`
   }
 `
 
-export const AdornmentWrapper = styled(Block)`
+const AdornmentWrapper = styled(Block)`
   position: relative;
 `
 

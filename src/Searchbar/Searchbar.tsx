@@ -27,11 +27,11 @@ const StyledInput = styled(Input)`
   }
 
   ${(props: SearchbarProps) => props.animated && css`
-    will-change: padding-left;
-    transition: padding-left .1s ease;
+      will-change: padding-left;
+      transition: padding-left .1s ease;
 
-    &:hover, &:focus {
-      padding-left: 1em;
+      &:hover, &:focus {
+        padding-left: 1em !important;
     }
   `}
 
