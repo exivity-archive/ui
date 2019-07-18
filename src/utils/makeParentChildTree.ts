@@ -1,7 +1,7 @@
 import { KeyedItem, Map, createMap } from '.'
 
-export const PARENT = 'parent'
-export const CHILDREN = 'children'
+export const PARENT = 'ex-exp-parent'
+export const CHILDREN = 'ex-exp-children'
 
 export type TreeItem<T> = KeyedItem<T> & {
   [PARENT]?: TreeItem<T>
