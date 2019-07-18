@@ -31,7 +31,7 @@ const StyledInput = styled(Input)`
     transition: padding-left .1s ease;
 
     &:hover, &:focus {
-      padding-left: 1em;
+      padding-left: 1em !important;
     }
   `}
 
