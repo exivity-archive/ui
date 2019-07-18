@@ -18,10 +18,10 @@ test('createParentChildrenMap creates a map by keys', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  expect(map['1']).toBe(list[0])
-  expect(map['2']).toBe(list[1])
-  expect(map['3']).toBe(list[2])
-  expect(map['4']).toBe(list[3])
+  expect(map['1']).toEqual(expect.objectContaining(list[0]))
+  expect(map['2']).toEqual(expect.objectContaining(list[1]))
+  expect(map['3']).toEqual(expect.objectContaining(list[2]))
+  expect(map['4']).toEqual(expect.objectContaining(list[3]))
 })
 
 test('createParentChildrenMap creates a map with a parent reference', () => {
@@ -34,13 +34,13 @@ test('createParentChildrenMap creates a map with a parent reference', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  expect(map['1'][PARENT]).toBe(undefined)
-  expect(map['2'][PARENT]).toBe(list[0])
-  expect(map['3'][PARENT]).toBe(list[1])
-  expect(map['4'][PARENT]).toBe(list[2])
+  expect(map['1'][PARENT]).toEqual(undefined)
+  expect(map['2'][PARENT]).toEqual(expect.objectContaining(list[0]))
+  expect(map['3'][PARENT]).toEqual(expect.objectContaining(list[1]))
+  expect(map['4'][PARENT]).toEqual(expect.objectContaining(list[2]))
 })
 
-test('createParentChildrenMap creates a map with child references', () => {
+test('createParentChildrenMap creates a map with child reference', () => {
   const list = [
     { key: '1', parentId: null },
     { key: '2', parentId: '1' },
@@ -50,9 +50,28 @@ test('createParentChildrenMap creates a map with child references', () => {
 
   const map = createParentChildrenMap(list, (item) => item.parentId)
 
-  expect(map['1'][CHILDREN][0]).toBe(list[1])
-  expect(map['2'][CHILDREN][0]).toBe(list[2])
-  expect(map['3'][CHILDREN][0]).toBe(list[3])
+  expect(map['1'][CHILDREN][0]).toEqual(expect.objectContaining(list[1]))
+  expect(map['2'][CHILDREN][0]).toEqual(expect.objectContaining(list[2]))
+  expect(map['3'][CHILDREN][0]).toEqual(expect.objectContaining(list[3]))
+  expect(map['4'][CHILDREN]).toBe(undefined)
+})
+
+test('createParentChildrenMap creates a map with copies', () => {
+  const list = [
+    { key: '1', parentId: null },
+    { key: '2', parentId: '1' },
+    { key: '3', parentId: '2' },
+    { key: '4', parentId: '3' }
+  ]
+
+  const map = createParentChildrenMap(list, (item) => item.parentId)
+
+  expect(map['1'][CHILDREN][0]).toEqual(expect.objectContaining(list[1]))
+  expect(map['1'][CHILDREN][0]).not.toBe(list[1])
+  expect(map['2'][CHILDREN][0]).toEqual(expect.objectContaining(list[2]))
+  expect(map['1'][CHILDREN][0]).not.toBe(list[2])
+  expect(map['3'][CHILDREN][0]).toEqual(expect.objectContaining(list[3]))
+  expect(map['1'][CHILDREN][0]).not.toBe(list[3])
   expect(map['4'][CHILDREN]).toBe(undefined)
 })
 
