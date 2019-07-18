@@ -12,7 +12,7 @@ export function createMap<T> (data: KeyedItem<T>[]): Map<KeyedItem<T>> {
   const map: Map<KeyedItem<T>> = {}
 
   data.forEach((item) => {
-    map[item.key] = item
+    map[item.key] = { ...item }
   })
 
   return map
