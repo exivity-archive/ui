@@ -13,19 +13,19 @@ storiesOf('molecules|Dropdown', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
-      <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
-        <div>
-            <Dropdown
-            open={state.one}
-            triggerComponent={
-              <Button secondary onClick={() => storeState({ one: !state.one })}>Click me</Button>
-            }>
-            <div style={{ width: 300 }}>
-              {Faker.lorem.paragraphs(2)}
-            </div>
-          </Dropdown>
-        </div>
-      </Flex>
+    <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
+      <div>
+        <Dropdown
+          open={state.one}
+          triggerComponent={
+            <Button secondary onClick={() => storeState({ one: !state.one })}>Click me</Button>
+          }>
+          <div style={{ width: 300 }}>
+            {Faker.lorem.paragraphs(2)}
+          </div>
+        </Dropdown>
+      </div>
+    </Flex>
   ))
   .add('position', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' height={500} width={1000}>
@@ -71,5 +71,21 @@ storiesOf('molecules|Dropdown', module)
           </Block>
         </Dropdown>
       </Row>
+    </Flex>
+  ))
+  .add('hidden overflow when closed', ({ state, storeState }: any) => (
+    <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
+      <div>
+        <Dropdown
+          vertical={Vertical.BOTTOM}
+          open={state.one}
+          triggerComponent={
+            <Button secondary onClick={() => storeState({ one: !state.one })}>Click me</Button>
+          }>
+          <div style={{ width: 300, height: 1200 }}>
+            {Faker.lorem.paragraphs(2)}
+          </div>
+        </Dropdown>
+      </div>
     </Flex>
   ))

@@ -9,6 +9,6 @@ test('passing open prop as false should hide dropdown content', () => {
 
   const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
 
-  expect(dropdownContent).toHaveStyleRule('display', 'none')
+  expect(dropdownContent).toHaveStyleRule('visibility', 'hidden')
   dropdown.unmount()
 })

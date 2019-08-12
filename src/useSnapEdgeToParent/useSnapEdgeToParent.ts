@@ -24,7 +24,7 @@ export function useSnapEdgeToParent (breakDistances: BreakDistance | number, ini
 
   useEffect(() => {
     window.addEventListener('resize', calculatePositioning)
-    return () => window.removeEventListener('rezize', calculatePositioning)
+    return () => window.removeEventListener('resize', calculatePositioning)
   }, [calculatePositioning])
 
   return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
