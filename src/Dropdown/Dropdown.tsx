@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement } from 'react'
+import React, { cloneElement, isValidElement, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -86,7 +86,8 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
           open={open}
           {...blockProps}>
           {isValidElement(children)
-            ? cloneElement(children, { ...children.props, positioning })
+            // build will fail without this ReactElement<any> cast
+            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
             : children}
         </Content>
       </OutsideClickListener>
