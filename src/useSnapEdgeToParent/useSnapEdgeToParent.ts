@@ -3,7 +3,7 @@ import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap
 import { useClientRect } from '../useClientRect'
 import { useWindowListener } from '../useWindowListener'
 
-export function useSnapEdgeToParent(breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
+export function useSnapEdgeToParent (breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
   const [targetRect, targetRef] = useClientRect()
   const [parentRect, parentRef] = useClientRect()
   const [containerRect, containerRef] = useClientRect()
