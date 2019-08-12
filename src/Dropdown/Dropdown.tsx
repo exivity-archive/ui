@@ -31,7 +31,10 @@ const Content = styled(Block) <ContentProps>`
     width: ${props.triggerWidth};
   `}
 
-  ${({ open }) => !open && 'display: none;'}
+  ${({ open }) => !open && css`
+    visibility: hidden;
+    overflow: hidden;
+  `}
   ${({ position }) => css`${position}`}
 `
 
@@ -62,7 +65,9 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
 }) => {
   const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
-  const position = useMemo(() => parent.rect && makeDefaultCSS(positioning, parent.rect.height), [positioning])
+  const position = parent.rect
+    ? makeDefaultCSS(positioning, parent.rect.height)
+    : undefined
 
   const triggerWidth = parent.rect
     ? `${parent.rect.width}px`

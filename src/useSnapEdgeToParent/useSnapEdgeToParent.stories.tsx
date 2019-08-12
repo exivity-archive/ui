@@ -26,15 +26,11 @@ interface DropdownProps {
 }
 
 const Dropdown: FC<DropdownProps> = ({ breakDistances, initialPositioning, relativeToContainer }) => {
-  const [{ parent, target, container }, positioning, handlePositioning] = useSnapEdgeToParent(breakDistances, initialPositioning)
+  const [{ parent, target, container }, positioning] = useSnapEdgeToParent(breakDistances, initialPositioning)
+
   const position = useMemo(() => {
     return { [positioning.horizontal]: 0, [positioning.vertical]: 20 }
   }, [positioning])
-
-  useEffect(() => {
-    window.addEventListener('resize', handlePositioning)
-    return () => window.removeEventListener('resize', handlePositioning)
-  })
 
   return (
     <Flex

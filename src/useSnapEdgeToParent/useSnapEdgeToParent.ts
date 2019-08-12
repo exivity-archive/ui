@@ -1,32 +1,31 @@
-import { useState, useMemo, useLayoutEffect, useEffect, useCallback } from 'react'
+import { useState, useLayoutEffect, useRef, RefObject } from 'react'
 import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap, Vertical, Horizontal } from './helpers'
-import { useClientRect } from '../useClientRect'
+import { useWindowEvent } from '../useWindowEvent'
 
-export function useSnapEdgeToParent (breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
-  const [targetRect, targetRef] = useClientRect()
-  const [parentRect, parentRef] = useClientRect()
-  const [containerRect, containerRef] = useClientRect()
+function getRect(ref: RefObject<HTMLElement>) {
+  return ref.current && ref.current!.getBoundingClientRect()
+}
+
+export function useSnapEdgeToParent(breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
+  const targetRef = useRef<HTMLElement>(null)
+  const parentRef = useRef<HTMLElement>(null)
+  const containerRef = useRef<HTMLElement>(null)
 
   const refAndRectMap = {
-    target: { rect: targetRect, ref: targetRef },
-    parent: { rect: parentRect, ref: parentRef },
-    container: { rect: containerRect, ref: containerRef }
+    target: { rect: getRect(targetRef), ref: targetRef },
+    parent: { rect: getRect(parentRef), ref: parentRef },
+    container: { rect: getRect(containerRef), ref: containerRef }
   }
 
-  const [positioning, setPositioning] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
+  const [positioning, setPositioning] = useState({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  const calculatePositioning = useCallback(
-    () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning)),
-    [targetRect, parentRect, containerRect, breakDistances])
+  function calculatePositioning() {
+    const newPos = getPositioning(refAndRectMap, breakDistances, initialPositioning)
+    setPositioning(newPos)
+  }
 
-  useLayoutEffect(calculatePositioning, [])
+  useLayoutEffect(calculatePositioning, [targetRef.current, parentRef.current])
+  useWindowEvent('resize', calculatePositioning)
 
-  useEffect(() => {
-    window.addEventListener('resize', calculatePositioning)
-    return () => window.removeEventListener('resize', calculatePositioning)
-  }, [calculatePositioning])
-
-  return useMemo(() => {
-    return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
-  }, [positioning, targetRect, parentRect, containerRect, targetRef, parentRef, containerRef])
+  return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
 }

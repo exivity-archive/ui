@@ -7,7 +7,7 @@ export interface RefAndRectMap {
 }
 
 interface RefAndRect {
-  ref: (node: HTMLElement | null) => void
+  ref: React.RefObject<HTMLElement>
   rect: Rect | null
 }
 
@@ -18,9 +18,9 @@ export enum Vertical {
 }
 
 export enum Horizontal {
-   LEFT = 'right',
-   RIGHT = 'left',
-   AUTO = 'auto'
+  LEFT = 'right',
+  RIGHT = 'left',
+  AUTO = 'auto'
 }
 
 export interface AutoPosition {
@@ -40,7 +40,7 @@ export type BreakDistance = {
 
 const defaultPosition: AutoPosition = { vertical: Vertical.AUTO, horizontal: Horizontal.AUTO }
 
-export function getPositioning (
+export function getPositioning(
   { target, parent, container }: RefAndRectMap,
   breakDistance: BreakDistance,
   position: Partial<AutoPosition> = {}
@@ -58,7 +58,7 @@ export function getPositioning (
   }
 }
 
-export function getMeasures (targetRect: Rect | null, parentRect: Rect | null) {
+export function getMeasures(targetRect: Rect | null, parentRect: Rect | null) {
   if (targetRect && parentRect) {
     const { width, height } = targetRect
     const { top, left } = parentRect
@@ -69,7 +69,7 @@ export function getMeasures (targetRect: Rect | null, parentRect: Rect | null) {
   }
 }
 
-export function getEdges (containerRect: Rect | null, breakDistance: BreakDistance) {
+export function getEdges(containerRect: Rect | null, breakDistance: BreakDistance) {
   const { vertical, horizontal } = buildOrUseBreakDistance(breakDistance)
 
   if (containerRect) {
@@ -80,7 +80,7 @@ export function getEdges (containerRect: Rect | null, breakDistance: BreakDistan
   }
 }
 
-export function buildOrUseBreakDistance (breakDistance: BreakDistance) {
+export function buildOrUseBreakDistance(breakDistance: BreakDistance) {
   return typeof breakDistance === 'number' ? {
     horizontal: breakDistance,
     vertical: breakDistance

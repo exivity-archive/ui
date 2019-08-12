@@ -2,8 +2,9 @@ import { useState, useCallback } from 'react'
 
 export type Rect = ClientRect | DOMRect
 
-export function useClientRect () {
+export function useClientRect() {
   const [node, setNode] = useState<HTMLElement | null>(null)
+  console.log(node)
 
   const ref = useCallback((node: HTMLElement | null) => {
     if (node !== null) {
