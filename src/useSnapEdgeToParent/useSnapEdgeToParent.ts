@@ -1,31 +1,31 @@
-import { useState, useLayoutEffect, useRef, RefObject } from 'react'
+import { useState, useLayoutEffect, useEffect } from 'react'
 import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap, Vertical, Horizontal } from './helpers'
-import { useWindowEvent } from '../useWindowEvent'
+import { useClientRect } from '../useClientRect'
 
-function getRect(ref: RefObject<HTMLElement>) {
-  return ref.current && ref.current!.getBoundingClientRect()
-}
-
-export function useSnapEdgeToParent(breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
-  const targetRef = useRef<HTMLElement>(null)
-  const parentRef = useRef<HTMLElement>(null)
-  const containerRef = useRef<HTMLElement>(null)
+export function useSnapEdgeToParent (breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
+  const [targetRect, targetRef, targetNode] = useClientRect()
+  const [parentRect, parentRef, parentNode] = useClientRect()
+  const [containerRect, containerRef, containerNode] = useClientRect()
 
   const refAndRectMap = {
-    target: { rect: getRect(targetRef), ref: targetRef },
-    parent: { rect: getRect(parentRef), ref: parentRef },
-    container: { rect: getRect(containerRef), ref: containerRef }
+    target: { rect: targetRect, ref: targetRef },
+    parent: { rect: parentRect, ref: parentRef },
+    container: { rect: containerRect, ref: containerRef }
   }
 
   const [positioning, setPositioning] = useState({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  function calculatePositioning() {
+  function calculatePositioning () {
     const newPos = getPositioning(refAndRectMap, breakDistances, initialPositioning)
     setPositioning(newPos)
   }
 
-  useLayoutEffect(calculatePositioning, [targetRef.current, parentRef.current])
-  useWindowEvent('resize', calculatePositioning)
+  useLayoutEffect(calculatePositioning, [targetNode, parentNode, containerNode])
+
+  useEffect(() => {
+    window.addEventListener('resize', calculatePositioning)
+    return () => window.removeEventListener('rezize', calculatePositioning)
+  }, [calculatePositioning])
 
   return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
 }
