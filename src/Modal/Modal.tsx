@@ -5,6 +5,7 @@ import { Overlay } from '../Overlay'
 import { Button } from '../Button'
 
 import { fromTheme } from '../utils/styled'
+import { Heading } from '../Heading'
 
 const ModalWrapper = styled.div`
   position: absolute;
@@ -46,7 +47,9 @@ export const Modal: FC<ModalProps> = ({ title, children, buttons = [], ...rest }
   <Overlay {...rest}>
     <ModalWrapper>
       <Header>
-        {title}
+        <Heading>
+          {title}
+        </Heading>
       </Header>
       <Body>{children}</Body>
       <Footer>{Children.map(buttons,
