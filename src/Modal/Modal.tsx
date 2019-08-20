@@ -1,17 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode, Children, cloneElement } from 'react'
 import styled from 'styled-components'
 
-import { fromTheme } from '../utils/styled'
+import { Overlay } from '../Overlay'
 import { Button } from '../Button'
-import { Heading } from '../Heading'
 
-const Overlay = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.1);
-  position: absolute;
-  z-index: ${fromTheme(theme => theme.global.zPriority.foreground)};
-`
+import { fromTheme } from '../utils/styled'
 
 const ModalWrapper = styled.div`
   position: absolute;
@@ -44,8 +37,8 @@ const Footer = styled.div`
 `
 
 interface ModalProps {
-  title: string
-  children: React.ReactNode
+  title: ReactNode
+  children: ReactNode
   buttons: JSX.Element[]
 }
 
@@ -53,11 +46,11 @@ export const Modal: FC<ModalProps> = ({ title, children, buttons = [], ...rest }
   <Overlay {...rest}>
     <ModalWrapper>
       <Header>
-        <Heading>{title}</Heading>
+        {title}
       </Header>
       <Body>{children}</Body>
-      <Footer>{React.Children.map(buttons,
-        (child, index) => React.cloneElement(child, { ...child.props, key: index }))}</Footer>
+      <Footer>{Children.map(buttons,
+        (child, index) => cloneElement(child, { ...child.props, key: index }))}</Footer>
     </ModalWrapper>
   </Overlay>
 )
