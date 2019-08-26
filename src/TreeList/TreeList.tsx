@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { Component, FC } from 'react'
 
 import { SelectList } from '../SelectList'
 import { SelectListProps, SelectListData } from '../SelectList/SelectList'
@@ -9,7 +9,7 @@ interface TreeListProps<Data extends SelectListData> {
   parentKeyAccessor: (item: Data) => string
   data: Data[]
   expandedKeys?: string[]
-  children?: ReactElement<TreeListItemProps<TreeListItem<Data>>>
+  children?: Component<TreeListItemProps<TreeListItem<Data>>> | FC<TreeListItemProps<TreeListItem<Data>>>
 }
 
 export function TreeList<Data extends SelectListData> ({

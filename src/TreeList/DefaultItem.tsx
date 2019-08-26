@@ -31,6 +31,10 @@ const ToggleExpandedButton = styled.button`
   padding: 0;
 `
 
+const StyledValue = styled.span`
+  margin-left: 10px
+`
+
 const ButtonIcon = styled(Icon)`
   svg {
     width: 100%;
@@ -67,7 +71,7 @@ export function DefaultItem<
                 <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
               </ToggleExpandedButton>
             )}
-            {item.value}
+            <StyledValue>{item.value}</StyledValue>
           </BranchSpacer>
         </ListItem>
       </StyledItem>
