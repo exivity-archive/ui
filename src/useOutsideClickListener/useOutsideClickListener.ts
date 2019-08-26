@@ -7,7 +7,6 @@ export function useOutsideClickListener (onOutsideClick: Function, node: HTMLDiv
     const handleOutsideClick: EventListener = (event: any) => {
       if (!event.target) {
         onOutsideClick(event)
-        return ref
       }
 
       if (ref.current && !ref.current.contains(event.target)) {
