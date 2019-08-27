@@ -18,7 +18,7 @@ export function TreeList<Data extends SelectListData> ({
   expandedKeys,
   children,
   ...rest
-}: SelectListProps & TreeListProps<Data>) {
+}: SelectListProps<Data> & TreeListProps<Data>) {
   const [expandableData] = useExpandable(data, parentKeyAccessor, expandedKeys)
 
   return (
@@ -27,3 +27,5 @@ export function TreeList<Data extends SelectListData> ({
     </SelectList>
   )
 }
+
+export { ToggleExpandedButton } from './DefaultItem'
