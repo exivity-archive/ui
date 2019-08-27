@@ -21,11 +21,11 @@ const StyledItem = styled.div`
   }
 `
 
-const ToggleExpandedButton = styled.button`
+export const ToggleExpandedButton = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 0;
-  outline: 5px solid transparent;
+  outline: 5px solid white;
   border: none;
 
   padding: 0;

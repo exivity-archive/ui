@@ -27,3 +27,5 @@ export function TreeList<Data extends SelectListData> ({
     </SelectList>
   )
 }
+
+export { ToggleExpandedButton } from './DefaultItem'
