@@ -44,7 +44,7 @@ const ButtonIcon = styled(Icon)`
 `
 
 export interface TreeListItemProps<Data extends TreeListItem<SelectListData>> {
-  data: { items: Data[], onChange: (item: Data, e: React.MouseEvent<HTMLLIElement>) => void }
+  data: { items: Data[], onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
   style: CSSProperties
   index: number
   isScrolling: boolean
