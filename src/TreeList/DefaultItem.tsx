@@ -56,9 +56,9 @@ export function DefaultItem<
   const { items, onChange } = data
   const item = items[index]
 
-  const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
-
   return useMemo(() => {
+    const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
+
     return (
       <StyledItem>
         <ListItem style={style} onClick={handleChange}>
@@ -79,5 +79,5 @@ export function DefaultItem<
         </ListItem>
       </StyledItem>
     )
-  }, [item, index, items, handleChange])
+  }, [item, index, items, onChange])
 }
