@@ -17,7 +17,7 @@ export interface SelectListProps<T extends SelectListData> {
   value?: T
   width?: string | number
   innerElementType?: string
-  onChange?: (item: T, e?: React.MouseEvent<HTMLLIElement>) => void
+  onChange?: (item: T, e: React.MouseEvent<HTMLLIElement>) => void
   noDataText?: string
   children?: any
 }

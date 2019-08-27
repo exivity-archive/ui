@@ -6,7 +6,11 @@ import { SelectListData } from './SelectList'
 import { NO_DATA_KEY } from './helpers'
 
 export interface SelectListItemProps {
-  data: { items: SelectListData[], onChange: (item: SelectListData) => void, selectedItem: SelectListData }
+  data: {
+    items: SelectListData[]
+    onChange: (item: SelectListData, e: React.MouseEvent<HTMLLIElement>) => void
+    selectedItem: SelectListData
+  }
   index: number
   style: CSSProperties
 }
@@ -15,7 +19,7 @@ export const DefaultItem: React.FC<SelectListItemProps> = ({ data, index, style 
   const { items, onChange } = data
   const item = items[index]
 
-  const handleOnClick = () => onChange && onChange(item)
+  const handleOnClick = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
   return (
     <ListItem style={style} tabIndex={index + 1} onClick={handleOnClick} noDataPlaceholder={item.key === NO_DATA_KEY}>
