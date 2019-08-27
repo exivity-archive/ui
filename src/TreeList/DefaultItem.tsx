@@ -25,10 +25,11 @@ const ToggleExpandedButton = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 0;
-  outline: 5px solid white;
+  outline: 5px solid transparent;
   border: none;
 
   padding: 0;
+  cursor: pointer;
 `
 
 const StyledValue = styled.span`
@@ -71,7 +72,11 @@ export function DefaultItem<
                 e.stopPropagation()
                 item.expand()
               }}>
-                <ButtonIcon >{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
+                <ButtonIcon>{
+                  item.expanded
+                    ? <COLLAPSE_ICON />
+                    : <EXPAND_ICON />
+                }</ButtonIcon>
               </ToggleExpandedButton>
             )}
             <StyledValue>{item.value}</StyledValue>

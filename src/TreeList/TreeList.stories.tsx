@@ -9,7 +9,9 @@ import { CustomItem } from './stories/CustomItem'
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 
 storiesOf('organisms|TreeList', module)
-  .add('default', () => <TreeList data={FLAT_LIST_TEST_DATA} parentKeyAccessor={parentKeyAccessor} />)
+  .add('default', () => (
+    <TreeList data={FLAT_LIST_TEST_DATA} parentKeyAccessor={parentKeyAccessor}/>
+  ))
   .add('custom item', () => {
     return (
       <TreeList data={FLAT_LIST_TEST_DATA} parentKeyAccessor={parentKeyAccessor}>
