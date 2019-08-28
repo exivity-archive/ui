@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.14.36](https://github.com/exivity/ui/compare/v0.14.35...v0.14.36) (2019-08-28)
+
+
+### Bug Fixes
+
+* no pointer events on Adornment ([#173](https://github.com/exivity/ui/issues/173)) ([af7e01e](https://github.com/exivity/ui/commit/af7e01e))
+
+
+
 ### [0.14.35](https://github.com/exivity/ui/compare/v0.14.34...v0.14.35) (2019-08-28)
 
 
