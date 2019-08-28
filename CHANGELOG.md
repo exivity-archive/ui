@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/exivity/ui/compare/v0.14.35...v0.15.0) (2019-08-28)
+
+
+### Bug Fixes
+
+* .snyk & package.json to reduce vulnerabilities ([#165](https://github.com/exivity/ui/issues/165)) ([3d86285](https://github.com/exivity/ui/commit/3d86285))
+* no pointer events on Adornment ([#173](https://github.com/exivity/ui/issues/173)) ([af7e01e](https://github.com/exivity/ui/commit/af7e01e))
+
+
+### Features
+
+* add flexibility to modal ([#178](https://github.com/exivity/ui/issues/178)) ([3d73136](https://github.com/exivity/ui/commit/3d73136))
+* add useTimeout and Delay ([#174](https://github.com/exivity/ui/issues/174)) ([d84944a](https://github.com/exivity/ui/commit/d84944a))
+
+
+
 ### [0.14.35](https://github.com/exivity/ui/compare/v0.14.34...v0.14.35) (2019-08-28)
 
 
