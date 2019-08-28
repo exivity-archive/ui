@@ -1,4 +1,4 @@
-import React, { useState, useCallback, FC, ReactNode } from 'react'
+import React, { useState, FC, ReactNode } from 'react'
 
 import { useTimeout } from '../useTimeout'
 
@@ -10,11 +10,7 @@ interface DelayProps {
 export const Delay: FC<DelayProps> = ({ wait, children }) => {
   const [show, setShow] = useState(false)
 
-  const showChildren = useCallback(() => {
-    setShow(true)
-  }, [])
-
-  useTimeout(showChildren, wait)
+  useTimeout(() => setShow(true), wait)
 
   return <div>{show ? children : null}</div>
 }
