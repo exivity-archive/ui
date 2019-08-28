@@ -13,14 +13,6 @@ import { CHILDREN } from '../utils/makeParentChildTree'
 export const EXPAND_ICON = MdAdd
 export const COLLAPSE_ICON = MdRemove
 
-const StyledItem = styled.div`
-  li:focus, :hover {
-    button {
-      outline: 5px solid ${fromTheme(theme => theme.colors.lightGray)};
-    }
-  }
-`
-
 export const ToggleExpandedButton = styled.button`
   width: 20px;
   height: 20px;
@@ -32,28 +24,40 @@ export const ToggleExpandedButton = styled.button`
   cursor: pointer;
 `
 
+const StyledListItem = styled(ListItem)`
+  &:focus,
+  &:hover {
+    ${ToggleExpandedButton} {
+      outline: 5px solid ${fromTheme(theme => theme.colors.lightGray)};
+    }
+  }
+`
+
 const StyledValue = styled.span`
-  margin-left: 10px
+  margin-left: 10px;
 `
 
 const ButtonIcon = styled(Icon)`
   svg {
     width: 100%;
     height: 100%;
-    color: ${fromTheme(theme => theme.colors.gray)}
+    color: ${fromTheme(theme => theme.colors.gray)};
   }
 `
 
 export interface TreeListItemProps<Data extends TreeListItem<SelectListData>> {
-  data: { items: Data[], onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
+  data: { items: Data[]; onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
   style: CSSProperties
   index: number
   isScrolling: boolean
 }
 
-export function DefaultItem<
-  Data extends TreeListItem<SelectListData>
-> ({ data, style, index }: TreeListItemProps<Data>) {
+export function DefaultItem<Data extends TreeListItem<SelectListData>> ({
+  data,
+  style,
+  index,
+  ...rest
+}: TreeListItemProps<Data>) {
   const { items, onChange } = data
   const item = items[index]
 
@@ -61,28 +65,21 @@ export function DefaultItem<
     const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
     return (
-      <StyledItem>
-        <ListItem style={style} onClick={handleChange}>
-          <BranchSpacer
-            spacing={20}
-            index={index}
-            data={items}>
-            {item[CHILDREN] && (
-              <ToggleExpandedButton onClick={(e) => {
+      <StyledListItem style={style} onClick={handleChange} {...rest}>
+        <BranchSpacer spacing={20} index={index} data={items}>
+          {item[CHILDREN] && (
+            <ToggleExpandedButton
+              onClick={e => {
                 e.stopPropagation()
                 item.expand()
-              }}>
-                <ButtonIcon>{
-                  item.expanded
-                    ? <COLLAPSE_ICON />
-                    : <EXPAND_ICON />
-                }</ButtonIcon>
-              </ToggleExpandedButton>
-            )}
-            <StyledValue>{item.value}</StyledValue>
-          </BranchSpacer>
-        </ListItem>
-      </StyledItem>
+              }}
+            >
+              <ButtonIcon>{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
+            </ToggleExpandedButton>
+          )}
+          <StyledValue>{item.value}</StyledValue>
+        </BranchSpacer>
+      </StyledListItem>
     )
   }, [item, index, items, onChange])
 }

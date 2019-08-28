@@ -2,11 +2,12 @@ import React, { useMemo } from 'react'
 
 import { TreeListItem } from '../../useExpandable'
 import { SelectListData } from '../../SelectList/SelectList'
-import { TreeListItemProps } from '../DefaultItem'
+import { TreeListItemProps, DefaultItem, ToggleExpandedButton } from '../DefaultItem'
 import { ListItem } from '../../ListItem'
 import { BranchSpacer } from '../../BranchSpacer'
 import { CHILDREN } from '../../utils/makeParentChildTree'
 import { Button } from '../../Button'
+import styled from 'styled-components'
 
 export function CustomItem<Data extends TreeListItem<SelectListData>> ({ data, style, index }: TreeListItemProps<Data>) {
   const { items, onChange } = data
@@ -17,18 +18,19 @@ export function CustomItem<Data extends TreeListItem<SelectListData>> ({ data, s
   return useMemo(() => {
     return (
       <ListItem style={style} onClick={handleChange}>
-        <BranchSpacer
-          spacing={20}
-          index={index}
-          data={items}>
-          {item[CHILDREN] && (
-            <Button onClick={item.expand}>
-              {item.expanded ? 'Collapse' : 'Expand'}
-            </Button>
-          )}
+        <BranchSpacer spacing={20} index={index} data={items}>
+          {item[CHILDREN] && <Button onClick={item.expand}>{item.expanded ? 'Collapse' : 'Expand'}</Button>}
           {item.value}
         </BranchSpacer>
       </ListItem>
     )
   }, [item, index, items])
 }
+
+export const ModifiedDefaultItem = styled(DefaultItem)`
+  ${ToggleExpandedButton} {
+    svg {
+      color: hotpink;
+    }
+  }
+`
