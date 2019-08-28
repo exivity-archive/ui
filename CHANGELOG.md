@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/exivity/ui/compare/v0.15.0...v0.16.0) (2019-08-28)
+
+
+### Features
+
+* add useWindowListener hook ([#176](https://github.com/exivity/ui/issues/176)) ([b6284ea](https://github.com/exivity/ui/commit/b6284ea))
+
+
+
 ## [0.15.0](https://github.com/exivity/ui/compare/v0.14.35...v0.15.0) (2019-08-28)
 
 
