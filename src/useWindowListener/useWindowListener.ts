@@ -1,12 +1,8 @@
 import { useEffect } from 'react'
 
-export function useWindowListener (
-  event: keyof WindowEventMap,
-  handler: EventListener,
-  options?: boolean | EventListenerOptions
-) {
+export function useWindowListener (...args: Parameters<typeof window.addEventListener>) {
   useEffect(() => {
-    window.addEventListener(event, handler, options)
-    return () => window.removeEventListener(event, handler, options)
-  }, [event, handler, options])
+    window.addEventListener(...args)
+    return () => window.removeEventListener(...args)
+  }, [...args])
 }
