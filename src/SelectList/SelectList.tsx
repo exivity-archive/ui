@@ -11,13 +11,13 @@ export interface SelectListData {
   value: string
 }
 
-export interface SelectListProps {
-  data: SelectListData[]
+export interface SelectListProps<T extends SelectListData> {
+  data: T[]
 
-  value?: SelectListData
+  value?: T
   width?: string | number
   innerElementType?: string
-  onChange?: (item: SelectListData) => void
+  onChange?: (item: T, e: React.MouseEvent<HTMLLIElement>) => void
   noDataText?: string
   children?: any
 }
@@ -29,8 +29,7 @@ export const StyledList = styled(List)`
     list-style-type: none;
   }
 `
-
-export const SelectList = ({
+export function SelectList<T extends SelectListData> ({
   data,
   width,
   value,
@@ -38,7 +37,7 @@ export const SelectList = ({
   innerElementType = 'ul',
   noDataText,
   children
-}: SelectListProps) => {
+}: SelectListProps<T>) {
   const componentData = getNoDataPlaceholder(data, noDataText)
   const calculatedHeight = calculateHeight(componentData)
 

@@ -1,1 +1,1 @@
-export { SelectList } from './SelectList'
+export * from './SelectList'
