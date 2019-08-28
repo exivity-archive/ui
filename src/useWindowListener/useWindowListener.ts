@@ -8,5 +8,5 @@ export function useWindowListener (
   useEffect(() => {
     window.addEventListener(event, handler, options)
     return () => window.removeEventListener(event, handler, options)
-  }, [event, handler])
+  }, [event, handler, options])
 }
