@@ -1,4 +1,4 @@
-import React, { CSSProperties, MouseEventHandler, useMemo } from 'react'
+import React, { CSSProperties, useMemo } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
@@ -45,14 +45,14 @@ const ButtonIcon = styled(Icon)`
   }
 `
 
-export interface TreeListItemProps<Data extends TreeListItem<SelectListData>> {
-  data: { items: Data[]; onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
+export interface TreeListItemProps<Data extends SelectListData> {
+  data: { items: TreeListItem<Data>[]; onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
   style: CSSProperties
   index: number
   isScrolling: boolean
 }
 
-export function DefaultItem<Data extends TreeListItem<SelectListData>> ({
+export function DefaultItem<Data extends SelectListData> ({
   data,
   style,
   index,
