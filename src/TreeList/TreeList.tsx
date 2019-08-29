@@ -6,7 +6,7 @@ import { useExpandable, TreeListItem } from '../useExpandable'
 import { DefaultItem, TreeListItemProps } from './DefaultItem'
 
 interface TreeListProps<Data extends SelectListData> {
-  parentKeyAccessor: (item: Data) => string
+  parentKeyAccessor: (item: Data) => string | null
   data: Data[]
   expandedKeys?: string[]
   children?: Component<TreeListItemProps<TreeListItem<Data>>> | FC<TreeListItemProps<TreeListItem<Data>>>
