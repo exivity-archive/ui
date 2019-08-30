@@ -1,8 +1,7 @@
-import React, { CSSProperties, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
-import { SelectListData } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
 import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'

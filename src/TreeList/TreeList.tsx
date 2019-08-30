@@ -18,10 +18,10 @@ interface TreeListProps<Data extends {}> {
   parentKeyAccessor: (item: Data) => string | null
   expandedKeys?: string[]
 
-  children?: ComponentType<TreeListItemProps<Data>> | FC<TreeListItemProps<Data>>
+  children?: ComponentType<TreeListItemProps<Data>>
 
   value?: Data
-  onChange?: (item: Data) => void
+  onChange?: (item: Data, e: React.MouseEvent<HTMLLIElement>) => void
 
   itemHeight?: number
   maxItemsRendered?: number
@@ -47,8 +47,11 @@ export function TreeList<Data extends {}> ({
 
   const height = calculateHeight(expandableData, itemHeight, maxItemsRendered)
 
-  const handleChange = useCallback((newItem: Data & { key: string }) => {
-    onChange && onChange(data.find(item => keyAccessor(item) === newItem.key)!)
+  const handleChange = useCallback((
+    newItem: Data & { key: string },
+    e: React.MouseEvent<HTMLLIElement>
+  ) => {
+    onChange && onChange(data.find(item => keyAccessor(item) === newItem.key)!, e)
   }, [onChange, data, keyAccessor])
 
   const itemData = useMemo(() => {
