@@ -1,14 +1,14 @@
-import React, { CSSProperties, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
-import { SelectListData } from '../SelectList/SelectList'
 import { ListItem } from '../ListItem'
 import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'
 import { Icon } from '../Icon'
 import { MdRemove, MdAdd } from 'react-icons/md'
 import { CHILDREN } from '../utils/makeParentChildTree'
+import { ListChildComponentProps } from 'react-window'
 
 export const EXPAND_ICON = MdAdd
 export const COLLAPSE_ICON = MdRemove
@@ -45,14 +45,14 @@ const ButtonIcon = styled(Icon)`
   }
 `
 
-export interface TreeListItemProps<Data extends SelectListData> {
-  data: { items: TreeListItem<Data>[]; onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void }
-  style: CSSProperties
-  index: number
-  isScrolling: boolean
+export interface TreeListItemProps<Data extends {}> extends ListChildComponentProps {
+  data: {
+    items: TreeListItem<Data>[]
+    onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void
+  }
 }
 
-export function DefaultItem<Data extends SelectListData> ({
+export function DefaultItem<Data extends { value: string }> ({
   data,
   style,
   index,

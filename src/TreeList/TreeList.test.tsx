@@ -4,6 +4,7 @@ import { mountWithTheme } from '../utils/tests/mountWithTheme'
 import { TreeList } from '.'
 
 const parentKeyAccessor = (item: any) => item.parentId
+const keyAccessor = (item: any) => item.key
 
 describe('<TreeList/>', () => {
   test('initially renders all parents', () => {
@@ -14,7 +15,7 @@ describe('<TreeList/>', () => {
       { key: '4', value: 'four', parentId: '2' }
     ]
 
-    const wrapper = mountWithTheme(<TreeList data={items} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} data={items} parentKeyAccessor={parentKeyAccessor} />)
 
     expect(wrapper.find('li').length).toBe(2)
   })
@@ -29,7 +30,7 @@ describe('<TreeList/>', () => {
 
     const Custom: any = ({ style }) => <div style={style} className='test-id' />
 
-    const wrapper = mountWithTheme(<TreeList data={items} parentKeyAccessor={parentKeyAccessor}>{Custom}</TreeList>)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} data={items} parentKeyAccessor={parentKeyAccessor}>{Custom}</TreeList>)
 
     expect(wrapper.find('.test-id').length).toBe(1)
     expect(wrapper.find('li').length).toBe(0)
@@ -43,7 +44,7 @@ describe('<TreeList/>', () => {
       { key: '4', value: 'four', parentId: '1' }
     ]
 
-    const wrapper = mountWithTheme(<TreeList expandedKeys={['1']} data={items} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} expandedKeys={['1']} data={items} parentKeyAccessor={parentKeyAccessor} />)
 
     expect(wrapper.find('li').length).toBe(4)
   })

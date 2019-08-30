@@ -5,6 +5,7 @@ import { TreeList } from './TreeList'
 import { COLLAPSE_ICON, EXPAND_ICON } from './DefaultItem'
 
 const parentKeyAccessor = (item: any) => item.parentId
+const keyAccessor = (item: any) => item.key
 
 describe('<DefaultItem/>', () => {
   test('returns an item onChange', () => {
@@ -19,7 +20,7 @@ describe('<DefaultItem/>', () => {
 
     const onChange = jest.fn(item => item)
 
-    const wrapper = mountWithTheme(<TreeList onChange={onChange} data={items} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} onChange={onChange} data={items} parentKeyAccessor={parentKeyAccessor} />)
 
     wrapper.find('li')
       .first()
@@ -38,7 +39,7 @@ describe('<DefaultItem/>', () => {
       { key: '4', value: 'four', parentId: '1' }
     ]
 
-    const wrapper = mountWithTheme(<TreeList data={items} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} data={items} parentKeyAccessor={parentKeyAccessor} />)
 
     expect(wrapper.find('li').length).toBe(1)
 
@@ -59,7 +60,7 @@ describe('<DefaultItem/>', () => {
     const item1 = { key: '1', value: 'one', parentId: null }
     const item2 = { key: '2', value: 'two', parentId: '1' }
 
-    const wrapper = mountWithTheme(<TreeList data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
 
     expect(wrapper.find(EXPAND_ICON).length).toBe(1)
   })
@@ -68,7 +69,7 @@ describe('<DefaultItem/>', () => {
     const item1 = { key: '1', value: 'one', parentId: null }
     const item2 = { key: '2', value: 'two', parentId: '1' }
 
-    const wrapper = mountWithTheme(<TreeList data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
+    const wrapper = mountWithTheme(<TreeList keyAccessor={keyAccessor} data={[item1, item2]} parentKeyAccessor={parentKeyAccessor} />)
 
     wrapper.find('button')
       .first()
