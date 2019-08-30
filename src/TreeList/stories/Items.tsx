@@ -1,15 +1,15 @@
 import React, { useMemo } from 'react'
+import styled from 'styled-components'
 
-import { TreeListItem } from '../../useExpandable'
-import { SelectListData } from '../../SelectList/SelectList'
+import { FakeRecord } from './seed'
+
 import { TreeListItemProps, DefaultItem, ToggleExpandedButton } from '../DefaultItem'
 import { ListItem } from '../../ListItem'
 import { BranchSpacer } from '../../BranchSpacer'
 import { CHILDREN } from '../../utils/makeParentChildTree'
 import { Button } from '../../Button'
-import styled from 'styled-components'
 
-export function CustomItem<Data extends TreeListItem<SelectListData>> ({ data, style, index }: TreeListItemProps<Data>) {
+export function CustomItem ({ data, style, index }: TreeListItemProps<FakeRecord>) {
   const { items, onChange } = data
   const item = items[index]
 
