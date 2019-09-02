@@ -10,14 +10,14 @@ interface StyledAdornmentProps {
   inset: number | string
 }
 
-const StyledAdornment = styled.span <StyledAdornmentProps>`
+const StyledAdornment = styled.span<StyledAdornmentProps>`
   display: flex;
   align-items: center;
   position: absolute;
   height: 100%;
   top: 0;
-  font-size: ${
-  matchThemeProp(
+
+  font-size: ${matchThemeProp(
     theme => theme.global.sizes,
     { modifier: (em: number) => em * 20 }
   )}px;
@@ -26,6 +26,7 @@ const StyledAdornment = styled.span <StyledAdornmentProps>`
     ? css`left: ${props.inset}px;`
     : css`right: ${props.inset}px;`
   }
+  pointer-events: none;
 `
 
 const AdornmentWrapper = styled(Block)`

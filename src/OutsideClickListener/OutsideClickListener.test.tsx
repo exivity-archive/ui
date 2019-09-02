@@ -4,7 +4,7 @@ import { OutsideClickListener } from './OutsideClickListener'
 
 test('onOutsideClick should be called when clicking outside of the container', () => {
   const map: any = {}
-  document.addEventListener = jest.fn((event, cb) => {
+  window.addEventListener = jest.fn((event, cb) => {
     map[event] = cb
   })
 
@@ -24,7 +24,7 @@ test('onOutsideClick should be called when clicking outside of the container', (
 
 test('onOutsideClick should not be called when clicking inside of the container', () => {
   const map: any = {}
-  document.addEventListener = jest.fn((event, cb) => {
+  window.addEventListener = jest.fn((event, cb) => {
     map[event] = cb
   })
 

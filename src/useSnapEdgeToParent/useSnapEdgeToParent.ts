@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
+
 import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap, Vertical, Horizontal } from './helpers'
+
 import { useClientRect } from '../useClientRect'
+import { useWindowListener } from '../useWindowListener'
 
 export function useSnapEdgeToParent (breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
   const [targetRect, targetRef, targetNode] = useClientRect()
@@ -21,11 +24,7 @@ export function useSnapEdgeToParent (breakDistances: BreakDistance | number, ini
   }
 
   useEffect(calculatePositioning, [targetNode, parentNode, containerNode])
-
-  useEffect(() => {
-    window.addEventListener('resize', calculatePositioning)
-    return () => window.removeEventListener('resize', calculatePositioning)
-  }, [calculatePositioning])
+  useWindowListener('resize', calculatePositioning)
 
   return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
 }
