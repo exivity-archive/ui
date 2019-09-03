@@ -15,13 +15,13 @@ export const WeekDays = () => (
   </StyledWeekDays>
 )
 
-function getRenderDay (value: Date, browseDate: Date, onChange: Function, offSet: number) {
+function getRenderDay (value: Date, browseDate: Date, onChange: Function, nbOfPlaceholderDays: number) {
   return (_: undefined, index: number) => {
-    const day = index + 1 - offSet
+    const day = index + 1 - nbOfPlaceholderDays
     const thisDay = setDate(browseDate, day)
     const isActive = isSameDay(value, thisDay)
 
-    if (index < offSet) return <li key={index} />
+    if (index < nbOfPlaceholderDays) return <li key={index} />
 
     return (
       <li key={index}>
@@ -43,9 +43,13 @@ export interface CommonPeriodProps {
 export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
   const updateDay = (day: number) => onChange(setDate(browseDate, day))
   const weekDayOffSet = getDay(startOfMonth(browseDate)) - 1
-  const nbOfDays = getDaysInMonth(browseDate) + weekDayOffSet
 
-  const renderDay = getRenderDay(value, browseDate, updateDay, weekDayOffSet)
+  const placeholderDays = weekDayOffSet < 0
+    ? 7 + weekDayOffSet
+    : weekDayOffSet
+
+  const nbOfDays = getDaysInMonth(browseDate) + placeholderDays
+  const renderDay = getRenderDay(value, browseDate, updateDay, placeholderDays)
 
   return (
     <>
