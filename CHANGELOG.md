@@ -2,6 +2,76 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.4](https://github.com/exivity/ui/compare/v0.16.3...v0.16.4) (2019-09-03)
+
+
+### Bug Fixes
+
+* position dropdown on first render ([#175](https://github.com/exivity/ui/issues/175)) ([d6b6f40](https://github.com/exivity/ui/commit/d6b6f40))
+
+
+
+### [0.16.3](https://github.com/exivity/ui/compare/v0.16.2...v0.16.3) (2019-09-03)
+
+
+
+### [0.16.2](https://github.com/exivity/ui/compare/v0.16.1...v0.16.2) (2019-09-03)
+
+
+
+### [0.16.1](https://github.com/exivity/ui/compare/v0.16.0...v0.16.1) (2019-08-30)
+
+
+
+## [0.16.0](https://github.com/exivity/ui/compare/v0.15.0...v0.16.0) (2019-08-28)
+
+
+### Features
+
+* add useWindowListener hook ([#176](https://github.com/exivity/ui/issues/176)) ([b6284ea](https://github.com/exivity/ui/commit/b6284ea))
+
+
+
+## [0.15.0](https://github.com/exivity/ui/compare/v0.14.35...v0.15.0) (2019-08-28)
+
+
+### Bug Fixes
+
+* .snyk & package.json to reduce vulnerabilities ([#165](https://github.com/exivity/ui/issues/165)) ([3d86285](https://github.com/exivity/ui/commit/3d86285))
+* no pointer events on Adornment ([#173](https://github.com/exivity/ui/issues/173)) ([af7e01e](https://github.com/exivity/ui/commit/af7e01e))
+
+
+### Features
+
+* add flexibility to modal ([#178](https://github.com/exivity/ui/issues/178)) ([3d73136](https://github.com/exivity/ui/commit/3d73136))
+* add useTimeout and Delay ([#174](https://github.com/exivity/ui/issues/174)) ([d84944a](https://github.com/exivity/ui/commit/d84944a))
+
+
+
+### [0.14.35](https://github.com/exivity/ui/compare/v0.14.34...v0.14.35) (2019-08-28)
+
+
+
+### [0.14.34](https://github.com/exivity/ui/compare/v0.14.33...v0.14.34) (2019-08-27)
+
+
+
+### [0.14.33](https://github.com/exivity/ui/compare/v0.14.32...v0.14.33) (2019-08-27)
+
+
+
+### [0.14.32](https://github.com/exivity/ui/compare/v0.14.31...v0.14.32) (2019-08-27)
+
+
+
+### [0.14.31](https://github.com/exivity/ui/compare/v0.14.30...v0.14.31) (2019-08-26)
+
+
+
+### [0.14.30](https://github.com/exivity/ui/compare/v0.14.29...v0.14.30) (2019-08-26)
+
+
+
 ### [0.14.29](https://github.com/exivity/ui/compare/v0.14.28...v0.14.29) (2019-07-18)
 
 

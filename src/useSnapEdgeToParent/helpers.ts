@@ -18,9 +18,9 @@ export enum Vertical {
 }
 
 export enum Horizontal {
-   LEFT = 'right',
-   RIGHT = 'left',
-   AUTO = 'auto'
+  LEFT = 'right',
+  RIGHT = 'left',
+  AUTO = 'auto'
 }
 
 export interface AutoPosition {

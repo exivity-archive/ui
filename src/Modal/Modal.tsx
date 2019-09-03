@@ -1,17 +1,8 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode, Children, cloneElement } from 'react'
 import styled from 'styled-components'
 
 import { fromTheme } from '../utils/styled'
-import { Button } from '../Button'
-import { Heading } from '../Heading'
-
-const Overlay = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.1);
-  position: absolute;
-  z-index: ${fromTheme(theme => theme.global.zPriority.foreground)};
-`
+import { Overlay, Button, Heading } from '..'
 
 const ModalWrapper = styled.div`
   position: absolute;
@@ -28,8 +19,8 @@ const Header = styled.div`
 const Body = styled.div`
   padding: ${fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
   max-height: 400px;
-  border-top: solid 1px ${fromTheme(theme => theme.colors.gray)};
-  border-bottom: solid 1px ${fromTheme(theme => theme.colors.gray)};
+  border-top: solid 1px ${fromTheme(theme => theme.colors.lightGray)};
+  border-bottom: solid 1px ${fromTheme(theme => theme.colors.lightGray)};
   overflow-y: auto;
 `
 
@@ -44,20 +35,19 @@ const Footer = styled.div`
 `
 
 interface ModalProps {
-  title: string
-  children: React.ReactNode
-  buttons: JSX.Element[]
+  title?: ReactNode
+  children?: ReactNode
+  buttons?: JSX.Element[]
 }
 
-export const Modal: FC<ModalProps> = ({ title, children, buttons = [], ...rest }) => (
+export const Modal: FC<ModalProps> = ({ title, children, buttons, ...rest }) => (
   <Overlay {...rest}>
     <ModalWrapper>
-      <Header>
-        <Heading>{title}</Heading>
-      </Header>
-      <Body>{children}</Body>
-      <Footer>{React.Children.map(buttons,
-        (child, index) => React.cloneElement(child, { ...child.props, key: index }))}</Footer>
+      {title && <Header>{typeof title === 'string' ? <Heading>{title}</Heading> : title}</Header>}
+      {children && <Body>{children}</Body>}
+      {buttons && (
+        <Footer>{Children.map(buttons, (child, index) => cloneElement(child, { ...child.props, key: index }))}</Footer>
+      )}
     </ModalWrapper>
   </Overlay>
 )

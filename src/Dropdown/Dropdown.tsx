@@ -1,4 +1,4 @@
-import React, { useMemo, cloneElement, isValidElement, ReactElement } from 'react'
+import React, { cloneElement, isValidElement, ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 import { OutsideClickListener } from '../OutsideClickListener'
@@ -9,8 +9,13 @@ import { makeDefaultCSS } from './helpers'
 import { fromTheme } from '../utils/styled'
 import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
-const StyledDropdown = styled(Block)`
+interface StyledDropdownProps {
+  open: boolean
+}
+
+const StyledDropdown = styled(Block) <StyledDropdownProps>`
   position: relative;
+  ${({ open }) => !open && css`overflow: hidden;`}
 `
 
 interface ContentProps {
@@ -31,7 +36,7 @@ const Content = styled(Block) <ContentProps>`
     width: ${props.triggerWidth};
   `}
 
-  ${({ open }) => !open && 'display: none;'}
+  ${({ open }) => !open && css`visibility: hidden;`}
   ${({ position }) => css`${position}`}
 `
 
@@ -62,14 +67,16 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
 }) => {
   const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
 
-  const position = useMemo(() => parent.rect && makeDefaultCSS(positioning, parent.rect.height), [positioning])
+  const position = parent.rect
+    ? makeDefaultCSS(positioning, parent.rect.height)
+    : undefined
 
   const triggerWidth = parent.rect
     ? `${parent.rect.width}px`
     : undefined
 
   return (
-    <StyledDropdown className={className} data-test={test} ref={parent.ref}>
+    <StyledDropdown className={className} open={open} data-test={test} ref={parent.ref}>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
         {triggerComponent}
         <Content triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
@@ -79,6 +86,7 @@ export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = (
           open={open}
           {...blockProps}>
           {isValidElement(children)
+            // build will fail without this ReactElement<any> cast
             ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
             : children}
         </Content>

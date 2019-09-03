@@ -1,1 +1,1 @@
-export { OutsideClickListener } from './OutsideClickListener'
+export * from './OutsideClickListener'
