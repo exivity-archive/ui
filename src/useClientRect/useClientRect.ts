@@ -15,5 +15,5 @@ export function useClientRect () {
     ? node.getBoundingClientRect()
     : null
 
-  return [rect, ref] as [Rect | null, typeof ref]
+  return [rect, ref, node] as [Rect | null, typeof ref, HTMLElement | null]
 }

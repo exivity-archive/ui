@@ -1,12 +1,14 @@
-import { useState, useMemo, useLayoutEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
+
 import { Positioning, getPositioning, AutoPosition, BreakDistance, RefAndRectMap, Vertical, Horizontal } from './helpers'
+
 import { useClientRect } from '../useClientRect'
 import { useWindowListener } from '../useWindowListener'
 
 export function useSnapEdgeToParent (breakDistances: BreakDistance | number, initialPositioning?: AutoPosition) {
-  const [targetRect, targetRef] = useClientRect()
-  const [parentRect, parentRef] = useClientRect()
-  const [containerRect, containerRef] = useClientRect()
+  const [targetRect, targetRef, targetNode] = useClientRect()
+  const [parentRect, parentRef, parentNode] = useClientRect()
+  const [containerRect, containerRef, containerNode] = useClientRect()
 
   const refAndRectMap = {
     target: { rect: targetRect, ref: targetRef },
@@ -14,16 +16,15 @@ export function useSnapEdgeToParent (breakDistances: BreakDistance | number, ini
     container: { rect: containerRect, ref: containerRef }
   }
 
-  const [positioning, setPositioning] = useState<Positioning>({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
+  const [positioning, setPositioning] = useState({ horizontal: Horizontal.RIGHT, vertical: Vertical.BOTTOM })
 
-  const calculatePositioning = useCallback(
-    () => setPositioning(getPositioning(refAndRectMap, breakDistances, initialPositioning)),
-    [targetRect, parentRect, containerRect, breakDistances])
+  function calculatePositioning () {
+    const newPos = getPositioning(refAndRectMap, breakDistances, initialPositioning)
+    setPositioning(newPos)
+  }
 
-  useLayoutEffect(calculatePositioning, [])
+  useEffect(calculatePositioning, [targetNode, parentNode, containerNode])
   useWindowListener('resize', calculatePositioning)
 
-  return useMemo(() => {
-    return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
-  }, [positioning, targetRect, parentRect, containerRect, targetRef, parentRef, containerRef])
+  return [refAndRectMap, positioning] as [RefAndRectMap, Positioning]
 }
