@@ -10,3 +10,11 @@ patch:
         patched: '2019-07-04T04:59:40.635Z'
     - styled-components > babel-plugin-styled-components > @babel/helper-annotate-as-pure > @babel/types > lodash:
         patched: '2019-07-04T04:59:40.635Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-08-30T14:26:27.552Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-08-30T14:26:27.552Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-08-30T14:26:27.552Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-08-30T14:26:27.552Z'
