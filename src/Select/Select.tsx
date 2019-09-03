@@ -1,4 +1,4 @@
-import React, { useState, cloneElement, ReactElement } from 'react'
+import React, { useState, cloneElement, ReactElement, useEffect } from 'react'
 
 import { BlockProps } from '../Block'
 import { Dropdown } from '../Dropdown'
@@ -54,6 +54,7 @@ export const Select = ({
   children,
   py = 2,
   test,
+  disabled,
   ...rest
 }: SelectProps & BlockProps & InputProps) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -64,8 +65,11 @@ export const Select = ({
     name,
     placeholder,
     value,
-    onClick: () => setIsOpen(!isOpen)
+    disabled,
+    onClick: () => !disabled && setIsOpen(!isOpen)
   }
+
+  useEffect(() => { disabled && close() }, [disabled])
 
   return (
     <Dropdown {...rest} py={py}
