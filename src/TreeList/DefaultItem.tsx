@@ -17,20 +17,10 @@ export const ToggleExpandedButton = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 0;
-  outline: 5px solid white;
   border: none;
 
   padding: 0;
   cursor: pointer;
-`
-
-const StyledListItem = styled(ListItem)`
-  &:focus,
-  &:hover {
-    ${ToggleExpandedButton} {
-      outline: 5px solid ${fromTheme(theme => theme.colors.lightGray)};
-    }
-  }
 `
 
 const StyledValue = styled.span`
@@ -65,8 +55,8 @@ export function DefaultItem<Data extends { value: string }> ({
     const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
     return (
-      <StyledListItem style={style} onClick={handleChange} {...rest}>
-        <BranchSpacer spacing={20} index={index} data={items}>
+      <ListItem style={style} onClick={handleChange} {...rest}>
+        <BranchSpacer spacing={20} padding={item[CHILDREN] ? 5 : 0} index={index} data={items}>
           {item[CHILDREN] && (
             <ToggleExpandedButton
               onClick={e => {
@@ -79,7 +69,7 @@ export function DefaultItem<Data extends { value: string }> ({
           )}
           <StyledValue>{item.value}</StyledValue>
         </BranchSpacer>
-      </StyledListItem>
+      </ListItem>
     )
   }, [item, index, items, onChange])
 }
