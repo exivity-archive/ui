@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { forwardRef, Ref, ReactNode } from 'react'
 
 import { handleKeyDownFocusListItem } from './helpers'
 
-export const ListFocus: React.FC = ({ children, ...rest }) => (
-  <div onKeyDown={handleKeyDownFocusListItem} {...rest}>
+import { Block, BlockProps } from '../Block'
+
+export const ListFocus = forwardRef(({ children, ...rest }: BlockProps & { children: ReactNode }, ref: Ref<HTMLDivElement>) => (
+  <Block ref={ref} onKeyDown={handleKeyDownFocusListItem} {...rest}>
     {children}
-  </div>
-)
+  </Block>
+))

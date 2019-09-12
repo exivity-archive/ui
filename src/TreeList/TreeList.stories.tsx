@@ -28,8 +28,11 @@ storiesOf('organisms|TreeList', module)
   })
   .add('auto height', () => {
     return (
-      <Flex height='100vh'>
-        <TreeList maxItemsRendered='auto' data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor} />
-      </Flex>
+      <TreeList
+        maxItemsRendered='auto'
+        height={300}
+        data={FLAT_LIST_TEST_DATA}
+        keyAccessor={keyAccessor}
+        parentKeyAccessor={parentKeyAccessor} />
     )
   })

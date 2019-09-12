@@ -8,7 +8,7 @@ import { useExpandable } from '../useExpandable'
 import { ListFocus } from '../ListFocus'
 import { StyledList } from '../SelectList'
 import { useClientRect } from '../useClientRect'
-import { Block, BlockProps } from '../Block'
+import { BlockProps } from '../Block'
 
 const MAX_ITEMS_RENDERED = 10
 const ITEM_HEIGHT = 30
@@ -43,6 +43,7 @@ export function TreeList<Data extends {}> ({
   value,
   innerElementType = 'ul',
   width = '100%',
+  height = '100%',
   ...blockProps
 }: TreeListProps<Data> & BlockProps) {
   const withKeys = useMemo(() => data.map(item => addKey(item, keyAccessor)), [data, keyAccessor])
@@ -50,7 +51,7 @@ export function TreeList<Data extends {}> ({
 
   const [containerRect, containerRef] = useClientRect()
 
-  const height = useMemo(() => {
+  const listHeight = useMemo(() => {
     return maxItemsRendered === 'auto'
       ? autoCalculateHeight(data, containerRect, itemHeight)
       : calculateHeight(data, itemHeight, maxItemsRendered)
@@ -72,19 +73,17 @@ export function TreeList<Data extends {}> ({
   }, [expandableData, value, handleChange])
 
   return (
-    <Block {...blockProps} width={width} ref={containerRef} >
-      <ListFocus>
-        <StyledList
-          height={height}
-          itemData={itemData}
-          itemCount={expandableData.length}
-          itemSize={itemHeight}
-          innerElementType={innerElementType}
-          width={width}>
-          {children || DefaultItem}
-        </StyledList>
-      </ListFocus>
-    </Block>
+    <ListFocus {...blockProps} height={height} width={width} ref={containerRef}>
+      <StyledList
+        height={listHeight}
+        itemData={itemData}
+        itemCount={expandableData.length}
+        itemSize={itemHeight}
+        innerElementType={innerElementType}
+        width={width}>
+        {children || DefaultItem}
+      </StyledList>
+    </ListFocus>
   )
 }
 
