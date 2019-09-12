@@ -5,7 +5,6 @@ import { TreeList } from './TreeList'
 import { FLAT_LIST_TEST_DATA } from './stories/seed'
 import { FakeRecord } from '../useExpandable/stories/seed'
 import { CustomItem, ModifiedDefaultItem } from './stories/Items'
-import { Flex } from '../Flex'
 
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 const keyAccessor = (item: FakeRecord) => item.key
