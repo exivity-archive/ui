@@ -10,21 +10,23 @@ import { TreeItem, makeParentChildTree } from '../utils/makeParentChildTree'
 storiesOf('molecules|BranchSpacer', module)
   .add('default', () => <BranchList />)
   .add('spacing', () => <BranchList spacing={60} />)
+  .add('spacing and padding', () => <BranchList spacing={60} padding={10} />)
 
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 
 interface ListProps {
-  spacing?: number
+  spacing?: number,
+  padding?: number
 }
 
-const BranchList = ({ spacing }: ListProps) => {
+const BranchList = ({ spacing, padding }: ListProps) => {
   const parentChildData = makeParentChildTree(FLAT_LIST_TEST_DATA, parentKeyAccessor)
 
   return (
     <ListFocus>
       <FixedSizeList height={800} width={600} itemSize={40} itemData={parentChildData} itemCount={parentChildData.length}
         innerElementType='ul'>
-        {makeItemSpacer(spacing)}
+        {makeItemSpacer(spacing, padding)}
       </FixedSizeList>
     </ListFocus>
   )
@@ -36,14 +38,19 @@ interface ItemProps {
   style: object
 }
 
-const makeItemSpacer = (spacing?: number) => {
+const makeItemSpacer = (spacing?: number, padding?: number) => {
   return ({ data, index, style }: ItemProps) => {
     const item = data[index]
 
     return useMemo(() => {
       return (
         <ListItem style={style}>
-          <BranchSpacer data={data} index={index} spacing={spacing} >
+          <BranchSpacer
+            data={data}
+            index={index}
+            spacing={spacing}
+            padding={padding}
+          >
             {'X'}
           </BranchSpacer>
         </ListItem>
