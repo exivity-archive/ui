@@ -1,98 +1,96 @@
-import React, { cloneElement, isValidElement, ReactElement } from 'react'
-import styled, { css } from 'styled-components'
+import React, { ReactElement } from 'react'
+import styled from 'styled-components'
+import { Manager, Reference, Popper } from 'react-popper'
 
 import { OutsideClickListener } from '../OutsideClickListener'
 import { Block, BlockProps } from '../Block'
 
-import { makeDefaultCSS } from './helpers'
-
 import { fromTheme } from '../utils/styled'
-import { useSnapEdgeToParent, Vertical, Horizontal, BreakDistance } from '../useSnapEdgeToParent'
 
-interface StyledDropdownProps {
-  open: boolean
-}
-
-const StyledDropdown = styled(Block) <StyledDropdownProps>`
+const Container = styled.div`
   position: relative;
-  ${({ open }) => !open && css`overflow: hidden;`}
 `
 
-interface ContentProps {
-  open: boolean
-  triggerWidth?: string
-  position?: string | null
-}
-
-const Content = styled(Block) <ContentProps>`
-  box-sizing: border-box;
-  position: absolute;
+const Content = styled(Block)<{ fullWidth: boolean }>`
   background-color: #f9f9f9;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  min-width: ${({ fullWidth }) => fullWidth ? '100%' : '160px'};
   z-index: ${fromTheme(theme => theme.global.zPriority.foreground)};
-
-  min-width: 160px;
-  ${props => props.triggerWidth && css`
-    width: ${props.triggerWidth};
-  `}
-
-  ${({ open }) => !open && css`visibility: hidden;`}
-  ${({ position }) => css`${position}`}
 `
 
 export interface DropdownProps extends BlockProps {
-  className?: string
-  triggerComponent: React.ReactNode
+  renderTrigger: (props: { ref: React.Ref<HTMLElement> }) => React.ReactNode
   open: boolean
-  vertical?: Vertical
-  horizontal?: Horizontal
-  breakDistance?: BreakDistance
-  useTriggerComponentWidth?: boolean
+  children: ReactElement
+  useTriggerWidth?: boolean
+  placement?: Placement
   onOutsideClick?: (...rest: any) => void
   test?: string
 }
 
+/**
+ * Placement options for Popper
+ * @see https://popper.js.org/popper-documentation.html#Popper.placements
+ */
+export enum Placement {
+  RIGHT = 'right',
+  RIGHT_START = 'right-start',
+  RIGHT_END = 'right-end',
+  LEFT = 'left',
+  LEFT_START = 'left-start',
+  LEFT_END = 'left-end',
+  TOP = 'top',
+  TOP_START = 'top-start',
+  TOP_END = 'top-end',
+  BOTTOM = 'bottom',
+  BOTTOM_START = 'bottom-start',
+  BOTTOM_END = 'bottom-end',
+  AUTO = 'auto',
+  AUTO_START = 'auto-start',
+  AUTO_END = 'auto-end'
+}
+
 export const Dropdown: React.FC<DropdownProps> & { Content: typeof Content } = ({
-  className,
-  triggerComponent,
-  children,
+  renderTrigger,
   open,
-  horizontal = Horizontal.AUTO,
-  vertical = Vertical.AUTO,
-  breakDistance = 20,
-  useTriggerComponentWidth,
+  children,
+  useTriggerWidth = false,
+  placement = Placement.BOTTOM_END,
   onOutsideClick,
   test = 'dropdown',
   ...blockProps
-}) => {
-  const [{ target, parent }, positioning] = useSnapEdgeToParent(breakDistance, { horizontal, vertical })
-
-  const position = parent.rect
-    ? makeDefaultCSS(positioning, parent.rect.height)
-    : undefined
-
-  const triggerWidth = parent.rect
-    ? `${parent.rect.width}px`
-    : undefined
-
-  return (
-    <StyledDropdown className={className} open={open} data-test={test} ref={parent.ref}>
+}) => (
+  <Manager>
+    <Container>
       <OutsideClickListener onOutsideClick={onOutsideClick}>
-        {triggerComponent}
-        <Content triggerWidth={useTriggerComponentWidth ? triggerWidth : undefined}
-          data-test={`${test}-content`}
-          ref={target.ref}
-          position={position}
-          open={open}
-          {...blockProps}>
-          {isValidElement(children)
-            // build will fail without this ReactElement<any> cast
-            ? cloneElement(children as ReactElement<any>, { ...children.props, positioning })
-            : children}
-        </Content>
+        <Reference>{renderTrigger}</Reference>
+        {open
+          ? (
+            <Popper
+              placement={placement}
+              positionFixed={false}
+              modifiers={{ flip: { enabled: true } }}
+            >
+              {({ ref, style, placement, arrowProps }) => (
+                <Content
+                  ref={ref}
+                  style={style}
+                  data-placement={placement}
+                  data-test={`${test}-content`}
+                  fullWidth={useTriggerWidth}
+                  {...blockProps}
+                >
+                  {children}
+                  <div ref={arrowProps.ref} style={arrowProps.style} />
+                </Content>
+              )}
+            </Popper>
+          )
+          : null
+        }
       </OutsideClickListener>
-    </StyledDropdown>
-  )
-}
+    </Container>
+  </Manager>
+)
 
 Dropdown.Content = Content
