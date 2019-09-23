@@ -64,7 +64,7 @@ export function TreeList<Data extends {}> ({
     }
   }, [expandableData, value, handleChange])
 
-  const height = (expandableData.length * itemHeight)
+  const height = expandableData.length * itemHeight
 
   return (
     <StyledListFocus
