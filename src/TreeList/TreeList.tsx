@@ -9,6 +9,7 @@ import { ListFocus } from '../ListFocus'
 import { StyledList } from '../SelectList'
 import { BlockProps } from '../Block'
 import styled from 'styled-components'
+import AutoSizer from 'react-virtualized-auto-sizer'
 
 const ITEM_HEIGHT = 30
 
@@ -72,15 +73,19 @@ export function TreeList<Data extends {}> ({
       height={height}
       maxHeight='100%'
       width={width}>
-      <StyledList
-        height={height}
-        itemData={itemData}
-        itemCount={expandableData.length}
-        itemSize={itemHeight}
-        innerElementType={innerElementType}
-        width={width}>
-        {children || DefaultItem}
-      </StyledList>
+      <AutoSizer>
+        {({ height, width }) => (
+          <StyledList
+            height={height}
+            itemData={itemData}
+            itemCount={expandableData.length}
+            itemSize={itemHeight}
+            innerElementType={innerElementType}
+            width={width}>
+            {children || DefaultItem}
+          </StyledList>
+        )}
+      </AutoSizer>
     </StyledListFocus>
   )
 }
