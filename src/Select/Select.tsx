@@ -1,31 +1,34 @@
-import React, { useState, cloneElement, ReactElement, useEffect } from 'react'
+import React, { useState, cloneElement, ReactElement, useEffect, Ref } from 'react'
+import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
-import { Dropdown } from '../Dropdown'
+import { Dropdown, Placement } from '../Dropdown'
 import { InputProps } from '../Input/Input'
 import { SelectInput } from '../SelectInput'
 
-import { Vertical, Horizontal } from '../useSnapEdgeToParent'
+import { SelectListProps, SelectListData, SelectList } from '../SelectList'
 
 interface InjectValueAndHandler {
+  onClick: () => void
   name?: string
   value?: string
   placeholder?: string
-  onClick: () => void
+  ref?: React.Ref<HTMLInputElement>
 }
 
-export interface SelectProps {
+interface ChildProps extends Pick<SelectListProps, 'value' | 'data'> {
+  close: () => void
+}
+
+export interface SelectProps extends Pick<SelectListProps, 'value' | 'data'> {
   name?: string
-  value?: string
   placeholder?: string
   triggerComponent?: ReactElement<any>
   onOutsideClick?: (isOpen: boolean, close: Function) => void
   useTriggerComponentWidth?: boolean
   onChange?: (value: any) => void
-  vertical?: Vertical
-  horizontal?: Horizontal
   test?: string
-  children: any
+  children?: (props: ChildProps) => ReactElement
 }
 
 export const injectComponent = (component: ReactElement<any>, props: InjectValueAndHandler) => {
@@ -35,28 +38,31 @@ export const injectComponent = (component: ReactElement<any>, props: InjectValue
   })
 }
 
-const getTriggerComponent = (props: InjectValueAndHandler, triggerComponent?: ReactElement<any>) => {
-  if (triggerComponent) return injectComponent(triggerComponent, props)
+const getTriggerComponent = (props: InjectValueAndHandler, ref: Ref<HTMLInputElement>, triggerComponent?: ReactElement<any>) => {
+  if (triggerComponent) return injectComponent(triggerComponent, { ...props, ref })
   // Does not need onChange because SelectInput only display data
-  return <SelectInput {...props} />
+  return <SelectInput {...props} ref={ref} />
 }
+
+const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
+  width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
+`
 
 export const Select = ({
   name,
-  value,
+  value = { key: '', value: '' },
+  data,
   placeholder,
   onChange,
   triggerComponent,
   useTriggerComponentWidth = true,
   onOutsideClick,
-  vertical,
-  horizontal,
   children,
   py = 2,
   test,
   disabled,
   ...rest
-}: SelectProps & BlockProps & InputProps) => {
+}: SelectProps & BlockProps & Omit<InputProps, 'value'>) => {
   const [isOpen, setIsOpen] = useState(false)
   const close = () => setIsOpen(false)
 
@@ -64,7 +70,7 @@ export const Select = ({
     ...rest,
     name,
     placeholder,
-    value,
+    value: value.value,
     disabled,
     onClick: () => !disabled && setIsOpen(!isOpen)
   }
@@ -72,25 +78,41 @@ export const Select = ({
   useEffect(() => { disabled && close() }, [disabled])
 
   return (
-    <Dropdown {...rest} py={py}
+    <Dropdown
+      {...rest}
+      py={py}
       open={isOpen}
-      data-test={test}
-      vertical={vertical}
-      horizontal={horizontal}
-      triggerComponent={getTriggerComponent(triggerComponentProps, triggerComponent)}
-      useTriggerComponentWidth={useTriggerComponentWidth}
+      test={test}
+      placement={Placement.BOTTOM_START}
+      useTriggerWidth={useTriggerComponentWidth}
+      renderTrigger={({ ref }) => getTriggerComponent(
+        { ...triggerComponentProps },
+        ref as Ref<HTMLInputElement>,
+        triggerComponent
+      )}
       onOutsideClick={
         () => onOutsideClick
           ? onOutsideClick(isOpen, close)
           : setIsOpen(false)
       }>
-      {cloneElement(children, {
-        ...children.props,
-        onChange: (value: any) => {
-          children.props.onChange && children.props.onChange(value)
-          setIsOpen(false)
-        }
-      })}
+        <OptionsWrapper fullWidth={useTriggerComponentWidth}>
+          {children
+            ? children({
+              close: () => setIsOpen(false),
+              value,
+              data
+            })
+            : (
+              <SelectList
+                value={value.key ? value : undefined}
+                onChange={(v: SelectListData) => {
+                  onChange && onChange(v)
+                  setIsOpen(false)
+                }}
+                data={data}
+              />
+            )}
+        </OptionsWrapper>
     </Dropdown>
   )
 }

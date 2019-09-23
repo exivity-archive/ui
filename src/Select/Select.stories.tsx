@@ -17,53 +17,70 @@ const items = [
 
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
+  // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
-    <Select value={state && state.value} placeholder='Choose option'>
-      <SelectList value={state && state.key} onChange={storeState} data={items} />
+    <Select
+      value={state || undefined}
+      data={items}
+      onChange={storeState}
+      placeholder='Choose option'
+    />
+  ))
+  .add('custom options', ({ state, storeState }: any) => (
+    <Select
+      value={state || undefined}
+      data={items}
+      placeholder='Choose option'
+    >
+      {({ close, value, data }) => (
+        <SelectList
+          value={value}
+          data={data.map((d) => ({ ...d, value: `Option: ${d.value}` }))}
+          onChange={(newState) => {
+            storeState(newState)
+            close()
+          }}
+        />
+      )}
     </Select>
   ))
-  .add('Custom triggerComponent', ({ state, storeState }: any) => (
+  .add('custom triggerComponent', ({ state, storeState }: any) => (
     <Row columns={4}>
-      <Select value={state && state.value} triggerComponent={<SelectInput placeholder='Choose option' outlined />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput secondary placeholder='Choose option' outlined />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput danger placeholder='Choose option' outlined />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput success placeholder='Choose option' outlined />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput placeholder='Choose option' />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput placeholder='Choose option' />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput danger placeholder='Choose option' />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
-      <Select value={state && state.value} triggerComponent={<SelectInput success placeholder='Choose option' />}>
-        <SelectList value={state && state.key} onChange={storeState} data={items} />
-      </Select>
+      <Select
+        value={state || undefined}
+        data={items}
+        onChange={storeState}
+        triggerComponent={<SelectInput placeholder='Choose option' outlined />}
+      />
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
-    <Select value={state && state.value} useTriggerComponentWidth={false} placeholder='Choose option'>
-      <SelectList value={state && state.key} onChange={storeState} data={items} />
-    </Select>
+    <Select
+      value={state || undefined}
+      useTriggerComponentWidth={false}
+      placeholder='Choose option'
+      onChange={storeState}
+      data={items}
+    />
   ))
   .add('onOutsideClick (dropdown)', ({ state, storeState }: any) => (
-    <Select placeholder='Click on me or outside' value={state && state.value} useTriggerComponentWidth={false} onOutsideClick={(isOpen) => {
-      window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
-    }}>
-      <SelectList value={state && state.key} onChange={storeState} data={[{ key: '1 ', value: 'click outside' }]} />
-    </Select>
+    <Select
+      placeholder='Click on me or outside'
+      value={state || undefined}
+      onChange={storeState}
+      data={[{ key: '1 ', value: 'click outside' }]}
+      useTriggerComponentWidth={false}
+      onOutsideClick={(isOpen) => {
+        window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
+      }}
+    />
   ))
   .add('disabled', ({ state, storeState }: any) => (
-    <Select disabled value={state && state.value} triggerComponent={<SelectInput success placeholder='Choose option' />}>
-      <SelectList value={state && state.key} onChange={storeState} data={items} />
-    </Select>
+    <Select
+      disabled
+      value={state || undefined}
+      data={items}
+      onChange={storeState}
+      triggerComponent={<SelectInput success placeholder='Choose option' />}
+    />
   ))
