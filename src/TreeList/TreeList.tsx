@@ -8,8 +8,13 @@ import { useExpandable } from '../useExpandable'
 import { ListFocus } from '../ListFocus'
 import { StyledList } from '../SelectList'
 import { BlockProps } from '../Block'
+import styled from 'styled-components'
 
 const ITEM_HEIGHT = 30
+
+const StyledListFocus = styled(ListFocus)`
+  overflow-y: auto;
+`
 
 interface TreeListProps<Data extends {}> {
   keyAccessor: (item: Data) => string
@@ -62,12 +67,11 @@ export function TreeList<Data extends {}> ({
   const height = (expandableData.length * itemHeight)
 
   return (
-    <ListFocus
+    <StyledListFocus
       {...blockProps}
       height={height}
       maxHeight='100%'
-      width={width}
-      style={{ overflowY: 'scroll' }}>
+      width={width}>
       <StyledList
         height={height}
         itemData={itemData}
@@ -77,7 +81,7 @@ export function TreeList<Data extends {}> ({
         width={width}>
         {children || DefaultItem}
       </StyledList>
-    </ListFocus>
+    </StyledListFocus>
   )
 }
 

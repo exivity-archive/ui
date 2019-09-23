@@ -29,11 +29,7 @@ storiesOf('organisms|TreeList', module)
   .add('auto height', () => {
     return (
       <Block height={300} width={500}>
-        <TreeList
-          maxItemsRendered='auto'
-          data={FLAT_LIST_TEST_DATA}
-          keyAccessor={keyAccessor}
-          parentKeyAccessor={parentKeyAccessor} />
+        <TreeList data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor} />
         <hr />
       </Block>
     )
