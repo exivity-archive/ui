@@ -5,6 +5,7 @@ import { storiesOf } from '@storybook/react'
 
 import { Modal, Button, Paragraph, Icon } from '..'
 import { Heading } from '../Heading'
+import { Flex } from '../Flex'
 
 storiesOf('molecules|Modal', module)
   .add('default', () => {
@@ -32,8 +33,10 @@ storiesOf('molecules|Modal', module)
   })
   .add('custom title', () => {
     return (
-      <Modal title={<Heading type='section'>Custom title component</Heading>}>
-        <Paragraph>{Faker.lorem.paragraph(8)}</Paragraph>
-      </Modal>
+      <Flex height='200vh'>
+        <Modal title={<Heading type='section'>Custom title component</Heading>}>
+          <Paragraph>{Faker.lorem.paragraph(8)}</Paragraph>
+        </Modal>
+      </Flex>
     )
   })

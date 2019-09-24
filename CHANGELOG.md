@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/exivity/ui/compare/v0.16.11...v0.17.0) (2019-09-23)
+
+
+### Features
+
+* Reworked Dropdown and Select components ([#203](https://github.com/exivity/ui/issues/203)) ([bd73296](https://github.com/exivity/ui/commit/bd73296))
+
+
+### BREAKING CHANGES
+
+* Dropdown and Select components props have been changed. Select components no longer accepts children by default. Children are optional are utilize render props approach
+
+
+
+### [0.16.11](https://github.com/exivity/ui/compare/v0.16.10...v0.16.11) (2019-09-19)
+
+
+
 ### [0.16.10](https://github.com/exivity/ui/compare/v0.16.9...v0.16.10) (2019-09-16)
 
 

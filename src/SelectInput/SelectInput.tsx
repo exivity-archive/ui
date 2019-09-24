@@ -1,19 +1,19 @@
-import React from 'react'
+import React, { forwardRef, Ref } from 'react'
 import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { OmitOnChangeHTMLInputAttributes, InputProps, Input } from '../Input/Input'
 import { Adornment, Icon } from '../'
 
-export const SelectInput: React.FC<InputProps & OmitOnChangeHTMLInputAttributes> = ({
+export const SelectInput = forwardRef(({
   disabled,
   onChange,
   ...rest
-}) => (
-    <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
-      <StyledSelectInput onChange={onChange} {...rest} disabled isDisabled={disabled} />
-    </Adornment>
-  )
+}: InputProps & OmitOnChangeHTMLInputAttributes, ref: Ref<HTMLInputElement>) => (
+  <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
+    <StyledSelectInput ref={ref} onChange={onChange} {...rest} disabled isDisabled={disabled} />
+  </Adornment>
+))
 
 const StyledSelectInput = styled(Input) <{ isDisabled?: boolean }>`
   ${props => props.isDisabled
