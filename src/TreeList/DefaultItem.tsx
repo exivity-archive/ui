@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { CSSProperties } from 'react'
 import styled from 'styled-components'
 
 import { TreeListItem } from '../useExpandable'
@@ -36,6 +36,7 @@ const ButtonIcon = styled(Icon)`
 `
 
 export interface TreeListItemProps<Data extends {}> extends ListChildComponentProps {
+  test?: string
   data: {
     items: TreeListItem<Data>[]
     onChange: (item: Data, e?: React.MouseEvent<HTMLLIElement>) => void
@@ -44,32 +45,34 @@ export interface TreeListItemProps<Data extends {}> extends ListChildComponentPr
 
 export function DefaultItem<Data extends { value: string }> ({
   data,
-  style,
   index,
+  style = {},
+  test = 'treelist-item',
   ...rest
 }: TreeListItemProps<Data>) {
   const { items, onChange } = data
   const item = items[index]
 
-  return useMemo(() => {
-    const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
+  const handleChange = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
-    return (
-      <ListItem style={style} onClick={handleChange} {...rest}>
-        <BranchSpacer spacing={20} padding={item[CHILDREN] ? 5 : 0} index={index} data={items}>
-          {item[CHILDREN] && (
-            <ToggleExpandedButton
-              onClick={e => {
-                e.stopPropagation()
-                item.expand()
-              }}
-            >
-              <ButtonIcon>{item.expanded ? <COLLAPSE_ICON /> : <EXPAND_ICON />}</ButtonIcon>
-            </ToggleExpandedButton>
-          )}
-          <StyledValue>{item.value}</StyledValue>
-        </BranchSpacer>
-      </ListItem>
-    )
-  }, [item, index, items, onChange])
+  return (
+    <ListItem data-testid={test} style={style} onClick={handleChange} {...rest}>
+      <BranchSpacer spacing={20} padding={item[CHILDREN] ? 5 : 0} index={index} data={items}>
+        {item[CHILDREN] && (
+          <ToggleExpandedButton
+            data-testid={`${test}-toggle-expand-button`}
+            onClick={e => {
+              e.stopPropagation()
+              item.expand()
+            }}
+          >
+            <ButtonIcon>{item.expanded
+              ? <COLLAPSE_ICON data-testid={`${test}-toggle-expand-button-collapse-icon`} />
+              : <EXPAND_ICON data-testid={`${test}-toggle-expand-button-expand-icon`} />}</ButtonIcon>
+          </ToggleExpandedButton>
+        )}
+        <StyledValue>{item.value}</StyledValue>
+      </BranchSpacer>
+    </ListItem>
+  )
 }
