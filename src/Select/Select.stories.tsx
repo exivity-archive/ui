@@ -1,12 +1,12 @@
 import React from 'react'
-
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/tests/decorators/StateDecorator'
 
-import { Select } from '.'
+import { withState } from '../utils/tests/decorators/StateDecorator'
 import { SelectList } from '../SelectList'
 import { SelectInput } from '../SelectInput'
 import { Row } from '../utils/stories/components'
+
+import { Select } from '.'
 
 const items = [
   { key: '1', value: 'one' },
@@ -18,69 +18,90 @@ const items = [
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
   // @ts-ignore
-  .add('default', ({ state, storeState }: any) => (
+  .add('default', ({ state, storeState }: {state: {key: string, value: string, b: number}, storeState: any}) => (
     <Select
-      value={state || undefined}
+      selected={state}
       data={items}
-      onChange={storeState}
-      placeholder='Choose option'
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
+    />
+  ))
+  .add('open by default', ({ state, storeState }: {state: {key: string, value: string, b: number}, storeState: any}) => (
+    <Select
+      selected={state}
+      data={items}
+      defaultOpen={true}
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
     />
   ))
   .add('custom options', ({ state, storeState }: any) => (
     <Select
-      value={state || undefined}
-      data={items}
-      placeholder='Choose option'
+      open={state ? state.open : false}
+      selected={state ? state.value : ''}
+      onToggle={(open) => storeState({ ...state, open })}
+      placeholder='Choose an option'
     >
-      {({ close, value, data }) => (
-        <SelectList
-          value={value}
-          data={data.map((d) => ({ ...d, value: `Option: ${d.value}` }))}
-          onChange={(newState) => {
-            storeState(newState)
-            close()
-          }}
-        />
-      )}
+      <SelectList
+        value={state}
+        data={items.map((d: any) => ({ ...d, value: `Option: ${d.value}` }))}
+        onChange={(v) => {
+          storeState({ ...v, open: false })
+        }}
+      />
     </Select>
   ))
-  .add('custom triggerComponent', ({ state, storeState }: any) => (
+  .add('custom input component', ({ state, storeState }: any) => (
     <Row columns={4}>
       <Select
-        value={state || undefined}
+        selected={state}
         data={items}
-        onChange={storeState}
-        triggerComponent={<SelectInput placeholder='Choose option' outlined />}
+        onChange={(v) => { storeState(v) }}
+        placeholder='Choose an option'
+        InputComponent={React.forwardRef((props, ref) => <SelectInput {...props} ref={ref} outlined />)}
       />
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
     <Select
-      value={state || undefined}
-      useTriggerComponentWidth={false}
-      placeholder='Choose option'
-      onChange={storeState}
+      selected={state}
       data={items}
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
+      useInputComponentWidth={false}
     />
   ))
-  .add('onOutsideClick (dropdown)', ({ state, storeState }: any) => (
+  .add('onOutsideClick', ({ state, storeState }: any) => (
     <Select
-      placeholder='Click on me or outside'
-      value={state || undefined}
-      onChange={storeState}
-      data={[{ key: '1 ', value: 'click outside' }]}
-      useTriggerComponentWidth={false}
-      onOutsideClick={(isOpen) => {
+      selected={state}
+      data={items}
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
+      onOutsideClick={(isOpen, close) => {
         window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
+        close()
       }}
     />
   ))
   .add('disabled', ({ state, storeState }: any) => (
     <Select
       disabled
-      value={state || undefined}
+      selected={state}
       data={items}
-      onChange={storeState}
-      triggerComponent={<SelectInput success placeholder='Choose option' />}
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
     />
   ))
+  .add('contolled', ({ state, storeState }: any) => {
+    const [open, setOpen] = React.useState<boolean>(false)
+    return (
+      <Select
+        selected={state && state.value ? state : undefined}
+        data={items}
+        open={open}
+        onToggle={(open) => setOpen(open)}
+        onChange={(v) => storeState(v)}
+        placeholder='Choose an option'
+      />
+    )
+  })

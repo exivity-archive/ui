@@ -11,7 +11,7 @@ export interface SelectListData {
   value: string
 }
 
-export interface SelectListProps<T extends SelectListData = SelectListData> {
+export interface SelectListProps<T extends SelectListData> {
   data: T[]
   value?: T
   width?: string | number

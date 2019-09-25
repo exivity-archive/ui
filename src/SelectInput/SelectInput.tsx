@@ -1,29 +1,27 @@
-import React, { forwardRef, Ref } from 'react'
+import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import { OmitOnChangeHTMLInputAttributes, InputProps, Input } from '../Input/Input'
 import { Adornment, Icon } from '../'
 
-export const SelectInput = forwardRef(({
-  disabled,
-  onChange,
-  ...rest
-}: InputProps & OmitOnChangeHTMLInputAttributes, ref: Ref<HTMLInputElement>) => (
+export type SelectInputProps = InputProps & OmitOnChangeHTMLInputAttributes
+
+export const SelectInput = forwardRef <any, SelectInputProps>((props, ref) => (
   <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
-    <StyledSelectInput ref={ref} onChange={onChange} {...rest} disabled isDisabled={disabled} />
+    <StyledSelectInput ref={ref} {...props} />
   </Adornment>
 ))
 
-const StyledSelectInput = styled(Input) <{ isDisabled?: boolean }>`
-  ${props => props.isDisabled
+const StyledSelectInput = styled(Input)`
+  ${props => props.disabled
     ? css`
        &[disabled] {
           cursor: not-allowed;
         }
       `
     : css`
-      &[disabled] {
+      {
         cursor: pointer;
         box-shadow: none;
       }
