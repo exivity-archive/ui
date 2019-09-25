@@ -15,6 +15,21 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
+const CustomSelectList: React.FC<any> = ({ close, select, value, data }) => (
+  <SelectList
+    value={value}
+    data={data.map((d: any) => ({ ...d, value: `Option: ${d.value}` }))}
+    onChange={(item) => {
+      select(item)
+      close()
+    }}
+  />
+)
+
+const CustomInput = React.forwardRef((props, ref: any) => (
+  <SelectInput {...props} ref={ref} outlined />
+))
+
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
   // @ts-ignore
@@ -23,41 +38,35 @@ export default storiesOf('molecules/Select', module)
       value={state || undefined}
       data={items}
       onChange={storeState}
-      placeholder='Choose option'
+      placeholder='Choose an option'
     />
   ))
-  .add('custom options', ({ state, storeState }: any) => (
-    <Select
-      value={state || undefined}
-      data={items}
-      placeholder='Choose option'
-    >
-      {({ close, value, data }) => (
-        <SelectList
-          value={value}
-          data={data.map((d) => ({ ...d, value: `Option: ${d.value}` }))}
-          onChange={(newState) => {
-            storeState(newState)
-            close()
-          }}
-        />
-      )}
-    </Select>
-  ))
-  .add('custom triggerComponent', ({ state, storeState }: any) => (
+  .add('custom options', ({ state, storeState }: any) => {
+    return (
+      <Select
+        value={state || undefined}
+        data={items}
+        onChange={storeState}
+        placeholder='Choose an option'
+        OptionsComponent={CustomSelectList}
+      />
+    )
+  })
+  .add('custom input component', ({ state, storeState }: any) => (
     <Row columns={4}>
       <Select
         value={state || undefined}
         data={items}
         onChange={storeState}
-        triggerComponent={<SelectInput placeholder='Choose option' outlined />}
+        placeholder='Choose an option'
+        InputComponent={CustomInput}
       />
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
     <Select
       value={state || undefined}
-      useTriggerComponentWidth={false}
+      useInputComponentWidth={false}
       placeholder='Choose option'
       onChange={storeState}
       data={items}
@@ -69,18 +78,18 @@ export default storiesOf('molecules/Select', module)
       value={state || undefined}
       onChange={storeState}
       data={[{ key: '1 ', value: 'click outside' }]}
-      useTriggerComponentWidth={false}
-      onOutsideClick={(isOpen) => {
+      onOutsideClick={(isOpen, close) => {
         window.alert(`Clicked outside! Dropdown status: ${isOpen ? 'open' : 'closed'}`)
+        close()
       }}
     />
   ))
   .add('disabled', ({ state, storeState }: any) => (
     <Select
       disabled
+      placeholder='Here is disabled select'
       value={state || undefined}
       data={items}
       onChange={storeState}
-      triggerComponent={<SelectInput success placeholder='Choose option' />}
     />
   ))
