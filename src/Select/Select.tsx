@@ -2,7 +2,7 @@ import React, { useState, cloneElement, ReactElement, useEffect, Ref } from 'rea
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
-import { Dropdown, Placement } from '../Dropdown'
+import { Dropdown, DropdownPlacement } from '../Dropdown'
 import { InputProps } from '../Input/Input'
 import { SelectInput } from '../SelectInput'
 
@@ -83,7 +83,7 @@ export const Select = ({
       py={py}
       open={isOpen}
       test={test}
-      placement={Placement.BOTTOM_START}
+      placement={DropdownPlacement.BOTTOM_START}
       useTriggerWidth={useTriggerComponentWidth}
       renderTrigger={({ ref }) => getTriggerComponent(
         { ...triggerComponentProps },

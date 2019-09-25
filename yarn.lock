@@ -1447,6 +1447,11 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
+"@rooks/use-timeout@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@rooks/use-timeout/-/use-timeout-3.3.0.tgz#0d210b8d4fcf2a7f10f9a08bb8ba295471e8c2b7"
+  integrity sha512-DXXAR8YBAdxq+ynLi3T3t3nA/C3Y+Uqw7k4GSxdRCzy1NWzUYr+gIazZpMvxV/+WM1CtbVF5Rhs/xkCqq4AO1A==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
