@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/exivity/ui/compare/v0.17.1...v0.18.0) (2019-09-25)
+
+
+### Features
+
+* Added Tooltip component, refactored Dropdown ([#206](https://github.com/exivity/ui/issues/206)) ([13f99f1](https://github.com/exivity/ui/commit/13f99f1))
+
+
+
 ### [0.17.1](https://github.com/exivity/ui/compare/v0.17.0...v0.17.1) (2019-09-24)
 
 
