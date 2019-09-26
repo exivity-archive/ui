@@ -8,6 +8,19 @@ import { Flex } from '../Flex'
 import { Button } from '../Button'
 import { Block } from '../Block'
 
+type TriggerButtonProps = {
+  onClick: () => void,
+  children: string
+}
+
+const DefaultTriggerButton = React.forwardRef<any, any>((props, ref) => (
+  <Button secondary {...props} ref={ref}>Click me</Button>
+))
+
+const TriggerButton = React.forwardRef<any, any>((props, ref) => (
+  <Button secondary {...props} ref={ref} />
+))
+
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
   // @ts-ignore
@@ -16,18 +29,10 @@ storiesOf('molecules|Dropdown', module)
       <div>
         <Dropdown
           open={state.one}
-          renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => (
-            <Button
-              ref={ref}
-              secondary
-              onClick={() => storeState({ one: !state.one })}
-            >
-              Click me
-            </Button>
-          )}>
-          <div style={{ width: 300 }}>
-            {Faker.lorem.paragraphs(2)}
-          </div>
+          TriggerComponent={DefaultTriggerButton}
+          onClick={() => storeState({ one: !state.one })}
+        >
+          <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
         </Dropdown>
       </div>
     </Flex>
@@ -35,46 +40,50 @@ storiesOf('molecules|Dropdown', module)
   .add('position', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' height={800} width={1000}>
       <Row columns={4}>
-        <Dropdown
+        <Dropdown<TriggerButtonProps>
           open={state.one}
           placement={DropdownPlacement.RIGHT}
-          renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => (
-            <Button ref={ref} secondary onClick={() => storeState({ one: !state.one })}>position right</Button>
-          )}>
-          <Block width={200} p={1}>
-            {Faker.lorem.paragraphs(2)}
-          </Block>
+          TriggerComponent={TriggerButton}
+          triggerComponentProps={{
+            onClick: () => storeState({ one: !state.one }),
+            children: 'RIGHT'
+          }}
+        >
+          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown
+        <Dropdown<TriggerButtonProps>
           open={state.two}
           placement={DropdownPlacement.LEFT}
-          renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => (
-            <Button ref={ref} secondary onClick={() => storeState({ two: !state.two })}>position left</Button>
-          )}>
-          <Block width={200} p={1}>
-            {Faker.lorem.paragraphs(2)}
-          </Block>
+          TriggerComponent={TriggerButton}
+          triggerComponentProps={{
+            onClick: () => storeState({ two: !state.two }),
+            children: 'LEFT'
+          }}
+        >
+          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown
+        <Dropdown<TriggerButtonProps>
           open={state.three}
           placement={DropdownPlacement.TOP}
-          renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => (
-            <Button ref={ref} secondary onClick={() => storeState({ three: !state.three })}>position top</Button>
-          )}>
-          <Block width={200} p={1}>
-            {Faker.lorem.paragraphs(2)}
-          </Block>
+          TriggerComponent={TriggerButton}
+          triggerComponentProps={{
+            onClick: () => storeState({ three: !state.three }),
+            children: 'TOP'
+          }}
+        >
+          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown
+        <Dropdown<TriggerButtonProps>
           open={state.four}
           placement={DropdownPlacement.BOTTOM}
           onOutsideClick={() => storeState({ ...state, four: false })}
-          renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => (
-            <Button ref={ref} secondary onClick={() => storeState({ four: !state.four })}>position bottom</Button>
-          )}>
-          <Block width={200} p={1}>
-            {Faker.lorem.paragraphs(2)}
-          </Block>
+          TriggerComponent={TriggerButton}
+          triggerComponentProps={{
+            onClick: () => storeState({ four: !state.four }),
+            children: 'BOTTOM'
+          }}
+        >
+          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
       </Row>
     </Flex>

@@ -1,71 +1,64 @@
-import React, { Ref } from 'react'
+import React from 'react'
 import { mount } from 'enzyme'
 import 'jest-styled-components'
 
 import { Dropdown } from '.'
 
-test('hides content, when open is false', () => {
-  const dropdown = mount((
-    <Dropdown
-      open={false}
-      test='dropdown'
-      renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => <button ref={ref}>toggle</button>}
-    >
-      <div>test</div>
-    </Dropdown>
-  ))
+type TriggerButtonProps = {
+  onClick: () => void,
+  children: string
+}
 
-  const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
-  expect(dropdownContent).toHaveLength(0)
-  dropdown.unmount()
-})
+const TriggerButton = React.forwardRef<any, TriggerButtonProps>((props, ref) => (
+  <button ref={ref}>toggle</button>
+))
 
-test('displays content, when open is true', () => {
-  const dropdown = mount((
-    <Dropdown
-      open={true}
-      test='dropdown'
-      renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => <button ref={ref}>toggle</button>}
-    >
-      <div>test</div>
-    </Dropdown>
-  ))
+describe('The Dropdown component', () => {
+  test('hides content, when open is false', () => {
+    const wrapper = mount((
+      <Dropdown open={false} TriggerComponent={TriggerButton}>
+        <div>test</div>
+      </Dropdown>
+    ))
 
-  const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
-  expect(dropdownContent.hostNodes()).toHaveLength(1)
-  dropdown.unmount()
-})
+    const dropdownContent = wrapper.find(Dropdown.Content)
+    expect(dropdownContent).toHaveLength(0)
+    wrapper.unmount()
+  })
 
-test('uses min. width, when useTriggerWidth is false', () => {
-  const dropdown = mount((
-    <Dropdown
-      open={true}
-      useTriggerWidth={false}
-      test='dropdown'
-      renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => <button ref={ref}>toggle</button>}
-    >
-      <div>test</div>
-    </Dropdown>
-  ))
+  test('displays content, when open is true', () => {
+    const wrapper = mount((
+      <Dropdown open={true} TriggerComponent={TriggerButton}>
+        <div>test</div>
+      </Dropdown>
+    ))
 
-  const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
-  expect(dropdownContent).toHaveStyleRule('min-width', '160px')
-  dropdown.unmount()
-})
+    const dropdownContent = wrapper.find(Dropdown.Content)
+    expect(dropdownContent).toHaveLength(1)
+    wrapper.unmount()
+  })
 
-test('uses full available width, when useTriggerWidth is true', () => {
-  const dropdown = mount((
-    <Dropdown
-      open={true}
-      useTriggerWidth={true}
-      test='dropdown'
-      renderTrigger={({ ref }: { ref: Ref<HTMLButtonElement> }) => <button ref={ref}>toggle</button>}
-    >
-      <div>test</div>
-    </Dropdown>
-  ))
+  test('uses min. width, when useTriggerWidth is false', () => {
+    const wrapper = mount((
+      <Dropdown open={true} useTriggerWidth={false} TriggerComponent={TriggerButton}>
+        <div>test</div>
+      </Dropdown>
+    ))
 
-  const dropdownContent = dropdown.find({ 'data-test': 'dropdown-content' })
-  expect(dropdownContent).toHaveStyleRule('min-width', '100%')
-  dropdown.unmount()
+    const dropdownContent = wrapper.find(Dropdown.Content)
+    expect(dropdownContent).toHaveStyleRule('min-width', '160px')
+    wrapper.unmount()
+  })
+
+  test('uses full available width, when useTriggerWidth is true', () => {
+    const wrapper = mount((
+      <Dropdown open={true} useTriggerWidth={true} TriggerComponent={TriggerButton}>
+        <div>test</div>
+      </Dropdown>
+    ))
+
+    const dropdownContent = wrapper.find(Dropdown.Content)
+    expect(dropdownContent).toHaveStyleRule('min-width', '100%')
+    wrapper.unmount()
+  })
 })

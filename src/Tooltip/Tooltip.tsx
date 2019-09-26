@@ -11,30 +11,28 @@ import { Flex } from '../Flex'
 
 const TriggerWrapper: FC<any> = (props) => <Flex {...props}/>
 
-export interface TooltipProps extends Pick<PopperProps, 'renderTrigger' | 'placement' | 'onOutsideClick' | 'flip' | 'offset'> {
+export interface TooltipProps<T> extends Pick<PopperProps, 'placement' | 'onOutsideClick' | 'flip' | 'offset'> {
   children: React.ReactNode
+  TriggerComponent: React.ComponentType<T & { ref: React.Ref<any> }>
+  triggerComponentProps?: T
   open?: boolean | null
   defaultOpen?: boolean
   closeTimeout?: number
 }
 
-interface Components {
-  Content: typeof TooltipContent
-  TriggerWrapper: typeof TriggerWrapper
-}
-
-export const Tooltip: FC<TooltipProps & BlockProps> & Components = ({
-  renderTrigger,
+export function Tooltip <T extends {}> ({
+  TriggerComponent,
+  triggerComponentProps = {} as T,
   flip,
   open = null,
   defaultOpen = false,
   offset = 0,
   closeTimeout = 1000,
   children,
-  placement = TooltipPlacement.BOTTOM,
+  placement = TooltipPlacement.TOP,
   onOutsideClick,
   ...blockProps
-}) => {
+}: TooltipProps<T> & BlockProps) {
   const [opened, setOpened] = useState(open === null ? defaultOpen : open)
   useEffect(() => {
     if (open !== null) {
@@ -47,7 +45,7 @@ export const Tooltip: FC<TooltipProps & BlockProps> & Components = ({
 
   return (
     <Popper
-      renderTrigger={(...args) => (
+      renderTrigger={({ ref }) => (
         <TriggerWrapper
           onMouseEnter={() => {
             if (open === null) {
@@ -61,7 +59,7 @@ export const Tooltip: FC<TooltipProps & BlockProps> & Components = ({
             }
           }}
         >
-          {renderTrigger(...args)}
+          <TriggerComponent {...triggerComponentProps} ref={ref} />
         </TriggerWrapper>
       )}
       open={opened}

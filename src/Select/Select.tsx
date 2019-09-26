@@ -1,9 +1,8 @@
-import React, { useState, cloneElement, ReactElement, useEffect, Ref } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
 import { Dropdown, DropdownPlacement } from '../Dropdown'
-import { InputProps } from '../Input/Input'
 import { SelectInput, SelectInputProps } from '../SelectInput'
 
 import { SelectListProps, SelectListData, SelectList } from '../SelectList'
@@ -12,38 +11,44 @@ const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
 `
 
-export interface OptionsProps extends Pick<SelectListProps, 'value' | 'data'> {
+interface ListData<D extends SelectListData> extends Pick<SelectListProps<D>, 'value' | 'data'> {}
+
+type InputComponentProps = Partial<Omit<SelectInputProps, 'ref'>>
+
+export interface OptionsProps<D extends SelectListData> extends ListData<D> {
   close: () => void
-  select: (item: SelectListData) => void
+  select: (item: D) => void
 }
 
-export interface SelectProps extends Pick<SelectListProps, | 'data'> {
+export interface SelectProps<D extends SelectListData, I> extends ListData<D> {
   name?: string
-  value?: SelectListData,
   placeholder?: string
-  onOutsideClick?: (isOpen: boolean, close: Function) => void
+  disabled?: boolean,
+  onOutsideClick?: (isOpen: boolean, close: () => void) => void
   useInputComponentWidth?: boolean
   onChange: (value: any) => void
-  test?: string,
-  InputComponent?: React.ElementType<SelectInputProps>
-  OptionsComponent?: React.ElementType<OptionsProps>
+  InputComponent?: React.ComponentType<I & { ref: React.Ref<any> }>
+  inputComponentProps?: I,
+  OptionsComponent?: React.ComponentType<OptionsProps<D>>
+  children?: React.ReactChildren
 }
 
-export const Select = ({
+export function Select <D extends SelectListData, I extends InputComponentProps> ({
   name,
-  value = { key: '', value: '' },
+  value,
   data,
   placeholder,
   onChange,
   useInputComponentWidth = true,
   onOutsideClick,
   InputComponent,
+  inputComponentProps = {} as I,
   OptionsComponent,
   children,
   py = 2,
-  disabled,
+  disabled = false,
   ...rest
-}: SelectProps & BlockProps & Omit<InputProps, 'value'>) => {
+}: SelectProps<D, I> & BlockProps) {
   if (children) {
     throw new Error('Usage of children is prohibited. To define custom ' +
     'options for <Select>, use `OptionsComponent` prop instead.')
@@ -52,29 +57,27 @@ export const Select = ({
   const [isOpen, setIsOpen] = useState(false)
   const close = () => setIsOpen(false)
 
-  const inputComponentProps = {
-    ...rest,
+  inputComponentProps = {
     name,
     placeholder,
-    value: value.value,
+    value: value ? value.value : '',
     disabled,
-    onClick: () => !disabled && setIsOpen(!isOpen)
+    onClick: () => !disabled && setIsOpen(!isOpen),
+    onChange: () => null,
+    ...inputComponentProps
   }
 
   useEffect(() => { disabled && close() }, [disabled])
 
   return (
-    <Dropdown
+    <Dropdown<I>
       {...rest}
       py={py}
       open={isOpen}
       placement={DropdownPlacement.BOTTOM_START}
       useTriggerWidth={useInputComponentWidth}
-      renderTrigger={({ ref }) =>
-        InputComponent
-            ? <InputComponent {...inputComponentProps} ref={ref as any} />
-            : <SelectInput {...inputComponentProps} ref={ref as Ref<HTMLInputElement>} />
-      }
+      TriggerComponent={InputComponent! || SelectInput}
+      triggerComponentProps={inputComponentProps}
       onOutsideClick={
         () => onOutsideClick
           ? onOutsideClick(isOpen, close)
@@ -85,7 +88,7 @@ export const Select = ({
             ? (
               <OptionsComponent
                 close={close}
-                select={(item: SelectListData) => {
+                select={(item: D) => {
                   onChange && onChange(item)
                 }}
                 value={value}
@@ -94,9 +97,9 @@ export const Select = ({
             )
             : (
               <SelectList
-                value={value.key ? value : undefined}
+                value={value}
                 data={data}
-                onChange={(item: SelectListData) => {
+                onChange={(item: D) => {
                   onChange && onChange(item)
                   close()
                 }}

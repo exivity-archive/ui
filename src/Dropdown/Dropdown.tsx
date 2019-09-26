@@ -1,49 +1,55 @@
-import React, { FC } from 'react'
+import React from 'react'
 
 import { BlockProps } from '../Block'
 
 import { Content } from './styles'
-import { Popper, PopperProps } from './Popper'
+import { Popper, PopperProps, Placement } from './Popper'
 
-export { Placement as DropdownPlacement } from './Popper'
+export const DropdownPlacement = Placement
 
-export interface DropdownProps extends Pick<PopperProps, 'open' | 'renderTrigger' | 'placement' | 'onOutsideClick' | 'flip'> {
+export interface DropdownProps<T> extends Pick<PopperProps, 'open' | 'placement' | 'onOutsideClick' | 'flip'> {
   children: React.ReactNode
   useTriggerWidth?: boolean
-  test?: string
+  TriggerComponent: React.ComponentType<T & { ref: React.Ref<any>, onClick?: () => void }>
+  triggerComponentProps?: T
+  onClick?: () => void
 }
 
-export const Dropdown: FC<DropdownProps & BlockProps> & { Content: typeof Content } = ({
-  renderTrigger,
+export function Dropdown <T extends {}> ({
+  TriggerComponent,
+  triggerComponentProps = {} as T,
   open,
   flip,
   children,
   useTriggerWidth = false,
   placement,
   onOutsideClick,
-  test = 'dropdown',
+  onClick,
   ...blockProps
-}) => (
-  <Popper
-    renderTrigger={renderTrigger}
-    open={open}
-    flip={flip}
-    placement={placement}
-    onOutsideClick={onOutsideClick}
-  >
-    {({ ref, style, placement }) => (
-      <Content
-        ref={ref as any}
-        style={style}
-        data-placement={placement}
-        data-test={`${test}-content`}
-        fullWidth={useTriggerWidth}
-        {...blockProps}
-      >
-        {children}
-      </Content>
-    )}
-  </Popper>
-)
+}: DropdownProps<T> & BlockProps) {
+  return (
+    <Popper
+      renderTrigger={({ ref }) => (
+        <TriggerComponent onClick={onClick} {...triggerComponentProps} ref={ref} />
+      )}
+      open={open}
+      flip={flip}
+      placement={placement}
+      onOutsideClick={onOutsideClick}
+    >
+      {({ ref, style, placement }) => (
+        <Content
+          ref={ref as any}
+          style={style}
+          data-placement={placement}
+          fullWidth={useTriggerWidth}
+          {...blockProps}
+        >
+          {children}
+        </Content>
+      )}
+    </Popper>
+  )
+}
 
 Dropdown.Content = Content

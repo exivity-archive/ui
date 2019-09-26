@@ -1,12 +1,12 @@
-import React from 'react'
-
+import React, { forwardRef } from 'react'
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/tests/decorators/StateDecorator'
 
-import { Select } from '.'
+import { withState } from '../utils/tests/decorators/StateDecorator'
 import { SelectList } from '../SelectList'
 import { SelectInput } from '../SelectInput'
 import { Row } from '../utils/stories/components'
+
+import { Select } from '.'
 
 const items = [
   { key: '1', value: 'one' },
@@ -26,7 +26,7 @@ const CustomSelectList: React.FC<any> = ({ close, select, value, data }) => (
   />
 )
 
-const CustomInput = React.forwardRef((props, ref: any) => (
+const CustomInput = forwardRef<any, any>((props, ref) => (
   <SelectInput {...props} ref={ref} outlined />
 ))
 

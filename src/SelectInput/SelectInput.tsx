@@ -1,4 +1,4 @@
-import React, { forwardRef, Ref } from 'react'
+import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
@@ -7,10 +7,7 @@ import { Adornment, Icon } from '../'
 
 export type SelectInputProps = InputProps & OmitOnChangeHTMLInputAttributes
 
-export const SelectInput = forwardRef((
-  props: SelectInputProps,
-  ref: Ref<HTMLInputElement>
-) => (
+export const SelectInput = forwardRef <any, SelectInputProps>((props, ref) => (
   <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
     <StyledSelectInput ref={ref} {...props} />
   </Adornment>
