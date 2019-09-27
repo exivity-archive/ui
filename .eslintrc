@@ -1,0 +1,10 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "exivity",
+    "exivity/react",
+    "exivity/testing"
+  ]
+}
