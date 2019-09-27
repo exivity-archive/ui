@@ -30,7 +30,9 @@ export function Dropdown <T extends {}> ({
   return (
     <Popper
       renderTrigger={({ ref }) => (
-        <TriggerComponent onClick={onClick} {...triggerComponentProps} ref={ref} />
+        <div ref={ref}>
+          <TriggerComponent onClick={onClick} {...triggerComponentProps} />
+        </div>
       )}
       open={open}
       flip={flip}

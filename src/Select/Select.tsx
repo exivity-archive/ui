@@ -3,104 +3,113 @@ import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
 import { Dropdown, DropdownPlacement } from '../Dropdown'
-import { SelectInput, SelectInputProps } from '../SelectInput'
+import { SelectInput } from '../SelectInput'
 
-import { SelectListProps, SelectListData, SelectList } from '../SelectList'
+import { SelectListData, SelectList } from '../SelectList'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
 `
 
-interface ListData<D extends SelectListData> extends Pick<SelectListProps<D>, 'value' | 'data'> {}
-
-type InputComponentProps = Partial<Omit<SelectInputProps, 'ref'>>
-
-export interface OptionsProps<D extends SelectListData> extends ListData<D> {
-  close: () => void
-  select: (item: D) => void
+interface InputComponentProps {
+  value?: string
+  name?: string
+  placeholder?: string
+  disabled?: boolean
+  onClick: () => void
+  onChange: () => void
 }
 
-export interface SelectProps<D extends SelectListData, I> extends ListData<D> {
+export interface SelectProps<V> {
+  value: V
+  inputValueAccessor?: V extends string ? never : ((value: V) => string)
+  InputComponent?: React.ComponentType<InputComponentProps>
+  data?: V extends SelectListData ? V[] : never
+  onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
   placeholder?: string
   disabled?: boolean,
   onOutsideClick?: (isOpen: boolean, close: () => void) => void
   useInputComponentWidth?: boolean
-  onChange: (value: any) => void
-  InputComponent?: React.ComponentType<I & { ref: React.Ref<any> }>
-  inputComponentProps?: I,
-  OptionsComponent?: React.ComponentType<OptionsProps<D>>
-  children?: React.ReactChildren
+  children?: React.ReactElement
+  open?: boolean | null
+  onToggle?: (open: boolean) => void
 }
 
-export function Select <D extends SelectListData, I extends InputComponentProps> ({
+export function Select <V = string> ({
   name,
   value,
+  inputValueAccessor = ((item: V) => item) as never,
+  open = null,
+  onToggle = () => null,
   data,
   placeholder,
   onChange,
   useInputComponentWidth = true,
   onOutsideClick,
   InputComponent,
-  inputComponentProps = {} as I,
-  OptionsComponent,
   children,
   py = 2,
   disabled = false,
   ...rest
-}: SelectProps<D, I> & BlockProps) {
-  if (children) {
-    throw new Error('Usage of children is prohibited. To define custom ' +
-    'options for <Select>, use `OptionsComponent` prop instead.')
+}: SelectProps<V> & BlockProps) {
+  const [isOpen, setIsOpen] = useState(false)
+  const close = () => {
+    if (open === null) {
+      setIsOpen(false)
+    }
+    onToggle(false)
   }
 
-  const [isOpen, setIsOpen] = useState(false)
-  const close = () => setIsOpen(false)
+  useEffect(() => {
+    if (open !== null) {
+      setIsOpen(open)
+    }
+  }, [open])
 
-  inputComponentProps = {
+  const inputComponentProps = {
     name,
     placeholder,
-    value: value ? value.value : '',
+    value: value ? inputValueAccessor(value) : '',
     disabled,
-    onClick: () => !disabled && setIsOpen(!isOpen),
-    onChange: () => null,
-    ...inputComponentProps
+    onClick: () => {
+      if (disabled) return
+      if (open === null) {
+        setIsOpen(!isOpen)
+      }
+      onToggle(!isOpen)
+    },
+    onChange: () => null
   }
 
   useEffect(() => { disabled && close() }, [disabled])
 
   return (
-    <Dropdown<I>
+    <Dropdown
       {...rest}
       py={py}
       open={isOpen}
       placement={DropdownPlacement.BOTTOM_START}
       useTriggerWidth={useInputComponentWidth}
-      TriggerComponent={InputComponent! || SelectInput}
-      triggerComponentProps={inputComponentProps}
+      TriggerComponent={() => (
+        InputComponent
+          ? <InputComponent {...inputComponentProps}/>
+          : <SelectInput {...inputComponentProps}/>
+      )}
       onOutsideClick={
         () => onOutsideClick
           ? onOutsideClick(isOpen, close)
           : close()
       }>
         <OptionsWrapper fullWidth={useInputComponentWidth}>
-          {OptionsComponent
-            ? (
-              <OptionsComponent
-                close={close}
-                select={(item: D) => {
-                  onChange && onChange(item)
-                }}
-                value={value}
-                data={data}
-              />
-            )
+          {children
+            ? children
             : (
-              <SelectList
-                value={value}
-                data={data}
-                onChange={(item: D) => {
-                  onChange && onChange(item)
+              <SelectList<V extends SelectListData ? V : never>
+                value={value as V extends SelectListData ? V : never}
+                data={data as any[] || []}
+                onChange={(v) => {
+                  onChange && onChange(v)
                   close()
                 }}
               />
