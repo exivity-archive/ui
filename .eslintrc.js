@@ -1,22 +1,18 @@
 module.exports = {
-  "env": {
-    "browser": true
+  env: {
+    browser: true
   },
-  "extends": [
-    "exivity",
-    "exivity/react",
-    "exivity/testing"
+  extends: [
+    'exivity',
+    'exivity/react',
+    'exivity/testing'
   ],
 
-  "overrides": [{
-    "files": ["*.stories.*"],
-    "rules": {
+  overrides: [{
+    files: ['*.stories.*'],
+    rules: {
       // Storybook cannot parse the stories otherwise
-      "@typescript-eslint/member-delimiter-style": [2, { "multiline": { "delimiter": "semi"} }]
+      '@typescript-eslint/member-delimiter-style': ['error', { 'multiline': { 'delimiter': 'semi'} }]
     }
-  }],
-
-  "rules": {
-    "react/function-component-definition": 2
-  }
+  }]
 }
