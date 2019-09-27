@@ -29,7 +29,8 @@ export const Dropdown: FC<DropdownProps & BlockProps> & { Content: typeof Conten
     open={open}
     flip={flip}
     placement={placement}
-    onOutsideClick={onOutsideClick}>
+    onOutsideClick={onOutsideClick}
+  >
     {({ ref, style, placement }) => (
       <Content
         ref={ref as any}
@@ -37,7 +38,8 @@ export const Dropdown: FC<DropdownProps & BlockProps> & { Content: typeof Conten
         data-placement={placement}
         data-test={`${test}-content`}
         fullWidth={useTriggerWidth}
-        {...blockProps}>
+        {...blockProps}
+      >
         {children}
       </Content>
     )}
