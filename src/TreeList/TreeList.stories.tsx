@@ -1,12 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Block } from '../Block'
-import { FakeRecord } from '../useExpandable/stories/seed'
-
 import { TreeList } from './TreeList'
 import { FLAT_LIST_TEST_DATA } from './stories/seed'
+import { FakeRecord } from '../useExpandable/stories/seed'
 import { CustomItem, ModifiedDefaultItem } from './stories/Items'
+import { Block } from '../Block'
 
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 const keyAccessor = (item: FakeRecord) => item.key
