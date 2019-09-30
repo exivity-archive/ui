@@ -11,6 +11,19 @@ const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
 `
 
+const defaultInputValueAccessor = (item: any): string => {
+  if (!item && item !== 0) {
+    return ''
+  }
+  if (item.value) {
+    return defaultInputValueAccessor(item.value)
+  }
+  if (item.toString) {
+    return item.toString()
+  }
+  throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
+}
+
 interface InputComponentProps {
   value?: string
   name?: string
@@ -22,7 +35,7 @@ interface InputComponentProps {
 
 export interface SelectProps<V> {
   value: V
-  inputValueAccessor?: V extends string ? never : ((value: V) => string)
+  inputValueAccessor?: (value: V) => string
   InputComponent?: React.ComponentType<InputComponentProps>
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
@@ -39,7 +52,7 @@ export interface SelectProps<V> {
 export function Select <V = string> ({
   name,
   value,
-  inputValueAccessor = ((item: V) => item) as never,
+  inputValueAccessor = defaultInputValueAccessor,
   open = null,
   onToggle = () => null,
   data,
