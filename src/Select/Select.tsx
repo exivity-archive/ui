@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
@@ -6,6 +6,7 @@ import { Dropdown, DropdownPlacement } from '../Dropdown'
 import { SelectInput } from '../SelectInput'
 
 import { SelectListData, SelectList } from '../SelectList'
+import useClosable from '../Dropdown/useClosable'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
@@ -46,6 +47,7 @@ export interface SelectProps<V> {
   useInputComponentWidth?: boolean
   children?: React.ReactElement
   open?: boolean | null
+  defaultOpen?: boolean
   onToggle?: (open: boolean) => void
 }
 
@@ -54,6 +56,7 @@ export function Select <V = string> ({
   selected,
   inputValueAccessor = defaultInputValueAccessor,
   open = null,
+  defaultOpen = false,
   onToggle = () => null,
   data,
   placeholder,
@@ -66,36 +69,17 @@ export function Select <V = string> ({
   disabled = false,
   ...rest
 }: SelectProps<V> & BlockProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const close = () => {
-    if (open === null) {
-      setIsOpen(false)
-    }
-    onToggle(false)
-  }
-
-  useEffect(() => {
-    if (open !== null) {
-      setIsOpen(open)
-    }
-  }, [open])
+  const { isOpen, toggle, close } = useClosable(defaultOpen, open, onToggle)
+  useEffect(() => { if (disabled) close() }, [disabled])
 
   const inputComponentProps = {
     name,
     placeholder,
-    value: selected ? inputValueAccessor(selected) : '',
+    value: inputValueAccessor(selected),
     disabled,
-    onClick: () => {
-      if (disabled) return
-      if (open === null) {
-        setIsOpen(!isOpen)
-      }
-      onToggle(!isOpen)
-    },
+    onClick: () => { if (!disabled) toggle() },
     onChange: () => null
   }
-
-  useEffect(() => { disabled && close() }, [disabled])
 
   return (
     <Dropdown
@@ -109,11 +93,7 @@ export function Select <V = string> ({
           ? <InputComponent {...inputComponentProps}/>
           : <SelectInput {...inputComponentProps}/>
       )}
-      onOutsideClick={
-        () => onOutsideClick
-          ? onOutsideClick(isOpen, close)
-          : close()
-      }>
+    >
         <OptionsWrapper fullWidth={useInputComponentWidth}>
           {children || (
             <SelectList<V extends SelectListData ? V : never>

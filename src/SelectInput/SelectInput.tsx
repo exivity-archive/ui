@@ -21,7 +21,7 @@ const StyledSelectInput = styled(Input)`
         }
       `
     : css`
-      &[disabled] {
+      {
         cursor: pointer;
         box-shadow: none;
       }

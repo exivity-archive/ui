@@ -26,6 +26,15 @@ export default storiesOf('molecules/Select', module)
       placeholder='Choose an option'
     />
   ))
+  .add('open by default', ({ state, storeState }: {state: {key: string, value: string, b: number}, storeState: any}) => (
+    <Select
+      selected={state}
+      data={items}
+      defaultOpen={true}
+      onChange={(v) => { storeState(v) }}
+      placeholder='Choose an option'
+    />
+  ))
   .add('custom options', ({ state, storeState }: any) => (
     <Select
       open={state ? state.open : false}
@@ -85,3 +94,16 @@ export default storiesOf('molecules/Select', module)
       placeholder='Choose an option'
     />
   ))
+  .add('contolled', ({ state, storeState }: any) => {
+    const [open, setOpen] = React.useState<boolean>(false)
+    return (
+      <Select
+        selected={state && state.value ? state : undefined}
+        data={items}
+        open={open}
+        onToggle={(open) => setOpen(open)}
+        onChange={(v) => storeState(v)}
+        placeholder='Choose an option'
+      />
+    )
+  })
