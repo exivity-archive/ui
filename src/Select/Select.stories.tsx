@@ -20,7 +20,7 @@ export default storiesOf('molecules/Select', module)
   // @ts-ignore
   .add('default', ({ state, storeState }: {state: {key: string, value: string, b: number}, storeState: any}) => (
     <Select
-      value={state}
+      selected={state}
       data={items}
       onChange={(v) => { storeState(v) }}
       placeholder='Choose an option'
@@ -29,7 +29,7 @@ export default storiesOf('molecules/Select', module)
   .add('custom options', ({ state, storeState }: any) => (
     <Select
       open={state ? state.open : false}
-      value={state ? state.value : ''}
+      selected={state ? state.value : ''}
       onToggle={(open) => storeState({ ...state, open })}
       placeholder='Choose an option'
     >
@@ -45,7 +45,7 @@ export default storiesOf('molecules/Select', module)
   .add('custom input component', ({ state, storeState }: any) => (
     <Row columns={4}>
       <Select
-        value={state}
+        selected={state}
         data={items}
         onChange={(v) => { storeState(v) }}
         placeholder='Choose an option'
@@ -57,7 +57,7 @@ export default storiesOf('molecules/Select', module)
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (
     <Select
-      value={state}
+      selected={state}
       data={items}
       onChange={(v) => { storeState(v) }}
       placeholder='Choose an option'
@@ -66,7 +66,7 @@ export default storiesOf('molecules/Select', module)
   ))
   .add('onOutsideClick (dropdown)', ({ state, storeState }: any) => (
     <Select
-      value={state}
+      selected={state}
       data={items}
       onChange={(v) => { storeState(v) }}
       placeholder='Choose an option'
@@ -79,7 +79,7 @@ export default storiesOf('molecules/Select', module)
   .add('disabled', ({ state, storeState }: any) => (
     <Select
       disabled
-      value={state}
+      selected={state}
       data={items}
       onChange={(v) => { storeState(v) }}
       placeholder='Choose an option'

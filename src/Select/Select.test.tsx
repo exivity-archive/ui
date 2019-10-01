@@ -8,7 +8,7 @@ describe('The Select component', () => {
   test('injects value component with selected value', () => {
     const wrapper = mountWithTheme((
       <Select
-        value={{ key: 'one', value: 'one' }}
+        selected={{ key: 'one', value: 'one' }}
         onChange={(() => null)}
         data={[]}
       />
@@ -22,7 +22,7 @@ describe('The Select component', () => {
   test('uses custom value accessor', () => {
     const wrapper = mountWithTheme((
       <Select
-        value={{ key: 'one', value: 'one' }}
+        selected={{ key: 'one', value: 'one' }}
         inputValueAccessor={(item) => `Value: ${item.value}`}
         onChange={(() => null)}
         data={[]}
@@ -37,7 +37,7 @@ describe('The Select component', () => {
   test('injects value component with selected value', () => {
     const wrapper = mountWithTheme((
       <Select
-        value={{ key: 'one', value: 'one' }}
+        selected={{ key: 'one', value: 'one' }}
         onChange={(() => null)}
         data={[]}
       />
@@ -51,7 +51,7 @@ describe('The Select component', () => {
   test('uses a custom value component', () => {
     const wrapper = mountWithTheme((
       <Select
-        value={{ key: 'one', value: 'one' }}
+        selected={{ key: 'one', value: 'one' }}
         onChange={(() => null)}
         data={[]}
         InputComponent={(props) => (

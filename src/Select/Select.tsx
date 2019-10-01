@@ -8,7 +8,7 @@ import { SelectInput } from '../SelectInput'
 import { SelectListData, SelectList } from '../SelectList'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
-  width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
+  width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
 `
 
 const defaultInputValueAccessor = (item: any): string => {
@@ -34,8 +34,8 @@ interface InputComponentProps {
 }
 
 export interface SelectProps<V> {
-  value: V
-  inputValueAccessor?: (value: V) => string
+  selected: V
+  inputValueAccessor?: (item: V) => string
   InputComponent?: React.ComponentType<InputComponentProps>
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
@@ -51,7 +51,7 @@ export interface SelectProps<V> {
 
 export function Select <V = string> ({
   name,
-  value,
+  selected,
   inputValueAccessor = defaultInputValueAccessor,
   open = null,
   onToggle = () => null,
@@ -83,7 +83,7 @@ export function Select <V = string> ({
   const inputComponentProps = {
     name,
     placeholder,
-    value: value ? inputValueAccessor(value) : '',
+    value: selected ? inputValueAccessor(selected) : '',
     disabled,
     onClick: () => {
       if (disabled) return
@@ -115,18 +115,16 @@ export function Select <V = string> ({
           : close()
       }>
         <OptionsWrapper fullWidth={useInputComponentWidth}>
-          {children
-            ? children
-            : (
-              <SelectList<V extends SelectListData ? V : never>
-                value={value as V extends SelectListData ? V : never}
-                data={data as any[] || []}
-                onChange={(v) => {
-                  onChange && onChange(v)
-                  close()
-                }}
-              />
-            )}
+          {children || (
+            <SelectList<V extends SelectListData ? V : never>
+              value={selected as V extends SelectListData ? V : never}
+              data={data as any[] || []}
+              onChange={(v) => {
+                onChange && onChange(v)
+                close()
+              }}
+            />
+          )}
         </OptionsWrapper>
     </Dropdown>
   )
