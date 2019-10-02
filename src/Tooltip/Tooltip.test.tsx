@@ -7,14 +7,10 @@ import { Tooltip } from './Tooltip'
 
 describe('The Tooltip component', () => {
 
-  const TriggerIcon = React.forwardRef<any, any>((props, ref) => (
-    <Icon ref={ref}><MdInfo /></Icon>
-  ))
-
   test('by default shows the trigger element, but not tooltip itself', () => {
     const wrapper = mount((
-      <Tooltip TriggerComponent={TriggerIcon}>
-        <div>Additional info is here</div>
+      <Tooltip content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 
@@ -26,8 +22,8 @@ describe('The Tooltip component', () => {
 
   test('if defaultOpen is passed, shows the trigger element and tooltip itself', () => {
     const wrapper = mount((
-      <Tooltip defaultOpen={true} TriggerComponent={TriggerIcon}>
-        <div>Additional info is here</div>
+      <Tooltip defaultOpen={true} content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 
@@ -42,9 +38,9 @@ describe('The Tooltip component', () => {
       <Tooltip
         defaultOpen={true}
         open={false}
-        TriggerComponent={TriggerIcon}
+        content='Additional info is here'
       >
-        <div>Additional info is here</div>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 
@@ -59,9 +55,9 @@ describe('The Tooltip component', () => {
       <Tooltip
         defaultOpen={false}
         open={true}
-        TriggerComponent={TriggerIcon}
+        content='Additional info is here'
       >
-        <div>Additional info is here</div>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 
@@ -73,8 +69,8 @@ describe('The Tooltip component', () => {
 
   test('by default toggles tooltip on mouse enter/leave the trigger', () => {
     const wrapper = mount((
-      <Tooltip TriggerComponent={TriggerIcon}>
-        <div>Additional info is here</div>
+      <Tooltip content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 
@@ -94,8 +90,8 @@ describe('The Tooltip component', () => {
 
   test('if open is passed, ignores mouse enter/leave events', () => {
     const wrapper = mount((
-      <Tooltip open={false} TriggerComponent={TriggerIcon}>
-        <div>Additional info is here</div>
+      <Tooltip open={false} content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
       </Tooltip>
     ))
 

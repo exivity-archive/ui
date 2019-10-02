@@ -1,57 +1,60 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import useTimeout from '@rooks/use-timeout'
 
 import { BlockProps } from '../Block'
 import { Popper, PopperProps, Placement as PopperPlacement } from '../Dropdown/Popper'
+import { Flex } from '../Flex'
+import useClosable from '../Dropdown/useClosable'
+
+import { TooltipContent, Arrow } from './styles'
 
 export const TooltipPlacement = PopperPlacement
 
-import { TooltipContent, Arrow } from './styles'
-import { Flex } from '../Flex'
+const TriggerWrapper: FC<any> = React.forwardRef((props, ref) => <Flex {...props} ref={ref}/>)
 
-const TriggerWrapper: FC<any> = (props) => <Flex {...props}/>
-
-export interface TooltipProps<T> extends Pick<PopperProps, 'placement' | 'onOutsideClick' | 'flip' | 'offset'> {
+export interface TooltipProps extends Pick<PopperProps, 'placement' | 'onOutsideClick' | 'flip' | 'offset'> {
   children: React.ReactNode
-  TriggerComponent: React.ComponentType<T & { ref: React.Ref<any> }>
-  triggerComponentProps?: T
+  content: React.ReactNode
   open?: boolean | null
   defaultOpen?: boolean
   closeTimeout?: number
+  onToggle?: (open: boolean) => void
 }
 
-export function Tooltip <T extends {}> ({
-  TriggerComponent,
-  triggerComponentProps = {} as T,
+export function Tooltip ({
+  children,
+  content,
   flip,
   open = null,
   defaultOpen = false,
+  onToggle = () => null,
   offset = 0,
   closeTimeout = 1000,
-  children,
   placement = TooltipPlacement.TOP,
   onOutsideClick,
   ...blockProps
-}: TooltipProps<T> & BlockProps) {
-  const [opened, setOpened] = useState(open === null ? defaultOpen : open)
-  useEffect(() => {
-    if (open !== null) {
-      setOpened(open)
-    }
-  }, [open])
+}: TooltipProps & BlockProps) {
+  const [isMouseOverContent, setMouseOverContent] = useState<boolean>(false)
+  const { isOpen, open: setOpen, close } = useClosable(defaultOpen, open, onToggle)
+  const closeTimer = useTimeout(() => { if (!isMouseOverContent) close() }, closeTimeout)
 
-  const closeTimer = useTimeout(() => setOpened(false), closeTimeout)
-  useEffect(closeTimer.clear, [opened, closeTimeout])
+  useEffect(closeTimer.clear, [isOpen, closeTimeout])
+  useEffect(() => {
+    if (!isMouseOverContent && open === null) {
+      closeTimer.start()
+    }
+  }, [isMouseOverContent])
 
   return (
     <Popper
       renderTrigger={({ ref }) => (
         <TriggerWrapper
+          ref={ref}
           onMouseEnter={() => {
             if (open === null) {
               closeTimer.clear()
-              setOpened(true)
             }
+            setOpen()
           }}
           onMouseLeave={() => {
             if (open === null) {
@@ -59,36 +62,34 @@ export function Tooltip <T extends {}> ({
             }
           }}
         >
-          <TriggerComponent {...triggerComponentProps} ref={ref} />
+          {children}
         </TriggerWrapper>
       )}
-      open={opened}
+      open={isOpen}
       flip={flip}
       offset={offset + 8}
       placement={placement}
       onOutsideClick={onOutsideClick && (() => {
-        onOutsideClick({
-          close: () => {
-            if (open === null) {
-              setOpened(false)
-            }
-          }
-        })
+        onOutsideClick({ close })
       })}
     >
-      {({ ref, style, placement, arrowProps }) => (
-        <TooltipContent
-          ref={ref as any}
-          style={style}
-          data-placement={placement}
-          {...blockProps}
-        >
-          {children}
-          <Arrow data-placement={placement} ref={arrowProps.ref as any} style={arrowProps.style}>
-            {String.fromCharCode(9660)}
-          </Arrow>
-        </TooltipContent>
-      )}
+      {({ ref, style, placement, arrowProps }) => {
+        return (
+          <TooltipContent
+            ref={ref as any}
+            onMouseEnter={() => { setMouseOverContent(true) }}
+            onMouseLeave={() => { setMouseOverContent(false) }}
+            style={style}
+            data-placement={placement}
+            {...blockProps}
+          >
+            {content}
+            <Arrow data-placement={placement} ref={arrowProps.ref as any} style={arrowProps.style}>
+              {String.fromCharCode(9660)}
+            </Arrow>
+          </TooltipContent>
+        )
+      }}
     </Popper>
   )
 }

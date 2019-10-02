@@ -10,18 +10,6 @@ import { Button } from '../Button'
 import { Block } from '../Block'
 import { Icon } from '../Icon'
 
-const TriggerIcon = React.forwardRef<any, any>((props, ref) => (
-  <Icon ref={ref}><MdInfo /></Icon>
-))
-
-type ControlledTriggerProps = {
-  onClick: () => void
-}
-
-const ControlledTrigger = React.forwardRef<any, ControlledTriggerProps>((props, ref) => (
-  <Button {...props} ref={ref}>Click me</Button>
-))
-
 storiesOf('molecules|Tooltip', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
   // @ts-ignore
@@ -30,9 +18,22 @@ storiesOf('molecules|Tooltip', module)
       <div>
         <Tooltip
           placement={TooltipPlacement.TOP}
-          TriggerComponent={TriggerIcon}
+          content={<div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>}
         >
-          <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
+          <Icon><MdInfo/></Icon>
+        </Tooltip>
+      </div>
+    </Flex>
+  ))
+  .add('open by default', ({ state, storeState }: any) => (
+    <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
+      <div>
+        <Tooltip
+          defaultOpen={true}
+          placement={TooltipPlacement.TOP}
+          content={<div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>}
+        >
+          <Icon><MdInfo/></Icon>
         </Tooltip>
       </div>
     </Flex>
@@ -43,9 +44,9 @@ storiesOf('molecules|Tooltip', module)
         <Tooltip
           placement={TooltipPlacement.TOP}
           onOutsideClick={({ close }) => close()}
-          TriggerComponent={TriggerIcon}
+          content={<div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>}
         >
-          <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
       </div>
     </Flex>
@@ -53,15 +54,12 @@ storiesOf('molecules|Tooltip', module)
   .add('controlled', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
-        <Tooltip<ControlledTriggerProps>
+        <Tooltip
           open={state.one}
           placement={TooltipPlacement.TOP}
-          TriggerComponent={ControlledTrigger}
-          triggerComponentProps={{
-            onClick: () => storeState({ one: !state.one })
-          }}
+          content={<div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>}
         >
-          <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
+          <Button onClick={() => storeState({ one: !state.one })}>Click me</Button>
         </Tooltip>
       </div>
     </Flex>
@@ -69,12 +67,12 @@ storiesOf('molecules|Tooltip', module)
   .add('offset', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
-        <Tooltip
+      <Tooltip
           placement={TooltipPlacement.TOP}
-          TriggerComponent={TriggerIcon}
           offset={20}
+          content={<div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>}
         >
-          <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
       </div>
     </Flex>
@@ -84,27 +82,31 @@ storiesOf('molecules|Tooltip', module)
       <Row columns={4}>
         <Tooltip
           placement={TooltipPlacement.RIGHT}
-          TriggerComponent={TriggerIcon}
+          closeTimeout={0}
+          content={<Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>}
         >
-          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
         <Tooltip
           placement={TooltipPlacement.LEFT}
-          TriggerComponent={TriggerIcon}
+          closeTimeout={0}
+          content={<Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>}
         >
-          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
         <Tooltip
           placement={TooltipPlacement.TOP}
-          TriggerComponent={TriggerIcon}
+          closeTimeout={0}
+          content={<Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>}
         >
-          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
         <Tooltip
           placement={TooltipPlacement.BOTTOM}
-          TriggerComponent={TriggerIcon}
+          closeTimeout={0}
+          content={<Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>}
         >
-          <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
+          <Icon><MdInfo/></Icon>
         </Tooltip>
       </Row>
     </Flex>
