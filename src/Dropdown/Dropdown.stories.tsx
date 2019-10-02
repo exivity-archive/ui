@@ -1,4 +1,4 @@
-import React, { Ref } from 'react'
+import React from 'react'
 import Faker from 'faker'
 import { storiesOf } from '@storybook/react'
 import { withState } from '../utils/tests/decorators/StateDecorator'
@@ -8,19 +8,6 @@ import { Flex } from '../Flex'
 import { Button } from '../Button'
 import { Block } from '../Block'
 
-type TriggerButtonProps = {
-  onClick: () => void,
-  children: string
-}
-
-const DefaultTriggerButton = React.forwardRef<any, any>((props, ref) => (
-  <Button secondary {...props} ref={ref}>Click me</Button>
-))
-
-const TriggerButton = React.forwardRef<any, any>((props, ref) => (
-  <Button secondary {...props} ref={ref} />
-))
-
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
   // @ts-ignore
@@ -29,8 +16,7 @@ storiesOf('molecules|Dropdown', module)
       <div>
         <Dropdown
           open={state.one}
-          TriggerComponent={DefaultTriggerButton}
-          onClick={() => storeState({ one: !state.one })}
+          trigger={<Button onClick={() => storeState({ one: !state.one })}>Click me</Button>}
         >
           <div style={{ width: 300 }}>{Faker.lorem.paragraphs(2)}</div>
         </Dropdown>
@@ -40,48 +26,31 @@ storiesOf('molecules|Dropdown', module)
   .add('position', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' height={800} width={1000}>
       <Row columns={4}>
-        <Dropdown<TriggerButtonProps>
+        <Dropdown
           open={state.one}
           placement={DropdownPlacement.RIGHT}
-          TriggerComponent={TriggerButton}
-          triggerComponentProps={{
-            onClick: () => storeState({ one: !state.one }),
-            children: 'RIGHT'
-          }}
+          trigger={<Button onClick={() => storeState({ one: !state.one })}>Right</Button>}
         >
           <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown<TriggerButtonProps>
+        <Dropdown
           open={state.two}
           placement={DropdownPlacement.LEFT}
-          TriggerComponent={TriggerButton}
-          triggerComponentProps={{
-            onClick: () => storeState({ two: !state.two }),
-            children: 'LEFT'
-          }}
+          trigger={<Button onClick={() => storeState({ two: !state.two })}>Left</Button>}
         >
           <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown<TriggerButtonProps>
+        <Dropdown
           open={state.three}
           placement={DropdownPlacement.TOP}
-          TriggerComponent={TriggerButton}
-          triggerComponentProps={{
-            onClick: () => storeState({ three: !state.three }),
-            children: 'TOP'
-          }}
+          trigger={<Button onClick={() => storeState({ three: !state.three })}>Top</Button>}
         >
           <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>
-        <Dropdown<TriggerButtonProps>
+        <Dropdown
           open={state.four}
           placement={DropdownPlacement.BOTTOM}
-          onOutsideClick={() => storeState({ ...state, four: false })}
-          TriggerComponent={TriggerButton}
-          triggerComponentProps={{
-            onClick: () => storeState({ four: !state.four }),
-            children: 'BOTTOM'
-          }}
+          trigger={<Button onClick={() => storeState({ four: !state.four })}>Bottom</Button>}
         >
           <Block width={200} p={1}>{Faker.lorem.paragraphs(2)}</Block>
         </Dropdown>

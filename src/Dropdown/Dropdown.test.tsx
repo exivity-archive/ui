@@ -4,19 +4,10 @@ import 'jest-styled-components'
 
 import { Dropdown } from '.'
 
-type TriggerButtonProps = {
-  onClick: () => void,
-  children: string
-}
-
-const TriggerButton = React.forwardRef<any, TriggerButtonProps>((props, ref) => (
-  <button ref={ref}>toggle</button>
-))
-
 describe('The Dropdown component', () => {
   test('hides content, when open is false', () => {
     const wrapper = mount((
-      <Dropdown open={false} TriggerComponent={TriggerButton}>
+      <Dropdown open={false} trigger={<button>toggle</button>}>
         <div>test</div>
       </Dropdown>
     ))
@@ -28,7 +19,7 @@ describe('The Dropdown component', () => {
 
   test('displays content, when open is true', () => {
     const wrapper = mount((
-      <Dropdown open={true} TriggerComponent={TriggerButton}>
+      <Dropdown open={true} trigger={<button>toggle</button>}>
         <div>test</div>
       </Dropdown>
     ))
@@ -40,7 +31,7 @@ describe('The Dropdown component', () => {
 
   test('uses min. width, when useTriggerWidth is false', () => {
     const wrapper = mount((
-      <Dropdown open={true} useTriggerWidth={false} TriggerComponent={TriggerButton}>
+      <Dropdown open={true} useTriggerWidth={false} trigger={<button>toggle</button>}>
         <div>test</div>
       </Dropdown>
     ))
@@ -52,7 +43,7 @@ describe('The Dropdown component', () => {
 
   test('uses full available width, when useTriggerWidth is true', () => {
     const wrapper = mount((
-      <Dropdown open={true} useTriggerWidth={true} TriggerComponent={TriggerButton}>
+      <Dropdown open={true} useTriggerWidth={true} trigger={<button>toggle</button>}>
         <div>test</div>
       </Dropdown>
     ))
