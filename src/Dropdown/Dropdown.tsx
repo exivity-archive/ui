@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { cloneElement } from 'react'
 
 import { BlockProps } from '../Block'
 
@@ -9,7 +9,7 @@ export const DropdownPlacement = Placement
 
 export interface DropdownProps extends Pick<PopperProps, 'open' | 'placement' | 'onOutsideClick' | 'flip'> {
   children: React.ReactNode
-  trigger: React.ReactNode
+  trigger: React.ReactElement
   useTriggerWidth?: boolean
 }
 
@@ -25,9 +25,7 @@ export function Dropdown ({
 }: DropdownProps & BlockProps) {
   return (
     <Popper
-      renderTrigger={({ ref }) => (
-        <div ref={ref}>{trigger}</div>
-      )}
+      renderTrigger={({ ref }) => cloneElement(trigger, { ref })}
       open={open}
       flip={flip}
       placement={placement}
