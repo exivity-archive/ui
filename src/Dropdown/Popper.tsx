@@ -31,7 +31,7 @@ export enum Placement {
 }
 
 interface TriggerProps {
-  ref: React.Ref<HTMLElement>
+  ref: React.Ref<any>
 }
 
 interface ChildProps {

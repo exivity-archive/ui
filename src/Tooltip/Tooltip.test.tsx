@@ -6,13 +6,12 @@ import { Icon } from '../Icon'
 import { Tooltip } from './Tooltip'
 
 describe('The Tooltip component', () => {
+
   test('by default shows the trigger element, but not tooltip itself', () => {
     const wrapper = mount((
-        <Tooltip
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     const trigger = wrapper.find(Tooltip.TriggerWrapper)
@@ -23,12 +22,9 @@ describe('The Tooltip component', () => {
 
   test('if defaultOpen is passed, shows the trigger element and tooltip itself', () => {
     const wrapper = mount((
-        <Tooltip
-            defaultOpen={true}
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip defaultOpen={true} content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     const trigger = wrapper.find(Tooltip.TriggerWrapper)
@@ -39,13 +35,13 @@ describe('The Tooltip component', () => {
 
   test('ignores defaultOpen, if open is passed', () => {
     let wrapper = mount((
-        <Tooltip
-            defaultOpen={true}
-            open={false}
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip
+        defaultOpen={true}
+        open={false}
+        content='Additional info is here'
+      >
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     let trigger = wrapper.find(Tooltip.TriggerWrapper)
@@ -56,13 +52,13 @@ describe('The Tooltip component', () => {
     wrapper.unmount()
 
     wrapper = mount((
-        <Tooltip
-            defaultOpen={false}
-            open={true}
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip
+        defaultOpen={false}
+        open={true}
+        content='Additional info is here'
+      >
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     trigger = wrapper.find(Tooltip.TriggerWrapper)
@@ -73,11 +69,9 @@ describe('The Tooltip component', () => {
 
   test('by default toggles tooltip on mouse enter/leave the trigger', () => {
     const wrapper = mount((
-        <Tooltip
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     const trigger = wrapper.find(Tooltip.TriggerWrapper)
@@ -96,12 +90,9 @@ describe('The Tooltip component', () => {
 
   test('if open is passed, ignores mouse enter/leave events', () => {
     const wrapper = mount((
-        <Tooltip
-            open={false}
-            renderTrigger={({ ref }) => <Icon ref={ref}><MdInfo /></Icon>}
-        >
-            <div>Additional info is here</div>
-        </Tooltip>
+      <Tooltip open={false} content='Additional info is here'>
+        <Icon><MdInfo /></Icon>
+      </Tooltip>
     ))
 
     const trigger = wrapper.find(Tooltip.TriggerWrapper)

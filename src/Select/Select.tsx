@@ -1,117 +1,116 @@
-import React, { useState, cloneElement, ReactElement, useEffect, Ref } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
 import { Dropdown, DropdownPlacement } from '../Dropdown'
-import { InputProps } from '../Input/Input'
 import { SelectInput } from '../SelectInput'
 
-import { SelectListProps, SelectListData, SelectList } from '../SelectList'
-
-interface InjectValueAndHandler {
-  onClick: () => void
-  name?: string
-  value?: string
-  placeholder?: string
-  ref?: React.Ref<HTMLInputElement>
-}
-
-interface ChildProps extends Pick<SelectListProps, 'value' | 'data'> {
-  close: () => void
-}
-
-export interface SelectProps extends Pick<SelectListProps, 'value' | 'data'> {
-  name?: string
-  placeholder?: string
-  triggerComponent?: ReactElement<any>
-  onOutsideClick?: (isOpen: boolean, close: Function) => void
-  useTriggerComponentWidth?: boolean
-  onChange?: (value: any) => void
-  test?: string
-  children?: (props: ChildProps) => ReactElement
-}
-
-export const injectComponent = (component: ReactElement<any>, props: InjectValueAndHandler) => {
-  return cloneElement(component, {
-    ...props,
-    ...component.props
-  })
-}
-
-const getTriggerComponent = (props: InjectValueAndHandler, ref: Ref<HTMLInputElement>, triggerComponent?: ReactElement<any>) => {
-  if (triggerComponent) return injectComponent(triggerComponent, { ...props, ref })
-  // Does not need onChange because SelectInput only display data
-  return <SelectInput {...props} ref={ref} />
-}
+import { SelectListData, SelectList } from '../SelectList'
+import { useClosable } from '../Dropdown/useClosable'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
-  width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'}
+  width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
 `
 
-export const Select = ({
+const defaultInputValueAccessor = (item: any): string => {
+  if (!item && item !== 0) {
+    return ''
+  }
+  if (item.value) {
+    return defaultInputValueAccessor(item.value)
+  }
+  if (item.toString) {
+    return item.toString()
+  }
+  throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
+}
+
+interface InputComponentProps {
+  value?: string
+  name?: string
+  placeholder?: string
+  disabled?: boolean
+  onClick: () => void
+  onChange: () => void
+}
+
+export interface SelectProps<V> {
+  selected: V
+  inputValueAccessor?: (item: V) => string
+  InputComponent?: React.ComponentType<InputComponentProps>
+  data?: V extends SelectListData ? V[] : never
+  onChange?: V extends SelectListData ? ((item: V) => void) : never
+  name?: string
+  placeholder?: string
+  disabled?: boolean,
+  onOutsideClick?: (isOpen: boolean, close: () => void) => void
+  useInputComponentWidth?: boolean
+  children?: React.ReactElement
+  open?: boolean | null
+  defaultOpen?: boolean
+  onToggle?: (open: boolean) => void
+}
+
+export function Select <V = string> ({
   name,
-  value = { key: '', value: '' },
+  selected,
+  inputValueAccessor = defaultInputValueAccessor,
+  open = null,
+  defaultOpen = false,
+  onToggle = () => null,
   data,
   placeholder,
   onChange,
-  triggerComponent,
-  useTriggerComponentWidth = true,
+  useInputComponentWidth = true,
   onOutsideClick,
+  InputComponent,
   children,
   py = 2,
-  test,
-  disabled,
+  disabled = false,
   ...rest
-}: SelectProps & BlockProps & Omit<InputProps, 'value'>) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const close = () => setIsOpen(false)
+}: SelectProps<V> & BlockProps) {
+  const { isOpen, toggle, close } = useClosable(defaultOpen, open, onToggle)
+  useEffect(() => { if (disabled) close() }, [disabled])
 
-  const triggerComponentProps = {
-    ...rest,
+  const inputComponentProps = {
     name,
     placeholder,
-    value: value.value,
+    value: inputValueAccessor(selected),
     disabled,
-    onClick: () => !disabled && setIsOpen(!isOpen)
+    onClick: () => { if (!disabled) toggle() },
+    onChange: () => null
   }
-
-  useEffect(() => { disabled && close() }, [disabled])
 
   return (
     <Dropdown
       {...rest}
       py={py}
       open={isOpen}
-      test={test}
       placement={DropdownPlacement.BOTTOM_START}
-      useTriggerWidth={useTriggerComponentWidth}
-      renderTrigger={({ ref }) => getTriggerComponent(
-        { ...triggerComponentProps },
-        ref as Ref<HTMLInputElement>,
-        triggerComponent
-      )}
-      onOutsideClick={
-        () => onOutsideClick
-          ? onOutsideClick(isOpen, close)
-          : setIsOpen(false)
-      }>
-        <OptionsWrapper fullWidth={useTriggerComponentWidth}>
-          {children
-            ? children({
-              close: () => setIsOpen(false),
-              value,
-              data
-            })
-            : (
-              <SelectList
-                value={value.key ? value : undefined}
-                onChange={(v: SelectListData) => {
-                  onChange && onChange(v)
-                  setIsOpen(false)
-                }}
-                data={data}
-              />
-            )}
+      useTriggerWidth={useInputComponentWidth}
+      onOutsideClick={() => {
+        if (onOutsideClick) {
+          onOutsideClick(isOpen, close)
+        } else {
+          close()
+        }
+      }}
+      trigger={InputComponent
+        ? <InputComponent {...inputComponentProps}/>
+        : <SelectInput {...inputComponentProps}/>
+      }
+    >
+        <OptionsWrapper fullWidth={useInputComponentWidth}>
+          {children || (
+            <SelectList<V extends SelectListData ? V : never>
+              value={selected as V extends SelectListData ? V : never}
+              data={data as any[] || []}
+              onChange={(v) => {
+                onChange && onChange(v)
+                close()
+              }}
+            />
+          )}
         </OptionsWrapper>
     </Dropdown>
   )

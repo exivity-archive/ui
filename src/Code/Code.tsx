@@ -1,9 +1,11 @@
 import React, { ReactNode, useEffect, useState } from 'react'
+import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
 // @ts-ignore
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light'
 // @ts-ignore
 import solarizedlight from 'react-syntax-highlighter/dist/cjs/styles/prism/solarizedlight'
 import styled, { css } from 'styled-components'
+
 import { SectionProps, fromTheme } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
@@ -55,20 +57,27 @@ const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
     }
 
     padding: ${props => props.PreTag === 'span'
-      ? css`${fromTheme(theme => theme.global.baseSpacing / 4)}`
-      : css`${fromTheme(theme => theme.global.baseSpacing)}`}em !important;
+    ? css`${fromTheme(theme => theme.global.baseSpacing / 4)}`
+    : css`${fromTheme(theme => theme.global.baseSpacing)}`}em !important;
   }
 `
 
-export const Code = ({ children, block, showLineNumbers, language = 'text' }: CodeProps & SectionProps) => {
+export function Code ({
+  children,
+  block,
+  showLineNumbers,
+  language = 'text'
+}: CodeProps & SectionProps) {
   const highlighterLanguage = useDynamicLanguage(language)
 
-  return <StyledSyntaxHighlighter
-    PreTag={block ? 'pre' : 'span'}
-    style={solarizedlight}
-    language={highlighterLanguage}
-    showLineNumbers={showLineNumbers}
-  >
-    {children}
-  </StyledSyntaxHighlighter>
+  return (
+    <StyledSyntaxHighlighter
+      PreTag={block ? 'pre' : 'span'}
+      style={solarizedlight}
+      language={highlighterLanguage}
+      showLineNumbers={showLineNumbers}
+    >
+      {children}
+    </StyledSyntaxHighlighter>
+  )
 }
