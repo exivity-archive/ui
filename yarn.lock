@@ -2188,6 +2188,13 @@
     "@types/history" "*"
     "@types/react" "*"
 
+"@types/react-dom@^16.9.1":
+  version "16.9.1"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.1.tgz#79206237cba9532a9f870b1cd5428bef6b66378c"
+  integrity sha512-1S/akvkKr63qIUWVu5IKYou2P9fHLb/P2VAwyxVV85JGaGZTcUniMiTuIqM3lXFB25ej6h+CYEQ27ERVwi6eGA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@*":
   version "0.60.17"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.17.tgz#3a4c2f3ebe1942fb267bba9374f0533c0ece261c"
@@ -2224,7 +2231,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.9.3":
+"@types/react@*", "@types/react@^16.9.4":
   version "16.9.4"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.4.tgz#de8cf5e5e2838659fb78fa93181078469eeb19fc"
   integrity sha512-ItGNmJvQ0IvWt8rbk5PLdpdQhvBVxAaXI9hDlx7UMd8Ie1iMIuwMNiKeTfmVN517CdplpyXvA22X4zm4jGGZnw==
@@ -13752,7 +13759,7 @@ react-docgen@^4.1.0:
     node-dir "^0.1.10"
     recast "^0.17.3"
 
-react-dom@^16.8.3, react-dom@^16.9.0:
+react-dom@^16.10.1, react-dom@^16.8.3:
   version "16.10.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.1.tgz#479a6511ba34a429273c213cbc2a9ac4d296dac1"
   integrity sha512-SmM4ZW0uug0rn95U8uqr52I7UdNf6wdGLeXDmNLfg3y5q5H9eAbdjF5ubQc3bjDyRrvdAB2IKG7X0GzSpnn5Mg==
@@ -14055,7 +14062,7 @@ react-window@^1.7.1:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react@^16.8.3, react@^16.9.0:
+react@^16.10.1, react@^16.8.3:
   version "16.10.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.1.tgz#967c1e71a2767dfa699e6ba702a00483e3b0573f"
   integrity sha512-2bisHwMhxQ3XQz4LiJJwG3360pY965pTl/MRrZYxIBKVj4fOHoDs5aZAkYXGxDRO1Li+SyjTAilQEbOmtQJHzA==
