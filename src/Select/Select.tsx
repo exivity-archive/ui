@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
-import { Dropdown, DropdownPlacement } from '../Dropdown'
+import { Dropdown, DropdownProps, DropdownPlacement } from '../Dropdown'
 import { SelectInput } from '../SelectInput'
 import { SelectListData, SelectList } from '../SelectList'
 import { useClosable } from '../Dropdown/useClosable'
@@ -24,6 +24,8 @@ const defaultInputValueAccessor = (item: any): string => {
   throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
 }
 
+export const SelectPlacement = DropdownPlacement
+
 export interface SelectInputComponentProps {
   value: string
   disabled: boolean
@@ -33,7 +35,7 @@ export interface SelectInputComponentProps {
   name?: string
 }
 
-export interface SelectProps<V> {
+export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
   inputValueAccessor?: (item: V) => string
   InputComponent?: React.ComponentType<SelectInputComponentProps>
@@ -66,6 +68,7 @@ export function Select <V = string> ({
   children,
   py = 2,
   disabled = false,
+  placement = SelectPlacement.BOTTOM_START,
   ...rest
 }: SelectProps<V> & BlockProps) {
   const { isOpen, toggle, close } = useClosable(defaultOpen, open, onToggle)
@@ -85,7 +88,7 @@ export function Select <V = string> ({
       {...rest}
       py={py}
       open={isOpen}
-      placement={DropdownPlacement.BOTTOM_START}
+      placement={placement}
       useTriggerWidth={useInputComponentWidth}
       trigger={InputComponent
         ? <InputComponent {...inputProps} />
