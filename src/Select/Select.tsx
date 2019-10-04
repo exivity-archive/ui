@@ -1,14 +1,14 @@
 import React, { useEffect, ComponentProps } from 'react'
 import styled from 'styled-components'
 
+import { SelectListData, SelectList } from './SelectList'
+import { SelectInput } from './SelectInput'
+
 import {
   BlockProps,
   Dropdown,
   DropdownProps,
   DropdownPlacement,
-  SelectListData,
-  SelectList,
-  SelectInput,
   useClosable
 } from '..'
 
