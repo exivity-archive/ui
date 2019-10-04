@@ -1,6 +1,15 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref, useRef, Dispatch } from 'react'
+import React, {
+  ChangeEvent,
+  InputHTMLAttributes,
+  useState,
+  forwardRef,
+  Ref,
+  useRef,
+  Dispatch
+} from 'react'
 
 import { Omit } from '../utils/types'
+
 import { StyledInputProps, StyledContainer, AnimatedStyledInput } from './styled'
 
 const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boolean>) => {
@@ -12,7 +21,8 @@ const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boo
   }
 }
 
-export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+export type OmitOnChangeHTMLInputAttributes =
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 
 export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
 
@@ -53,8 +63,8 @@ export const Input =
     return (
       <StyledContainer ref={containerRef} {...container}>
         <AnimatedStyledInput
-          inline={inline}
           ref={ref}
+          inline={inline}
           type={type}
           danger={!valid}
           onChange={makeHandleChange(onChange, setValid)}
