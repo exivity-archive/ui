@@ -6,13 +6,9 @@ import { OmitOnChangeHTMLInputAttributes, InputProps, Input, Adornment, Icon } f
 
 export type SelectInputProps = InputProps & OmitOnChangeHTMLInputAttributes
 
-export const SelectInput = forwardRef <any, SelectInputProps>((props, ref) => (
-  <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
-    <StyledSelectInput ref={ref} {...props} />
-  </Adornment>
-))
-
-const StyledSelectInput = styled(Input)`
+const StyledSelectInput = styled(Input).attrs<SelectInputProps>({
+  readOnly: true
+})`
   cursor: pointer;
   box-shadow: none;
 
@@ -20,3 +16,9 @@ const StyledSelectInput = styled(Input)`
     cursor: not-allowed;
   }
 `
+
+export const SelectInput = forwardRef<HTMLInputElement, SelectInputProps>((props, ref) => (
+  <Adornment right={<Icon><MdKeyboardArrowDown /></Icon>}>
+    <StyledSelectInput ref={ref} {...props} />
+  </Adornment>
+))

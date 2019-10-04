@@ -83,7 +83,6 @@ export function Select <V extends SelectData> ({
   useEffect(() => { if (disabled) close() }, [disabled])
 
   const inputProps = {
-    readOnly: true,
     name,
     placeholder,
     value: inputValueAccessor(selected),

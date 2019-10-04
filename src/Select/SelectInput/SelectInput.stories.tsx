@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
 import { withState } from '../../utils/tests/decorators/StateDecorator'
 import { Row } from '../../utils/stories/components'
-import { Dropdown } from '../..'
 
 import { SelectInput } from '.'
 
@@ -13,12 +13,8 @@ storiesOf('interact|Select/SelectInput', module)
   }))
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
-  .add('default', ({ state, storeState }: any) => (
-    <Row columns={1}>
-      <Dropdown useTriggerComponentWidth open={state.isOpen} triggerComponent={
-        <SelectInput placeholder='Choose option' onClick={() => storeState({ ...state, isOpen: !state.isOpen })} />
-      } />
-    </Row>
+  .add('default', () => (
+    <SelectInput placeholder='Choose option' onClick={action('onClick')} />
   ))
   .add('outlined', () => (
     <Row columns={false}>
