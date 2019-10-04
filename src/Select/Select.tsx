@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 import { BlockProps } from '../Block'
-import { Dropdown, DropdownPlacement } from '../Dropdown'
+import { Dropdown, DropdownProps, DropdownPlacement } from '../Dropdown'
 import { SelectInput } from '../SelectInput'
-
 import { SelectListData, SelectList } from '../SelectList'
 import { useClosable } from '../Dropdown/useClosable'
 
@@ -25,24 +24,26 @@ const defaultInputValueAccessor = (item: any): string => {
   throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
 }
 
-interface InputComponentProps {
-  value?: string
-  name?: string
-  placeholder?: string
-  disabled?: boolean
+export const SelectPlacement = DropdownPlacement
+
+export interface SelectInputComponentProps {
+  value: string
+  disabled: boolean
   onClick: () => void
   onChange: () => void
+  placeholder?: string
+  name?: string
 }
 
-export interface SelectProps<V> {
+export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
   inputValueAccessor?: (item: V) => string
-  InputComponent?: React.ComponentType<InputComponentProps>
+  InputComponent?: React.ComponentType<SelectInputComponentProps>
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
   placeholder?: string
-  disabled?: boolean,
+  disabled?: boolean
   onOutsideClick?: (isOpen: boolean, close: () => void) => void
   useInputComponentWidth?: boolean
   children?: React.ReactElement
@@ -67,12 +68,13 @@ export function Select <V = string> ({
   children,
   py = 2,
   disabled = false,
+  placement = SelectPlacement.BOTTOM_START,
   ...rest
 }: SelectProps<V> & BlockProps) {
   const { isOpen, toggle, close } = useClosable(defaultOpen, open, onToggle)
   useEffect(() => { if (disabled) close() }, [disabled])
 
-  const inputComponentProps = {
+  const inputProps = {
     name,
     placeholder,
     value: inputValueAccessor(selected),
@@ -86,8 +88,12 @@ export function Select <V = string> ({
       {...rest}
       py={py}
       open={isOpen}
-      placement={DropdownPlacement.BOTTOM_START}
+      placement={placement}
       useTriggerWidth={useInputComponentWidth}
+      trigger={InputComponent
+        ? <InputComponent {...inputProps} />
+        : <SelectInput {...inputProps} />
+      }
       onOutsideClick={() => {
         if (onOutsideClick) {
           onOutsideClick(isOpen, close)
@@ -95,23 +101,19 @@ export function Select <V = string> ({
           close()
         }
       }}
-      trigger={InputComponent
-        ? <InputComponent {...inputComponentProps}/>
-        : <SelectInput {...inputComponentProps}/>
-      }
     >
-        <OptionsWrapper fullWidth={useInputComponentWidth}>
-          {children || (
-            <SelectList<V extends SelectListData ? V : never>
-              value={selected as V extends SelectListData ? V : never}
-              data={data as any[] || []}
-              onChange={(v) => {
-                onChange && onChange(v)
-                close()
-              }}
-            />
-          )}
-        </OptionsWrapper>
+      <OptionsWrapper fullWidth={useInputComponentWidth}>
+        {children || (
+          <SelectList<V extends SelectListData ? V : never>
+            value={selected as V extends SelectListData ? V : never}
+            data={data as any[] || []}
+            onChange={(v) => {
+              onChange && onChange(v)
+              close()
+            }}
+          />
+        )}
+      </OptionsWrapper>
     </Dropdown>
   )
 }
