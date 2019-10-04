@@ -2,8 +2,7 @@ import React, { forwardRef } from 'react'
 import styled from 'styled-components'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-import { OmitOnChangeHTMLInputAttributes, InputProps, Input } from '../Input/Input'
-import { Adornment, Icon } from '../'
+import { OmitOnChangeHTMLInputAttributes, InputProps, Input, Adornment, Icon } from '../..'
 
 export type SelectInputProps = InputProps & OmitOnChangeHTMLInputAttributes
 

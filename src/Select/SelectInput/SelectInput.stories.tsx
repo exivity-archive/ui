@@ -1,16 +1,17 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { withState } from '../utils/tests/decorators/StateDecorator'
-import { Dropdown } from '../Dropdown'
-import { Row } from '../utils/stories/components'
+import { withState } from '../../utils/tests/decorators/StateDecorator'
+import { Row } from '../../utils/stories/components'
+import { Dropdown } from '../..'
 
-import { SelectInput } from './'
+import { SelectInput } from '.'
 
-storiesOf('interact|SelectInput', module)
+storiesOf('interact|Select|SelectInput', module)
   .addDecorator(withState({
     isOpen: false
   }))
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
     <Row columns={1}>
@@ -39,12 +40,16 @@ storiesOf('interact|SelectInput', module)
       </Row>
     </Row>
   ))
-  .add('sizes', () => <Row columns={false}>
-    <SelectInput small value='Small' />
-    <SelectInput value='Default' />
-    <SelectInput large value='Large' />
-  </Row>)
-  .add('disabled', () => <Row columns={false}>
-    <SelectInput disabled value='Disabled' />
-    <SelectInput disabled secondary outlined value='Disabled' />
-  </Row>)
+  .add('sizes', () => (
+    <Row columns={false}>
+      <SelectInput small value='Small' />
+      <SelectInput value='Default' />
+      <SelectInput large value='Large' />
+    </Row>
+  ))
+  .add('disabled', () => (
+    <Row columns={false}>
+      <SelectInput disabled value='Disabled' />
+      <SelectInput disabled secondary outlined value='Disabled' />
+    </Row>
+  ))

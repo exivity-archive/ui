@@ -1,11 +1,15 @@
 import React, { useEffect, ComponentProps } from 'react'
 import styled from 'styled-components'
 
-import { BlockProps } from '../Block'
-import { Dropdown, DropdownPlacement } from '../Dropdown'
-import { SelectInput } from '../SelectInput'
-import { SelectListData, SelectList } from '../SelectList'
-import { useClosable } from '../Dropdown/useClosable'
+import {
+  BlockProps,
+  Dropdown,
+  DropdownPlacement,
+  SelectListData,
+  SelectList,
+  SelectInput,
+  useClosable
+} from '..'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};

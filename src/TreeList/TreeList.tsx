@@ -1,15 +1,12 @@
 import React, { useMemo, ComponentType, useCallback } from 'react'
 import { ReactElementType } from 'react-window'
+import styled from 'styled-components'
+import AutoSizer from 'react-virtualized-auto-sizer'
 
 import { addKey } from './helpers'
 import { DefaultItem, TreeListItemProps } from './DefaultItem'
 
-import { useExpandable } from '../useExpandable'
-import { ListFocus } from '../ListFocus'
-import { StyledList } from '../SelectList'
-import { BlockProps } from '../Block'
-import styled from 'styled-components'
-import AutoSizer from 'react-virtualized-auto-sizer'
+import { useExpandable, ListFocus, StyledList, BlockProps } from '..'
 
 const ITEM_HEIGHT = 30
 
