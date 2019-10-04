@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {
   BlockProps,
   Dropdown,
+  DropdownProps,
   DropdownPlacement,
   SelectListData,
   SelectList,
@@ -32,18 +33,20 @@ const defaultInputValueAccessor = (item?: SelectData): string => {
   throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
 }
 
-interface InputComponentProps {
+export const SelectPlacement = DropdownPlacement
+
+export interface SelectInputComponentProps {
   value?: string | number
-  name?: string
-  placeholder?: string
   disabled?: boolean
+  placeholder?: string
+  name?: string
   onClick: ComponentProps<typeof SelectInput>['onClick']
 }
 
-export interface SelectProps<V extends SelectData> {
+export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
-  inputValueAccessor?: typeof defaultInputValueAccessor
-  InputComponent?: React.ComponentType<InputComponentProps>
+  inputValueAccessor?: (item: V) => string
+  InputComponent?: React.ComponentType<SelectInputComponentProps>
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
@@ -73,12 +76,13 @@ export function Select <V extends SelectData> ({
   children,
   py = 2,
   disabled = false,
+  placement = SelectPlacement.BOTTOM_START,
   ...rest
 }: SelectProps<V> & BlockProps) {
   const { isOpen, toggle, close } = useClosable(defaultOpen, open, onToggle)
   useEffect(() => { if (disabled) close() }, [disabled])
 
-  const inputComponentProps = {
+  const inputProps = {
     readOnly: true,
     name,
     placeholder,
@@ -92,9 +96,9 @@ export function Select <V extends SelectData> ({
       {...rest}
       py={py}
       open={isOpen}
-      placement={DropdownPlacement.BOTTOM_START}
+      placement={placement}
       useTriggerWidth={useInputComponentWidth}
-      trigger={<InputComponent {...inputComponentProps} />}
+      trigger={<InputComponent {...inputProps} />}
       onOutsideClick={() => {
         if (onOutsideClick) {
           onOutsideClick(isOpen, close)

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.2](https://github.com/exivity/ui/compare/v0.19.1...v0.19.2) (2019-10-04)
+
+
+### Bug Fixes
+
+* Select component adjustments ([#211](https://github.com/exivity/ui/issues/211)) ([35d058b](https://github.com/exivity/ui/commit/35d058b))
+
+
+
 ### [0.19.1](https://github.com/exivity/ui/compare/v0.18.2...v0.19.1) (2019-10-03)
 
 
