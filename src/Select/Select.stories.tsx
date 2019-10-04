@@ -15,7 +15,7 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
-export default storiesOf('molecules/Select', module)
+export default storiesOf('interact|Select', module)
   .addDecorator(withState())
   // @ts-ignore
   .add('default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (

@@ -7,7 +7,7 @@ import { Dropdown } from '../..'
 
 import { SelectInput } from '.'
 
-storiesOf('interact|Select|SelectInput', module)
+storiesOf('interact|Select/SelectInput', module)
   .addDecorator(withState({
     isOpen: false
   }))

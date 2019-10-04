@@ -29,7 +29,7 @@ const CustomItem: FC = ({ data, style, index }: any) => {
 
 const customNoData = 'Custom noData item'
 
-export default storiesOf('molecules|Select|SelectList', module)
+export default storiesOf('interact|Select/SelectList', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
     <SelectList data={items} value={state} onChange={storeState} />
