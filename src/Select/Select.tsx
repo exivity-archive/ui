@@ -44,7 +44,7 @@ type ChildrenCallback = {
 export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
   inputValueAccessor?: (item: V) => string
-  inputComponent?: any
+  inputComponent?: React.ReactElement<SelectInputComponentProps>
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
