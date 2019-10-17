@@ -58,7 +58,7 @@ export default storiesOf('molecules/Select', module)
         data={items}
         onChange={(v) => { storeState(v) }}
         placeholder='Choose an option'
-        InputComponent={React.forwardRef((props, ref) => <SelectInput {...props} ref={ref} outlined />)}
+        inputComponent={<SelectInput outlined />}
       />
     </Row>
   ))

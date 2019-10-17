@@ -54,9 +54,7 @@ describe('The Select component', () => {
         selected={{ key: 'one', value: 'one' }}
         onChange={(() => null)}
         data={[]}
-        InputComponent={React.forwardRef((props, ref) => (
-          <input id='test-id' {...props} ref={ref as any} />
-        ))}
+        inputComponent={<input id='test-id' />}
       />
     ))
 
