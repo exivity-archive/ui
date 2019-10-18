@@ -89,23 +89,6 @@ export function Select <V = string> ({
     onChange: () => null
   }
 
-  const renderChildren = () => {
-    if (typeof children === 'function') {
-      return children({ close })
-    }
-
-    return children || (
-      <SelectList<V extends SelectListData ? V : never>
-        value={selected as V extends SelectListData ? V : never}
-        data={data as any[] || []}
-        onChange={(v) => {
-          onChange && onChange(v)
-          close()
-        }}
-      />
-    )
-  }
-
   return (
     <Dropdown
       {...rest}
@@ -127,7 +110,21 @@ export function Select <V = string> ({
       }}
     >
       <OptionsWrapper fullWidth={useInputComponentWidth}>
-        {renderChildren()}
+        {
+          typeof children === 'function'
+            ? children({ close })
+            : (
+              children ||
+              <SelectList<V extends SelectListData ? V : never>
+                value={selected as V extends SelectListData ? V : never}
+                data={data as any[] || []}
+                onChange={(v) => {
+                  onChange && onChange(v)
+                  close()
+                }}
+              />
+            )
+        }
       </OptionsWrapper>
     </Dropdown>
   )
