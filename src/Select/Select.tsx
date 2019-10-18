@@ -35,18 +35,24 @@ export interface SelectInputComponentProps {
   name?: string
 }
 
+type CloseDropdown = () => void
+
+type ChildrenCallback = {
+  close: CloseDropdown
+}
+
 export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
   inputValueAccessor?: (item: V) => string
-  InputComponent?: React.ComponentType<SelectInputComponentProps>
+  inputComponent?: (props: SelectInputComponentProps) => JSX.Element
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
   placeholder?: string
   disabled?: boolean
-  onOutsideClick?: (isOpen: boolean, close: () => void) => void
+  onOutsideClick?: (isOpen: boolean, close: CloseDropdown) => void
   useInputComponentWidth?: boolean
-  children?: React.ReactElement
+  children?: ((props: ChildrenCallback) => React.ReactNode) | React.ReactElement
   open?: boolean | null
   defaultOpen?: boolean
   onToggle?: (open: boolean) => void
@@ -64,7 +70,7 @@ export function Select <V = string> ({
   onChange,
   useInputComponentWidth = true,
   onOutsideClick,
-  InputComponent,
+  inputComponent,
   children,
   py = 2,
   disabled = false,
@@ -90,9 +96,10 @@ export function Select <V = string> ({
       open={isOpen}
       placement={placement}
       useTriggerWidth={useInputComponentWidth}
-      trigger={InputComponent
-        ? <InputComponent {...inputProps} />
-        : <SelectInput {...inputProps} />
+      trigger={
+        inputComponent
+          ? inputComponent(inputProps)
+          : <SelectInput {...inputProps} />
       }
       onOutsideClick={() => {
         if (onOutsideClick) {
@@ -103,16 +110,21 @@ export function Select <V = string> ({
       }}
     >
       <OptionsWrapper fullWidth={useInputComponentWidth}>
-        {children || (
-          <SelectList<V extends SelectListData ? V : never>
-            value={selected as V extends SelectListData ? V : never}
-            data={data as any[] || []}
-            onChange={(v) => {
-              onChange && onChange(v)
-              close()
-            }}
-          />
-        )}
+        {
+          typeof children === 'function'
+            ? children({ close })
+            : (
+              children ||
+              <SelectList<V extends SelectListData ? V : never>
+                value={selected as V extends SelectListData ? V : never}
+                data={data as any[] || []}
+                onChange={(v) => {
+                  onChange && onChange(v)
+                  close()
+                }}
+              />
+            )
+        }
       </OptionsWrapper>
     </Dropdown>
   )
