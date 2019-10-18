@@ -54,7 +54,7 @@ describe('The Select component', () => {
         selected={{ key: 'one', value: 'one' }}
         onChange={(() => null)}
         data={[]}
-        inputComponent={<input id='test-id' />}
+        inputComponent={(props) => <input id='test-id' {...props}/>}
       />
     ))
 

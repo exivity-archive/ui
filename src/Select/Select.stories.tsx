@@ -58,7 +58,7 @@ export default storiesOf('molecules/Select', module)
         data={items}
         onChange={(v) => { storeState(v) }}
         placeholder='Choose an option'
-        inputComponent={(props: any) => <SelectInput {...props} outlined />}
+        inputComponent={(props) => <SelectInput {...props} outlined />}
       />
     </Row>
   ))
