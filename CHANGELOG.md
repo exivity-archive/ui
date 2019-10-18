@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.3](https://github.com/exivity/ui/compare/v0.19.2...v0.19.3) (2019-10-18)
+
+
+### Bug Fixes
+
+* **security:** [snyk] fix for 1 vulnerabilities ([#212](https://github.com/exivity/ui/issues/212)) ([1b19dfd](https://github.com/exivity/ui/commit/1b19dfd))
+
+
+
 ### [0.19.2](https://github.com/exivity/ui/compare/v0.19.1...v0.19.2) (2019-10-04)
 
 
