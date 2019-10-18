@@ -44,7 +44,7 @@ type ChildrenCallback = {
 export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   selected: V
   inputValueAccessor?: (item: V) => string
-  inputComponent?: React.ReactElement<SelectInputComponentProps>
+  inputComponent?: any
   data?: V extends SelectListData ? V[] : never
   onChange?: V extends SelectListData ? ((item: V) => void) : never
   name?: string
@@ -98,7 +98,7 @@ export function Select <V = string> ({
       useTriggerWidth={useInputComponentWidth}
       trigger={
         inputComponent
-          ? React.cloneElement(inputComponent, { ...inputProps })
+          ? inputComponent(inputProps)
           : <SelectInput {...inputProps} />
       }
       onOutsideClick={() => {
