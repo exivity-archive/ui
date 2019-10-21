@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { fromTheme, globalFont, StyledProps } from '../utils/styled'
 
 interface LabelProps extends StyledProps {

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { fromTheme, globalSectionSpacing, globalFont, resetBox, StyledProps } from '../utils/styled'
 
 interface ListProps extends StyledProps {

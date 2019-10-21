@@ -1,6 +1,5 @@
 import React from 'react'
 import Faker from 'faker'
-
 import { storiesOf } from '@storybook/react'
 
 import { Delay } from './Delay'

@@ -26,7 +26,7 @@ function getRenderDay (value: Date, browseDate: Date, onChange: Function, nbOfPl
     return (
       <li key={index}>
         <StyledTimeUnit active={isActive}
-             onClick={() => onChange(day)}>
+          onClick={() => onChange(day)}>
           {String(day)}
         </StyledTimeUnit>
       </li>
@@ -53,7 +53,7 @@ export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
 
   return (
     <>
-      <WeekDays/>
+      <WeekDays />
       <StyledDays>
         {new Array(nbOfDays).fill(null).map(renderDay)}
       </StyledDays>

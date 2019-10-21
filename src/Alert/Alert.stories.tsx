@@ -1,6 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+
 import { markdown } from '../utils/stories/markdown'
+
 import { Alert } from '.'
 
 storiesOf('atoms|Alert', module)

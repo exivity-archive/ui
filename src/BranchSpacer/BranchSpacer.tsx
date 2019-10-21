@@ -2,8 +2,9 @@ import React, { FC } from 'react'
 import styled, { css } from 'styled-components'
 
 import { fromTheme } from '../utils/styled'
-import { getDistanceFromSibling } from './helpers'
 import { TreeItem, PARENT, CHILDREN } from '../utils/makeParentChildTree'
+
+import { getDistanceFromSibling } from './helpers'
 
 interface StyledBranchSpacerProps {
   level: number
@@ -30,7 +31,7 @@ const StyledBranchSpacer = styled.div<StyledBranchSpacerProps>`
       height: ${firstChild ? 50 : distance * 100}%;
       z-index: -1;
     }`
-  }
+}
 `
 
 const Content = styled.div`
@@ -74,7 +75,7 @@ export const BranchSpacer: FC<BranchSpacerProps> = ({
       spacing={spacing}
       padding={Math.min(padding, spacing)}
       distance={distance}>
-      <Content >
+      <Content>
         {children}
       </Content>
     </StyledBranchSpacer>

@@ -2,10 +2,12 @@ import React, { useMemo } from 'react'
 import { storiesOf } from '@storybook/react'
 import { FixedSizeList } from 'react-window'
 
-import { ListFocus, ListItem } from '..'
+import { TreeItem, makeParentChildTree } from '../utils/makeParentChildTree'
+
 import { BranchSpacer } from './BranchSpacer'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
-import { TreeItem, makeParentChildTree } from '../utils/makeParentChildTree'
+
+import { ListFocus, ListItem } from '..'
 
 storiesOf('molecules|BranchSpacer', module)
   .add('default', () => <BranchList />)
@@ -15,8 +17,8 @@ storiesOf('molecules|BranchSpacer', module)
 const parentKeyAccessor = (item: FakeRecord) => item.parentId
 
 interface ListProps {
-  spacing?: number,
-  padding?: number
+  spacing?: number;
+  padding?: number;
 }
 
 const BranchList = ({ spacing, padding }: ListProps) => {
@@ -33,9 +35,9 @@ const BranchList = ({ spacing, padding }: ListProps) => {
 }
 
 interface ItemProps {
-  data: TreeItem<FakeRecord>[],
-  index: number,
-  style: object
+  data: TreeItem<FakeRecord>[];
+  index: number;
+  style: object;
 }
 
 const makeItemSpacer = (spacing?: number, padding?: number) => {
@@ -49,9 +51,8 @@ const makeItemSpacer = (spacing?: number, padding?: number) => {
             data={data}
             index={index}
             spacing={spacing}
-            padding={padding}
-          >
-            {'X'}
+            padding={padding}>
+            X
           </BranchSpacer>
         </ListItem>
       )

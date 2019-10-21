@@ -27,8 +27,8 @@
   ],
   "scripts": {
     "create-component": "node scripts/create-component.js",
-    "lint": "eslint 'src/**/*.ts?'",
-    "lint:fix": "eslint 'src/**/*.ts?' --fix",
+    "lint": "eslint src/**/*.ts?",
+    "lint:fix": "eslint src/**/*.ts? --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
     "test:smoke": "bash scripts/run-smoke-test.sh",
@@ -58,7 +58,7 @@
     "ignore": [],
     "linters": {
       "*.{ts,tsx}": [
-        "tslint --fix",
+        "eslint --fix",
         "git add"
       ]
     }

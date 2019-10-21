@@ -1,8 +1,10 @@
 import React, { FC, useState, KeyboardEvent } from 'react'
 import styled, { css } from 'styled-components'
-import { useTabsContext, TabsContext, getNextNonDisabledIndex, getPrevNonDisabledIndex } from './helpers'
+
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
+
+import { useTabsContext, TabsContext, getNextNonDisabledIndex, getPrevNonDisabledIndex } from './helpers'
 
 interface StyledTabProps {
   isActive?: boolean
@@ -73,10 +75,11 @@ const Tab: FC<TabProps> = ({ test = 'tabs-tab', children, index, disabled, ...re
       disabled={disabled}
       data-test={test}
       // function gets replaced for testing purposes
-      onClick={disabled ? () => { return } : () => setActiveIndex(index)}
+      onClick={disabled ? () => { } : () => setActiveIndex(index)}
       {...rest}>
       {children}
-    </StyledTab>)
+    </StyledTab>
+  )
 }
 
 const TabsList = styled.ol`
@@ -92,7 +95,7 @@ const TabList: FC<TabListProps> = ({ children }) => {
   const { activeIndex, setActiveIndex, disabledTabs } = useTabsContext()
   const [focused, setFocused] = useState(false)
 
-  let tabAmount = React.Children.count(children)
+  const tabAmount = React.Children.count(children)
 
   const onFocus = () => setFocused(true)
 
@@ -115,7 +118,8 @@ const TabList: FC<TabListProps> = ({ children }) => {
         onKeyDown,
         ...child.props
       })
-    ))}</TabsList>
+    ))}
+    </TabsList>
   )
 }
 
@@ -140,7 +144,7 @@ const StyledPanel = styled.div<{ animated?: boolean }>`
   `}
 `
 
-const TabPanel: FC<{ animated?: boolean, test?: string }> = ({ children, animated, test = 'tabs-panel' }) => {
+const TabPanel: FC<{ animated?: boolean; test?: string }> = ({ children, animated, test = 'tabs-panel' }) => {
   const { activeIndex } = useTabsContext()
 
   return <StyledPanel key={activeIndex} animated={animated} data-test={test}>{children}</StyledPanel>
@@ -166,9 +170,9 @@ const StyledTabs = styled.div`
 `
 
 interface TabsSubComponents {
-  TabList: typeof TabList,
-  Tab: typeof Tab,
-  TabPanels: typeof TabPanels,
+  TabList: typeof TabList
+  Tab: typeof Tab
+  TabPanels: typeof TabPanels
   TabPanel: typeof TabPanel
 }
 
@@ -187,7 +191,7 @@ export const Tabs: TabsComponent = ({ children, onActiveIndexChange, initialActi
   const contextValue = { activeIndex, setActiveIndex, disabledTabs }
 
   return (
-    <TabsContext.Provider value={contextValue} >
+    <TabsContext.Provider value={contextValue}>
       <StyledTabs>
         {children}
       </StyledTabs>

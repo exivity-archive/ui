@@ -39,12 +39,16 @@ storiesOf('interact|SelectInput', module)
       </Row>
     </Row>
   ))
-  .add('sizes', () => <Row columns={false}>
-    <SelectInput small value='Small' />
-    <SelectInput value='Default' />
-    <SelectInput large value='Large' />
-  </Row>)
-  .add('disabled', () => <Row columns={false}>
-    <SelectInput disabled value='Disabled' />
-    <SelectInput disabled secondary outlined value='Disabled' />
-  </Row>)
+  .add('sizes', () => (
+    <Row columns={false}>
+      <SelectInput small value='Small' />
+      <SelectInput value='Default' />
+      <SelectInput large value='Large' />
+    </Row>
+  ))
+  .add('disabled', () => (
+    <Row columns={false}>
+      <SelectInput disabled value='Disabled' />
+      <SelectInput disabled secondary outlined value='Disabled' />
+    </Row>
+  ))

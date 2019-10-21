@@ -3,7 +3,7 @@ import theme from 'prism-react-renderer/themes/duotoneLight'
 import React, { useState } from 'react'
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live'
 import styled from 'styled-components'
-import { ensureString } from '..'
+
 import * as UI from '../..'
 import { Alert } from '../../Alert'
 import { Code } from '../../Code'
@@ -11,7 +11,10 @@ import { Markdown } from '../../Markdown'
 import { Section } from '../../Section'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
+
 import { PropsTable } from './propsTable'
+
+import { ensureString } from '..'
 
 const globals = {
   useState,

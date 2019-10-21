@@ -107,22 +107,21 @@ export function Select <V = string> ({
         } else {
           close()
         }
-      }}
-    >
+      }}>
       <OptionsWrapper fullWidth={useInputComponentWidth}>
         {
           typeof children === 'function'
             ? children({ close })
             : (
-              children ||
-              <SelectList<V extends SelectListData ? V : never>
-                value={selected as V extends SelectListData ? V : never}
-                data={data as any[] || []}
-                onChange={(v) => {
-                  onChange && onChange(v)
-                  close()
-                }}
-              />
+              children || (
+                <SelectList<V extends SelectListData ? V : never>
+                  value={selected as V extends SelectListData ? V : never}
+                  data={data as any[] || []}
+                  onChange={(v) => {
+                    onChange && onChange(v)
+                    close()
+                  }} />
+              )
             )
         }
       </OptionsWrapper>

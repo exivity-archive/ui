@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
+
 import { SelectList } from '.'
 
 test('SelectList renders a list of items', () => {
@@ -13,7 +14,7 @@ test('SelectList renders a list of items', () => {
 
   const wrapper = mountWithTheme(<SelectList data={items} />)
 
-  expect(wrapper.find('li').length).toBe(4)
+  expect(wrapper.find('li')).toHaveLength(4)
 })
 
 test('SelectList returns an item onChange', () => {
@@ -28,7 +29,7 @@ test('SelectList returns an item onChange', () => {
 
   const onChange = jest.fn(item => item)
 
-  const wrapper = mountWithTheme(<SelectList onChange={onChange} data={items} />)
+  const wrapper = mountWithTheme(<SelectList data={items} onChange={onChange} />)
 
   wrapper.find('li')
     .first()
@@ -49,7 +50,7 @@ test('SelectList uses a default item component', () => {
 
   const wrapper = mountWithTheme(<SelectList data={items} />)
 
-  expect(wrapper.find('li').length).toBe(4)
+  expect(wrapper.find('li')).toHaveLength(4)
 })
 
 test('SelectList uses a custom item component', () => {
@@ -64,6 +65,6 @@ test('SelectList uses a custom item component', () => {
 
   const wrapper = mountWithTheme(<SelectList data={items}>{Custom}</SelectList>)
 
-  expect(wrapper.find('.test-id').length).toBe(4)
-  expect(wrapper.find('li').length).toBe(0)
+  expect(wrapper.find('.test-id')).toHaveLength(4)
+  expect(wrapper.find('li')).toHaveLength(0)
 })

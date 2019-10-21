@@ -1,8 +1,10 @@
 import * as React from 'react'
 import styled, { css, StyledComponent } from 'styled-components'
+
 import { Label } from '../Label'
 import { fromTheme, StyledProps } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
+
 import { Container } from './Container'
 
 const ALIGNED_WIDTH = 20 // em
@@ -39,9 +41,9 @@ export const Field = styled.div<StyledFieldProps>`
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: ${props => (props.horizontal && props.align)
-      ? (props.align === true) ? `${preciseEm(ALIGNED_WIDTH)}em` : props.align
-      : 'auto'
-    };
+    ? (props.align === true) ? `${preciseEm(ALIGNED_WIDTH)}em` : props.align
+    : 'auto'
+};
 
     > ${Label} {
       padding-bottom: unset;

@@ -1,6 +1,7 @@
 import { HTMLProps } from 'react'
 import styled, { css } from 'styled-components'
 import { height, HeightProps, size, SizeProps, space, SpaceProps, width, WidthProps } from 'styled-system'
+
 import { StyledProps } from '../utils/styled'
 
 export type ImageProps =

@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
-import { FakeRecord } from './seed'
-
 import { TreeListItemProps, DefaultItem, ToggleExpandedButton } from '../DefaultItem'
 import { ListItem } from '../../ListItem'
 import { BranchSpacer } from '../../BranchSpacer'
 import { CHILDREN } from '../../utils/makeParentChildTree'
 import { Button } from '../../Button'
+
+import { FakeRecord } from './seed'
 
 export function CustomItem ({ data, style, index }: TreeListItemProps<FakeRecord>) {
   const { items, onChange } = data

@@ -1,4 +1,5 @@
 import { act, renderHook } from 'react-hooks-testing-library'
+
 import { useBreakpoint } from './'
 
 describe('useBreakpoint', () => {
@@ -20,6 +21,7 @@ describe('useBreakpoint', () => {
     act(() => {
       map[0]({ matches: true })
     })
+
     expect(result.current).toBe(0)
   })
 

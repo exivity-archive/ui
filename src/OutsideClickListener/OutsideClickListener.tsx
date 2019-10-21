@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { useOutsideClickListener } from '../useOutsideClickListener/useOutsideClickListener'
 
 export interface OutsideClickListenerProps {

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Code } from '.'
 import { Paragraph } from '../Paragraph'
+
+import { Code } from '.'
 
 const code = `import { CodeBlock } from '@exivity/ui'
 

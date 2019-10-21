@@ -2,8 +2,10 @@ import { storiesOf } from '@storybook/react'
 import faker from 'faker'
 import React from 'react'
 
-import { Widget } from '.'
 import { withState } from '../utils/tests/decorators/StateDecorator'
+
+import { Widget } from '.'
+
 import { Flex, Heading, Block, Input, Paragraph } from '..'
 
 storiesOf('molecules|Widget', module)

@@ -75,8 +75,7 @@ export function Code ({
       PreTag={block ? 'pre' : 'span'}
       style={solarizedlight}
       language={highlighterLanguage}
-      showLineNumbers={showLineNumbers}
-    >
+      showLineNumbers={showLineNumbers}>
       {children}
     </StyledSyntaxHighlighter>
   )

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { omit } from '..'
+
 import * as UI from '../..'
 import { Alert } from '../../Alert'
 import { Code } from '../../Code'
@@ -8,8 +8,11 @@ import { Markdown } from '../../Markdown'
 import { Section } from '../../Section'
 import { Table } from '../../Table'
 import { ObjectOf } from '../types'
+
 import { commonProps } from './commonProps'
 import { styledSystemProps } from './styledSystemProps'
+
+import { omit } from '..'
 
 interface PropDefinition {
   defaultValue: any
@@ -26,7 +29,7 @@ const propGroups: any = {
   'styled-system': styledSystemProps
 }
 
-export const PropsTable = ({ component, include }: { component: string, include: string[] }) => {
+export const PropsTable = ({ component, include }: { component: string; include: string[] }) => {
   let props: ObjectOf<PropDefinition>
   try {
     const [main, sub] = component.split('.')
@@ -64,18 +67,18 @@ export const PropsTable = ({ component, include }: { component: string, include:
           <col />
         </colgroup>
         <tbody>
-        {Object.keys(props).map(key => (
-          <tr key={key}>
-            <td>
-              <strong>{props[key].name}</strong>
-            </td>
-            <td>
-              <Section><Code>{props[key].type.name}</Code></Section>
-              {props[key].defaultValue && <Section>{props[key].defaultValue}</Section>}
-              <Markdown>{props[key].description}</Markdown>
-            </td>
-          </tr>
-        ))}
+          {Object.keys(props).map(key => (
+            <tr key={key}>
+              <td>
+                <strong>{props[key].name}</strong>
+              </td>
+              <td>
+                <Section><Code>{props[key].type.name}</Code></Section>
+                {props[key].defaultValue && <Section>{props[key].defaultValue}</Section>}
+                <Markdown>{props[key].description}</Markdown>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </>

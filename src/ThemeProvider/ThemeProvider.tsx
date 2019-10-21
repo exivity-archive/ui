@@ -2,6 +2,7 @@ import React from 'react'
 import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 // @ts-ignore
 import WebfontLoader from '@dr-kobros/react-webfont-loader'
+
 import { defaultTheme, Theme } from '../themes'
 
 interface ThemeProviderProps {

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { globalSectionSpacing } from '../utils/styled'
 
 export const Section = styled.section`

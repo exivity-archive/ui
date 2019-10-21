@@ -1,5 +1,6 @@
 import React, { FC, useContext } from 'react'
 import styled, { css } from 'styled-components'
+
 import { fromTheme } from '../utils/styled'
 import {
   CollapsibleContainer,
@@ -31,7 +32,7 @@ export const BoxBar: FC = ({ children }) => {
     <StyledBoxBar collapsible={!!context}>
       {children}
       <CollapsibleContainer.Collapser />
-    </StyledBoxBar >
+    </StyledBoxBar>
   )
 }
 

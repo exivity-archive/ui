@@ -2,8 +2,10 @@ import React from 'react'
 
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { ListFocus } from '.'
+
 import { ListItem } from '../ListItem'
+
+import { ListFocus } from '.'
 
 const style = {
   height: 30
@@ -23,11 +25,11 @@ const list = {
 export default storiesOf('atoms/ListFocus', module)
   .add('list focus', () => (
     <ListFocus>
-        <ul style={list}>
-          <ListItem style={style}><div style={styleText}>onHover focus element</div></ListItem>
-          <ListItem style={style}><div style={styleText}>Key down</div></ListItem>
-          <ListItem style={style}><div style={styleText}>or up</div></ListItem>
-          <ListItem style={style}><div style={styleText}>to shift</div></ListItem>
-        </ul>
+      <ul style={list}>
+        <ListItem style={style}><div style={styleText}>onHover focus element</div></ListItem>
+        <ListItem style={style}><div style={styleText}>Key down</div></ListItem>
+        <ListItem style={style}><div style={styleText}>or up</div></ListItem>
+        <ListItem style={style}><div style={styleText}>to shift</div></ListItem>
+      </ul>
     </ListFocus>
   ))

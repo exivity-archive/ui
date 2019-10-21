@@ -1,10 +1,12 @@
 import React, { FC, useContext } from 'react'
 import styled from 'styled-components'
-import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { CollapsibleContext } from './helpers'
+
+import { Icon } from '../Icon'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
+
+import { CollapsibleContext } from './helpers'
 
 const StyledContainerCollapser = styled(Icon)`
   cursor: pointer;
@@ -20,7 +22,7 @@ const ContainerCollapser: FC = ({ children }) => {
   const toggleCollapse = () => onCollapse(!collapsed)
 
   return (
-    <StyledContainerCollapser onClick={toggleCollapse} data-test='container-collapser'>
+    <StyledContainerCollapser data-test='container-collapser' onClick={toggleCollapse}>
       {children || collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
     </StyledContainerCollapser>
   )

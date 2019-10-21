@@ -2,6 +2,7 @@ import React from 'react'
 import { isSameMonth, setDate, setMonth, format } from 'date-fns'
 
 import { StyledTimeUnit, StyledMonths } from '../styled'
+
 import { CommonPeriodProps } from './Days'
 
 function getRenderMonth (value: Date, browseDate: Date, onChange: Function) {
@@ -13,7 +14,7 @@ function getRenderMonth (value: Date, browseDate: Date, onChange: Function) {
     return (
       <li key={index}>
         <StyledTimeUnit active={isActive}
-                   onClick={() => onChange(setDate(thisMonth, 1))}>
+          onClick={() => onChange(setDate(thisMonth, 1))}>
           {format(thisMonth, 'MMM')}
         </StyledTimeUnit>
       </li>

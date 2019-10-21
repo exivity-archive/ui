@@ -1,6 +1,8 @@
 import styled, { css, StyledComponent } from 'styled-components'
+
 import { Block } from '../Block'
 import { StyledProps } from '../utils/styled'
+
 import { GridItem } from './Item'
 
 export interface GridProps extends StyledProps {

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StateContainer } from '../StateContainer'
 
 export const withState = (initialState: any = null) => (storyFunc: any, context: any) => (

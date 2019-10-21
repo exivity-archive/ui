@@ -3,9 +3,10 @@ import Faker from 'faker'
 import { MdClose, MdCheck } from 'react-icons/md'
 import { storiesOf } from '@storybook/react'
 
-import { Modal, Button, Paragraph, Icon } from '..'
 import { Heading } from '../Heading'
 import { Flex } from '../Flex'
+
+import { Modal, Button, Paragraph, Icon } from '..'
 
 storiesOf('molecules|Modal', module)
   .add('default', () => {
@@ -16,17 +17,16 @@ storiesOf('molecules|Modal', module)
           <Button success>
             <Icon>
               <MdCheck />
-            </Icon>{' '}
+            </Icon>
             Acknowledge
           </Button>,
           <Button secondary>
             <Icon>
               <MdClose />
-            </Icon>{' '}
+            </Icon>
             Close
           </Button>
-        ]}
-      >
+        ]}>
         <Paragraph>{Faker.lorem.paragraph(8)}</Paragraph>
       </Modal>
     )

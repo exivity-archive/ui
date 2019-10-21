@@ -10,7 +10,7 @@ import { TooltipContent, Arrow } from './styles'
 
 export const TooltipPlacement = PopperPlacement
 
-const TriggerWrapper: FC<any> = React.forwardRef((props, ref) => <Flex {...props} ref={ref}/>)
+const TriggerWrapper: FC<any> = React.forwardRef((props, ref) => <Flex {...props} ref={ref} />)
 
 export interface TooltipProps extends Pick<PopperProps, 'placement' | 'flip' | 'offset'> {
   children: React.ReactNode
@@ -61,8 +61,7 @@ export function Tooltip ({
             if (open === null) {
               closeTimer.start()
             }
-          }}
-        >
+          }}>
           {children}
         </TriggerWrapper>
       )}
@@ -70,20 +69,18 @@ export function Tooltip ({
       flip={flip}
       offset={offset + 8}
       placement={placement}
-      onOutsideClick={onOutsideClick && (() => { onOutsideClick(isOpen, close) })}
-    >
+      onOutsideClick={onOutsideClick && (() => { onOutsideClick(isOpen, close) })}>
       {({ ref, style, placement, arrowProps }) => {
         return (
           <TooltipContent
             {...blockProps}
             ref={ref as any}
-            onMouseEnter={() => { setMouseOverContent(true) }}
-            onMouseLeave={() => { setMouseOverContent(false) }}
             style={style}
             data-placement={placement}
-          >
+            onMouseEnter={() => { setMouseOverContent(true) }}
+            onMouseLeave={() => { setMouseOverContent(false) }}>
             {content}
-            <Arrow data-placement={placement} ref={arrowProps.ref as any} style={arrowProps.style}>
+            <Arrow ref={arrowProps.ref as any} data-placement={placement} style={arrowProps.style}>
               {String.fromCharCode(9660)}
             </Arrow>
           </TooltipContent>

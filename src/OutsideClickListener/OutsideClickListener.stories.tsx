@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { storiesOf } from '@storybook/react'
-import { OutsideClickListener } from './OutsideClickListener'
+
 import { fromTheme } from '../utils/styled'
+
+import { OutsideClickListener } from './OutsideClickListener'
 
 const StyledOutside = styled.div`
   display: flex;

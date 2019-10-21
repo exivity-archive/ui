@@ -1,11 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Grid } from '.'
 import { Block } from '../Block'
 import { Heading } from '../Heading'
 import { Paragraph } from '../Paragraph'
 import { Text } from '../Text'
+
+import { Grid } from '.'
 
 const template = `
   "header header" 100px

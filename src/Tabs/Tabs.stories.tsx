@@ -1,12 +1,14 @@
 import React from 'react'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
-import { Tabs } from '.'
+
 import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
 // @ts-ignore
 import * as useTabsContextDocs from './docs/useTabsContext.md'
+
+import { Tabs } from '.'
 
 storiesOf('molecules|Tabs', module)
   .add('default', () => (

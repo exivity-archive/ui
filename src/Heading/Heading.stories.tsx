@@ -3,8 +3,9 @@ import faker from 'faker'
 import { storiesOf } from '@storybook/react'
 import { MdFavorite } from 'react-icons/md'
 
-import { Heading } from '.'
 import { Icon } from '../Icon'
+
+import { Heading } from '.'
 
 storiesOf('atoms|Heading', module)
   .add('header', () => <Heading type='header'>{faker.lorem.sentence(4)}</Heading>)

@@ -29,16 +29,14 @@ export function Dropdown ({
       open={open}
       flip={flip}
       placement={placement}
-      onOutsideClick={onOutsideClick}
-    >
+      onOutsideClick={onOutsideClick}>
       {({ ref, style, placement }) => (
         <Content
           {...blockProps}
           ref={ref as any}
           style={style}
           data-placement={placement}
-          fullWidth={useTriggerWidth}
-        >
+          fullWidth={useTriggerWidth}>
           {children}
         </Content>
       )}

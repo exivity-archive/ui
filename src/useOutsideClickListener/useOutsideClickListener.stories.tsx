@@ -1,5 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+
 import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 

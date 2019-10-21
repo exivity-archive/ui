@@ -2,6 +2,7 @@ import React from 'react'
 import { isSameQuarter, startOfQuarter, setQuarter, format } from 'date-fns'
 
 import { StyledTimeUnit, StyledQuarters } from '../styled'
+
 import { CommonPeriodProps } from './Days'
 
 function getRenderQuarter (value: Date, browseDate: Date, onChange: Function) {
@@ -13,7 +14,7 @@ function getRenderQuarter (value: Date, browseDate: Date, onChange: Function) {
     return (
       <li key={index}>
         <StyledTimeUnit active={isActive}
-                   onClick={() => onChange(startOfQuarter(thisQuarter))}>
+          onClick={() => onChange(startOfQuarter(thisQuarter))}>
           {format(thisQuarter, 'Qo')}
         </StyledTimeUnit>
       </li>

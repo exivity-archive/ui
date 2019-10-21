@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+
 import { Block, BlockProps } from '../Block'
 
 import { Browser, StyledBrowser } from './Browser'
@@ -8,7 +9,6 @@ import { Months } from './modes/Months'
 import { Days } from './modes/Days'
 import { StyledHeader, StyledDays, StyledMonths, StyledWeekDays, StyledQuarters } from './styled'
 import { browseReducer, createBrowsers, formatDateHeader, useMode } from './helpers'
-
 import { onChangeDate, Modes } from './types'
 
 export interface CalendarProps {
@@ -22,17 +22,17 @@ export interface CalendarProps {
 const renderMode = (mode: Modes, value: Date, browseDate: Date, onChange: onChangeDate) => {
   switch (mode) {
     case Modes.YEARS:
-      return <Years value={value} browseDate={browseDate} onChange={onChange}/>
+      return <Years value={value} browseDate={browseDate} onChange={onChange} />
 
     case Modes.QUARTERS:
-      return <Quarters value={value} browseDate={browseDate} onChange={onChange}/>
+      return <Quarters value={value} browseDate={browseDate} onChange={onChange} />
 
     case Modes.MONTHS:
-      return <Months value={value} browseDate={browseDate} onChange={onChange}/>
+      return <Months value={value} browseDate={browseDate} onChange={onChange} />
 
     case Modes.DAYS:
     default:
-      return <Days value={value} browseDate={browseDate} onChange={onChange}/>
+      return <Days value={value} browseDate={browseDate} onChange={onChange} />
   }
 }
 

@@ -3,12 +3,13 @@ import Faker from 'faker'
 // @ts-ignore
 import { storiesOf } from '@storybook/react'
 
-import { CollapsibleContainer } from '.'
 import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
 
 // @ts-ignore
 import * as useCollapsibleContextDocs from './docs/CollapsibleContext.md'
+
+import { CollapsibleContainer } from '.'
 
 storiesOf('molecules|CollapsibleContainer', module)
   .add('default', () => (

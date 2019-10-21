@@ -26,5 +26,5 @@ const StyledSelectInput = styled(Input)`
         box-shadow: none;
       }
     `
-  }
+}
 `

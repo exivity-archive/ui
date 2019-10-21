@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import ReactMarkdown from 'react-markdown'
+
 import { Code } from '../Code'
 import { Heading } from '../Heading'
 import { HeadingType } from '../Heading/Heading'
@@ -26,7 +27,7 @@ const defaultRenderers: ObjectOf<Renderer> = {
 }
 
 interface MarkdownProps {
-  renderers?: ObjectOf<Renderer>,
+  renderers?: ObjectOf<Renderer>
   children?: string
 }
 

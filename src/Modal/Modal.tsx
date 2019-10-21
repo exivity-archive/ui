@@ -2,6 +2,7 @@ import React, { FC, ReactNode, Children, cloneElement } from 'react'
 import styled from 'styled-components'
 
 import { fromTheme } from '../utils/styled'
+
 import { Overlay, Button, Heading } from '..'
 
 const ModalWrapper = styled.div`

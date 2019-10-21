@@ -2,8 +2,9 @@ import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { FixedSizeList as List } from 'react-window'
 
-import { DefaultItem } from './DefaultItem'
 import { ListFocus } from '../ListFocus'
+
+import { DefaultItem } from './DefaultItem'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'
 
 export interface SelectListData {
@@ -57,7 +58,7 @@ export function SelectList<T extends SelectListData> ({
         itemSize={ITEM_HEIGHT}
         innerElementType={innerElementType}
         width={width || '100%'}>
-        {children ? children : DefaultItem}
+        {children || DefaultItem}
       </StyledList>
     </ListFocus>
   )

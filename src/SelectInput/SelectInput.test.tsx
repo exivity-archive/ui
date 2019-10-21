@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
 
 import { SelectInput } from '.'

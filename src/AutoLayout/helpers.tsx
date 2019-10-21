@@ -1,6 +1,8 @@
 import React from 'react'
-import { getWidget, ColumnProps } from './Column'
+
 import { useBreakpoint } from '../useBreakpoints'
+
+import { getWidget, ColumnProps } from './Column'
 
 type Rows = Array<Row>
 type Row = Column[]
