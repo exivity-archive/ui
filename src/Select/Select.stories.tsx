@@ -17,6 +17,7 @@ const items = [
 
 export default storiesOf('interact|Select', module)
   .addDecorator(withState())
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   .add('default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (
     <Select
@@ -53,8 +54,7 @@ export default storiesOf('interact|Select', module)
         selected={state}
         data={items}
         placeholder='Choose an option'
-        InputComponent={React.forwardRef((props, ref) => <SelectInput {...props} ref={ref} outlined />)}
-        onChange={(v) => { storeState(v) }} />
+        inputComponent={(props) => <SelectInput {...props} outlined />} />
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (

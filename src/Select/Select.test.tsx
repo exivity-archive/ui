@@ -53,10 +53,7 @@ describe('The Select component', () => {
       <Select
         selected={{ key: 'one', value: 'one' }}
         data={[]}
-        InputComponent={React.forwardRef((props, ref) => (
-          <input id='test-id' {...props} ref={ref as any} />
-        ))}
-        onChange={(() => null)} />
+        inputComponent={(props) => <input id='test-id' {...props} />}/>
     ))
 
     expect(wrapper.find('#test-id')).toBeDefined()
