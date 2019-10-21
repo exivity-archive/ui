@@ -12,6 +12,7 @@ import { Dropdown, DropdownPlacement } from './'
 
 storiesOf('molecules|Dropdown', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>

@@ -13,15 +13,27 @@ export interface AutoLayoutProps {
   children: any
 }
 
-export const AutoLayout = ({ children, wrapInWidgets, height, spacing, ...blockProps }: AutoLayoutProps & BlockProps) => {
+export const AutoLayout = ({
+  children,
+  wrapInWidgets,
+  height,
+  spacing,
+  ...blockProps
+}: AutoLayoutProps & BlockProps) => {
   const activeSpacing = useSpacing(spacing)
   const { space } = useStyledTheme()
   const heightOffset = activeSpacing ? space[activeSpacing] : '0px'
 
-  const rows = applySpacing(wrapInWidget(makeRows(children), wrapInWidgets), heightOffset, activeSpacing)
+  const rows = applySpacing(
+    wrapInWidget(makeRows(children), wrapInWidgets), heightOffset, activeSpacing
+  )
 
   return (
-    <Flex wrap='wrap' pb={activeSpacing} height={getHeight(height, heightOffset, activeSpacing)} {...blockProps}>
+    <Flex
+      wrap='wrap'
+      pb={activeSpacing}
+      height={getHeight(height, heightOffset, activeSpacing)}
+      {...blockProps}>
       {rows.map((row: any, index: number) => (
         <Flex.Item key={index} grow={1} width='100%'>
           <Flex wrap='wrap' height='100%' width='100%'>

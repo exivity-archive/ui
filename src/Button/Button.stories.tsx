@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
@@ -11,7 +12,7 @@ import { Button } from '.'
 
 const Container = styled.div`
   display: flex;
-  background-color: ${fromTheme(theme => theme.colors.lightGray)}
+  background-color: ${fromTheme(theme => theme.colors.lightGray)};
   padding: 20px;
 `
 

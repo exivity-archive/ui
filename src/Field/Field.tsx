@@ -36,8 +36,12 @@ export const Field = styled.div<StyledFieldProps>`
   }
 
   > ${Label}:first-child {
-    padding-bottom: ${props => props.horizontal ? 'unset' : css`${fromTheme(theme => theme.global.baseSpacing / 2)}em`};
-    margin-right: ${props => props.horizontal ? css`${fromTheme(theme => theme.global.baseSpacing)}em` : 'unset'};
+    padding-bottom: ${props => props.horizontal
+    ? 'unset'
+    : css`${fromTheme(theme => theme.global.baseSpacing / 2)}em`};
+    margin-right: ${props => props.horizontal
+    ? css`${fromTheme(theme => theme.global.baseSpacing)}em`
+    : 'unset'};
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: ${props => (props.horizontal && props.align)

@@ -10,6 +10,7 @@ import { AutoLayout } from './AutoLayout'
 import { Column } from './'
 
 storiesOf('molecules|AutoLayout', module)
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   .add('overview', markdown(require('./README.md')))
   .add('master/detail', () => (
     <Block height={1000} width={1600} bg='lightgray'>

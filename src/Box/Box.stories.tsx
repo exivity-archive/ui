@@ -1,11 +1,10 @@
 import React from 'react'
 import Faker from 'faker'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
 
 import { ensureString } from '../utils'
 import { Markdown } from '../Markdown'
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import * as CollapsibleContextDocs from '../CollapsibleContainer/docs/CollapsibleContext.md'
 

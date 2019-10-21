@@ -1,4 +1,12 @@
-import React, { ChangeEvent, InputHTMLAttributes, useState, forwardRef, Ref, useRef, Dispatch } from 'react'
+import React, {
+  ChangeEvent,
+  InputHTMLAttributes,
+  useState,
+  forwardRef,
+  Ref,
+  useRef,
+  Dispatch
+} from 'react'
 
 import { Omit } from '../utils/types'
 
@@ -13,7 +21,8 @@ const makeHandleChange = (onChange: OnChange | undefined, setValid: Dispatch<boo
   }
 }
 
-export type OmitOnChangeHTMLInputAttributes = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
+export type OmitOnChangeHTMLInputAttributes
+  = Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>
 
 export type OnChange<T = string, E = HTMLInputElement> = (value: T, event: ChangeEvent<E>) => void
 

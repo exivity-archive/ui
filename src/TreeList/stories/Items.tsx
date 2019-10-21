@@ -19,7 +19,11 @@ export function CustomItem ({ data, style, index }: TreeListItemProps<FakeRecord
     return (
       <ListItem style={style} onClick={handleChange}>
         <BranchSpacer spacing={20} index={index} data={items}>
-          {item[CHILDREN] && <Button small onClick={item.expand}>{item.expanded ? 'Collapse' : 'Expand'}</Button>}
+          {item[CHILDREN] && (
+            <Button small onClick={item.expand}>
+              {item.expanded ? 'Collapse' : 'Expand'}
+            </Button>
+          )}
           {item.value}
         </BranchSpacer>
       </ListItem>

@@ -27,10 +27,11 @@ const StyledInside = styled.div`
 `
 
 export default storiesOf('interact/OutsideClickListener', module)
-  .add('default', ({ state, storeState }: any) => (
+  .add('default', () => (
     <StyledOutside>
       outside
-      <OutsideClickListener onOutsideClick={() => window.alert('You clicked OUTSIDE of the inside node!')}>
+      <OutsideClickListener
+        onOutsideClick={() => window.alert('You clicked OUTSIDE of the inside node!')}>
         <StyledInside>
             Inside (outsideListener on this node)
         </StyledInside>

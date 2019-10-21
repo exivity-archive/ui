@@ -13,7 +13,10 @@ const StyledDiv = styled.div`
   display: block;
 `
 
-export const OutsideClickListener: React.FC<OutsideClickListenerProps> = ({ onOutsideClick = defaultFn, children }) => {
+export const OutsideClickListener: React.FC<OutsideClickListenerProps> = ({
+  onOutsideClick = defaultFn,
+  children
+}) => {
   const myRef = useOutsideClickListener(onOutsideClick)
 
   return (

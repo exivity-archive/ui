@@ -1,7 +1,9 @@
 import React, { ReactNode, useEffect, useState } from 'react'
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/prism-light'
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import solarizedlight from 'react-syntax-highlighter/dist/cjs/styles/prism/solarizedlight'
 import styled, { css } from 'styled-components'

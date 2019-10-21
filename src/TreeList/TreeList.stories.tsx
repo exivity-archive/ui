@@ -12,17 +12,28 @@ const parentKeyAccessor = (item: FakeRecord) => item.parentId
 const keyAccessor = (item: FakeRecord) => item.key
 
 storiesOf('organisms|TreeList', module)
-  .add('default', () => <TreeList data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor} />)
+  .add('default', () => (
+    <TreeList
+      data={FLAT_LIST_TEST_DATA}
+      keyAccessor={keyAccessor}
+      parentKeyAccessor={parentKeyAccessor} />
+  ))
   .add('custom item', () => {
     return (
-      <TreeList data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor}>
+      <TreeList
+        data={FLAT_LIST_TEST_DATA}
+        keyAccessor={keyAccessor}
+        parentKeyAccessor={parentKeyAccessor}>
         {CustomItem}
       </TreeList>
     )
   })
   .add('modified item', () => {
     return (
-      <TreeList data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor}>
+      <TreeList
+        data={FLAT_LIST_TEST_DATA}
+        keyAccessor={keyAccessor}
+        parentKeyAccessor={parentKeyAccessor}>
         {ModifiedDefaultItem}
       </TreeList>
     )
@@ -30,7 +41,10 @@ storiesOf('organisms|TreeList', module)
   .add('auto height', () => {
     return (
       <Block height={300} width={500}>
-        <TreeList data={FLAT_LIST_TEST_DATA} keyAccessor={keyAccessor} parentKeyAccessor={parentKeyAccessor} />
+        <TreeList
+          data={FLAT_LIST_TEST_DATA}
+          keyAccessor={keyAccessor}
+          parentKeyAccessor={parentKeyAccessor} />
         <hr />
       </Block>
     )

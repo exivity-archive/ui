@@ -4,7 +4,8 @@ import { mount } from 'enzyme'
 import { CollapsibleContainer } from './CollapsibleContainer'
 import { CollapsibleContext } from './helpers'
 
-test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for uncontrolled component', () => {
+test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for uncontrolled'
+  + ' component', () => {
   const initialCollapsed = false
   let clicked = false
   const container = mount(

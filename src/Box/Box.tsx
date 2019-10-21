@@ -19,7 +19,9 @@ export const StyledBoxBar = styled.div<StyledBoxBarProps>`
   background-color: #F4F4F4;
   height: 60px;
   align-items: center;
-  padding: 0 ${fromTheme(theme => theme.global.baseSpacing * 2)}em 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
+  padding: 0 ${fromTheme(
+    theme => theme.global.baseSpacing * 2
+  )}em 0 ${fromTheme(theme => theme.global.baseSpacing)}em;
 
   ${({ collapsible }) => collapsible && css`
     justify-content: space-between;
@@ -70,7 +72,7 @@ interface BoxSubComponents extends CollapsibleContainerSubComponents {
   Bar: typeof BoxBar
 }
 
-interface BoxProps extends CollapsibleContainerProps { }
+type BoxProps = CollapsibleContainerProps
 
 const BoxWrapper: FC = ({ children }) => {
   const context = useContext(CollapsibleContext)

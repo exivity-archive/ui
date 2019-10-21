@@ -36,7 +36,14 @@ const renderMode = (mode: Modes, value: Date, browseDate: Date, onChange: onChan
   }
 }
 
-export const Calendar = ({ value, onChange, onHeaderClick, initialMode, mode, ...blockProps }: CalendarProps & BlockProps) => {
+export const Calendar = ({
+  value,
+  onChange,
+  onHeaderClick,
+  initialMode,
+  mode,
+  ...blockProps
+}: CalendarProps & BlockProps) => {
   const [selectedMode, selectNextMode] = useMode(initialMode, mode)
   const [browseDate, dispatch] = useReducer(browseReducer, value)
   const [onPrev, onNext] = createBrowsers(dispatch, selectedMode)

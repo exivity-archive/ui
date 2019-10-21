@@ -13,7 +13,8 @@ import {
 } from '../utils/styled'
 import { preciseEm } from '../utils/styled/isolated'
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, PurposesProps, SizesProps, StyledProps {
+export interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>, PurposesProps, SizesProps, StyledProps {
   // Variants
   round?: boolean
   transparent?: boolean
@@ -60,14 +61,17 @@ export const Button = styled.button<ButtonProps>`
 
   &:focus {
     box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha)}),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color-rgb), ${fromTheme(
+      0 0 0 ${fromTheme(
+    theme => theme.global.outlineWidth
+  )}px rgba(var(--focus-color-rgb), ${fromTheme(
   theme => theme.global.outlineAlpha)});
   }
 
   &:active,
   &.active {
     box-shadow: inset 0 0 999em rgba(0,0,0,${fromTheme(theme => theme.global.shadowAlpha * 2)}),
-      0 0 0 ${fromTheme(theme => theme.global.outlineWidth)}px rgba(var(--focus-color-rgb), ${fromTheme(
+      0 0 0 ${fromTheme(
+    theme => theme.global.outlineWidth)}px rgba(var(--focus-color-rgb), ${fromTheme(
   theme => theme.global.outlineAlpha)});
   }
 
@@ -98,13 +102,15 @@ export const Button = styled.button<ButtonProps>`
 
     &:hover {
       color: ${fromTheme(theme => theme.global.textColor)};
-      box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${fromTheme(theme => theme.global.textColor)};
+      box-shadow: 0 0 0 ${fromTheme(
+    theme => theme.global.borderWidth)}px ${fromTheme(theme => theme.global.textColor)};
     }
 
     &:focus {
       box-shadow: 0 0 0 ${fromTheme(theme => theme.global.borderWidth)}px ${matchThemeProp(
   theme => theme.global.purposes)},
-       0 0 0 ${fromTheme(theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color-rgb), ${fromTheme(
+       0 0 0 ${fromTheme(
+    theme => theme.global.outlineWidth + 1)}px rgba(var(--focus-color-rgb), ${fromTheme(
   theme => theme.global.outlineAlpha)});
     }
   `}

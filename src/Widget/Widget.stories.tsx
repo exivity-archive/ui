@@ -15,6 +15,7 @@ storiesOf('molecules|Widget', module)
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>

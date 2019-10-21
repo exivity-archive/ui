@@ -4,7 +4,12 @@ import styled, { css } from 'styled-components'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
 
-import { useTabsContext, TabsContext, getNextNonDisabledIndex, getPrevNonDisabledIndex } from './helpers'
+import {
+  useTabsContext,
+  TabsContext,
+  getNextNonDisabledIndex,
+  getPrevNonDisabledIndex
+} from './helpers'
 
 interface StyledTabProps {
   isActive?: boolean
@@ -144,10 +149,20 @@ const StyledPanel = styled.div<{ animated?: boolean }>`
   `}
 `
 
-const TabPanel: FC<{ animated?: boolean; test?: string }> = ({ children, animated, test = 'tabs-panel' }) => {
+const TabPanel: FC<{ animated?: boolean; test?: string }> = ({
+  children,
+  animated,
+  test = 'tabs-panel'
+}) => {
   const { activeIndex } = useTabsContext()
 
-  return <StyledPanel key={activeIndex} animated={animated} data-test={test}>{children}</StyledPanel>
+  return (
+    <StyledPanel
+      key={activeIndex}
+      animated={animated}
+      data-test={test}>{children}
+    </StyledPanel>
+  )
 }
 
 interface TabPanelsProps {
@@ -186,8 +201,18 @@ interface TabsProps {
 
 type TabsComponent = FC<TabsProps> & TabsSubComponents
 
-export const Tabs: TabsComponent = ({ children, onActiveIndexChange, initialActiveIndex = 0, disabledTabs = [], ...rest }) => {
-  const [activeIndex, setActiveIndex] = useIsUncontrolled(initialActiveIndex, rest.activeIndex, onActiveIndexChange)
+export const Tabs: TabsComponent = ({
+  children,
+  onActiveIndexChange,
+  initialActiveIndex = 0,
+  disabledTabs = [],
+  ...rest
+}) => {
+  const [activeIndex, setActiveIndex] = useIsUncontrolled(
+    initialActiveIndex,
+    rest.activeIndex,
+    onActiveIndexChange
+  )
   const contextValue = { activeIndex, setActiveIndex, disabledTabs }
 
   return (

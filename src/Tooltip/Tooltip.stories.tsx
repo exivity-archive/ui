@@ -14,8 +14,7 @@ import { Tooltip, TooltipPlacement } from '.'
 
 storiesOf('molecules|Tooltip', module)
   .addDecorator(withState({ one: false, two: false, three: false, four: false }))
-  // @ts-ignore
-  .add('default', ({ state, storeState }: any) => (
+  .add('default', () => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
         <Tooltip
@@ -26,7 +25,7 @@ storiesOf('molecules|Tooltip', module)
       </div>
     </Flex>
   ))
-  .add('open by default', ({ state, storeState }: any) => (
+  .add('open by default', () => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
         <Tooltip
@@ -38,7 +37,7 @@ storiesOf('molecules|Tooltip', module)
       </div>
     </Flex>
   ))
-  .add('close on outside click', ({ state, storeState }: any) => (
+  .add('close on outside click', () => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
         <Tooltip
@@ -62,7 +61,7 @@ storiesOf('molecules|Tooltip', module)
       </div>
     </Flex>
   ))
-  .add('offset', ({ state, storeState }: any) => (
+  .add('offset', () => (
     <Flex justifyContent='center' alignItems='center' bg='lightgray' height={500}>
       <div>
         <Tooltip
@@ -74,7 +73,7 @@ storiesOf('molecules|Tooltip', module)
       </div>
     </Flex>
   ))
-  .add('position', ({ state, storeState }: any) => (
+  .add('position', () => (
     <Flex justifyContent='center' alignItems='center' height={800} width={1000}>
       <Row columns={4}>
         <Tooltip

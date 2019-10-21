@@ -13,22 +13,28 @@ test('it throws an error when a TabList component is not rendered within a Tabs 
       </Tabs.TabList>
     )
   } catch (error) {
-    expect(error.message).toBe('useTabsContext should only be called within a child of a Tabs component')
+    expect(error.message).toBe(
+      'useTabsContext should only be called within a child of a Tabs component'
+    )
   }
 })
 
-test('it throws an error when a TabPanels component is not rendered within a Tabs component', () => {
-  try {
-    mount(
-      <Tabs.TabPanels>
-        <Tabs.TabPanel />
-        <Tabs.TabPanel />
-      </Tabs.TabPanels>
-    )
-  } catch (error) {
-    expect(error.message).toBe('useTabsContext should only be called within a child of a Tabs component')
-  }
-})
+test(
+  'it throws an error when a TabPanels component is not rendered within a Tabs component',
+  () => {
+    try {
+      mount(
+        <Tabs.TabPanels>
+          <Tabs.TabPanel />
+          <Tabs.TabPanel />
+        </Tabs.TabPanels>
+      )
+    } catch (error) {
+      expect(error.message).toBe(
+        'useTabsContext should only be called within a child of a Tabs component'
+      )
+    }
+  })
 
 interface KeyboardNavigationTest {
   key: 'ArrowLeft' | 'ArrowRight'

@@ -34,8 +34,10 @@ export const PropsTable = ({ component, include }: { component: string; include:
   try {
     const [main, sub] = component.split('.')
     props = sub
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       ? UI[main][sub].__docgenInfo.props
+      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
       // @ts-ignore
       : UI[main].__docgenInfo.props
   } catch (err) {

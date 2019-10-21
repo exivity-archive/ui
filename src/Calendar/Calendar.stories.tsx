@@ -11,6 +11,7 @@ import { Modes } from './types'
 
 storiesOf('interact|Calendar', module)
   .addDecorator(withState(new Date()))
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   .add('overview', markdown(require('./README.md')))
   .add('default', ({ state, storeState }: any) => (
     <Calendar value={state} onChange={storeState} />
@@ -29,6 +30,11 @@ storiesOf('interact|Calendar', module)
   .add('uncontrolled with initialMode and mode', ({ state, storeState }: any) => (
     <Row columns={2} columnWidth={400}>
       <Calendar value={state} initialMode={Modes.QUARTERS} width={300} onChange={storeState} />
-      <Calendar value={state} initialMode={Modes.YEARS} mode={[Modes.MONTHS, Modes.YEARS]} width={300} onChange={storeState} />
+      <Calendar
+        value={state}
+        initialMode={Modes.YEARS}
+        mode={[Modes.MONTHS, Modes.YEARS]}
+        width={300}
+        onChange={storeState} />
     </Row>
   ))

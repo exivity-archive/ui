@@ -11,11 +11,12 @@ storiesOf('interact|SelectInput', module)
   .addDecorator(withState({
     isOpen: false
   }))
-  // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
     <Row columns={1}>
       <Dropdown useTriggerComponentWidth open={state.isOpen} triggerComponent={
-        <SelectInput placeholder='Choose option' onClick={() => storeState({ ...state, isOpen: !state.isOpen })} />
+        <SelectInput
+          placeholder='Choose option'
+          onClick={() => storeState({ ...state, isOpen: !state.isOpen })} />
       } />
     </Row>
   ))

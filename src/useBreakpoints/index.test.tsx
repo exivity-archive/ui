@@ -5,6 +5,7 @@ import { useBreakpoint } from './'
 describe('useBreakpoint', () => {
   let map: any = []
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   window.matchMedia = jest.fn(() => {
     return {

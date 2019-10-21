@@ -14,7 +14,8 @@ const ModalWrapper = styled.div`
 `
 
 const Header = styled.div`
-  padding: ${fromTheme(theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
+  padding: ${fromTheme(
+    theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 1.5)}em;
 `
 
 const Body = styled.div`
@@ -26,7 +27,8 @@ const Body = styled.div`
 `
 
 const Footer = styled.div`
-  padding: ${fromTheme(theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 2)}em;
+  padding: ${fromTheme(
+    theme => theme.global.baseSpacing)}em ${fromTheme(theme => theme.global.baseSpacing * 2)}em;
   color: ${fromTheme(theme => theme.colors.gray)};
   display: flex;
   flex-direction: row-reverse;
@@ -47,7 +49,12 @@ export const Modal: FC<ModalProps> = ({ title, children, buttons, ...rest }) => 
       {title && <Header>{typeof title === 'string' ? <Heading>{title}</Heading> : title}</Header>}
       {children && <Body>{children}</Body>}
       {buttons && (
-        <Footer>{Children.map(buttons, (child, index) => cloneElement(child, { ...child.props, key: index }))}</Footer>
+        <Footer>
+          {Children.map(
+            buttons,
+            (child, index) => cloneElement(child, { ...child.props, key: index })
+          )}
+        </Footer>
       )}
     </ModalWrapper>
   </Overlay>

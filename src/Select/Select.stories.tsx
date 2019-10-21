@@ -17,15 +17,28 @@ const items = [
 
 export default storiesOf('molecules/Select', module)
   .addDecorator(withState())
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
-  .add('default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (
+  .add('default', ({
+    state,
+    storeState
+  }: {
+    state: { key: string; value: string; b: number };
+    storeState: any;
+  }) => (
     <Select
       selected={state}
       data={items}
       placeholder='Choose an option'
       onChange={(v) => { storeState(v) }} />
   ))
-  .add('open by default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (
+  .add('open by default', ({
+    state,
+    storeState
+  }: {
+    state: { key: string; value: string; b: number };
+    storeState: any;
+  }) => (
     <Select
       selected={state}
       data={items}

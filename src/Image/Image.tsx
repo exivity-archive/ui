@@ -1,6 +1,14 @@
-import { HTMLProps } from 'react'
 import styled, { css } from 'styled-components'
-import { height, HeightProps, size, SizeProps, space, SpaceProps, width, WidthProps } from 'styled-system'
+import {
+  height,
+  HeightProps,
+  size,
+  SizeProps,
+  space,
+  SpaceProps,
+  width,
+  WidthProps
+} from 'styled-system'
 
 import { StyledProps } from '../utils/styled'
 
@@ -23,7 +31,9 @@ export const Image = styled.img.attrs((props: ImageProps) => ({
   ${props => props.background && css`
     background-image: url('${props.src}');
     background-size: ${props.background};
-    background-position: ${props.position && props.position !== 'center' ? props.position : '50% 50%'};
+    background-position: ${props.position && props.position !== 'center'
+    ? props.position
+    : '50% 50%'};
     background-repeat: ${props.repeat ? 'repeat' : 'no-repeat'};
   `}
 

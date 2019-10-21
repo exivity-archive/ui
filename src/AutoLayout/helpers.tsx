@@ -69,7 +69,11 @@ function formatHeight (height: number | string) {
     : `${height}px`
 }
 
-export function getHeight (height: string | number | undefined, heightOffset: string, spacing?: number | undefined) {
+export function getHeight (
+  height: string | number | undefined,
+  heightOffset: string,
+  spacing?: number | undefined
+) {
   if (!height && !spacing) return '100%'
 
   if (!height && spacing) return `calc(100% - ${heightOffset})`

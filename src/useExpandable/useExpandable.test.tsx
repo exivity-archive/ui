@@ -53,7 +53,10 @@ test('useExpandable with expandedKeys', () => {
   ]
 
   mount(
-    <ExpandableList data={list} accessor={(item: any) => item.parentId} expandedKeys={expandedItems}>
+    <ExpandableList
+      data={list}
+      accessor={(item: any) => item.parentId}
+      expandedKeys={expandedItems}>
       {(data: any) => {
         [returnData] = data
         return null
@@ -104,7 +107,10 @@ test('useExpandable will not filter items which do no have a parentId', () => {
   ]
 
   mount(
-    <ExpandableList data={list} accessor={(item: any) => item.parentId} expandedKeys={['1', '2', '3']}>
+    <ExpandableList
+      data={list}
+      accessor={(item: any) => item.parentId}
+      expandedKeys={['1', '2', '3']}>
       {(data: any) => {
         [returnData] = data
         return null

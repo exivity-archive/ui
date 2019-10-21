@@ -52,7 +52,9 @@ interface GroupTitleProps {
 
 const GroupTitle: FC<GroupTitleProps> = ({ children, section }) => (
   <StyledGroupTitle>
-    {typeof children === 'string' ? <Heading type={section ? 'section' : 'header'}>{children}</Heading> : children}
+    {typeof children === 'string'
+      ? <Heading type={section ? 'section' : 'header'}>{children}</Heading>
+      : children}
   </StyledGroupTitle>
 )
 
@@ -69,7 +71,12 @@ interface GroupProps extends CollapsibleContainerProps {
   content?: JSX.Element
 }
 
-export const Group: FC<GroupProps> & GroupSubComponents = ({ header, children, content, ...rest }) => {
+export const Group: FC<GroupProps> & GroupSubComponents = ({
+  header,
+  children,
+  content,
+  ...rest
+}) => {
   const Header = header ? (
     <Group.Header>
       <Group.Title>{header}</Group.Title>

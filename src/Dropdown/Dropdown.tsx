@@ -7,7 +7,8 @@ import { Popper, PopperProps, Placement } from './Popper'
 
 export const DropdownPlacement = Placement
 
-export interface DropdownProps extends Pick<PopperProps, 'open' | 'placement' | 'onOutsideClick' | 'flip'> {
+export interface DropdownProps
+  extends Pick<PopperProps, 'open' | 'placement' | 'onOutsideClick' | 'flip'> {
   children: React.ReactNode
   trigger: React.ReactElement
   useTriggerWidth?: boolean

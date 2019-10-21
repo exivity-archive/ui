@@ -14,8 +14,8 @@ import { Input } from '.'
 
 storiesOf('interact|Input', module)
   .addDecorator(withState(''))
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   .add('overview', markdown(require('./README.md')))
-  // @ts-ignore
   .add('default', ({ state, storeState }: any) => (
     <>
       <Heading type='sub'>Text</Heading>

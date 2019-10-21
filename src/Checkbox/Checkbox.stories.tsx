@@ -17,7 +17,10 @@ storiesOf('interact|Checkbox', module)
     </>
   ))
   .add('with label', ({ state, storeState }: any) => (
-    <Checkbox checked={state} label='Enable this setting' onChange={storeAndAction(storeState, 'onChange')} />
+    <Checkbox
+      checked={state}
+      label='Enable this setting'
+      onChange={storeAndAction(storeState, 'onChange')} />
   ))
   .add('with custom label', () => (
     <Checkbox checked label={

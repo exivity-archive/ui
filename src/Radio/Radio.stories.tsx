@@ -19,10 +19,16 @@ storiesOf('interact|Radio', module)
   .add('with label', ({ state, storeState }: any) => (
     <>
       <Section>
-        <Radio checked={state === 1} label='Choose option 1' onChange={storeAndAction(storeState, 'onChange', 1)} />
+        <Radio
+          checked={state === 1}
+          label='Choose option 1'
+          onChange={storeAndAction(storeState, 'onChange', 1)} />
       </Section>
       <Section>
-        <Radio checked={state === 2} label='Choose option 2' onChange={storeAndAction(storeState, 'onChange', 2)} />
+        <Radio
+          checked={state === 2}
+          label='Choose option 2'
+          onChange={storeAndAction(storeState, 'onChange', 2)} />
       </Section>
     </>
   ))

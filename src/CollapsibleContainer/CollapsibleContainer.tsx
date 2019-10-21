@@ -33,7 +33,8 @@ const StyledContainerContent = styled.div`
 `
 const ContainerContent: FC = ({ children }) => {
   const context = useContext(CollapsibleContext)
-  return !context || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
+  return !context
+    || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
 }
 
 export interface CollapsibleContainerSubComponents {
@@ -48,7 +49,8 @@ export interface CollapsibleContainerProps {
   collapsible?: boolean
 }
 
-export type CollapsibleContainerComponent = FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents
+export type CollapsibleContainerComponent
+  = FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents
 
 export const CollapsibleContainer: CollapsibleContainerComponent = ({
   children,
@@ -56,7 +58,8 @@ export const CollapsibleContainer: CollapsibleContainerComponent = ({
   initialCollapsed = false,
   ...rest
 }) => {
-  const [collapsed, onCollapse] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
+  const [collapsed, onCollapse]
+    = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
   const collapsableContext = { collapsed, onCollapse }
   return (
     <CollapsibleContext.Provider value={collapsible ? collapsableContext : null}>

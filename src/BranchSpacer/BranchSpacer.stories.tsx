@@ -26,7 +26,12 @@ const BranchList = ({ spacing, padding }: ListProps) => {
 
   return (
     <ListFocus>
-      <FixedSizeList height={800} width={600} itemSize={40} itemData={parentChildData} itemCount={parentChildData.length}
+      <FixedSizeList
+        height={800}
+        width={600}
+        itemSize={40}
+        itemData={parentChildData}
+        itemCount={parentChildData.length}
         innerElementType='ul'>
         {makeItemSpacer(spacing, padding)}
       </FixedSizeList>
