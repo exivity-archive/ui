@@ -3,13 +3,6 @@ checks:
   similar-code:
     config:
       threshold: 200
-plugins:
-  tslint:
-    enabled: true
-    config: tslint.json
-    checks:
-      whitespace:
-        enabled: false
 exclude_patterns:
   - "**/node_modules/"
   - "lib/"
