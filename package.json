@@ -121,6 +121,7 @@
     "@storybook/theming": "^5.2.1",
     "@testing-library/jest-dom": "^4.1.0",
     "@testing-library/react": "^8.0.1",
+    "@testing-library/react-hooks": "^3.1.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/faker": "^4.1.5",
