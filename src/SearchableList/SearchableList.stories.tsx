@@ -12,5 +12,5 @@ const data = [
   { key: 'six', value: 'six' }
 ]
 
-storiesOf('interaction|SearchableList', module)
+storiesOf('interact|SearchableList', module)
   .add('default', () => <SearchableList placeholder='Search...' data={data} onChange={console.log}/>)
