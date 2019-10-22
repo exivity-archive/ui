@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { MdSearch } from 'react-icons/md'
 
 import { BlockProps, blockStyles } from '../Block'
-import { Input, InputProps } from '../Input/Input'
+import { Input, InputProps } from '../Input'
 import { fromTheme } from '../utils/styled'
 import { Adornment } from '../Adornment'
 
@@ -42,8 +42,10 @@ const StyledInput = styled(Input)`
   `}
 `
 
-export const Searchbar = (props: SearchbarProps) => (
-  <Adornment right={<MdSearch />} >
-    <StyledInput {...props} />
-  </Adornment>
-)
+export function Searchbar (props: SearchbarProps) {
+  return (
+    <Adornment right={<MdSearch />} >
+      <StyledInput {...props} />
+    </Adornment>
+  )
+}
