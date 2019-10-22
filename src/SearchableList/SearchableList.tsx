@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import { SelectList, Block, useSearchFilter } from '../'
 
-import { SearchBar } from './Searchbar'
+import { Searchbar } from '../Searchbar'
 
 interface SearchableListProps<T> {
   placeholder: string
@@ -59,10 +59,11 @@ export function SearchableList<T> ({
     <Block p={gotData ? 0 : 1}>
       { gotData && (
         <Block p={1}>
-          <SearchBar
+          <Searchbar
+            dark
             animated
             value={searchTerm}
-            placeholder={placeholder}
+            placeholder={placeholder.toUpperCase()}
             onChange={(value, e) => {
               e.stopPropagation()
               setSearchTerm(value)

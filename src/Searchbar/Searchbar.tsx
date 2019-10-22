@@ -4,11 +4,12 @@ import { MdSearch } from 'react-icons/md'
 
 import { BlockProps, blockStyles } from '../Block'
 import { Input, InputProps } from '../Input'
-import { fromTheme } from '../utils/styled'
+import { fromTheme, toRgbString } from '../utils/styled'
 import { Adornment } from '../Adornment'
 
 interface SearchbarOwnProps {
   animated?: boolean
+  dark?: boolean
 }
 
 export type SearchbarProps =
@@ -16,11 +17,18 @@ export type SearchbarProps =
   & BlockProps
   & SearchbarOwnProps
 
+function getLightgray (props: SearchbarProps) {
+  return fromTheme(theme => toRgbString(theme.colors.lightGray))(props)
+}
+
 const StyledInput = styled(Input)`
   ${blockStyles};
 
-  background-color: #fff;
   border-color: transparent;
+  background-color: ${(props) => props.dark
+    ? `rgba(${getLightgray(props)}, 0.7)`
+    : '#fff'
+  };
 
   &:hover, &:focus {
     border-color: transparent;
