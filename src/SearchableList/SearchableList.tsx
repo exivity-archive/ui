@@ -42,7 +42,8 @@ export function SearchableList<T> ({
 
   const preparedData = data.map((item) => ({
     key: keyAccessor(item),
-    value: valueAccessor(item)
+    value: valueAccessor(item),
+    ...item
   }))
 
   const filteredData = useSearchFilter(preparedData, searchTerm)
