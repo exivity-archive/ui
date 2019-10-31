@@ -16,11 +16,7 @@ const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
 `
 
-interface SelectData extends SelectListData {
-  toString: Function
-}
-
-const defaultInputValueAccessor = (item?: SelectData): string => {
+const defaultInputValueAccessor = (item?: any): string => {
   if (!item && item !== 0) {
     return ''
   }
@@ -66,7 +62,7 @@ export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   onToggle?: (open: boolean) => void
 }
 
-export function Select <V extends SelectData> ({
+export function Select <V = string> ({
   name,
   selected,
   inputValueAccessor = defaultInputValueAccessor,
