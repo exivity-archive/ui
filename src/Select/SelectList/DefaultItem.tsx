@@ -22,7 +22,11 @@ export const DefaultItem: React.FC<SelectListItemProps> = ({ data, index, style 
   const handleOnClick = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
   return (
-    <ListItem style={style} tabIndex={index + 1} noDataPlaceholder={item.key === NO_DATA_KEY} onClick={handleOnClick}>
+    <ListItem
+      style={style}
+      tabIndex={index + 1}
+      noDataPlaceholder={item.key === NO_DATA_KEY}
+      onClick={handleOnClick}>
       <CenterText>
         {item.value}
       </CenterText>

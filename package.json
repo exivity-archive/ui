@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "create-component": "node scripts/create-component.js",
-    "lint": "eslint src/**/*.ts?",
+    "lint": "eslint src/**/*.ts? --quiet",
     "lint:fix": "eslint src/**/*.ts? --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",

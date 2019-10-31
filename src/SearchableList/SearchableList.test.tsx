@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
+
 import { SearchableList } from './SearchableList'
 
 const ONE = 'list one'
@@ -20,6 +21,7 @@ test('Click triggers onChange', () => {
   fireEvent.click(getByText(ONE))
 
   expect(mock).toHaveBeenCalled()
+
   unmount()
 })
 
@@ -40,6 +42,7 @@ test('SearchTerm will filter list', () => {
 
   const listItems = getAllByText((content) => content.startsWith('list'))
 
-  expect(listItems.length).toBe(1)
+  expect(listItems).toHaveLength(1)
+
   unmount()
 })

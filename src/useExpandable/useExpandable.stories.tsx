@@ -27,7 +27,12 @@ const ExpandableList = ({ expandedKeys }: any) => {
 
   return (
     <ListFocus>
-      <StyledList height={800} width={600} itemSize={80} itemData={[data, helpers]} itemCount={data.length}
+      <StyledList
+        height={800}
+        width={600}
+        itemSize={80}
+        itemData={[data, helpers]}
+        itemCount={data.length}
         innerElementType='ul'>
         {ItemSpacer}
       </StyledList>
@@ -36,9 +41,9 @@ const ExpandableList = ({ expandedKeys }: any) => {
 }
 
 interface ItemProps {
-  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>]
-  index: number
-  style: object
+  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>];
+  index: number;
+  style: object;
 }
 
 const ItemSpacer = ({ data, index, style }: ItemProps) => {
@@ -60,16 +65,19 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
             {' ' + item.value}
           </Flex.Item>
           <Flex direction='row' alignItems='center' justifyContent='space-between' py={1}>
-            {!item.expanded && item.children &&
-              <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
+            {!item.expanded && item.children && (
+              <Button small secondary onClick={() => helpers.expand.children(item)}>
+                Expand all children
+              </Button>
+            )}
             {item.expanded && item.children && (
-              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all
-              children
+              <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>
+                Collapse all children
               </Button>
             )}
             {item.expanded && item.parent && (
-              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
-              parents
+              <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>
+                Collapse all parents
               </Button>
             )}
           </Flex>
