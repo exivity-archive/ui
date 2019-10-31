@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
-
 import { storiesOf } from '@storybook/react'
-import { withState } from '../utils/tests/decorators/StateDecorator'
+
+import { withState } from '../../utils/tests/decorators/StateDecorator'
+
 import { LONG_LIST } from './stories/seed'
 
 import { SelectList } from '.'
@@ -19,14 +20,16 @@ const CustomItem: FC = ({ data, style, index }: any) => {
 
   const handleOnClick = () => onChange(item)
 
-  return <div style={{ ...style, backgroundColor: 'purple', color: 'white' }} onClick={handleOnClick}>
-    {item.value} {selectedItem && item.key === selectedItem.key && 'selected'}
-  </div>
+  return (
+    <div style={{ ...style, backgroundColor: 'purple', color: 'white' }} onClick={handleOnClick}>
+      {item.value} {selectedItem && item.key === selectedItem.key && 'selected'}
+    </div>
+  )
 }
 
 const customNoData = 'Custom noData item'
 
-export default storiesOf('molecules/SelectList', module)
+export default storiesOf('interact|Select/SelectList', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
     <SelectList data={items} value={state} onChange={storeState} />

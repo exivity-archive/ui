@@ -1,24 +1,33 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, ComponentProps } from 'react'
 import styled from 'styled-components'
 
-import { BlockProps } from '../Block'
-import { Dropdown, DropdownProps, DropdownPlacement } from '../Dropdown'
-import { SelectInput } from '../SelectInput'
-import { SelectListData, SelectList } from '../SelectList'
-import { useClosable } from '../Dropdown/useClosable'
+import { SelectListData, SelectList } from './SelectList'
+import { SelectInput } from './SelectInput'
+
+import {
+  BlockProps,
+  Dropdown,
+  DropdownProps,
+  DropdownPlacement,
+  useClosable
+} from '..'
 
 const OptionsWrapper = styled.div<{ fullWidth: boolean }>`
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
 `
 
-const defaultInputValueAccessor = (item: any): string => {
+interface SelectData extends SelectListData {
+  toString: Function
+}
+
+const defaultInputValueAccessor = (item?: SelectData): string => {
   if (!item && item !== 0) {
     return ''
   }
-  if (item.value) {
-    return defaultInputValueAccessor(item.value)
+  if (item && item.value) {
+    return item.value
   }
-  if (item.toString) {
+  if (item && item.toString) {
     return item.toString()
   }
   throw Error('Unexpected value. Custom `inputValueAccessor` should be defined')
@@ -27,12 +36,11 @@ const defaultInputValueAccessor = (item: any): string => {
 export const SelectPlacement = DropdownPlacement
 
 export interface SelectInputComponentProps {
-  value: string
-  disabled: boolean
-  onClick: () => void
-  onChange: () => void
+  value?: string | number
+  disabled?: boolean
   placeholder?: string
   name?: string
+  onClick: ComponentProps<typeof SelectInput>['onClick']
 }
 
 type CloseDropdown = () => void
@@ -58,7 +66,7 @@ export interface SelectProps<V> extends Pick<DropdownProps, 'placement'> {
   onToggle?: (open: boolean) => void
 }
 
-export function Select <V = string> ({
+export function Select <V extends SelectData> ({
   name,
   selected,
   inputValueAccessor = defaultInputValueAccessor,
@@ -85,8 +93,7 @@ export function Select <V = string> ({
     placeholder,
     value: inputValueAccessor(selected),
     disabled,
-    onClick: () => { if (!disabled) toggle() },
-    onChange: () => null
+    onClick: () => { if (!disabled) toggle() }
   }
 
   return (
@@ -107,22 +114,21 @@ export function Select <V = string> ({
         } else {
           close()
         }
-      }}
-    >
+      }}>
       <OptionsWrapper fullWidth={useInputComponentWidth}>
         {
           typeof children === 'function'
             ? children({ close })
             : (
-              children ||
-              <SelectList<V extends SelectListData ? V : never>
-                value={selected as V extends SelectListData ? V : never}
-                data={data as any[] || []}
-                onChange={(v) => {
-                  onChange && onChange(v)
-                  close()
-                }}
-              />
+              children || (
+                <SelectList<V extends SelectListData ? V : never>
+                  value={selected as V extends SelectListData ? V : never}
+                  data={data as any[] || []}
+                  onChange={(value) => {
+                    onChange && onChange(value)
+                    close()
+                  }} />
+              )
             )
         }
       </OptionsWrapper>

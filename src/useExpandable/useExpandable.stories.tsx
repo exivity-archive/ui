@@ -1,17 +1,20 @@
 import React, { useMemo } from 'react'
 import { MdAdd, MdRemove } from 'react-icons/md'
-import { Flex } from '../Flex'
-
 import { storiesOf } from '@storybook/react'
 
-import { useExpandable, TreeListItem, Helpers } from '.'
 import { FakeRecord, FLAT_LIST_TEST_DATA } from './stories/seed'
 
-import { StyledList } from '../SelectList/SelectList'
-import { ListFocus } from '../ListFocus'
-import { ListItem } from '../ListItem'
-import { Button } from '../Button'
-import { Icon } from '../Icon'
+import {
+  useExpandable,
+  Helpers,
+  TreeListItem,
+  Flex,
+  StyledList,
+  ListFocus,
+  ListItem,
+  Button,
+  Icon
+} from '..'
 
 const getParent = (item: FakeRecord) => item.parentId
 
@@ -33,8 +36,8 @@ const ExpandableList = ({ expandedKeys }: any) => {
 }
 
 interface ItemProps {
-  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>],
-  index: number,
+  data: [TreeListItem<FakeRecord>[], Helpers<FakeRecord>]
+  index: number
   style: object
 }
 
@@ -59,12 +62,16 @@ const ItemSpacer = ({ data, index, style }: ItemProps) => {
           <Flex direction='row' alignItems='center' justifyContent='space-between' py={1}>
             {!item.expanded && item.children &&
               <Button small secondary onClick={() => helpers.expand.children(item)}>Expand all children</Button>}
-            {item.expanded && item.children &&
+            {item.expanded && item.children && (
               <Button small secondary outlined onClick={() => helpers.collapse.children(item)}>Collapse all
-              children</Button>}
-            {item.expanded && item.parent &&
+              children
+              </Button>
+            )}
+            {item.expanded && item.parent && (
               <Button small secondary outlined onClick={() => helpers.collapse.parents(item)}>Collapse all
-              parents</Button>}
+              parents
+              </Button>
+            )}
           </Flex>
         </Flex>
       </ListItem>

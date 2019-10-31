@@ -1,8 +1,8 @@
 import React, { CSSProperties } from 'react'
 
-import { ListItem, CenterText } from '../ListItem'
-import { SelectListData } from './SelectList'
+import { ListItem, CenterText } from '../../ListItem'
 
+import { SelectListData } from './SelectList'
 import { NO_DATA_KEY } from './helpers'
 
 export interface SelectListItemProps {
@@ -22,7 +22,7 @@ export const DefaultItem: React.FC<SelectListItemProps> = ({ data, index, style 
   const handleOnClick = (e: React.MouseEvent<HTMLLIElement>) => onChange && onChange(item, e)
 
   return (
-    <ListItem style={style} tabIndex={index + 1} onClick={handleOnClick} noDataPlaceholder={item.key === NO_DATA_KEY}>
+    <ListItem style={style} tabIndex={index + 1} noDataPlaceholder={item.key === NO_DATA_KEY} onClick={handleOnClick}>
       <CenterText>
         {item.value}
       </CenterText>

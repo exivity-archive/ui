@@ -1,5 +1,4 @@
 import { SelectListData } from './SelectList'
-
 import {
   calculateHeight,
   getNoDataPlaceholder,
@@ -14,6 +13,7 @@ test(`calculate height should return array length times ${ITEM_HEIGHT}`, () => {
   const arr = new Array(9)
 
   const height = calculateHeight(arr)
+
   expect(height).toBe(270)
 })
 
@@ -21,10 +21,11 @@ test(`calculate height should not exceed ${MAX_HEIGHT}`, () => {
   const arr = new Array(NB_OF_ITEMS + 1)
 
   const height = calculateHeight(arr)
+
   expect(height).toBe(MAX_HEIGHT)
 })
 
-test(`getNoDataPlaceholder should return a data placeholder when data doesnt have length`, () => {
+test('getNoDataPlaceholder should return a data placeholder when data doesnt have length', () => {
   const items: SelectListData[] = []
 
   const placeholder = getNoDataPlaceholder(items)
@@ -32,7 +33,7 @@ test(`getNoDataPlaceholder should return a data placeholder when data doesnt hav
   expect(placeholder).toEqual([{ key: NO_DATA_KEY, value: NO_DATA_TEXT }])
 })
 
-test(`getNoDataPlaceholder should return a custom text`, () => {
+test('getNoDataPlaceholder should return a custom text', () => {
   const items: SelectListData[] = []
   const customText = 'this is a custom text'
 
@@ -41,7 +42,7 @@ test(`getNoDataPlaceholder should return a custom text`, () => {
   expect(placeholder).toEqual([{ key: NO_DATA_KEY, value: customText }])
 })
 
-test(`getNoDataPlaceholder should input data if it has length`, () => {
+test('getNoDataPlaceholder should input data if it has length', () => {
   const items: SelectListData[] = [
     { key: '1', value: 'one' },
     { key: '2', value: 'two' },

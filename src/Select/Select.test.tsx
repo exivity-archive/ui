@@ -9,13 +9,13 @@ describe('The Select component', () => {
     const wrapper = mountWithTheme((
       <Select
         selected={{ key: 'one', value: 'one' }}
-        onChange={(() => null)}
         data={[]}
-      />
+        onChange={(() => null)} />
     ))
 
     expect(wrapper.find('input')).toBeDefined()
     expect(wrapper.find('input').props().value).toBe('one')
+
     wrapper.unmount()
   })
 
@@ -24,13 +24,13 @@ describe('The Select component', () => {
       <Select
         selected={{ key: 'one', value: 'one' }}
         inputValueAccessor={(item) => `Value: ${item.value}`}
-        onChange={(() => null)}
         data={[]}
-      />
+        onChange={(() => null)} />
     ))
 
     expect(wrapper.find('input')).toBeDefined()
     expect(wrapper.find('input').props().value).toBe('Value: one')
+
     wrapper.unmount()
   })
 
@@ -38,13 +38,13 @@ describe('The Select component', () => {
     const wrapper = mountWithTheme((
       <Select
         selected={{ key: 'one', value: 'one' }}
-        onChange={(() => null)}
         data={[]}
-      />
+        onChange={(() => null)} />
     ))
 
     expect(wrapper.find('input')).toBeDefined()
     expect(wrapper.find('input').props().value).toBe('one')
+
     wrapper.unmount()
   })
 
@@ -52,14 +52,13 @@ describe('The Select component', () => {
     const wrapper = mountWithTheme((
       <Select
         selected={{ key: 'one', value: 'one' }}
-        onChange={(() => null)}
         data={[]}
-        inputComponent={(props) => <input id='test-id' {...props}/>}
-      />
+        inputComponent={(props) => <input id='test-id' {...props} />}/>
     ))
 
     expect(wrapper.find('#test-id')).toBeDefined()
     expect(wrapper.find('#test-id').props().value).toBe('one')
+
     wrapper.unmount()
   })
 })
