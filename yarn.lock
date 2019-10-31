@@ -1042,6 +1042,13 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
+"@babel/runtime@^7.5.4":
+  version "7.6.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.6.3.tgz#935122c74c73d2240cafd32ddb5fc2a6cd35cf1f"
+  integrity sha512-kq6anf9JGjW8Nt5rYfEuGRaEAaH1mkv3Bbu6rYvLOpPh/RusSJXuKPEAoZ7L7gybZkchE8+NV5g9vKF4AGAtsA==
+  dependencies:
+    regenerator-runtime "^0.13.2"
+
 "@babel/template@^7.1.0", "@babel/template@^7.2.2", "@babel/template@^7.4.4", "@babel/template@^7.6.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.6.0.tgz#7f0159c7f5012230dad64cca42ec9bdb5c9536e6"
@@ -2003,6 +2010,14 @@
     pretty-format "^24.0.0"
     redent "^3.0.0"
 
+"@testing-library/react-hooks@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-3.1.0.tgz#f186c4f3b32db153d30d646faacb043ef4089807"
+  integrity sha512-mwFDHXCQiyr0tQkYU4VkcwlCzR5YQ5k1/TCrL3hPslCM5MvS6pBhbl2z4UnCMV4DOyiUUXIvoMAf5kHT/hibTg==
+  dependencies:
+    "@babel/runtime" "^7.5.4"
+    "@types/testing-library__react-hooks" "^2.0.0"
+
 "@testing-library/react@^8.0.1":
   version "8.0.9"
   resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-8.0.9.tgz#1ecd96bc3471b06dd2f9763b6e53a7ace28a54a2"
@@ -2217,6 +2232,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-test-renderer@*":
+  version "16.9.1"
+  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.9.1.tgz#9d432c46c515ebe50c45fa92c6fb5acdc22e39c4"
+  integrity sha512-nCXQokZN1jp+QkoDNmDZwoWpKY8HDczqevIDO4Uv9/s9rbGPbSpy8Uaxa5ixHKkcm/Wt0Y9C3wCxZivh4Al+rQ==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-virtualized-auto-sizer@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.0.tgz#fc32f30a8dab527b5816f3a757e1e1d040c8f272"
@@ -2290,6 +2312,14 @@
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"
   integrity sha512-42zEJkBpNfMEAvWR5WlwtTH22oDzcMjFsL9gDGExwF8X8WvAiw7Vwop7hPw03QT8TKfec83LwbHj6SvpqM4ELQ==
+
+"@types/testing-library__react-hooks@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/testing-library__react-hooks/-/testing-library__react-hooks-2.0.0.tgz#7b289d64945517ae8ba9cbcb0c5b282432aaeffa"
+  integrity sha512-YUVqXGCChJKEJ4aAnMXqPCq0NfPAFVsJeGIb2y/iiMjxwyu+45+vR+AHOwjJHHKEHeC0ZhOGrZ5gSEmaJe4tyQ==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-test-renderer" "*"
 
 "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.3"

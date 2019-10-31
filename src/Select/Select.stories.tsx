@@ -2,11 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { withState } from '../utils/tests/decorators/StateDecorator'
-import { SelectList } from '../SelectList'
-import { SelectInput } from '../SelectInput'
 import { Row } from '../utils/stories/components'
 
 import { Select } from '.'
+
+import { SelectList, SelectInput } from '..'
 
 const items = [
   { key: '1', value: 'one' },
@@ -15,30 +15,18 @@ const items = [
   { key: '4', value: 'four' }
 ]
 
-export default storiesOf('molecules/Select', module)
+export default storiesOf('interact|Select', module)
   .addDecorator(withState())
   // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
-  .add('default', ({
-    state,
-    storeState
-  }: {
-    state: { key: string; value: string; b: number };
-    storeState: any;
-  }) => (
+  .add('default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (
     <Select
       selected={state}
       data={items}
       placeholder='Choose an option'
       onChange={(v) => { storeState(v) }} />
   ))
-  .add('open by default', ({
-    state,
-    storeState
-  }: {
-    state: { key: string; value: string; b: number };
-    storeState: any;
-  }) => (
+  .add('open by default', ({ state, storeState }: {state: {key: string; value: string; b: number}; storeState: any}) => (
     <Select
       selected={state}
       data={items}
@@ -66,8 +54,7 @@ export default storiesOf('molecules/Select', module)
         selected={state}
         data={items}
         placeholder='Choose an option'
-        inputComponent={(props) => <SelectInput {...props} outlined />}
-        onChange={(v) => { storeState(v) }} />
+        inputComponent={(props) => <SelectInput {...props} outlined />} />
     </Row>
   ))
   .add('useTriggerComponentWidth = false', ({ state, storeState }: any) => (

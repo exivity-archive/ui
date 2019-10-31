@@ -3,13 +3,10 @@ import { ReactElementType } from 'react-window'
 import styled from 'styled-components'
 import AutoSizer from 'react-virtualized-auto-sizer'
 
-import { useExpandable } from '../useExpandable'
-import { ListFocus } from '../ListFocus'
-import { StyledList } from '../SelectList'
-import { BlockProps } from '../Block'
-
-import { DefaultItem, TreeListItemProps } from './DefaultItem'
 import { addKey } from './helpers'
+import { DefaultItem, TreeListItemProps } from './DefaultItem'
+
+import { useExpandable, ListFocus, StyledList, BlockProps } from '..'
 
 const ITEM_HEIGHT = 30
 
@@ -54,7 +51,6 @@ export function TreeList<Data extends {}> ({
     newItem: Data & { key: string },
     e: React.MouseEvent<HTMLLIElement>
   ) => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     onChange && onChange(data.find(item => keyAccessor(item) === newItem.key)!, e)
   }, [onChange, data, keyAccessor])
 

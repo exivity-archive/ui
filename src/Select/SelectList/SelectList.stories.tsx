@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { withState } from '../utils/tests/decorators/StateDecorator'
+import { withState } from '../../utils/tests/decorators/StateDecorator'
 
 import { LONG_LIST } from './stories/seed'
 
@@ -29,7 +29,7 @@ const CustomItem: FC = ({ data, style, index }: any) => {
 
 const customNoData = 'Custom noData item'
 
-export default storiesOf('molecules/SelectList', module)
+export default storiesOf('interact|Select/SelectList', module)
   .addDecorator(withState())
   .add('default', ({ state, storeState }: any) => (
     <SelectList data={items} value={state} onChange={storeState} />

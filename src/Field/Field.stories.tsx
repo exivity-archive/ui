@@ -2,12 +2,8 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import { Checkbox } from '../Checkbox'
-import { Input } from '../Input'
-import { Label } from '../Label'
-import { Select } from '../Select'
-import { SelectList } from '../SelectList'
 
-import { Field } from '.'
+import { Field, Input, Label, Select, SelectList } from '..'
 
 storiesOf('interact|Field', module)
   .add('default', () => (
@@ -53,10 +49,7 @@ storiesOf('interact|Field', module)
         </Field>
         <Field>
           <Label htmlFor='email2'>Email address
-            <Label>
-              We will never sell your email address and we will never spam you, that's a
-              promise you can rely on. All other promises you need to catch.
-            </Label>
+            <Label>We will never sell your email address and we will never spam you, that's a promise you can rely on. All other promises you need to catch.</Label>
           </Label>
           <Input id='email2' placeholder='Please type email address' />
         </Field>

@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { FixedSizeList as List } from 'react-window'
 
-import { ListFocus } from '../ListFocus'
+import { ListFocus } from '../..'
 
 import { DefaultItem } from './DefaultItem'
 import { calculateHeight, getNoDataPlaceholder, ITEM_HEIGHT } from './helpers'

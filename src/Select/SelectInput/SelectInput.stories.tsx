@@ -1,24 +1,20 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
-import { withState } from '../utils/tests/decorators/StateDecorator'
-import { Dropdown } from '../Dropdown'
-import { Row } from '../utils/stories/components'
+import { withState } from '../../utils/tests/decorators/StateDecorator'
+import { Row } from '../../utils/stories/components'
 
-import { SelectInput } from './'
+import { SelectInput } from '.'
 
-storiesOf('interact|SelectInput', module)
+storiesOf('interact|Select/SelectInput', module)
   .addDecorator(withState({
     isOpen: false
   }))
-  .add('default', ({ state, storeState }: any) => (
-    <Row columns={1}>
-      <Dropdown useTriggerComponentWidth open={state.isOpen} triggerComponent={
-        <SelectInput
-          placeholder='Choose option'
-          onClick={() => storeState({ ...state, isOpen: !state.isOpen })} />
-      } />
-    </Row>
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+  // @ts-ignore
+  .add('default', () => (
+    <SelectInput placeholder='Choose option' onClick={action('onClick')} />
   ))
   .add('outlined', () => (
     <Row columns={false}>

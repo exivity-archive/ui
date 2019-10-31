@@ -3,12 +3,13 @@ import styled, { css } from 'styled-components'
 import { MdSearch } from 'react-icons/md'
 
 import { BlockProps, blockStyles } from '../Block'
-import { Input, InputProps } from '../Input/Input'
-import { fromTheme } from '../utils/styled'
+import { Input, InputProps } from '../Input'
+import { fromTheme, toRgbString } from '../utils/styled'
 import { Adornment } from '../Adornment'
 
 interface SearchbarOwnProps {
   animated?: boolean
+  dark?: boolean
 }
 
 export type SearchbarProps =
@@ -16,11 +17,18 @@ export type SearchbarProps =
   & BlockProps
   & SearchbarOwnProps
 
+function getLightgray (props: SearchbarProps) {
+  return fromTheme(theme => toRgbString(theme.colors.lightGray))(props)
+}
+
 const StyledInput = styled(Input)`
   ${blockStyles};
 
-  background-color: #fff;
   border-color: transparent;
+  background-color: ${(props) => props.dark
+    ? `rgba(${getLightgray(props)}, 0.7)`
+    : '#fff'
+  };
 
   &:hover, &:focus {
     border-color: transparent;
@@ -42,8 +50,10 @@ const StyledInput = styled(Input)`
   `}
 `
 
-export const Searchbar = (props: SearchbarProps) => (
-  <Adornment right={<MdSearch />}>
-    <StyledInput {...props} />
-  </Adornment>
-)
+export function Searchbar (props: SearchbarProps) {
+  return (
+    <Adornment right={<MdSearch />} >
+      <StyledInput {...props} />
+    </Adornment>
+  )
+}

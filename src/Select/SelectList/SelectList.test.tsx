@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { mountWithTheme } from '../utils/tests/mountWithTheme'
+import { mountWithTheme } from '../../utils/tests/mountWithTheme'
 
 import { SelectList } from '.'
 

@@ -53,8 +53,7 @@ describe('The Select component', () => {
       <Select
         selected={{ key: 'one', value: 'one' }}
         data={[]}
-        inputComponent={(props) => <input id='test-id' {...props} />}
-        onChange={(() => null)} />
+        inputComponent={(props) => <input id='test-id' {...props} />}/>
     ))
 
     expect(wrapper.find('#test-id')).toBeDefined()
