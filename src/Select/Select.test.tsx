@@ -61,4 +61,17 @@ describe('The Select component', () => {
 
     wrapper.unmount()
   })
+
+  test('uses string as value with custom options', () => {
+    const wrapper = mountWithTheme((
+      <Select selected='string value'>
+        <div>custom options</div>
+      </Select>
+    ))
+
+    expect(wrapper.find('input')).toBeDefined()
+    expect(wrapper.find('input').props().value).toBe('string value')
+
+    wrapper.unmount()
+  })
 })

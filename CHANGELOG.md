@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.21.2](https://github.com/exivity/ui/compare/v0.21.1...v0.21.2) (2019-10-31)
+
+
+### Bug Fixes
+
+* restored custom Select value ([#219](https://github.com/exivity/ui/issues/219)) ([e0687b9](https://github.com/exivity/ui/commit/e0687b9))
+
+
+
 ### [0.21.1](https://github.com/exivity/ui/compare/v0.21.0...v0.21.1) (2019-10-31)
 
 
