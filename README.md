@@ -9,6 +9,19 @@
 
 A collection of components to build interfaces.
 
+NOTE: This repository is read-only (for now)
+--------------------------------------------
+
+Because of some DX optimisations at Exivity, we're marking this repository as
+read-only for the time being (we've moved all development efforts on this
+codebase to a private monorepo).
+
+While we plan to release a stable v1 version of this package with an open
+source license again, we don't have a timeline for this.
+
+Do you have experience combining private and public repositories while
+benefiting from a monorepo setup? We're hiring! 😉 https://exivity.com/careers/
+
 Quickstart
 ----------
 
