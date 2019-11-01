@@ -1,5 +1,7 @@
 import React from 'react'
+
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
+
 import { OutsideClickListener } from './OutsideClickListener'
 
 test('onOutsideClick should be called when clicking outside of the container', () => {
@@ -19,6 +21,7 @@ test('onOutsideClick should be called when clicking outside of the container', (
   )
 
   map.click({ target: wrapper.find('#outside').instance() })
+
   expect(onOutsideMock).toHaveBeenCalled()
 })
 
@@ -39,5 +42,6 @@ test('onOutsideClick should not be called when clicking inside of the container'
   )
 
   map.click({ target: wrapper.find('#inside').instance() })
+
   expect(onOutsideMock).not.toHaveBeenCalled()
 })

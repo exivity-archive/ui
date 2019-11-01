@@ -1,5 +1,6 @@
 import React, { ChangeEvent, TextareaHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
+
 import { Omit } from '../utils/types'
 import { inputStyles, StyledInputProps } from '../Input/styled'
 
@@ -21,6 +22,5 @@ export const StyledTextArea = styled.textarea<{ width?: string }>`
 export const TextArea: React.FC<TextAreaProps & OmitOnChange> = ({ onChange, ...rest }) => (
   <StyledTextArea
     onChange={(event) => onChange && onChange(event.target.value, event)}
-    {...rest}
-  />
+    {...rest} />
 )

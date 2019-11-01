@@ -1,9 +1,8 @@
-// @ts-ignore
 import theme from 'prism-react-renderer/themes/duotoneLight'
 import React, { useState } from 'react'
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live'
 import styled from 'styled-components'
-import { ensureString } from '..'
+
 import * as UI from '../..'
 import { Alert } from '../../Alert'
 import { Code } from '../../Code'
@@ -11,7 +10,10 @@ import { Markdown } from '../../Markdown'
 import { Section } from '../../Section'
 import { fromTheme } from '../styled'
 import { preciseEm } from '../styled/isolated'
+
 import { PropsTable } from './propsTable'
+
+import { ensureString } from '..'
 
 const globals = {
   useState,
@@ -31,7 +33,8 @@ const StyledEditorWrapper = styled.div`
   background-color: ${fromTheme(theme => theme.colors.lightGray)};
   border: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   border-bottom: 0;
-  border-radius: ${fromTheme(theme => theme.global.borderRadius)}px ${fromTheme(theme => theme.global.borderRadius)}px 0 0;
+  border-radius: ${fromTheme(
+    theme => theme.global.borderRadius)}px ${fromTheme(theme => theme.global.borderRadius)}px 0 0;
 
   padding: calc(${fromTheme(theme => theme.global.baseSpacing)}em - 10px) !important;
 
@@ -40,15 +43,19 @@ const StyledEditorWrapper = styled.div`
   }
 `
 
-const StyledEditor = styled(LiveEditor)<{ theme: any }>``
+const StyledEditor = styled(LiveEditor) <{ theme: any }>``
+
+// eslint-disable-next-line max-len
+const bgImage = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><g fill='#f7f7f7'><rect width='5' height='5' y='0' x='0'/><rect width='5' height='5' y='5' x='5'/></g></svg>"
 
 const StyledPreview = styled(LivePreview)`
   position: relative;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><g fill='#f7f7f7'><rect width='5' height='5' y='0' x='0'/><rect width='5' height='5' y='5' x='5'/></g></svg>");
+  background-image: url(${bgImage});
   padding: ${preciseEm(1)}em;
   border: 1px solid ${fromTheme(theme => theme.colors.lightGray)};
   border-top: 0;
-  border-radius: 0 0 ${fromTheme(theme => theme.global.borderRadius)}px ${fromTheme(theme => theme.global.borderRadius)}px;
+  border-radius: 0 0 ${fromTheme(
+    theme => theme.global.borderRadius)}px ${fromTheme(theme => theme.global.borderRadius)}px;
   height: auto;
   overflow: hidden;
 `

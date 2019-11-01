@@ -1,7 +1,7 @@
 import React from 'react'
-import { Label } from '.'
-
 import { storiesOf } from '@storybook/react'
+
+import { Label } from '.'
 
 storiesOf('atoms|Label', module)
   .add('default', () => <Label>Default label</Label>)

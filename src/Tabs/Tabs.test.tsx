@@ -1,33 +1,40 @@
 import React from 'react'
 import { mount, ReactWrapper } from 'enzyme'
+
 import { Tabs } from './Tabs'
 
 test('it throws an error when a TabList component is not rendered within a Tabs component', () => {
   try {
     mount(
-      <Tabs.TabList >
+      <Tabs.TabList>
         <Tabs.Tab>Tab one</Tabs.Tab>
         <Tabs.Tab>Tab two</Tabs.Tab>
         <Tabs.Tab>Tab three</Tabs.Tab>
-      </Tabs.TabList >
+      </Tabs.TabList>
     )
   } catch (error) {
-    expect(error.message).toBe('useTabsContext should only be called within a child of a Tabs component')
+    expect(error.message).toBe(
+      'useTabsContext should only be called within a child of a Tabs component'
+    )
   }
 })
 
-test('it throws an error when a TabPanels component is not rendered within a Tabs component', () => {
-  try {
-    mount(
-      <Tabs.TabPanels>
-        <Tabs.TabPanel />
-        <Tabs.TabPanel />
-      </Tabs.TabPanels>
-    )
-  } catch (error) {
-    expect(error.message).toBe('useTabsContext should only be called within a child of a Tabs component')
-  }
-})
+test(
+  'it throws an error when a TabPanels component is not rendered within a Tabs component',
+  () => {
+    try {
+      mount(
+        <Tabs.TabPanels>
+          <Tabs.TabPanel />
+          <Tabs.TabPanel />
+        </Tabs.TabPanels>
+      )
+    } catch (error) {
+      expect(error.message).toBe(
+        'useTabsContext should only be called within a child of a Tabs component'
+      )
+    }
+  })
 
 interface KeyboardNavigationTest {
   key: 'ArrowLeft' | 'ArrowRight'
@@ -37,6 +44,7 @@ interface KeyboardNavigationTest {
 const testArrowNavigation = (tabs: ReactWrapper, { key, panel }: KeyboardNavigationTest) => {
   tabs.find({ 'data-test': 'tabs-tab' }).first().props().onKeyDown({ key })
   tabs.update()
+
   expect(tabs.find({ 'data-test': 'tabs-panel' }).get(0).props.children === panel)
     .toBe(true)
 }
@@ -150,6 +158,7 @@ interface ClickNavigationTest {
 const testClickNavigation = (tabs: ReactWrapper, { tabIndex, panel }: ClickNavigationTest) => {
   tabs.find({ 'data-test': 'tabs-tab' }).get((tabIndex * 3) + 2).props.onClick()
   tabs.update()
+
   expect(
     tabs.find({ 'data-test': 'tabs-panel' }).get(tabIndex).props.children === panel
   ).toBe(true)

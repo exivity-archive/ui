@@ -50,8 +50,8 @@ export interface PopperProps {
   open: boolean
   children: (props: ChildProps) => React.ReactNode
   placement?: Placement
-  onOutsideClick?: (...rest: any) => void,
-  offset?: number,
+  onOutsideClick?: (...rest: any) => void
+  offset?: number
   flip?: boolean
 }
 
@@ -76,8 +76,7 @@ export const Popper: React.FC<PopperProps> = ({
               modifiers={{
                 flip: { enabled: flip },
                 offset: { enabled: offset !== 0, offset: `${offset}, ${offset}` }
-              }}
-            >
+              }}>
               {({ ref, style, placement: currentPlacement, arrowProps, scheduleUpdate }) =>
                 children({
                   ref: ref as React.Ref<HTMLElement>,

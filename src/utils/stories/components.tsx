@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-export const Row = styled.div<{ columns?: number | false, columnWidth?: number }>`
+export const Row = styled.div<{ columns?: number | false; columnWidth?: number }>`
   display: grid;
   grid-gap: 20px;
   ${props => props.columns !== false && css`

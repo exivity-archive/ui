@@ -1,15 +1,15 @@
 import React from 'react'
 import Faker from 'faker'
-// @ts-ignore
 import { storiesOf } from '@storybook/react'
+import { MdAccountBox, MdNotifications, MdMail } from 'react-icons/md'
 
-import { Group } from '.'
 import { Markdown } from '../Markdown'
 import { ensureString } from '../utils'
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import * as CollapsibleContextDocs from '../CollapsibleContainer/docs/CollapsibleContext.md'
-import { MdAccountBox, MdNotifications, MdMail } from 'react-icons/md'
+
+import { Group } from '.'
 
 storiesOf('molecules|Group', module)
   .add('default', () => (

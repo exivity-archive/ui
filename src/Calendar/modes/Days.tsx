@@ -15,7 +15,11 @@ export const WeekDays = () => (
   </StyledWeekDays>
 )
 
-function getRenderDay (value: Date, browseDate: Date, onChange: Function, nbOfPlaceholderDays: number) {
+function getRenderDay (value: Date,
+  browseDate: Date,
+  onChange: Function,
+  nbOfPlaceholderDays: number
+) {
   return (_: undefined, index: number) => {
     const day = index + 1 - nbOfPlaceholderDays
     const thisDay = setDate(browseDate, day)
@@ -26,7 +30,7 @@ function getRenderDay (value: Date, browseDate: Date, onChange: Function, nbOfPl
     return (
       <li key={index}>
         <StyledTimeUnit active={isActive}
-             onClick={() => onChange(day)}>
+          onClick={() => onChange(day)}>
           {String(day)}
         </StyledTimeUnit>
       </li>
@@ -53,7 +57,7 @@ export const Days = ({ value, browseDate, onChange }: CommonPeriodProps) => {
 
   return (
     <>
-      <WeekDays/>
+      <WeekDays />
       <StyledDays>
         {new Array(nbOfDays).fill(null).map(renderDay)}
       </StyledDays>

@@ -1,10 +1,12 @@
 import React, { FC, useContext } from 'react'
 import styled from 'styled-components'
-import { Icon } from '../Icon'
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
-import { CollapsibleContext } from './helpers'
+
+import { Icon } from '../Icon'
 import { fromTheme } from '../utils/styled'
 import { useIsUncontrolled } from '../useIsUncontrolled'
+
+import { CollapsibleContext } from './helpers'
 
 const StyledContainerCollapser = styled(Icon)`
   cursor: pointer;
@@ -20,7 +22,7 @@ const ContainerCollapser: FC = ({ children }) => {
   const toggleCollapse = () => onCollapse(!collapsed)
 
   return (
-    <StyledContainerCollapser onClick={toggleCollapse} data-test='container-collapser'>
+    <StyledContainerCollapser data-test='container-collapser' onClick={toggleCollapse}>
       {children || collapsed ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
     </StyledContainerCollapser>
   )
@@ -31,7 +33,8 @@ const StyledContainerContent = styled.div`
 `
 const ContainerContent: FC = ({ children }) => {
   const context = useContext(CollapsibleContext)
-  return !context || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
+  return !context
+    || !context.collapsed ? <StyledContainerContent>{children}</StyledContainerContent> : null
 }
 
 export interface CollapsibleContainerSubComponents {
@@ -46,7 +49,8 @@ export interface CollapsibleContainerProps {
   collapsible?: boolean
 }
 
-export type CollapsibleContainerComponent = FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents
+export type CollapsibleContainerComponent
+  = FC<CollapsibleContainerProps> & CollapsibleContainerSubComponents
 
 export const CollapsibleContainer: CollapsibleContainerComponent = ({
   children,
@@ -54,7 +58,8 @@ export const CollapsibleContainer: CollapsibleContainerComponent = ({
   initialCollapsed = false,
   ...rest
 }) => {
-  const [collapsed, onCollapse] = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
+  const [collapsed, onCollapse]
+    = useIsUncontrolled(initialCollapsed, rest.collapsed, rest.onCollapse)
   const collapsableContext = { collapsed, onCollapse }
   return (
     <CollapsibleContext.Provider value={collapsible ? collapsableContext : null}>

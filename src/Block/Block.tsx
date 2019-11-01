@@ -22,6 +22,7 @@ import {
   BordersProps,
   BorderRadiusProps
 } from 'styled-system'
+
 import { StyledProps } from '../utils/styled'
 
 export interface OverrideColorProps {

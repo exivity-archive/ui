@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react'
-import { SelectList, Block, useSearchFilter } from '../'
 
+import { SelectList, Block, useSearchFilter } from '../'
 import { Searchbar } from '../Searchbar'
 
 interface SearchableListProps<T> {
@@ -37,7 +37,7 @@ export function SearchableList<T> ({
   keyAccessor = defaultKeyAccessor,
   valueAccessor = defaultValueAccessor,
   children
- }: SearchableListProps<T>) {
+}: SearchableListProps<T>) {
   const [searchTerm, setSearchTerm] = useState('')
 
   const preparedData = data.map((item) => ({

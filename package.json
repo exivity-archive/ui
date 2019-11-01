@@ -27,8 +27,8 @@
   ],
   "scripts": {
     "create-component": "node scripts/create-component.js",
-    "lint": "tslint 'src/**/*.ts?'",
-    "lint:fix": "tslint 'src/**/*.ts?' --fix",
+    "lint": "eslint src/**/*.ts? --quiet",
+    "lint:fix": "eslint src/**/*.ts? --fix",
     "test": "cross-env CI=true react-scripts test --coverage",
     "test:watch": "react-scripts test",
     "test:smoke": "bash scripts/run-smoke-test.sh",
@@ -58,7 +58,7 @@
     "ignore": [],
     "linters": {
       "*.{ts,tsx}": [
-        "tslint --fix",
+        "eslint --fix",
         "git add"
       ]
     }
@@ -74,9 +74,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{ts,tsx}",
@@ -164,8 +161,6 @@
     "require-context.macro": "^1.0.4",
     "rimraf": "^2.6.2",
     "standard-version": "^6.0.1",
-    "tslint": "^5.14.0",
-    "tslint-config-standard": "^8.0.1",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {

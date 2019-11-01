@@ -1,5 +1,6 @@
-import { useStyledTheme, ThemeResolver } from '../utils/styled'
 import { useEffect, useState } from 'react'
+
+import { useStyledTheme, ThemeResolver } from '../utils/styled'
 import { Theme } from '../themes'
 
 interface Breaks {

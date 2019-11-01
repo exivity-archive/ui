@@ -13,4 +13,9 @@ const data = [
 ]
 
 storiesOf('interact|SearchableList', module)
-  .add('default', () => <SearchableList placeholder='Search...' data={data} onChange={console.log}/>)
+  .add('default', () => (
+    <SearchableList
+      placeholder='Search...'
+      data={data}
+      onChange={console.log} />
+  ))

@@ -1,6 +1,5 @@
 import { mount } from 'enzyme'
 import * as React from 'react'
-// @ts-ignore
 import { enzymeFind } from 'styled-components/test-utils'
 
 import { Checkbox, StyledCheckbox } from './Checkbox'

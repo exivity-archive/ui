@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+
 import { Widget } from '../Widget'
 import { Flex, FlexProps } from '../Flex'
 
@@ -17,7 +18,7 @@ ${({ sticky, stickyOffset = 0 }) => sticky && css`
   `}
 `
 
-const WidgetColumn = (props: ColumnProps) => <Column as={Widget} {...props}/>
+const WidgetColumn = (props: ColumnProps) => <Column as={Widget} {...props} />
 WidgetColumn.displayName = 'Widget'
 
-export const getWidget = (props: ColumnProps) => <WidgetColumn {...props}/>
+export const getWidget = (props: ColumnProps) => <WidgetColumn {...props} />

@@ -25,7 +25,7 @@ const StyledAdornment = styled.span<StyledAdornmentProps>`
   ${props => props.position === 'left'
     ? css`left: ${props.inset}px;`
     : css`right: ${props.inset}px;`
-  }
+}
   pointer-events: none;
 `
 
@@ -50,7 +50,6 @@ export const Adornment = ({
   test = 'adornment',
   ...blockProps
 }: AdornmentProps & BlockProps) => {
-
   const [leftRect, leftRef] = useClientRect()
   const [rightRect, rightRef] = useClientRect()
 

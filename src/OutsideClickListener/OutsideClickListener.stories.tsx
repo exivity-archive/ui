@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { storiesOf } from '@storybook/react'
-import { OutsideClickListener } from './OutsideClickListener'
+
 import { fromTheme } from '../utils/styled'
+
+import { OutsideClickListener } from './OutsideClickListener'
 
 const StyledOutside = styled.div`
   display: flex;
@@ -26,10 +27,11 @@ const StyledInside = styled.div`
 `
 
 export default storiesOf('interact/OutsideClickListener', module)
-  .add('default', ({ state, storeState }: any) => (
+  .add('default', () => (
     <StyledOutside>
       outside
-      <OutsideClickListener onOutsideClick={() => window.alert('You clicked OUTSIDE of the inside node!')}>
+      <OutsideClickListener
+        onOutsideClick={() => window.alert('You clicked OUTSIDE of the inside node!')}>
         <StyledInside>
             Inside (outsideListener on this node)
         </StyledInside>

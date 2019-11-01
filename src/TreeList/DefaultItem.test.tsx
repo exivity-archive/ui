@@ -1,8 +1,9 @@
 import React from 'react'
 import { render, fireEvent, act } from '@testing-library/react'
 
-import { DefaultItem } from './DefaultItem'
 import { CHILDREN } from '../utils/makeParentChildTree'
+
+import { DefaultItem } from './DefaultItem'
 
 describe('the DefaultItem component', () => {
   test('returns an item onChange', () => {
@@ -17,7 +18,9 @@ describe('the DefaultItem component', () => {
 
     const onChange = jest.fn(item => item)
 
-    const { getByTestId, unmount } = render(<DefaultItem data={{ items: [item], onChange }} style={{}} index={0} />)
+    const { getByTestId, unmount } = render(
+      <DefaultItem data={{ items: [item], onChange }} style={{}} index={0} />
+    )
 
     act(() => {
       fireEvent.click(getByTestId('treelist-item'))
@@ -26,6 +29,7 @@ describe('the DefaultItem component', () => {
     const onChangeResult = onChange.mock.results[0].value
 
     expect(onChangeResult).toMatchObject(item)
+
     unmount()
   })
 
@@ -40,9 +44,12 @@ describe('the DefaultItem component', () => {
       expanded: false
     }
 
-    const { getByTestId, unmount } = render(<DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />)
+    const { getByTestId, unmount } = render(
+      <DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />
+    )
 
     expect(getByTestId('treelist-item-toggle-expand-button')).toBeInTheDocument()
+
     unmount()
   })
 
@@ -57,9 +64,12 @@ describe('the DefaultItem component', () => {
       expanded: false
     }
 
-    const { getByTestId, unmount } = render(<DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />)
+    const { getByTestId, unmount } = render(
+      <DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />
+    )
 
     expect(getByTestId('treelist-item-toggle-expand-button-expand-icon')).toBeInTheDocument()
+
     unmount()
   })
 
@@ -74,9 +84,12 @@ describe('the DefaultItem component', () => {
       expanded: true
     }
 
-    const { getByTestId, unmount } = render(<DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />)
+    const { getByTestId, unmount } = render(
+      <DefaultItem data={{ items: [item], onChange: jest.fn() }} index={0} style={{}} />
+    )
 
     expect(getByTestId('treelist-item-toggle-expand-button-collapse-icon')).toBeInTheDocument()
+
     unmount()
   })
 })

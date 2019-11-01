@@ -2,14 +2,14 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import {
+  PARENT
+} from '../utils/makeParentChildTree'
+
+import {
   enrichTreeItems,
   getVisibleItems,
   useExpandable
 } from '.'
-
-import {
-  PARENT
-} from '../utils/makeParentChildTree'
 
 interface Record {
   key: string
@@ -38,7 +38,7 @@ test('useExpandable without expandedKeys', () => {
       }}
     </ExpandableList>)
 
-  expect(returnData.length).toBe(1)
+  expect(returnData).toHaveLength(1)
 })
 
 test('useExpandable with expandedKeys', () => {
@@ -53,14 +53,17 @@ test('useExpandable with expandedKeys', () => {
   ]
 
   mount(
-    <ExpandableList data={list} accessor={(item: any) => item.parentId} expandedKeys={expandedItems}>
+    <ExpandableList
+      data={list}
+      accessor={(item: any) => item.parentId}
+      expandedKeys={expandedItems}>
       {(data: any) => {
         [returnData] = data
         return null
       }}
     </ExpandableList>)
 
-  expect(returnData.length).toBe(3)
+  expect(returnData).toHaveLength(3)
 })
 
 test('tree.expand.children(item) will expand entire itemTree', () => {
@@ -79,12 +82,13 @@ test('tree.expand.children(item) will expand entire itemTree', () => {
       {(data: any) => {
         [returnData, tree] = data
         if (returnData.length === 1) {
-          expect(returnData.length).toBe(1)
+          expect(returnData).toHaveLength(1)
+
           tree.expand.children('1')
         }
 
         if (returnData.length !== 1) {
-          expect(returnData.length).toBe(4)
+          expect(returnData).toHaveLength(4)
         }
         return null
       }}
@@ -103,14 +107,17 @@ test('useExpandable will not filter items which do no have a parentId', () => {
   ]
 
   mount(
-    <ExpandableList data={list} accessor={(item: any) => item.parentId} expandedKeys={['1', '2', '3']}>
+    <ExpandableList
+      data={list}
+      accessor={(item: any) => item.parentId}
+      expandedKeys={['1', '2', '3']}>
       {(data: any) => {
         [returnData] = data
         return null
       }}
     </ExpandableList>)
 
-  expect(returnData.length).toBe(5)
+  expect(returnData).toHaveLength(5)
   expect(returnData[4].key).toBe('grouping')
 })
 
@@ -129,7 +136,7 @@ test('getVisibleItems filters items of which all parents are expanded', () => {
     four
   ]
 
-  expect(getVisibleItems<any>(list, expandedKeys).length).toBe(2)
+  expect(getVisibleItems<any>(list, expandedKeys)).toHaveLength(2)
 })
 
 test('getVisibleItems returns all if all parents are expanded', () => {
@@ -147,7 +154,7 @@ test('getVisibleItems returns all if all parents are expanded', () => {
     four
   ]
 
-  expect(getVisibleItems<any>(list, expandedKeys).length).toBe(4)
+  expect(getVisibleItems<any>(list, expandedKeys)).toHaveLength(4)
 })
 
 test('enrichTreeItems enriches item from list with expand function', () => {

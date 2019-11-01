@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
+
 import { Icon } from '../Icon'
 import {
   SectionProps,
@@ -72,8 +73,7 @@ export const Heading = ({ type = 'header', ...rest }: HeadingProps) => (
   <StyledHeading
     as={`h${Levels[type]}` as 'h1' | 'h2' | 'h3'}
     type={type}
-    {...rest}
-  />
+    {...rest} />
 )
 
 Heading.displayName = 'Heading'

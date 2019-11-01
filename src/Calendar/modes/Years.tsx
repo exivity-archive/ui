@@ -2,6 +2,7 @@ import React from 'react'
 import { isSameYear, setYear, getYear, startOfYear, format } from 'date-fns'
 
 import { StyledTimeUnit, StyledMonths } from '../styled'
+
 import { CommonPeriodProps } from './Days'
 
 function getRenderYear (value: Date, browseDate: Date, onChange: Function) {
@@ -18,7 +19,7 @@ function getRenderYear (value: Date, browseDate: Date, onChange: Function) {
     return (
       <li key={index}>
         <StyledTimeUnit active={isActive}
-                        onClick={() => onChange(startOfYear(thisYear))}>
+          onClick={() => onChange(startOfYear(thisYear))}>
           {format(thisYear, 'YYYY')}
         </StyledTimeUnit>
       </li>

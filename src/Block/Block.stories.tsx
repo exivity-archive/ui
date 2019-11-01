@@ -1,12 +1,14 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import { Block } from '.'
 import { Code } from '../Code'
 import { Text } from '../Text'
 import { markdown } from '../utils/stories/markdown'
 
+import { Block } from '.'
+
 storiesOf('atoms|Block', module)
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   .add('overview', markdown(require('./README.md')))
   .add('default', () => (
     <Block>

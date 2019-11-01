@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode, useMemo } from 'react'
-
 import styled, { css } from 'styled-components'
+
 import { OmitOnChangeHTMLInputAttributes, OnChange } from '../Input/Input'
 import { Label } from '../Label'
 import { randomId } from '../utils/randomId'
@@ -58,8 +58,8 @@ export const StyledCheckbox = styled.input`
     &::before {
       content: " ";
       border-radius: ${props => props.type === 'checkbox'
-        ? css`${fromTheme(theme => theme.global.borderRadius)}px`
-        : '50%'};
+    ? css`${fromTheme(theme => theme.global.borderRadius)}px`
+    : '50%'};
       background-color: ${fromTheme(theme => theme.colors.lightGray)};
     }
 
@@ -107,21 +107,22 @@ export const StyledCheckbox = styled.input`
 export const Checkbox = ({ radio, checked, onChange, label = '', id, ...props }: CheckboxProps) => {
   const memoizedId = useMemo(() => id || randomId(), [])
 
-  return <span>
-    <StyledCheckbox
-      type={radio ? 'radio' : 'checkbox'}
-      onChange={event => {
-        onChange && onChange(event.target.checked, event)
-      }}
-      checked={checked}
-      id={memoizedId}
-      {...props}
-    />
-    {typeof label === 'string'
-      ? <Label htmlFor={memoizedId}>{label}</Label>
-      : React.cloneElement(label as ReactElement, {
-        as: 'label',
-        htmlFor: memoizedId
-      })}
-  </span>
+  return (
+    <span>
+      <StyledCheckbox
+        type={radio ? 'radio' : 'checkbox'}
+        checked={checked}
+        id={memoizedId}
+        onChange={event => {
+          onChange && onChange(event.target.checked, event)
+        }}
+        {...props} />
+      {typeof label === 'string'
+        ? <Label htmlFor={memoizedId}>{label}</Label>
+        : React.cloneElement(label as ReactElement, {
+          as: 'label',
+          htmlFor: memoizedId
+        })}
+    </span>
+  )
 }

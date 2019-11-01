@@ -1,6 +1,8 @@
 import React from 'react'
 import { getDate, getDaysInMonth, isDate, setDate } from 'date-fns'
+
 import { mountWithTheme } from '../utils/tests/mountWithTheme'
+
 import { StyledTimeUnit } from './styled'
 
 import { Calendar, Modes } from '.'
@@ -10,7 +12,7 @@ test('value gets changed after an onClick event', () => {
   const date = setDate(new Date(), 2)
 
   const calendar = mountWithTheme(
-    <Calendar value={date} onChange={onChangeMock}/>
+    <Calendar value={date} onChange={onChangeMock} />
   )
 
   calendar
@@ -30,13 +32,13 @@ test('renders all days of the month', () => {
   const date = setDate(new Date(), 2)
 
   const calendar = mountWithTheme(
-    <Calendar value={date} onChange={onChangeMock}/>
+    <Calendar value={date} onChange={onChangeMock} />
   )
 
   const days = calendar
     .find(StyledTimeUnit)
 
-  expect(days.length).toBe(getDaysInMonth(date))
+  expect(days).toHaveLength(getDaysInMonth(date))
 })
 
 test('renders all months of the year', () => {
@@ -44,13 +46,13 @@ test('renders all months of the year', () => {
   const date = setDate(new Date(), 2)
 
   const calendar = mountWithTheme(
-    <Calendar value={date} onChange={onChangeMock} mode={Modes.MONTHS}/>
+    <Calendar value={date} mode={Modes.MONTHS} onChange={onChangeMock} />
   )
 
   const months = calendar
     .find(StyledTimeUnit)
 
-  expect(months.length).toBe(12)
+  expect(months).toHaveLength(12)
 })
 
 test('renders all quarters of the year', () => {
@@ -58,13 +60,13 @@ test('renders all quarters of the year', () => {
   const date = setDate(new Date(), 2)
 
   const calendar = mountWithTheme(
-    <Calendar value={date} onChange={onChangeMock} mode={Modes.QUARTERS}/>
+    <Calendar value={date} mode={Modes.QUARTERS} onChange={onChangeMock} />
   )
 
   const quarters = calendar
     .find(StyledTimeUnit)
 
-  expect(quarters.length).toBe(4)
+  expect(quarters).toHaveLength(4)
 })
 
 test('renders all 12 years with years mode', () => {
@@ -72,20 +74,20 @@ test('renders all 12 years with years mode', () => {
   const date = setDate(new Date(), 2)
 
   const calendar = mountWithTheme(
-    <Calendar value={date} onChange={onChangeMock} mode={Modes.YEARS}/>
+    <Calendar value={date} mode={Modes.YEARS} onChange={onChangeMock} />
   )
 
   const years = calendar
     .find(StyledTimeUnit)
 
-  expect(years.length).toBe(12)
+  expect(years).toHaveLength(12)
 })
 
 test('value represents active day', () => {
   const onChangeMock = jest.fn(x => x)
 
   const calendar = mountWithTheme(
-    <Calendar value={new Date()} onChange={onChangeMock}/>
+    <Calendar value={new Date()} onChange={onChangeMock} />
   )
 
   const days = calendar

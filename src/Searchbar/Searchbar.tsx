@@ -28,7 +28,7 @@ const StyledInput = styled(Input)`
   background-color: ${(props) => props.dark
     ? `rgba(${getLightgray(props)}, 0.7)`
     : '#fff'
-  };
+};
 
   &:hover, &:focus {
     border-color: transparent;
@@ -52,7 +52,7 @@ const StyledInput = styled(Input)`
 
 export function Searchbar (props: SearchbarProps) {
   return (
-    <Adornment right={<MdSearch />} >
+    <Adornment right={<MdSearch />}>
       <StyledInput {...props} />
     </Adornment>
   )

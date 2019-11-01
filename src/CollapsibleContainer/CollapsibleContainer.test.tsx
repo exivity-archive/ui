@@ -4,7 +4,8 @@ import { mount } from 'enzyme'
 import { CollapsibleContainer } from './CollapsibleContainer'
 import { CollapsibleContext } from './helpers'
 
-test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for uncontrolled component', () => {
+test('When CollapsibleContainer.Collapser gets clicked collapsed is toggled for uncontrolled'
+  + ' component', () => {
   const initialCollapsed = false
   let clicked = false
   const container = mount(
@@ -37,6 +38,7 @@ test('collapser should be visible when no props are given', () => {
       <CollapsibleContext.Consumer>
         {(context) => {
           expect(context.collapsed).toBe(false)
+
           return null
         }}
       </CollapsibleContext.Consumer>
@@ -44,6 +46,7 @@ test('collapser should be visible when no props are given', () => {
   )
 
   const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
+
   expect(collapser).toBeDefined()
 })
 
@@ -53,7 +56,8 @@ test('collapser shouldn\'t be visible when collapsible is set to false', () => {
       <CollapsibleContainer.Collapser />
       <CollapsibleContext.Consumer>
         {(context) => {
-          expect(context).toBe(null)
+          expect(context).toBeNull()
+
           return null
         }}
       </CollapsibleContext.Consumer>
@@ -61,5 +65,6 @@ test('collapser shouldn\'t be visible when collapsible is set to false', () => {
   )
 
   const collapser = box.find({ 'data-test': 'container-collapser' }).get(0)
+
   expect(collapser).not.toBeDefined()
 })

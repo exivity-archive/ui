@@ -2,8 +2,10 @@ import { storiesOf } from '@storybook/react'
 import faker from 'faker'
 import React from 'react'
 
-import { Widget } from '.'
 import { withState } from '../utils/tests/decorators/StateDecorator'
+
+import { Widget } from '.'
+
 import { Flex, Heading, Block, Input, Paragraph } from '..'
 
 storiesOf('molecules|Widget', module)
@@ -13,6 +15,7 @@ storiesOf('molecules|Widget', module)
       <Paragraph>{faker.lorem.paragraphs(4)}</Paragraph>
     </Widget>
   ))
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   .add('editable header', ({ state, storeState }: any) => (
     <Widget>

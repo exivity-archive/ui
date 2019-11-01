@@ -10,18 +10,15 @@ test('Shows children after a certain amount of time.', async (done) => {
   const { getByText } = render(<Delay wait={delay}><div>{text}</div></Delay>)
 
   setTimeout(() => {
-
     expect(() => {
       getByText(text)
-    }).toThrowError()
-
+    }).toThrow()
   }, 50)
 
   setTimeout(() => {
-
     expect(() => {
       getByText(text)
-    }).not.toThrowError()
+    }).not.toThrow()
 
     done()
   }, 150)

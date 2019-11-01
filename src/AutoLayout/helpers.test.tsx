@@ -1,20 +1,23 @@
 import React from 'react'
+import { renderHook, act } from 'react-hooks-testing-library'
+
 import { makeRows, getHeight, wrapInWidget, applySpacing, useSpacing } from './helpers'
 import { Column } from './Column'
-import { renderHook, act } from 'react-hooks-testing-library'
 
 test('makeRows', () => {
   const children = [
     <Column />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />
   ]
 
   const rows = makeRows(children)
+
   expect(rows).toHaveLength(3)
+
   rows.forEach((row) => {
     expect(row).toHaveLength(2)
   })
@@ -24,9 +27,9 @@ test('wrapInWidget', () => {
   const children = [
     <Column />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />
   ]
 
@@ -53,9 +56,9 @@ test('applySpacing', () => {
   const children = [
     <Column />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />,
-    <Column newRow/>,
+    <Column newRow />,
     <Column />
   ]
 
@@ -68,6 +71,7 @@ test('applySpacing', () => {
       if (index === 0) {
         expect(element.props.ml).toBe(1)
       }
+
       expect(element.props.mt).toBe(1)
       expect(element.props.mr).toBe(1)
     })
@@ -77,6 +81,7 @@ test('applySpacing', () => {
 describe('useSpacing', () => {
   let map: any = []
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
   // @ts-ignore
   window.matchMedia = jest.fn(() => {
     return {
@@ -88,17 +93,18 @@ describe('useSpacing', () => {
 
   test('first breakpoint', () => {
     map = []
-    const { result } = renderHook(() => useSpacing([1,2,3]))
+    const { result } = renderHook(() => useSpacing([1, 2, 3]))
 
     act(() => {
       map[0]({ matches: true })
     })
+
     expect(result.current).toBe(1)
   })
 
   test('second breakpoint', () => {
     map = []
-    const { result } = renderHook(() => useSpacing([1,2,3]))
+    const { result } = renderHook(() => useSpacing([1, 2, 3]))
 
     act(() => {
       map[1]({ matches: true })
@@ -109,7 +115,7 @@ describe('useSpacing', () => {
 
   test('thirth breakpoint', () => {
     map = []
-    const { result } = renderHook(() => useSpacing([1,2,3]))
+    const { result } = renderHook(() => useSpacing([1, 2, 3]))
 
     act(() => {
       map[2]({ matches: true })

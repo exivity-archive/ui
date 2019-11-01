@@ -1,14 +1,14 @@
 import React, { CSSProperties } from 'react'
 import styled from 'styled-components'
+import { MdRemove, MdAdd } from 'react-icons/md'
+import { ListChildComponentProps } from 'react-window'
 
 import { TreeListItem } from '../useExpandable'
 import { ListItem } from '../ListItem'
 import { BranchSpacer } from '../BranchSpacer'
 import { fromTheme } from '../utils'
 import { Icon } from '../Icon'
-import { MdRemove, MdAdd } from 'react-icons/md'
 import { CHILDREN } from '../utils/makeParentChildTree'
-import { ListChildComponentProps } from 'react-window'
 
 export const EXPAND_ICON = MdAdd
 export const COLLAPSE_ICON = MdRemove
@@ -64,11 +64,11 @@ export function DefaultItem<Data extends { value: string }> ({
             onClick={e => {
               e.stopPropagation()
               item.expand()
-            }}
-          >
+            }}>
             <ButtonIcon>{item.expanded
               ? <COLLAPSE_ICON data-testid={`${test}-toggle-expand-button-collapse-icon`} />
-              : <EXPAND_ICON data-testid={`${test}-toggle-expand-button-expand-icon`} />}</ButtonIcon>
+              : <EXPAND_ICON data-testid={`${test}-toggle-expand-button-expand-icon`} />}
+            </ButtonIcon>
           </ToggleExpandedButton>
         )}
         <StyledValue>{item.value}</StyledValue>
